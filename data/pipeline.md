@@ -1,0 +1,103 @@
+
+## Pendientes
+
+- [ ] https://job-boards.greenhouse.io/aptoslabs/jobs/4568398005 | Aptos Labs | Community Operations Lead
+- [ ] https://job-boards.greenhouse.io/coefficient/jobs/4447763006 | Coefficient | Community Lead
+- [ ] https://job-boards.greenhouse.io/mercury/jobs/5502169004 | Mercury | Community Manager
+- [ ] https://job-boards.greenhouse.io/stackblitz/jobs/4223647009 | Bolt.new | Community Manager
+- [ ] https://boards.greenhouse.io/techstars57/jobs/7801187002 | Techstars | Community Manager
+- [ ] https://job-boards.greenhouse.io/later/jobs/8069438002 | Later | Community Manager
+- [ ] https://job-boards.greenhouse.io/remotecom/jobs/7609621003 | Remote | Senior Partnership Manager - Investment Ecosystem
+- [ ] https://boards.greenhouse.io/aptoslabs/jobs/4319890005 | Aptos Labs | Ecosystem Program Manager
+- [ ] https://jobs.ashbyhq.com/vanta/ac44a1db-f73d-4fe2-9d71-8a5b9bb1a163 | Vanta | Senior Program Manager Digital Community
+- [ ] https://jobs.ashbyhq.com/n8n/35707964-4e33-47b9-be92-b286f8187749 | n8n | Community Manager
+- [ ] https://jobs.ashbyhq.com/notion/268081ab-0265-4454-be54-742f1449e502 | Notion | B2B Community Manager Lead
+- [ ] https://jobs.ashbyhq.com/wincent/df2ff375-ad6f-411a-b4b0-45e2041c6942 | Wincent | Community Manager EU Remote
+- [ ] https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11/application | Colonist | Community Manager
+- [ ] https://jobs.ashbyhq.com/trust-wallet/4f25d5e1-28a4-4caa-938b-07f3cd959047 | Trust Wallet | (DAO) Community Manager
+- [ ] https://jobs.lever.co/nibiru/388b4a9c-708a-443c-889c-a8ce8d7e93a3 | Nibiru | Community Lead
+- [ ] https://jobs.lever.co/daos-hub/dbfe8725-8c15-460a-a82c-0281ca4705b1 | Daos Hub | Community Lead
+- [ ] https://jobs.lever.co/stronghold/7ba5e5fe-e683-4841-a72b-74959bbcaf2c | Stronghold | Crypto Community Manager
+- [ ] https://cryptojobslist.com/jobs/community-manager-ticketing-revolution-dao-get-protocol-dao-remote | GET Protocol DAO | Community Manager
+- [ ] https://cryptojobslist.com/jobs/community-manager-virtual-society-foundation-remote | Virtual Society Foundation | Community Manager
+- [ ] https://cryptojobslist.com/jobs/community-builder-manager-pussdao-remote | PussDAO | Community Builder Manager
+- [ ] https://cryptojobslist.com/jobs/partnerships-manager-blockchain-the-tec-rec-recruitment-agency-remote | The Tec Rec | Partnerships Manager Blockchain
+- [ ] https://web3.career/ecosystem-dao-and-subdaos-community-manager-polygon/18005 | Polygon | Web3 Ecosystem DAO Community Manager
+- [ ] https://web3.career/community-manager-web3-cow-dao-cow-swap/86069 | CoW DAO | Community Manager Web3
+- [ ] https://web3.career/community-lead-aztec/101425 | Aztec | Community Lead
+- [ ] https://cryptocurrencyjobs.co/marketing/scrib3-community-manager/ | SCRIB3 | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/company-confidential-community-manager-fully-remote/ | Confidential | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/akasha-foundation-community-manager/ | AKASHA Foundation | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/across-community-manager/ | Across | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/mode-community-manager/ | Mode | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/pozzle-planet-dao-community-manager/ | Pozzle Planet DAO | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/monad-labs-lead-community-manager/ | Monad Labs | Lead Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/arrakis-finance-community-manager/ | Arrakis Finance | Community Manager
+- [ ] https://hitmarker.net/jobs/esports-lounge-community-manager-954121 | Esports Lounge | Community Manager
+- [ ] https://hitmarker.net/jobs/aftershock-media-group-program-manager-esports-partnerships-1686956 | Aftershock Media Group | Program Manager Esports Partnerships
+- [ ] https://hitmarker.net/jobs/thatgamecompany-senior-community-manager-1578114 | thatgamecompany | Senior Community Manager
+- [ ] https://hitmarker.net/jobs/people-can-fly-community-manager-1621530 | People Can Fly | Community Manager
+- [ ] https://hitmarker.net/jobs/nrg-esports-partnership-manager-1495497 | NRG Esports | Partnership Manager
+- [ ] https://hitmarker.net/jobs/jam-management-partnership-manager-2909406 | JAM Management | Partnership Manager
+- [ ] https://remote.com/jobs/flipster-c1gfggha/community-manager-australia-apac-j1xneofa | Flipster | Community Manager APAC
+- [ ] https://apply.workable.com/chaingpt/j/4A63F23FBB | ChainGPT | Senior Community Manager L1 Builder Europe
+- [ ] https://apply.workable.com/thrivecoin/j/BFD565EF12 | ThriveCoin | Senior Community Manager
+- [ ] https://apply.workable.com/hike/j/65BFA3ED37/ | Hike | Community Manager Web3
+- [ ] https://apply.workable.com/io-global/j/F3DDB6D5B9 | IO Global | Community Manager IOG Cardano
+- [ ] https://jobgether.com/offer/69a0597a7f0cfae7f11e5816-community-manager | Make | Community Manager
+- [ ] https://jobgether.com/offer/690e10c3fe9a9f899178adaf-community-manager | Sahara AI | Community Manager
+- [ ] https://jobgether.com/offer/6996bc24da7696de2f5722d2-community-manager---remote-pst-time-zone-preferred | MDA Edge | Community Manager Remote
+- [ ] https://jobgether.com/offer/69a3cf257f0cfae7f1225fc9-community-lead | Nibiru Chain | Community Lead
+- [ ] https://startup.jobs/community-manager-web3-hike-6208032 | Hike | Community Manager Web3
+- [ ] https://startup.jobs/community-manager-web3-playco-3281093 | Playco | Community Manager Web3
+- [ ] https://startup.jobs/lead-community-manager-monad-3801799 | Monad | Lead Community Manager
+- [ ] https://startup.jobs/community-manager-coinbase-6671010 | Coinbase | Community Manager
+- [ ] https://startup.jobs/community-manager-offchainlabs-4156534 | Offchain Labs | Community Manager
+- [ ] https://builtin.com/job/community-manager-cosmos-hub-contract/7935679 | Cosmos Labs | Community Manager Cosmos Hub
+- [ ] https://remotive.com/remote/jobs/marketing/senior-community-manager-3583317 | Buffer | Senior Community Manager
+- [ ] https://remotive.com/remote/jobs/marketing/program-manager-growth-and-community-1617239 | Timescale | Program Manager Growth and Community
+- [ ] https://weworkremotely.com/remote-jobs/binance-dach-community-manager-events | Binance | DACH Community Manager Events
+- [ ] https://www.workingnomads.com/jobs/community-manager-star-trektm-fleet-command-scopely | Scopely | Community Manager Star Trek Fleet Command
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-pyth-network-899688 | Pyth Network | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-grass-899780 | Grass | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-dao-community-manager-1inch-1129875 | 1inch | DAO Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-klink-finance-926799 | Klink Finance | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-defi-community-manager-mangrove-185708 | Mangrove | DeFi Community Manager
+- [ ] https://himalayas.app/companies/jobgether/jobs/community-manager-remote-emea-or-latam | Jobgether | Community Manager EMEA Latam
+- [ ] https://himalayas.app/companies/sahara/jobs/community-lead | Sahara | Community Lead
+- [ ] https://himalayas.app/companies/deca-games/jobs/lead-community-manager-m-f-d | DECA Games | Lead Community Manager
+- [ ] https://himalayas.app/companies/windranger-labs/jobs/community-manager | Windranger Labs | Community Manager
+- [ ] https://remote.co/job/community-manager-11-3/ | IOV Labs Rootstock | Community Manager
+- [ ] https://www.welcometothejungle.com/en/companies/bitstack/jobs/social-media-community-manager_paris_BITST_8V3w23V | Bitstack | Social Media Community Manager
+- [ ] https://euremotejobs.com/job/freelance-community-manager/ | Acorns | Freelance Community Manager
+- [ ] https://euremotejobs.com/job/growth-and-community-manager/ | Everbloom | Growth and Community Manager
+- [ ] https://job-boards.greenhouse.io/smartling/jobs/7871914 | Smartling | Localization Project Manager
+- [ ] https://boards.greenhouse.io/degreed/jobs/4230476004 | Degreed | Localization Project Manager CX
+- [ ] https://job-boards.greenhouse.io/knowbe4/jobs/8187664002 | KnowBe4 | Product Localization Manager
+- [ ] https://jobs.ashbyhq.com/lilt-corporate/e9971893-75b5-45d4-ac32-14a61e001fa3 | LILT | Localization Project Manager
+- [ ] https://jobs.ashbyhq.com/Perplexity/8e0286d9-ce3c-4076-b780-0414575db525 | Perplexity | Localization Program Manager
+- [ ] https://jobs.ashbyhq.com/Tools%20for%20Humanity/837ca1b6-b6dd-4971-85c1-2761240658b6 | Tools for Humanity | Localization Manager
+- [ ] https://beincrypto.com/jobs/p/community-manager-windranger-YnSpfJ2 | Windranger | Community Manager
+- [ ] https://beincrypto.com/jobs/p/community-manager-satoshi-solutions-oDJAQIH/ | Satoshi Solutions | Community Manager
+- [ ] https://beincrypto.com/jobs/p/crypto-community-manager-caiz | CAIZ | Crypto Community Manager
+- [ ] https://beincrypto.com/jobs/p/global-community-manager-telegram-beincrypto-2jkqqNl/ | BeInCrypto | Global Community Manager Telegram
+- [ ] https://www.remote3.co/remote-jobs/community-lead-unto-labs-3 | Unto Labs | Community Lead
+- [ ] https://www.remote3.co/remote-jobs/community-manager-0g-labs | 0g Labs | Community Manager
+- [ ] https://www.remote3.co/remote-jobs/community-manager-defactor | Defactor | Community Manager
+- [ ] https://www.remote3.co/remote-jobs/community-lead-entangle-labs-3 | Entangle Labs | Community Lead
+- [ ] https://www.remote3.co/remote-jobs/web3-community-lead-remote--phoenix-growth | Phoenix Growth | Web3 Community Lead
+- [ ] https://wellfound.com/jobs/3529994-ambassador-program-lead-web3-gaming | Inkognido | Ambassador Program Lead Web3 Gaming
+- [ ] https://jobs.lever.co/crypto-banter/22b70b99-ce4d-4b5a-8779-e2ce732efb6a | Crypto Banter | Head of Community
+- [ ] https://jobs.lever.co/iovlabs/d1ca80e9-ab01-4c98-a1dc-3167cd9babaa | IOVLabs | Community Manager
+- [ ] https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d/application | n8n | Head of Developer Relations
+- [ ] https://jobs.ashbyhq.com/flox/da25cc84-7c3d-4d38-9b6d-e4e7b327c9ad/application | Flox | Developer Relations Community Lead
+- [ ] https://www.kast.xyz/careers/crypto-partnership-manager | KAST | Crypto Partnership Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/yo-labs-community-manager/ | YO Labs | Community Manager
+- [ ] https://jobs.ashbyhq.com/exponential/01f39ca5-80f6-4fa4-91c5-91b28f3d2bc2 | YO Labs (Exponential) | Community Manager
+- [ ] https://startale.com/en/career/4016930008 | Startale Labs | Social Media Manager English
+- [ ] https://boards.greenhouse.io/okx/jobs/5820258003 | OKX | Web3 Ecosystem Marketing Manager
+- [ ] https://job-boards.greenhouse.io/cosmoslabs/jobs/5100357007 | Cosmos Labs | Head of Partnerships Enterprise Blockchain
+- [ ] https://jobs.paradigm.xyz/companies/uniswap-foundation-2/jobs/39999815-community-manager | Uniswap Foundation | Community Manager Developer Ecosystem
+- [ ] https://jobs.multicoin.capital/companies/dfinity/jobs/34899650-developer-relations-engineer | DFINITY | Developer Relations Engineer
+- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/34148049-general-ecosystem-manager | Aptos Labs | General Ecosystem Manager
+- [ ] https://jobs.polychain.capital/companies/web3-foundation/jobs/40670834-ecosystem-growth-lead | Web3 Foundation | Ecosystem Growth Lead
