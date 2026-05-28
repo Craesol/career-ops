@@ -229,3 +229,33 @@
 - [ ] https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/39449666-ecosystem-associate | Monad | Ecosystem Associate
 - [ ] https://wellfound.com/jobs/3402104-community-associate-web3-ai-agents | QuillAudits | Community Associate (Web3 · AI Agents)
 - [ ] https://wellfound.com/jobs/3041886-web3-community-growth-and-marketing-lead | Arrow Markets | Web3 Community Growth and Marketing Lead
+- [ ] https://boards.greenhouse.io/designitnorthamerica/jobs/5478941002 | Designit | Social Media Community Manager
+- [ ] https://boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager
+- [ ] https://jobs.ashbyhq.com/civicmarketplace/15361818-be28-4b66-b92c-b1346daa000e | CivicMarketplace | Product Marketing & Community Manager
+- [ ] https://jobs.ashbyhq.com/balorgames/95e08a2f-afc7-487b-848c-a7d6879c5749 | Balor Games | Community Manager, Contract
+- [ ] https://jobs.lever.co/ultra/bd656db0-07c4-41e2-9db1-83946a208ee3 | Ultra (Gaming) | Lead Community Manager
+- [ ] https://jobs.lever.co/Fliff/c908603b-b419-4cb9-a5e9-e40c3d95801d | Fliff | Community Manager
+- [ ] https://cryptojobslist.com/jobs/web3-community-growth-manager-at-decine-1 | Decine | Web3 Community & Growth Manager
+- [ ] https://web3.career/community-manager-creatordao/34424 | CreatorDAO | Community Manager
+- [ ] https://web3.career/web3-community-manager-bessemer-venture-partners/31084 | Bessemer Venture Partners | Web3 Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/navcoin-community-manager/ | Navcoin | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/dtravel-community-manager/ | Dtravel | Community Manager
+- [ ] https://www.linkedin.com/jobs/view/web3-ecosystem-marketing-manager-at-okx-3776004892 | OKX | Web3 Ecosystem Marketing Manager
+- [ ] https://apply.workable.com/faraway/j/623C5523D7/ | Faraway | Lead Community Manager
+- [ ] https://apply.workable.com/mlabs/j/F2B68D3022/ | MLabs | Community Lead
+- [ ] https://apply.workable.com/hike/j/8C37A804F3/ | Hike | Head of community - Web3
+- [ ] https://apply.workable.com/metaengine/j/C75BF3518C/apply/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem
+- [ ] https://apply.workable.com/bisonic/j/2BC5B25A18 | Bisonic | Community Lead
+- [ ] https://jobgether.com/offer/666b02c87f4fdab8dd628fa1-community-manager | Game7 (Web3 Gaming) | Community Manager
+- [ ] https://builtin.com/job/community-manager/4002873 | TechStars | Community Manager
+- [ ] https://builtin.com/job/community-manager/9214145 | Immunefi | Community Manager
+- [ ] https://remotive.com/remote-jobs/customer-support/lead-community-manager-1495064 | HeroJourneyClub | Lead Community Manager
+- [ ] https://weworkremotely.com/remote-jobs/mb-social-freelance-social-media-community-manager | MB Social | Freelance Social Media Community Manager
+- [ ] https://www.workingnomads.com/jobs/community-manager-n8n | n8n | Community Manager
+- [ ] https://remoteok.com/remote-jobs/14192-remote-community-manager-remote-year | Remote Year | Community Manager
+- [ ] https://himalayas.app/companies/immunefi/jobs/community-manager | Immunefi | Community Manager
+- [ ] https://www.adzuna.fr/details/4931979791 | (France) | Content and Community Manager
+- [ ] https://www.iagora.com/work/fr/offre/emploi-espagne-creation/3977608 | (Spain) | Community manager
+- [ ] https://www.iagora.com/work/fr/offre/emploi-espagne-management/5180125 | TheFork (Spain) | Project Manager - Strategic Partnerships
+- [ ] https://jobs.ashbyhq.com/lilt-production/528d2931-5f5d-43f7-86cd-d79f03b9122e | LILT | Localization Project Manager, Life Sciences
+- [ ] https://jobs.ashbyhq.com/satoshilabs/4156e7cd-6fc3-40f5-abd8-f025b0c51841 | SatoshiLabs | Performance Marketing Expansion & Localization Manager
