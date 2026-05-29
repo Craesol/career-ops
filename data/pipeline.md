@@ -259,3 +259,4 @@
 - [ ] https://www.iagora.com/work/fr/offre/emploi-espagne-management/5180125 | TheFork (Spain) | Project Manager - Strategic Partnerships
 - [ ] https://jobs.ashbyhq.com/lilt-production/528d2931-5f5d-43f7-86cd-d79f03b9122e | LILT | Localization Project Manager, Life Sciences
 - [ ] https://jobs.ashbyhq.com/satoshilabs/4156e7cd-6fc3-40f5-abd8-f025b0c51841 | SatoshiLabs | Performance Marketing Expansion & Localization Manager
+- [ ] https://hitmarker.net/jobs/1v1me-game-operations-associate-esports-1563362 | 1v1Me | Game Operations Associate (Esports)
