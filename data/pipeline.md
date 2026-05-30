@@ -260,3 +260,8 @@
 - [ ] https://jobs.ashbyhq.com/lilt-production/528d2931-5f5d-43f7-86cd-d79f03b9122e | LILT | Localization Project Manager, Life Sciences
 - [ ] https://jobs.ashbyhq.com/satoshilabs/4156e7cd-6fc3-40f5-abd8-f025b0c51841 | SatoshiLabs | Performance Marketing Expansion & Localization Manager
 - [ ] https://hitmarker.net/jobs/1v1me-game-operations-associate-esports-1563362 | 1v1Me | Game Operations Associate (Esports)
+- [ ] https://www.linkedin.com/jobs/view/web3-community-manager-remote-europe-at-jobgether-4074081938 | Jobgether | Web3 Community Manager - Remote Europe
+- [ ] https://vg.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager
+- [ ] https://startup.jobs/web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager
+- [ ] https://www.remote3.co/remote-jobs/community-manager-contribute | Contribute | Community Manager
+- [ ] https://jobs.ashbyhq.com/sahara/d65717a4-68a6-44fb-8440-d7a9c342807d | Sahara | AI DevRel Engineer
