@@ -265,3 +265,10 @@
 - [ ] https://startup.jobs/web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager
 - [ ] https://www.remote3.co/remote-jobs/community-manager-contribute | Contribute | Community Manager
 - [ ] https://jobs.ashbyhq.com/sahara/d65717a4-68a6-44fb-8440-d7a9c342807d | Sahara | AI DevRel Engineer
+- [ ] https://jobs.ashbyhq.com/chief/495ec468-944c-4fe3-82c5-af6ea50b5ceb | Chief | Community Manager, DC
+- [ ] https://hitmarker.net/jobs/keywords-studios-player-support-senior-community-manager-video-games-3078164 | Keywords Studios | Senior Community Manager (Video Games)
+- [ ] https://hitmarker.net/jobs/riot-games-esports-production-manager-regional-content-services-2791029 | Riot Games | Esports Production Manager
+- [ ] https://remotive.com/remote/jobs/customer-support/lead-community-manager-1495064 | Hero Journey Club | Lead Community Manager
+- [ ] https://job-boards.greenhouse.io/smartling/jobs/6992535 | Smartling | Project Manager, Localization
+- [ ] https://jobs.ashbyhq.com/deepgram/e20a03e4-d53e-4139-84bc-a901885e208c | Deepgram | Engineering Manager, Developer Relations (DevRel)
+- [ ] https://hitmarker.net/jobs/deca-games | DECA Games | Community Manager (m/f/d)
