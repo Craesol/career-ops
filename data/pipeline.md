@@ -272,3 +272,17 @@
 - [ ] https://job-boards.greenhouse.io/smartling/jobs/6992535 | Smartling | Project Manager, Localization
 - [ ] https://jobs.ashbyhq.com/deepgram/e20a03e4-d53e-4139-84bc-a901885e208c | Deepgram | Engineering Manager, Developer Relations (DevRel)
 - [ ] https://hitmarker.net/jobs/deca-games | DECA Games | Community Manager (m/f/d)
+- [ ] https://job-boards.greenhouse.io/remotecom/jobs/6490343003 | Remote | CX Partnership Manager
+- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6 | Chainlink Labs | Web3 Partnerships Manager
+- [ ] https://web3.career/dao-and-ecosystem-lead-sherlock/105736 | Sherlock | DAO and Ecosystem Lead
+- [ ] https://apply.workable.com/metaengine/j/C75BF3518C/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem
+- [ ] https://apply.workable.com/crypto-dot-com/j/3DC0F59E8C/ | Crypto.com | User Community Manager - DeFi/DApp
+- [ ] https://www.remote3.co/remote-jobs/technical-community-manager-web3auth | Web3Auth | Technical Community Manager
+- [ ] https://www.workingnomads.com/jobs/community-manager-reddit-1234841 | Reddit | Community Manager
+- [ ] https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d | n8n | Head of Developer Relations
+- [ ] https://jobs.ashbyhq.com/flox/da25cc84-7c3d-4d38-9b6d-e4e7b327c9ad | Flox | Developer Relations & Community Lead
+- [ ] https://jobs.ashbyhq.com/polar/d09babe6-f727-42ec-b466-cf074f468f19 | Polar | Head of Developer Relations
+- [ ] https://jobs.lever.co/nibiru/189b8ceb-5552-4735-8e07-062e48ed1599 | Nibiru | Developer Relations
+- [ ] https://jobs.lever.co/MantaNetwork/08c99db6-2ad7-4a0b-b9e4-c947cae67a4d | Manta Network | Community Manager (Korea)
+- [ ] https://job-boards.greenhouse.io/immunefi/jobs/5985495004 | Immunefi | Community Manager
+- [ ] https://job-boards.greenhouse.io/brave/jobs/7605223 | Brave | Senior Developer Relations and Community Manager
