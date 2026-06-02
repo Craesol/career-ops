@@ -286,3 +286,44 @@
 - [ ] https://jobs.lever.co/MantaNetwork/08c99db6-2ad7-4a0b-b9e4-c947cae67a4d | Manta Network | Community Manager (Korea)
 - [ ] https://job-boards.greenhouse.io/immunefi/jobs/5985495004 | Immunefi | Community Manager
 - [ ] https://job-boards.greenhouse.io/brave/jobs/7605223 | Brave | Senior Developer Relations and Community Manager
+- [ ] https://job-boards.greenhouse.io/airship/jobs/4857794101 | Airship | Partnership Manager EMEA
+- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application | Chainlink Labs | Web3 Partnerships Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/steminists-community-manager/ | STEMinists | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/sendcrypto-com-community-manager/ | SendCrypto.com | Community Manager
+- [ ] https://hitmarker.net/jobs/espo-io-nft-community-manager-1799857 | Espo.io | NFT Community Manager
+- [ ] https://hitmarker.net/jobs/riot-games-director-esports-production-management-1250253 | Riot Games | Director, Esports Production Management
+- [ ] https://www.linkedin.com/jobs/view/head-of-web3-co-founder-position-at-remote3-2869205199 | Remote3 | Head of Web3 / Co-founder
+- [ ] https://jobgether.com/offer/699fa24cda7696de2f5ee4d6-temporary-social-media-community-manager---remote | American Cancer Society | Temporary Social Media Community Manager
+- [ ] https://jobgether.com/offer/64971a93515360a07bea3387-community-manager-full-time-or-freelance | Unknown | Community Manager (Full time or Freelance)
+- [ ] https://startup.jobs/web3-community-manager-tokencom-5515116 | token.com | Web3 Community Manager
+- [ ] https://builtin.com/job/content/community-manager-remote/387541 | RECUR | Community Manager
+- [ ] https://builtin.com/job/community-manager/4001100 | Empowerly | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-subspace-labs-146532 | Subspace Labs | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-developer-community-manager-nodereal-122223 | NodeReal | Developer Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-customer-advocacy-program-manager-alphasense-1128775 | AlphaSense | Customer Advocacy Program Manager
+- [ ] https://himalayas.app/companies/hackerone/jobs/senior-manager-community-programs-operations | HackerOne | Senior Manager Community Programs Operations
+- [ ] https://www.welcometothejungle.com/en/companies/imcas/jobs/communication-community-manager_paris | IMCAS | Community Manager & Communication
+- [ ] https://app.welcometothejungle.com/jobs/U2odZ6Ap | Komoot | Community Manager
+- [ ] https://boards.greenhouse.io/bungie/jobs/5193030 | Bungie | Localization Project Manager
+- [ ] https://boards.greenhouse.io/smartling/jobs/2927034 | Smartling | Localization Project Manager
+- [ ] https://boards.greenhouse.io/oliver/jobs/3177482 | OLIVER | Localization Project Manager
+- [ ] https://boards.greenhouse.io/pandadoc/jobs/6169390 | PandaDoc | Localization Project Manager
+- [ ] https://job-boards.greenhouse.io/flohealth/jobs/7597597003 | Flo Health | Localization Project Manager
+- [ ] https://job-boards.greenhouse.io/mediaartslab/jobs/8445364002 | Media Arts Lab | Senior Localization Project Manager
+- [ ] https://job-boards.greenhouse.io/abinbev/jobs/8221461002 | AB InBev | Mid-Level Localization Project Manager
+- [ ] https://job-boards.greenhouse.io/learnlux/jobs/4973139008 | LearnLux | Localization Manager
+- [ ] https://job-boards.greenhouse.io/airbnb/jobs/7258829 | Airbnb | Localization Manager, Canada
+- [ ] https://job-boards.greenhouse.io/donorbox/jobs/4625447005 | Donorbox | Localization Manager
+- [ ] https://job-boards.greenhouse.io/perplexityai/jobs/4946571007 | Perplexity AI | Localization Program Manager
+- [ ] https://job-boards.greenhouse.io/springhealth66/jobs/4560156005 | Spring Health | Senior Localization Program Manager
+- [ ] https://boards.greenhouse.io/yext/jobs/4982773 | Yext | Localization Manager
+- [ ] https://jobs.ashbyhq.com/lilt/7a28d298-63a1-4f2e-887f-2ae879849471/application | LILT | Localization Project Manager, Production (Contractor)
+- [ ] https://beincrypto.com/jobs/p/ecosystem-manager-EVM-li-fi/ | LI.FI | Ecosystem Manager EVM
+- [ ] https://blockchain.works-hub.com/jobs/remote-community-growth-lead-247 | Berachain | Head of Community / Community Lead
+- [ ] https://job-boards.greenhouse.io/tines/jobs/6000440004 | Tines | Community Manager
+- [ ] https://job-boards.greenhouse.io/robinhood/jobs/7922396 | Robinhood | Community Manager, Social
+- [ ] https://jobs.lever.co/serotonin/16f57db7-33a6-452d-a9c6-13528a245aa6 | Serotonin | Web3 Social Media Manager
+- [ ] https://jobs.ashbyhq.com/openrouter/d0860e6a-cf60-4810-a02e-9627882ba86b | OpenRouter | Developer Relations Lead
+- [ ] https://web3.career/community-manager-yolabs/99887 | YO Labs | Web3 Community Manager
+- [ ] https://remotegamejobs.com/jobs/project-seed-community-manager-lead-remote-job | Project SEED | Community Manager Lead
+- [ ] https://www.remoterocketship.com/company/xsolla/jobs/ecosystem-partnerships-lead-web3-united-states-remote/ | Xsolla | Ecosystem Partnerships Lead - Web3
