@@ -327,3 +327,23 @@
 - [ ] https://web3.career/community-manager-yolabs/99887 | YO Labs | Web3 Community Manager
 - [ ] https://remotegamejobs.com/jobs/project-seed-community-manager-lead-remote-job | Project SEED | Community Manager Lead
 - [ ] https://www.remoterocketship.com/company/xsolla/jobs/ecosystem-partnerships-lead-web3-united-states-remote/ | Xsolla | Ecosystem Partnerships Lead - Web3
+- [ ] https://job-boards.greenhouse.io/coinme/jobs/5171551008 | Coinme | DeFi Community Manager & Social Media Lead
+- [ ] https://jobs.ashbyhq.com/hackerone/5d23476a-8904-4a90-a6ab-783707c79dd6 | HackerOne | Senior Manager Community Programs & Operations
+- [ ] https://jobs.ashbyhq.com/firecrawl/f5d02110-47a5-4709-9a5c-41059fb6b14e | Firecrawl | Community & Creator Programs Lead
+- [ ] https://jobs.ashbyhq.com/viktor/75622999-77c5-45cf-a908-828be23d1153 | Viktor | Community Manager
+- [ ] https://jobgether.com/offer/69ee2fadc646310ee39bea28-community-manager | n8n | Community Manager
+- [ ] https://blockchain.works-hub.com/jobs/remote-ecosystem-lead-d2d | Flare Network | Ecosystem Lead
+- [ ] https://blockchain.works-hub.com/jobs/remote-head-of-ecosystem-756 | Kadena | Head of Ecosystem
+- [ ] https://blockchain.works-hub.com/jobs/remote-community-success-manager-579 | Taiko Labs | Senior Community Manager
+- [ ] https://blockchain.works-hub.com/jobs/remote-community-lead-be2 | Flare Network | Community Lead / Chief Evangelist
+- [ ] https://blockchain.works-hub.com/jobs/remote-head-of-community-c00 | NEAR Foundation | Head of Community
+- [ ] https://blockchain.works-hub.com/jobs/remote-ecosystem-growth-and-bd-fdc | Orderly Network | Ecosystem Growth & BD
+- [ ] https://job-boards.greenhouse.io/uniswapfoundation/jobs/4500100007 | Uniswap Foundation | Community Manager Developer Ecosystem
+- [ ] https://careers.berachain.com/29033 | Berachain | Community Growth Lead
+- [ ] https://remotive.com/remote/jobs/marketing/ecosystem-marketing-manager-2012515 | Aptos Labs | Ecosystem Marketing Manager
+- [ ] https://jobs.ashbyhq.com/workos/bb4e927b-5bbd-4704-954d-5b716c3ff1f3 | WorkOS | Developer Relations
+- [ ] https://welcometothejungle.com/en/companies/shapr/jobs/community-manager-startup-full-remote_paris_SHAPR_3qe48Zm | Shapr | Community Manager
+- [ ] https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd78e | Manta Network | Community Manager Indonesia
+- [ ] https://davidspinks.pallet.com/jobs/5699e860-81e6-438a-a06c-afa7f818a1e8 | Scholastic | Community Manager
+- [ ] https://euremotejobs.com/job/partnership-manager-m-w-d/ | EU Remote Jobs | Partnership Manager
+- [ ] https://web3.career/web3-gaming-incubator-program-equity-token-roles-inkognido/132154 | Inkognido | Web3 Gaming + Incubator Program
