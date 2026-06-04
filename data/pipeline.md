@@ -347,3 +347,5 @@
 - [ ] https://davidspinks.pallet.com/jobs/5699e860-81e6-438a-a06c-afa7f818a1e8 | Scholastic | Community Manager
 - [ ] https://euremotejobs.com/job/partnership-manager-m-w-d/ | EU Remote Jobs | Partnership Manager
 - [ ] https://web3.career/web3-gaming-incubator-program-equity-token-roles-inkognido/132154 | Inkognido | Web3 Gaming + Incubator Program
+- [ ] https://jobgether.com/offer/69d45e70aba5fafceefebfa6-partnerships-community-manager | Endless Commerce | Partnerships & Community Manager
+- [ ] https://www.remote3.co/remote-jobs/community-manager-web3-mira--search | MIRA-Search | Community Manager (Web3)
