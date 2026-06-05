@@ -349,3 +349,8 @@
 - [ ] https://web3.career/web3-gaming-incubator-program-equity-token-roles-inkognido/132154 | Inkognido | Web3 Gaming + Incubator Program
 - [ ] https://jobgether.com/offer/69d45e70aba5fafceefebfa6-partnerships-community-manager | Endless Commerce | Partnerships & Community Manager
 - [ ] https://www.remote3.co/remote-jobs/community-manager-web3-mira--search | MIRA-Search | Community Manager (Web3)
+- [ ] https://job-boards.greenhouse.io/runpod/jobs/5191760008 | Runpod | Developer Relations Community Manager
+- [ ] https://jobs.ashbyhq.com/novo/20a2be9e-6243-451d-8b10-cc878d935c5d | Novo | Senior Community Manager Marketing
+- [ ] https://jobs.lever.co/roundglass/96087e41-877d-442c-b334-d58dd7a1a3be | RoundGlass | Community Program Manager
+- [ ] https://jobgether.com/offer/69d47a59aba5fafceeff07cd-crypto-community-manager | Stronghold | Crypto Community Manager
+- [ ] https://boards.greenhouse.io/smartling/jobs/3791728 | Smartling | Project Manager Language Services
