@@ -354,3 +354,5 @@
 - [ ] https://jobs.lever.co/roundglass/96087e41-877d-442c-b334-d58dd7a1a3be | RoundGlass | Community Program Manager
 - [ ] https://jobgether.com/offer/69d47a59aba5fafceeff07cd-crypto-community-manager | Stronghold | Crypto Community Manager
 - [ ] https://boards.greenhouse.io/smartling/jobs/3791728 | Smartling | Project Manager Language Services
+- [ ] https://jobs.lever.co/jobgether/55b577a1-ffcd-4668-b959-9703c7b2fd9d | Jobgether | Developer Community Manager
+- [ ] https://remotive.com/remote/jobs/customer-service/community-manager-4373698 | Soulbound | Community Manager (Gaming)
