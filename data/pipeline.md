@@ -356,3 +356,6 @@
 - [ ] https://boards.greenhouse.io/smartling/jobs/3791728 | Smartling | Project Manager Language Services
 - [ ] https://jobs.lever.co/jobgether/55b577a1-ffcd-4668-b959-9703c7b2fd9d | Jobgether | Developer Community Manager
 - [ ] https://remotive.com/remote/jobs/customer-service/community-manager-4373698 | Soulbound | Community Manager (Gaming)
+- [ ] https://jobs.multicoin.capital/companies/zama/jobs/55753717-community-lead | Zama | Community Lead
+- [ ] https://www.remote3.co/remote-jobs/community-manager-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)
+- [ ] https://x.com/TeamEndpoint/status/2049866885085184492 | Endpoint Esports | Esports Events & Community Manager
