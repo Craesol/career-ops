@@ -359,3 +359,24 @@
 - [ ] https://jobs.multicoin.capital/companies/zama/jobs/55753717-community-lead | Zama | Community Lead
 - [ ] https://www.remote3.co/remote-jobs/community-manager-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)
 - [ ] https://x.com/TeamEndpoint/status/2049866885085184492 | Endpoint Esports | Esports Events & Community Manager
+- [ ] https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11 | Colonist | Community Manager
+- [ ] https://startup.jobs/community-manager-midnight-foundation-io-global-7150128 | IO Global | Community Manager - Midnight Foundation
+- [ ] https://builtin.com/job/community-manager/2286409 | 1047 Games | Community Manager
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-forum-superhuman-1128644 | Superhuman | Community Manager Forum
+- [ ] https://himalayas.app/companies/heygen/jobs/online-community-manager | HeyGen | Online Community Manager
+- [ ] https://himalayas.app/companies/pavago/jobs/community-manager-3562582763 | Pavago | Community Manager
+- [ ] https://himalayas.app/companies/binance/jobs/events-amp-community-manager-mexico | Binance | Events & Community Manager - Mexico
+- [ ] https://himalayas.app/companies/binance/jobs/community-operations | Binance | Community Operations
+- [ ] https://www.welcometothejungle.com/fr/companies/antipodes/jobs/community-manager_paris | Antipodes Medical | Community Manager
+- [ ] https://euremotejobs.com/job/developer-relations-community-manager/ | Cast AI | Developer Relations Community Manager
+- [ ] https://beincrypto.com/jobs/p/community-manager-nft-nfi-bNIDb5v/ | NFI | Community Manager NFT
+- [ ] https://wellfound.com/jobs/3225416-community-manager-web3 | Hike | Community Manager - Web3
+- [ ] https://jobs.lever.co/tokenmetrics/5fa59871-892b-4514-9700-bfda7d7a2801 | Token Metrics | Web3 Head of Marketing and Communications (Vietnam-Remote)
+- [ ] https://jobs.lever.co/tokenmetrics/c4f000ff-d4ed-45d2-9044-a5fdc079b71e | Token Metrics | Web3 Head of Marketing and Communications (Malaysia-Remote)
+- [ ] https://thedefiant.io/jobs/crypto-social-media-manager/ | The Defiant | Crypto Community and Social Media Manager
+- [ ] https://web3.career/senior-marketing-manager-gaming-offchainlabs/106254 | Offchain Labs | Senior Marketing Manager Gaming
+- [ ] https://x.com/HitmarkerJobs/status/1955754991320490110 | DECA Games | Community Manager (m/f/d)
+- [ ] https://x.com/crypto_vazima/status/2016155940781806049 | OORT | Asian Ecosystem Lead
+- [ ] https://coinbase.getro.com/companies/walletconnect/jobs/35902656-devrel-qa-associate | WalletConnect | DevRel QA Associate
+- [ ] https://wellfound.com/jobs/2367235-community-devrel-web3 | QuillAudits | Community & DevRel - Web3
+- [ ] https://mirror.xyz/jakerr.eth/EpAHN36-otzo_gAZMKfo76YvFczEbw1fb5K3GBThxQU | Unknown | Hiring a Web3 Community Manager
