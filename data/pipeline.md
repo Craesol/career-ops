@@ -380,3 +380,15 @@
 - [ ] https://coinbase.getro.com/companies/walletconnect/jobs/35902656-devrel-qa-associate | WalletConnect | DevRel QA Associate
 - [ ] https://wellfound.com/jobs/2367235-community-devrel-web3 | QuillAudits | Community & DevRel - Web3
 - [ ] https://mirror.xyz/jakerr.eth/EpAHN36-otzo_gAZMKfo76YvFczEbw1fb5K3GBThxQU | Unknown | Hiring a Web3 Community Manager
+- [ ] https://job-boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager (Full-Time Remote)
+- [ ] https://job-boards.greenhouse.io/coactive/jobs/5207460008 | Co-Active Training Institute | Community Manager
+- [ ] https://job-boards.greenhouse.io/ackermanngroup/jobs/5230656008 | Ackermann Group | Community Manager
+- [ ] https://job-boards.greenhouse.io/zam/jobs/5592496004 | ZAM | Associate Community Manager (Contractor)
+- [ ] https://job-boards.greenhouse.io/communitymanager/jobs/5129025007 | Avanath | Community Manager
+- [ ] https://job-boards.greenhouse.io/remotereferralboardinternaluseonly/jobs/7609550003 | Remote | Senior Partnership Manager - Investment Ecosystem (Referral)
+- [ ] https://jobs.ashbyhq.com/somnia/7683abae-6337-4612-b5b1-6dc8dc54bb6f | Somnia | Senior Marketing Analyst (AI & Web3)
+- [ ] https://jobs.lever.co/thedispatch/78a15265-74ba-49ef-af93-371c092f2581/apply | The Dispatch | Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/gitcoin-meme-artist-shitposter-community-manager/ | Gitcoin | Meme Artist / Shitposter + Community Manager
+- [ ] https://www.builtinnyc.com/job/business-development-crypto-senior/7282389 | fun.xyz | Business Development - Crypto (Senior)
+- [ ] https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com
+- [ ] https://devocate.pallet.com/jobs | Pallet | DevRel Job Board (retired)
