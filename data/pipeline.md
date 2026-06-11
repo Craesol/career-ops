@@ -392,3 +392,9 @@
 - [ ] https://www.builtinnyc.com/job/business-development-crypto-senior/7282389 | fun.xyz | Business Development - Crypto (Senior)
 - [ ] https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com
 - [ ] https://devocate.pallet.com/jobs | Pallet | DevRel Job Board (retired)
+- [ ] https://job-boards.greenhouse.io/bungie/jobs/6852816 | Bungie | Destiny Global Community Lead
+- [ ] https://cryptocurrencyjobs.co/marketing/vestinda-community-manager-builder/ | Vestinda | Community Manager & Builder
+- [ ] https://x.com/crypto_vazima/status/2014032490298568832 | Unnamed Platform | Head of Growth & Community (Blockchain/Real Estate)
+- [ ] https://x.com/wb3jobsx/status/2058895866480787709 | Woo X | Social Media & Community Executive
+- [ ] https://x.com/HitmarkerJobs/status/1820946706185515165 | Jagex | Senior Community Manager Old School RuneScape
+- [ ] https://x.com/HitmarkerJobs/status/1966264241943622062 | DECA Games | Community Manager Russian-speaking
