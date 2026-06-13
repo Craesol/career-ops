@@ -398,3 +398,6 @@
 - [ ] https://x.com/wb3jobsx/status/2058895866480787709 | Woo X | Social Media & Community Executive
 - [ ] https://x.com/HitmarkerJobs/status/1820946706185515165 | Jagex | Senior Community Manager Old School RuneScape
 - [ ] https://x.com/HitmarkerJobs/status/1966264241943622062 | DECA Games | Community Manager Russian-speaking
+- [ ] https://job-boards.greenhouse.io/cosmoslabs/jobs/5000963007 | Cosmos Labs | Community Manager - Cosmos Hub (contract)
+- [ ] https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd87a | Manta Network | Community Manager - Indonesia
+- [ ] https://cryptocurrencyjobs.co/marketing/consensys-ecosystem-engagement-manager/ | Consensys | Ecosystem Engagement Manager
