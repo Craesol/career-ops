@@ -401,3 +401,7 @@
 - [ ] https://job-boards.greenhouse.io/cosmoslabs/jobs/5000963007 | Cosmos Labs | Community Manager - Cosmos Hub (contract)
 - [ ] https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd87a | Manta Network | Community Manager - Indonesia
 - [ ] https://cryptocurrencyjobs.co/marketing/consensys-ecosystem-engagement-manager/ | Consensys | Ecosystem Engagement Manager
+- [ ] https://web3.career/community-program-manager-decent-dao/58835 | Decent DAO | Community Program Manager
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5116882008 | Scopely | Community Manager
+- [ ] https://job-boards.greenhouse.io/blockchain/jobs/6865066 | Blockchain.com | Community Manager Web3
+- [ ] https://careers.airbnb.com/positions/6743233 | Airbnb | Community Engagement Manager France & BeNeLux
