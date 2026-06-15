@@ -405,3 +405,6 @@
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5116882008 | Scopely | Community Manager
 - [ ] https://job-boards.greenhouse.io/blockchain/jobs/6865066 | Blockchain.com | Community Manager Web3
 - [ ] https://careers.airbnb.com/positions/6743233 | Airbnb | Community Engagement Manager France & BeNeLux
+- [ ] https://job-boards.greenhouse.io/awin/jobs/7730187003 | Awin | Social Media & Community Manager
+- [ ] https://builtin.com/job/lead-community-manager-mfd/3577136 | DECA Games | Lead Community Manager
+- [ ] https://www.hellowork.com/fr-fr/emplois/45234024.html | Apside (Sophia Antipolis) | CDI Project Manager
