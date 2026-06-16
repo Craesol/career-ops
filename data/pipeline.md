@@ -408,3 +408,19 @@
 - [ ] https://job-boards.greenhouse.io/awin/jobs/7730187003 | Awin | Social Media & Community Manager
 - [ ] https://builtin.com/job/lead-community-manager-mfd/3577136 | DECA Games | Lead Community Manager
 - [ ] https://www.hellowork.com/fr-fr/emplois/45234024.html | Apside (Sophia Antipolis) | CDI Project Manager
+- [ ] https://jobs.lever.co/atlassian/c38f63ff-9cf1-41f0-8e80-3355fc91f986 | Atlassian | Community Engagement Manager
+- [ ] https://www.linkedin.com/jobs/view/user-community-manager-blockchain-at-cryptorecruit-4009694307 | CryptoRecruit | User Community Manager (Blockchain)
+- [ ] https://www.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming
+- [ ] https://www.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager
+- [ ] https://m-eu.experteer.com/amp/jobs/27164646 | Salesforce | Talent Ecosystem Program Manager
+- [ ] https://www.hellowork.com/fr-fr/emploi/metier_community-manager-ville_nice-06000.html | Various | Community Manager - Nice
+- [ ] https://www.hellowork.com/fr-fr/emploi/metier_community-manager-departement_alpes-maritimes-06.html | Various | Community Manager - Alpes-Maritimes
+- [ ] https://fr.indeed.com/q-community-manager-l-sophia-antipolis-(06)-emplois.html | Various | Community Manager - Sophia Antipolis
+- [ ] https://fr.indeed.com/q-community-manager-l-nice-(06)-emplois.html | Various | Community Manager - Nice
+- [ ] https://remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)
+- [ ] https://www.remote3.co/remote-jobs/community-manager-0g-labs-1 | 0G Labs | Community Manager
+- [ ] https://www.remote3.co/remote-jobs/community-lead-plume-network | Plume Network | Community Lead
+- [ ] https://x.com/crypto_vazima/status/2016155940781806049/photo/1 | OORT | Asian Ecosystem Lead
+- [ ] https://web3.career/web3-community-lead-remote-phoenix-growth/67050 | Phoenix Growth | Web3 Community Lead
+- [ ] https://cryptocurrencyjobs.co/marketing/bsc-news-gaming-social-manager-web3/ | BSCN | Gaming Social Manager (Web3)
+- [ ] https://web3.career/marketing-communications-lead-panteracapitalmanagementlp/74967 | Pantera Capital | Marketing Communications Lead
