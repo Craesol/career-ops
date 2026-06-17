@@ -1,6 +1,247 @@
 
 ## Pendientes
 
+
+- [ ] https://jobs.ashbyhq.com/linera.io/e1af1e7c-4318-4823-9433-e3fdffa45322 | Linera.Io | Web3 Infrastructure Engineer (Remote) @ Linera
+- [ ] https://jobs.ashbyhq.com/cow-dao |  | CoW DAO Jobs
+- [ ] https://jobs.ashbyhq.com/cow-dao/bad70ba5-c26d-4201-b9b5-77b7948e9862?gh_src=1kx+job+board | Cow Dao | Recruiter (Web3) @ CoW DAO - Jobs
+- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application?action=apply | Chainlink Labs | Web3 Partnerships Manager @ Chainlink Labs
+- [ ] https://cryptojobslist.com/community |  | 31+ Crypto Community Jobs April 2026 | Hiring Now
+- [ ] https://cryptojobslist.com/community?expired=brand-ambassador-at-guarda-remote |  | Crypto Community Manager Jobs paying $24k-250k+ per year (Updated Daily)
+- [ ] https://cryptojobslist.com/remote_community-manager | Remote Web3 Community Manager Jobs | Remote Web3 Community Manager Jobs - $45k-$80k/year
+- [ ] https://cryptojobslist.com/remote?expired=community-manager-swix-dao-remote |  | Remote Crypto & Web3 Jobs paying $250k+ per year (Updated Daily)
+- [ ] https://cryptocurrencyjobs.co/startups/filecoin-foundation/ | Filecoin Foundation | Jobs at Filecoin Foundation - Cryptocurrency Jobs
+- [ ] https://cryptocurrencyjobs.co/community-manager/ | Cryptocurrency Community Manager Jobs | Cryptocurrency Community Manager Jobs - Cryptocurrency Jobs
+- [ ] https://cryptocurrencyjobs.co/startups/the-sandbox/ | The Sandbox | Jobs at The Sandbox - Cryptocurrency Jobs
+- [ ] https://cryptocurrencyjobs.co/startups/binance/ | Binance | Jobs at Binance - Cryptocurrency Jobs
+- [ ] https://cryptocurrencyjobs.co/startups/sui-foundation/ | Sui Foundation | Jobs at Sui Foundation - Cryptocurrency Jobs
+- [ ] https://jobs.lever.co/raya/f2730914-ca7b-4821-8f33-dd6484415104/apply | Raya | Raya - Lead Community Manager, Trust & Safety
+- [ ] https://cryptojobslist.com/talent/business-development/singapore |  | Hire a Web3 Business Development Expert in Singapore | 49+ Vetted Profiles (2026)
+- [ ] https://cryptojobslist.com/manager-jobs-emea | Web3 Manager Jobs in EMEA | Web3 Manager Jobs in EMEA - $144k-$265k/year
+- [ ] https://cryptojobslist.com/marketing/live-operations-manager-yuga-labs-remote | Yuga Labs | Live Operations Manager at Yuga Labs | Remote | Crypto Jobs List
+- [ ] https://cryptojobslist.com/business-development |  | Business Development Jobs in Crypto & Web3
+- [ ] https://cryptojobslist.com/remote-jobs-europe | Remote Web3 Jobs in Europe | Remote Web3 Jobs in Europe - $75k-$138k/year
+- [ ] https://cryptojobslist.com/jobs-new-york |  | Web3 & Crypto Jobs in New York, United States -...
+- [ ] https://web3.career/community-manager-jobs | Community Manager Jobs in Web3 | Community Manager Jobs in Web3 - Jun 2026 (1 New)
+- [ ] https://web3.career/community-manager+remote-jobs | Remote Community Manager Jobs in Web3 | Remote Community Manager Jobs in Web3 - May 2026
+- [ ] https://web3.career/web3-jobs-remote+dao |  | Dao Jobs in Remote, Remote
+- [ ] https://hitmarker.net/esports-jobs |  | Esports Jobs | Hitmarker
+- [ ] https://nl.linkedin.com/jobs/blockchain-jobs |  | 135 vacatures voor Blockchain in Nederland (10 nieuw)
+- [ ] https://www.linkedin.com/jobs/remote-blockchain-jobs |  | 2,000+ Remote Blockchain jobs in United States
+- [ ] https://in.linkedin.com/jobs/blockchain-social-media-community-manager-jobs |  | 7 Blockchain Social Media Community Manager jobs in India
+- [ ] https://www.linkedin.com/jobs/blockchain-startup-jobs |  | 1,000+ Blockchain Startup jobs in United States
+- [ ] https://www.linkedin.com/jobs/remote-crypto-jobs |  | 1,000+ Remote Crypto jobs in United States
+- [ ] https://www.linkedin.com/jobs/cryptocurrency-jobs |  | 1,000+ Cryptocurrency jobs in United States
+- [ ] https://www.linkedin.com/jobs/blockchain-secure-jobs-worldwide |  | 3,000+ Blockchain Secure jobs in
+- [ ] https://uk.linkedin.com/jobs/nft-jobs |  | 107 Nft jobs in United Kingdom (2 new)
+- [ ] https://www.linkedin.com/jobs/web3-jobs |  | 1,000+ Web3 jobs in United States
+- [ ] https://www.linkedin.com/jobs/social-gaming-jobs |  | 2,000+ Social Gaming jobs in United States
+- [ ] https://www.linkedin.com/jobs/esports-jobs |  | 541 Esports jobs in United States
+- [ ] https://www.linkedin.com/jobs/online-gaming-jobs |  | 1,000+ Online Gaming jobs in United States
+- [ ] https://www.linkedin.com/jobs/video-game-community-manager-jobs |  | 15 Video Game Community Manager jobs in United States
+- [ ] https://www.linkedin.com/jobs/remote-esports-jobs |  | 55 Remote Esports jobs in United States (1 new)
+- [ ] https://www.linkedin.com/jobs/work-from-home-gaming-jobs |  | 88 Work From Home Gaming jobs in United States
+- [ ] https://www.linkedin.com/jobs/gaming-community-manager-jobs |  | 265 Gaming Community Manager jobs in United States (11 ...
+- [ ] https://www.linkedin.com/jobs/esports-online-jobs |  | 155 Esports Online jobs in United States (3 new)
+- [ ] https://www.linkedin.com/jobs/view/community-assistant-at-verity-esports-3467002876 |  | Verity Esports hiring Community Assistant in United States | LinkedIn
+- [ ] https://www.linkedin.com/jobs/community-manager-remote-jobs |  | 6,000+ Community Manager Remote jobs in United States
+- [ ] https://www.linkedin.com/jobs/head-of-community-jobs |  | 7,000+ Head Of Community jobs in United States (492 new)
+- [ ] https://www.linkedin.com/jobs/head-of-community-jobs-new-york-ny |  | 1000+ Head Of Community jobs in New York ...
+- [ ] https://jobgether.com/remote-jobs/community-manager |  | Find Remote Community Manager Jobs | 100+ Open Positions | Work Anywhere
+- [ ] https://jobgether.com/remote-jobs/indiana-usa/community-manager |  | Remote Community Manager Jobs in Indiana - Work From Home
+- [ ] https://jobgether.com/remote-jobs/community-manager-in-the-united-states | Remote Community Manager Jobs in USA | Remote Community Manager Jobs in USA - Work From Home
+- [ ] https://www.glassdoor.com/job-listing/crypto-twitter-manager-crypto-banter-JV_KO0,22_KE23,36.htm?jl=1010168926584 |  | Crypto Banter hiring Crypto Twitter Manager Job in Remote | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-remote-columbus-oh-area-trading-careers-JV_IC1145845_KO0,49_KE50,65.htm?jl=1010040511039 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Columbus, OH Area Job in Columbus, OH | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-indianapolis-in-trading-careers-JV_IC1145013_KO0,52_KE53,68.htm?jl=1010040511041 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Indianapolis, IN Job in Indianapolis, IN | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-now-hiring-philadelphia-pa-trading-careers-JV_IC1152672_KO0,63_KE64,79.htm?jl=1010040511014 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Now Hiring (Philadelphia, PA) Job in Philadelphia, PA | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-hiring-in-seattle-wa-trading-careers-JV_IC1150505_KO0,57_KE58,73.htm?jl=1010040511054 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Hiring in Seattle, WA Job in Seattle, WA | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-washington-dc-area-trading-careers-JV_IC1138213_KO0,55_KE56,71.htm?jl=1010040511068 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Washington, DC Area Job in Washington, DC | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-minneapolis-mn-trading-careers-JV_IC1142551_KO0,51_KE52,67.htm?jl=1010040511061 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Minneapolis, MN Job in Minneapolis, MN | Glassdoor
+- [ ] https://www.glassdoor.com/job-listing/crypto-markets-specialist-remote-columbus-oh-trading-careers-JV_IC1145845_KO0,44_KE45,60.htm?jl=1010051636452 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Columbus, OH Job in Columbus, OH | Glassdoor
+- [ ] https://startup.jobs/community-manager-dharma-2227580 | Dharma | Community Manager at Dharma
+- [ ] https://remoteok.com/remote-content+crypto-jobs |  | Remote Content + Crypto Jobs with great benefits and pay
+- [ ] https://remoteok.com/remote-manager+web3-jobs |  | Remote Manager + Web3 Jobs
+- [ ] https://remoteok.com/remote-jobs/110764-remote-trip-leader-community-manager-wifi-tribe | WiFi Tribe | Remote Trip Leader & Community Manager (💰~$35k, Worldwide) at WiFi Tribe
+- [ ] https://www.workingnomads.com/remote-community-manager-jobs |  | Remote Community Manager Jobs | Working Nomads
+- [ ] https://www.workingnomads.com/remote-community-manager-jobs-usa |  | Remote Community Manager Jobs in the USA | Working Nomads
+- [ ] https://himalayas.app/jobs/worldwide/community-manager |  | Work from Anywhere Remote Community Manager Jobs | Himalayas
+- [ ] https://himalayas.app/jobs/countries/netherlands/community-manager |  | Remote Community Manager Jobs in Netherlands | Himalayas
+- [ ] https://himalayas.app/job-descriptions/community-manager |  | 6 Community Manager Job Description Templates and ...
+- [ ] https://www.apec.fr/tous-nos-metiers/communication-creation/community-manager.html | Community manager | Community manager - Fiche métier | Apec
+- [ ] https://www.apec.fr/candidat/recherche-emploi.html/emploi?fonctions=599888 | Offres d'emploi Community manager | Offres d'emploi Community manager - Entreprise
+- [ ] https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Community+Manager |  | Offres d'emploi Community Manager
+- [ ] https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Community+Manager+D%C3%A9butant+ou+Confirm%C3%A9 |  | Offres d'emploi Community Manager Débutant ou Confirmé ...
+- [ ] https://www.apec.fr/tous-nos-metiers/gestion-finance-et-administration/chef-de-projet-en-organisation.html | Chef de projet en organisation | Chef de projet en organisation - Fiche métier | Apec
+- [ ] https://www.apec.fr/candidat/recherche-emploi.html/emploi?lieux=711&motsCles=Community+Manager | Offres d'emploi Community Manager Ile | Offres d'emploi Community Manager Ile-de-France
+- [ ] https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Community+Manager+(Paris) |  | Offres d'emploi Community Manager (Paris)
+- [ ] https://www.apec.fr/tous-nos-metiers/etudes-recherche-et-developpement/chef-de-projet-amenagement-du-territoire.html |  | Chef de projet aménagement du territoire - Fiche métier | Apec
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager | Emploi Community Manager | Emploi Community Manager - Offres d'emploi CDI...
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-alternance-community-manager |  | Alternance community manager : offres d'alternants
+- [ ] https://www.welcometothejungle.com/fr/pages/stage-community-manager | Stage Community Manager | Stage Community Manager - Postes à pourvoir rapidement
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-levallois-perret-92300 | Community manager Levallois | Community manager Levallois-Perret (92300) - offres d'emploi
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-nice-06000 | Community manager Nice (06000) | Community manager Nice (06000) - offres d'emploi
+- [ ] https://candidat.francetravail.fr/offres/emploi/community-manager/bouches-du-rhone/s32m8d13 | Offres d'emploi Community manager | Offres d'emploi Community manager - Marketing, publicité - Bouches-du-Rhône | France Travail
+- [ ] https://candidat.francetravail.fr/offres/emploi/community-manager/alpes-de-haute-provence/s32m8d4 | Offres d'emploi Community manager | Offres d'emploi Community manager - Marketing, publicité - Alpes-de-Haute-Provence | France Travail
+- [ ] https://candidat.francetravail.fr/offres/emploi/community-manager/hautes-alpes/s32m8d5 | Offres d'emploi Community manager | Offres d'emploi Community manager - Marketing, publicité - Hautes-Alpes | France Travail
+- [ ] https://www.hellowork.com/fr-fr/alternance/metier_community-manager-ville_sophia-antipolis-06560.html | Alternance Community manager Sophia | Alternance Community manager Sophia-Antipolis (06560) - Voir les dernières offres d'emploi - 15 avril 2026 | Hellowork
+- [ ] https://www.hellowork.com/fr-fr/stage/metier_community-manager-ville_nice-06000.html | Stage Community manager Nice (06000) | Stage Community manager Nice (06000) - Voir les dernières offres d'emploi - 8 avril 2026 | Hellowork
+- [ ] https://www.hellowork.com/fr-fr/alternance/metier_community-manager-ville_nice-06000.html |  | Alternance Community manager Nice (06000) - Voir les dernières offres d'emploi - 24 février 2026 | Hellowork
+- [ ] https://www.hellowork.com/fr-fr/interim/metier_community-manager-ville_cannes-06400.html |  | Missions d'Intérim Community manager Cannes (06400) - Voir les dernières offres - 26 septembre 2025 | Hellowork
+- [ ] https://www.europelanguagejobs.com/jobs-with-Community-Manager |  | Community Manager jobs abroad for language speakers
+- [ ] https://www.adzuna.fr/alpes-maritimes/community-manager |  | 760 Offres d'emploi community manager - Alpes-Maritimes | Mars 2024 | Adzuna.fr
+- [ ] https://www.adzuna.fr/community-manager |  | 52 048 Offres d'emploi - community manager | Mars 2025 | Adzuna.fr
+- [ ] https://www.adzuna.fr/midi-pyr%C3%A9n%C3%A9es/community-manager |  | 40 Offres d'emploi Community Manager - Midi-Pyrénées | Adzuna
+- [ ] https://www.adzuna.fr/occitanie/community-manager |  | 4 025 Offres d'emploi community manager - Occitanie | Mai 2024 | Adzuna.fr
+- [ ] https://www.adzuna.fr/dom-tom/community-manager |  | 234 Offres d'emploi community manager - DOM-TOM | Mars 2025 | Adzuna.fr
+- [ ] https://www.adzuna.fr/charente-maritime/community-manager |  | 580 Offres d'emploi community manager - Charente-Maritime | Mai 2026 | Adzuna.fr
+- [ ] https://www.adzuna.fr/lyon/community-manager |  | 2 085 Offres d'emploi community manager - Lyon | Décembre 2025 | Adzuna.fr
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-toulon-83000 |  | Offres d'emploi de Community manager à Toulon (83000)
+- [ ] https://www.welcometothejungle.com/fr/pages/metiers-community-manager | Métier Community Manager | Métier Community Manager - missions et rôle
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-aix-en-provence-13100 | Community manager Aix | Community manager Aix-en-Provence (13100) - offres d'emploi
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-la-ciotat-13600 | Community manager La Ciotat (13600) | Community manager La Ciotat (13600) - offres d'emploi
+- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-rhone |  | Emploi Community Manager Rhône
+- [ ] https://indeed.fr/emplois?l=Alpes-Maritimes&q=Community+Manager | Community Manager, Alpes | Community Manager, Alpes-Maritimes : plus de 25 emplois (3 août 2025) | Indeed
+- [ ] https://indeed.fr/emplois?l=Provence-Alpes-C%C3%B4te+d%27Azur&q=Community+Manager | Emplois : Community Manager, Provence | Emplois : Community Manager, Provence-Alpes-Côte d'Azur - 22 mars 2022 | Indeed.com
+- [ ] https://www.indeed.fr/emplois?l=Hauts-de-Seine&q=Community+Manager | Emplois : Community Manager, Hauts | Emplois : Community Manager, Hauts-de-Seine - août 2020 | Indeed.fr
+- [ ] https://indeed.fr/emplois?l=Centre-Val+de+Loire&q=Community+Manager | Community Manager, Centre | Community Manager, Centre-Val de Loire : plus de 25 offres d'emploi (19 septembre 2024) | Indeed.com
+- [ ] https://www.indeed.fr/94524-Rungis-Emplois-Community-Manager |  | Emplois : Community Manager, 94524 Rungis - novembre 2020 | Indeed.fr
+- [ ] https://www.indeed.fr/Lyon-5e-(69)-Emplois-Community-Manager |  | Emplois : Community Manager, Lyon 5e (69) - septembre 2020 | Indeed.fr
+- [ ] https://www.indeed.fr/Alfortville-(94)-Emplois-Community-Manager |  | Emplois : Community Manager, Alfortville (94) - octobre 2020 | Indeed.fr
+- [ ] https://indeed.fr/La-D%C3%A9fense-(92)-Emplois-Community-Manager |  | Emplois : Community Manager, La Défense (92) - septembre 2020 | Indeed.fr
+- [ ] https://indeed.fr/emplois?l=Saint-Maur-des-Foss%C3%A9s+%2894%29&q=Community+Manager | Emplois : Community Manager, Saint | Emplois : Community Manager, Saint-Maur-des-Fossés (94) - octobre 2020 | Indeed.fr
+- [ ] https://laborx.com/gigs/i-will-be-your-discord-community-manager-mod-for-huge-success-30289 |  | I will be your Discord Community Manager, Mod for huge Success - Jakob Buchholz - freelance jobs gig | LaborX
+- [ ] https://beincrypto.com/jobs/non-tech/ | Non | Non-tech Crypto Jobs - April 2026
+- [ ] https://beincrypto.com/jobs/social-media/ | Social | Social-media Crypto Jobs - December 2025
+- [ ] https://beincrypto.com/jobs/community | Community Crypto Jobs | Community Crypto Jobs - October 2025
+- [ ] https://beincrypto.com/jobs/partnership | Partnership Crypto Jobs | Partnership Crypto Jobs - February 2026
+- [ ] https://beincrypto.com/jobs/community-manager/ | Community | Community-manager Crypto Jobs - December 2025
+- [ ] https://beincrypto.com/jobs/communication/ | Communication Crypto Jobs | Communication Crypto Jobs - September 2025
+- [ ] https://beincrypto.com/jobs/brand-ambassador/ | Brand | Brand-ambassador Crypto Jobs - January 2026
+- [ ] https://web3vacancy.com/ |  | Web3 Jobs & Crypto Jobs — #1 Blockchain Job Board 2026 | Web3Vacancy
+- [ ] https://jobs3.io/dao-strategist-jobs/ |  | DAO Strategist Jobs | Jobs3
+- [ ] https://www.remote3.co/ | Web3 Jobs | Web3 Jobs - Blockchain, Crypto Jobs (69 new in Sep 2025)
+- [ ] https://remote3.co/remote/community-manager |  | Remote Community Manager Jobs in 2024
+- [ ] https://www.remote3.co/blog-post/how-to-become-a-community-manager |  | How To Become A Community Manager?
+- [ ] https://wellfound.com/web3 | Web3 and Crypto Jobs | Web3 and Crypto Jobs - Find Blockchain Startup Jobs Near You | Wellfound
+- [ ] https://wellfound.com/role/r/blockchain-business-development |  | Remote Blockchain Business Development Jobs in 2026 | Wellfound
+- [ ] https://wellfound.com/role/blockchain |  | Blockchain Jobs | Wellfound
+- [ ] https://wellfound.com/role/crypto-developer |  | Crypto Developer Jobs | Wellfound
+- [ ] https://wellfound.com/role/r/dao |  | Remote DAO Jobs in 2026 | Wellfound
+- [ ] https://wellfound.com/role/r/blockchain-developer |  | Remote Blockchain Developer Jobs in 2026 | Wellfound
+- [ ] https://wellfound.com/role/r/crypto-developer |  | Remote Crypto Developer Jobs in 2026 | Wellfound
+- [ ] https://wellfound.com/role/web3-developer |  | Web3 Developer Jobs | Wellfound
+- [ ] https://wellfound.com/role/r/crypto-analyst |  | Remote Crypto Analyst Jobs in 2026 | Wellfound
+- [ ] https://wellfound.com/job-collections/x-crypto-startups-to-watch-out-for-in-2022 |  | 19 Hot Crypto Startups Hiring Remotely in 2022 | Wellfound
+- [ ] https://x.com/Web3Career | Web3 Career | Web3 Career - Blockchain, Solidity and Crypto Jobs (@Web3Career) on X
+- [ ] https://x.com/crypto_vazima?lang=en |  | Allweb3jobs by Crypto Vazima (@crypto_vazima) / Posts / X
+- [ ] https://x.com/crypto_vazima/status/2011847083393704181 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Multiple Remote Web3/Blockchain Roles (Mandarin &amp; English) — Hconnect 📍 Remote (Global + NA/Europe specific) | 🧑‍💻 Engineering / Product / Growth / Creative | 🕐 Posted 14h ago — Jan 15, 2026 Hconnect is scaling teams for Web3, blockchain, DeFi, and AI x Web3 projects https://t.co/CFp4Q0fulm" / X
+- [ ] https://x.com/CryptoJobsList/status/1876642982796935454 |  | Crypto Jobs List — Web3 jobs on X: "Community Lead ...
+- [ ] https://x.com/crypto_vazima/status/2017157752833892578 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Multiple Web3 Roles — Global &amp; Remote 📍 Remote / Various (US/LATAM, NYC/SF, EU/Asia, Global) | 💼 Full &amp; Part-time | 🧑‍💻 DeFi / Frontend / Social / Content / Design | 💰 $40k–$250k + Equity | 🕐 Posted 2h ago — Jan 30, 2026 Exciting batch of Web3/DeFi/creative tech https://t.co/i9o7llp5bG" / X
+- [ ] https://x.com/getcryptojobs?lang=en | CryptoJobs | CryptoJobs - From Web2 to Web3 (@GetCryptoJobs) ...
+- [ ] https://cosmos.network/ |  | Cosmos | Secure and Performant Blockchain for Institutions
+- [ ] https://en.wikipedia.org/wiki/Online_community_manager |  | Online community manager
+- [ ] https://x.com/crypto_vazima/status/2026332584762851482 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Partnerships Manager (Crypto / Web3) — Crypto Project 📍 Remote (Global) | 💼 Full-time | 🧑‍💻 CEX listings, DeFi integrations, ecosystem BD | 🕐 Recent posting A crypto project operating at scale is hiring a Partnerships Manager to own and close centralized exchange https://t.co/KKw8i0uyOK" / X
+- [ ] https://x.com/udao_official/status/1975975578122531142 |  | udao on X: "Starting a Career in Web3 : Skills, Tips & Tricks " / X
+- [ ] https://www.bankless.com/hire-job-career-crypto |  | 5 Steps to Starting Your Crypto Career on Bankless
+- [ ] https://wellfound.com/jobs/1747011-senior-product-designer | Surf DAO • Remote • Remote (Work from Home) | Senior Product Designer at Surf DAO • Remote • Remote (Work from Home) | Wellfound (formerly AngelList Talent)
+- [ ] https://wellfound.com/hiring-data/r/social-media-manager-1/i/blockchain-cryptocurrency-2 |  | Social Media Manager salary in Blockchain / Cryptocurrency Startups 2025 | Wellfound
+- [ ] https://t.me/s/web3hiring?before=10619 | Web3 Jobs | Web3 Jobs – Telegram
+- [ ] https://t.me/s/cryptojobslist?after=4771 | Crypto Jobs List | Crypto Jobs List - Web3 Jobs, Blockchain Jobs, Solidity Jobs
+- [ ] https://t.me/s/cryptojobslist?before=2638 |  | CryptoJobsList | Web3 Jobs – Telegram
+- [ ] https://web3.career/community-and-engagement-lead-web3-recruit/76730 |  | Web3 Recruit is hiring a
+- [ ] http://thedefiant.io/crypto-jobs/ |  | The Defiant
+- [ ] https://thedefiant.io/about | About | About - The Defiant
+- [ ] https://thedefiant.io/go-premium | DeFi Alpha | DeFi Alpha - The Defiant
+- [ ] https://thedefiant.io/category/defi-101 | DeFi 101 | DeFi 101 - "The Defiant"
+- [ ] https://app.dework.xyz/nation3/app-2 |  | Dework — The task manager for DAOs and decentralized work
+- [ ] https://app.dework.xyz/dia-dao |  | DIA DAO | Dework
+- [ ] https://app.dework.xyz/nation3 |  | Nation3 DAO | Dework
+- [ ] https://app.dework.xyz/developer-dao |  | Developer DAO | Dework
+- [ ] https://app.dework.xyz/dia-dao/section-2?taskId=88583a84-3f39-4d2d-ad86-c42e6d4f5de5 |  | [Application Form] Join DIA DAO | Dework
+- [ ] https://app.dework.xyz/tokenomics-dao |  | Tokenomics DAO | Dework
+- [ ] https://app.dework.xyz/contribution-dao |  | Contribution DAO | Dework
+- [ ] https://job-boards.greenhouse.io/gsgcareers/jobs/7990118 | Gsgcareers | Player Experience & Community Manager
+- [ ] https://job-boards.greenhouse.io/fairsteadescllc/jobs/5229725008 | Fairsteadescllc | Job Application for Community Manager - Rolling Hills at Fairstead ESC LLC
+- [ ] https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d/application?embed=js | N8n | Head of DevRel (Remote East Coast) @ n8n
+- [ ] https://jobs.ashbyhq.com/runlayer/d8346558-459a-46a7-ba9c-1a39af346cc9 | Runlayer | Developer Relations Lead @ Runlayer
+- [ ] https://jobs.lever.co/crypto |  | Crypto.com jobs
+- [ ] https://x.com/crypto_vazima/status/1992191085808844849 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: CTO &amp; Board Member — WorkInCrypto (Client Roles) 📍 Remote Europe / Global | 💼 C-suite | 🧑‍💻 Crypto / Institutional | 💰 Not provided WorkInCrypto is recruiting for two top-level roles across leading crypto clients. ✨ CTO — Non-Custodial Wallet (Remote Europe) — https://t.co/GWbwHxvrca" / X
+- [ ] https://x.com/crypto_vazima/status/2012147465584103828 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: 2x Recruiters (Web3 + AI teams) — WorksHub 📍 Fully Remote (Worldwide — anywhere) | 💼 Full-time | 🧑‍💻 Recruitment / Web3 / AI | 💰 Not provided | 🕐 Posted 1 hour ago — Jan 16, 2026 Recruiters for Web3 and AI teams are being onboarded to help promote WorksHub and https://t.co/g8vhnvOKTj" / X
+- [ ] https://x.com/crypto_vazima/status/2065012604922196423 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: VIP BD Roles (All Levels) - Web3 Company 📍 Remote (Global) | 💼 All Levels | 🕐 1 day ago - June 11, 2026 The company is hiring VIP Business Development roles at all levels. Open to candidates from brokerage with HNW or institutional relationship experience — or https://t.co/O5KT82B7AS" / X
+- [ ] https://www.ziprecruiter.com/Jobs/Remote-Gaming-Community-Manager |  | Remote Gaming Community Manager Jobs (NOW HIRING) Apr 26
+- [ ] https://www.indeed.com/q-community-manager-in-esports-jobs.html |  | Community Manager in Esports Jobs, Employment | Indeed
+- [ ] https://www.simplyhired.com/search?q=gaming+community+manager&l=remote |  | 20 Best gaming community manager jobs in remote (Hiring Now!) | SimplyHired
+- [ ] https://www.glassdoor.com/Job/gaming-community-manager-jobs-SRCH_KO0,24.htm |  | 2,028 Gaming community manager jobs in United States | Glassdoor
+- [ ] https://www.ziprecruiter.com/Jobs/Esports-Community-Manager |  | $47k-$200k Esports Community Manager Jobs (NOW HIRING) Jun 25
+- [ ] https://www.ziprecruiter.com/Jobs/Gaming-Community-Manager |  | $44k-$154k Gaming Community Manager Jobs (NOW HIRING) Apr 26
+- [ ] https://web3.career/defi-jobs | DeFi Jobs | DeFi Jobs - Jun 2026 (15 New)
+- [ ] https://web3.career/marketing-jobs | Marketing Jobs in Web3 | Marketing Jobs in Web3 - Jun 2026 (11 New)
+- [ ] https://coinmarketcap.com/cmc-ai/perpetual-protocol/what-is/ | Is Perpetual Protocol (PERP) And How Does It Work? | What Is Perpetual Protocol (PERP) And How Does It Work?
+- [ ] https://web3.career/remote-jobs | Remote Web3 Jobs | Remote Web3 Jobs - Jun 2026 (15 New)
+- [ ] https://web3.career/web3-companies/fun-xyz+business-development | Fun.xyz (Feb 2026) | Business Development Jobs at Fun.xyz (Feb 2026) - Web3 Jobs
+- [ ] https://web3.career/business-development-fintech-fun-xyz/143450 | Fun.xyz | Web3 Business Development, Fintech $155k - $220k in New York at Fun.xyz
+- [ ] https://www.kast.xyz/careers/country-manager-pakistan-crypto-card-product | KAST Careers: Country Manager, Pakistan | KAST Careers: Country Manager, Pakistan - Crypto Card Product
+- [ ] https://web3.career/web3-companies/kast | KAST Jobs (Jun 2026) | KAST Jobs (Jun 2026) - Web3 Jobs
+- [ ] https://cryptocurrencyjobs.co/startups/kast/ | KAST | Jobs at KAST - Cryptocurrency Jobs
+- [ ] https://web3.career/web3-companies/startale+community-manager | Startale | Community Manager Jobs at Startale
+- [ ] https://www.remote3.co/remote-jobs/business-development-lead-hyperliquid-labs | Web3 Jobs | Web3 Jobs - Blockchain, Crypto Jobs (69 new in Sep 2025)
+- [ ] https://www.ziprecruiter.com/Jobs/Web3 |  | $33k-$250k Web3 Jobs (NOW HIRING) Jun 2026
+- [ ] https://web3.career/ |  | Web3 Jobs: Blockchain, Smart Contract and Crypto Jobs
+- [ ] https://web3.career/web3-companies/multiliquid | Multiliquid Jobs (Mar 2026) | Multiliquid Jobs (Mar 2026) - Web3 Jobs
+- [ ] https://www.upwork.com/freelance-jobs/apply/Finishing-development-Web3-trading-app-Hyperliquid_~021962892704870998248/ |  | Finishing development of Web3 trading app on Hyperliquid - Freelance Job in Mobile Development - $1,000.00 Fixed Price, posted September 2, 2025 - Upwork
+- [ ] https://x.com/crypto_vazima/status/2011889674776719683 |  | Allweb3jobs by Crypto Vazima on X: "🔄 25 fresh Web3 jobs found today (Jan 15, 2026): 💬 Crypto Trader / Community Partner — Remote (Global) | Futures &amp; Spot trading, community growth, liquidity &amp; partner engagement | https://t.co/NpdrP8CoVw ✍️ Cryptocurrency &amp; Tech News Writer — Remote (Global) | Writing daily https://t.co/XuLxXW9NGS" / X
+- [ ] https://web3.career/gaming-jobs | Web3 Gaming Jobs | Web3 Gaming Jobs - Jun 2026 (1 New)
+- [ ] https://web3.career/gaming+remote-jobs | Remote Web3 Gaming Jobs | Remote Web3 Gaming Jobs - Jun 2026 (3 New)
+- [ ] https://crypticweb3.com/best-blockchain-gaming-projects-2026/ | Best Blockchain Gaming Projects in 2026 | Best Blockchain Gaming Projects in 2026 - Cryptic Web3
+- [ ] https://findweb3.com/jobs/gaming |  | Gaming Jobs
+- [ ] https://dailycoin.com/web3-hiring-trends-in-2026-tech-ai-and-leadership-roles-in-high-demand/ |  | Web3 Hiring Trends in 2026: Tech, AI, and Leadership Roles in High Demand - DailyCoin
+- [ ] https://99bitcoins.com/guides-and-tutorials/how-to-get-crypto-job/ |  | Crypto Jobs Guide: How to Land Web3 Job in 2026
+- [ ] https://eakdigital.com/crypto-recruiting-how-web3-companies-hire-top-talent-2026/ |  | Crypto Recruiting: How Web3 Companies Hire Top Talent in 2026
+- [ ] https://cryptojobslist.com/remote |  | 92+ Web3 Jobs June 2026 | Apply Today - $48k-$500k/year
+- [ ] https://crypto.jobs/ |  | 3592+ Web3 Jobs (2026) | Remote Crypto Careers | CryptoJobs
+- [ ] https://wellfound.com/startups/l/california/web3-4 |  | Best Web3 Companies to Work for in California, US 2026 | Wellfound
+- [ ] https://wellfound.com/startups/l/new-york/web3-4 |  | Best Web3 Companies to Work for in New York, US 2026 | Wellfound
+- [ ] https://wellfound.com/startups/industry/blockchain-cryptocurrency-2 |  | Best Blockchain / Cryptocurrency Companies and Startups to Work for in 2026 | Wellfound
+- [ ] https://wellfound.com/job-collections/hot-blockchain-startups-that-are-hiring |  | Hot Blockchain Startups | Wellfound
+- [ ] https://job-boards.greenhouse.io/thestatusnetwork/jobs/5175016 | Thestatusnetwork | Job Application for Web3 Recruiter - 12 month contract at The Status Network (TEST, DO NOT REMOVE)
+- [ ] https://en.wikipedia.org/wiki/Developer_relations |  | Developer relations
+- [ ] https://cryptocurrencyjobs.co/startups/multicoin-capital/ | Multicoin Capital | Jobs at Multicoin Capital - Cryptocurrency Jobs
+- [ ] https://cryptocurrencyjobs.co/other/coinbase-ventures-ecosystem-associate/ | Coinbase | Ventures/Ecosystem Associate at Coinbase - Cryptocurrency Jobs
+- [ ] https://www.coinbase.com/ventures |  | Coinbase Ventures: Advancing crypto & Web3
+- [ ] https://www.coinbase.com/ventures/portfolio | Coinbase Ventures | Coinbase Ventures – Advancing crypto and web3
+- [ ] https://cryptopanic.com/ | CryptoPanic | CryptoPanic - News aggregator platform indicating impact on price and market for traders and cryptocurrency enthusiasts
+- [ ] https://blog.district0x.io/exploring-farcaster-warpcast-7b79bb668d9e |  | Exploring Farcaster: Warpcast. The rise of web3 Social Networks on… | by Henri.M | district0x Updates
+- [ ] https://phantom.com/learn/crypto-101/farcaster-warpcast |  | Farcaster created crypto’s killer social app: Warpcast
+- [ ] https://www.bankless.community/ |  | BanklessDAO Community
+- [ ] https://web3.career/@jackhanson |  | web3.career
+- [ ] https://web3.career/crypto-jobs?page=1390 |  | Crypto Jobs
+- [ ] https://web3.career/defi-jobs?page=359 |  | defi jobs
+- [ ] https://mirror.xyz/0x3e41Ee6e1d3Af36B743626B5B2C19961d9d633F8/hbsws8obGecoPXeUw5HmCW42pOsNpoIZGtTJD-1gf2k | DevRel Uni | My first week at DevRel Uni - A journey of learning and growth — Victor Kanu
+- [ ] https://mirror.xyz/polygonvillage.eth/IhJRBJ0nwwrg5eXkkwtDgUSmOFc4_y8EvslKcZe_Lg4 |  | Polygon DAO advances web3 job opportunities
+- [ ] https://mirror.xyz/0x25E9423856d0670981Bf43be83522CF92A93C18f/-KCFLFsUD8wRAg8t6NMWP7NdNc3ZFgMkGOE-fThe0Js |  | Ways to Make Money in Web3, with Less than $10 Investment — GAGU.social
+- [ ] https://mirror.xyz/taytems.eth/SOo69uWlbBEsFHWkbtdCgaMXpAEwiUo75jO3Z4gmOoc |  | How to Speedrun Getting Hired in Web3 — tate
+- [ ] https://mirror.xyz/0xd33cEE6b59297e825aEaAB4fad437e1155289760/luEAUgdsnp3gmW5QnhbuZS77oVFB-KiK9njv6sgiq0w | Ultimate Guide to Getting a Job in Web3 | Ultimate Guide to Getting a Job in Web3 - when you have no ...
+- [ ] https://mirror.xyz/kimmy3.eth/-O0H5AvzmSFRG1gB1cZK0TwChGMrL9iQLbVcBx6urb4 | DAOs for women & non | DAOs for women & non-binary folx + social innovators — kimmy3
+- [ ] https://mirror.xyz/113254.eth/gApbqzKc4yeDBi7c4Yg8FLtRKBTtdlU1Tn0ksQ3dhlc |  | How to pursue a career in Web 3.0, Blockchain and Cryptocurrency…
+- [ ] https://mirror.xyz/0xed95C841068a9feF0CE2D7F527829A231626447D/FsTyMircI_1xwg5uSMQnlBfA2Zh40gI-UFNj1-58o4Q | How to build a self | How to build a self-sustaining web3 community - Part 1 |TheInter…
+- [ ] https://www.talentprotocol.com/ | Build for impact | Build for impact - Talent App
+- [ ] https://talentdao.substack.com/about |  | talentdao.substack.com
+- [ ] https://web3.career/@ireeeee |  | web3.career
+- [ ] https://web3.career/@whtifigo |  | web3.career
+- [ ] https://alternativeto.net/software/talent-protocol/about/ |  | Talent Protocol icon
+- [ ] https://cryptocurrencyjobs.co/startups/animoca-brands/ | Animoca Brands | Jobs at Animoca Brands - Cryptocurrency Jobs
+- [ ] https://wellfound.com/startups/industry/web3-4 |  | Best Web3 Companies and Startups to Work for in 2026 | Wellfound
+- [ ] https://wellfound.com/startups/l/france/web3-4 |  | Best Web3 Companies to Work for in France 2024 | Wellfound
+- [ ] https://wellfound.com/startups/l/hong-kong/web3-4 |  | Best Web3 Companies to Work for in Hong Kong 2026 | Wellfound
+- [ ] https://wellfound.com/startups/l/united-arab-emirates/web3-4 |  | Best Web3 Companies to Work for in United Arab Emirates 2026 | Wellfound
+- [ ] https://job-boards.greenhouse.
+Line 36: block type=tool_result, keys=['tool_use_id', 'type', 'content']
+  tool_use_id=toolu_017kjAN8DZu2NKQnMH5vva6g
+  inner content: Web search results for query:  |  | Community Manager (Re Line 35: block type=tool_result, keys=['tool_use_id', 'type', 'content'] tool_use_id=toolu_015sqK5Aji4Rqv8nCkHjULWV inner content: Web search results for query:
+- [ ] https://cryptojobslist.com/jobs/director-of-partnerships-radix-ecos
+Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
+  tool_use_id=toolu_01HSLv8q8n7kvvC83Hck4ZN5
+  inner content: Web search results for query:  |  | Ecosystem Success Manag Line 41: block type=tool_result, keys=['tool_use_id', 'type', 'content'] tool_use_id=toolu_01GpMoiSi3QXyoSrGNA8Buqk inner content: Web search results for query:
 - [ ] https://job-boards.greenhouse.io/aptoslabs/jobs/4568398005 | Aptos Labs | Community Operations Lead
 - [ ] https://job-boards.greenhouse.io/coefficient/jobs/4447763006 | Coefficient | Community Lead
 - [ ] https://job-boards.greenhouse.io/mercury/jobs/5502169004 | Mercury | Community Manager
