@@ -665,3 +665,27 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/web3-community-lead-remote-phoenix-growth/67050 | Phoenix Growth | Web3 Community Lead
 - [ ] https://cryptocurrencyjobs.co/marketing/bsc-news-gaming-social-manager-web3/ | BSCN | Gaming Social Manager (Web3)
 - [ ] https://web3.career/marketing-communications-lead-panteracapitalmanagementlp/74967 | Pantera Capital | Marketing Communications Lead
+- [ ] https://jobs.lever.co/empowerly/014c2fd1-3cda-4e6d-8119-d4fa0ff125b6 | Empowerly | Community Manager (Mandarin Speaking)
+- [ ] https://jobs.lever.co/airalo/8fa60fbe-61ef-4579-a503-9a319dbc3a58 | Airalo | Social Media & Community Manager (LATAM)
+- [ ] https://cryptocurrencyjobs.co/marketing/perpetual-protocol-content-and-community-manager/ | Perpetual Protocol | Content and Community Manager
+- [ ] https://pompcryptojobs.com/job/5916/program-manager/ | Polygon | Program Manager
+- [ ] https://pompcryptojobs.com/job/6206/edao-leader/ | Unknown | eDAO Leader
+- [ ] https://pompcryptojobs.com/job/6209/community-lead/ | Polygon | Community Lead
+- [ ] https://hitmarker.net/jobs/thatgamecompany-project-manager-creative-services-1728776 | thatgamecompany | Project Manager, Creative Services
+- [ ] https://startup.jobs/solana-community-manager-rarible-2945934 | Rarible | Solana Community Manager
+- [ ] https://startup.jobs/community-lead-bnb-chain-binance-3268020 | Binance | Community Lead - BNB Chain
+- [ ] https://builtin.com/job/web3-community-manager/2243258 | VIMworld | Web3 Community Manager
+- [ ] https://www.glassdoor.com/job-listing/senior-blockchain-expansion-manager-100-remote-tether-operations-limited-JV_IC2664239_KO0,46_KE47,72.htm?jl=1010028455789 | Tether | Senior Blockchain Expansion Manager
+- [ ] https://remotive.com/remote/jobs/customer-service/community-lead-4136156 | Softr | Community Lead
+- [ ] https://remotive.com/remote/jobs/customer-service/community-manager-3637995 | tinyBuild | Community Manager
+- [ ] https://beincrypto.com/jobs/p/web3-community-manager-token-com/ | token.com | Web3 Community Manager
+- [ ] https://laborx.com/vacancies/community-manager-x-amp-telegram-17888 | Neonflick | Community Manager (X & Telegram)
+- [ ] https://laborx.com/vacancies/marketing-program-manager-80-100-9655 | Acurast Association | Marketing Program Manager
+- [ ] https://web3vacancy.com/job/developer-relations-lead-at-autheo-3349 | Autheo | Developer Relations Lead
+- [ ] https://www.remote3.co/remote-jobs/job-application-for-social-community-lead-at-hyphen-connect-limited-hyphen-connect-limited | Hyphen Connect | Social & Community Lead
+- [ ] https://www.remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)
+- [ ] https://job-boards.greenhouse.io/orderly/jobs/4570542008 | Orderly | Associate, Ecosystem Growth & BD
+- [ ] https://jobs.paradigm.xyz/companies/uniswap-foundation-2/jobs/41462162-developer-relations-engineer-unichain | Uniswap Foundation | Developer Relations Engineer, Unichain
+- [ ] https://developerdao.pallet.com/jobs/38abc083-ffd2-4870-aa78-5416de64a4c7 | Spruce | Developer Relations
+- [ ] https://bankless.pallet.com/jobs/341813f6-0495-4f51-b89f-1f141f60e0b9 | Uniswap Labs | Developer Relations Lead
+- [ ] https://inplainenglish.pallet.com/jobs/83d5be44-eb80-4a11-913b-09df55910aa3 | Protocol Labs | Developer Relations Engineer
