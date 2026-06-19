@@ -689,3 +689,11 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://developerdao.pallet.com/jobs/38abc083-ffd2-4870-aa78-5416de64a4c7 | Spruce | Developer Relations
 - [ ] https://bankless.pallet.com/jobs/341813f6-0495-4f51-b89f-1f141f60e0b9 | Uniswap Labs | Developer Relations Lead
 - [ ] https://inplainenglish.pallet.com/jobs/83d5be44-eb80-4a11-913b-09df55910aa3 | Protocol Labs | Developer Relations Engineer
+- [ ] https://jobs.ashbyhq.com/trilitech/76ef1cc2-bc47-4f45-b16f-489d97eafb34 | Trilitech | Web3 Technical Lead - DeFi
+- [ ] https://web3.career/head-of-community-subspacelabs/39250 | Subspace Labs | Head of Community
+- [ ] https://web3.career/community-lead-alchemy/67678 | Alchemy | Community Lead
+- [ ] https://hitmarker.net/jobs/wargaming-esports-manager-world-of-tanks-blitz-1576016 | Wargaming | Esports Manager (World of Tanks Blitz)
+- [ ] https://builtin.com/job/community-manager/2352936 | Avea Life | Community Manager
+- [ ] https://remotive.com/remote/jobs/all-others/community-manager-4635141 | Sisense | Community Manager
+- [ ] https://job-boards.greenhouse.io/havenenglish/jobs/6007387004 | Haven Interactive Studios | Community Manager
+- [ ] https://careers.play.vc/companies/timeleft-2/jobs/59721971-marketing-community-manager-bangkok | Timeleft | Marketing & Community Manager
