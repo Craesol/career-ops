@@ -699,3 +699,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://careers.play.vc/companies/timeleft-2/jobs/59721971-marketing-community-manager-bangkok | Timeleft | Marketing & Community Manager
 - [ ] https://jobs.ashbyhq.com/sui%20foundation/79a46cca-cfca-42d6-8191-848cc4c92172 | Sui Foundation | Community Lead
 - [ ] https://jobs.cointelegraph.com/jobs/146177705-social-media-community-manager-gaming | Cointelegraph | Social Media & Community Manager (Gaming)
+- [ ] https://boards.greenhouse.io/goodr/jobs/6772285002 | goodr | Social Community Manager
+- [ ] https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations
+- [ ] https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager
+- [ ] https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China
