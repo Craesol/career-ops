@@ -703,3 +703,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations
 - [ ] https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager
 - [ ] https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China
+- [ ] https://jobs.ashbyhq.com/Sahara/bc299ffc-c44c-4708-833d-ef13ee6fd4f4 | Sahara | Blockchain DevRel Engineer
+- [ ] https://jobs.ashbyhq.com/stronghold/ad956e45-aa24-4b70-a72c-b9fd4c74c979 | Stronghold | Crypto Community Manager
+- [ ] https://wellfound.com/jobs/3652022-events-community-manager | GoodTime | Events & Community Manager
+- [ ] https://hitmarker.net/jobs/riot-games-senior-manager-social-media-esports-player-community-744905 | Riot Games | Senior Manager Social Media Esports Player Community
+- [ ] https://careers.animocabrands.com/companies/animoca-brands/jobs/36899831-ecosystem-partnership-manager | Animoca Brands | Ecosystem Partnership Manager
+- [ ] https://web3.career/community-manager-web3-blockchain/102294 | Blockchain.com | Community Manager Web3
