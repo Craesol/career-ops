@@ -1,6 +1,22 @@
 
 ## Pendientes
 
+- [ ] https://boards.greenhouse.io/remotecom/jobs/4997722003 | Remote | Senior Partnership Marketing Manager
+- [ ] https://boards.greenhouse.io/submittable/jobs/4677858004 | Submittable | Alliance Partnership Manager
+- [ ] https://boards.greenhouse.io/teads/jobs/6664079 | Teads | Senior Partnership Manager (SSPs)
+- [ ] https://boards.greenhouse.io/modernhealth/jobs/7667421002 | Modern Health | Partnerships Manager
+- [ ] https://boards.greenhouse.io/cultureamp/jobs/3450922 | Culture Amp | Channel Partnerships Manager
+- [ ] https://boards.greenhouse.io/gocardless/jobs/2370164 | GoCardless | Senior Partnership Manager
+- [ ] https://boards.greenhouse.io/rocketmiles/jobs/3606839 | Rocket Travel | Partnership Manager
+- [ ] https://jobs.ashbyhq.com/ruby-labs/3e5cd6bf-2472-4801-8ff4-ead9efd6d6e2 | Ruby Labs | Community Manager
+- [ ] https://jobs.lever.co/perforce/37835fa2-16cd-4222-b930-6007bcc76bd4 | Perforce | Senior Partner Ecosystem Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/kolex-community-manager-nfts/ | Kolex | Community Manager NFTs
+- [ ] https://weworkremotely.com/remote-jobs/maptiler-developer-relations-customer-success-manager-maps-platform-remote-in-europe | MapTiler | Developer Relations & Customer Success Manager
+- [ ] https://candidat.francetravail.fr/offres/recherche/detail/203GHRG | France Travail | Project Management Officer PMO - Valbonne
+- [ ] https://jobs.ashbyhq.com/livekit/dc4723c0-f763-4219-abf3-220c038550b1 | LiveKit | Staff Developer Advocate Community & Events
+- [ ] https://nexus-labs.pallet.xyz/jobs/b1dc6246-54ee-4007-a42b-5adf4b7a2c4e | Nexus Labs | Community & Marketing Manager
+- [ ] https://pallet.xyz/job/f71755cc-1dfb-40cf-b3e7-2d60a647e973 | Timeswap Labs | Community Manager / Meme Artist
+
 
 - [ ] https://jobs.ashbyhq.com/linera.io/e1af1e7c-4318-4823-9433-e3fdffa45322 | Linera.Io | Web3 Infrastructure Engineer (Remote) @ Linera
 - [ ] https://jobs.ashbyhq.com/cow-dao |  | CoW DAO Jobs
