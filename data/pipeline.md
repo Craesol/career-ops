@@ -719,3 +719,19 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations
 - [ ] https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager
 - [ ] https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China
+
+- [ ] https://remotive.com/remote/jobs/marketing/communications-and-community-manager-4075185 | African Institute for Artificial Intelligence | Communications and Community Manager
+- [ ] https://laborx.com/vacancies/marketing-and-community-manager-binance-labs-3679 | Binance | Marketing and Community Manager
+- [ ] https://main.jobs3.io/job/community-manager-bali/ | One Arrow Consulting | Community Manager (Bali)
+- [ ] https://myweb3jobs.com/job/defi-trading-writer-hyperliquid-perps/ | KAST/Hyperliquid | DeFi Trading Writer (Hyperliquid + Perps)
+- [ ] https://jobs.paradigm.xyz/companies/argent/jobs/37621697-developer-relations-associate | Argent | Developer Relations Associate
+- [ ] https://jobs.paradigm.xyz/companies/babylonchain/jobs/40131489-developer-relations-engineer | BabylonChain | Developer Relations Engineer
+- [ ] https://jobs.multicoin.capital/companies/sei-network/jobs/35396276-head-of-developer-relations | Sei Labs | Head of Developer Relations
+- [ ] https://jobs.multicoin.capital/companies/crunchdao/jobs/47038089-developer-relations-lead | CrunchDAO | Developer Relations Lead
+- [ ] https://jobs.polychain.capital/companies/pl-job-board/jobs/36678432-developer-advocate | Protocol Labs | Developer Advocate
+- [ ] https://jobs.polychain.capital/companies/talus-network-2/jobs/41974913-developer-relations-lead | Talus Network | Developer Relations Lead
+- [ ] https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/42635240-southeast-asia-lead | Monad | Southeast Asia Ecosystem Lead
+- [ ] https://coinbase.getro.com/companies/eco-2/jobs/38545523-head-of-partnerships-business-development | Eco | Head of Partnerships & Business Development
+- [ ] https://coinbase.getro.com/companies/polymer-labs/jobs/41219904-lead-developer-relations-advocate | Polymer Labs | Lead Developer Relations Advocate
+- [ ] https://coinbase.getro.com/companies/walletconnect-2/jobs/45256376-community-lead | WalletConnect | Community Lead
+- [ ] https://careers.play.vc/companies/mighty-bear-games/jobs/46281107-web3-product-owner | Mighty Bear Games | Web3 Product Owner
