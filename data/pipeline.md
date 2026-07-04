@@ -1,5 +1,13 @@
 
 ## Pendientes
+- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8374358002 | GitLab | Manager, Ecosystem Sales - EMEA South
+- [ ] https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/4859889007 | Lantern | Ecosystem Partnerships Operations Manager
+- [ ] https://job-boards.greenhouse.io/bloombergorg/jobs/7634406003 | Bloomberg Philanthropies | Program Manager, Data & AI Portfolio
+- [ ] https://job-boards.greenhouse.io/mercury/jobs/6104219004 | Mercury | Senior Product Partnerships Manager - Payroll
+- [ ] https://boards.greenhouse.io/amplitude/jobs/6505398002 | Amplitude | Ecosystem Lead
+- [ ] https://weworkremotely.com/remote-jobs/ntt-data-project-manager-microsoft-dynamics-365-crm-field-service-fully-remote | NTT Data | Project Manager - Microsoft Dynamics 365 CRM & Field Service
+- [ ] https://weworkremotely.com/remote-jobs/origami-risk-technical-partnerships-manager | Origami Risk | Technical Partnerships Manager
+- [ ] https://jobs.lever.co/jobgether/d0990862-07ec-480f-8695-37186e4ff135 | Jobgether | Web3 / Crypto Business Development Manager
 
 - [ ] https://boards.greenhouse.io/remotecom/jobs/4997722003 | Remote | Senior Partnership Marketing Manager
 - [ ] https://boards.greenhouse.io/submittable/jobs/4677858004 | Submittable | Alliance Partnership Manager
