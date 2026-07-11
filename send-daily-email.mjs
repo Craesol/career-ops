@@ -4,7 +4,7 @@ import { join } from 'path';
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const FROM = process.env.RESEND_FROM || 'career-ops <onboarding@resend.dev>';
 const TO = process.env.NOTIFY_EMAIL;
-const TODAY = '2026-05-06';
+const TODAY = '2026-07-11';
 const TSV_PATH = '/home/user/career-ops/data/scan-history.tsv';
 
 // Read TSV and filter for today's added roles

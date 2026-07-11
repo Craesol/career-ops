@@ -870,3 +870,28 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://startup.jobs/director-web3-gaming-community-collaborations-mythical-games-3123344 | Mythical Games | Director, Web3 Gaming Community & Collaborations
 - [ ] https://job-boards.greenhouse.io/burnt/jobs/4535905008 | XION (Burnt) | Ecosystem Growth Manager
 - [ ] https://job-boards.greenhouse.io/gemini/jobs/7951089 | Gemini | Marketing Coordinator, Community Engagement
+
+- [ ] https://cryptocurrencyjobs.co/marketing/ethena-labs-content-and-community-lead/ | Ethena Labs | Content and Community Lead
+- [ ] https://cryptocurrencyjobs.co/marketing/prepo-community-manager/ | prePO | Lead Community Manager
+- [ ] https://cryptocurrencyjobs.co/marketing/celo-developer-community-manager-core-community/ | Celo | Developer Community Manager
+- [ ] https://jobs3.io/job/xborg-community-manager-swissborg/ | SwissBorg/XBorg | Community Manager
+- [ ] https://jobgether.com/offer/69b99df824d79271ee09b2ed-head-of-community-growth-at-dreamforge-games | DreamForge Games | Head of Community & Growth
+- [ ] https://jobgether.com/offer/697ab84173a8e8b5e77f8be6-community-manager | Odayba | Community Manager
+- [ ] https://startup.jobs/community-lead-nibiru-chain-6377418 | Nibiru Chain | Community Lead
+- [ ] https://hitmarker.net/jobs/garena-kol-community-manager-1258485 | Garena | KOL & Community Manager
+- [ ] https://hitmarker.net/jobs/rebuff-reality-social-media-community-manager-1562610 | Rebuff Reality | Social Media & Community Manager
+- [ ] https://jobs.paradigm.xyz/companies/uniswap-labs-2/jobs/35669181-developer-community-specialist-brand-ambassador-contractor-south-korea | Uniswap Labs | Developer Community Specialist/Brand Ambassador (Contractor)
+- [ ] https://jobs.paradigm.xyz/companies/uniswap-labs-2/jobs/53999580-community-manager-apac | Uniswap Labs | Community Manager - APAC
+- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/35947609-developer-relations-engineer-solana-experience | Aptos Labs | Developer Relations Engineer (Solana Experience)
+- [ ] https://jobs.polychain.capital/companies/celestia-labs-2/jobs/39185026-developer-advocate | Celestia Labs | Developer Advocate
+- [ ] https://coinbase.getro.com/companies/zksync/jobs/22360920-developer-relations-engineer | zkSync | Developer Relations Engineer
+- [ ] https://bankless.pallet.com/jobs/566ea00f-cb2f-424b-bc37-a43cbd21e6d3 | dYdX Foundation | Community Ecosystem Lead
+- [ ] https://bankless.pallet.com/jobs/6ef63796-a59c-4863-8afb-ef5e7d56188c | dYdX Foundation | Community Manager (Contractor)
+- [ ] https://web3.career/devrel-community-manager-unicorn-randamu/92926 | Randamu | DevRel & Community Manager
+- [ ] https://wellfound.com/jobs/3207684-crypto-community-manager | Stronghold | Crypto Community Manager
+- [ ] https://boards.greenhouse.io/lightblocks/jobs/4425305008 | Lightblocks | Web3 Community Manager
+- [ ] https://jobs.lever.co/SeiLabs/ab3752d9-bd44-456f-8f86-faee1eb2da21 | Sei Labs | Developer Relations Advocate
+- [ ] https://jobs.lever.co/with-foundation/05cb43f3-8724-487c-a2d8-671004cb8898 | Foundation (foundation.app) | Sales & Partnerships Lead
+- [ ] https://startup.jobs/ecosystem-growth-monad-4312990 | Monad | Ecosystem Growth
+- [ ] https://www.linkedin.com/jobs/view/senior-developer-relations-engineer-web3-at-monad-labs-3692583652 | Monad Labs | Senior Developer Relations Engineer
+- [ ] https://careers.berachain.com/29602 | Berachain | Developer Relations Engineer
