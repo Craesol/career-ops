@@ -1,8 +1,11 @@
 import 'dotenv/config';
 import { readFileSync, appendFileSync, existsSync, writeFileSync } from 'fs';
 
-const POSITIVE = ['community manager','community lead','community director','head of community','vp of community','community builder','community operations','ecosystem manager','ecosystem lead','ambassador','guild','dao','program manager','program lead','head of programs','community program','partnership manager','partnerships lead','head of partnerships','project manager','senior project manager','pmo','delivery manager','engagement manager','web3','blockchain','crypto','defi','nft','token','protocol','decentralized','on-chain','move','layer 1','layer 2','gaming','esports','game community','player experience','content manager','content strategist','communications manager','social media manager','brand manager','localization manager','localization project manager','translation project manager','impact','social impact','ngo','nonprofit','chef de projet','responsable communaute','charge de projet'];
-const NEGATIVE = ['intern','internship','junior','entry level','accountant','finance manager','legal','lawyer','data scientist','machine learning','software engineer','backend engineer','frontend engineer','full-stack engineer','full stack engineer','fullstack engineer','blockchain engineer','protocol engineer','smart contract engineer','rust engineer','solidity engineer','rust blockchain engineer','infrastructure engineer','platform engineer','data engineer','ml engineer','ai engineer','site reliability engineer','sre','qa engineer','test engineer','security engineer','embedded engineer','firmware engineer','devops engineer','staff engineer','principal engineer','senior engineer','lead engineer','engineering manager','vp engineering','head of engineering','director of engineering','cto','ios','android','devops','cobol','mainframe','oracle ebs','technical program manager','technical project manager','product manager','director of product','head of product','vp of product','business operations','marketing operations','player support','revenue operations','sales operations','d2c','live ops manager','liveops manager','live service manager','recruiter','talent acquisition','people operations','human resources','designer','design lead','quality assurance','solutions architect','sales executive','account executive','customer success','stage','stagiaire','stagier','alternance','alternant','apprenti','apprentice','apprentissage','bts','bachelor','dut','licence pro','contrat pro','professionnalisation','volontariat','vie ','pfe','tfe','developer relations','devrel','developer advocate','developer evangelist','developer experience','dx engineer','developer marketing','ecosystem growth','head of ecosystem growth','vp ecosystem growth','director of ecosystem growth'];
+const POSITIVE = ['community manager','community lead','community director','head of community','vp of community','community builder','community operations','community growth','community narrative','platform community','ecosystem manager','ecosystem lead','ecosystem evangelist','ambassador','ambassador program','brand ambassador','guild','dao','program manager','program lead','head of programs','community program','ambassador program manager','ugc program','partnership manager','partnerships lead','head of partnerships','project manager','senior project manager','pmo','delivery manager','engagement manager','audience engagement','audience development','creator ecosystem','creator economy','creator relations','influencer relations','user advocacy','web3','blockchain','crypto','defi','nft','token','protocol','decentralized','on-chain','move','layer 1','layer 2','gaming','esports','game community','player experience','content manager','content strategist','brand storyteller','communications manager','communications strategist','social media manager','brand manager','brand voice','thought leadership','localization manager','localization program','localization project manager','translation project manager','global launch','regional market','impact','social impact','ngo','nonprofit','chef de projet','responsable communaute','charge de projet','chargé de projet','chargé de communication','responsable communication','responsable marketing','chargé de marketing','chargé web marketing','marketing','communication'];
+const NEGATIVE = ['on-site','onsite','on site','in-office','in office','intern','internship','junior','entry level','assistant','specialist','coordinator','apprenticeship','werkstudent','praktikant','auszubildende','azubi','caretaker','spontaneous application','kol affiliate','accountant','finance manager','legal','lawyer','data scientist','machine learning','software engineer','backend engineer','frontend engineer','full-stack engineer','full stack engineer','fullstack engineer','blockchain engineer','protocol engineer','smart contract engineer','rust engineer','solidity engineer','rust blockchain engineer','infrastructure engineer','platform engineer','data engineer','ml engineer','ai engineer','site reliability engineer','sre','qa engineer','test engineer','security engineer','embedded engineer','firmware engineer','devops engineer','staff engineer','principal engineer','senior engineer','lead engineer','engineering manager','vp engineering','head of engineering','director of engineering','cto','ios','android','devops','cobol','mainframe','oracle ebs','technical program manager','technical project manager','infrastructure technology','it project manager','it program manager','technology project manager','product manager','director of product','head of product','vp of product','business operations','marketing operations','player support','revenue operations','sales operations','d2c','live ops manager','liveops manager','live service manager','recruiter','talent acquisition','people operations','human resources','designer','design lead','quality assurance','solutions architect','sales executive','account executive','customer success','stage','stagiaire','stagier','alternance','alternant','apprenti','apprentice','apprentissage','bts','bachelor','dut','licence pro','contrat pro','professionnalisation','volontariat','vie ','pfe','tfe','bénévolat','bénévole','benevolat','benevole','volunteer','developer relations','devrel','developer advocate','developer evangelist','developer experience','dx engineer','developer marketing','ecosystem growth','head of ecosystem growth','vp ecosystem growth','director of ecosystem growth'];
+
+// Companies / domains to skip entirely (content-farm aggregators, geo-restricted talent pools, etc.)
+const NEGATIVE_COMPANIES = ['onlinejobs.ph','persona talent','remotasks','outlier','data annotation tech'];
 
 const TARGETS = [
   { ats:'greenhouse', company:'Aptos Labs', slug:'aptoslabs' },
@@ -10,7 +13,7 @@ const TARGETS = [
   { ats:'greenhouse', company:'Filecoin Foundation', slug:'filecoinfoundation' },
   { ats:'greenhouse', company:'Scopely', slug:'scopely' },
   { ats:'greenhouse', company:'Startale Labs', slug:'startale' },
-  { ats:'greenhouse', company:'Ava Labs (Avalanche)', slug:'avalabs' },
+  { ats:'ashby', company:'Ava Labs (Avalanche)', slug:'ava-labs' },
   { ats:'ashby', company:'Mysten Labs (Sui)', slug:'mystenlabs' },
   { ats:'ashby', company:'Polygon Labs', slug:'polygon-labs' },
   { ats:'ashby', company:'Solana Foundation', slug:'Solana Foundation' },
@@ -20,7 +23,9 @@ const TARGETS = [
   { ats:'ashby', company:'Hyperliquid Labs', slug:'Hyperliquid Labs' },
   { ats:'ashby', company:'YO Labs', slug:'yolabs' },
   { ats:'lever', company:'Immutable', slug:'immutable' },
-  { ats:'lever', company:'Fun (fun.xyz)', slug:'funxyz' }
+  { ats:'lever', company:'Fun (fun.xyz)', slug:'funxyz' },
+  { ats:'lever', company:'Larian Studios', slug:'larian' },
+  { ats:'lever', company:'Animoca Brands', slug:'animocabrands' }
 ];
 
 const QUOTES = [
@@ -32,17 +37,26 @@ const QUOTES = [
   ['Tis but a scratch.','Monty Python and the Holy Grail']
 ];
 
-// Short keywords (<=5 chars) need word boundaries to avoid false positives like
-// "ngo" matching "Django" or "stage" matching "messaging"
+// Short keywords (<=4 chars) and a few tricky 5-char ones use word boundaries
+// to avoid false positives (e.g. "ngo" in "Django", "stage" in "Backstage").
+// Longer keywords use substring matching so stems catch plurals and forms
+// ("token" → "tokenization", "guild" → "guildmaster", "communication" → "communications").
+const BOUNDARY_KEYWORDS = new Set(['stage','vie ','d2c','pfe','tfe','bts','dut']);
 function hasKeyword(text, kw) {
-  if (kw.length <= 5) {
+  if (BOUNDARY_KEYWORDS.has(kw) || kw.length <= 4) {
     const re = new RegExp('\\b' + kw.replace(/[.*+?^${}()|[\]\\-]/g, '\\$&') + '\\b', 'i');
     return re.test(text);
   }
   return text.toLowerCase().includes(kw);
 }
-function match(t){
+function matchCompany(company) {
+  if (!company) return true;
+  const c = company.toLowerCase();
+  return !NEGATIVE_COMPANIES.some(blocked => c.includes(blocked.toLowerCase()));
+}
+function match(t, company){
   const x = (t || '');
+  if (!matchCompany(company)) return false;
   if (NEGATIVE.some(n => hasKeyword(x, n))) return false;
   return POSITIVE.some(p => hasKeyword(x, p));
 }
@@ -144,7 +158,8 @@ async function fetchLinkedIn() {
     { kw: '"community manager" gaming', loc: 'European Union' },
     { kw: '"program manager" web3', loc: 'Worldwide' },
     { kw: '"community lead" crypto', loc: 'European Union' },
-    { kw: '"community manager"', loc: 'Sophia Antipolis, France' }
+    { kw: '"community manager"', loc: 'Sophia Antipolis, France' },
+    { kw: '"community manager" OR "program manager" OR "social media manager"', loc: 'Monaco' }
   ];
   const all = [];
   for (const q of queries) {
@@ -311,13 +326,63 @@ async function fetchWeb3Career() {
   return all;
 }
 
+// Monaco MPF-platform scraper. Both jobmonaco.com and emploi-monaco.com use the same
+// Bootstrap + searchmpf_* template (Monaco Public-Private foundation / MPF service).
+// Card structure: <div class="card-mpf-joboffer"> with <img alt="{company}"> + <h3><a>{title}</a></h3>
+async function fetchMonacoMpf(baseUrl, portalLabel) {
+  try {
+    const r = await fetch(baseUrl, { headers: LINKEDIN_BROWSER_UA });
+    if (!r.ok) return [];
+    const html = await r.text();
+    // Split by card boundary; first chunk before any card is discarded
+    const cards = html.split('card-mpf-joboffer').slice(1);
+    const all = [];
+    const seenUrls = new Set();
+    for (const card of cards) {
+      // Look ahead at most ~2500 chars per card (rest belongs to next card or page chrome)
+      const slice = card.slice(0, 2500);
+      const hrefMatch = slice.match(/href="(\/en\/offers\/[^"]+)"/);
+      if (!hrefMatch) continue;
+      const offerPath = hrefMatch[1];
+      const fullUrl = new URL(baseUrl).origin + offerPath;
+      if (seenUrls.has(fullUrl)) continue;
+      seenUrls.add(fullUrl);
+      const companyMatch = slice.match(/alt="([^"]+)"/);
+      const titleMatch = slice.match(/<h3[^>]*>\s*<a[^>]+>\s*([\s\S]+?)\s*<\/a>\s*<\/h3>/);
+      const company = (companyMatch && companyMatch[1] !== 'Logo' && companyMatch[1] !== 'logo')
+        ? companyMatch[1].trim()
+        : portalLabel;
+      let title;
+      if (titleMatch) {
+        title = titleMatch[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&#x27;/g, "'").replace(/\s+/g, ' ').trim();
+      } else {
+        // Fallback: derive title from URL slug
+        const slugPart = offerPath.split('/').pop().replace(/^\d+-/, '');
+        title = slugPart.replace(/-/g, ' ');
+      }
+      if (title) all.push({ url: fullUrl, title, company });
+    }
+    return all;
+  } catch(e) { console.error('[' + portalLabel + ']', e.message); return []; }
+}
+
+async function fetchJobMonaco() {
+  return fetchMonacoMpf('https://www.jobmonaco.com/en/', 'JobMonaco');
+}
+
+async function fetchEmploiMonaco() {
+  return fetchMonacoMpf('https://www.emploi-monaco.com/en/', 'Emploi-Monaco');
+}
+
 const FEEDS = [
   { id: 'remoteok', label: 'RemoteOK', fetch: fetchRemoteOK },
   { id: 'remotive', label: 'Remotive', fetch: fetchRemotive },
   { id: 'linkedin', label: 'LinkedIn (guest)', fetch: fetchLinkedIn },
   { id: 'hn-whoshiring', label: 'HN Who is Hiring', fetch: fetchHackerNewsWhoshiring },
   { id: 'web3career', label: 'Web3.career', fetch: fetchWeb3Career },
-  { id: 'adzuna', label: 'Adzuna (7 markets)', fetch: fetchAdzuna }
+  { id: 'adzuna', label: 'Adzuna (7 markets)', fetch: fetchAdzuna },
+  { id: 'jobmonaco', label: 'JobMonaco', fetch: fetchJobMonaco },
+  { id: 'emploi-monaco', label: 'Emploi-Monaco', fetch: fetchEmploiMonaco }
 ];
 
 if (!existsSync('./data/scan-history.tsv')) {
@@ -325,8 +390,25 @@ if (!existsSync('./data/scan-history.tsv')) {
 }
 const tsv = readFileSync('./data/scan-history.tsv','utf-8');
 const seen = new Set(tsv.trim().split('\n').slice(1).map(l=>l.split('\t')[0]));
+// Extended dedup: also block URLs already in pipeline.md (in queue) or applications.md
+// (already evaluated/applied/discarded). Prevents resurfacing of user-discarded roles whose
+// scan-history entry hasn't been re-marked, plus URLs added to pipeline by agentic scans.
+for (const extraFile of ['./data/pipeline.md', './data/applications.md']) {
+  if (existsSync(extraFile)) {
+    const content = readFileSync(extraFile, 'utf-8');
+    const urlMatches = content.match(/https?:\/\/[^\s|)\]>"]+/g) || [];
+    for (const u of urlMatches) seen.add(u.replace(/[.,;]$/, ''));
+  }
+}
 const today = new Date().toISOString().slice(0,10);
 const newRoles = [];
+// Within-run dedup by {company}|{title} to catch boosted re-posts (e.g., RemoteOK companies
+// re-posting same role under multiple numeric IDs to game visibility). Key is normalized
+// lowercase + collapsed whitespace to absorb minor variations.
+const seenCompanyTitle = new Set();
+function ctKey(company, title) {
+  return ((company || '') + '|' + (title || '')).toLowerCase().replace(/\s+/g, ' ').trim();
+}
 
 // Phase 1: ATS APIs (16 known companies)
 for (const t of TARGETS) {
@@ -335,8 +417,19 @@ for (const t of TARGETS) {
   for (const j of jobs) {
     if(!j.url||seen.has(j.url))continue;
     seen.add(j.url);
-    const status = match(j.title) ? 'added' : 'skipped_title';
     const portal = '[API:'+t.ats+'/'+t.slug+']';
+    let status;
+    if (!match(j.title, t.company)) {
+      status = 'skipped_title';
+    } else {
+      const k = ctKey(t.company, j.title);
+      if (seenCompanyTitle.has(k)) {
+        status = 'skipped_company_title_dup';
+      } else {
+        seenCompanyTitle.add(k);
+        status = 'added';
+      }
+    }
     appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,t.company,status].join('\t')+'\n');
     if(status==='added'){
       newRoles.push({url:j.url,title:j.title,company:t.company,portal});
@@ -352,9 +445,20 @@ for (const f of FEEDS) {
   for (const j of jobs) {
     if(!j.url||seen.has(j.url))continue;
     seen.add(j.url);
-    const status = match(j.title) ? 'added' : 'skipped_title';
     const portal = '[FEED:'+f.id+']';
     const company = j.company || f.label;
+    let status;
+    if (!match(j.title, company)) {
+      status = 'skipped_title';
+    } else {
+      const k = ctKey(company, j.title);
+      if (seenCompanyTitle.has(k)) {
+        status = 'skipped_company_title_dup';
+      } else {
+        seenCompanyTitle.add(k);
+        status = 'added';
+      }
+    }
     appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,company,status].join('\t')+'\n');
     if(status==='added'){
       newRoles.push({url:j.url,title:j.title,company,portal});

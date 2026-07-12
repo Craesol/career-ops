@@ -10,8 +10,23 @@
           "type": "json",
           "path": "package.json",
           "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "scaffolder/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "generic",
+          "path": "VERSION"
         }
       ]
+    },
+    "web": {
+      "release-type": "node",
+      "package-name": "career-ops-web",
+      "component": "web",
+      "include-component-in-tag": true
     }
   }
 }
