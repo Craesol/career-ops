@@ -895,3 +895,6 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://startup.jobs/ecosystem-growth-monad-4312990 | Monad | Ecosystem Growth
 - [ ] https://www.linkedin.com/jobs/view/senior-developer-relations-engineer-web3-at-monad-labs-3692583652 | Monad Labs | Senior Developer Relations Engineer
 - [ ] https://careers.berachain.com/29602 | Berachain | Developer Relations Engineer
+- [ ] https://jobs.lever.co/nibiru/388b4a9c-708a-443c-889c-a8ce8d7e93a3/apply | Nibiru | Community Lead
+- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/43049509-defi-ecosystem-manager-apac | Aptos Labs | DeFi Ecosystem Manager APAC
+- [ ] https://startup.jobs/community-manager-animoca-brands-limited-4481470 | Animoca Brands | Community Manager
