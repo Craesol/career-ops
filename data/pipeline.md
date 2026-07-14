@@ -898,3 +898,56 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.lever.co/nibiru/388b4a9c-708a-443c-889c-a8ce8d7e93a3/apply | Nibiru | Community Lead
 - [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/43049509-defi-ecosystem-manager-apac | Aptos Labs | DeFi Ecosystem Manager APAC
 - [ ] https://startup.jobs/community-manager-animoca-brands-limited-4481470 | Animoca Brands | Community Manager
+- [ ] https://job-boards.greenhouse.io/later/jobs/8621358002 | Later | Community Manager at Later
+- [ ] https://jobs.ashbyhq.com/socure/fa91c32a-86ed-4665-a8af-675224348363 | Socure | Community Manager, Socure Intelligence Community at Socure
+- [ ] https://jobs.ashbyhq.com/trust-wallet/04239652-62bb-43d7-87ea-844b0cdfc844 | Trust Wallet | Senior Data Analyst (Web3) at Trust Wallet
+- [ ] https://jobs.ashbyhq.com/ens-labs/9c93564c-4e3a-4635-be6c-f9dc6cd70b26 | ENS Labs | Integrations Engineer (Web3) at ENS Labs
+- [ ] https://jobs.lever.co/truv/27f965a7-5808-4243-a0dd-43f7d9f73bb3 | Truv | Community Manager - Truv
+- [ ] https://cryptocurrencyjobs.co/marketing/method-finance-social-media-and-community-manager/ | Method Finance | Social Media and Community Manager at Method Finance
+- [ ] https://cryptocurrencyjobs.co/marketing/coinshift-community-manager/ | Coinshift | Community Manager at Coinshift
+- [ ] https://cryptocurrencyjobs.co/customer-support/entities-community-manager/ | Entities | Community Manager at Entities
+- [ ] https://pompcryptojobs.com/job/5906/head-of-ecosystem-growth/ | Polygon | Head of Ecosystem Growth at Polygon
+- [ ] https://id.linkedin.com/jobs/view/community-manager-content-specialist-web3-at-visi-4116382111 | Visi | Community Manager & Content Specialist (Web3) at Visi
+- [ ] https://apply.workable.com/pavago/j/E0AF9F06ED | Pavago | Community Manager at Pavago
+- [ ] https://startup.jobs/community-manager-nft-now-4450005 | NFT Now | Community Manager at NFT Now
+- [ ] https://builtin.com/job/social-media-and-community-manager/3861310 | PublicSquare | Community Manager and Social Media at PublicSquare
+- [ ] https://www.glassdoor.com/job-listing/senior-pr-communications-manager-offchain-labs-JV_KO0,32_KE33,46.htm?jl=1010088629684 | Offchain Labs | Senior PR & Communications Manager at Offchain Labs
+- [ ] https://www.glassdoor.com/job-listing/social-media-manager-bullish-bullish-JV_IC1132348_KO0,28_KE29,36.htm?jl=1009965857146 | Bullish | Social Media Manager at Bullish
+- [ ] https://weworkremotely.com/remote-jobs/creatorxchange-community-manager | creatorXchange | Community Manager at creatorXchange
+- [ ] https://himalayas.app/companies/stackblitz/jobs/community-manager | StackBlitz | Community Manager at StackBlitz (Himalayas)
+- [ ] https://app.welcometothejungle.com/jobs/zPX38umU | Binance | Binance France Community Manager
+- [ ] https://euremotejobs.com/job/affiliate-manager-for-igaming-websites/ | EU Remote Jobs listing | Affiliate Manager for iGaming Websites
+- [ ] https://laborx.com/jobs/crypto-community-manager-87965 | Various | Crypto Community Manager
+- [ ] https://jobs3.io/job/director-of-quantitative-token-engineering-metamask/ | Metamask | Director of Quantitative Token Engineering at Metamask
+- [ ] https://main.jobs3.io/job/crypto-social-media-manager-hanoi-remote/ | Token Metrics | Crypto Social Media Manager at Token Metrics
+- [ ] https://wellfound.com/jobs/4114890-head-of-web3-ecosystem-alliances-post-quantum-blockchain-commission-1-equity | Post-Quantum Blockchain | Head of Web3 Ecosystem Alliances
+- [ ] https://boards.greenhouse.io/embed/job_app?token=7026791&gh_src=web3.career | Status | Status Network DevRel & Community Manager (South Korea)
+- [ ] https://boards.greenhouse.io/energicorelimited/jobs/4276062004 | Energi Core Limited | NFT Community / Social Media Manager
+- [ ] https://boards.greenhouse.io/eclipse/jobs/4040529008 | Eclipse | Social Media and Communications Manager
+- [ ] https://boards.greenhouse.io/abclabs/jobs/4392046005 | ABC Labs | DeFi Community Manager
+- [ ] https://boards.greenhouse.io/dfinity/jobs/5420747002 | DFINITY | Community Manager
+- [ ] https://boards.greenhouse.io/eclipse/jobs/4036865008 | Eclipse | Developer Relations Associate
+- [ ] https://jobs.ashbyhq.com/Sahara/ba33f05b-0858-4b5e-92cf-630852b624f1 | Sahara | Community Manager
+- [ ] https://hk.linkedin.com/jobs/view/ecosystem-manager-at-pharos-network-4311836628 | Pharos Network | Ecosystem Manager
+- [ ] https://job-boards.greenhouse.io/startale/jobs/4763405008 | Startale | Community Manager - APAC
+- [ ] https://boards.greenhouse.io/okx/jobs/5997519003 | OKX | Community Manager, OKX Spain
+- [ ] https://boards.greenhouse.io/okx/jobs/5972703003 | OKX | Community Manager, Netherlands
+- [ ] https://job-boards.greenhouse.io/horizenlabs/jobs/5707310004 | Horizen Labs | Community Manager (ZKVerify)
+- [ ] https://job-boards.greenhouse.io/uniswaplabs/jobs/4565258005 | Uniswap Labs | Community Manager - APAC
+- [ ] https://job-boards.greenhouse.io/a16zcryptoteam/jobs/4297880006 | a16z crypto | Contractor, Program Manager, Crypto
+- [ ] https://jobs.paradigm.xyz/companies/symbiotic-2-4ace1b94-73f0-431a-8cb8-175636ab72fa/jobs/55872767-community-manager | Symbiotic | Community Manager
+- [ ] https://jobs.multicoin.capital/companies/tibles/jobs/45133294-community-manager | Tibles | Community Manager
+- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/42449450-community-manager-korea | Aptos Labs | Community Manager, Korea
+- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/38542714-apac-ecosystem-manager-associate | Aptos Labs | APAC Ecosystem Manager / Associate
+- [ ] https://jobs.multicoin.capital/companies/livepeer/jobs/36925229-program-manager | Livepeer | Program Manager
+- [ ] https://jobs.polychain.capital/companies/scroll-io-2/jobs/45096344-community-manager-chinese-speaking | Scroll.io | Community Manager (Chinese-Speaking)
+- [ ] https://jobs.polychain.capital/companies/ava-labs/jobs/45059496-senior-social-media-manager-crypto-twitter | Ava Labs | Senior Social Media Manager, Crypto Twitter
+- [ ] https://www.coinbase.com/careers/positions/5783409 | Coinbase | Program Manager, Corporate Programs
+- [ ] https://www.coinbase.com/careers/positions/5578655 | Coinbase | Program Manager (Growth)
+- [ ] https://www.coinbase.com/careers/positions/7051863 | Coinbase | Program Manager I, Corporate Programs
+- [ ] https://bankless.pallet.com/jobs/c1e1b40a-52ef-463a-817e-60a98570fd0b | Bankless Academy | Community Manager
+- [ ] https://www.animocabrands.com/online-game-community-manager | Animoca Brands | Online Game Community Manager
+- [ ] https://web-3.pallet.com/jobs/515bccd3-7ef8-41fe-a046-ceb6d550dee9 | Passage Protocol | Community Manager
+- [ ] https://mintcalendar.pallet.com/jobs/ce888916-a771-4b4c-b2ab-4358a8f417af | Brinc Finance | Associate Program Manager - Blockchain, NFT & Web3
+- [ ] https://web3.career/head-of-community-entangle-labs/67346 | Entangle Labs | Head of Community
+- [ ] https://web3.career/developer-community-manager-consensys/14659 | Consensys | Developer Community Manager
