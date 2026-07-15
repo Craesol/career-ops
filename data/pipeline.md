@@ -951,3 +951,14 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://mintcalendar.pallet.com/jobs/ce888916-a771-4b4c-b2ab-4358a8f417af | Brinc Finance | Associate Program Manager - Blockchain, NFT & Web3
 - [ ] https://web3.career/head-of-community-entangle-labs/67346 | Entangle Labs | Head of Community
 - [ ] https://web3.career/developer-community-manager-consensys/14659 | Consensys | Developer Community Manager
+- [ ] https://jobs.ashbyhq.com/cow-dao/bad70ba5-c26d-4201-b9b5-77b7948e9862 | CoW DAO | Recruiter (Web3)
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-manta-network-powered-by-p0x-labs-229405 | Manta Network | Community Manager
+- [ ] https://remoteok.com/remote-jobs/19655-remote-community-manager-github | GitHub | Community Manager
+- [ ] https://remoteok.com/remote-jobs/107341-remote-community-manager-messari | Messari | Community Manager
+- [ ] https://himalayas.app/companies/messari/jobs/social-media-community-manager | Messari | Social Media Community Manager
+- [ ] https://job-boards.greenhouse.io/akuity/jobs/4181022009 | Akuity | Community Manager - Open Source
+- [ ] https://job-boards.greenhouse.io/fireworksai/jobs/4299816009 | Fireworks AI | Social and Community Manager
+- [ ] https://jobs.lever.co/certik/3ad4ba74-fec1-4dbd-9b70-363f6e7d0827 | CertiK | Web3 BD
+- [ ] https://jobs.lever.co/binance/5a34d855-b30f-4ff1-995e-bc8cae82d300 | Binance | Web3 Security Specialist
+- [ ] https://jobs.ashbyhq.com/coder/ada0105c-0eb9-4a38-bdb1-0a6e1cac071b | Coder | Developer Relations Engineer
+- [ ] https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca | Supabase | Developer Relations Engineer
