@@ -962,3 +962,6 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.lever.co/binance/5a34d855-b30f-4ff1-995e-bc8cae82d300 | Binance | Web3 Security Specialist
 - [ ] https://jobs.ashbyhq.com/coder/ada0105c-0eb9-4a38-bdb1-0a6e1cac071b | Coder | Developer Relations Engineer
 - [ ] https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca | Supabase | Developer Relations Engineer
+
+- [ ] https://jobs.lever.co/jobgether/4f2d54c6-a3d1-4e5e-b371-5d5c5cb0635b | Jobgether | Senior Developer Community Manager
+- [ ] https://boards.greenhouse.io/smartling/jobs/5486815 | Smartling | Project Manager, Language Services
