@@ -965,3 +965,30 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://jobs.lever.co/jobgether/4f2d54c6-a3d1-4e5e-b371-5d5c5cb0635b | Jobgether | Senior Developer Community Manager
 - [ ] https://boards.greenhouse.io/smartling/jobs/5486815 | Smartling | Project Manager, Language Services
+- [ ] https://job-boards.greenhouse.io/celonis/jobs/7584575003 | Celonis | Lead Community Manager
+- [ ] https://job-boards.greenhouse.io/blockchain/jobs/8066864 | Blockchain.com | Content, Social and Community Manager
+- [ ] https://job-boards.greenhouse.io/eucalyptus/jobs/4626203005 | Eucalyptus | Community Manager
+- [ ] https://job-boards.greenhouse.io/airtable/jobs/8604559002 | Airtable | Program Manager, Community (Contract)
+- [ ] https://job-boards.greenhouse.io/rootstocklabsltd/jobs/4585815101 | RootstockLabs | Community Manager
+- [ ] https://job-boards.greenhouse.io/noble/jobs/4407029008 | Noble | Community Manager
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7503770003 | OKX | Senior Strategic Project Manager, Web3
+- [ ] https://job-boards.greenhouse.io/proton/jobs/4770442101 | Proton | Senior Community Manager
+- [ ] https://jobs.ashbyhq.com/openclaw-foundation-inc/b5c4df0f-0a8c-4a37-85db-eb787d11fc03 | OpenClaw Foundation | Developer Relations & Community Manager (APAC)
+- [ ] https://jobs.ashbyhq.com/sentient/71106e0e-f871-4010-a548-ba56786bcc85 | Sentient | China Developer Relations & Ecosystem Growth
+- [ ] https://jobs.ashbyhq.com/Caldera/e28e3b0e-02fd-4ea6-b7c2-ed62da4c6276 | Caldera | Community Lead
+- [ ] https://jobs.ashbyhq.com/monad.foundation/6029f8cf-8a22-45fd-a843-b6a05b64beed | Monad Foundation | India Ecosystem Lead
+- [ ] https://jobs.ashbyhq.com/Sahara/768c5a43-bb7a-4167-ad35-dc33d84a70a3 | Sahara | Ecosystem Lead
+- [ ] https://jobs.ashbyhq.com/monad.foundation/2ea902ef-3363-4d1e-aa8b-6a330b626af8 | Monad Foundation | LATAM Ecosystem Lead
+- [ ] https://jobs.ashbyhq.com/dourolabs.xyz/3a9c9ac0-3966-4bf6-a695-82c7dcf49055 | Douro Labs | Ecosystem Lead - FOGO
+- [ ] https://jobs.lever.co/arbitrumfoundation/0eef26ac-e42d-4b38-9138-026c12eb265e | Arbitrum Foundation | Korea Community Manager
+- [ ] https://jobs.lever.co/arbitrumfoundation/5c02b8eb-58c4-47e5-ab5f-34ac1820d4a9 | Arbitrum Foundation | Head of Ecosystem Growth
+- [ ] https://jobs.lever.co/binance/4d718f57-be13-47f1-b16b-fffa0b92b609 | Binance | Community Manager - Saudi Arabia
+- [ ] https://weworkremotely.com/remote-jobs/playco-community-manager-web3 | Playco | Community Manager (Web3)
+- [ ] https://apply.workable.com/mlabs/j/8F568B4385/ | MLabs | APAC Community Lead
+- [ ] https://www.remote3.co/remote-jobs/community-manager-web3-nothing-tech | Nothing Tech | Community Manager, Web3
+- [ ] https://www.remote3.co/remote-jobs/community-manager-apac-windranger-labs | Windranger Labs | Community Manager, APAC
+- [ ] https://www.remote3.co/remote-jobs/community-manager-automata | Automata | Community Manager
+- [ ] https://beincrypto.com/jobs/p/senior-director-developer-relations-paypal/ | PayPal | Senior Director Developer Relations
+- [ ] https://jobs.a16z.com/jobs/krea.ai?jobTypes=Community+Manager | krea.ai | Community Manager
+- [ ] https://wellfound.com/jobs/3245487-crypto-community-manager-stealth-mode-startup | ArcFive | Crypto Community Manager (Stealth-mode Startup)
+- [ ] https://wellfound.com/jobs/2811144-community-manager | Powerloom Protocol | Community Manager
