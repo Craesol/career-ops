@@ -992,3 +992,22 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.a16z.com/jobs/krea.ai?jobTypes=Community+Manager | krea.ai | Community Manager
 - [ ] https://wellfound.com/jobs/3245487-crypto-community-manager-stealth-mode-startup | ArcFive | Crypto Community Manager (Stealth-mode Startup)
 - [ ] https://wellfound.com/jobs/2811144-community-manager | Powerloom Protocol | Community Manager
+- [ ] https://jobs.ashbyhq.com/chief/cc1e4ac6-0258-4efb-b77e-8e4626d690d3 | Chief | Community Manager, LA (Contract)
+- [ ] https://jobs.ashbyhq.com/eyt/97eff5fd-3544-4d14-8162-fcc98cf75c1b | Extend Your Team | Crypto Support Specialist
+- [ ] https://eu.experteer.com/career/view-jobs/frontend-engineer-react-dot-js-italia-54947682 |  | Full-Stack Engineer (Web3 / FinTech)
+- [ ] https://remote.com/jobs/included-health-c173e7m0/sr-project-and-program-manager-j1ylqdba | Included Health | Sr. Project and Program Manager
+- [ ] https://builtin.com/job/community-manager/10139300 | Viral Nation | Community Manager
+- [ ] https://www.glassdoor.com/job-listing/application-support-engineer-blockchain-security-ai-automation-crypto-com-JV_IC1135277_KO0,62_KE63,73.htm?jl=1010125750861 | Crypto.com | Application Support Engineer - Blockchain Security & AI Automation
+- [ ] https://remotive.com/remote/jobs/all-others/developer-relations-community-manager-5172735 | OpenClaw Foundation | Developer Relations & Community Manager
+- [ ] https://weworkremotely.com/remote-jobs/tend-sourcing-and-crm-program-manager | Tend | Sourcing and CRM Program Manager
+- [ ] https://remoteok.com/remote-jobs/remote-community-manager-west-africa-binance-125118 | Binance | Community Manager West Africa
+- [ ] https://remoteok.com/remote-jobs/164-remote-community-manager-bitfinder | Bitfinder | Community Manager
+- [ ] https://laborx.com/jobs/web3-guru-102222 | Unknown | Web3 GURU
+- [ ] https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6007385004 | PlayStation Global | Community Manager
+- [ ] https://job-boards.greenhouse.io/eleventhhourgames/jobs/8546135002 | Eleventh Hour Games | Senior Community Manager
+- [ ] https://job-boards.greenhouse.io/okx/jobs/6256980003 | OKX | Community Manager, OKX Poland (remote)
+- [ ] https://job-boards.greenhouse.io/anthropic/jobs/5231468008 | Anthropic | Enterprise Community Lead
+- [ ] https://job-boards.greenhouse.io/horizenlabs/jobs/5539618004 | Horizen Labs | Web3 Communication & Content Manager
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063543007 | Hyphen Connect Limited | Content Specialist (Web3/ Crypto Exchange)
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5053487007 | Hyphen Connect Limited | Marketing Specialist (Community & Social Growth) - Web3/ Crypto
+- [ ] https://climate-tech-vc.pallet.com/jobs/d86976e7-b434-44dd-99c5-ec7d83bc2639 | For ClimateTech | Venture For ClimateTech Program Manager
