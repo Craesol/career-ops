@@ -1011,3 +1011,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063543007 | Hyphen Connect Limited | Content Specialist (Web3/ Crypto Exchange)
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5053487007 | Hyphen Connect Limited | Marketing Specialist (Community & Social Growth) - Web3/ Crypto
 - [ ] https://climate-tech-vc.pallet.com/jobs/d86976e7-b434-44dd-99c5-ec7d83bc2639 | For ClimateTech | Venture For ClimateTech Program Manager
+- [ ] https://job-boards.greenhouse.io/postman/jobs/7761536003 | Postman | Technical Community Manager
+- [ ] https://job-boards.greenhouse.io/opentable/jobs/7864544002 | OpenTable | Localisation Program Manager
+- [ ] https://job-boards.greenhouse.io/affirm/jobs/6993975003 | Affirm | Senior Program Manager Localization
+- [ ] https://www.remote3.co/remote-jobs/job-application-for-senior-manager-web3-growth-at-okx-okx | OKX | Senior Manager Web3 Growth
+- [ ] https://www.remote3.co/remote-jobs/head-of-ecosystem-web3-aethir-1 | Aethir | Head of Ecosystem (Web3)
+- [ ] https://job-boards.greenhouse.io/uniswaplabs/jobs/4584083005 | Uniswap Labs | Community Manager APAC
