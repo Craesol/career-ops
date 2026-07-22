@@ -1017,3 +1017,12 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://www.remote3.co/remote-jobs/job-application-for-senior-manager-web3-growth-at-okx-okx | OKX | Senior Manager Web3 Growth
 - [ ] https://www.remote3.co/remote-jobs/head-of-ecosystem-web3-aethir-1 | Aethir | Head of Ecosystem (Web3)
 - [ ] https://job-boards.greenhouse.io/uniswaplabs/jobs/4584083005 | Uniswap Labs | Community Manager APAC
+- [ ] https://jobs.ashbyhq.com/1password/7be137ff-3841-49ba-afd1-d116e22b2c9c | 1Password | Senior Developer Community Manager
+- [ ] https://remotive.com/remote-jobs/marketing/community-lead-1193213 | Coefficient | Community Lead
+- [ ] https://weworkremotely.com/remote-jobs/airtable-program-manager-community-contract | Airtable | Program Manager Community Contract
+- [ ] https://remoteok.com/remote-jobs/remote-community-lead-arbitrum-foundation-1087421 | Arbitrum Foundation | Community Lead
+- [ ] https://remote3.co/remote-jobs/web3-community-manager-remote-phoenix-growth | Phoenix Growth | Web3 Community Manager
+- [ ] https://remote3.co/remote-jobs/community-lead-unto-labs-3 | Unto Labs | Community Lead
+- [ ] https://remote3.co/remote-jobs/community-manager-0g-labs | 0g Labs | Community Manager
+- [ ] https://kast.xyz/careers/crypto-partnership-manager | KAST | Crypto Partnership Manager
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063547007 | Hyphen Connect Limited | Content Specialist (Web3/Crypto Exchange)
