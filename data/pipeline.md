@@ -1026,3 +1026,24 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://remote3.co/remote-jobs/community-manager-0g-labs | 0g Labs | Community Manager
 - [ ] https://kast.xyz/careers/crypto-partnership-manager | KAST | Crypto Partnership Manager
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063547007 | Hyphen Connect Limited | Content Specialist (Web3/Crypto Exchange)
+- [ ] https://builtin.com/job/community-manager-mfd/3213735 | DECA Games | Community Manager
+- [ ] https://builtin.com/job/spontaneous-application-community-manager-video-games-worldwide-remote/7364136 | Unknown | Community Manager (Video Games)
+- [ ] https://www.linkedin.com/jobs/view/community-lead-metagluedao-web3-society-at-roote-3310067209 | Roote | Community Lead, MetaGlueDAO
+- [ ] https://web3.career/community-manager-emea-chainlink/69108 | Chainlink Labs | Community Manager, EMEA
+- [ ] https://web3.career/community-manager-web3-blockchain/102294 | Blockchain.com | Community Manager - Web3
+- [ ] https://builtin.com/job/lead-community-manager-6-month-contract/3713548 | Seedworld | Lead Community Manager (6-month contract)
+- [ ] https://remoteok.com/remote-jobs/104549-remote-community-manager-chainlink-labs | Chainlink Labs | Community Manager
+- [ ] https://www.remote3.co/remote-jobs/web3-community-manager-remote-phoenix-growth | Phoenix Growth | Web3 Community Manager
+- [ ] https://x.com/crypto_vazima/status/2073375962331300009 | Diamante | Growth Manager (Web3 Native)
+- [ ] https://web3.career/community-lead-coo-d3-dimension-technology-pte-ltd/41848 | D3 Dimension Technology | Web3 Community Lead/COO
+- [ ] https://x.com/VastGG/status/1886827143901950196 | Vast | Discord Community Manager
+- [ ] https://x.com/WallhackHQ/status/1956304630746337540 | WALLHACK | Community Manager & Content Creator
+- [ ] https://x.com/SteelCrateGames/status/1359173588100743173 | Steel Crate Games | Community Manager
+- [ ] https://x.com/loftiadev/status/1637970595546796032 | Loftia | Community Manager
+- [ ] https://x.com/techlandgames/status/795654664830255106 | Techland | Community Manager
+- [ ] https://x.com/psyonixstudios/status/732741113912532992 | Psyonix | Community Manager
+- [ ] https://x.com/thatgamecompany/status/1162503056027635712 | thatgamecompany | Community Manager
+- [ ] https://web3.career/community-manager-offchainlabs/43679 | Offchain Labs | Community Manager
+- [ ] https://web3.career/community-manager-visionaryeyecapital/96725 | Visionary Eye Capital | Web3 Community Manager
+- [ ] https://web3.career/community-manager-blockless/66816 | Blockless | Web3 Community Manager
+- [ ] https://builtin.com/job/project/ecosystem-manager-crypto-intelligence/367083 | Unknown | Ecosystem Manager, Crypto Intelligence
