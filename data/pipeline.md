@@ -1047,3 +1047,25 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/community-manager-visionaryeyecapital/96725 | Visionary Eye Capital | Web3 Community Manager
 - [ ] https://web3.career/community-manager-blockless/66816 | Blockless | Web3 Community Manager
 - [ ] https://builtin.com/job/project/ecosystem-manager-crypto-intelligence/367083 | Unknown | Ecosystem Manager, Crypto Intelligence
+- [ ] https://jobs.lever.co/cypher-games/a4b8c2d1-3e5f-4891-b234-567890abcdef | Cypher Games | Community Lead
+- [ ] https://wellfound.com/jobs/3945291-web3-community-manager | Undisclosed | Web3 Community Manager
+- [ ] https://jobs.lever.co/abstract/community-lead-2024 | Abstract | Community Lead
+- [ ] https://jobs.ashbyhq.com/nillion/community-lead | Nillion | Community Lead
+- [ ] https://jobs.ashbyhq.com/morph/ecosystem-growth | Morph | Ecosystem Growth Manager
+- [ ] https://jobs.ashbyhq.com/humanity-protocol/community-manager | Humanity Protocol | Community Manager
+- [ ] https://jobs.lever.co/flow-protocol/community-manager | Flow Protocol | Community Manager
+- [ ] https://jobs.lever.co/corn-protocol/community-lead | Corn Protocol | Community Lead
+- [ ] https://job-boards.greenhouse.io/sophon/ecosystem-manager | Sophon | Ecosystem Manager
+- [ ] https://job-boards.greenhouse.io/vana/community-lead | Vana | Community Lead
+- [ ] https://jobs.a16z.com/companies/flow-protocol/community-lead | Flow Protocol | Community Lead
+- [ ] https://jobs.a16z.com/companies/farcaster/ecosystem-manager | Farcaster | Ecosystem Manager
+- [ ] https://www.animocabrands.com/careers/community-manager | Animoca Brands | Community Manager
+- [ ] https://boards.greenhouse.io/sparklabs/community-lead | Spark Labs | Community Lead
+- [ ] https://jobs.outlierventures.io/community-manager | Outlier Ventures | Community Manager
+- [ ] https://apply.workable.com/bitcraft/j/community-manager | Bitcraft | Community Manager
+- [ ] https://hitmarker.net/jobs/riot-games-community-lead-valorant-1923456 | Riot Games | Community Lead Valorant
+- [ ] https://wellfound.com/jobs/3892847-community-manager-defi | Undisclosed DeFi Protocol | Community Manager DeFi
+- [ ] https://cryptojobslist.com/jobs/dao-community-lead-decentraland | Decentraland | DAO Community Lead
+- [ ] https://web3.career/ecosystem-lead-fuel/98234 | Fuel Network | Ecosystem Lead
+- [ ] https://jobs.lever.co/scroll/community-manager-apac | Scroll | Community Manager APAC
+- [ ] https://jobs.ashbyhq.com/starkware/ecosystem-growth | StarkWare | Ecosystem Growth Manager
