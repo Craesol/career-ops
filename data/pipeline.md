@@ -1069,3 +1069,12 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/ecosystem-lead-fuel/98234 | Fuel Network | Ecosystem Lead
 - [ ] https://jobs.lever.co/scroll/community-manager-apac | Scroll | Community Manager APAC
 - [ ] https://jobs.ashbyhq.com/starkware/ecosystem-growth | StarkWare | Ecosystem Growth Manager
+
+- [ ] https://jobs.ashbyhq.com/atomic/fbd58512-7ae2-41c0-bbcc-e1c92ab7b5aa | Atomic | Community Manager
+- [ ] https://jobs.ashbyhq.com/proto-town/b37647bc-316f-43da-b91b-622781a80bc9 | Proto-Town | Community Manager
+- [ ] https://jobs.ashbyhq.com/flox/132d3ea8-d91b-4da1-b564-0cf1ccd7b2a8 | Flox | Developer Relations Lead
+- [ ] https://jobs.ashbyhq.com/openclaw-foundation-inc/b5c4df0f-0a8c-4a37-85db-eb787d11fc03/application | OpenClaw Foundation | DevRel Community Manager APAC
+- [ ] https://hitmarker.net/jobs/packsify-community-partner-manager-1767547 | Packsify | Community Partner Manager
+- [ ] https://hitmarker.net/jobs/raid-studios-community-manager-2907160 | RAID Studios | Community Manager
+- [ ] https://cryptojobslist.com/jobs/community-manager-moderator-web3-blockchain-crypto-lucidia-remote | Lucidia | Community Manager Web3
+- [ ] https://cryptocurrencyjobs.co/marketing/ethereum-foundation-community-and-ecosystem-lead/ | Ethereum Foundation | Community and Ecosystem Lead
