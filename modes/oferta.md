@@ -1,91 +1,203 @@
-# Modo: oferta — Evaluación Completa A-G
+# Mode: job — Full A-G Evaluation
 
-Cuando el candidato pega una oferta (texto o URL), entregar SIEMPRE los 7 bloques (A-F evaluation + G legitimacy):
+When the candidate pastes a job (text or URL), ALWAYS deliver the 7 blocks (A-F evaluation + G legitimacy):
 
-## Paso 0 — Detección de Arquetipo
+## Liveness gate (URL inputs)
 
-Clasificar la oferta en uno de los 6 arquetipos (ver `_shared.md`). Si es híbrido, indicar los 2 más cercanos. Esto determina:
-- Qué proof points priorizar en bloque B
-- Cómo reescribir el summary en bloque E
-- Qué historias STAR preparar en bloque F
+When the candidate pastes a **URL** (not JD text), confirm the posting is still live before doing any evaluation. A dead link must never reach Block A — a 404/expired page wastes a full A-G evaluation, report, and PDF on phantom content.
 
-## Bloque A — Resumen del Rol
+1. Get the page content: if you arrived here from `auto-pipeline` (its Step 0.5 already navigated and cleared the link), reuse that snapshot — do not navigate again. On a direct URL entry, navigate with Playwright (`browser_navigate` + `browser_snapshot`) and read the title, URL, and visible content.
+2. Classify the posting:
+   - **active posting evidence:** title/role + a real job description or an application/apply path
+   - **closed posting evidence:** expired/closed/"no longer accepting applications", missing JD with only nav/footer, hard redirect to a generic careers/search page, or 404/410
+3. If the posting appears closed, **stop before Block A**: tell the candidate the link is dead, and if the entry came from `data/pipeline.md`, mark it `- [x] ~~Company | Role~~ — oferta nieaktywna`. Do not generate an evaluation, report, or CV.
+4. If the candidate pasted JD text (no URL), liveness cannot be verified — note that and proceed; there is no link to check.
 
-Tabla con:
-- Arquetipo detectado
+Do not continue to Block A until this gate is resolved. The snapshot captured here is reused by Block G's freshness signals.
+
+## Bounded Research Budget
+
+Company, compensation, and hiring-signal research must be a single-pass lookup, not an open-ended investigation. This mode is an evaluation workflow, not deep company research.
+
+Hard limits for Blocks D and G combined:
+- hard cap: 5 total WebSearch queries
+- Prefer targeted queries that answer more than one question; stop early when enough evidence exists.
+- Do not invoke `deep-research`, `deep`, or any other research skill.
+- Do not spawn subagents or delegate research to another agent.
+- Do not continue researching after the query cap is reached; summarize the evidence found and explicitly mark missing data as unavailable.
+
+If deeper company research is useful, recommend running `/career-ops deep` separately after the evaluation.
+
+## Step 0 — Archetype Detection
+
+Classify the job into one of the 6 archetypes (see `_shared.md`). If it is a hybrid, indicate the 2 closest ones. This determines:
+- Which proof points to prioritize in block B
+- How to rewrite the summary in block E
+- Which STAR stories to prepare in block F
+
+## Block A — Role Summary
+
+Table with:
+- Archetype detected
 - Domain (platform/agentic/LLMOps/ML/enterprise)
 - Function (build/consult/manage/deploy)
 - Seniority
 - Remote (full/hybrid/onsite)
-- Team size (si se menciona)
-- TL;DR en 1 frase
+- Team size (if mentioned)
+- **Culture screen** (see `_shared.md` § Scoring System): pass / caution / fail, with the specific evidence found or missing — not just a score, name what you saw
+- TL;DR in 1 sentence
 
-## Bloque B — Match con CV
+### Geo-mismatch check
 
-Lee `cv.md`. Crea tabla con cada requisito del JD mapeado a líneas exactas del CV.
+After filling the Remote row, cross-check the posting's **structured location field** (the location/remote designation shown on the posting page or in ATS metadata — not the Remote row you just wrote) against the JD body:
 
-**Adaptado al arquetipo:**
-- Si FDE → priorizar proof points de delivery rápida y client-facing
-- Si SA → priorizar diseño de sistemas e integrations
-- Si PM → priorizar product discovery y métricas
-- Si LLMOps → priorizar evals, observability, pipelines
-- Si Agentic → priorizar multi-agent, HITL, orchestration
-- Si Transformation → priorizar change management, adoption, scaling
+- **Contradiction** = the location field says remote, but the JD body states a **binding attendance requirement**: "hybrid", "X days per week/month" in office, "in-office", "onsite"/"on-site", mandatory office attendance, or a relocation requirement.
+- **Not a contradiction:** negations ("no onsite requirement"), optional or occasional in-person events ("quarterly offsites", "optional co-working space"), or generic benefits boilerplate.
+- If the JD body says nothing about location or attendance, emit no flag — silence is absence of signal, not agreement.
+- If the input has no structured location field (pasted JD text only), skip this check.
 
-Sección de **gaps** con estrategia de mitigación para cada uno. Para cada gap:
-1. ¿Es un hard blocker o un nice-to-have?
-2. ¿Puede el candidato demostrar experiencia adyacente?
-3. ¿Hay un proyecto portfolio que cubra este gap?
-4. Plan de mitigación concreto (frase para cover letter, proyecto rápido, etc.)
+On contradiction, add exactly one flag line at the top of Block B in the report, quoting the evidence **verbatim** (never paraphrase):
 
-## Bloque C — Nivel y Estrategia
+`⚠️ **Geo-mismatch:** location field says remote, but JD body says "{verbatim JD line}"`
 
-1. **Nivel detectado** en el JD vs **nivel natural del candidato para ese arquetipo**
-2. **Plan "vender senior sin mentir"**: frases específicas adaptadas al arquetipo, logros concretos a destacar, cómo posicionar la experiencia de founder como ventaja
-3. **Plan "si me downlevelan"**: aceptar si comp es justa, negociar review a 6 meses, criterios de promoción claros
+The flag is an additive line only — Block B's existing content stays unchanged below it, and no flag line appears when there is no contradiction.
 
-## Bloque D — Comp y Demanda
+## Block B — Match with CV
 
-Usar WebSearch para:
-- Salarios actuales del rol (Glassdoor, Levels.fyi, Blind)
-- Reputación de compensación de la empresa
-- Tendencia de demanda del rol
+Read `cv.md`. Create a table with each JD requirement mapped to exact lines in the CV.
 
-Tabla con datos y fuentes citadas. Si no hay datos, decirlo en vez de inventar.
+**Adapted to the archetype:**
+- If FDE → prioritize delivery speed and client-facing proof points
+- If SA → prioritize system design and integrations
+- If PM → prioritize product discovery and metrics
+- If LLMOps → prioritize evals, observability, pipelines
+- If Agentic → prioritize multi-agent, HITL, orchestration
+- If Transformation → prioritize change management, adoption, scaling
 
-## Bloque E — Plan de Personalización
+**Gaps** section with mitigation strategy for each. For each gap:
+1. Is it a hard blocker or a nice-to-have?
+2. Can the candidate demonstrate adjacent experience?
+3. Is there a portfolio project that covers this gap?
+4. Concrete mitigation plan (phrase for cover letter, quick project, etc.)
 
-| # | Sección | Estado actual | Cambio propuesto | Por qué |
+## Block C — Level and Strategy
+
+1. **Level detected** in the JD vs **candidate's natural level for that archetype**
+2. **"Sell senior without lying" plan**: specific phrases adapted to the archetype, concrete achievements to highlight, how to position founder experience as an advantage
+3. **"If they downlevel me" plan**: accept if compensation is fair, negotiate 6-month review, clear promotion criteria
+
+## Block D — Comp and Demand
+
+Use the bounded research budget above for:
+- Current salaries for the role (Glassdoor, Levels.fyi, Blind)
+- Company's compensation reputation
+- Demand trend for the role
+
+Before interpreting any salary number, classify the company type. Public compensation ranges are not equally reliable across company categories.
+
+**Company type classification (required):**
+
+Classify the employer into the closest category and state the confidence level:
+
+| Company type | Typical comp reliability | Signals |
+|--------------|--------------------------|---------|
+| Public big tech / mature tech | High to medium | Public company, structured levels, large engineering org, repeatable hiring process |
+| Growth-stage startup / VC-backed startup | Medium | Funded startup, competitive hiring market, may mix base + equity + bonus |
+| Early-stage startup / pre-revenue startup | Medium to low | Small team, vague role scope, equity-heavy promises, unclear bands |
+| Enterprise / traditional corporate | Medium | Formal HR process, stable base, slower bands, bonus may be discretionary |
+| Agency / outsourcing / consulting vendor | Medium to low | Client allocation, project-based work, billability pressure, variable bonus |
+| Local SMB / service business | Low | Small company, broad role, informal HR, "comprehensive salary" language |
+| Sales / commission-heavy org | Low unless base is explicit | "OTE", "uncapped", commission, performance bonus, target-based pay |
+| Recruiter / staffing listing | Low to medium | Third-party posting, range may reflect client budget rather than offer terms |
+| Government / academic / nonprofit | Medium to high | Published grades/bands, but lower market competitiveness |
+| Open-source community / education community | Medium to low | Community-led org, foundation/association sponsor, campus/community operations, unclear employment entity |
+
+If the company type is uncertain, mark it as `Unknown` and default compensation reliability to the conservative canonical tier: `Low` until evidence improves it.
+
+If the brand differs from the legal employer or posting entity, classify the **actual contract / hiring entity** first and mention the brand relationship separately. Example: a "Datawhale community" role posted by an association, school, vendor, or partner should be classified by that hiring entity, not by the Datawhale brand alone.
+
+**Compensation reliability (required):**
+
+First check whether the JD itself states a salary figure. If no advertised number exists, collapse this section to exactly two concise lines after the demand trend:
+
+- **Company type:** {category or `Unknown`} — {confidence + one evidence phrase}
+- **Compensation reliability:** {tier} — no advertised salary figure; skip component split, detailed market rows, and HR verification questions
+
+When an advertised salary figure exists, split compensation into:
+
+- **Advertised range:** the salary shown in the JD or public sources
+- **Likely guaranteed base:** conservative estimate of fixed contract salary
+- **Variable / conditional cash components:** bonus, commission, allowance, attendance bonus, KPI bonus, overtime, 13th salary, sign-on, or other cash tied to conditions
+- **Expected stable cash:** what is likely recurring and reliable in cash, before tax unless local data supports a net estimate; exclude benefits
+- **Non-cash benefits:** equity, insurance, pension, meals, transport, wellness, learning budget, equipment, or other benefits that are not guaranteed cash
+
+Add a reliability tier:
+
+| Tier | Meaning |
+|------|---------|
+| High | Salary is stated as base or backed by structured public bands / multiple consistent sources |
+| Medium | Range is plausible but components are not fully separated |
+| Low | Public number likely includes variable, attendance, commission, subsidy, or "up to" components |
+| Unknown | No usable salary data |
+
+Treat these phrases as low-reliability signals unless the fixed base is explicitly separated: "comprehensive salary", "total package", "up to", "OTE", "uncapped", "including allowances", "performance bonus included", "attendance bonus", "KPI bonus", "base + variable", "base + commission", "13th salary included", or unusually wide salary ranges.
+
+When the advertised number may be inflated, say so plainly. Example: `Advertised 5k may represent 3k base + attendance / KPI / subsidy components; verify contract base before treating it as a 5k role.`
+
+**Required HR verification questions when a salary figure exists:**
+
+Include 3-6 concrete questions tailored to the JD and company type, such as:
+
+- What is the fixed base salary written in the employment contract?
+- Does the advertised range include bonus, commission, allowances, overtime, attendance, or KPI components?
+- Is probation salary discounted?
+- Are social insurance / pension / benefits calculated from base salary or full compensation?
+- Which components are guaranteed monthly versus discretionary or target-based?
+- If equity or bonus is mentioned, what is the vesting schedule, payout history, and realistic expected value?
+
+When a salary figure exists, include a table with data and cited sources. If there is no data beyond the JD figure, state it instead of inventing. Do not present advertised compensation as real take-home pay unless the source explicitly supports that interpretation.
+
+The table's **first row is always the JD's own advertised figure, verbatim** — before any researched market data:
+
+```markdown
+| Advertised (JD) | {verbatim figure or "not stated"} | JD |
+```
+
+Never blend the advertised figure with researched estimates or replace it with them — market research rows follow below it. This same verbatim figure goes into the Machine Summary `advertised_comp` key (see the report format).
+
+## Block E — Customization Plan
+
+| # | Section | Current status | Proposed change | Why |
 |---|---------|---------------|------------------|---------|
 | 1 | Summary | ... | ... | ... |
 | ... | ... | ... | ... | ... |
 
-Top 5 cambios al CV + Top 5 cambios a LinkedIn para maximizar match.
+Top 5 changes to CV + Top 5 changes to LinkedIn to maximize match.
 
-## Bloque F — Plan de Entrevistas
+## Block F — Interview Plan
 
-6-10 historias STAR+R mapeadas a requisitos del JD (STAR + **Reflection**):
+6-10 STAR+R stories mapped to JD requirements (STAR + **Reflection**):
 
-| # | Requisito del JD | Historia STAR+R | S | T | A | R | Reflection |
+| # | JD Requirement | STAR+R Story | S | T | A | R | Reflection |
 |---|-----------------|-----------------|---|---|---|---|------------|
 
 The **Reflection** column captures what was learned or what would be done differently. This signals seniority — junior candidates describe what happened, senior candidates extract lessons.
 
 **Story Bank:** If `interview-prep/story-bank.md` exists, check if any of these stories are already there. If not, append new ones. Over time this builds a reusable bank of 5-10 master stories that can be adapted to any interview question.
 
-**Seleccionadas y enmarcadas según el arquetipo:**
-- FDE → enfatizar velocidad de entrega y client-facing
-- SA → enfatizar decisiones de arquitectura
-- PM → enfatizar discovery y trade-offs
-- LLMOps → enfatizar métricas, evals, production hardening
-- Agentic → enfatizar orchestration, error handling, HITL
-- Transformation → enfatizar adopción, cambio organizacional
+**Selected and framed according to the archetype:**
+- FDE → emphasize delivery speed and client-facing
+- SA → emphasize architectural decisions
+- PM → emphasize discovery and trade-offs
+- LLMOps → emphasize metrics, evals, production hardening
+- Agentic → emphasize orchestration, error handling, HITL
+- Transformation → emphasize adoption, organizational change
 
-Incluir también:
-- 1 case study recomendado (cuál de sus proyectos presentar y cómo)
-- Preguntas red-flag y cómo responderlas (ej: "¿por qué vendiste tu empresa?", "¿tienes equipo de reports?")
+Also include:
+- 1 recommended case study (which of their projects to present and how)
+- Red-flag questions and how to answer them (e.g., "why did you sell your company?", "do you have a team of reports?")
 
-## Bloque G — Posting Legitimacy
+## Block G — Posting Legitimacy
 
 Analyze the job posting for signals that indicate whether this is a real, active opening. This helps the user prioritize their effort on opportunities most likely to result in a hiring process.
 
@@ -93,7 +205,7 @@ Analyze the job posting for signals that indicate whether this is a real, active
 
 ### Signals to analyze (in order):
 
-**1. Posting Freshness** (from Playwright snapshot, already captured in Paso 0):
+**1. Posting Freshness** (from the Playwright snapshot captured during the liveness gate, or in `auto-pipeline` Step 0; unavailable if only JD text was pasted):
 - Date posted or "X days ago" -- extract from page
 - Apply button state (active / closed / missing / redirects to generic page)
 - If URL redirected to generic careers page, note it
@@ -107,7 +219,7 @@ Analyze the job posting for signals that indicate whether this is a real, active
 - What ratio of the JD is role-specific vs generic boilerplate?
 - Any internal contradictions? (entry-level title + staff requirements, etc.)
 
-**3. Company Hiring Signals** (2-3 WebSearch queries, combine with Block D research):
+**3. Company Hiring Signals** (use remaining queries from the bounded research budget, combine with Block D research):
 - Search: `"{company}" layoffs {year}` -- note date, scale, departments
 - Search: `"{company}" hiring freeze {year}` -- note any announcements
 - If layoffs found: are they in the same department as this role?
@@ -120,6 +232,25 @@ Analyze the job posting for signals that indicate whether this is a real, active
 - Is this a common role that typically fills in 4-6 weeks?
 - Does the role make sense for this company's business?
 - Is the seniority level one that legitimately takes longer to fill?
+
+**6. Employment Classification Risk** (from JD text; jurisdiction from `config/profile.yml` → `location.country`):
+
+Every jurisdiction splits work into two buckets under different names: an "employment contract" carrying statutory protections and benefits, vs. a "service/labour/consulting contract" that doesn't — even when the day-to-day work looks identical from the outside. Candidates routinely can't tell which one a JD is offering until tax time or until a benefit they assumed they had turns out not to exist. Check the JD text against the jurisdiction-specific term list below (add a new row to extend to another country — this table is a data reference, not instruction logic, so extending it never requires touching the rule text):
+
+| Jurisdiction | Contractor/services-status terms |
+|---|---|
+| Canada | "T4A", "independent contractor", "self-employed", "invoice for services" |
+| US | "1099", "independent contractor", "W-2 not provided" |
+| UK | "self-employed", "umbrella company", "outside IR35" / "inside IR35" |
+| Other jurisdictions | "labour contract" vs "employment contract" phrasing, "service agreement", "consulting agreement" (e.g., 劳务合同 vs 劳动合同 in China) |
+
+Plus a jurisdiction-agnostic structural check — **"contract position" alone is not enough to trigger this**, since plenty of legitimate fixed-term *employee* roles use that phrase. Only flag when the JD has explicit contractor-status wording (asks the candidate to "invoice," or to operate as a "consultant"/"freelancer," rather than being "hired"/"employed") **and** at least one corroborating omission (no benefits language, no vacation/PTO mention, no defined end date, no standard employment-standards phrasing, no mention of statutory deductions/withholding).
+
+If this combination is present, append a short, non-alarmist note to the report (this is descriptive, never prescriptive — never tell the user to refuse a role):
+
+> ⚠️ **Employment classification signal:** This posting uses language associated with contractor/services status rather than standard employee status — e.g. "{specific phrase found}". If eligibility for programs like CEC/PR depends on employee status, or if you want statutory benefits, deductions, and protections, confirm classification directly with the employer before accepting.
+
+This signal does not change the High Confidence / Proceed with Caution / Suspicious tier below — it is orthogonal to ghost-job detection and is reported separately.
 
 ### Output format:
 
@@ -142,75 +273,157 @@ Analyze the job posting for signals that indicate whether this is a real, active
 
 ---
 
-## Post-evaluación
+## Cover Letter Draft (auto-generated after Block G)
 
-**SIEMPRE** después de generar los bloques A-G:
+After saving the report and recording in the tracker, append a cover letter draft to the report file under `## Cover Letter Draft`. This is a starting point — not the final letter. The user completes it via `/career-ops cover {slug}`.
 
-### 1. Guardar report .md
+**How to generate the draft:**
 
-Guardar evaluación completa en `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
+1. Read `cv.md` — select 4 achievement bullets most relevant to the JD's top requirements (exact wording, real metrics only)
+2. Read `config/profile.yml` — extract candidate name, current role, years of experience
+3. Write a 2-sentence opening based on the role title and JD mission language
+4. Write a 1-paragraph profile intro from the cv.md summary, adapted to the JD domain
+5. Leave the "Problems / Why this company / Approach" section as a placeholder — this requires user input
+6. Detect and flag any gaps (domain mismatch, language requirement, start date urgency) so the user sees them immediately
 
-- `{###}` = siguiente número secuencial (3 dígitos, zero-padded)
-- `{company-slug}` = nombre de empresa en lowercase, sin espacios (usar guiones)
-- `{YYYY-MM-DD}` = fecha actual
-
-**Formato del report:**
+**Draft format to append to the report:**
 
 ```markdown
-# Evaluación: {Empresa} — {Rol}
+## Cover Letter Draft
 
-**Fecha:** {YYYY-MM-DD}
-**Arquetipo:** {detectado}
+> Draft generated at evaluation time. Complete via `/career-ops cover {slug}` to fill in angles, confirm research, and generate the PDF.
+> Gaps flagged below — address them during the cover flow.
+
+---
+
+**Opening** *(placeholder — refine with your "why this role" angle)*
+{2-sentence opening based on JD role title and mission language}
+
+**Profile introduction**
+{1 paragraph from cv.md summary, adapted to JD domain and required competencies}
+
+**Key achievements** *(selected from cv.md — exact wording preserved)*
+- **{lead from cv.md},** {impact sentence with metric}.
+- **{lead from cv.md},** {impact sentence with metric}.
+- **{lead from cv.md},** {impact sentence with metric}.
+- **{lead from cv.md},** {impact sentence with metric}.
+
+**Problems I will solve** *(placeholder — requires company research + your input)*
+> To be completed: what challenges does {company} face that you'd address? How would you approach them?
+
+**Closing**
+I am happy to discuss further at your convenience.
+
+---
+
+**Gaps flagged:**
+{List any detected gaps — domain mismatch, language requirement, start date urgency, title mismatch. If none, write "None detected."}
+
+**JD keywords to mirror** *(extracted for ATS + human read)*
+{8-10 exact phrases from the JD}
+
+---
+*Run `/career-ops cover {slug}` to complete angles, confirm company research, and generate the PDF.*
+```
+
+Apply all language rules from `_shared.md` Professional Writing section to the draft content. No em dashes, no buzzwords, active voice, concrete claims only.
+
+---
+
+## Post-evaluation
+
+**ALWAYS** after generating blocks A-G:
+
+### 1. Save report .md
+
+Save full evaluation in `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
+
+- `{###}` = next sequential number (3 digits, zero-padded). To allocate it atomically and prevent race conditions, you MUST run `node reserve-report-num.mjs` to claim the number (stdout returns `{###}`), write the report, and then run `node reserve-report-num.mjs --release {###}` to release the sentinel.
+- `{company-slug}` = company name in lowercase, without spaces (use hyphens)
+- `{YYYY-MM-DD}` = current date
+- **Agency-mediated posting with unknown end employer (#1596):** slug is `confidential-{agency-slug}` (e.g. `042-confidential-hays-2026-07-06.md`). The file is NEVER renamed after the employer is revealed — update the title/header/YAML instead.
+
+**Report format:**
+
+```markdown
+# Evaluation: {Company} — {Role}
+
+**Date:** {YYYY-MM-DD}
+**URL:**
+**Via:** {agency/recruiter firm, or — for direct applications}
+**Archetype:** {detected}
 **Score:** {X/5}
 **Legitimacy:** {High Confidence | Proceed with Caution | Suspicious}
-**PDF:** {ruta o pendiente}
+**PDF:** {path or pending}
 
 ---
 
-## A) Resumen del Rol
-(contenido completo del bloque A)
+## Machine Summary
+(YAML fence for downstream scripts — see requirement below)
 
-## B) Match con CV
-(contenido completo del bloque B)
+## A) Role Summary
+(full content of block A)
 
-## C) Nivel y Estrategia
-(contenido completo del bloque C)
+## B) Match with CV
+(full content of block B)
 
-## D) Comp y Demanda
-(contenido completo del bloque D)
+## C) Level and Strategy
+(full content of block C)
 
-## E) Plan de Personalización
-(contenido completo del bloque E)
+## D) Comp and Demand
+(full content of block D)
 
-## F) Plan de Entrevistas
-(contenido completo del bloque F)
+## E) Customization Plan
+(full content of block E)
+
+## F) Interview Plan
+(full content of block F)
 
 ## G) Posting Legitimacy
-(contenido completo del bloque G)
+(full content of block G)
 
 ## H) Draft Application Answers
-(solo si score >= 4.5 — borradores de respuestas para el formulario de aplicación)
+(only if score >= 4.5 — draft answers for the application form)
 
 ---
 
-## Keywords extraídas
-(lista de 15-20 keywords del JD para ATS optimization)
+## Keywords extracted
+(list of 15-20 keywords from the JD for ATS optimization)
 ```
 
-### 2. Registrar en tracker
+**Machine Summary (required):** every report carries a `## Machine Summary` YAML fence directly after the header — same schema, exact field names, and rules as the "Machine Summary" block in `batch/batch-prompt.md` (do not duplicate the schema here; that file is the source of truth). It includes `advertised_comp`: the JD's own salary figure **verbatim** (e.g. `"80-90k EUR"`), or `null` when the JD states nothing — never estimated, never replaced with researched market data. This key seeds the advertised salary observation read by `node salary-gap.mjs`.
 
-**SIEMPRE** registrar en `data/applications.md`:
-- Siguiente número secuencial
-- Fecha actual
-- Empresa
-- Rol
-- Score: promedio de match (1-5)
-- Estado: `Evaluada`
-- PDF: ❌ (o ✅ si auto-pipeline generó PDF)
-- Report: link relativo al report .md (ej: `[001](reports/001-company-2026-01-01.md)`)
+### 2. Record in tracker
 
-**Formato del tracker:**
+**ALWAYS** record in `data/applications.md`:
+- Next sequential number
+- Current date
+- Company — the END employer. If the JD is agency-mediated ("our client", agency domain, no employer named), ASK the user which agency it came through, use `?` as Company, and put a distinguishing descriptor in Notes (e.g. `fintech, Leeds`). Never write "Confidential" — the `?` marker is locale-invariant and can't collide with a real firm.
+- Via (when the tracker has the column) — the agency/recruiter firm, `—` for direct. In the tracker-addition TSV, append it as a tagged extra field: `via={Agency}` (see the TSV format spec).
+- Role
+- Score: match average (1-5) — Read `modes/_custom.md` → Scoring Rules, if it exists, and apply its override here. Default (if absent or silent): average of block scores.
+- Status: `Evaluated`
+- PDF: ❌ (or ✅ if auto-pipeline generated PDF)
+- Report: root-relative link `[001](reports/001-company-2026-01-01.md)` (when merged via `merge-tracker.mjs` it is normalized to be relative to the tracker's own dir, e.g. `../reports/...`; see #760)
+
+**Tracker format:**
 
 ```markdown
-| # | Fecha | Empresa | Rol | Score | Estado | PDF | Report |
+| # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 ```
+
+With the optional Via column (intermediary channel, #1596) after Company:
+
+```markdown
+| # | Date | Company | Via | Role | Score | Status | PDF | Report | Notes |
+```
+
+### 3. Salary observations (desired ask only)
+
+If — and only if — the user **explicitly stated a role-specific desired number for THIS application** in the conversation ("I'd ask 95k here"), append one `desired` line (source `user`) to `data/salary-observations.tsv` (create the file if missing; format per `docs/SCRIPTS.md` → salary-gap):
+
+```text
+{tracker#}\t{YYYY-MM-DD}\tdesired\t{amount}\t{currency}\tuser\t{short context note}
+```
+
+Never infer a desired number from the JD, the score, or past conversations. The profile default (`config/profile.yml` → `compensation.target_range`) needs no line — `salary-gap.mjs` reads it as the fallback. The advertised figure also needs no line: the report's `advertised_comp` **is** the advertised observation.
