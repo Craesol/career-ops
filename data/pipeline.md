@@ -1078,3 +1078,76 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://hitmarker.net/jobs/raid-studios-community-manager-2907160 | RAID Studios | Community Manager
 - [ ] https://cryptojobslist.com/jobs/community-manager-moderator-web3-blockchain-crypto-lucidia-remote | Lucidia | Community Manager Web3
 - [ ] https://cryptocurrencyjobs.co/marketing/ethereum-foundation-community-and-ecosystem-lead/ | Ethereum Foundation | Community and Ecosystem Lead
+- [ ] https://job-boards.greenhouse.io/aptoslabs/jobs/4686651005 | Aptos Labs | Community Manager (Korea)
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5276789008?gh_jid=5276789008 | Scopely | Creative Marketing Manager
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5021595008?gh_jid=5021595008 | Scopely | Director of Marketing - Monster Hunter Now
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/4981705008?gh_jid=4981705008 | Scopely | Director of Marketing, North America - Pikmin Bloom
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5281535008?gh_jid=5281535008 | Scopely | Director, Performance Marketing
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5239651008?gh_jid=5239651008 | Scopely | Director, Performance Marketing -  Unannounced ARPG Mobile Game
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5323853008?gh_jid=5323853008 | Scopely | Director, Product Marketing - Unannounced Project
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5215189008?gh_jid=5215189008 | Scopely | Global Live Event Marketing Manager - Pikmin Bloom
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5225517008?gh_jid=5225517008 | Scopely | Manager I, Performance Marketing
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5282076008?gh_jid=5282076008 | Scopely | Performance Marketing Director
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5216080008?gh_jid=5216080008 | Scopely | Performance Marketing Manager
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5123217008?gh_jid=5123217008 | Scopely | Senior Director, Marketing – New Game Launch
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5215191008?gh_jid=5215191008 | Scopely | Senior Product Marketing Manager - Pikmin Bloom
+- [ ] https://job-boards.greenhouse.io/scopely/jobs/5277366008?gh_jid=5277366008 | Scopely | Senior Project Manager
+- [ ] https://job-boards.greenhouse.io/startale/jobs/5339444008 | Startale Labs |  Marketing Lead, Product & Japan
+- [ ] https://job-boards.greenhouse.io/startale/jobs/5367265008 | Startale Labs | Marketing Lead, Product & Japan（マーケティングリード）｜プロダクトマーケティング全域と、日本市場の立ち上げをリード
+- [ ] https://jobs.ashbyhq.com/polygon-labs/bd8cd97a-4eed-468e-b87f-4cac59e5c6c2 | Polygon Labs | Boys Club - Content Project Manager
+- [ ] https://jobs.ashbyhq.com/Solana%20Foundation/b40cbc32-a29c-44a8-b20a-4b0a5d3fc127 | Solana Foundation | DeFi Growth Lead
+- [ ] https://jobs.lever.co/animocabrands/3c7794c6-0dac-485b-ae9f-3cd11183ff8f | Animoca Brands | Marketing Campaign Manager
+- [ ] https://remoteOK.com/remote-jobs/remote-performance-marketing-lead-get-in-good-nick-1135323 | Get In Good Nick | Performance Marketing Lead
+- [ ] https://remoteOK.com/remote-jobs/remote-editor-medical-communications-prime-1135268 | Prime | Editor Medical Communications
+- [ ] https://remoteOK.com/remote-jobs/remote-asistente-de-marketing-universia-peru-1135259 | Universia PerÃº | Asistente de Marketing
+- [ ] https://remotive.com/remote-jobs/marketing/head-of-marketing-communications-2091068 | garden3d | Head of Marketing & Communications
+- [ ] https://remotive.com/remote-jobs/communications/communications-manager-2090985 | Lemon.io | Communications Manager
+- [ ] https://sg.linkedin.com/jobs/view/community-manager-at-mexc-4441841245 | MEXC | Community Manager
+- [ ] https://www.linkedin.com/jobs/view/community-lead-at-mexc-4443314091 | MEXC | Community Lead
+- [ ] https://ph.linkedin.com/jobs/view/affiliate-influencer-manager-prop-trading-forex-crypto-at-nms-philippines-4443111509 | NMS Philippines | Affiliate & Influencer Manager (Prop Trading/Forex/Crypto)
+- [ ] https://uk.linkedin.com/jobs/view/head-of-community-at-flightstory-4431225497 | FLIGHTSTORY | Head of Community
+- [ ] https://uk.linkedin.com/jobs/view/global-community-lead-at-investigo-4444458778 | Investigo | Global Community Lead
+- [ ] https://cy.linkedin.com/jobs/view/community-manager-at-nexters-%24gdev-4441819824 | Nexters ($GDEV) | Community Manager
+- [ ] https://uk.linkedin.com/jobs/view/hacker-community-manager-12-month-ftc-at-intigriti-4443377796 | Intigriti | Hacker Community Manager (12 month FTC)
+- [ ] https://lb.linkedin.com/jobs/view/community-manager-crypto-at-cfi-financial-group-4441769922 | CFI Financial Group | Community Manager - Crypto
+- [ ] https://sg.linkedin.com/jobs/view/senior-creator-ecosystem-manager-%E2%80%93-binance-square-at-binance-4416107440 | Binance | Senior Creator Ecosystem Manager – Binance Square
+- [ ] https://ae.linkedin.com/jobs/view/defi-growth-lead-at-solana-4445229615 | Solana | DeFi Growth Lead
+- [ ] https://hk.linkedin.com/jobs/view/manager-products-and-solutions-stablecoin-web3-solution-at-mastercard-4440177764 | Mastercard | Manager, Products and Solutions - Stablecoin & Web3 Solution
+- [ ] https://bg.linkedin.com/jobs/view/community-manager-at-punchev-group-4443763611 | PUNCHev Group | COMMUNITY MANAGER
+- [ ] https://sg.linkedin.com/jobs/view/senior-strategy-project-manager-vip-institutions-at-okx-4415921063 | OKX | Senior Strategy Project Manager, VIP/Institutions
+- [ ] https://hk.linkedin.com/jobs/view/project-manager-at-kucoin-exchange-4439699716 | KuCoin Exchange | Project Manager
+- [ ] https://sg.linkedin.com/jobs/view/detection-pmo-at-hytech-4442001535 | Hytech | Detection PMO
+- [ ] https://www.linkedin.com/jobs/view/vp-program-manager-at-zerohash-4444259341 | zerohash | VP, Program Manager
+- [ ] https://sg.linkedin.com/jobs/view/ai-cloud-project-manager-at-bitdeer-nasdaq-btdr-4440133428 | Bitdeer (NASDAQ: BTDR) | AI Cloud Project Manager
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-at-jeune-afrique-4440481521 | Jeune Afrique | Community Manager (H/F)
+- [ ] https://de.linkedin.com/jobs/view/community-manager-psa-eu-frankfurt-at-collectors-4402761416 | Collectors | Community Manager, PSA EU (Frankfurt)
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-cdd-12-mois-at-innocent-drinks-4443139828 | innocent drinks | Community Manager H/F - CDD 12 mois
+- [ ] https://fr.linkedin.com/jobs/view/content-creator-community-manager-at-trainsweateat-4419165144 | TRAINSWEATEAT | Content Creator & Community Manager
+- [ ] https://news.ycombinator.com/item?id=48762510 | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking to hire our first full time engineer besides myself. High impact role, over 100
+- [ ] https://web3.career/social-media-and-community-manager-koinly/151770 | web3.career | Social Media And Community Manager Koinly
+- [ ] https://web3.career/content-social-and-community-manager-blockchain/151414 | web3.career | Content Social And Community Manager Blockchain
+- [ ] https://web3.career/community-manager-salsavalley/151335 | web3.career | Community Manager Salsavalley
+- [ ] https://web3.career/community-manager-west-africa-binance/150823 | web3.career | Community Manager West Africa Binance
+- [ ] https://web3.career/defi-marketing-lead-bond-labs/150795 | web3.career | Defi Marketing Lead Bond Labs
+- [ ] https://web3.career/community-lead-suifoundation/150491 | web3.career | Community Lead Suifoundation
+- [ ] https://web3.career/events-community-manager-mexico-binance/149823 | web3.career | Events Community Manager Mexico Binance
+- [ ] https://web3.career/community-manager-oldharmony/149282 | web3.career | Community Manager Oldharmony
+- [ ] https://web3.career/chief-marketing-officer-kteam/151813 | web3.career | Chief Marketing Officer Kteam
+- [ ] https://web3.career/director-paid-marketing-kraken/151793 | web3.career | Director Paid Marketing Kraken
+- [ ] https://web3.career/social-media-marketing-manager-contract-suifoundation/151701 | web3.career | Social Media Marketing Manager Contract Suifoundation
+- [ ] https://web3.career/director-marketing-inmobi/148822 | web3.career | Director Marketing Inmobi
+- [ ] https://web3.career/growth-marketing-lead-cointracker/151684 | web3.career | Growth Marketing Lead Cointracker
+- [ ] https://web3.career/data-analyst-marketing-bluecubeservices/140151 | web3.career | Data Analyst Marketing Bluecubeservices
+- [ ] https://web3.career/vice-president-marketing-chainalysis/151676 | web3.career | Vice President Marketing Chainalysis
+- [ ] https://web3.career/marketing-campaign-analyst-bitpanda/151192 | web3.career | Marketing Campaign Analyst Bitpanda
+- [ ] https://web3.career/lead-marketing-campaigns-bitpanda/151191 | web3.career | Lead Marketing Campaigns Bitpanda
+
+- [ ] https://web3.career/lead-marketing-campaigns-bitpanda/151191 | web3.career | Lead Marketing Campaigns Bitpanda
+
+- [ ] https://web3.career/lead-marketing-campaigns-bitpanda/151191 | web3.career | Lead Marketing Campaigns Bitpanda
+
+- [ ] https://web3.career/lead-marketing-campaigns-bitpanda/151191 | web3.career | Lead Marketing Campaigns Bitpanda
+
+- [ ] https://web3.career/social-media-marketing-manager-contract-suifoundation/151701 | web3.career | Social Media Marketing Manager Contract Suifoundation
+
+- [ ] https://web3.career/community-manager-oldharmony/149282 | web3.career | Community Manager Oldharmony
