@@ -32,6 +32,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${inter.variable} ${instrumentSerif.variable} ${instrumentSerifItalic.variable}`}
     >
+      <head>
+        {/* The app ships its own light/dark theme (ThemeToggle + THEME_SCRIPT).
+            Dark Reader honors this lock and leaves the DOM alone — without it,
+            the extension injects data-darkreader-* attributes into every SVG
+            before React hydrates, causing hydration-mismatch errors. */}
+        <meta name="darkreader-lock" />
+      </head>
       <body className="font-sans antialiased">
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <AppShell>{children}</AppShell>

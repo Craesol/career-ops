@@ -18,6 +18,59 @@ import type { DiscoveredOffer } from "./scan";
  */
 export type AddResult = { added: number; error?: string };
 
+/**
+ * "Remove" on a discovered offer — records it in data/scan-history.tsv with
+ * status "skipped" via the core's own writer. /api/whats-new (and future scans)
+ * treat skipped rows as dismissed, so the card never resurfaces. Nothing is
+ * deleted — the history stays append-only, per the core's data contract.
+ */
+export function dismissOffers(offers: DiscoveredOffer[]): Promise<AddResult> {
+  const clean = offers
+    .filter((o) => o && typeof o.url === "string" && /^https?:\/\//i.test(o.url))
+    .map((o) => ({ url: o.url, company: o.company || "", title: o.title || "", location: o.location || "", source: o.source || o.ats || "explorer", note: "" }));
+  if (clean.length === 0) return Promise.resolve({ added: 0 });
+  if (!fs.existsSync(rootScript("scan"))) {
+    return Promise.resolve({ added: 0, error: "This checkout is data-only — the history writer (scan.mjs) isn't available." });
+  }
+
+  const scanUrl = pathToFileURL(rootScript("scan")).href;
+  const code = `
+import { appendToScanHistory } from ${JSON.stringify(scanUrl)};
+let input = "";
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", (d) => { input += d; });
+process.stdin.on("end", () => {
+  try {
+    const offers = JSON.parse(input);
+    const date = new Date().toISOString().slice(0, 10);
+    appendToScanHistory(offers, date, "skipped");
+    process.stdout.write(JSON.stringify({ added: offers.length }));
+  } catch (e) {
+    process.stdout.write(JSON.stringify({ added: 0, error: String((e && e.message) || e) }));
+  }
+});
+`;
+
+  return new Promise((resolve) => {
+    const child = spawn(process.execPath, ["--input-type=module", "-e", code], { cwd: careerOpsRoot(), env: process.env });
+    let out = "";
+    let err = "";
+    child.stdout.on("data", (d: Buffer) => (out += d.toString()));
+    child.stderr.on("data", (d: Buffer) => (err += d.toString()));
+    child.on("error", (e) => resolve({ added: 0, error: e instanceof Error ? e.message : "spawn failed" }));
+    child.on("close", () => {
+      try {
+        const parsed = JSON.parse(out.trim() || "{}") as AddResult;
+        resolve({ added: parsed.added ?? 0, error: parsed.error });
+      } catch {
+        resolve({ added: 0, error: err.trim().slice(0, 200) || "writer returned no result" });
+      }
+    });
+    child.stdin.write(JSON.stringify(clean));
+    child.stdin.end();
+  });
+}
+
 export function addOffersToPipeline(offers: DiscoveredOffer[]): Promise<AddResult> {
   const clean = offers
     .filter((o) => o && typeof o.url === "string" && /^https?:\/\//i.test(o.url))

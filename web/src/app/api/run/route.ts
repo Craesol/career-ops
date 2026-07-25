@@ -44,6 +44,32 @@ If NO slug variant resolves, say so clearly and leave portals.yml unchanged. Nev
 
 End with EXACTLY one final line: VERDICT: {5 if now live, else 1}/5 — {what you changed, ≤12 words}`;
   }
+  if (kind === "evaluate-cv") {
+    return `You are running the OFFICIAL career-ops auto-pipeline (evaluation + tailored CV), HEADLESS, on the user's own machine. Today is ${today}. Run the REAL career-ops flow — do NOT improvise your own scoring or CV format.
+
+1. Read modes/oferta.md and follow it EXACTLY (blocks A–F, G posting-legitimacy, and the Machine Summary). Ground the fit in THIS person: read cv.md, config/profile.yml and modes/_profile.md. Use WebFetch to read the posting (you are headless — Playwright is unavailable, so use WebFetch and mark the report header "Verification: unconfirmed (batch mode)").
+
+2. Persist the result CANONICALLY so the web and the CLI share ONE source of truth:
+   a. Reserve a report number: run \`node reserve-report-num.mjs\` — its stdout is a 3-digit number (e.g. 035).
+   b. Write the full report to reports/{num}-{company-slug}-${today}.md  (company-slug = company lowercased, non-alphanumerics → hyphens).
+
+3. Generate the tailored CV (modes/pdf.md, follow it EXACTLY):
+   a. Read modes/pdf.md and modes/_custom.md (if it exists). Tailor the CV: inject the JD's keywords into the summary + first bullets, reorder experience by relevance, build the competency grid, pick the top 3–4 projects. NEVER invent skills — only reword REAL experience using the JD's vocabulary.
+   b. Fill templates/cv-template.html's {{...}} placeholders; write the HTML to output/cv-{candidate}-{company-slug}.html (candidate = the profile name in kebab-case).
+   c. Render: \`node generate-pdf.mjs output/cv-{candidate}-{company-slug}.html output/cv-{candidate}-{company-slug}-${today}.pdf --format={letter for US/Canada companies, else a4} --report={num}\`.
+
+4. Register in the tracker (AFTER the PDF exists, so the PDF column is truthful):
+   a. Append ONE row of 9 TAB-separated columns to batch/tracker-additions/{num}-{company-slug}.tsv, in THIS exact order (real \\t tabs, status BEFORE score):
+      {num}\t${today}\t{Company}\t{Role}\t{CanonicalStatus e.g. Evaluated}\t{score}/5\t✅\t[{num}](reports/{num}-{company-slug}-${today}.md)\t{one-line note}
+   b. Merge: run \`node merge-tracker.mjs\` (NEVER edit applications.md by hand).
+
+5. NEVER submit an application, fill no forms, contact no one. This is evaluation + CV generation ONLY.${mem}
+
+After everything above is written and merged, output EXACTLY one final line, nothing after it:
+VERDICT: {score}/5 — {reason in 12 words or fewer}
+
+Posting URL: ${input}`;
+  }
   // evaluate (default) — run the REAL oferta mode + persist canonically
   return `You are running the OFFICIAL career-ops job evaluation, HEADLESS, on the user's own machine. Today is ${today}. Run the REAL career-ops evaluation — do NOT improvise your own scoring.
 
@@ -86,7 +112,7 @@ export async function POST(req: Request) {
 
   // These run the REAL core (modes/scripts), not just data — fail clearly if the
   // root is incomplete instead of faking it.
-  const needsScript: Record<string, string> = { evaluate: "modes/oferta.md", "fix-portal": "verify-portals.mjs", pdf: "generate-pdf.mjs" };
+  const needsScript: Record<string, string> = { evaluate: "modes/oferta.md", "evaluate-cv": "generate-pdf.mjs", "fix-portal": "verify-portals.mjs", pdf: "generate-pdf.mjs" };
   const required = needsScript[kind];
   if (required && !fs.existsSync(path.join(careerOpsRoot(), required))) {
     return new Response(
@@ -99,7 +125,7 @@ export async function POST(req: Request) {
 
   // An A–F score is meaningless without a CV to score against — the CLI would
   // hallucinate a fit narrative and still emit a VERDICT. Require cv.md first.
-  if ((kind === "evaluate" || kind === "pdf") && !fs.existsSync(path.join(careerOpsRoot(), "cv.md"))) {
+  if ((kind === "evaluate" || kind === "evaluate-cv" || kind === "pdf") && !fs.existsSync(path.join(careerOpsRoot(), "cv.md"))) {
     return new Response(
       JSON.stringify({ error: "Add your CV first so I can score this against you — drop it on the home page." }),
       { status: 400, headers: { "Content-Type": "application/json" } },
@@ -116,7 +142,7 @@ export async function POST(req: Request) {
   // report). 'research' stays read-only. Task (sub-agents) is always blocked
   // (runaway cost). NEVER auto-submits — that is a prompt-level guarantee.
   const tools =
-    kind === "evaluate" || kind === "fix-portal" || kind === "pdf"
+    kind === "evaluate" || kind === "evaluate-cv" || kind === "fix-portal" || kind === "pdf"
       ? { allowed: "Read,WebFetch,WebSearch,Write,Edit,Bash,Glob,Grep", disallowed: "Task,NotebookEdit" }
       : { allowed: "Read,WebFetch,WebSearch,Glob,Grep", disallowed: "Bash,Write,Edit,NotebookEdit,Task" };
   const args = isClaude
@@ -136,11 +162,11 @@ export async function POST(req: Request) {
       return 0;
     }
   };
-  const persists = kind === "evaluate";
+  const persists = kind === "evaluate" || kind === "evaluate-cv";
   const reportsBefore = persists ? countReports() : 0;
   // Tracker-mutating runs hold a write token so a row delete can't race their merge
   // (tracker.mjs delete doesn't yet share a lock with merge-tracker — see run-registry).
-  const writeToken = kind === "evaluate" || kind === "pdf" ? acquireTrackerWrite() : null;
+  const writeToken = kind === "evaluate" || kind === "evaluate-cv" || kind === "pdf" ? acquireTrackerWrite() : null;
 
   const child = spawn(binPath, args, { cwd: careerOpsRoot(), env: process.env });
   const enc = new TextEncoder();
@@ -158,7 +184,7 @@ export async function POST(req: Request) {
       let lastTokens = 0; // per-run token cost from the Claude result event (#6) — local only
       let lastCostUsd: number | null = null;
       // pdf-mode tailors a full CV + renders it — give it more headroom.
-      const killMs = kind === "pdf" ? 720_000 : 285_000;
+      const killMs = kind === "pdf" || kind === "evaluate-cv" ? 720_000 : 285_000;
       killer = setTimeout(() => {
         try { child.kill("SIGTERM"); } catch { /* ignore */ }
       }, killMs);

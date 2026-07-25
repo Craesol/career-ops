@@ -45,6 +45,15 @@ export async function GET(req: Request) {
   const seen = new Set<string>();
   const offers: DiscoveredOffer[] = [];
   let anyDated = false;
+  // A later "skipped" row (the Remove button's append-only dismissal) must also
+  // shadow the ORIGINAL row of the same URL further up the file — collect them
+  // first so a dismissal wins regardless of row order.
+  const dismissed = new Set<string>();
+  for (let i = 1; i < rows.length; i++) {
+    const c = rows[i].split("\t");
+    if (c[0] && /skipped|expired/i.test(c[5] || "")) dismissed.add(c[0]);
+  }
+
   // Pass 1: recent-by-date (the supply loop).
   for (let i = rows.length - 1; i >= 1 && offers.length < 24; i--) {
     const c = rows[i].split("\t");
@@ -52,7 +61,7 @@ export async function GET(req: Request) {
     if (Number.isFinite(t)) anyDated = true;
     if (!Number.isFinite(t) || t < cutoff) continue;
     const o = toOffer(c);
-    if (!o || seen.has(o.url)) continue;
+    if (!o || seen.has(o.url) || dismissed.has(o.url)) continue;
     seen.add(o.url);
     offers.push(o);
   }
@@ -62,7 +71,7 @@ export async function GET(req: Request) {
   if (offers.length === 0 && !anyDated) {
     for (let i = rows.length - 1; i >= 1 && offers.length < 12; i--) {
       const o = toOffer(rows[i].split("\t"));
-      if (!o || seen.has(o.url)) continue;
+      if (!o || seen.has(o.url) || dismissed.has(o.url)) continue;
       seen.add(o.url);
       offers.push(o);
     }

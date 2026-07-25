@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ExternalLink, Plus, Check, Loader2, ShieldQuestion, Sparkles, Coins } from "lucide-react";
+import { ExternalLink, Plus, Check, Loader2, ShieldQuestion, Sparkles, Coins, FileDown, Trash2 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { instrumentSerif } from "@/lib/fonts";
 import { ATS_LABEL, type AtsSource, type DiscoveredOffer } from "@/lib/explore";
@@ -36,11 +36,12 @@ function Logo({ company }: { company: string }) {
 }
 
 // What a running worker is doing on this exact posting → the live CTA label.
-const WORKER_LABEL: Record<string, string> = { evaluate: "Evaluating…", pdf: "Preparing CV…", research: "Researching…", apply: "Filling…" };
+const WORKER_LABEL: Record<string, string> = { evaluate: "Evaluating…", "evaluate-cv": "Evaluating + CV…", pdf: "Preparing CV…", research: "Researching…", apply: "Filling…" };
 
 export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: DiscoveredOffer; inPipeline: boolean; evaluatedN?: string }) {
   const { added, adding, addToPipeline } = useExplore();
   const { jobs, startJob } = useJobs();
+  const [removed, setRemoved] = useState<"" | "removing" | "removed">("");
 
   // GLOBAL worker awareness: any worker acting on this URL drives the CTA, here
   // and on every other surface that renders this offer (the jobs store is global).
@@ -49,7 +50,9 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
     [jobs, offer.url],
   );
   const working = job?.status === "running";
-  const doneEval = job?.status === "done" && job.kind === "evaluate";
+  const doneEval = job?.status === "done" && (job.kind === "evaluate" || job.kind === "evaluate-cv");
+  const doneCv = job?.status === "done" && job.kind === "evaluate-cv";
+  const jobScore = job?.status === "done" && job.result?.score != null ? job.result.score : null;
   const statusLabel = WORKER_LABEL[job?.kind ?? ""] ?? "Working…";
 
   const isAdded = added.has(offer.url) || inPipeline || working || doneEval;
@@ -61,6 +64,31 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
     addToPipeline([offer]); // evaluating implies it's in the pipeline — record it
     startJob({ title: `Evaluate · ${offer.company}`, subtitle: offer.title, kind: "evaluate", input: offer.url, page: "/explore" });
   };
+
+  // One-tap "Create CV": a single worker runs the real auto-pipeline shape —
+  // A–G evaluation + canonical report/tracker persistence + tailored CV PDF.
+  const createCv = () => {
+    addToPipeline([offer]);
+    startJob({ title: `Evaluate + CV · ${offer.company}`, subtitle: offer.title, kind: "evaluate-cv", input: offer.url, page: "/explore" });
+  };
+
+  // "Remove": append-only skip record in scan-history via the core's writer —
+  // the offer stops resurfacing in fresh matches and future scans dedup it.
+  const remove = async () => {
+    setRemoved("removing");
+    try {
+      await fetch("/api/explore/dismiss", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ offers: [offer] }),
+      });
+    } catch {
+      /* best-effort — the card still hides for this session */
+    }
+    setRemoved("removed");
+  };
+
+  if (removed === "removed") return null;
 
   return (
     <div className="co-rise group flex min-w-0 flex-col gap-2.5 rounded-xl border border-border bg-surface/40 p-3.5 text-left transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-sm">
@@ -88,6 +116,13 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
       <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
         <span className="rounded border border-border px-1.5 py-0.5 font-medium text-muted">{ATS_LABEL[offer.ats as AtsSource] ?? offer.ats}</span>
         {fresh && <span className="text-faint">{fresh}</span>}
+        {jobScore != null ? (
+          <span className={cn("rounded px-1.5 py-0.5 font-semibold tabular-nums", jobScore >= 4 ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400" : jobScore >= 3 ? "bg-amber-500/10 text-amber-600 dark:text-amber-400" : "bg-surface-hover text-muted")}>
+            {jobScore}/5
+          </span>
+        ) : (
+          !evaluatedN && <span className="rounded bg-surface-hover px-1.5 py-0.5 text-faint">not scored</span>
+        )}
         {unverified && (
           <span
             className="inline-flex items-center gap-1 rounded border border-amber-500/25 bg-amber-500/10 px-1.5 py-0.5 font-medium text-amber-600 dark:text-amber-300"
@@ -116,7 +151,7 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
             href={evaluatedN ? `/pipeline/${evaluatedN}` : job ? `/jobs/${job.id}` : "/pipeline"}
             className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand-soft px-2.5 py-2 text-xs font-medium text-brand max-sm:min-h-[44px]"
           >
-            <Check className="size-3.5" /> Evaluated · view report
+            <Check className="size-3.5" /> {doneCv ? "Evaluated · CV ready" : "Evaluated · view report"}
           </a>
         ) : working ? (
           <div className="inline-flex w-full items-center justify-center gap-1.5 rounded-md border border-brand/30 bg-brand-soft/60 px-2.5 py-2 text-xs font-medium text-brand">
@@ -125,26 +160,45 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
             <span className="text-brand/60">· in pipeline</span>
           </div>
         ) : (
-          <div className="flex items-center gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
               disabled={isAdded || isAdding}
               onClick={() => addToPipeline([offer])}
+              title="Add this role to your pipeline inbox"
               className={cn(
-                "inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-xs font-medium transition-colors max-sm:min-h-[44px]",
+                "inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-xs font-medium transition-colors max-sm:min-h-[44px]",
                 isAdded ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400" : "bg-surface-hover text-foreground hover:bg-brand-soft hover:text-brand",
               )}
             >
               {isAdding ? <Loader2 className="size-3.5 animate-spin" /> : isAdded ? <Check className="size-3.5" /> : <Plus className="size-3.5" />}
-              {isAdded ? "In pipeline" : "Add to pipeline"}
+              {isAdded ? "In pipeline" : "Add"}
             </button>
             <button
               type="button"
               onClick={evaluate}
               title={unverified ? "Runs a real evaluation — and verifies the posting is live. Uses tokens." : "Runs a real A–F evaluation. Uses tokens."}
-              className="inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-brand/30 px-2.5 py-2 text-xs font-medium text-brand transition-colors hover:bg-brand-soft max-sm:min-h-[44px]"
+              className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-brand/30 px-2.5 py-2 text-xs font-medium text-brand transition-colors hover:bg-brand-soft max-sm:min-h-[44px]"
             >
               Evaluate <Coins className="size-3.5 opacity-80" />
+            </button>
+            <button
+              type="button"
+              onClick={createCv}
+              title="Evaluates the role AND generates the tailored ATS CV PDF in one run. Uses tokens."
+              className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-brand/30 bg-brand-soft/40 px-2.5 py-2 text-xs font-medium text-brand transition-colors hover:bg-brand-soft max-sm:min-h-[44px]"
+            >
+              <FileDown className="size-3.5" /> Create CV <Coins className="size-3.5 opacity-80" />
+            </button>
+            <button
+              type="button"
+              disabled={removed === "removing"}
+              onClick={remove}
+              title="Remove — dismiss this role; it won't show up in fresh matches again"
+              aria-label="Remove this role"
+              className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-border px-2.5 py-2 text-xs font-medium text-faint transition-colors hover:border-red-500/40 hover:text-red-500 max-sm:min-h-[44px]"
+            >
+              {removed === "removing" ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />} Remove
             </button>
           </div>
         )}

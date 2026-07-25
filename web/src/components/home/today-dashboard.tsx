@@ -114,29 +114,7 @@ export function TodayDashboard({
         </div>
       </section>
 
-      {/* A. Follow-ups due (demand loop) */}
-      {followups.length > 0 && (
-        <Section icon={Bell} title="Follow-ups due" hint="Keep your applications alive — a nudge beats silence">
-          <div className="grid gap-2.5">
-            {followups.map((f) => (
-              <FollowUpCard key={`${f.num}-${f.company}`} followup={f} onLogged={() => setOverdue((n) => Math.max(0, n - 1))} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {/* B. Awaiting your decision */}
-      {awaiting.length > 0 && (
-        <Section icon={CircleHelp} title="Awaiting your decision" hint="Scored — apply or skip">
-          <div className="grid gap-2.5 sm:grid-cols-2">
-            {awaiting.map((a) => (
-              <DecisionCard key={a.n} app={a} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {/* C. Fresh matches this week (supply loop) */}
+      {/* A. Fresh matches this week (supply loop) — new roles first, always on top */}
       {fresh.length > 0 && (
         <Section icon={Sparkles} title="Fresh matches this week" hint="Found by your free scans · 0 tokens">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -149,6 +127,28 @@ export function TodayDashboard({
               See all {fresh.length} →
             </Link>
           )}
+        </Section>
+      )}
+
+      {/* B. Follow-ups due (demand loop) */}
+      {followups.length > 0 && (
+        <Section icon={Bell} title="Follow-ups due" hint="Keep your applications alive — a nudge beats silence">
+          <div className="grid gap-2.5">
+            {followups.map((f) => (
+              <FollowUpCard key={`${f.num}-${f.company}`} followup={f} onLogged={() => setOverdue((n) => Math.max(0, n - 1))} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* C. Awaiting your decision */}
+      {awaiting.length > 0 && (
+        <Section icon={CircleHelp} title="Awaiting your decision" hint="Scored — apply or skip">
+          <div className="grid gap-2.5 sm:grid-cols-2">
+            {awaiting.map((a) => (
+              <DecisionCard key={a.n} app={a} />
+            ))}
+          </div>
         </Section>
       )}
 

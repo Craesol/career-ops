@@ -115,12 +115,32 @@ export function JobsProvider({ children }: { children: React.ReactNode }) {
       };
       setJobs((js) => [job, ...js]);
 
-      if (!cliId) {
-        patch(id, (j) => ({ ...j, status: "error", endedAt: Date.now(), steps: [...j.steps, { kind: "status", label: "No CLI configured — open Config", ts: Date.now() }] }));
-        return id;
-      }
-
       (async () => {
+        // No CLI picked yet → auto-default to the first *installed* CLI instead of
+        // failing. Persist the choice so Config reflects it and next runs skip this.
+        if (!cliId) {
+          try {
+            const d = await fetch("/api/clis").then((r) => r.json());
+            const installed = (d.clis || []).filter((c: { installed: boolean }) => c.installed);
+            if (installed.length > 0) {
+              cliId = installed[0].id;
+              try {
+                const raw = localStorage.getItem(CONFIG_KEY);
+                const cfg = raw ? JSON.parse(raw) : {};
+                localStorage.setItem(CONFIG_KEY, JSON.stringify({ ...cfg, cliId }));
+              } catch {
+                /* persist is best-effort */
+              }
+              patch(id, (j) => ({ ...j, steps: [...j.steps, { kind: "status", label: `Using ${installed[0].name} (auto-detected)`, ts: Date.now() }] }));
+            }
+          } catch {
+            /* fall through to the error below */
+          }
+        }
+        if (!cliId) {
+          patch(id, (j) => ({ ...j, status: "error", endedAt: Date.now(), steps: [...j.steps, { kind: "status", label: "No CLI installed — install Claude Code (npm i -g @anthropic-ai/claude-code)", ts: Date.now() }] }));
+          return;
+        }
         let text = "";
         let verdictLine = ""; // latched separately so the 8000-char tail can't drop it
         let doneTokens = 0; // per-run token cost, forwarded on the done event (#6)

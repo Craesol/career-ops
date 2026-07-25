@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Clock, FileText, Loader2 } from "lucide-react";
+import { Check, Clock, FileText, Loader2, Trash2 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { CompanyLogo } from "@/components/company-logo";
 
@@ -11,8 +11,27 @@ export type FollowUp = { num?: number; company: string; role?: string; status?: 
 // data/follow-ups.md (append-only) and optimistically clears the row; "Snooze" is
 // a client dismiss. The cadence is the core's — we just surface + record.
 export function FollowUpCard({ followup, onLogged }: { followup: FollowUp; onLogged?: () => void }) {
-  const [state, setState] = useState<"idle" | "logging" | "done" | "snoozed">("idle");
-  if (state === "snoozed" || state === "done") return null;
+  const [state, setState] = useState<"idle" | "logging" | "removing" | "done" | "snoozed" | "removed">("idle");
+  if (state === "snoozed" || state === "done" || state === "removed") return null;
+
+  // "Remove" = stop chasing this application: sets the canonical status to
+  // Discarded via the existing UPDATE-only /api/status route (never deletes the
+  // tracker row), which drops it from the follow-up queue permanently.
+  const remove = async () => {
+    if (followup.num == null) return;
+    setState("removing");
+    try {
+      await fetch("/api/status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ n: followup.num, status: "Discarded" }),
+      });
+    } catch {
+      /* best-effort */
+    }
+    onLogged?.();
+    setState("removed");
+  };
 
   const log = async () => {
     setState("logging");
@@ -60,6 +79,17 @@ export function FollowUpCard({ followup, onLogged }: { followup: FollowUp; onLog
         <button type="button" onClick={() => setState("snoozed")} className="inline-flex shrink-0 items-center justify-center text-[11px] text-faint transition hover:text-foreground max-sm:min-h-[44px] max-sm:min-w-[44px]">
           Snooze
         </button>
+        {followup.num != null && (
+          <button
+            type="button"
+            disabled={state === "removing"}
+            onClick={remove}
+            title="Stop following up — marks this application Discarded in the tracker"
+            className="inline-flex shrink-0 items-center justify-center gap-1 text-[11px] text-faint transition hover:text-red-500 max-sm:min-h-[44px] max-sm:min-w-[44px]"
+          >
+            {state === "removing" ? <Loader2 className="size-3 animate-spin" /> : <Trash2 className="size-3" />} Remove
+          </button>
+        )}
       </div>
     </div>
   );

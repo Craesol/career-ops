@@ -63,8 +63,28 @@ function binCandidates(bin: string): string[] {
     // Only include extensions that `child_process.spawn()` can execute directly.
     .filter((e) => [".com", ".exe", ".bat", ".cmd"].includes(e.toLowerCase()));
 
-  // Try the bare name too (some environments provide an extensionless shim).
-  return [bin, ...exts.map((ext) => bin + ext)];
+  // Extension carriers FIRST: on Windows the bare extensionless file is npm's
+  // POSIX sh shim, which fs.accessSync happily approves but child_process.spawn
+  // cannot execute (ENOENT). Keep the bare name only as a last resort.
+  return [...exts.map((ext) => bin + ext), bin];
+}
+
+// npm's Windows .cmd shims aren't directly spawnable either (Node ≥18.20 rejects
+// .cmd/.bat without shell:true, and shell quoting would mangle the multi-line
+// prompts we pass). npm's standard shim just forwards to a real binary next to
+// node_modules — parse it and return that spawnable target instead.
+function resolveCmdShim(cmdPath: string): string | null {
+  try {
+    const src = fs.readFileSync(cmdPath, "utf8");
+    const m = src.match(/"%dp0%\\?([^"]+?\.exe)"/i);
+    if (m) {
+      const target = path.join(path.dirname(cmdPath), m[1]);
+      if (fs.existsSync(target)) return target;
+    }
+  } catch {
+    /* unreadable shim — fall through */
+  }
+  return null;
 }
 
 export function findBin(bin: string, dirs = searchDirs()): string | null {
@@ -73,6 +93,10 @@ export function findBin(bin: string, dirs = searchDirs()): string | null {
       const p = path.join(dir, candidate);
       try {
         fs.accessSync(p, fs.constants.X_OK);
+        if (process.platform === "win32" && /\.(cmd|bat)$/i.test(p)) {
+          const exe = resolveCmdShim(p);
+          if (exe) return exe;
+        }
         return p;
       } catch {
         /* not here */
