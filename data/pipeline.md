@@ -266,222 +266,222 @@ Line 36: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
   tool_use_id=toolu_01HSLv8q8n7kvvC83Hck4ZN5
   inner content: Web search results for query:  |  | Ecosystem Success Manag Line 41: block type=tool_result, keys=['tool_use_id', 'type', 'content'] tool_use_id=toolu_01GpMoiSi3QXyoSrGNA8Buqk inner content: Web search results for query:
-- [ ] https://job-boards.greenhouse.io/aptoslabs/jobs/4568398005 | Aptos Labs | Community Operations Lead
-- [ ] https://job-boards.greenhouse.io/coefficient/jobs/4447763006 | Coefficient | Community Lead
-- [ ] https://job-boards.greenhouse.io/mercury/jobs/5502169004 | Mercury | Community Manager
-- [ ] https://job-boards.greenhouse.io/stackblitz/jobs/4223647009 | Bolt.new | Community Manager
-- [ ] https://boards.greenhouse.io/techstars57/jobs/7801187002 | Techstars | Community Manager
-- [ ] https://job-boards.greenhouse.io/later/jobs/8069438002 | Later | Community Manager
-- [ ] https://job-boards.greenhouse.io/remotecom/jobs/7609621003 | Remote | Senior Partnership Manager - Investment Ecosystem
-- [ ] https://boards.greenhouse.io/aptoslabs/jobs/4319890005 | Aptos Labs | Ecosystem Program Manager
-- [ ] https://jobs.ashbyhq.com/vanta/ac44a1db-f73d-4fe2-9d71-8a5b9bb1a163 | Vanta | Senior Program Manager Digital Community
-- [ ] https://jobs.ashbyhq.com/n8n/35707964-4e33-47b9-be92-b286f8187749 | n8n | Community Manager
-- [ ] https://jobs.ashbyhq.com/notion/268081ab-0265-4454-be54-742f1449e502 | Notion | B2B Community Manager Lead
-- [ ] https://jobs.ashbyhq.com/wincent/df2ff375-ad6f-411a-b4b0-45e2041c6942 | Wincent | Community Manager EU Remote
-- [ ] https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11/application | Colonist | Community Manager
-- [ ] https://jobs.ashbyhq.com/trust-wallet/4f25d5e1-28a4-4caa-938b-07f3cd959047 | Trust Wallet | (DAO) Community Manager
-- [ ] https://jobs.lever.co/nibiru/388b4a9c-708a-443c-889c-a8ce8d7e93a3 | Nibiru | Community Lead
-- [ ] https://jobs.lever.co/daos-hub/dbfe8725-8c15-460a-a82c-0281ca4705b1 | Daos Hub | Community Lead
-- [ ] https://jobs.lever.co/stronghold/7ba5e5fe-e683-4841-a72b-74959bbcaf2c | Stronghold | Crypto Community Manager
-- [ ] https://cryptojobslist.com/jobs/community-manager-ticketing-revolution-dao-get-protocol-dao-remote | GET Protocol DAO | Community Manager
-- [ ] https://cryptojobslist.com/jobs/community-manager-virtual-society-foundation-remote | Virtual Society Foundation | Community Manager
-- [ ] https://cryptojobslist.com/jobs/community-builder-manager-pussdao-remote | PussDAO | Community Builder Manager
-- [ ] https://cryptojobslist.com/jobs/partnerships-manager-blockchain-the-tec-rec-recruitment-agency-remote | The Tec Rec | Partnerships Manager Blockchain
-- [ ] https://web3.career/ecosystem-dao-and-subdaos-community-manager-polygon/18005 | Polygon | Web3 Ecosystem DAO Community Manager
-- [ ] https://web3.career/community-manager-web3-cow-dao-cow-swap/86069 | CoW DAO | Community Manager Web3
-- [ ] https://web3.career/community-lead-aztec/101425 | Aztec | Community Lead
-- [ ] https://cryptocurrencyjobs.co/marketing/scrib3-community-manager/ | SCRIB3 | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/company-confidential-community-manager-fully-remote/ | Confidential | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/akasha-foundation-community-manager/ | AKASHA Foundation | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/across-community-manager/ | Across | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/mode-community-manager/ | Mode | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/pozzle-planet-dao-community-manager/ | Pozzle Planet DAO | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/monad-labs-lead-community-manager/ | Monad Labs | Lead Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/arrakis-finance-community-manager/ | Arrakis Finance | Community Manager
-- [ ] https://hitmarker.net/jobs/esports-lounge-community-manager-954121 | Esports Lounge | Community Manager
-- [ ] https://hitmarker.net/jobs/aftershock-media-group-program-manager-esports-partnerships-1686956 | Aftershock Media Group | Program Manager Esports Partnerships
-- [ ] https://hitmarker.net/jobs/thatgamecompany-senior-community-manager-1578114 | thatgamecompany | Senior Community Manager
-- [ ] https://hitmarker.net/jobs/people-can-fly-community-manager-1621530 | People Can Fly | Community Manager
-- [ ] https://hitmarker.net/jobs/nrg-esports-partnership-manager-1495497 | NRG Esports | Partnership Manager
-- [ ] https://hitmarker.net/jobs/jam-management-partnership-manager-2909406 | JAM Management | Partnership Manager
-- [ ] https://remote.com/jobs/flipster-c1gfggha/community-manager-australia-apac-j1xneofa | Flipster | Community Manager APAC
-- [ ] https://apply.workable.com/chaingpt/j/4A63F23FBB | ChainGPT | Senior Community Manager L1 Builder Europe
-- [ ] https://apply.workable.com/thrivecoin/j/BFD565EF12 | ThriveCoin | Senior Community Manager
-- [ ] https://apply.workable.com/hike/j/65BFA3ED37/ | Hike | Community Manager Web3
-- [ ] https://apply.workable.com/io-global/j/F3DDB6D5B9 | IO Global | Community Manager IOG Cardano
-- [ ] https://jobgether.com/offer/69a0597a7f0cfae7f11e5816-community-manager | Make | Community Manager
-- [ ] https://jobgether.com/offer/690e10c3fe9a9f899178adaf-community-manager | Sahara AI | Community Manager
-- [ ] https://jobgether.com/offer/6996bc24da7696de2f5722d2-community-manager---remote-pst-time-zone-preferred | MDA Edge | Community Manager Remote
-- [ ] https://jobgether.com/offer/69a3cf257f0cfae7f1225fc9-community-lead | Nibiru Chain | Community Lead
-- [ ] https://startup.jobs/community-manager-web3-hike-6208032 | Hike | Community Manager Web3
-- [ ] https://startup.jobs/community-manager-web3-playco-3281093 | Playco | Community Manager Web3
-- [ ] https://startup.jobs/lead-community-manager-monad-3801799 | Monad | Lead Community Manager
-- [ ] https://startup.jobs/community-manager-coinbase-6671010 | Coinbase | Community Manager
-- [ ] https://startup.jobs/community-manager-offchainlabs-4156534 | Offchain Labs | Community Manager
-- [ ] https://builtin.com/job/community-manager-cosmos-hub-contract/7935679 | Cosmos Labs | Community Manager Cosmos Hub
-- [ ] https://remotive.com/remote/jobs/marketing/senior-community-manager-3583317 | Buffer | Senior Community Manager
-- [ ] https://remotive.com/remote/jobs/marketing/program-manager-growth-and-community-1617239 | Timescale | Program Manager Growth and Community
-- [ ] https://weworkremotely.com/remote-jobs/binance-dach-community-manager-events | Binance | DACH Community Manager Events
-- [ ] https://www.workingnomads.com/jobs/community-manager-star-trektm-fleet-command-scopely | Scopely | Community Manager Star Trek Fleet Command
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-pyth-network-899688 | Pyth Network | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-grass-899780 | Grass | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-dao-community-manager-1inch-1129875 | 1inch | DAO Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-klink-finance-926799 | Klink Finance | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-defi-community-manager-mangrove-185708 | Mangrove | DeFi Community Manager
-- [ ] https://himalayas.app/companies/jobgether/jobs/community-manager-remote-emea-or-latam | Jobgether | Community Manager EMEA Latam
-- [ ] https://himalayas.app/companies/sahara/jobs/community-lead | Sahara | Community Lead
-- [ ] https://himalayas.app/companies/deca-games/jobs/lead-community-manager-m-f-d | DECA Games | Lead Community Manager
-- [ ] https://himalayas.app/companies/windranger-labs/jobs/community-manager | Windranger Labs | Community Manager
-- [ ] https://remote.co/job/community-manager-11-3/ | IOV Labs Rootstock | Community Manager
-- [ ] https://www.welcometothejungle.com/en/companies/bitstack/jobs/social-media-community-manager_paris_BITST_8V3w23V | Bitstack | Social Media Community Manager
-- [ ] https://euremotejobs.com/job/freelance-community-manager/ | Acorns | Freelance Community Manager
-- [ ] https://euremotejobs.com/job/growth-and-community-manager/ | Everbloom | Growth and Community Manager
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/7871914 | Smartling | Localization Project Manager
-- [ ] https://boards.greenhouse.io/degreed/jobs/4230476004 | Degreed | Localization Project Manager CX
-- [ ] https://job-boards.greenhouse.io/knowbe4/jobs/8187664002 | KnowBe4 | Product Localization Manager
-- [ ] https://jobs.ashbyhq.com/lilt-corporate/e9971893-75b5-45d4-ac32-14a61e001fa3 | LILT | Localization Project Manager
-- [ ] https://jobs.ashbyhq.com/Perplexity/8e0286d9-ce3c-4076-b780-0414575db525 | Perplexity | Localization Program Manager
-- [ ] https://jobs.ashbyhq.com/Tools%20for%20Humanity/837ca1b6-b6dd-4971-85c1-2761240658b6 | Tools for Humanity | Localization Manager
-- [ ] https://beincrypto.com/jobs/p/community-manager-windranger-YnSpfJ2 | Windranger | Community Manager
-- [ ] https://beincrypto.com/jobs/p/community-manager-satoshi-solutions-oDJAQIH/ | Satoshi Solutions | Community Manager
-- [ ] https://beincrypto.com/jobs/p/crypto-community-manager-caiz | CAIZ | Crypto Community Manager
-- [ ] https://beincrypto.com/jobs/p/global-community-manager-telegram-beincrypto-2jkqqNl/ | BeInCrypto | Global Community Manager Telegram
-- [ ] https://www.remote3.co/remote-jobs/community-lead-unto-labs-3 | Unto Labs | Community Lead
-- [ ] https://www.remote3.co/remote-jobs/community-manager-0g-labs | 0g Labs | Community Manager
-- [ ] https://www.remote3.co/remote-jobs/community-manager-defactor | Defactor | Community Manager
-- [ ] https://www.remote3.co/remote-jobs/community-lead-entangle-labs-3 | Entangle Labs | Community Lead
-- [ ] https://www.remote3.co/remote-jobs/web3-community-lead-remote--phoenix-growth | Phoenix Growth | Web3 Community Lead
-- [ ] https://wellfound.com/jobs/3529994-ambassador-program-lead-web3-gaming | Inkognido | Ambassador Program Lead Web3 Gaming
-- [ ] https://jobs.lever.co/crypto-banter/22b70b99-ce4d-4b5a-8779-e2ce732efb6a | Crypto Banter | Head of Community
-- [ ] https://jobs.lever.co/iovlabs/d1ca80e9-ab01-4c98-a1dc-3167cd9babaa | IOVLabs | Community Manager
+- [x] ~~https://job-boards.greenhouse.io/aptoslabs/jobs/4568398005 | Aptos Labs | Community Operations Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/coefficient/jobs/4447763006 | Coefficient | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/mercury/jobs/5502169004 | Mercury | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/stackblitz/jobs/4223647009 | Bolt.new | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://boards.greenhouse.io/techstars57/jobs/7801187002 | Techstars | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/later/jobs/8069438002 | Later | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/7609621003 | Remote | Senior Partnership Manager - Investment Ecosystem~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://boards.greenhouse.io/aptoslabs/jobs/4319890005 | Aptos Labs | Ecosystem Program Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/vanta/ac44a1db-f73d-4fe2-9d71-8a5b9bb1a163 | Vanta | Senior Program Manager Digital Community~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/n8n/35707964-4e33-47b9-be92-b286f8187749 | n8n | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/notion/268081ab-0265-4454-be54-742f1449e502 | Notion | B2B Community Manager Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/wincent/df2ff375-ad6f-411a-b4b0-45e2041c6942 | Wincent | Community Manager EU Remote~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11/application | Colonist | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/trust-wallet/4f25d5e1-28a4-4caa-938b-07f3cd959047 | Trust Wallet | (DAO) Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.lever.co/nibiru/388b4a9c-708a-443c-889c-a8ce8d7e93a3 | Nibiru | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.lever.co/daos-hub/dbfe8725-8c15-460a-a82c-0281ca4705b1 | Daos Hub | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.lever.co/stronghold/7ba5e5fe-e683-4841-a72b-74959bbcaf2c | Stronghold | Crypto Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptojobslist.com/jobs/community-manager-ticketing-revolution-dao-get-protocol-dao-remote | GET Protocol DAO | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptojobslist.com/jobs/community-manager-virtual-society-foundation-remote | Virtual Society Foundation | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptojobslist.com/jobs/community-builder-manager-pussdao-remote | PussDAO | Community Builder Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptojobslist.com/jobs/partnerships-manager-blockchain-the-tec-rec-recruitment-agency-remote | The Tec Rec | Partnerships Manager Blockchain~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://web3.career/ecosystem-dao-and-subdaos-community-manager-polygon/18005 | Polygon | Web3 Ecosystem DAO Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://web3.career/community-manager-web3-cow-dao-cow-swap/86069 | CoW DAO | Community Manager Web3~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://web3.career/community-lead-aztec/101425 | Aztec | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/scrib3-community-manager/ | SCRIB3 | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/company-confidential-community-manager-fully-remote/ | Confidential | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/akasha-foundation-community-manager/ | AKASHA Foundation | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/across-community-manager/ | Across | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/mode-community-manager/ | Mode | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/pozzle-planet-dao-community-manager/ | Pozzle Planet DAO | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/monad-labs-lead-community-manager/ | Monad Labs | Lead Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/arrakis-finance-community-manager/ | Arrakis Finance | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/esports-lounge-community-manager-954121 | Esports Lounge | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/aftershock-media-group-program-manager-esports-partnerships-1686956 | Aftershock Media Group | Program Manager Esports Partnerships~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/thatgamecompany-senior-community-manager-1578114 | thatgamecompany | Senior Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/people-can-fly-community-manager-1621530 | People Can Fly | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/nrg-esports-partnership-manager-1495497 | NRG Esports | Partnership Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://hitmarker.net/jobs/jam-management-partnership-manager-2909406 | JAM Management | Partnership Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remote.com/jobs/flipster-c1gfggha/community-manager-australia-apac-j1xneofa | Flipster | Community Manager APAC~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://apply.workable.com/chaingpt/j/4A63F23FBB | ChainGPT | Senior Community Manager L1 Builder Europe~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://apply.workable.com/thrivecoin/j/BFD565EF12 | ThriveCoin | Senior Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://apply.workable.com/hike/j/65BFA3ED37/ | Hike | Community Manager Web3~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://apply.workable.com/io-global/j/F3DDB6D5B9 | IO Global | Community Manager IOG Cardano~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobgether.com/offer/69a0597a7f0cfae7f11e5816-community-manager | Make | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobgether.com/offer/690e10c3fe9a9f899178adaf-community-manager | Sahara AI | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobgether.com/offer/6996bc24da7696de2f5722d2-community-manager---remote-pst-time-zone-preferred | MDA Edge | Community Manager Remote~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobgether.com/offer/69a3cf257f0cfae7f1225fc9-community-lead | Nibiru Chain | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startup.jobs/community-manager-web3-hike-6208032 | Hike | Community Manager Web3~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startup.jobs/community-manager-web3-playco-3281093 | Playco | Community Manager Web3~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startup.jobs/lead-community-manager-monad-3801799 | Monad | Lead Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startup.jobs/community-manager-coinbase-6671010 | Coinbase | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startup.jobs/community-manager-offchainlabs-4156534 | Offchain Labs | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://builtin.com/job/community-manager-cosmos-hub-contract/7935679 | Cosmos Labs | Community Manager Cosmos Hub~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remotive.com/remote/jobs/marketing/senior-community-manager-3583317 | Buffer | Senior Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remotive.com/remote/jobs/marketing/program-manager-growth-and-community-1617239 | Timescale | Program Manager Growth and Community~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://weworkremotely.com/remote-jobs/binance-dach-community-manager-events | Binance | DACH Community Manager Events~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.workingnomads.com/jobs/community-manager-star-trektm-fleet-command-scopely | Scopely | Community Manager Star Trek Fleet Command~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-pyth-network-899688 | Pyth Network | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-grass-899780 | Grass | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remoteok.com/remote-jobs/remote-dao-community-manager-1inch-1129875 | 1inch | DAO Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-klink-finance-926799 | Klink Finance | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remoteok.com/remote-jobs/remote-defi-community-manager-mangrove-185708 | Mangrove | DeFi Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://himalayas.app/companies/jobgether/jobs/community-manager-remote-emea-or-latam | Jobgether | Community Manager EMEA Latam~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://himalayas.app/companies/sahara/jobs/community-lead | Sahara | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://himalayas.app/companies/deca-games/jobs/lead-community-manager-m-f-d | DECA Games | Lead Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://himalayas.app/companies/windranger-labs/jobs/community-manager | Windranger Labs | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://remote.co/job/community-manager-11-3/ | IOV Labs Rootstock | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.welcometothejungle.com/en/companies/bitstack/jobs/social-media-community-manager_paris_BITST_8V3w23V | Bitstack | Social Media Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://euremotejobs.com/job/freelance-community-manager/ | Acorns | Freelance Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://euremotejobs.com/job/growth-and-community-manager/ | Everbloom | Growth and Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/7871914 | Smartling | Localization Project Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://boards.greenhouse.io/degreed/jobs/4230476004 | Degreed | Localization Project Manager CX~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/knowbe4/jobs/8187664002 | KnowBe4 | Product Localization Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/lilt-corporate/e9971893-75b5-45d4-ac32-14a61e001fa3 | LILT | Localization Project Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/Perplexity/8e0286d9-ce3c-4076-b780-0414575db525 | Perplexity | Localization Program Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/Tools%20for%20Humanity/837ca1b6-b6dd-4971-85c1-2761240658b6 | Tools for Humanity | Localization Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://beincrypto.com/jobs/p/community-manager-windranger-YnSpfJ2 | Windranger | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://beincrypto.com/jobs/p/community-manager-satoshi-solutions-oDJAQIH/ | Satoshi Solutions | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://beincrypto.com/jobs/p/crypto-community-manager-caiz | CAIZ | Crypto Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://beincrypto.com/jobs/p/global-community-manager-telegram-beincrypto-2jkqqNl/ | BeInCrypto | Global Community Manager Telegram~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.remote3.co/remote-jobs/community-lead-unto-labs-3 | Unto Labs | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-0g-labs | 0g Labs | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-defactor | Defactor | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.remote3.co/remote-jobs/community-lead-entangle-labs-3 | Entangle Labs | Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://www.remote3.co/remote-jobs/web3-community-lead-remote--phoenix-growth | Phoenix Growth | Web3 Community Lead~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://wellfound.com/jobs/3529994-ambassador-program-lead-web3-gaming | Inkognido | Ambassador Program Lead Web3 Gaming~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.lever.co/crypto-banter/22b70b99-ce4d-4b5a-8779-e2ce732efb6a | Crypto Banter | Head of Community~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.lever.co/iovlabs/d1ca80e9-ab01-4c98-a1dc-3167cd9babaa | IOVLabs | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
 - [x] ~~https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d/application | n8n | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/flox/da25cc84-7c3d-4d38-9b6d-e4e7b327c9ad/application | Flox | Developer Relations Community Lead~~ — swept: negative-title
-- [ ] https://www.kast.xyz/careers/crypto-partnership-manager | KAST | Crypto Partnership Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/yo-labs-community-manager/ | YO Labs | Community Manager
-- [ ] https://jobs.ashbyhq.com/exponential/01f39ca5-80f6-4fa4-91c5-91b28f3d2bc2 | YO Labs (Exponential) | Community Manager
-- [ ] https://startale.com/en/career/4016930008 | Startale Labs | Social Media Manager English
-- [ ] https://boards.greenhouse.io/okx/jobs/5820258003 | OKX | Web3 Ecosystem Marketing Manager
-- [ ] https://job-boards.greenhouse.io/cosmoslabs/jobs/5100357007 | Cosmos Labs | Head of Partnerships Enterprise Blockchain
-- [ ] https://jobs.paradigm.xyz/companies/uniswap-foundation-2/jobs/39999815-community-manager | Uniswap Foundation | Community Manager Developer Ecosystem
+- [x] ~~https://www.kast.xyz/careers/crypto-partnership-manager | KAST | Crypto Partnership Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/yo-labs-community-manager/ | YO Labs | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.ashbyhq.com/exponential/01f39ca5-80f6-4fa4-91c5-91b28f3d2bc2 | YO Labs (Exponential) | Community Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://startale.com/en/career/4016930008 | Startale Labs | Social Media Manager English~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://boards.greenhouse.io/okx/jobs/5820258003 | OKX | Web3 Ecosystem Marketing Manager~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://job-boards.greenhouse.io/cosmoslabs/jobs/5100357007 | Cosmos Labs | Head of Partnerships Enterprise Blockchain~~ — swept: stale (61d old, first seen 2026-05-26)
+- [x] ~~https://jobs.paradigm.xyz/companies/uniswap-foundation-2/jobs/39999815-community-manager | Uniswap Foundation | Community Manager Developer Ecosystem~~ — swept: stale (61d old, first seen 2026-05-26)
 - [x] ~~https://jobs.multicoin.capital/companies/dfinity/jobs/34899650-developer-relations-engineer | DFINITY | Developer Relations Engineer~~ — swept: negative-title
-- [ ] https://jobs.multicoin.capital/companies/aptos-labs/jobs/34148049-general-ecosystem-manager | Aptos Labs | General Ecosystem Manager
+- [x] ~~https://jobs.multicoin.capital/companies/aptos-labs/jobs/34148049-general-ecosystem-manager | Aptos Labs | General Ecosystem Manager~~ — swept: stale (61d old, first seen 2026-05-26)
 - [x] ~~https://jobs.polychain.capital/companies/web3-foundation/jobs/40670834-ecosystem-growth-lead | Web3 Foundation | Ecosystem Growth Lead~~ — swept: negative-title
-- [ ] https://job-boards.greenhouse.io/remotasks/jobs/4369093005 | Remotasks | Community Manager
-- [ ] https://boards.greenhouse.io/olipop/jobs/6210188003 | OLIPOP | Community Manager
-- [ ] https://job-boards.greenhouse.io/hs/jobs/7612358 | Headspace | Client Training & Community Manager
-- [ ] https://job-boards.greenhouse.io/dreemhealth/jobs/5127061008 | Dreem Health | Social Media & Community Manager
-- [ ] https://boards.greenhouse.io/stripe/jobs/7614949 | Stripe | Partner Development Manager - Ecosystem Products
-- [ ] https://job-boards.greenhouse.io/honeycomb/jobs/5031409008 | Honeycomb.io | Head of Partnerships and Ecosystem
-- [ ] https://boards.greenhouse.io/sustainlife/jobs/5276929003 | Sustain.Life | Senior Manager, Partnerships
-- [ ] https://boards.greenhouse.io/thanx/jobs/4824833003 | Thanx | Partnerships Manager
-- [ ] https://job-boards.greenhouse.io/memoryblue/jobs/4565574006 | memoryBlue | Partnerships Manager
-- [ ] https://jobs.ashbyhq.com/thatgamecompany/ef73af2d-8f21-4814-9df3-daea26ca0fb2 | thatgamecompany | Senior Community Manager
-- [ ] https://jobs.ashbyhq.com/kittl/e170885f-a733-4eec-a412-deacdefb5ccd | Kittl | Community Manager (Freelance, remote)
-- [ ] https://jobs.ashbyhq.com/krea/dca79462-cf10-4327-91b1-bd5d12618760 | Krea | Lead Community Manager
-- [ ] https://jobs.ashbyhq.com/n8n/3e2f40d9-5369-4830-8d77-542421e9b6a9 | n8n | Community Manager (West Coast US)
+- [x] ~~https://job-boards.greenhouse.io/remotasks/jobs/4369093005 | Remotasks | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/olipop/jobs/6210188003 | OLIPOP | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/hs/jobs/7612358 | Headspace | Client Training & Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/dreemhealth/jobs/5127061008 | Dreem Health | Social Media & Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/stripe/jobs/7614949 | Stripe | Partner Development Manager - Ecosystem Products~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/honeycomb/jobs/5031409008 | Honeycomb.io | Head of Partnerships and Ecosystem~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/sustainlife/jobs/5276929003 | Sustain.Life | Senior Manager, Partnerships~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/thanx/jobs/4824833003 | Thanx | Partnerships Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/memoryblue/jobs/4565574006 | memoryBlue | Partnerships Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/thatgamecompany/ef73af2d-8f21-4814-9df3-daea26ca0fb2 | thatgamecompany | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/kittl/e170885f-a733-4eec-a412-deacdefb5ccd | Kittl | Community Manager (Freelance, remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/krea/dca79462-cf10-4327-91b1-bd5d12618760 | Krea | Lead Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/n8n/3e2f40d9-5369-4830-8d77-542421e9b6a9 | n8n | Community Manager (West Coast US)~~ — swept: stale (60d old, first seen 2026-05-27)
 - [x] ~~https://jobs.ashbyhq.com/f.actor/5a7c1d2d-b022-46c1-8654-5c9a6bc1e8c7 | f.actor | Community & Developer Relations~~ — swept: negative-title
-- [ ] https://jobs.lever.co/instrument/0b502bfa-b64c-472e-9b4e-4aafcea31bed | Instrument | Community Manager (freelance)
-- [ ] https://jobs.lever.co/get-vocal-pbc/fb3394a4-354c-4c28-872a-fbdcb02882e8 | Vocal Media | Digital Community Manager
-- [ ] https://jobs.lever.co/walkme/444b6e95-5bc0-4adb-9033-2bbf98d4d2ed | WalkMe | Senior Community Manager
-- [ ] https://jobs.lever.co/gearset/ddfb8229-3a59-4825-911a-bd06a44b0d57 | Gearset | Brand, Community and Communications Manager
-- [ ] https://jobs.lever.co/certik/e2bc15c9-6b20-4abc-85a3-6c04ee2b10c1 | CertiK | Community Manager, Korea
-- [ ] https://jobs.lever.co/octoenergy/bd7e7662-69ad-4314-bb13-d385b9ca2b85 | Octopus Energy | Community Manager (SMETS & SMART)
-- [ ] https://jobs.lever.co/axiomzen/102ea60a-2f32-4ca8-9b34-7de17737e5f2 | Axiom Zen | Community Manager
-- [ ] https://jobs.lever.co/jobgether/2798ecb4-8b04-47fe-972b-0499ee66840c | Jobgether | Manager, Customer Community - REMOTE
-- [ ] https://cryptojobslist.com/jobs/lead-community-manager-avatar-one-remote | Avatar.One | Lead Community Manager
-- [ ] https://web3.career/dao-community-manager-full-time-remote-hike/28415 | Hike | DAO Community Manager (Full Time, Remote)
-- [ ] https://web3.career/online-community-manager-decenhealth-dao/25598 | DecenHealth DAO | Online Community Manager
-- [ ] https://web3.career/community-manager-mirror/8987 | Mirror | Community Manager
-- [ ] https://cryptocurrencyjobs.co/customer-support/holo-community-manager/ | Holo | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/ambire-wallet-community-manager-ambire-wallet/ | Ambire Wallet | Community Manager
-- [ ] https://www.linkedin.com/jobs/view/web3-community-manager-at-press-blockchain-4317458835 | Press Blockchain | Web3 Community Manager
-- [ ] https://www.linkedin.com/jobs/view/defi-community-manager-at-shift-markets-3689221763 | Shift Markets | DeFi Community Manager
-- [ ] https://sg.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming
-- [ ] https://www.linkedin.com/jobs/view/community-manager-web3-blockchain-at-aces-fun-4265348250 | Aces.fun | Community Manager Web3/Blockchain
-- [ ] https://www.linkedin.com/jobs/view/web3-community-manager-at-global-games-show-4079206804 | Global Games Show | Web3 Community Manager
-- [ ] https://www.linkedin.com/jobs/view/head-of-ecosystem-crypto-at-career-renew-4346430159 | Career Renew | Head of Ecosystem - Crypto
+- [x] ~~https://jobs.lever.co/instrument/0b502bfa-b64c-472e-9b4e-4aafcea31bed | Instrument | Community Manager (freelance)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/get-vocal-pbc/fb3394a4-354c-4c28-872a-fbdcb02882e8 | Vocal Media | Digital Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/walkme/444b6e95-5bc0-4adb-9033-2bbf98d4d2ed | WalkMe | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/gearset/ddfb8229-3a59-4825-911a-bd06a44b0d57 | Gearset | Brand, Community and Communications Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/certik/e2bc15c9-6b20-4abc-85a3-6c04ee2b10c1 | CertiK | Community Manager, Korea~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/octoenergy/bd7e7662-69ad-4314-bb13-d385b9ca2b85 | Octopus Energy | Community Manager (SMETS & SMART)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/axiomzen/102ea60a-2f32-4ca8-9b34-7de17737e5f2 | Axiom Zen | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/jobgether/2798ecb4-8b04-47fe-972b-0499ee66840c | Jobgether | Manager, Customer Community - REMOTE~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://cryptojobslist.com/jobs/lead-community-manager-avatar-one-remote | Avatar.One | Lead Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://web3.career/dao-community-manager-full-time-remote-hike/28415 | Hike | DAO Community Manager (Full Time, Remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://web3.career/online-community-manager-decenhealth-dao/25598 | DecenHealth DAO | Online Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://web3.career/community-manager-mirror/8987 | Mirror | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://cryptocurrencyjobs.co/customer-support/holo-community-manager/ | Holo | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/ambire-wallet-community-manager-ambire-wallet/ | Ambire Wallet | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/web3-community-manager-at-press-blockchain-4317458835 | Press Blockchain | Web3 Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/defi-community-manager-at-shift-markets-3689221763 | Shift Markets | DeFi Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://sg.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/community-manager-web3-blockchain-at-aces-fun-4265348250 | Aces.fun | Community Manager Web3/Blockchain~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/web3-community-manager-at-global-games-show-4079206804 | Global Games Show | Web3 Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/head-of-ecosystem-crypto-at-career-renew-4346430159 | Career Renew | Head of Ecosystem - Crypto~~ — swept: stale (60d old, first seen 2026-05-27)
 - [x] ~~https://www.linkedin.com/jobs/view/devrel-lead-blockchain-web3-at-confidencial-4175839679 | (Confidential) | DevRel Lead - Blockchain / Web3~~ — swept: negative-title
-- [ ] https://hk.linkedin.com/jobs/view/web3-growth-lead-backed-by-5b%2B-vc-fund-blockchain-based-infrastructure-project-and-ecosystem-150k-300k-annually-at-second-talent-4312746276 | Second Talent | Web3 Growth Lead
-- [ ] https://fr.linkedin.com/jobs/view/ecosystem-manager-web3-alternance-f-h-at-iexec-3973331485 | iExec | Ecosystem Manager Web3
-- [ ] https://www.linkedin.com/jobs/view/head-of-community-at-cometeer-2756479724 | Cometeer | Head of Community
-- [ ] https://www.linkedin.com/jobs/view/head-of-community-partnerships-at-reddit-inc-4250562442 | Reddit | Head of Community Partnerships
-- [ ] https://remote.com/jobs/empowerly-c132w7t7/community-manager-j12xouyd | Empowerly | Community Manager
-- [ ] https://apply.workable.com/claystack/j/3731F217B1/ | ClayStack | Community Manager for DeFi
-- [ ] https://apply.workable.com/clubrare/j/A913573668 | ClubRare | Web3 Community Manager
-- [ ] https://apply.workable.com/chaingpt/j/47DB6EB4AA | ChainGPT | Senior Community Manager (L1 Builder) - Middle East
-- [ ] https://apply.workable.com/chaingpt/j/B14D25E850 | ChainGPT | Senior Community Manager (L1 Builder) - Americas
-- [ ] https://apply.workable.com/chaingpt/j/8014721230 | ChainGPT | Senior Community Manager (L1 Builder) - Asia
-- [ ] https://jobgether.com/offer/6990dba2da7696de2f52b3b5-community-manager-developers-open-source | Tag | Community Manager, Developers & Open Source
-- [ ] https://jobgether.com/offer/69f0d31bc646310ee39d9b80-community-manager | Jerry | Community Manager
-- [ ] https://startup.jobs/web3-community-manager-japan-ava-labs-4803377 | Ava Labs | Web3 Community Manager, Japan
-- [ ] https://startup.jobs/web3-member-experience-lead-serotonin-platform-remote-serotonin-4634393 | Serotonin | Web3 Member Experience Lead
-- [ ] https://startup.jobs/rarimo-web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager
-- [ ] https://startup.jobs/ecosystem-manager-crypto-intelligence-coinbase-2567707 | Coinbase | Ecosystem Manager, Crypto Intelligence
-- [ ] https://startup.jobs/senior-director-partnerships-web3-and-gaming-ecosystem-circle-2-3527767 | Circle | Senior Director, Partnerships, Web3 and Gaming Ecosystem
-- [ ] https://startup.jobs/web3-partnership-growth-manager-remote-wirex-limited-3554243 | Wirex | Web3 Partnership & Growth Manager
-- [ ] https://builtin.com/job/operations/community-manager/1294129 | Forbes | Community Manager (Remote)
-- [ ] https://builtin.com/job/marketing/senior-community-manager/285736 | RECUR | Senior Community Manager
-- [ ] https://builtin.com/job/operations/technical-community-manager/2063785 | Subspace Labs | Technical Community Manager (Remote)
-- [ ] https://builtin.com/job/operations/director-community/910250 | SuperRare | Director of Community (Remote)
-- [ ] https://builtin.com/job/startup-community-manager-west-coast/8364523 | Nebius | Startup Community Manager, West Coast
-- [ ] https://builtin.com/job/startup-community-manager-systems-experiences/8529614 | Nebius | Startup Community Manager – Systems & Experiences
-- [ ] https://builtin.com/job/community-manager/4048335 | Clean Energy Ventures | Community Manager
-- [ ] https://www.glassdoor.com/job-listing/sr-social-media-manager-crypto-blockchain-caiz-JV_KO0,41_KE42,46.htm?jl=1009815342247 | Caiz | Sr. Social Media Manager (Crypto / Blockchain)
-- [ ] https://www.glassdoor.com/job-listing/operations-project-manager-fmx-remote-in-cet-or-hybrid-munich-blockchain-staking-facilities-gmbh-JV_KO0,72_KE73,96.htm?jl=1009858936636 | Staking Facilities GmbH | Operations Project Manager - Blockchain (CET/Munich)
-- [ ] https://www.glassdoor.com/job-listing/blockchain-and-product-partnerships-manager-chainlink-labs-JV_IC1139761_KO0,43_KE44,58.htm?jl=1009681247040 | Chainlink Labs | Blockchain and Product Partnerships Manager
-- [ ] https://www.glassdoor.com/job-listing/web3-social-media-manager-remote-serotonin-JV_KO0,32_KE33,42.htm?jl=1009587947470 | Serotonin | Web3 Social Media Manager (Remote)
-- [ ] https://remotive.com/remote/jobs/all-others/community-manager-3692466 | System | Community Manager
-- [ ] https://remotive.com/remote/jobs/customer-support/community-manager-1970168 | Winona | Community Manager
-- [ ] https://remotive.com/remote/jobs/marketing/community-manager-1733293 | Myollie | Community Manager
-- [ ] https://remotive.com/remote/jobs/marketing/community-lead-1193213 | Coefficient (Remotive) | Community Lead
-- [ ] https://remotive.com/remote/jobs/marketing/director-community-management-1076215 | Raptive | Director, Community Management
-- [ ] https://remotive.com/remote/jobs/customer-service/senior-community-manager-4134771 | Keywords Studios | Senior Community Manager
-- [ ] https://remotive.com/remote/jobs/marketing/content-and-community-manager-1632366 | roadpost | Content and Community Manager
-- [ ] https://www.workingnomads.com/jobs/community-program-manager-canva | Canva | Community Program Manager
-- [ ] https://www.workingnomads.com/jobs/community-manager-overture-maps-foundation-linux-foundation-1229076 | Linux Foundation | Community Manager - Overture Maps Foundation
-- [ ] https://www.workingnomads.com/jobs/community-manager-newsela | Newsela | Community Manager
-- [ ] https://www.workingnomads.com/jobs/social-community-manager-apolloio-1133349 | Apollo.io | Social Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-crypto-community-manager-stronghold-1093829 | Stronghold | Crypto Community Manager
-- [ ] https://remoteok.com/remote-jobs/108316-remote-community-manager-ghost | Ghost | Community Manager (Worldwide)
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-projectdiscovery-614682 | ProjectDiscovery | Community Manager
-- [ ] https://himalayas.app/companies/hackerone/jobs/senior-community-manager-growth-retention | HackerOne | Senior Community Manager, Growth & Retention
-- [ ] https://himalayas.app/companies/timescale/jobs/program-manager-growth-and-community | Timescale | Program Manager, Growth and Community
-- [ ] https://himalayas.app/companies/moodle/jobs/partner-marketing-program-manager | Moodle | Partner Marketing Program Manager
-- [ ] https://candidat.francetravail.fr/offres/recherche/detail/206FLJG | Durance Luberon Verdon | Community Manager (H/F)
-- [ ] https://candidat.francetravail.fr/offres/recherche/detail/203NYMM | GROUPE GO2R (PACA) | Community Manager (H/F)
-- [ ] https://www.welcometothejungle.com/en/companies/filigran/jobs/community-manager-experience-usa_new-york | Filigran | Community Manager Experience (USA)
-- [ ] https://www.welcometothejungle.com/fr/companies/shapr/jobs/community-manager-startup-full-remote_paris_SHAPR_3qe48Zm | Shapr | Community Manager - Startup Full Remote
-- [ ] https://www.welcometothejungle.com/en/companies/groover/jobs/community-manager-germany_berlin | Groover | Community Manager - Freelance (Germany)
-- [ ] https://app.welcometothejungle.com/jobs/doEip2V4 | Culture Amp | Senior Community Manager
-- [ ] https://app.welcometothejungle.com/jobs/9OVuZJvi | Social Point (gaming) | Senior Community Manager
-- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-at-interprestige-2190487181 | Interprestige (Cannes) | Community Manager H/F
-- [ ] https://fr.linkedin.com/jobs/view/manager-de-communaut%C3%A9-at-swiss-gold-services-3861936134 | Swiss Gold Services (Valbonne) | Manager de communauté
-- [ ] https://www.workatastartup.com/jobs/71788 | Dialect | Marketing Manager (Blockchain)
-- [ ] https://euremotejobs.com/job/the-good-food-institute-europe-full-time-scientific-partnerships-manager-home-based/ | Good Food Institute Europe | Scientific Partnerships Manager
+- [x] ~~https://hk.linkedin.com/jobs/view/web3-growth-lead-backed-by-5b%2B-vc-fund-blockchain-based-infrastructure-project-and-ecosystem-150k-300k-annually-at-second-talent-4312746276 | Second Talent | Web3 Growth Lead~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://fr.linkedin.com/jobs/view/ecosystem-manager-web3-alternance-f-h-at-iexec-3973331485 | iExec | Ecosystem Manager Web3~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/head-of-community-at-cometeer-2756479724 | Cometeer | Head of Community~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.linkedin.com/jobs/view/head-of-community-partnerships-at-reddit-inc-4250562442 | Reddit | Head of Community Partnerships~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remote.com/jobs/empowerly-c132w7t7/community-manager-j12xouyd | Empowerly | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://apply.workable.com/claystack/j/3731F217B1/ | ClayStack | Community Manager for DeFi~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://apply.workable.com/clubrare/j/A913573668 | ClubRare | Web3 Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://apply.workable.com/chaingpt/j/47DB6EB4AA | ChainGPT | Senior Community Manager (L1 Builder) - Middle East~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://apply.workable.com/chaingpt/j/B14D25E850 | ChainGPT | Senior Community Manager (L1 Builder) - Americas~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://apply.workable.com/chaingpt/j/8014721230 | ChainGPT | Senior Community Manager (L1 Builder) - Asia~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobgether.com/offer/6990dba2da7696de2f52b3b5-community-manager-developers-open-source | Tag | Community Manager, Developers & Open Source~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobgether.com/offer/69f0d31bc646310ee39d9b80-community-manager | Jerry | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/web3-community-manager-japan-ava-labs-4803377 | Ava Labs | Web3 Community Manager, Japan~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/web3-member-experience-lead-serotonin-platform-remote-serotonin-4634393 | Serotonin | Web3 Member Experience Lead~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/rarimo-web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/ecosystem-manager-crypto-intelligence-coinbase-2567707 | Coinbase | Ecosystem Manager, Crypto Intelligence~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/senior-director-partnerships-web3-and-gaming-ecosystem-circle-2-3527767 | Circle | Senior Director, Partnerships, Web3 and Gaming Ecosystem~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://startup.jobs/web3-partnership-growth-manager-remote-wirex-limited-3554243 | Wirex | Web3 Partnership & Growth Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/operations/community-manager/1294129 | Forbes | Community Manager (Remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/marketing/senior-community-manager/285736 | RECUR | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/operations/technical-community-manager/2063785 | Subspace Labs | Technical Community Manager (Remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/operations/director-community/910250 | SuperRare | Director of Community (Remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/startup-community-manager-west-coast/8364523 | Nebius | Startup Community Manager, West Coast~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/startup-community-manager-systems-experiences/8529614 | Nebius | Startup Community Manager – Systems & Experiences~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://builtin.com/job/community-manager/4048335 | Clean Energy Ventures | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.glassdoor.com/job-listing/sr-social-media-manager-crypto-blockchain-caiz-JV_KO0,41_KE42,46.htm?jl=1009815342247 | Caiz | Sr. Social Media Manager (Crypto / Blockchain)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.glassdoor.com/job-listing/operations-project-manager-fmx-remote-in-cet-or-hybrid-munich-blockchain-staking-facilities-gmbh-JV_KO0,72_KE73,96.htm?jl=1009858936636 | Staking Facilities GmbH | Operations Project Manager - Blockchain (CET/Munich)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.glassdoor.com/job-listing/blockchain-and-product-partnerships-manager-chainlink-labs-JV_IC1139761_KO0,43_KE44,58.htm?jl=1009681247040 | Chainlink Labs | Blockchain and Product Partnerships Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.glassdoor.com/job-listing/web3-social-media-manager-remote-serotonin-JV_KO0,32_KE33,42.htm?jl=1009587947470 | Serotonin | Web3 Social Media Manager (Remote)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/all-others/community-manager-3692466 | System | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/customer-support/community-manager-1970168 | Winona | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/marketing/community-manager-1733293 | Myollie | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/marketing/community-lead-1193213 | Coefficient (Remotive) | Community Lead~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/marketing/director-community-management-1076215 | Raptive | Director, Community Management~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/customer-service/senior-community-manager-4134771 | Keywords Studios | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remotive.com/remote/jobs/marketing/content-and-community-manager-1632366 | roadpost | Content and Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.workingnomads.com/jobs/community-program-manager-canva | Canva | Community Program Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.workingnomads.com/jobs/community-manager-overture-maps-foundation-linux-foundation-1229076 | Linux Foundation | Community Manager - Overture Maps Foundation~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.workingnomads.com/jobs/community-manager-newsela | Newsela | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.workingnomads.com/jobs/social-community-manager-apolloio-1133349 | Apollo.io | Social Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remoteok.com/remote-jobs/remote-crypto-community-manager-stronghold-1093829 | Stronghold | Crypto Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remoteok.com/remote-jobs/108316-remote-community-manager-ghost | Ghost | Community Manager (Worldwide)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-projectdiscovery-614682 | ProjectDiscovery | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://himalayas.app/companies/hackerone/jobs/senior-community-manager-growth-retention | HackerOne | Senior Community Manager, Growth & Retention~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://himalayas.app/companies/timescale/jobs/program-manager-growth-and-community | Timescale | Program Manager, Growth and Community~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://himalayas.app/companies/moodle/jobs/partner-marketing-program-manager | Moodle | Partner Marketing Program Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://candidat.francetravail.fr/offres/recherche/detail/206FLJG | Durance Luberon Verdon | Community Manager (H/F)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://candidat.francetravail.fr/offres/recherche/detail/203NYMM | GROUPE GO2R (PACA) | Community Manager (H/F)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.welcometothejungle.com/en/companies/filigran/jobs/community-manager-experience-usa_new-york | Filigran | Community Manager Experience (USA)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.welcometothejungle.com/fr/companies/shapr/jobs/community-manager-startup-full-remote_paris_SHAPR_3qe48Zm | Shapr | Community Manager - Startup Full Remote~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.welcometothejungle.com/en/companies/groover/jobs/community-manager-germany_berlin | Groover | Community Manager - Freelance (Germany)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://app.welcometothejungle.com/jobs/doEip2V4 | Culture Amp | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://app.welcometothejungle.com/jobs/9OVuZJvi | Social Point (gaming) | Senior Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://fr.linkedin.com/jobs/view/community-manager-h-f-at-interprestige-2190487181 | Interprestige (Cannes) | Community Manager H/F~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://fr.linkedin.com/jobs/view/manager-de-communaut%C3%A9-at-swiss-gold-services-3861936134 | Swiss Gold Services (Valbonne) | Manager de communauté~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.workatastartup.com/jobs/71788 | Dialect | Marketing Manager (Blockchain)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://euremotejobs.com/job/the-good-food-institute-europe-full-time-scientific-partnerships-manager-home-based/ | Good Food Institute Europe | Scientific Partnerships Manager~~ — swept: stale (60d old, first seen 2026-05-27)
 - [x] ~~https://euremotejobs.com/job/program-manager-internal-experience-platform/ | Pleo | Program Manager - Internal Experience Platform~~ — swept: negative-title
-- [ ] https://euremotejobs.com/job/sales-partnerships-manager/ | Amber Notes | Sales & Partnerships Manager
-- [ ] https://euremotejobs.com/job/people-program-manager/ | (EU Remote) | People Program Manager
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/7766274 | Smartling | Localisation Project Manager (Ireland/UK)
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/7526848 | Smartling | Sr. Localization Project Manager
-- [ ] https://job-boards.greenhouse.io/brandtechplus/jobs/7475868 | Brandtech+ | Localization Project Manager
-- [ ] https://boards.greenhouse.io/blueprintinternal/jobs/6723819 | Blueprint Internal | Project Manager — Localization
-- [ ] https://jobs.ashbyhq.com/lilt/cddbbd56-3df1-4086-bcf0-074c28b5ec7b | LILT | Localization Project Manager, Life Sciences (West Coast)
-- [ ] https://jobs.ashbyhq.com/lilt/7a28d298-63a1-4f2e-887f-2ae879849471 | LILT | Localization Project Manager, Life Sciences (Contractor)
-- [ ] https://jobs.ashbyhq.com/lilt/9359ba34-0db4-47b3-97ab-5106b3346bc7 | LILT | Localization Project Manager, Production (Contractor)
-- [ ] https://jobs.ashbyhq.com/lilt/168f0da6-c193-4d93-947e-24e71f2b831b | LILT | Localization Project Manager, Life Sciences (East Coast)
-- [ ] https://jobs.ashbyhq.com/holywater/163d3de0-6830-47ab-a8e2-393ead8e6fc4/application | HOLYWATER | Localization Manager
-- [ ] https://jobs.ashbyhq.com/SKELAR/6771fd69-7b84-435f-acc7-11f3b9eb3970 | SKELAR | Localization Manager — Howly
-- [ ] https://beincrypto.com/jobs/p/web3-community-manager-remote-phoenix-growth/ | Phoenix Growth | Web3 Community Manager
-- [ ] https://www.remote3.co/remote-jobs/community-manager-cis-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)
-- [ ] https://remote3.co/remote-jobs/community-lead--head-of-community-concordium | Concordium | Community Lead / Head of Community
-- [ ] https://www.remote3.co/remote-jobs/community-manager | TokenHunt.club | Community Manager
-- [ ] https://jobs3.io/job/community-manager-web-3-binance/ | Binance (Jobs3) | Community Manager - Web 3
-- [ ] https://wellfound.com/jobs/3049597-community-manager-web3 | Hashstack | Community Manager Web3
-- [ ] https://wellfound.com/jobs/2724768-blockchain-crypto-community-manager | SocialChain | Blockchain/Crypto Community Manager
-- [ ] https://jobs.lever.co/binance/2938f885-9401-4ac4-8562-e20c2068ca9c | Binance | Community Manager
-- [ ] https://jobs.lever.co/binance/700ed3a8-96cd-446e-b656-131db2877ba5 | Binance | Global Community Manager
-- [ ] https://jobs.lever.co/tokenmetrics/e5e3f4c0-37ee-42fc-9ce9-c3f6611f3e13 | Token Metrics | Web3 Head of Marketing and Communications
-- [ ] https://jobs.lever.co/offchainlabs/48c6703e-59e9-4178-98b0-e439de596379 | Offchain Labs (Arbitrum) | Head of Social
+- [x] ~~https://euremotejobs.com/job/sales-partnerships-manager/ | Amber Notes | Sales & Partnerships Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://euremotejobs.com/job/people-program-manager/ | (EU Remote) | People Program Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/7766274 | Smartling | Localisation Project Manager (Ireland/UK)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/7526848 | Smartling | Sr. Localization Project Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://job-boards.greenhouse.io/brandtechplus/jobs/7475868 | Brandtech+ | Localization Project Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/blueprintinternal/jobs/6723819 | Blueprint Internal | Project Manager — Localization~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/lilt/cddbbd56-3df1-4086-bcf0-074c28b5ec7b | LILT | Localization Project Manager, Life Sciences (West Coast)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/lilt/7a28d298-63a1-4f2e-887f-2ae879849471 | LILT | Localization Project Manager, Life Sciences (Contractor)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/lilt/9359ba34-0db4-47b3-97ab-5106b3346bc7 | LILT | Localization Project Manager, Production (Contractor)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/lilt/168f0da6-c193-4d93-947e-24e71f2b831b | LILT | Localization Project Manager, Life Sciences (East Coast)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/holywater/163d3de0-6830-47ab-a8e2-393ead8e6fc4/application | HOLYWATER | Localization Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.ashbyhq.com/SKELAR/6771fd69-7b84-435f-acc7-11f3b9eb3970 | SKELAR | Localization Manager — Howly~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://beincrypto.com/jobs/p/web3-community-manager-remote-phoenix-growth/ | Phoenix Growth | Web3 Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-cis-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://remote3.co/remote-jobs/community-lead--head-of-community-concordium | Concordium | Community Lead / Head of Community~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager | TokenHunt.club | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs3.io/job/community-manager-web-3-binance/ | Binance (Jobs3) | Community Manager - Web 3~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://wellfound.com/jobs/3049597-community-manager-web3 | Hashstack | Community Manager Web3~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://wellfound.com/jobs/2724768-blockchain-crypto-community-manager | SocialChain | Blockchain/Crypto Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/binance/2938f885-9401-4ac4-8562-e20c2068ca9c | Binance | Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/binance/700ed3a8-96cd-446e-b656-131db2877ba5 | Binance | Global Community Manager~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/tokenmetrics/e5e3f4c0-37ee-42fc-9ce9-c3f6611f3e13 | Token Metrics | Web3 Head of Marketing and Communications~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.lever.co/offchainlabs/48c6703e-59e9-4178-98b0-e439de596379 | Offchain Labs (Arbitrum) | Head of Social~~ — swept: stale (60d old, first seen 2026-05-27)
 - [x] ~~https://jobs.ashbyhq.com/hercules/12f88f68-8199-44a2-91e5-983d2548c01e | Hercules | Developer Relations (DevRel)~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/deno/12493caf-ea75-4f07-ab0a-d8457cb95d2c | Deno | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/tldraw/08bdab63-0f83-4afd-8ddb-7f9338cad816 | tldraw | Developer Relations~~ — swept: negative-title
@@ -489,173 +489,173 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/featherlessai/0c957e24-efb6-4993-9fd6-6853f2f5c225 | Featherless AI | Developer Relations (DevRel)~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/inngest/669446af-b6b4-4b6f-912d-3bc2ca703375 | Inngest | Developer Relations Engineer~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/privy/96f07fe8-c163-46fe-bf1e-f05e022328f1 | Privy | Developer Relations~~ — swept: negative-title
-- [ ] https://jobs.multicoin.capital/companies/starkware-2-d7b130be-19a0-4af8-813d-f6ff58c5b2bc/jobs/52317570-head-of-growth-marketing | StarkWare | Head of Growth Marketing
-- [ ] https://jobs.polychain.capital/companies/axelar-2/jobs/51936857-institutional-content-lead-multichain-stablecoins-rwas | Axelar | Institutional Content Lead
-- [ ] https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/39449666-ecosystem-associate | Monad | Ecosystem Associate
-- [ ] https://wellfound.com/jobs/3402104-community-associate-web3-ai-agents | QuillAudits | Community Associate (Web3 · AI Agents)
-- [ ] https://wellfound.com/jobs/3041886-web3-community-growth-and-marketing-lead | Arrow Markets | Web3 Community Growth and Marketing Lead
-- [ ] https://boards.greenhouse.io/designitnorthamerica/jobs/5478941002 | Designit | Social Media Community Manager
-- [ ] https://boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager
-- [ ] https://jobs.ashbyhq.com/civicmarketplace/15361818-be28-4b66-b92c-b1346daa000e | CivicMarketplace | Product Marketing & Community Manager
-- [ ] https://jobs.ashbyhq.com/balorgames/95e08a2f-afc7-487b-848c-a7d6879c5749 | Balor Games | Community Manager, Contract
-- [ ] https://jobs.lever.co/ultra/bd656db0-07c4-41e2-9db1-83946a208ee3 | Ultra (Gaming) | Lead Community Manager
-- [ ] https://jobs.lever.co/Fliff/c908603b-b419-4cb9-a5e9-e40c3d95801d | Fliff | Community Manager
-- [ ] https://cryptojobslist.com/jobs/web3-community-growth-manager-at-decine-1 | Decine | Web3 Community & Growth Manager
-- [ ] https://web3.career/community-manager-creatordao/34424 | CreatorDAO | Community Manager
-- [ ] https://web3.career/web3-community-manager-bessemer-venture-partners/31084 | Bessemer Venture Partners | Web3 Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/navcoin-community-manager/ | Navcoin | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/dtravel-community-manager/ | Dtravel | Community Manager
-- [ ] https://www.linkedin.com/jobs/view/web3-ecosystem-marketing-manager-at-okx-3776004892 | OKX | Web3 Ecosystem Marketing Manager
-- [ ] https://apply.workable.com/faraway/j/623C5523D7/ | Faraway | Lead Community Manager
-- [ ] https://apply.workable.com/mlabs/j/F2B68D3022/ | MLabs | Community Lead
-- [ ] https://apply.workable.com/hike/j/8C37A804F3/ | Hike | Head of community - Web3
-- [ ] https://apply.workable.com/metaengine/j/C75BF3518C/apply/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem
-- [ ] https://apply.workable.com/bisonic/j/2BC5B25A18 | Bisonic | Community Lead
-- [ ] https://jobgether.com/offer/666b02c87f4fdab8dd628fa1-community-manager | Game7 (Web3 Gaming) | Community Manager
-- [ ] https://builtin.com/job/community-manager/4002873 | TechStars | Community Manager
-- [ ] https://builtin.com/job/community-manager/9214145 | Immunefi | Community Manager
-- [ ] https://remotive.com/remote-jobs/customer-support/lead-community-manager-1495064 | HeroJourneyClub | Lead Community Manager
-- [ ] https://weworkremotely.com/remote-jobs/mb-social-freelance-social-media-community-manager | MB Social | Freelance Social Media Community Manager
-- [ ] https://www.workingnomads.com/jobs/community-manager-n8n | n8n | Community Manager
-- [ ] https://remoteok.com/remote-jobs/14192-remote-community-manager-remote-year | Remote Year | Community Manager
-- [ ] https://himalayas.app/companies/immunefi/jobs/community-manager | Immunefi | Community Manager
-- [ ] https://www.adzuna.fr/details/4931979791 | (France) | Content and Community Manager
-- [ ] https://www.iagora.com/work/fr/offre/emploi-espagne-creation/3977608 | (Spain) | Community manager
-- [ ] https://www.iagora.com/work/fr/offre/emploi-espagne-management/5180125 | TheFork (Spain) | Project Manager - Strategic Partnerships
-- [ ] https://jobs.ashbyhq.com/lilt-production/528d2931-5f5d-43f7-86cd-d79f03b9122e | LILT | Localization Project Manager, Life Sciences
-- [ ] https://jobs.ashbyhq.com/satoshilabs/4156e7cd-6fc3-40f5-abd8-f025b0c51841 | SatoshiLabs | Performance Marketing Expansion & Localization Manager
-- [ ] https://hitmarker.net/jobs/1v1me-game-operations-associate-esports-1563362 | 1v1Me | Game Operations Associate (Esports)
-- [ ] https://www.linkedin.com/jobs/view/web3-community-manager-remote-europe-at-jobgether-4074081938 | Jobgether | Web3 Community Manager - Remote Europe
-- [ ] https://vg.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager
-- [ ] https://startup.jobs/web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager
-- [ ] https://www.remote3.co/remote-jobs/community-manager-contribute | Contribute | Community Manager
+- [x] ~~https://jobs.multicoin.capital/companies/starkware-2-d7b130be-19a0-4af8-813d-f6ff58c5b2bc/jobs/52317570-head-of-growth-marketing | StarkWare | Head of Growth Marketing~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://jobs.polychain.capital/companies/axelar-2/jobs/51936857-institutional-content-lead-multichain-stablecoins-rwas | Axelar | Institutional Content Lead~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/39449666-ecosystem-associate | Monad | Ecosystem Associate~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://wellfound.com/jobs/3402104-community-associate-web3-ai-agents | QuillAudits | Community Associate (Web3 · AI Agents)~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://wellfound.com/jobs/3041886-web3-community-growth-and-marketing-lead | Arrow Markets | Web3 Community Growth and Marketing Lead~~ — swept: stale (60d old, first seen 2026-05-27)
+- [x] ~~https://boards.greenhouse.io/designitnorthamerica/jobs/5478941002 | Designit | Social Media Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.ashbyhq.com/civicmarketplace/15361818-be28-4b66-b92c-b1346daa000e | CivicMarketplace | Product Marketing & Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.ashbyhq.com/balorgames/95e08a2f-afc7-487b-848c-a7d6879c5749 | Balor Games | Community Manager, Contract~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.lever.co/ultra/bd656db0-07c4-41e2-9db1-83946a208ee3 | Ultra (Gaming) | Lead Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.lever.co/Fliff/c908603b-b419-4cb9-a5e9-e40c3d95801d | Fliff | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://cryptojobslist.com/jobs/web3-community-growth-manager-at-decine-1 | Decine | Web3 Community & Growth Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://web3.career/community-manager-creatordao/34424 | CreatorDAO | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://web3.career/web3-community-manager-bessemer-venture-partners/31084 | Bessemer Venture Partners | Web3 Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/navcoin-community-manager/ | Navcoin | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/dtravel-community-manager/ | Dtravel | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://www.linkedin.com/jobs/view/web3-ecosystem-marketing-manager-at-okx-3776004892 | OKX | Web3 Ecosystem Marketing Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://apply.workable.com/faraway/j/623C5523D7/ | Faraway | Lead Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://apply.workable.com/mlabs/j/F2B68D3022/ | MLabs | Community Lead~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://apply.workable.com/hike/j/8C37A804F3/ | Hike | Head of community - Web3~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://apply.workable.com/metaengine/j/C75BF3518C/apply/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://apply.workable.com/bisonic/j/2BC5B25A18 | Bisonic | Community Lead~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobgether.com/offer/666b02c87f4fdab8dd628fa1-community-manager | Game7 (Web3 Gaming) | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://builtin.com/job/community-manager/4002873 | TechStars | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://builtin.com/job/community-manager/9214145 | Immunefi | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://remotive.com/remote-jobs/customer-support/lead-community-manager-1495064 | HeroJourneyClub | Lead Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://weworkremotely.com/remote-jobs/mb-social-freelance-social-media-community-manager | MB Social | Freelance Social Media Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://www.workingnomads.com/jobs/community-manager-n8n | n8n | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://remoteok.com/remote-jobs/14192-remote-community-manager-remote-year | Remote Year | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://himalayas.app/companies/immunefi/jobs/community-manager | Immunefi | Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://www.adzuna.fr/details/4931979791 | (France) | Content and Community Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://www.iagora.com/work/fr/offre/emploi-espagne-creation/3977608 | (Spain) | Community manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://www.iagora.com/work/fr/offre/emploi-espagne-management/5180125 | TheFork (Spain) | Project Manager - Strategic Partnerships~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.ashbyhq.com/lilt-production/528d2931-5f5d-43f7-86cd-d79f03b9122e | LILT | Localization Project Manager, Life Sciences~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://jobs.ashbyhq.com/satoshilabs/4156e7cd-6fc3-40f5-abd8-f025b0c51841 | SatoshiLabs | Performance Marketing Expansion & Localization Manager~~ — swept: stale (59d old, first seen 2026-05-28)
+- [x] ~~https://hitmarker.net/jobs/1v1me-game-operations-associate-esports-1563362 | 1v1Me | Game Operations Associate (Esports)~~ — swept: stale (58d old, first seen 2026-05-29)
+- [x] ~~https://www.linkedin.com/jobs/view/web3-community-manager-remote-europe-at-jobgether-4074081938 | Jobgether | Web3 Community Manager - Remote Europe~~ — swept: stale (57d old, first seen 2026-05-30)
+- [x] ~~https://vg.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager~~ — swept: stale (57d old, first seen 2026-05-30)
+- [x] ~~https://startup.jobs/web3-community-and-social-media-manager-direct-hire-remote-braintrust-4000784 | Rarimo | Web3 Community and Social Media Manager~~ — swept: stale (57d old, first seen 2026-05-30)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-contribute | Contribute | Community Manager~~ — swept: stale (57d old, first seen 2026-05-30)
 - [x] ~~https://jobs.ashbyhq.com/sahara/d65717a4-68a6-44fb-8440-d7a9c342807d | Sahara | AI DevRel Engineer~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/chief/495ec468-944c-4fe3-82c5-af6ea50b5ceb | Chief | Community Manager, DC
-- [ ] https://hitmarker.net/jobs/keywords-studios-player-support-senior-community-manager-video-games-3078164 | Keywords Studios | Senior Community Manager (Video Games)
-- [ ] https://hitmarker.net/jobs/riot-games-esports-production-manager-regional-content-services-2791029 | Riot Games | Esports Production Manager
-- [ ] https://remotive.com/remote/jobs/customer-support/lead-community-manager-1495064 | Hero Journey Club | Lead Community Manager
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/6992535 | Smartling | Project Manager, Localization
+- [x] ~~https://jobs.ashbyhq.com/chief/495ec468-944c-4fe3-82c5-af6ea50b5ceb | Chief | Community Manager, DC~~ — swept: stale (56d old, first seen 2026-05-31)
+- [x] ~~https://hitmarker.net/jobs/keywords-studios-player-support-senior-community-manager-video-games-3078164 | Keywords Studios | Senior Community Manager (Video Games)~~ — swept: stale (56d old, first seen 2026-05-31)
+- [x] ~~https://hitmarker.net/jobs/riot-games-esports-production-manager-regional-content-services-2791029 | Riot Games | Esports Production Manager~~ — swept: stale (56d old, first seen 2026-05-31)
+- [x] ~~https://remotive.com/remote/jobs/customer-support/lead-community-manager-1495064 | Hero Journey Club | Lead Community Manager~~ — swept: stale (56d old, first seen 2026-05-31)
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/6992535 | Smartling | Project Manager, Localization~~ — swept: stale (56d old, first seen 2026-05-31)
 - [x] ~~https://jobs.ashbyhq.com/deepgram/e20a03e4-d53e-4139-84bc-a901885e208c | Deepgram | Engineering Manager, Developer Relations (DevRel)~~ — swept: negative-title
-- [ ] https://hitmarker.net/jobs/deca-games | DECA Games | Community Manager (m/f/d)
-- [ ] https://job-boards.greenhouse.io/remotecom/jobs/6490343003 | Remote | CX Partnership Manager
-- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6 | Chainlink Labs | Web3 Partnerships Manager
-- [ ] https://web3.career/dao-and-ecosystem-lead-sherlock/105736 | Sherlock | DAO and Ecosystem Lead
-- [ ] https://apply.workable.com/metaengine/j/C75BF3518C/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem
-- [ ] https://apply.workable.com/crypto-dot-com/j/3DC0F59E8C/ | Crypto.com | User Community Manager - DeFi/DApp
-- [ ] https://www.remote3.co/remote-jobs/technical-community-manager-web3auth | Web3Auth | Technical Community Manager
-- [ ] https://www.workingnomads.com/jobs/community-manager-reddit-1234841 | Reddit | Community Manager
+- [x] ~~https://hitmarker.net/jobs/deca-games | DECA Games | Community Manager (m/f/d)~~ — swept: stale (56d old, first seen 2026-05-31)
+- [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/6490343003 | Remote | CX Partnership Manager~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6 | Chainlink Labs | Web3 Partnerships Manager~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://web3.career/dao-and-ecosystem-lead-sherlock/105736 | Sherlock | DAO and Ecosystem Lead~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://apply.workable.com/metaengine/j/C75BF3518C/ | MetaEngine | Director of Community - Gaming & Metaverse Ecosystem~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://apply.workable.com/crypto-dot-com/j/3DC0F59E8C/ | Crypto.com | User Community Manager - DeFi/DApp~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://www.remote3.co/remote-jobs/technical-community-manager-web3auth | Web3Auth | Technical Community Manager~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://www.workingnomads.com/jobs/community-manager-reddit-1234841 | Reddit | Community Manager~~ — swept: stale (55d old, first seen 2026-06-01)
 - [x] ~~https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d | n8n | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/flox/da25cc84-7c3d-4d38-9b6d-e4e7b327c9ad | Flox | Developer Relations & Community Lead~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/polar/d09babe6-f727-42ec-b466-cf074f468f19 | Polar | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.lever.co/nibiru/189b8ceb-5552-4735-8e07-062e48ed1599 | Nibiru | Developer Relations~~ — swept: negative-title
-- [ ] https://jobs.lever.co/MantaNetwork/08c99db6-2ad7-4a0b-b9e4-c947cae67a4d | Manta Network | Community Manager (Korea)
-- [ ] https://job-boards.greenhouse.io/immunefi/jobs/5985495004 | Immunefi | Community Manager
+- [x] ~~https://jobs.lever.co/MantaNetwork/08c99db6-2ad7-4a0b-b9e4-c947cae67a4d | Manta Network | Community Manager (Korea)~~ — swept: stale (55d old, first seen 2026-06-01)
+- [x] ~~https://job-boards.greenhouse.io/immunefi/jobs/5985495004 | Immunefi | Community Manager~~ — swept: stale (55d old, first seen 2026-06-01)
 - [x] ~~https://job-boards.greenhouse.io/brave/jobs/7605223 | Brave | Senior Developer Relations and Community Manager~~ — swept: negative-title
-- [ ] https://job-boards.greenhouse.io/airship/jobs/4857794101 | Airship | Partnership Manager EMEA
-- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application | Chainlink Labs | Web3 Partnerships Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/steminists-community-manager/ | STEMinists | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/sendcrypto-com-community-manager/ | SendCrypto.com | Community Manager
-- [ ] https://hitmarker.net/jobs/espo-io-nft-community-manager-1799857 | Espo.io | NFT Community Manager
-- [ ] https://hitmarker.net/jobs/riot-games-director-esports-production-management-1250253 | Riot Games | Director, Esports Production Management
-- [ ] https://www.linkedin.com/jobs/view/head-of-web3-co-founder-position-at-remote3-2869205199 | Remote3 | Head of Web3 / Co-founder
-- [ ] https://jobgether.com/offer/699fa24cda7696de2f5ee4d6-temporary-social-media-community-manager---remote | American Cancer Society | Temporary Social Media Community Manager
-- [ ] https://jobgether.com/offer/64971a93515360a07bea3387-community-manager-full-time-or-freelance | Unknown | Community Manager (Full time or Freelance)
-- [ ] https://startup.jobs/web3-community-manager-tokencom-5515116 | token.com | Web3 Community Manager
-- [ ] https://builtin.com/job/content/community-manager-remote/387541 | RECUR | Community Manager
-- [ ] https://builtin.com/job/community-manager/4001100 | Empowerly | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-subspace-labs-146532 | Subspace Labs | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-developer-community-manager-nodereal-122223 | NodeReal | Developer Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-customer-advocacy-program-manager-alphasense-1128775 | AlphaSense | Customer Advocacy Program Manager
-- [ ] https://himalayas.app/companies/hackerone/jobs/senior-manager-community-programs-operations | HackerOne | Senior Manager Community Programs Operations
-- [ ] https://www.welcometothejungle.com/en/companies/imcas/jobs/communication-community-manager_paris | IMCAS | Community Manager & Communication
-- [ ] https://app.welcometothejungle.com/jobs/U2odZ6Ap | Komoot | Community Manager
-- [ ] https://boards.greenhouse.io/bungie/jobs/5193030 | Bungie | Localization Project Manager
-- [ ] https://boards.greenhouse.io/smartling/jobs/2927034 | Smartling | Localization Project Manager
-- [ ] https://boards.greenhouse.io/oliver/jobs/3177482 | OLIVER | Localization Project Manager
-- [ ] https://boards.greenhouse.io/pandadoc/jobs/6169390 | PandaDoc | Localization Project Manager
-- [ ] https://job-boards.greenhouse.io/flohealth/jobs/7597597003 | Flo Health | Localization Project Manager
-- [ ] https://job-boards.greenhouse.io/mediaartslab/jobs/8445364002 | Media Arts Lab | Senior Localization Project Manager
-- [ ] https://job-boards.greenhouse.io/abinbev/jobs/8221461002 | AB InBev | Mid-Level Localization Project Manager
-- [ ] https://job-boards.greenhouse.io/learnlux/jobs/4973139008 | LearnLux | Localization Manager
-- [ ] https://job-boards.greenhouse.io/airbnb/jobs/7258829 | Airbnb | Localization Manager, Canada
-- [ ] https://job-boards.greenhouse.io/donorbox/jobs/4625447005 | Donorbox | Localization Manager
-- [ ] https://job-boards.greenhouse.io/perplexityai/jobs/4946571007 | Perplexity AI | Localization Program Manager
-- [ ] https://job-boards.greenhouse.io/springhealth66/jobs/4560156005 | Spring Health | Senior Localization Program Manager
-- [ ] https://boards.greenhouse.io/yext/jobs/4982773 | Yext | Localization Manager
-- [ ] https://jobs.ashbyhq.com/lilt/7a28d298-63a1-4f2e-887f-2ae879849471/application | LILT | Localization Project Manager, Production (Contractor)
-- [ ] https://beincrypto.com/jobs/p/ecosystem-manager-EVM-li-fi/ | LI.FI | Ecosystem Manager EVM
-- [ ] https://blockchain.works-hub.com/jobs/remote-community-growth-lead-247 | Berachain | Head of Community / Community Lead
-- [ ] https://job-boards.greenhouse.io/tines/jobs/6000440004 | Tines | Community Manager
-- [ ] https://job-boards.greenhouse.io/robinhood/jobs/7922396 | Robinhood | Community Manager, Social
-- [ ] https://jobs.lever.co/serotonin/16f57db7-33a6-452d-a9c6-13528a245aa6 | Serotonin | Web3 Social Media Manager
+- [x] ~~https://job-boards.greenhouse.io/airship/jobs/4857794101 | Airship | Partnership Manager EMEA~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application | Chainlink Labs | Web3 Partnerships Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/steminists-community-manager/ | STEMinists | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/sendcrypto-com-community-manager/ | SendCrypto.com | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://hitmarker.net/jobs/espo-io-nft-community-manager-1799857 | Espo.io | NFT Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://hitmarker.net/jobs/riot-games-director-esports-production-management-1250253 | Riot Games | Director, Esports Production Management~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://www.linkedin.com/jobs/view/head-of-web3-co-founder-position-at-remote3-2869205199 | Remote3 | Head of Web3 / Co-founder~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://jobgether.com/offer/699fa24cda7696de2f5ee4d6-temporary-social-media-community-manager---remote | American Cancer Society | Temporary Social Media Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://jobgether.com/offer/64971a93515360a07bea3387-community-manager-full-time-or-freelance | Unknown | Community Manager (Full time or Freelance)~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://startup.jobs/web3-community-manager-tokencom-5515116 | token.com | Web3 Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://builtin.com/job/content/community-manager-remote/387541 | RECUR | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://builtin.com/job/community-manager/4001100 | Empowerly | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-subspace-labs-146532 | Subspace Labs | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://remoteok.com/remote-jobs/remote-developer-community-manager-nodereal-122223 | NodeReal | Developer Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://remoteok.com/remote-jobs/remote-customer-advocacy-program-manager-alphasense-1128775 | AlphaSense | Customer Advocacy Program Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://himalayas.app/companies/hackerone/jobs/senior-manager-community-programs-operations | HackerOne | Senior Manager Community Programs Operations~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://www.welcometothejungle.com/en/companies/imcas/jobs/communication-community-manager_paris | IMCAS | Community Manager & Communication~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://app.welcometothejungle.com/jobs/U2odZ6Ap | Komoot | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://boards.greenhouse.io/bungie/jobs/5193030 | Bungie | Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://boards.greenhouse.io/smartling/jobs/2927034 | Smartling | Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://boards.greenhouse.io/oliver/jobs/3177482 | OLIVER | Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://boards.greenhouse.io/pandadoc/jobs/6169390 | PandaDoc | Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/flohealth/jobs/7597597003 | Flo Health | Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/mediaartslab/jobs/8445364002 | Media Arts Lab | Senior Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/abinbev/jobs/8221461002 | AB InBev | Mid-Level Localization Project Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/learnlux/jobs/4973139008 | LearnLux | Localization Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/airbnb/jobs/7258829 | Airbnb | Localization Manager, Canada~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/donorbox/jobs/4625447005 | Donorbox | Localization Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/perplexityai/jobs/4946571007 | Perplexity AI | Localization Program Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/springhealth66/jobs/4560156005 | Spring Health | Senior Localization Program Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://boards.greenhouse.io/yext/jobs/4982773 | Yext | Localization Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://jobs.ashbyhq.com/lilt/7a28d298-63a1-4f2e-887f-2ae879849471/application | LILT | Localization Project Manager, Production (Contractor)~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://beincrypto.com/jobs/p/ecosystem-manager-EVM-li-fi/ | LI.FI | Ecosystem Manager EVM~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-community-growth-lead-247 | Berachain | Head of Community / Community Lead~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/tines/jobs/6000440004 | Tines | Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/robinhood/jobs/7922396 | Robinhood | Community Manager, Social~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://jobs.lever.co/serotonin/16f57db7-33a6-452d-a9c6-13528a245aa6 | Serotonin | Web3 Social Media Manager~~ — swept: stale (54d old, first seen 2026-06-02)
 - [x] ~~https://jobs.ashbyhq.com/openrouter/d0860e6a-cf60-4810-a02e-9627882ba86b | OpenRouter | Developer Relations Lead~~ — swept: negative-title
-- [ ] https://web3.career/community-manager-yolabs/99887 | YO Labs | Web3 Community Manager
-- [ ] https://remotegamejobs.com/jobs/project-seed-community-manager-lead-remote-job | Project SEED | Community Manager Lead
-- [ ] https://www.remoterocketship.com/company/xsolla/jobs/ecosystem-partnerships-lead-web3-united-states-remote/ | Xsolla | Ecosystem Partnerships Lead - Web3
-- [ ] https://job-boards.greenhouse.io/coinme/jobs/5171551008 | Coinme | DeFi Community Manager & Social Media Lead
-- [ ] https://jobs.ashbyhq.com/hackerone/5d23476a-8904-4a90-a6ab-783707c79dd6 | HackerOne | Senior Manager Community Programs & Operations
-- [ ] https://jobs.ashbyhq.com/firecrawl/f5d02110-47a5-4709-9a5c-41059fb6b14e | Firecrawl | Community & Creator Programs Lead
-- [ ] https://jobs.ashbyhq.com/viktor/75622999-77c5-45cf-a908-828be23d1153 | Viktor | Community Manager
-- [ ] https://jobgether.com/offer/69ee2fadc646310ee39bea28-community-manager | n8n | Community Manager
-- [ ] https://blockchain.works-hub.com/jobs/remote-ecosystem-lead-d2d | Flare Network | Ecosystem Lead
-- [ ] https://blockchain.works-hub.com/jobs/remote-head-of-ecosystem-756 | Kadena | Head of Ecosystem
-- [ ] https://blockchain.works-hub.com/jobs/remote-community-success-manager-579 | Taiko Labs | Senior Community Manager
-- [ ] https://blockchain.works-hub.com/jobs/remote-community-lead-be2 | Flare Network | Community Lead / Chief Evangelist
-- [ ] https://blockchain.works-hub.com/jobs/remote-head-of-community-c00 | NEAR Foundation | Head of Community
+- [x] ~~https://web3.career/community-manager-yolabs/99887 | YO Labs | Web3 Community Manager~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://remotegamejobs.com/jobs/project-seed-community-manager-lead-remote-job | Project SEED | Community Manager Lead~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://www.remoterocketship.com/company/xsolla/jobs/ecosystem-partnerships-lead-web3-united-states-remote/ | Xsolla | Ecosystem Partnerships Lead - Web3~~ — swept: stale (54d old, first seen 2026-06-02)
+- [x] ~~https://job-boards.greenhouse.io/coinme/jobs/5171551008 | Coinme | DeFi Community Manager & Social Media Lead~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobs.ashbyhq.com/hackerone/5d23476a-8904-4a90-a6ab-783707c79dd6 | HackerOne | Senior Manager Community Programs & Operations~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobs.ashbyhq.com/firecrawl/f5d02110-47a5-4709-9a5c-41059fb6b14e | Firecrawl | Community & Creator Programs Lead~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobs.ashbyhq.com/viktor/75622999-77c5-45cf-a908-828be23d1153 | Viktor | Community Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobgether.com/offer/69ee2fadc646310ee39bea28-community-manager | n8n | Community Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-ecosystem-lead-d2d | Flare Network | Ecosystem Lead~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-head-of-ecosystem-756 | Kadena | Head of Ecosystem~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-community-success-manager-579 | Taiko Labs | Senior Community Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-community-lead-be2 | Flare Network | Community Lead / Chief Evangelist~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://blockchain.works-hub.com/jobs/remote-head-of-community-c00 | NEAR Foundation | Head of Community~~ — swept: stale (53d old, first seen 2026-06-03)
 - [x] ~~https://blockchain.works-hub.com/jobs/remote-ecosystem-growth-and-bd-fdc | Orderly Network | Ecosystem Growth & BD~~ — swept: negative-title
-- [ ] https://job-boards.greenhouse.io/uniswapfoundation/jobs/4500100007 | Uniswap Foundation | Community Manager Developer Ecosystem
-- [ ] https://careers.berachain.com/29033 | Berachain | Community Growth Lead
-- [ ] https://remotive.com/remote/jobs/marketing/ecosystem-marketing-manager-2012515 | Aptos Labs | Ecosystem Marketing Manager
+- [x] ~~https://job-boards.greenhouse.io/uniswapfoundation/jobs/4500100007 | Uniswap Foundation | Community Manager Developer Ecosystem~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://careers.berachain.com/29033 | Berachain | Community Growth Lead~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://remotive.com/remote/jobs/marketing/ecosystem-marketing-manager-2012515 | Aptos Labs | Ecosystem Marketing Manager~~ — swept: stale (53d old, first seen 2026-06-03)
 - [x] ~~https://jobs.ashbyhq.com/workos/bb4e927b-5bbd-4704-954d-5b716c3ff1f3 | WorkOS | Developer Relations~~ — swept: negative-title
-- [ ] https://welcometothejungle.com/en/companies/shapr/jobs/community-manager-startup-full-remote_paris_SHAPR_3qe48Zm | Shapr | Community Manager
-- [ ] https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd78e | Manta Network | Community Manager Indonesia
-- [ ] https://davidspinks.pallet.com/jobs/5699e860-81e6-438a-a06c-afa7f818a1e8 | Scholastic | Community Manager
-- [ ] https://euremotejobs.com/job/partnership-manager-m-w-d/ | EU Remote Jobs | Partnership Manager
-- [ ] https://web3.career/web3-gaming-incubator-program-equity-token-roles-inkognido/132154 | Inkognido | Web3 Gaming + Incubator Program
-- [ ] https://jobgether.com/offer/69d45e70aba5fafceefebfa6-partnerships-community-manager | Endless Commerce | Partnerships & Community Manager
-- [ ] https://www.remote3.co/remote-jobs/community-manager-web3-mira--search | MIRA-Search | Community Manager (Web3)
+- [x] ~~https://welcometothejungle.com/en/companies/shapr/jobs/community-manager-startup-full-remote_paris_SHAPR_3qe48Zm | Shapr | Community Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd78e | Manta Network | Community Manager Indonesia~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://davidspinks.pallet.com/jobs/5699e860-81e6-438a-a06c-afa7f818a1e8 | Scholastic | Community Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://euremotejobs.com/job/partnership-manager-m-w-d/ | EU Remote Jobs | Partnership Manager~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://web3.career/web3-gaming-incubator-program-equity-token-roles-inkognido/132154 | Inkognido | Web3 Gaming + Incubator Program~~ — swept: stale (53d old, first seen 2026-06-03)
+- [x] ~~https://jobgether.com/offer/69d45e70aba5fafceefebfa6-partnerships-community-manager | Endless Commerce | Partnerships & Community Manager~~ — swept: stale (52d old, first seen 2026-06-04)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-web3-mira--search | MIRA-Search | Community Manager (Web3)~~ — swept: stale (52d old, first seen 2026-06-04)
 - [x] ~~https://job-boards.greenhouse.io/runpod/jobs/5191760008 | Runpod | Developer Relations Community Manager~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/novo/20a2be9e-6243-451d-8b10-cc878d935c5d | Novo | Senior Community Manager Marketing
-- [ ] https://jobs.lever.co/roundglass/96087e41-877d-442c-b334-d58dd7a1a3be | RoundGlass | Community Program Manager
-- [ ] https://jobgether.com/offer/69d47a59aba5fafceeff07cd-crypto-community-manager | Stronghold | Crypto Community Manager
-- [ ] https://boards.greenhouse.io/smartling/jobs/3791728 | Smartling | Project Manager Language Services
-- [ ] https://jobs.lever.co/jobgether/55b577a1-ffcd-4668-b959-9703c7b2fd9d | Jobgether | Developer Community Manager
-- [ ] https://remotive.com/remote/jobs/customer-service/community-manager-4373698 | Soulbound | Community Manager (Gaming)
-- [ ] https://jobs.multicoin.capital/companies/zama/jobs/55753717-community-lead | Zama | Community Lead
-- [ ] https://www.remote3.co/remote-jobs/community-manager-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)
-- [ ] https://x.com/TeamEndpoint/status/2049866885085184492 | Endpoint Esports | Esports Events & Community Manager
-- [ ] https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11 | Colonist | Community Manager
-- [ ] https://startup.jobs/community-manager-midnight-foundation-io-global-7150128 | IO Global | Community Manager - Midnight Foundation
-- [ ] https://builtin.com/job/community-manager/2286409 | 1047 Games | Community Manager
-- [ ] https://remoteok.com/remote-jobs/remote-community-manager-forum-superhuman-1128644 | Superhuman | Community Manager Forum
-- [ ] https://himalayas.app/companies/heygen/jobs/online-community-manager | HeyGen | Online Community Manager
-- [ ] https://himalayas.app/companies/pavago/jobs/community-manager-3562582763 | Pavago | Community Manager
-- [ ] https://himalayas.app/companies/binance/jobs/events-amp-community-manager-mexico | Binance | Events & Community Manager - Mexico
-- [ ] https://himalayas.app/companies/binance/jobs/community-operations | Binance | Community Operations
-- [ ] https://www.welcometothejungle.com/fr/companies/antipodes/jobs/community-manager_paris | Antipodes Medical | Community Manager
+- [x] ~~https://jobs.ashbyhq.com/novo/20a2be9e-6243-451d-8b10-cc878d935c5d | Novo | Senior Community Manager Marketing~~ — swept: stale (51d old, first seen 2026-06-05)
+- [x] ~~https://jobs.lever.co/roundglass/96087e41-877d-442c-b334-d58dd7a1a3be | RoundGlass | Community Program Manager~~ — swept: stale (51d old, first seen 2026-06-05)
+- [x] ~~https://jobgether.com/offer/69d47a59aba5fafceeff07cd-crypto-community-manager | Stronghold | Crypto Community Manager~~ — swept: stale (51d old, first seen 2026-06-05)
+- [x] ~~https://boards.greenhouse.io/smartling/jobs/3791728 | Smartling | Project Manager Language Services~~ — swept: stale (51d old, first seen 2026-06-05)
+- [x] ~~https://jobs.lever.co/jobgether/55b577a1-ffcd-4668-b959-9703c7b2fd9d | Jobgether | Developer Community Manager~~ — swept: stale (50d old, first seen 2026-06-06)
+- [x] ~~https://remotive.com/remote/jobs/customer-service/community-manager-4373698 | Soulbound | Community Manager (Gaming)~~ — swept: stale (50d old, first seen 2026-06-06)
+- [x] ~~https://jobs.multicoin.capital/companies/zama/jobs/55753717-community-lead | Zama | Community Lead~~ — swept: stale (49d old, first seen 2026-06-07)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-powered-by-pioneer | Powered by Pioneer | Community Manager (CIS)~~ — swept: stale (49d old, first seen 2026-06-07)
+- [x] ~~https://x.com/TeamEndpoint/status/2049866885085184492 | Endpoint Esports | Esports Events & Community Manager~~ — swept: stale (49d old, first seen 2026-06-07)
+- [x] ~~https://jobs.ashbyhq.com/colonist/2ec0bf9a-9e89-4f76-b527-c10f8d5c3a11 | Colonist | Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://startup.jobs/community-manager-midnight-foundation-io-global-7150128 | IO Global | Community Manager - Midnight Foundation~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://builtin.com/job/community-manager/2286409 | 1047 Games | Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://remoteok.com/remote-jobs/remote-community-manager-forum-superhuman-1128644 | Superhuman | Community Manager Forum~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://himalayas.app/companies/heygen/jobs/online-community-manager | HeyGen | Online Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://himalayas.app/companies/pavago/jobs/community-manager-3562582763 | Pavago | Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://himalayas.app/companies/binance/jobs/events-amp-community-manager-mexico | Binance | Events & Community Manager - Mexico~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://himalayas.app/companies/binance/jobs/community-operations | Binance | Community Operations~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://www.welcometothejungle.com/fr/companies/antipodes/jobs/community-manager_paris | Antipodes Medical | Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
 - [x] ~~https://euremotejobs.com/job/developer-relations-community-manager/ | Cast AI | Developer Relations Community Manager~~ — swept: negative-title
-- [ ] https://beincrypto.com/jobs/p/community-manager-nft-nfi-bNIDb5v/ | NFI | Community Manager NFT
-- [ ] https://wellfound.com/jobs/3225416-community-manager-web3 | Hike | Community Manager - Web3
-- [ ] https://jobs.lever.co/tokenmetrics/5fa59871-892b-4514-9700-bfda7d7a2801 | Token Metrics | Web3 Head of Marketing and Communications (Vietnam-Remote)
-- [ ] https://jobs.lever.co/tokenmetrics/c4f000ff-d4ed-45d2-9044-a5fdc079b71e | Token Metrics | Web3 Head of Marketing and Communications (Malaysia-Remote)
-- [ ] https://thedefiant.io/jobs/crypto-social-media-manager/ | The Defiant | Crypto Community and Social Media Manager
-- [ ] https://web3.career/senior-marketing-manager-gaming-offchainlabs/106254 | Offchain Labs | Senior Marketing Manager Gaming
-- [ ] https://x.com/HitmarkerJobs/status/1955754991320490110 | DECA Games | Community Manager (m/f/d)
-- [ ] https://x.com/crypto_vazima/status/2016155940781806049 | OORT | Asian Ecosystem Lead
+- [x] ~~https://beincrypto.com/jobs/p/community-manager-nft-nfi-bNIDb5v/ | NFI | Community Manager NFT~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://wellfound.com/jobs/3225416-community-manager-web3 | Hike | Community Manager - Web3~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://jobs.lever.co/tokenmetrics/5fa59871-892b-4514-9700-bfda7d7a2801 | Token Metrics | Web3 Head of Marketing and Communications (Vietnam-Remote)~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://jobs.lever.co/tokenmetrics/c4f000ff-d4ed-45d2-9044-a5fdc079b71e | Token Metrics | Web3 Head of Marketing and Communications (Malaysia-Remote)~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://thedefiant.io/jobs/crypto-social-media-manager/ | The Defiant | Crypto Community and Social Media Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://web3.career/senior-marketing-manager-gaming-offchainlabs/106254 | Offchain Labs | Senior Marketing Manager Gaming~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://x.com/HitmarkerJobs/status/1955754991320490110 | DECA Games | Community Manager (m/f/d)~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://x.com/crypto_vazima/status/2016155940781806049 | OORT | Asian Ecosystem Lead~~ — swept: stale (47d old, first seen 2026-06-09)
 - [x] ~~https://coinbase.getro.com/companies/walletconnect/jobs/35902656-devrel-qa-associate | WalletConnect | DevRel QA Associate~~ — swept: negative-title
 - [x] ~~https://wellfound.com/jobs/2367235-community-devrel-web3 | QuillAudits | Community & DevRel - Web3~~ — swept: negative-title
-- [ ] https://mirror.xyz/jakerr.eth/EpAHN36-otzo_gAZMKfo76YvFczEbw1fb5K3GBThxQU | Unknown | Hiring a Web3 Community Manager
-- [ ] https://job-boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager (Full-Time Remote)
-- [ ] https://job-boards.greenhouse.io/coactive/jobs/5207460008 | Co-Active Training Institute | Community Manager
-- [ ] https://job-boards.greenhouse.io/ackermanngroup/jobs/5230656008 | Ackermann Group | Community Manager
-- [ ] https://job-boards.greenhouse.io/zam/jobs/5592496004 | ZAM | Associate Community Manager (Contractor)
-- [ ] https://job-boards.greenhouse.io/communitymanager/jobs/5129025007 | Avanath | Community Manager
-- [ ] https://job-boards.greenhouse.io/remotereferralboardinternaluseonly/jobs/7609550003 | Remote | Senior Partnership Manager - Investment Ecosystem (Referral)
-- [ ] https://jobs.ashbyhq.com/somnia/7683abae-6337-4612-b5b1-6dc8dc54bb6f | Somnia | Senior Marketing Analyst (AI & Web3)
-- [ ] https://jobs.lever.co/thedispatch/78a15265-74ba-49ef-af93-371c092f2581/apply | The Dispatch | Community Manager
-- [ ] https://cryptocurrencyjobs.co/marketing/gitcoin-meme-artist-shitposter-community-manager/ | Gitcoin | Meme Artist / Shitposter + Community Manager
-- [ ] https://www.builtinnyc.com/job/business-development-crypto-senior/7282389 | fun.xyz | Business Development - Crypto (Senior)
-- [ ] https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com
+- [x] ~~https://mirror.xyz/jakerr.eth/EpAHN36-otzo_gAZMKfo76YvFczEbw1fb5K3GBThxQU | Unknown | Hiring a Web3 Community Manager~~ — swept: stale (47d old, first seen 2026-06-09)
+- [x] ~~https://job-boards.greenhouse.io/vaynermedia/jobs/4152900 | VaynerMedia | Community Manager (Full-Time Remote)~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/coactive/jobs/5207460008 | Co-Active Training Institute | Community Manager~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/ackermanngroup/jobs/5230656008 | Ackermann Group | Community Manager~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/zam/jobs/5592496004 | ZAM | Associate Community Manager (Contractor)~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/communitymanager/jobs/5129025007 | Avanath | Community Manager~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/remotereferralboardinternaluseonly/jobs/7609550003 | Remote | Senior Partnership Manager - Investment Ecosystem (Referral)~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://jobs.ashbyhq.com/somnia/7683abae-6337-4612-b5b1-6dc8dc54bb6f | Somnia | Senior Marketing Analyst (AI & Web3)~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://jobs.lever.co/thedispatch/78a15265-74ba-49ef-af93-371c092f2581/apply | The Dispatch | Community Manager~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/gitcoin-meme-artist-shitposter-community-manager/ | Gitcoin | Meme Artist / Shitposter + Community Manager~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://www.builtinnyc.com/job/business-development-crypto-senior/7282389 | fun.xyz | Business Development - Crypto (Senior)~~ — swept: stale (46d old, first seen 2026-06-10)
+- [x] ~~https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com~~ — swept: stale (46d old, first seen 2026-06-10)
 - [x] ~~https://devocate.pallet.com/jobs | Pallet | DevRel Job Board (retired)~~ — swept: junk-url
 - [ ] https://job-boards.greenhouse.io/bungie/jobs/6852816 | Bungie | Destiny Global Community Lead
 - [ ] https://cryptocurrencyjobs.co/marketing/vestinda-community-manager-builder/ | Vestinda | Community Manager & Builder
@@ -1277,3 +1277,5 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/counterparthealth/jobs/8067306 | Counterpart Health | Senior Market Operations Program Manager | Remote
 
 - [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
+
+- [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom

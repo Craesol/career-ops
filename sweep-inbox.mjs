@@ -18,7 +18,11 @@
  *                 own column), fails portals.yml location_filter. Locations
  *                 parsed out of pipeline lines are NOT trusted: those lines
  *                 split page titles on "|", so field 4 is often title text.
- *  3. negative  — the title matches an explicit title_filter.negative term
+ *  3. stale     — first seen more than --max-age-days ago (opt-in flag). Age
+ *                 comes from scan-history's first_seen column: it is when the
+ *                 scanner DISCOVERED the posting, the only date available for
+ *                 every entry. Entries with no history date are kept.
+ *  4. negative  — the title matches an explicit title_filter.negative term
  *                 ("Software Engineer", "Technical Program Manager"…).
  *                 The POSITIVE requirement is intentionally NOT applied: it
  *                 would drop legitimate variants such as "Community &
@@ -28,8 +32,9 @@
  * scan-history, so no future scan re-adds them.
  *
  * Usage:
- *   node sweep-inbox.mjs           # dry run
- *   node sweep-inbox.mjs --apply   # write (backs up pipeline.md first)
+ *   node sweep-inbox.mjs                          # dry run
+ *   node sweep-inbox.mjs --apply                  # write (backs up first)
+ *   node sweep-inbox.mjs --max-age-days 45        # also drop stale entries
  */
 import { readFileSync, writeFileSync, copyFileSync, appendFileSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -38,6 +43,12 @@ import yaml from 'js-yaml';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const APPLY = process.argv.includes('--apply');
+const ageArgIdx = process.argv.indexOf('--max-age-days');
+const MAX_AGE_DAYS = ageArgIdx !== -1 ? parseInt(process.argv[ageArgIdx + 1], 10) : null;
+if (ageArgIdx !== -1 && (!Number.isFinite(MAX_AGE_DAYS) || MAX_AGE_DAYS < 1)) {
+  console.error('--max-age-days needs a positive number of days');
+  process.exit(1);
+}
 const PIPELINE = resolve(ROOT, 'data/pipeline.md');
 const HISTORY = resolve(ROOT, 'data/scan-history.tsv');
 
@@ -49,6 +60,7 @@ const negatives = (config.title_filter?.negative || [])
 
 // url → location, straight from the scanner's own history column.
 const locByUrl = new Map();
+const firstSeenByUrl = new Map();
 try {
   for (const line of readFileSync(HISTORY, 'utf8').split('\n')) {
     const c = line.split('\t');
@@ -57,6 +69,12 @@ try {
     // drop real roles (e.g. Ethereum Foundation — Community & Ecosystem Lead).
     const loc = (c[6] || '').trim();
     if (c[0] && loc && !/^\d{4}-\d{2}-\d{2}$/.test(loc)) locByUrl.set(c[0], loc);
+    // first_seen (col 2) — earliest wins, since a URL can be recorded again.
+    const seen = (c[1] || '').trim();
+    if (c[0] && /^\d{4}-\d{2}-\d{2}$/.test(seen)) {
+      const prev = firstSeenByUrl.get(c[0]);
+      if (!prev || seen < prev) firstSeenByUrl.set(c[0], seen);
+    }
   }
 } catch { /* no history yet */ }
 
@@ -95,15 +113,20 @@ for (const raw of lines) {
   const location = (locByUrl.get(url) || '').trim();
   const lowerRole = role.toLowerCase();
 
+  const firstSeen = firstSeenByUrl.get(url) || '';
+  const ageDays = firstSeen ? Math.floor((Date.now() - Date.parse(firstSeen + 'T00:00:00Z')) / 86_400_000) : null;
+
   let reason = null;
   if (JUNK_URL.some(re => re.test(url))) reason = 'junk-url';
   else if (!company.trim() && JUNK_TITLE.some(re => re.test(role))) reason = 'junk-title';
   else if (location && !locationOk(location)) reason = 'location';
+  else if (MAX_AGE_DAYS && ageDays != null && ageDays > MAX_AGE_DAYS) reason = 'stale';
   else if (negatives.some(n => lowerRole.includes(n))) reason = 'negative-title';
 
   if (!reason) { out.push(raw); kept++; continue; }
-  dropped.push({ url, company: company.trim(), role, location, reason });
-  out.push(`- [x] ~~${url} | ${company.trim()} | ${role}~~ — swept: ${reason}${location ? ` (${location})` : ''}`);
+  const detail = reason === 'stale' ? ` (${ageDays}d old, first seen ${firstSeen})` : location ? ` (${location})` : '';
+  dropped.push({ url, company: company.trim(), role, location, reason, ageDays });
+  out.push(`- [x] ~~${url} | ${company.trim()} | ${role}~~ — swept: ${reason}${detail}`);
 }
 
 const byReason = dropped.reduce((a, d) => ((a[d.reason] = (a[d.reason] || 0) + 1), a), {});
@@ -111,7 +134,7 @@ console.log(`pending kept: ${kept} | swept: ${dropped.length} (${Object.entries(
 for (const r of Object.keys(byReason)) {
   console.log(`\n[${r}] examples:`);
   for (const d of dropped.filter(x => x.reason === r).slice(0, 6)) {
-    console.log(`  ${d.company || '(no company)'} | ${d.role.slice(0, 70)}${d.location ? ` | ${d.location}` : ''}`);
+    console.log(`  ${d.company || '(no company)'} | ${d.role.slice(0, 60)}${d.reason === 'stale' ? ` | ${d.ageDays}d` : d.location ? ` | ${d.location}` : ''}`);
   }
 }
 
