@@ -1,6 +1,8 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
+import yaml from "js-yaml";
 import { resolveCli } from "@/lib/clis";
 import { careerOpsRoot, readMemory } from "@/lib/career-ops";
 import { assembleDedupContext } from "@/lib/core/discover";
@@ -55,7 +57,23 @@ export async function POST(req: Request) {
   const memory = readMemory();
   const memoryLine = memory.trim() ? `\n\nWHAT YOU KNOW ABOUT THE USER (persistent memory):\n${memory.trim()}` : "";
   const knownBlock = lines.length ? `\n\n--- ALREADY KNOWN (dedup — do NOT propose these) ---\n${lines.join("\n")}` : "";
-  const prompt = `${mode}${OUTPUT_CONTRACT}${memoryLine}${knownBlock}\n\n--- USER INTENT ---\n${query}\n`;
+
+  // Inline the user's enabled portals.yml queries. discover.md tells the agent
+  // to read that file, but a sandboxed CLI (Antigravity confines file access to
+  // its own scratch dir) can't — so the server reads it and pastes the playbook
+  // in. Costs a few hundred tokens and makes the mode CLI-agnostic.
+  let playbook = "";
+  try {
+    const doc = (yaml.load(fs.readFileSync(path.join(careerOpsRoot(), "portals.yml"), "utf8")) as Record<string, unknown>) || {};
+    const qs = (Array.isArray(doc.search_queries) ? doc.search_queries : []) as Array<Record<string, unknown>>;
+    const usable = qs.filter((q) => q.enabled !== false && q.query).slice(0, 40)
+      .map((q) => `- [${String(q.name || "").trim()}] ${String(q.query).trim()}`);
+    if (usable.length) playbook = `\n\n--- THE USER'S SEARCH PLAYBOOK (portals.yml, already read for you) ---\n${usable.join("\n")}`;
+  } catch {
+    /* no portals.yml — the agent falls back to its own queries */
+  }
+
+  const prompt = `${mode}${OUTPUT_CONTRACT}${memoryLine}${playbook}${knownBlock}\n\n--- USER INTENT ---\n${query}\n`;
 
   const isClaude = cliId === "claude";
   const args = isClaude
@@ -73,9 +91,26 @@ export async function POST(req: Request) {
         "--disallowedTools",
         "Bash,Write,Edit,NotebookEdit,Task", // proposer-not-writer, by construction
       ]
-    : spec.args(prompt);
+    : cliId === "antigravity"
+      ? // Antigravity (free tier) auto-denies every tool in headless mode, so its
+        // web search degrades to prose with no posting URLs. It offers no granular
+        // allow-list, only this all-or-nothing flag — so we pair it with an EMPTY
+        // scratch cwd: the agent gets its tools, but is pointed away from the
+        // user's repo. It is a proposer here (nothing it writes is read back).
+        [...spec.args(prompt), "--dangerously-skip-permissions"]
+      : spec.args(prompt);
 
-  const child = spawn(binPath, args, { cwd: careerOpsRoot(), env: process.env });
+  // Antigravity runs in a throwaway dir; every other CLI keeps the repo as cwd.
+  let cwd = careerOpsRoot();
+  if (cliId === "antigravity") {
+    try {
+      cwd = fs.mkdtempSync(path.join(os.tmpdir(), "co-aisearch-"));
+    } catch {
+      /* fall back to the repo if the temp dir can't be made */
+    }
+  }
+
+  const child = spawn(binPath, args, { cwd, env: process.env });
 
   const encoder = new TextEncoder();
   // `closed` + kill timer in the OUTER scope so cancel() can flip `closed` before

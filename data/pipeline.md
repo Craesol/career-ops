@@ -1279,3 +1279,14 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
 
 - [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
+
+- [ ] https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake Community Manager | Remote
+
+- [ ] https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake CM | Remote
+
+- [ ] https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Remote
+
+- [ ] https://eslfaceitgroup.com/career/job/4871675101?gh_jid=4871675101 | TestCo | Gate test | Remote
+
+
+

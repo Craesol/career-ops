@@ -19,6 +19,32 @@ import type { DiscoveredOffer } from "./scan";
 export type AddResult = { added: number; error?: string };
 
 /**
+ * Extract the LAST JSON value from a child's stdout.
+ *
+ * The writers import scan.mjs, which loads dotenv — and dotenv v17 prints a
+ * banner ("◇ injected env (8) from .env …") to STDOUT. A plain
+ * JSON.parse(stdout) therefore threw, and every add silently reported
+ * "writer returned no result" while the write had actually succeeded. Parsing
+ * the trailing JSON value survives any banner a dependency decides to print.
+ */
+function parseTrailingJson<T>(out: string): T | null {
+  // Scan lines from the end: the writers emit their result as ONE line, while
+  // the banner is separate. (A regex for "trailing {...}" is not enough — the
+  // dotenv banner itself contains braces: "… { quiet: true }".)
+  const lines = out.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const l = lines[i];
+    if (!l.startsWith("{") && !l.startsWith("[")) continue;
+    try {
+      return JSON.parse(l) as T;
+    } catch {
+      /* not the result line — keep scanning back */
+    }
+  }
+  return null;
+}
+
+/**
  * "Remove" on a discovered offer — records it in data/scan-history.tsv with
  * status "skipped" via the core's own writer. /api/whats-new (and future scans)
  * treat skipped rows as dismissed, so the card never resurfaces. Nothing is
@@ -59,12 +85,9 @@ process.stdin.on("end", () => {
     child.stderr.on("data", (d: Buffer) => (err += d.toString()));
     child.on("error", (e) => resolve({ added: 0, error: e instanceof Error ? e.message : "spawn failed" }));
     child.on("close", () => {
-      try {
-        const parsed = JSON.parse(out.trim() || "{}") as AddResult;
-        resolve({ added: parsed.added ?? 0, error: parsed.error });
-      } catch {
-        resolve({ added: 0, error: err.trim().slice(0, 200) || "writer returned no result" });
-      }
+      const parsed = parseTrailingJson<AddResult>(out);
+      if (parsed) resolve({ added: parsed.added ?? 0, error: parsed.error });
+      else resolve({ added: 0, error: err.trim().slice(0, 200) || "writer returned no result" });
     });
     child.stdin.write(JSON.stringify(clean));
     child.stdin.end();
@@ -122,12 +145,9 @@ process.stdin.on("end", () => {
     child.stderr.on("data", (d: Buffer) => (err += d.toString()));
     child.on("error", (e) => resolve({ added: 0, error: e instanceof Error ? e.message : "spawn failed" }));
     child.on("close", () => {
-      try {
-        const parsed = JSON.parse(out.trim() || "{}") as AddResult;
-        resolve({ added: parsed.added ?? 0, error: parsed.error });
-      } catch {
-        resolve({ added: 0, error: err.trim().slice(0, 200) || "writer returned no result" });
-      }
+      const parsed = parseTrailingJson<AddResult>(out);
+      if (parsed) resolve({ added: parsed.added ?? 0, error: parsed.error });
+      else resolve({ added: 0, error: err.trim().slice(0, 200) || "writer returned no result" });
     });
     child.stdin.write(JSON.stringify(clean));
     child.stdin.end();
