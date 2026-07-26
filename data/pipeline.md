@@ -1243,3 +1243,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://www.themuse.com/jobs/manpowerengineering/project-manager | Manpower Engineering | Project Manager | Corpus Christi, TX
 - [ ] https://www.themuse.com/jobs/uber/sr-global-program-manager-families-safety | Uber | Sr. Global Program Manager, Families Safety | São Paulo, Brazil
 - [ ] https://www.themuse.com/jobs/l3harristechnologies/lead-program-manager-76e7cf | L3Harris Technologies | Lead Program Manager | Haverhill, MA
+- [ ] https://web3.career/community-manager-immunefi/149078 | web3.career | Community Manager Immunefi
+- [ ] https://nl.linkedin.com/jobs/view/player-engagement-community-growth-manager-pubg-west-at-krafton-inc-4436334339 | KRAFTON Inc. | Player Engagement & Community Growth Manager PUBG West
+
+- [ ] https://lokalise.com/job?gh_jid=7815476003 | Lokalise | Head of Partnerships | Remote role United States
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8648201002 | Twitch (Amazon) | Localization Program Manager | Irvine, CA
+- [ ] https://apply.workable.com/saalex/j/A504D44089/ | Saalex | Project Manager, Systems Engineer | Camarillo, CA
