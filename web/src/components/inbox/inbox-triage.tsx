@@ -139,9 +139,30 @@ export function InboxTriage({ inbox }: { inbox: InboxJob[] }) {
     if (isShortlisted(job.url)) return;
     setShortlist((s) => [...s, { url: job.url, company: job.company, role: job.role }]);
   };
+  // Skip is PERSISTENT: hide optimistically, then mark the pipeline.md entry
+  // done server-side so the posting is gone for good (it used to be a
+  // localStorage-only hide, so skipped roles reappeared on reload).
   const skip = (job: InboxJob) => {
     setHidden((h) => (h.includes(job.url) ? h : [...h, job.url]));
-    setUndo({ label: `Skipped ${job.company}`, fn: () => setHidden((h) => h.filter((u) => u !== job.url)) });
+    fetch("/api/inbox/skip", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url: job.url }),
+    }).catch(() => {
+      /* the optimistic hide still stands for this session */
+    });
+    setUndo({
+      label: `Skipped ${job.company}`,
+      fn: () => {
+        setHidden((h) => h.filter((u) => u !== job.url));
+        // Undo must reach the file too, or the row returns now and vanishes on reload.
+        fetch("/api/inbox/skip", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: job.url, undo: true }),
+        }).catch(() => {});
+      },
+    });
   };
   const toggleSelect = (url: string) =>
     setSelected((s) => {
