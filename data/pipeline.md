@@ -1249,3 +1249,31 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://lokalise.com/job?gh_jid=7815476003 | Lokalise | Head of Partnerships | Remote role United States
 - [ ] https://job-boards.greenhouse.io/twitch/jobs/8648201002 | Twitch (Amazon) | Localization Program Manager | Irvine, CA
 - [ ] https://apply.workable.com/saalex/j/A504D44089/ | Saalex | Project Manager, Systems Engineer | Camarillo, CA
+
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8643189002 | Twitch (Amazon) | Localization Program Manager | San Francisco, CA
+- [ ] https://unisys.wd5.myworkdayjobs.com/en-US/External/job/Delivery-Manager---Rio-de-Janeiro_REQ574508 | Unisys | Delivery Manager - Rio de Janeiro | Rio de Janeiro, RJ, Brazil
+- [ ] https://www.suvoda.com/careers/job-openings?gh_jid=8646895002 | Suvoda | Licensing Project Manager | Bucharest, Romania, Iasi, Romania, Remote
+- [ ] https://careers.onepeloton.com/en/all-jobs/?gh_jid=8074715 | Peloton | Senior Engineering Program Manager | New York, NY
+- [ ] https://job-boards.greenhouse.io/dept/jobs/7930288 | DEPT | Senior Public Relations and Marketing Program Manager | Amsterdam, Rotterdam
+- [ ] https://helsing.ai/jobs/4880330101?gh_jid=4880330101 | Helsing | Senior Project Manager | Munich - Berlin - London
+- [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
+- [ ] https://wd1.myworkdaysite.com/en-US/recruiting/avnet/External/job/Program-Manager_JR-023513 | Avnet | Program Manager | Tempe, Arizona, United States Of America
+- [ ] https://jobs.smartrecruiters.com/timmonsgroup1/744000139623684 | Timmons Group | Civil Engineering Project Manager, Land Development | Charlottesville, VA
+- [ ] https://jobs.lever.co/purvis/abe0567c-625d-4cc0-af8e-d06d0a9eea09 | PURVIS Systems | Project Manager (202607) | Newport, RI
+- [ ] https://jobs.lever.co/ciandt/a637d1aa-6b38-4ee0-9a5a-3fed57dc278c | CI&T | Project Manager | Brazil
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Material-Program-Manager_01853226 | RTX | Material Program Manager | Woburn, MA
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Project-Manager--Scrum-Master--Puerto-Rico-_01854354 | RTX | Project Manager, Scrum Master (Puerto Rico) | US-PR-SANTA ISABEL-B1 ~ Felicia Industrial Park - St B1 ~ BLDG 1
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Stinger-Missile-Program-Manager_01860643 | RTX | Stinger Missile Program Manager | Tucson, AZ
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Principal-Project-Engineer--Offensive-Systems-Engineering--OSE--Portfolio-Program-Manager--Onsite-_01860652 | RTX | Principal Project Engineer, Offensive Systems Engineering Portfolio Program Manager | Tucson, AZ
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Manager--Material-Program-Manager_01860308 | RTX | Manager, Material Program Manager | Tucson, AZ
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Capital-Project-Manager--Onsite-_01856349 | RTX | Capital Project Manager | Middletown, CT
+- [ ] https://entegris.wd1.myworkdayjobs.com/en-US/EntegrisCareers/job/Senior--Project-Manager_REQ-13443 | Entegris | Project Manager | San Luis Obispo, CA
+- [ ] https://in.linkedin.com/jobs/view/%D0%B8%D1%89%D1%83-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83-community-manager-community-lead-at-simpson-s-family-4442357573 | Simpson's family | [Ищу работу] Community Manager/Community Lead
+- [ ] https://at.linkedin.com/jobs/view/social-media-manager-gaming-at-red-bull-4444972355 | Red Bull | Social Media Manager - Gaming
+
+- [ ] https://jobs.smartrecruiters.com/timmonsgroup1/744000139654110 | Timmons Group | Civil Engineering Project Manager, Land Development | Staunton, VA
+- [ ] https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/Material-Program-Manager---Global-Patriot--Andover--MA--Tewksbury--MA--or-Huntsville--AL-_01859394-1 | RTX | Material Program Manager | Andover, MA, Tewksbury, MA, Huntsville, AL
+
+- [ ] https://job-boards.greenhouse.io/counterparthealth/jobs/8067306 | Counterpart Health | Senior Market Operations Program Manager | Remote
+
+- [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
