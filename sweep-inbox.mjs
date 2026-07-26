@@ -87,13 +87,44 @@ const JUNK_URL = [
   /\/(jobs|careers|remote-jobs|search|browse|categories?)\/?$/i,
   /\?(q|query|search|keywords)=/i,
 ];
-// Page titles that betray an index page rather than a role.
+// Page titles that betray an index/article/social page rather than a role.
+// Only applied when the entry has NO company — a real posting always has one.
 const JUNK_TITLE = [
-  /^\d+\+?\s/,                       // "31+ Crypto Community Jobs …"
-  /\bjobs\b.*\b(hiring now|open positions|vetted|profiles)\b/i,
-  /^(find|browse|search|hire|discover)\b/i,
-  /\|\s*(hitmarker|linkedin|crypto jobs list|work anywhere)\s*$/i,
-  /\bhiring\b.*\bin\b.*\|/i,
+  /^[\d,]+\+?\s/,                              // "31+ Crypto Community Jobs …", "2,028 Gaming …"
+  /^\$[\d,]+k?[-–]/i,                          // "$33k-$250k Web3 Jobs (NOW HIRING)"
+  /\bjobs?\b.*\b(hiring now|open positions|vetted|profiles|updated daily)\b/i,
+  /^(find|browse|search|hire|discover|best|top|how to|ways to|why|what)\b/i,
+  /\b(jobs?|emplois?|offres?|vacatures|empleos)\b.*\bin\b\s+[A-Z]/i,   // "… jobs in United States"
+  /\bjobs?\s+(in|for|at|paying|abroad)\b/i,
+  /\|\s*(hitmarker|linkedin|glassdoor|wellfound|indeed(\.fr)?|dework|himalayas|working nomads|crypto jobs list|jobs3|web3vacancy|apec|work anywhere|telegram)\s*$/i,
+  /\bon X:\s*"/i,                              // X/Twitter posts
+  /\/\s*X\s*$/,                                // "… / Posts / X"
+  /\(@[\w-]+\)/,                               // social handles
+  /^offres? d'emploi/i,                        // FR listing pages
+  /^emplois?\s*:/i,
+  /\bfiche métier\b/i,
+  /\b(alternance|intérim|stage)\b.*\(\d{5}\)/i, // FR city-code listing pages
+  /\(\d{5}\)\s*[-–]/,                          // "Community manager Nice (06000) - offres…"
+  /\bjob board\b/i,
+  /\b(guide|career|careers|trends|salary|substack|blog)\b.*\b(20\d\d|web3|crypto)\b/i,
+  /^\w+\.(com|io|co|net|xyz|social|substack\.com)\b/i, // bare domains
+  /\bdao\b\s*\|\s*dework/i,
+  /\b(icon|talent app|advancing crypto)\b/i,
+];
+// Same signals, but strong enough to drop even when a "company" was scraped —
+// board pages often carry the board's own name in the company column.
+const JUNK_TITLE_STRONG = [
+  /^[\d,]+\+?\s.*\bjobs?\b/i,
+  /^\$[\d,]+k?[-–].*\bjobs?\b/i,
+  /\bjobs?\b\s*\|\s*(wellfound|hitmarker|glassdoor|dework|jobs3|web3vacancy|cryptic web3)/i,
+  /\bon X:\s*"/i,
+  /^offres? d'emploi/i,
+  /^emplois?\s*:/i,
+  /\bfiche métier\b/i,
+  /\(\d{5}\)\s*[-–]/,
+  /- Voir les dernières offres/i,
+  /\boffres? d'emploi\b\s*$/i,
+  /\bjobs at\b.*\b(cryptocurrency jobs|crypto jobs)\b/i,
 ];
 
 const lines = readFileSync(PIPELINE, 'utf8').split('\n');
@@ -118,6 +149,7 @@ for (const raw of lines) {
 
   let reason = null;
   if (JUNK_URL.some(re => re.test(url))) reason = 'junk-url';
+  else if (JUNK_TITLE_STRONG.some(re => re.test(role))) reason = 'junk-title';
   else if (!company.trim() && JUNK_TITLE.some(re => re.test(role))) reason = 'junk-title';
   else if (location && !locationOk(location)) reason = 'location';
   else if (MAX_AGE_DAYS && ageDays != null && ageDays > MAX_AGE_DAYS) reason = 'stale';
