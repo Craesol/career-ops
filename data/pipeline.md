@@ -1151,3 +1151,95 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/social-media-marketing-manager-contract-suifoundation/151701 | web3.career | Social Media Marketing Manager Contract Suifoundation
 
 - [ ] https://web3.career/community-manager-oldharmony/149282 | web3.career | Community Manager Oldharmony
+- [ ] https://remoteOK.com/remote-jobs/remote-brand-content-communications-associate-manager-fuseglobal-1135387 | FuseGlobal | Brand Content & Communications Associate Manager
+- [ ] https://remoteOK.com/remote-jobs/remote-creative-project-manager-museum-of-ice-cream-1135382 | MUSEUM OF ICE CREAM | Creative Project Manager
+- [ ] https://th.linkedin.com/jobs/view/senior-creator-ecosystem-manager-%E2%80%93-binance-square-at-binance-4416101645 | Binance | Senior Creator Ecosystem Manager – Binance Square
+- [ ] https://ch.linkedin.com/jobs/view/senior-project-manager-delivery-at-blockstream-inc-4445390377 | Blockstream, Inc | Senior Project Manager Delivery
+- [ ] https://fr.linkedin.com/jobs/view/senior-program-manager-ultrasound-probes-at-ge-healthcare-4444764725 | GE HealthCare | Senior Program Manager - Ultrasound Probes
+
+- [ ] https://ch.linkedin.com/jobs/view/senior-project-manager-delivery-at-blockstream-inc-4445390377 | Blockstream, Inc | Senior Project Manager Delivery
+
+- [ ] https://web3.career/content-social-and-community-manager-blockchain/151414 | web3.career | Content Social And Community Manager Blockchain
+- [ ] https://de.linkedin.com/jobs/view/community-social-media-manager-m-f-d-at-cosy-4440415698 | Cosy | Community & Social Media Manager (m/f/d)
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-at-bav-group-m%C3%A9xico-4443730179 | Bav Group México | Community Manager
+
+- [ ] https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Montreal, QC - Remote
+- [ ] https://job-boards.greenhouse.io/alxafrica/jobs/7695713 | ALX Africa | Director of Community | Remote
+- [ ] https://jobs.ashbyhq.com/lovable/da5a2b53-72af-4f6b-b1bc-03512a8d2c9e | Lovable | Head of Community Marketing | Remote
+- [ ] https://cryptojobslist.com/jobs/community-manager-aurora-labs-remote | Aurora Labs | Community Manager | Remote
+- [ ] https://cryptojobslist.com/jobs/senior-community-manager-crestal-network-remote | Crestal Network | Senior Community Manager | Remote
+- [ ] https://web3.career/lead-community-manager-seedify-fund/92374 | Seedify | Lead Community Manager | Remote
+- [ ] https://cryptocurrencyjobs.co/marketing/quranium-community-lead/ | Quranium | Community Lead | Remote
+- [ ] https://hitmarker.net/jobs/chillbase-community-manager-us-2812391 | ChillBase | Community Manager (US) | Remote (contract, Cyprus-based company)
+- [ ] https://hitmarker.net/jobs/cd-projekt-red-senior-community-manager-3016829 | CD PROJEKT RED | Senior Community Manager | Warsaw, Poland (hybrid)
+- [ ] https://weworkremotely.com/remote-jobs/reddit-community-manager-french-speaker-contract | Reddit | Community Manager - French speaker (contract) | Remote
+- [ ] https://jobgether.com/offer/6a3eb7312da8cde35c766561-x-twitter-community-manager | Best Friend Finance | X/Twitter Community Manager | Remote
+- [ ] https://www.indeed.com/viewjob?jk=d0fc332db4a42546 | ? | AI / Crypto Community Growth Coordinator or Manager | Remote
+- [ ] https://builtin.com/job/community-manager-gaming/7211526 | ? | Community Manager - Games | Remote
+- [ ] https://www.linkedin.com/jobs/view/koc-community-manager-at-bitget-wallet-4442574772 | Bitget Wallet | KOC&Community Manager
+- [ ] https://es.linkedin.com/jobs/view/community-manager-at-ogilvy-4440151576 | Ogilvy | Community Manager
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-f-h-at-ogilvy-paris-4445236135 | Ogilvy Paris | Community Manager F/H
+- [ ] https://pe.linkedin.com/jobs/view/community-manager-at-np-digital-4444998938 | NP Digital | Community Manager
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-f-h-at-soci%C3%A9t%C3%A9-des-grands-projets-4436787805 | Société des grands projets | Community manager F/H
+- [ ] https://co.linkedin.com/jobs/view/affiliates-community-manager-at-wati-4443558995 | Wati | Affiliates & Community Manager
+- [ ] https://es.linkedin.com/jobs/view/community-manager-content-creator-at-the-cocktail-4442718546 | THE COCKTAIL | Community Manager & Content Creator
+
+- [ ] https://apply.workable.com/movement-labs/jobs/view/35CE9C28D5 | Movement Labs | Distributed Neighborhood Captains Program Manager | United States (Remote)
+- [ ] https://eslfaceitgroup.com/career/job/4871675101?gh_jid=4871675101 | ESL Gaming (ESL/FACEIT) | Event Project Manager | London, United Kingdom; United States
+- [ ] https://eslfaceitgroup.com/career/job/4753481101?gh_jid=4753481101 | ESL Gaming (ESL/FACEIT) | Freelance Marketing Project Manager ENC/EWC | Europe
+- [ ] https://eslfaceitgroup.com/career/job/4764754101?gh_jid=4764754101 | ESL Gaming (ESL/FACEIT) | Freelance Project Manager, Japan | Japan
+- [ ] https://eslfaceitgroup.com/career/job/4785919101?gh_jid=4785919101 | ESL Gaming (ESL/FACEIT) | Head of Crew & Staff Hospitality, Esports World Cup | Europe; Remote (Global); United Kingdom
+- [ ] https://eslfaceitgroup.com/career/job/4826433101?gh_jid=4826433101 | ESL Gaming (ESL/FACEIT) | Project Manager | Kuala Lumpur, Malaysia
+- [ ] https://eslfaceitgroup.com/career/job/4847465101?gh_jid=4847465101 | ESL Gaming (ESL/FACEIT) | Project Manager - Fixed Term Contractor | Remote (Global)
+- [ ] https://eslfaceitgroup.com/career/job/4752930101?gh_jid=4752930101 | ESL Gaming (ESL/FACEIT) | Sr. Social Media Manager - EWC & ENC | Europe; London, United Kingdom
+- [ ] https://lokalise.com/job?gh_jid=7771709003 | Lokalise | Head of Partnerships | Remote role United Kingdom
+- [ ] https://jobs.ashbyhq.com/oplabs/885091c2-2f56-4d46-aa01-efe49a065dee | OP Labs (Optimism) | Blockchain Solutions Architect | New York
+- [ ] https://jobs.ashbyhq.com/monad.foundation/c62f41a9-6164-4bf1-be68-646172c1733f | Monad Labs | DeFi Growth Lead | Remote
+- [ ] https://jobs.ashbyhq.com/monad.foundation/1dd61a59-3592-47f7-af0a-2d3197e659ef | Monad Labs | Head of DeFi | Remote
+- [ ] https://jobs.ashbyhq.com/wormholelabs/e5e39675-92e4-48bf-ba9a-df52fad4dd8c | Wormhole Foundation | Solana Protocol Engineer | Remote
+- [ ] https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9 | Wormhole Foundation | Full-Stack Blockchain Engineer | Remote
+- [ ] https://jobs.ashbyhq.com/Lido.fi/9cb62bc8-01de-4a13-96a3-933b6d959394 | Lido Finance | Associate DeFi Growth Specialist | Worldwide
+- [ ] https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
+- [ ] https://jobs.ashbyhq.com/Lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
+- [ ] https://job-boards.greenhouse.io/layerzerolabs/jobs/5554608004 | LayerZero Labs | Protocol Engineer | Vancouver, BC
+- [ ] https://jobs.ashbyhq.com/magiceden/94dc960c-fb7b-40dc-a573-941cb61f80aa | Magic Eden | Senior Counsel, iGaming & Sportsbook | Remote
+- [ ] https://apply.workable.com/chaingpt/jobs/view/7360C6B0AA | ChainGPT | Lead Generation Specialist - Web3 & AI Domain - Europe | Poland (Remote)
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8599721002 | Twitch (Amazon) | Integrations Program Manager | San Francisco, CA
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8648200002 | Twitch (Amazon) | Localization Program Manager | Seattle, WA
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8582338002 | Twitch (Amazon) | Program Manager - Culture & People Development | San Francisco, CA
+- [ ] https://jobs.ashbyhq.com/aptosfoundation/c566f327-c70a-4bb9-86fa-dfa5a8bc42d3 | Aptos Foundation | Community Manager, Korea | Korea/APAC
+- [ ] https://jobs.ashbyhq.com/notion/c2299d80-c3a5-45fa-bf49-29372a4d9aec | Notion (EU-remote-only watch) | Employee Experience Program Manager | San Francisco, California
+- [ ] https://jobs.ashbyhq.com/notion/6b9d5c16-450a-42e4-af2a-d492460ca811 | Notion (EU-remote-only watch) | Recruiting Program Manager | San Francisco, California · New York, New York · New York · United States
+- [ ] https://weworkremotely.com/remote-jobs/abnormal-content-strategist | Abnormal | Content Strategist | Anywhere in the World
+- [ ] https://weworkremotely.com/remote-jobs/stripe-program-manager-risk-ops-enablement | Stripe | Program Manager, Risk Ops Enablement | Anywhere in the World
+- [ ] https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/project-lead-project-manager-kiel-86474 | K-tronik GmbH | Project Lead / Project Manager (m/w/x) | Kiel
+- [ ] https://www.arbeitnow.com/jobs/companies/founders-bay/startup-coach-innovation-manager-im-impact-accelerator-lietzow-184990 | Founders Bay | Startup Coach & Innovation Manager (m/w/d) im Impact Accelerator | Lietzow, Remote
+- [ ] https://www.arbeitnow.com/jobs/companies/klub44-ggmbh/marketing-community-lead-berlin-86239 | Klub44 gGmbH | Marketing & Community Lead | Berlin
+- [ ] https://www.arbeitnow.com/jobs/companies/syncblue-gmbh/it-community-manager-minijob-werkstudent-im-homeoffice-munster-195724 | sync.blue® GmbH | IT-Community Manager (Minijob/Werkstudent im Homeoffice) | Münster
+- [ ] https://www.arbeitnow.com/jobs/companies/accenture/rockwell-pharmasuite-mes-project-manager-all-genders-frankfurt-am-main-466809 | Accenture | Rockwell PharmaSuite MES Project Manager (all genders) | Frankfurt am Main
+- [ ] https://www.arbeitnow.com/jobs/companies/heyst-gmbh/pr-redakteur-content-manager-essen-488090 | Heyst GmbH | PR-Redakteur & Content Manager (m/w/d) | Essen
+- [ ] https://4dayweek.io/job/project-manager-at-electralink-36d38175 | ElectraLink | Project Manager | London, United Kingdom
+- [ ] https://4dayweek.io/job/project-manager-at-thales-2d3e8e6d | Thales | Project Manager | Manila, Philippines
+- [ ] https://csgi.wd5.myworkdayjobs.com/en-US/csgcareers/job/Senior-Project-Manager---PMO-1_32209 | CSG Systems | Senior Project Manager | Remote
+- [ ] https://jobs.ashbyhq.com/vetcove/ced51487-c586-46de-8b91-ee0e07c42cf3 | Vetcove | Veterinary Project Manager | Remote
+- [ ] https://www.getonbrd.com/jobs/program-manager-engineer-bice-vida-santiago | BICE VIDA | Program Manager Engineer | Chile
+- [ ] https://www.getonbrd.com/jobs/solution-delivery-manager-equifax-chile-santiago | Equifax Chile | Solution Delivery Manager | Chile
+- [ ] https://www.themuse.com/jobs/cleanharbors/service-delivery-manager-c0389a | Clean Harbors | Service Delivery Manager | Santa Monica, CA
+- [ ] https://www.themuse.com/jobs/abmindustries/electrical-testing-project-manager-e40163 | ABM Industries | Electrical Testing Project Manager | Corona, CA
+- [ ] https://www.themuse.com/jobs/disney/construction-project-manager-facilities-asset-management-f629f3 | Disney | Construction Project Manager - Facilities Asset Management | Anaheim, CA
+- [ ] https://www.themuse.com/jobs/wastemanagement/industrial-waste-project-manager-55132d | Waste Management | Industrial Waste Project Manager | Woodbury, MN
+- [ ] https://www.themuse.com/jobs/leecompany/home-improvement-sales-consultantproject-manager-6817ca | Lee Company | Home Improvement Sales Consultant/Project Manager | Dickson, TN
+- [ ] https://www.themuse.com/jobs/riotgames/program-manager-workplace-experience-real-estate-apac | Riot Games | Program Manager, Workplace Experience & Real Estate (APAC) | Shanghai, China
+- [ ] https://www.themuse.com/jobs/thecocacolacompany/director-global-marketing-ccl-consumption-purchase-protocols-intelligence-services-404cef | The Coca-Cola Company | Director, Global Marketing & C&CL Consumption & Purchase Protocols Intelligence Services | London, United Kingdom
+- [ ] https://www.themuse.com/jobs/celonis/senior-engagement-manager-ai-process-intelligence | Celonis | Senior Engagement Manager - AI & Process Intelligence | London, United Kingdom
+- [ ] https://www.themuse.com/jobs/encompasshealth/dialysis-program-manager-c67d87 | Encompass Health | Dialysis Program Manager | Little Rock, AR
+- [ ] https://www.themuse.com/jobs/uber/senior-corporate-communications-manager | Uber | Senior Corporate Communications Manager | New York, NY
+- [ ] https://www.themuse.com/jobs/celonis/people-culture-automation-ai-project-manager | Celonis | People & Culture Automation & AI Project Manager | Madrid, Spain
+- [ ] https://www.themuse.com/jobs/flexport/social-media-content-manager-5f2a85 | Flexport | Social Media & Content Manager | San Francisco, CA
+- [ ] https://www.themuse.com/jobs/amazondataservicesinc/senior-technical-infra-program-manager-infrastructure-demandsop-planning-622956 | Amazon Data Services, Inc. | Senior Technical Infra Program Manager, Infrastructure Demand/S&OP Planning | Maple Valley, WA
+- [ ] https://www.themuse.com/jobs/bankofamerica/senior-architect-handson-client-servicing-money-movement | Bank of America | Senior Architect (Hands-On) - Client Servicing & Money Movement | Jersey City, NJ
+- [ ] https://www.themuse.com/jobs/riotgames/art-project-manager-unpublished-rd-product-contract | Riot Games | Art Project Manager - Unpublished R&D Product (Contract) | Shanghai, China
+- [ ] https://www.themuse.com/jobs/l3harristechnologies/operations-program-manager-4e3014 | L3Harris Technologies | Operations Program Manager | Trevose, PA
+- [ ] https://www.themuse.com/jobs/manpowerengineering/project-manager | Manpower Engineering | Project Manager | Corpus Christi, TX
+- [ ] https://www.themuse.com/jobs/uber/sr-global-program-manager-families-safety | Uber | Sr. Global Program Manager, Families Safety | São Paulo, Brazil
+- [ ] https://www.themuse.com/jobs/l3harristechnologies/lead-program-manager-76e7cf | L3Harris Technologies | Lead Program Manager | Haverhill, MA
