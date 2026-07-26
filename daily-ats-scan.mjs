@@ -513,13 +513,22 @@ if (newRoles.length === 0) {
   html = '<!DOCTYPE html><html><body style="font-family:-apple-system,Segoe UI,sans-serif;color:#111;max-width:980px;margin:0 auto;padding:24px;">'+body+'</body></html>';
 }
 
-const res = await fetch('https://api.resend.com/emails', {
-  method:'POST',
-  headers:{'Authorization':'Bearer '+RESEND_API_KEY,'Content-Type':'application/json'},
-  body: JSON.stringify({from:RESEND_FROM,to:[NOTIFY_EMAIL],subject,html})
-});
-const body = await res.json().catch(()=>({}));
-if(!res.ok){console.error('Resend HTTP '+res.status+':',JSON.stringify(body));process.exit(1);}
-console.log('Email sent. ID:',body.id||'(no id)','to',NOTIFY_EMAIL);
+// --no-email: orchestrators (daily-consolidated.mjs) run this scan as a step
+// and send ONE consolidated email themselves — honor the flag so the user
+// never gets two emails per cycle. (Regression guard: this flag existed
+// before and was lost in an upstream refresh, which double-mailed every run.)
+if (process.argv.includes('--no-email')) {
+  console.log('[--no-email] Skipping email send. Scan output written to scan-history.tsv + pipeline.md.');
+  console.log('Subject would have been: ' + subject);
+} else {
+  const res = await fetch('https://api.resend.com/emails', {
+    method:'POST',
+    headers:{'Authorization':'Bearer '+RESEND_API_KEY,'Content-Type':'application/json'},
+    body: JSON.stringify({from:RESEND_FROM,to:[NOTIFY_EMAIL],subject,html})
+  });
+  const body = await res.json().catch(()=>({}));
+  if(!res.ok){console.error('Resend HTTP '+res.status+':',JSON.stringify(body));process.exit(1);}
+  console.log('Email sent. ID:',body.id||'(no id)','to',NOTIFY_EMAIL);
+}
 console.log('\nNew roles:');
 newRoles.forEach(r=>console.log('  - '+r.company+' / '+r.title));
