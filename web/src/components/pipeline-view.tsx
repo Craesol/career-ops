@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Search, ChevronsUpDown, X, Compass, ArrowRight } from "lucide-react";
+import { Search, ChevronsUpDown, X, Compass, ArrowRight, Loader2, Ban } from "lucide-react";
 import type { Application, InboxJob } from "@/lib/career-ops";
 import { Badge } from "@/components/ui/badge";
 import { CompanyLogo } from "@/components/company-logo";
@@ -205,6 +205,7 @@ export function PipelineView({
                     </span>
                   </th>
                 ))}
+                <th className="px-4 py-2.5" aria-label="Actions" />
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
@@ -229,6 +230,9 @@ export function PipelineView({
                     </span>
                   </td>
                   <td className="px-4 py-3 text-faint tabular-nums">{r.date}</td>
+                  <td className="px-2 py-3 text-right">
+                    <SkipButton n={r.n} status={r.status} />
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -241,6 +245,46 @@ export function PipelineView({
         </div>
       )}
     </div>
+  );
+}
+
+// One-tap discard for a tracked row: sets the canonical SKIP status via the
+// existing UPDATE-only /api/status route (never deletes the row — history is
+// kept, the row just moves to the SKIP tab). Hidden on already-terminal rows.
+function SkipButton({ n, status }: { n: string; status: string }) {
+  const router = useRouter();
+  const [busy, setBusy] = useState(false);
+  if (/skip|discard|reject/i.test(status)) return null;
+
+  const skip = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setBusy(true);
+    try {
+      await fetch("/api/status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ n, status: "SKIP" }),
+      });
+      router.refresh();
+    } catch {
+      /* best-effort */
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      disabled={busy}
+      onClick={skip}
+      title="Skip — discard this offer (moves it to the SKIP tab)"
+      aria-label="Skip this offer"
+      className="inline-flex items-center gap-1 rounded-md border border-border px-2 py-1 text-xs font-medium text-faint opacity-0 transition-all hover:border-red-500/40 hover:text-red-500 focus-visible:opacity-100 group-hover:opacity-100 disabled:opacity-60 max-sm:opacity-100"
+    >
+      {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Ban className="size-3.5" />} Skip
+    </button>
   );
 }
 

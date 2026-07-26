@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Bookmark, BookmarkCheck, Loader2, X } from "lucide-react";
+import { Bookmark, BookmarkCheck, ExternalLink, Loader2, X } from "lucide-react";
 import type { InboxJob } from "@/lib/career-ops";
 import type { AtsSource } from "@/lib/explore";
 import { ATS_LABEL } from "@/lib/explore";
@@ -11,13 +11,16 @@ import { cn } from "@/lib/cn";
 
 export type RowScore = { score: number | null; tone: "good" | "warn" | "bad" | "muted"; jobId: string; running: boolean };
 
+// "found …" not "posted …": the inbox date is when OUR scanner first saw the
+// posting (pipeline.md/scan-history first_seen), not the employer's publish
+// date — feeds and email alerts don't carry a reliable one.
 function agoLabel(age: number | null): string | null {
   if (age == null) return null;
-  if (age <= 0) return "today";
-  if (age === 1) return "yesterday";
-  if (age < 7) return `${age}d ago`;
-  if (age < 30) return `${Math.floor(age / 7)}w ago`;
-  return `${Math.floor(age / 30)}mo ago`;
+  if (age <= 0) return "found today";
+  if (age === 1) return "found yesterday";
+  if (age < 7) return `found ${age}d ago`;
+  if (age < 30) return `found ${Math.floor(age / 7)}w ago`;
+  return `found ${Math.floor(age / 30)}mo ago`;
 }
 
 // One raw posting in the triage list. Shows ONLY cheap, free signals + an honest
@@ -68,8 +71,21 @@ export function TriageRow({
 
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm">
-          <span className="font-medium text-foreground">{job.company}</span>
-          <span className="text-muted"> · {job.role}</span>
+          {/* The row's identity IS a link to the posting — open in a new tab so
+              triage flow (checkboxes, Save/Skip) is never lost to navigation. */}
+          <a
+            href={job.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open the posting"
+            className="group/link inline-flex max-w-full items-baseline gap-1.5 hover:text-brand"
+          >
+            <span className="truncate">
+              <span className="font-medium text-foreground transition-colors group-hover/link:text-brand">{job.company}</span>
+              <span className="text-muted"> · {job.role}</span>
+            </span>
+            <ExternalLink className="size-3 shrink-0 self-center text-faint opacity-0 transition-opacity group-hover/link:opacity-100" />
+          </a>
         </p>
         <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-faint">
           {job.location && <span className="truncate">{job.location}</span>}

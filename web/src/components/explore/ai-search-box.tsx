@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, Globe, Sparkles } from "lucide-react";
 import { CostBadge } from "@/components/cost/cost-badge";
 
 const EXAMPLES = [
@@ -39,6 +39,16 @@ export function AiSearchBox({
   onRunScan: () => void;
 }) {
   const ref = useRef<HTMLTextAreaElement>(null);
+  // The user's configured hunting grounds (portals.yml search_queries) — shown
+  // as one-tap source chips so every portal the AI hunt can reach is VISIBLE,
+  // not just the 4 free-API ATS engines the deterministic Scan lists.
+  const [sources, setSources] = useState<{ portal: string; example: string }[]>([]);
+  useEffect(() => {
+    fetch("/api/portals")
+      .then((r) => r.json())
+      .then((d) => setSources(Array.isArray(d.sources) ? d.sources : []))
+      .catch(() => {});
+  }, []);
   const grow = () => {
     const t = ref.current;
     if (t) {
@@ -108,6 +118,27 @@ export function AiSearchBox({
           or run the free Scan instead →
         </button>
       </div>
+
+      {sources.length > 0 && (
+        <div className="mt-4">
+          <p className="mb-2 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-faint">
+            <Globe className="size-3" /> Your sources · tap to hunt one
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {sources.map((s) => (
+              <button
+                key={s.portal}
+                type="button"
+                title={s.example}
+                onClick={() => onIntent(`Search ${s.portal} for roles matching my target profile, remote`)}
+                className="rounded-full border border-brand/25 bg-brand-soft/30 px-2.5 py-1 text-[11px] font-medium text-brand-text transition hover:border-brand/50 hover:bg-brand-soft"
+              >
+                {s.portal}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

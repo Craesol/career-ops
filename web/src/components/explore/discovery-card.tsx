@@ -8,10 +8,15 @@ import { ATS_LABEL, type AtsSource, type DiscoveredOffer } from "@/lib/explore";
 import { useJobs } from "@/components/jobs/job-store";
 import { useExplore } from "./explore-provider";
 
-function freshness(postedAt: string): string {
+function freshness(postedAt: string, source?: string): string {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(postedAt)) return "";
   const days = Math.max(0, Math.round((Date.now() - new Date(postedAt + "T00:00:00Z").getTime()) / 86_400_000));
-  return days === 0 ? "today" : days === 1 ? "1d ago" : `${days}d ago`;
+  // Scan/feed offers carry first_seen (when OUR scanner discovered it), not the
+  // posting's publish date — label it honestly so a 6-day-old posting that hit
+  // the feed yesterday doesn't masquerade as "1d ago" (see The Cocktail case).
+  const firstSeen = source === "whats-new" || (source || "").startsWith("[FEED") || (source || "").startsWith("websearch");
+  const rel = days === 0 ? "today" : days === 1 ? "1d ago" : `${days}d ago`;
+  return firstSeen ? `found ${rel}` : rel;
 }
 
 // Real company logo (favicon) via the localhost proxy, cached on disk FOREVER per
@@ -58,7 +63,7 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
   const isAdded = added.has(offer.url) || inPipeline || working || doneEval;
   const isAdding = adding.has(offer.url);
   const unverified = offer.verification === "unconfirmed";
-  const fresh = freshness(offer.postedAt) || offer.postedHint || "";
+  const fresh = freshness(offer.postedAt, offer.source) || offer.postedHint || "";
 
   const evaluate = () => {
     addToPipeline([offer]); // evaluating implies it's in the pipeline — record it

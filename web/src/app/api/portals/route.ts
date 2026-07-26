@@ -17,6 +17,30 @@ function isObj(v: unknown): v is Record<string, unknown> {
   return !!v && typeof v === "object" && !Array.isArray(v);
 }
 
+// GET → the user's configured hunting grounds: enabled portals.yml search_queries,
+// deduped by portal label (the name's "Portal — topic" prefix). Feeds the AI-search
+// source chips in Explore so every configured portal is VISIBLE, not just the 4
+// free-API ATS engines the deterministic scan can reach.
+export async function GET() {
+  try {
+    const doc = (yaml.load(fs.readFileSync(path.join(careerOpsRoot(), "portals.yml"), "utf8")) as Record<string, unknown>) || {};
+    const queries = Array.isArray(doc.search_queries) ? (doc.search_queries as Array<Record<string, unknown>>) : [];
+    const seen = new Set<string>();
+    const sources: { portal: string; example: string }[] = [];
+    for (const q of queries) {
+      if (q.enabled === false) continue;
+      const name = String(q.name || "").trim();
+      const portal = (name.split(/\s+—|\s+--|\s+-\s/)[0] || name).trim();
+      if (!portal || seen.has(portal.toLowerCase())) continue;
+      seen.add(portal.toLowerCase());
+      sources.push({ portal, example: name });
+    }
+    return Response.json({ sources });
+  } catch {
+    return Response.json({ sources: [] });
+  }
+}
+
 export async function POST(req: Request) {
   let body: { roles?: string[]; location?: string[] };
   try {
