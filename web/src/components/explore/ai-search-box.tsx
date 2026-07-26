@@ -42,7 +42,7 @@ export function AiSearchBox({
   // The user's configured hunting grounds (portals.yml search_queries) — shown
   // as one-tap source chips so every portal the AI hunt can reach is VISIBLE,
   // not just the 4 free-API ATS engines the deterministic Scan lists.
-  const [sources, setSources] = useState<{ portal: string; example: string }[]>([]);
+  const [sources, setSources] = useState<{ portal: string; example: string; kind?: "board" | "query" }[]>([]);
   useEffect(() => {
     fetch("/api/portals")
       .then((r) => r.json())
@@ -123,15 +123,22 @@ export function AiSearchBox({
         <div className="mt-4">
           <p className="mb-2 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-faint">
             <Globe className="size-3" /> Your sources · tap to hunt one
+            <span className="ml-1 font-normal normal-case tracking-normal text-faint">
+              — <span className="text-emerald-600 dark:text-emerald-400">green</span> boards are scanned free every day
+            </span>
           </p>
           <div className="flex flex-wrap gap-1.5">
             {sources.map((s) => (
               <button
                 key={s.portal}
                 type="button"
-                title={s.example}
+                title={s.kind === "board" ? `${s.example} — scanned free by the daily run` : s.example}
                 onClick={() => onIntent(`Search ${s.portal} for roles matching my target profile, remote`)}
-                className="rounded-full border border-brand/25 bg-brand-soft/30 px-2.5 py-1 text-[11px] font-medium text-brand-text transition hover:border-brand/50 hover:bg-brand-soft"
+                className={
+                  s.kind === "board"
+                    ? "rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-700 transition hover:border-emerald-500/60 dark:text-emerald-400"
+                    : "rounded-full border border-brand/25 bg-brand-soft/30 px-2.5 py-1 text-[11px] font-medium text-brand-text transition hover:border-brand/50 hover:bg-brand-soft"
+                }
               >
                 {s.portal}
               </button>

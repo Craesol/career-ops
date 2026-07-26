@@ -17,24 +17,40 @@ function isObj(v: unknown): v is Record<string, unknown> {
   return !!v && typeof v === "object" && !Array.isArray(v);
 }
 
-// GET → the user's configured hunting grounds: enabled portals.yml search_queries,
-// deduped by portal label (the name's "Portal — topic" prefix). Feeds the AI-search
-// source chips in Explore so every configured portal is VISIBLE, not just the 4
-// free-API ATS engines the deterministic scan can reach.
+// GET → the user's configured hunting grounds, so Explore can show EVERY source,
+// not just the 4 free-API ATS engines the in-web scan reaches. Two kinds:
+//   - "board": portals.yml job_boards — scanned FREE by the CLI's provider layer
+//     (scan.mjs) on the daily run; no tokens.
+//   - "query": enabled search_queries — reachable via the AI hunt / L3 sweep.
+// Deduped by portal label (a name's "Portal — topic" prefix); boards win, since
+// a free source beats a token-spending one when both exist for the same portal.
 export async function GET() {
   try {
     const doc = (yaml.load(fs.readFileSync(path.join(careerOpsRoot(), "portals.yml"), "utf8")) as Record<string, unknown>) || {};
-    const queries = Array.isArray(doc.search_queries) ? (doc.search_queries as Array<Record<string, unknown>>) : [];
     const seen = new Set<string>();
-    const sources: { portal: string; example: string }[] = [];
+    const sources: { portal: string; example: string; kind: "board" | "query" }[] = [];
+
+    const push = (rawName: string, kind: "board" | "query", example: string) => {
+      const portal = (rawName.split(/\s+—|\s+--|\s+-\s/)[0] || rawName).trim();
+      if (!portal || seen.has(portal.toLowerCase())) return;
+      seen.add(portal.toLowerCase());
+      sources.push({ portal, example, kind });
+    };
+
+    const boards = Array.isArray(doc.job_boards) ? (doc.job_boards as Array<Record<string, unknown>>) : [];
+    for (const b of boards) {
+      if (b.enabled === false) continue;
+      const name = String(b.name || "").trim();
+      if (name) push(name, "board", String(b.notes || name));
+    }
+
+    const queries = Array.isArray(doc.search_queries) ? (doc.search_queries as Array<Record<string, unknown>>) : [];
     for (const q of queries) {
       if (q.enabled === false) continue;
       const name = String(q.name || "").trim();
-      const portal = (name.split(/\s+—|\s+--|\s+-\s/)[0] || name).trim();
-      if (!portal || seen.has(portal.toLowerCase())) continue;
-      seen.add(portal.toLowerCase());
-      sources.push({ portal, example: name });
+      if (name) push(name, "query", name);
     }
+
     return Response.json({ sources });
   } catch {
     return Response.json({ sources: [] });
