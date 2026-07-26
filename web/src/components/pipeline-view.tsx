@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Search, ChevronsUpDown, X, Compass, ArrowRight, Loader2, Ban } from "lucide-react";
+import { Search, ChevronsUpDown, X, Compass, ArrowRight, Loader2, Ban, Send, Check } from "lucide-react";
 import type { Application, InboxJob } from "@/lib/career-ops";
 import { Badge } from "@/components/ui/badge";
 import { CompanyLogo } from "@/components/company-logo";
@@ -231,7 +231,10 @@ export function PipelineView({
                   </td>
                   <td className="px-4 py-3 text-faint tabular-nums">{r.date}</td>
                   <td className="px-2 py-3 text-right">
-                    <SkipButton n={r.n} status={r.status} />
+                    <span className="inline-flex items-center gap-1">
+                      <AppliedButton n={r.n} status={r.status} />
+                      <SkipButton n={r.n} status={r.status} />
+                    </span>
                   </td>
                 </tr>
               ))}
@@ -245,6 +248,57 @@ export function PipelineView({
         </div>
       )}
     </div>
+  );
+}
+
+// "I sent it" — flips a row to the canonical Applied status AND pins the first
+// follow-up date through the core's followup-seed.mjs, so a sent application
+// can never sit in the tracker without a chase date. Hidden once the row has
+// moved past Applied (Responded / Interview / Offer / Rejected / SKIP …).
+function AppliedButton({ n, status }: { n: string; status: string }) {
+  const router = useRouter();
+  const [state, setState] = useState<"idle" | "busy" | "done">("idle");
+  if (/applied|responded|interview|offer|reject|skip|discard/i.test(status)) return null;
+
+  const markApplied = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setState("busy");
+    try {
+      const res = await fetch("/api/status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ n, status: "Applied" }),
+      });
+      if (res.ok) {
+        // Best-effort: the follow-up schedule must never block the status change.
+        fetch("/api/followups/seed", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ n }),
+        }).catch(() => {});
+        setState("done");
+        router.refresh();
+      } else {
+        setState("idle");
+      }
+    } catch {
+      setState("idle");
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      disabled={state !== "idle"}
+      onClick={markApplied}
+      title="I applied — marks the row Applied and schedules the first follow-up"
+      aria-label="Mark as applied"
+      className="inline-flex items-center gap-1 rounded-md border border-brand/30 bg-brand-soft/40 px-2 py-1 text-xs font-medium text-brand-text opacity-0 transition-all hover:bg-brand-soft focus-visible:opacity-100 group-hover:opacity-100 disabled:opacity-60 max-sm:opacity-100"
+    >
+      {state === "busy" ? <Loader2 className="size-3.5 animate-spin" /> : state === "done" ? <Check className="size-3.5" /> : <Send className="size-3.5" />}
+      {state === "done" ? "Applied" : "Applied"}
+    </button>
   );
 }
 
