@@ -3,7 +3,7 @@
 - [x] ~~https://job-boards.greenhouse.io/gitlab/jobs/8374358002 | GitLab | Manager, Ecosystem Sales - EMEA South~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/4859889007 | Lantern | Ecosystem Partnerships Operations Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/bloombergorg/jobs/7634406003 | Bloomberg Philanthropies | Program Manager, Data & AI Portfolio~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://job-boards.greenhouse.io/mercury/jobs/6104219004 | Mercury | Senior Product Partnerships Manager - Payroll
+- [x] ~~https://job-boards.greenhouse.io/mercury/jobs/6104219004 | Mercury | Senior Product Partnerships Manager - Payroll~~ — removed from fresh matches
 - [x] ~~https://boards.greenhouse.io/amplitude/jobs/6505398002 | Amplitude | Ecosystem Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://weworkremotely.com/remote-jobs/ntt-data-project-manager-microsoft-dynamics-365-crm-field-service-fully-remote | NTT Data | Project Manager - Microsoft Dynamics 365 CRM & Field Service
 - [ ] https://weworkremotely.com/remote-jobs/origami-risk-technical-partnerships-manager | Origami Risk | Technical Partnerships Manager
