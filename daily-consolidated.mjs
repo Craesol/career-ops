@@ -218,6 +218,21 @@ if (INCLUDE_L3) {
   console.log('\n[step 3] L3 WebSearch — skipped (set INCLUDE_L3=true to enable)');
 }
 
+// --- STEP 3b: prune postings that died since we found them ---------------
+// Job ads expire fast: a one-off audit found 80% of the ATS-checkable inbox
+// already gone. Pruning daily (zero tokens, ATS JSON API) keeps the inbox
+// something the user can trust instead of a graveyard.
+console.log('\n[step 3b] prune dead postings');
+const pruneResult = spawnSync('node', [resolve(ROOT, 'prune-dead.mjs'), '--apply', '--limit', '120'], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 600000,
+});
+if (pruneResult.status === 0) {
+  const last = (pruneResult.stdout || '').trim().split('\n').filter(l => /checked|closed/.test(l)).slice(-2).join(' · ');
+  console.log('  ' + (last || 'ok'));
+} else {
+  console.error('  FAIL (exit ' + pruneResult.status + '): ' + (pruneResult.stderr || 'unknown').slice(0, 200));
+}
+
 // --- STEP 4: Build consolidated email -----------------------------------
 console.log('\n[step 4] Building consolidated email');
 const todayAdded = todayAddedRows();

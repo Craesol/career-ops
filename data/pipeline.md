@@ -1,23 +1,23 @@
 
 ## Pendientes
-- [ ] https://job-boards.greenhouse.io/gitlab/jobs/8374358002 | GitLab | Manager, Ecosystem Sales - EMEA South
-- [ ] https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/4859889007 | Lantern | Ecosystem Partnerships Operations Manager
-- [ ] https://job-boards.greenhouse.io/bloombergorg/jobs/7634406003 | Bloomberg Philanthropies | Program Manager, Data & AI Portfolio
+- [x] ~~https://job-boards.greenhouse.io/gitlab/jobs/8374358002 | GitLab | Manager, Ecosystem Sales - EMEA South~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/4859889007 | Lantern | Ecosystem Partnerships Operations Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/bloombergorg/jobs/7634406003 | Bloomberg Philanthropies | Program Manager, Data & AI Portfolio~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/mercury/jobs/6104219004 | Mercury | Senior Product Partnerships Manager - Payroll
-- [ ] https://boards.greenhouse.io/amplitude/jobs/6505398002 | Amplitude | Ecosystem Lead
+- [x] ~~https://boards.greenhouse.io/amplitude/jobs/6505398002 | Amplitude | Ecosystem Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://weworkremotely.com/remote-jobs/ntt-data-project-manager-microsoft-dynamics-365-crm-field-service-fully-remote | NTT Data | Project Manager - Microsoft Dynamics 365 CRM & Field Service
 - [ ] https://weworkremotely.com/remote-jobs/origami-risk-technical-partnerships-manager | Origami Risk | Technical Partnerships Manager
-- [ ] https://jobs.lever.co/jobgether/d0990862-07ec-480f-8695-37186e4ff135 | Jobgether | Web3 / Crypto Business Development Manager
+- [x] ~~https://jobs.lever.co/jobgether/d0990862-07ec-480f-8695-37186e4ff135 | Jobgether | Web3 / Crypto Business Development Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 
-- [ ] https://boards.greenhouse.io/remotecom/jobs/4997722003 | Remote | Senior Partnership Marketing Manager
-- [ ] https://boards.greenhouse.io/submittable/jobs/4677858004 | Submittable | Alliance Partnership Manager
-- [ ] https://boards.greenhouse.io/teads/jobs/6664079 | Teads | Senior Partnership Manager (SSPs)
-- [ ] https://boards.greenhouse.io/modernhealth/jobs/7667421002 | Modern Health | Partnerships Manager
-- [ ] https://boards.greenhouse.io/cultureamp/jobs/3450922 | Culture Amp | Channel Partnerships Manager
-- [ ] https://boards.greenhouse.io/gocardless/jobs/2370164 | GoCardless | Senior Partnership Manager
-- [ ] https://boards.greenhouse.io/rocketmiles/jobs/3606839 | Rocket Travel | Partnership Manager
-- [ ] https://jobs.ashbyhq.com/ruby-labs/3e5cd6bf-2472-4801-8ff4-ead9efd6d6e2 | Ruby Labs | Community Manager
-- [ ] https://jobs.lever.co/perforce/37835fa2-16cd-4222-b930-6007bcc76bd4 | Perforce | Senior Partner Ecosystem Manager
+- [x] ~~https://boards.greenhouse.io/remotecom/jobs/4997722003 | Remote | Senior Partnership Marketing Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/submittable/jobs/4677858004 | Submittable | Alliance Partnership Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/teads/jobs/6664079 | Teads | Senior Partnership Manager (SSPs)~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/modernhealth/jobs/7667421002 | Modern Health | Partnerships Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/cultureamp/jobs/3450922 | Culture Amp | Channel Partnerships Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/gocardless/jobs/2370164 | GoCardless | Senior Partnership Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/rocketmiles/jobs/3606839 | Rocket Travel | Partnership Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.ashbyhq.com/ruby-labs/3e5cd6bf-2472-4801-8ff4-ead9efd6d6e2 | Ruby Labs | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.lever.co/perforce/37835fa2-16cd-4222-b930-6007bcc76bd4 | Perforce | Senior Partner Ecosystem Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://cryptocurrencyjobs.co/marketing/kolex-community-manager-nfts/ | Kolex | Community Manager NFTs
 - [x] ~~https://weworkremotely.com/remote-jobs/maptiler-developer-relations-customer-success-manager-maps-platform-remote-in-europe | MapTiler | Developer Relations & Customer Success Manager~~ — swept: negative-title
 - [ ] https://candidat.francetravail.fr/offres/recherche/detail/203GHRG | France Travail | Project Management Officer PMO - Valbonne
@@ -29,7 +29,7 @@
 - [x] ~~https://jobs.ashbyhq.com/linera.io/e1af1e7c-4318-4823-9433-e3fdffa45322 | Linera.Io | Web3 Infrastructure Engineer (Remote) @ Linera~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/cow-dao |  | CoW DAO Jobs~~ — swept: triage-C (noise)
 - [x] ~~https://jobs.ashbyhq.com/cow-dao/bad70ba5-c26d-4201-b9b5-77b7948e9862?gh_src=1kx+job+board | Cow Dao | Recruiter (Web3) @ CoW DAO - Jobs~~ — swept: triage-C (noise)
-- [ ] https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application?action=apply | Chainlink Labs | Web3 Partnerships Manager @ Chainlink Labs
+- [x] ~~https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application?action=apply | Chainlink Labs | Web3 Partnerships Manager @ Chainlink Labs~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://cryptojobslist.com/community |  | 31+ Crypto Community Jobs April 2026 | Hiring Now~~ — swept: junk-url
 - [x] ~~https://cryptojobslist.com/community?expired=brand-ambassador-at-guarda-remote |  | Crypto Community Manager Jobs paying $24k-250k+ per year (Updated Daily)~~ — swept: junk-title
 - [ ] https://cryptojobslist.com/remote_community-manager | Remote Web3 Community Manager Jobs | Remote Web3 Community Manager Jobs - $45k-$80k/year
@@ -185,7 +185,7 @@
 - [x] ~~https://app.dework.xyz/tokenomics-dao |  | Tokenomics DAO | Dework~~ — swept: junk-title
 - [x] ~~https://app.dework.xyz/contribution-dao |  | Contribution DAO | Dework~~ — swept: junk-title
 - [ ] https://job-boards.greenhouse.io/gsgcareers/jobs/7990118 | Gsgcareers | Player Experience & Community Manager
-- [ ] https://job-boards.greenhouse.io/fairsteadescllc/jobs/5229725008 | Fairsteadescllc | Job Application for Community Manager - Rolling Hills at Fairstead ESC LLC
+- [x] ~~https://job-boards.greenhouse.io/fairsteadescllc/jobs/5229725008 | Fairsteadescllc | Job Application for Community Manager - Rolling Hills at Fairstead ESC LLC~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d/application?embed=js | N8n | Head of DevRel (Remote East Coast) @ n8n~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/runlayer/d8346558-459a-46a7-ba9c-1a39af346cc9 | Runlayer | Developer Relations Lead @ Runlayer~~ — swept: negative-title
 - [x] ~~https://jobs.lever.co/crypto |  | Crypto.com jobs~~ — swept: junk-title
@@ -657,23 +657,23 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://www.builtinnyc.com/job/business-development-crypto-senior/7282389 | fun.xyz | Business Development - Crypto (Senior)~~ — swept: stale (46d old, first seen 2026-06-10)
 - [x] ~~https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com~~ — swept: stale (46d old, first seen 2026-06-10)
 - [x] ~~https://devocate.pallet.com/jobs | Pallet | DevRel Job Board (retired)~~ — swept: junk-url
-- [ ] https://job-boards.greenhouse.io/bungie/jobs/6852816 | Bungie | Destiny Global Community Lead
+- [x] ~~https://job-boards.greenhouse.io/bungie/jobs/6852816 | Bungie | Destiny Global Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://cryptocurrencyjobs.co/marketing/vestinda-community-manager-builder/ | Vestinda | Community Manager & Builder
 - [ ] https://x.com/crypto_vazima/status/2014032490298568832 | Unnamed Platform | Head of Growth & Community (Blockchain/Real Estate)
 - [ ] https://x.com/wb3jobsx/status/2058895866480787709 | Woo X | Social Media & Community Executive
 - [ ] https://x.com/HitmarkerJobs/status/1820946706185515165 | Jagex | Senior Community Manager Old School RuneScape
 - [x] ~~https://x.com/HitmarkerJobs/status/1966264241943622062 | DECA Games | Community Manager Russian-speaking~~ — swept: triage-C (language/market gate)
-- [ ] https://job-boards.greenhouse.io/cosmoslabs/jobs/5000963007 | Cosmos Labs | Community Manager - Cosmos Hub (contract)
+- [x] ~~https://job-boards.greenhouse.io/cosmoslabs/jobs/5000963007 | Cosmos Labs | Community Manager - Cosmos Hub (contract)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd87a | Manta Network | Community Manager - Indonesia~~ — swept: triage-C (language/market gate)
 - [ ] https://cryptocurrencyjobs.co/marketing/consensys-ecosystem-engagement-manager/ | Consensys | Ecosystem Engagement Manager
 - [ ] https://web3.career/community-program-manager-decent-dao/58835 | Decent DAO | Community Program Manager
-- [ ] https://job-boards.greenhouse.io/scopely/jobs/5116882008 | Scopely | Community Manager
-- [ ] https://job-boards.greenhouse.io/blockchain/jobs/6865066 | Blockchain.com | Community Manager Web3
+- [x] ~~https://job-boards.greenhouse.io/scopely/jobs/5116882008 | Scopely | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/blockchain/jobs/6865066 | Blockchain.com | Community Manager Web3~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://careers.airbnb.com/positions/6743233 | Airbnb | Community Engagement Manager France & BeNeLux
-- [ ] https://job-boards.greenhouse.io/awin/jobs/7730187003 | Awin | Social Media & Community Manager
+- [x] ~~https://job-boards.greenhouse.io/awin/jobs/7730187003 | Awin | Social Media & Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://builtin.com/job/lead-community-manager-mfd/3577136 | DECA Games | Lead Community Manager
 - [ ] https://www.hellowork.com/fr-fr/emplois/45234024.html | Apside (Sophia Antipolis) | CDI Project Manager
-- [ ] https://jobs.lever.co/atlassian/c38f63ff-9cf1-41f0-8e80-3355fc91f986 | Atlassian | Community Engagement Manager
+- [x] ~~https://jobs.lever.co/atlassian/c38f63ff-9cf1-41f0-8e80-3355fc91f986 | Atlassian | Community Engagement Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://www.linkedin.com/jobs/view/user-community-manager-blockchain-at-cryptorecruit-4009694307 | CryptoRecruit | User Community Manager (Blockchain)
 - [ ] https://www.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming
 - [ ] https://www.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager
@@ -690,7 +690,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://cryptocurrencyjobs.co/marketing/bsc-news-gaming-social-manager-web3/ | BSCN | Gaming Social Manager (Web3)
 - [ ] https://web3.career/marketing-communications-lead-panteracapitalmanagementlp/74967 | Pantera Capital | Marketing Communications Lead
 - [x] ~~https://jobs.lever.co/empowerly/014c2fd1-3cda-4e6d-8119-d4fa0ff125b6 | Empowerly | Community Manager (Mandarin Speaking)~~ — swept: triage-C (language/market gate)
-- [ ] https://jobs.lever.co/airalo/8fa60fbe-61ef-4579-a503-9a319dbc3a58 | Airalo | Social Media & Community Manager (LATAM)
+- [x] ~~https://jobs.lever.co/airalo/8fa60fbe-61ef-4579-a503-9a319dbc3a58 | Airalo | Social Media & Community Manager (LATAM)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://cryptocurrencyjobs.co/marketing/perpetual-protocol-content-and-community-manager/ | Perpetual Protocol | Content and Community Manager
 - [ ] https://pompcryptojobs.com/job/5916/program-manager/ | Polygon | Program Manager
 - [ ] https://pompcryptojobs.com/job/6206/edao-leader/ | Unknown | eDAO Leader
@@ -713,7 +713,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://developerdao.pallet.com/jobs/38abc083-ffd2-4870-aa78-5416de64a4c7 | Spruce | Developer Relations~~ — swept: negative-title
 - [x] ~~https://bankless.pallet.com/jobs/341813f6-0495-4f51-b89f-1f141f60e0b9 | Uniswap Labs | Developer Relations Lead~~ — swept: negative-title
 - [x] ~~https://inplainenglish.pallet.com/jobs/83d5be44-eb80-4a11-913b-09df55910aa3 | Protocol Labs | Developer Relations Engineer~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/trilitech/76ef1cc2-bc47-4f45-b16f-489d97eafb34 | Trilitech | Web3 Technical Lead - DeFi
+- [x] ~~https://jobs.ashbyhq.com/trilitech/76ef1cc2-bc47-4f45-b16f-489d97eafb34 | Trilitech | Web3 Technical Lead - DeFi~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://web3.career/head-of-community-subspacelabs/39250 | Subspace Labs | Head of Community
 - [ ] https://web3.career/community-lead-alchemy/67678 | Alchemy | Community Lead
 - [ ] https://hitmarker.net/jobs/wargaming-esports-manager-world-of-tanks-blitz-1576016 | Wargaming | Esports Manager (World of Tanks Blitz)
@@ -723,9 +723,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://careers.play.vc/companies/timeleft-2/jobs/59721971-marketing-community-manager-bangkok | Timeleft | Marketing & Community Manager
 - [ ] https://jobs.ashbyhq.com/sui%20foundation/79a46cca-cfca-42d6-8191-848cc4c92172 | Sui Foundation | Community Lead
 - [ ] https://jobs.cointelegraph.com/jobs/146177705-social-media-community-manager-gaming | Cointelegraph | Social Media & Community Manager (Gaming)
-- [ ] https://boards.greenhouse.io/goodr/jobs/6772285002 | goodr | Social Community Manager
+- [x] ~~https://boards.greenhouse.io/goodr/jobs/6772285002 | goodr | Social Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations
-- [ ] https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager
+- [x] ~~https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China~~ — swept: triage-C (language/market gate)
 
 - [ ] https://remotive.com/remote/jobs/marketing/communications-and-community-manager-4075185 | African Institute for Artificial Intelligence | Communications and Community Manager
@@ -749,11 +749,11 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.ashbyhq.com/netboxlabs/8b602a88-9616-4fb6-ad84-ceed46e901f9 | NetBox Labs | Community Engagement Manager
 - [x] ~~https://jobs.ashbyhq.com/apify/fc738d0a-7776-48ff-b9ac-0fc87fba97fa | Apify | Developer Community Manager~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/sentient/aff4a300-f268-4962-806e-0ad2a132511c | Sentient | Developer Relations & Ecosystem Growth Lead~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/polar/67fa55c0-af67-4f90-a88e-db6eab4daac0 | Polar | Community Manager
+- [x] ~~https://jobs.ashbyhq.com/polar/67fa55c0-af67-4f90-a88e-db6eab4daac0 | Polar | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.ashbyhq.com/polymarket/34e308ef-b89e-4b6e-ac33-0df89f806a8e | Polymarket | Developer Relations Manager~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/granola/9e588708-c1fe-4585-b3fc-948472ae5731 | Granola | Community Manager
-- [ ] https://jobs.ashbyhq.com/cantina/b28b50d0-1839-4c0b-b72d-a1a37c1c928c | Cantina | Community Manager, Education
-- [ ] https://jobs.ashbyhq.com/lilt/d2e7d679-7956-4073-babe-2cf0189012da | LILT | Localization Program Manager
+- [x] ~~https://jobs.ashbyhq.com/granola/9e588708-c1fe-4585-b3fc-948472ae5731 | Granola | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/cantina/b28b50d0-1839-4c0b-b72d-a1a37c1c928c | Cantina | Community Manager, Education~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/lilt/d2e7d679-7956-4073-babe-2cf0189012da | LILT | Localization Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.ashbyhq.com/stronghold/ad956e45-aa24-4b70-a72c-b9fd4c74c979 | Stronghold | Crypto Community Manager
 - [x] ~~https://jobs.paradigm.xyz/companies/symbiotic-2-4ace1b94-73f0-431a-8cb8-175636ab72fa/jobs/40072879-head-of-developer-relations | Symbiotic | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.multicoin.capital/companies/solana-labs/jobs/3875293-developer-relations-lead | Solana Labs | Developer Relations Lead~~ — swept: negative-title
@@ -764,9 +764,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://startup.jobs/head-of-community-management-europe-based-cryptocom-2859218 | Crypto.com | Head of Community Management
 - [x] ~~https://jobs.lever.co/binance/b9526558-33b0-404c-b056-9345ac02990f | Binance | SEA Community Manager - BNB Chain~~ — swept: triage-C (language/market gate)
 - [ ] https://jobs.lever.co/binance/11ae82ea-7271-4285-9ef9-9b78f576250f | Binance | Events & Community Manager – Mexico
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/7295300 | Smartling | Project Manager, Localization
-- [ ] https://job-boards.greenhouse.io/flohealth/jobs/6327567003 | Flo Health | Localization Program Manager
-- [ ] https://job-boards.greenhouse.io/mrbeastyoutube/jobs/5812833004 | MrBeast | Localization Program Manager, CreatorGlobal
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/7295300 | Smartling | Project Manager, Localization~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/flohealth/jobs/6327567003 | Flo Health | Localization Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/mrbeastyoutube/jobs/5812833004 | MrBeast | Localization Program Manager, CreatorGlobal~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://builtin.com/job/community-lead-us/4468871 | Sui Foundation | Community Lead US
 - [ ] https://builtin.com/job/web3-community-manager/3964423 | Lightblocks Labs | Web3 Community Manager
 - [ ] https://beincrypto.com/jobs/p/memecoin-NFT-community-leader-nibiru/ | Nibiru | Memecoin & NFT Community Leader
@@ -792,9 +792,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://main.jobs3.io/job/community-manager-thailand/ | p0x labs | Community Manager Thailand
 - [ ] https://job-boards.greenhouse.io/financialtimes33/jobs/4911094101 | Financial Times | Investor Content and Community Manager
 - [ ] https://jobs.ashbyhq.com/openai/eb58b9cb-4a87-4d58-863b-5516ed1fbcae | OpenAI | Technical Community Lead, Campus Leaders
-- [ ] https://jobs.ashbyhq.com/trust-wallet/c713bb89-868b-4606-970e-e0d6e0ff6c13 | Trust Wallet | Community Manager / Lead
+- [x] ~~https://jobs.ashbyhq.com/trust-wallet/c713bb89-868b-4606-970e-e0d6e0ff6c13 | Trust Wallet | Community Manager / Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/Lightfield/aeaa3331-7888-4887-9092-dbd1d3cb96bc | Lightfield | Community Lead
-- [ ] https://jobs.lever.co/crypto/487a2e95-e741-430d-937a-38a05251f0b1 | Crypto.com | IRL Community Manager - EMEA
+- [x] ~~https://jobs.lever.co/crypto/487a2e95-e741-430d-937a-38a05251f0b1 | Crypto.com | IRL Community Manager - EMEA~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://hitmarker.net/jobs/keywords-studios-community-manager-community-moderation-video-games-1574320 | Keywords Studios | Community Manager (Community Moderation) - Video Games
 - [ ] https://hitmarker.net/jobs/gameloft-senior-community-manager-2992583 | Gameloft | Senior Community Manager
 - [ ] https://hitmarker.net/jobs/ubisoft-community-manager-assassins-creed-1527416 | Ubisoft | Community Manager - Assassin's Creed
@@ -810,7 +810,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://job-boards.greenhouse.io/ripple/jobs/7089493 | Ripple | Senior Ecosystem Growth Manager (Europe)~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/parasail/f2971660-8c72-4d81-a72c-823f1efd46b6 | Parasail | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/luxor/eba7430f-c1f5-4d0b-933a-1b9950ead0b7 | Luxor Technology Corporation | Head of Developer Relations~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/lovable/da5a2b53-72af-4f6b-b1bc-03512a8d2c9e/application | Lovable | Head of Community Marketing
+- [x] ~~https://jobs.ashbyhq.com/lovable/da5a2b53-72af-4f6b-b1bc-03512a8d2c9e/application | Lovable | Head of Community Marketing~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobgether.com/offer/6a485417ac00a71a5a79aa69-community-manager-us | Green Park Content | Community Manager (US)
 - [x] ~~https://jobgether.com/offer/6a45f76eac00a71a5a756a8c-quebec-community-manager-bilingual | Brand Networks | Quebec Community Manager (Bilingual)~~ — swept: triage-C (language/market gate)
 - [x] ~~https://startup.jobs/web3-community-manager-india-part-time-ava-labs-4821654 | Ava Labs | Web3 Community Manager, India (Part-Time)~~ — swept: triage-C (language/market gate)
@@ -834,31 +834,31 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://www.welcometothejungle.com/fr/companies/kinetix-tech/jobs/community-manager-web3_paris | Kinetix | Community Manager Web3
 - [ ] https://app.welcometothejungle.com/jobs/uZqyl0G0 | BNB Chain Labs | Community Manager
 - [ ] https://app.welcometothejungle.com/jobs/-lgI4SbH | Immunefi | Community Manager
-- [ ] https://job-boards.greenhouse.io/opentable/jobs/7906200002 | OpenTable | Senior Localization Program Manager
-- [ ] https://job-boards.greenhouse.io/gofundme/jobs/7139138 | GoFundMe | Localization Program Manager
-- [ ] https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5639442004 | PlayStation | Program Manager II, Localization
-- [ ] https://job-boards.greenhouse.io/opentable/jobs/8372223002 | OpenTable | Localization Program Manager - Localisation Technologies Specialist
+- [x] ~~https://job-boards.greenhouse.io/opentable/jobs/7906200002 | OpenTable | Senior Localization Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/gofundme/jobs/7139138 | GoFundMe | Localization Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5639442004 | PlayStation | Program Manager II, Localization~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/opentable/jobs/8372223002 | OpenTable | Localization Program Manager - Localisation Technologies Specialist~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.ashbyhq.com/sierra/4041855f-5a09-47ea-80d3-3141454655f8 | Sierra | Localization Program Manager
-- [ ] https://jobs.ashbyhq.com/lilt/98079dd8-ef11-4608-b5ec-aa77d9425566/application | LILT | Localization Project Manager, Production
-- [ ] https://jobs.lever.co/coins/2d82a374-067e-459d-a6a3-1923ec9dde56 | Coins.ph | Community Manager (SG)
+- [x] ~~https://jobs.ashbyhq.com/lilt/98079dd8-ef11-4608-b5ec-aa77d9425566/application | LILT | Localization Project Manager, Production~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/coins/2d82a374-067e-459d-a6a3-1923ec9dde56 | Coins.ph | Community Manager (SG)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/binance/725bb3d8-7c4a-4ddd-8312-5a695e3d7fda | Binance | Community Manager - Levant~~ — swept: triage-C (language/market gate)
-- [ ] https://jobs.lever.co/tokenmetrics/be1e03c1-be01-47c6-8850-c58cbcb42f8c | Token Metrics | Web3 Head of Marketing and Communications
-- [ ] https://jobs.lever.co/crypto/2d715770-5f47-45f8-889a-c811660b0336 | Crypto.com | Accelerator Program Manager
-- [ ] https://jobs.lever.co/moonpay/9697bcae-6de6-47f5-9e46-b3c9d999d0d3 | MoonPay | Senior Program Manager, Product Operations
-- [ ] https://jobs.lever.co/offchainlabs/81b52eb8-f169-42eb-bfb9-31cd78af3abd | Offchain Labs | Program Manager
+- [x] ~~https://jobs.lever.co/tokenmetrics/be1e03c1-be01-47c6-8850-c58cbcb42f8c | Token Metrics | Web3 Head of Marketing and Communications~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/crypto/2d715770-5f47-45f8-889a-c811660b0336 | Crypto.com | Accelerator Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/moonpay/9697bcae-6de6-47f5-9e46-b3c9d999d0d3 | MoonPay | Senior Program Manager, Product Operations~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/offchainlabs/81b52eb8-f169-42eb-bfb9-31cd78af3abd | Offchain Labs | Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.eu.greenhouse.io/proton/jobs/4770442101 | Proton | Senior Community Manager
-- [ ] https://job-boards.eu.greenhouse.io/ziina/jobs/4600925101 | Ziina | Community Manager
-- [ ] https://job-boards.eu.greenhouse.io/proton/jobs/4378810101 | Proton | Social & Community Manager
-- [ ] https://job-boards.eu.greenhouse.io/tripledotstudios/jobs/4819869101 | Tripledot Studios | Community Manager
-- [ ] https://jobs.ashbyhq.com/opfoundation/1f09b8eb-66b9-43f8-8e53-378e081b01c3 | OP Foundation | Partnerships Lead, Strategic Accounts
-- [ ] https://jobs.ashbyhq.com/cryptio/281ef97f-6469-47b9-9981-86c1a71e5ae4 | Cryptio | Head of Partnerships
-- [ ] https://jobs.ashbyhq.com/oplabs/b362c292-5a3c-42a2-bd36-4e1a86bd2d36 | OP Labs | Partnerships Lead, Blockchain Infrastructure
+- [x] ~~https://job-boards.eu.greenhouse.io/ziina/jobs/4600925101 | Ziina | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.eu.greenhouse.io/proton/jobs/4378810101 | Proton | Social & Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.eu.greenhouse.io/tripledotstudios/jobs/4819869101 | Tripledot Studios | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.ashbyhq.com/opfoundation/1f09b8eb-66b9-43f8-8e53-378e081b01c3 | OP Foundation | Partnerships Lead, Strategic Accounts~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/cryptio/281ef97f-6469-47b9-9981-86c1a71e5ae4 | Cryptio | Head of Partnerships~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/oplabs/b362c292-5a3c-42a2-bd36-4e1a86bd2d36 | OP Labs | Partnerships Lead, Blockchain Infrastructure~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/allium/dadf1edf-0d76-4559-8bca-2f6ea2b5cbe0 | Allium | Channel Partnerships Lead
-- [ ] https://jobs.ashbyhq.com/oplabs/815d0c1d-9e72-4f37-8740-a7f401509a7f | OP Labs | Partnerships Lead, Defi
-- [ ] https://jobs.ashbyhq.com/phantom/a199de79-f699-424e-af79-85187565122f | Phantom | Growth Partnerships Lead
+- [x] ~~https://jobs.ashbyhq.com/oplabs/815d0c1d-9e72-4f37-8740-a7f401509a7f | OP Labs | Partnerships Lead, Defi~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/phantom/a199de79-f699-424e-af79-85187565122f | Phantom | Growth Partnerships Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/column/61216ded-0ef9-40fb-88fa-2794847b07de | Column | Strategic Partnerships Lead, Credit
-- [ ] https://jobs.ashbyhq.com/windranger/90962aca-a1c7-429a-a220-88c8c3b95886 | Windranger Labs (Game7) | Community Manager
-- [ ] https://jobs.ashbyhq.com/caldera/e28e3b0e-02fd-4ea6-b7c2-ed62da4c6276 | Caldera | Community Lead
+- [x] ~~https://jobs.ashbyhq.com/windranger/90962aca-a1c7-429a-a220-88c8c3b95886 | Windranger Labs (Game7) | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/caldera/e28e3b0e-02fd-4ea6-b7c2-ed62da4c6276 | Caldera | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/sahara/dc228c20-2d78-4c7d-b3e6-3b518ab5c695 | Sahara | Community Manager (China)~~ — swept: triage-C (language/market gate)
 - [ ] https://remoteok.com/remote-jobs/remote-community-manager-moonbeam-foundation-229720 | Moonbeam Foundation | Community Manager
 - [ ] https://cryptojobslist.com/jobs/community-manager-marketing-specialist-remote-at-spcfin-storepay | SPCFIN/Storepay | Community Manager & Marketing Specialist
@@ -869,7 +869,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://apply.workable.com/keywords-intl1/j/188A082034/ | Keywords Studios | Community Manager
 - [ ] https://startup.jobs/director-web3-gaming-community-collaborations-mythical-games-3123344 | Mythical Games | Director, Web3 Gaming Community & Collaborations
 - [x] ~~https://job-boards.greenhouse.io/burnt/jobs/4535905008 | XION (Burnt) | Ecosystem Growth Manager~~ — swept: negative-title
-- [ ] https://job-boards.greenhouse.io/gemini/jobs/7951089 | Gemini | Marketing Coordinator, Community Engagement
+- [x] ~~https://job-boards.greenhouse.io/gemini/jobs/7951089 | Gemini | Marketing Coordinator, Community Engagement~~ — closed: posting gone (ATS API 404 — posting removed)
 
 - [ ] https://cryptocurrencyjobs.co/marketing/ethena-labs-content-and-community-lead/ | Ethena Labs | Content and Community Lead
 - [ ] https://cryptocurrencyjobs.co/marketing/prepo-community-manager/ | prePO | Lead Community Manager
@@ -889,9 +889,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://bankless.pallet.com/jobs/6ef63796-a59c-4863-8afb-ef5e7d56188c | dYdX Foundation | Community Manager (Contractor)
 - [x] ~~https://web3.career/devrel-community-manager-unicorn-randamu/92926 | Randamu | DevRel & Community Manager~~ — swept: negative-title
 - [ ] https://wellfound.com/jobs/3207684-crypto-community-manager | Stronghold | Crypto Community Manager
-- [ ] https://boards.greenhouse.io/lightblocks/jobs/4425305008 | Lightblocks | Web3 Community Manager
+- [x] ~~https://boards.greenhouse.io/lightblocks/jobs/4425305008 | Lightblocks | Web3 Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/SeiLabs/ab3752d9-bd44-456f-8f86-faee1eb2da21 | Sei Labs | Developer Relations Advocate~~ — swept: negative-title
-- [ ] https://jobs.lever.co/with-foundation/05cb43f3-8724-487c-a2d8-671004cb8898 | Foundation (foundation.app) | Sales & Partnerships Lead
+- [x] ~~https://jobs.lever.co/with-foundation/05cb43f3-8724-487c-a2d8-671004cb8898 | Foundation (foundation.app) | Sales & Partnerships Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://startup.jobs/ecosystem-growth-monad-4312990 | Monad | Ecosystem Growth~~ — swept: negative-title
 - [x] ~~https://www.linkedin.com/jobs/view/senior-developer-relations-engineer-web3-at-monad-labs-3692583652 | Monad Labs | Senior Developer Relations Engineer~~ — swept: negative-title
 - [x] ~~https://careers.berachain.com/29602 | Berachain | Developer Relations Engineer~~ — swept: negative-title
@@ -899,7 +899,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.multicoin.capital/companies/aptos-labs/jobs/43049509-defi-ecosystem-manager-apac | Aptos Labs | DeFi Ecosystem Manager APAC~~ — swept: triage-C (language/market gate)
 - [ ] https://startup.jobs/community-manager-animoca-brands-limited-4481470 | Animoca Brands | Community Manager
 - [ ] https://job-boards.greenhouse.io/later/jobs/8621358002 | Later | Community Manager at Later
-- [ ] https://jobs.ashbyhq.com/socure/fa91c32a-86ed-4665-a8af-675224348363 | Socure | Community Manager, Socure Intelligence Community at Socure
+- [x] ~~https://jobs.ashbyhq.com/socure/fa91c32a-86ed-4665-a8af-675224348363 | Socure | Community Manager, Socure Intelligence Community at Socure~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.ashbyhq.com/trust-wallet/04239652-62bb-43d7-87ea-844b0cdfc844 | Trust Wallet | Senior Data Analyst (Web3) at Trust Wallet~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/ens-labs/9c93564c-4e3a-4635-be6c-f9dc6cd70b26 | ENS Labs | Integrations Engineer (Web3) at ENS Labs~~ — swept: triage-C (out of archetype)
 - [ ] https://jobs.lever.co/truv/27f965a7-5808-4243-a0dd-43f7d9f73bb3 | Truv | Community Manager - Truv
@@ -922,17 +922,17 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://main.jobs3.io/job/crypto-social-media-manager-hanoi-remote/ | Token Metrics | Crypto Social Media Manager at Token Metrics
 - [ ] https://wellfound.com/jobs/4114890-head-of-web3-ecosystem-alliances-post-quantum-blockchain-commission-1-equity | Post-Quantum Blockchain | Head of Web3 Ecosystem Alliances
 - [x] ~~https://boards.greenhouse.io/embed/job_app?token=7026791&gh_src=web3.career | Status | Status Network DevRel & Community Manager (South Korea)~~ — swept: negative-title
-- [ ] https://boards.greenhouse.io/energicorelimited/jobs/4276062004 | Energi Core Limited | NFT Community / Social Media Manager
-- [ ] https://boards.greenhouse.io/eclipse/jobs/4040529008 | Eclipse | Social Media and Communications Manager
-- [ ] https://boards.greenhouse.io/abclabs/jobs/4392046005 | ABC Labs | DeFi Community Manager
-- [ ] https://boards.greenhouse.io/dfinity/jobs/5420747002 | DFINITY | Community Manager
+- [x] ~~https://boards.greenhouse.io/energicorelimited/jobs/4276062004 | Energi Core Limited | NFT Community / Social Media Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/eclipse/jobs/4040529008 | Eclipse | Social Media and Communications Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/abclabs/jobs/4392046005 | ABC Labs | DeFi Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/dfinity/jobs/5420747002 | DFINITY | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://boards.greenhouse.io/eclipse/jobs/4036865008 | Eclipse | Developer Relations Associate~~ — swept: negative-title
 - [ ] https://jobs.ashbyhq.com/Sahara/ba33f05b-0858-4b5e-92cf-630852b624f1 | Sahara | Community Manager
 - [ ] https://hk.linkedin.com/jobs/view/ecosystem-manager-at-pharos-network-4311836628 | Pharos Network | Ecosystem Manager
 - [x] ~~https://job-boards.greenhouse.io/startale/jobs/4763405008 | Startale | Community Manager - APAC~~ — swept: triage-C (language/market gate)
-- [ ] https://boards.greenhouse.io/okx/jobs/5997519003 | OKX | Community Manager, OKX Spain
-- [ ] https://boards.greenhouse.io/okx/jobs/5972703003 | OKX | Community Manager, Netherlands
-- [ ] https://job-boards.greenhouse.io/horizenlabs/jobs/5707310004 | Horizen Labs | Community Manager (ZKVerify)
+- [x] ~~https://boards.greenhouse.io/okx/jobs/5997519003 | OKX | Community Manager, OKX Spain~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://boards.greenhouse.io/okx/jobs/5972703003 | OKX | Community Manager, Netherlands~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/horizenlabs/jobs/5707310004 | Horizen Labs | Community Manager (ZKVerify)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/uniswaplabs/jobs/4565258005 | Uniswap Labs | Community Manager - APAC~~ — swept: triage-C (language/market gate)
 - [ ] https://job-boards.greenhouse.io/a16zcryptoteam/jobs/4297880006 | a16z crypto | Contractor, Program Manager, Crypto
 - [ ] https://jobs.paradigm.xyz/companies/symbiotic-2-4ace1b94-73f0-431a-8cb8-175636ab72fa/jobs/55872767-community-manager | Symbiotic | Community Manager
@@ -964,22 +964,22 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/supabase/a1320bbf-bfae-49a8-a1b7-12eeccaf39ca | Supabase | Developer Relations Engineer~~ — swept: negative-title
 
 - [x] ~~https://jobs.lever.co/jobgether/4f2d54c6-a3d1-4e5e-b371-5d5c5cb0635b | Jobgether | Senior Developer Community Manager~~ — swept: triage-C (out of archetype)
-- [ ] https://boards.greenhouse.io/smartling/jobs/5486815 | Smartling | Project Manager, Language Services
-- [ ] https://job-boards.greenhouse.io/celonis/jobs/7584575003 | Celonis | Lead Community Manager
+- [x] ~~https://boards.greenhouse.io/smartling/jobs/5486815 | Smartling | Project Manager, Language Services~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/celonis/jobs/7584575003 | Celonis | Lead Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/blockchain/jobs/8066864 | Blockchain.com | Content, Social and Community Manager
-- [ ] https://job-boards.greenhouse.io/eucalyptus/jobs/4626203005 | Eucalyptus | Community Manager
+- [x] ~~https://job-boards.greenhouse.io/eucalyptus/jobs/4626203005 | Eucalyptus | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/airtable/jobs/8604559002 | Airtable | Program Manager, Community (Contract)
-- [ ] https://job-boards.greenhouse.io/rootstocklabsltd/jobs/4585815101 | RootstockLabs | Community Manager
-- [ ] https://job-boards.greenhouse.io/noble/jobs/4407029008 | Noble | Community Manager
-- [ ] https://job-boards.greenhouse.io/okx/jobs/7503770003 | OKX | Senior Strategic Project Manager, Web3
+- [x] ~~https://job-boards.greenhouse.io/rootstocklabsltd/jobs/4585815101 | RootstockLabs | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/noble/jobs/4407029008 | Noble | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/okx/jobs/7503770003 | OKX | Senior Strategic Project Manager, Web3~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/proton/jobs/4770442101 | Proton | Senior Community Manager
 - [x] ~~https://jobs.ashbyhq.com/openclaw-foundation-inc/b5c4df0f-0a8c-4a37-85db-eb787d11fc03 | OpenClaw Foundation | Developer Relations & Community Manager (APAC)~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/sentient/71106e0e-f871-4010-a548-ba56786bcc85 | Sentient | China Developer Relations & Ecosystem Growth~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/Caldera/e28e3b0e-02fd-4ea6-b7c2-ed62da4c6276 | Caldera | Community Lead
+- [x] ~~https://jobs.ashbyhq.com/Caldera/e28e3b0e-02fd-4ea6-b7c2-ed62da4c6276 | Caldera | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/monad.foundation/6029f8cf-8a22-45fd-a843-b6a05b64beed | Monad Foundation | India Ecosystem Lead~~ — swept: triage-C (language/market gate)
-- [ ] https://jobs.ashbyhq.com/Sahara/768c5a43-bb7a-4167-ad35-dc33d84a70a3 | Sahara | Ecosystem Lead
-- [ ] https://jobs.ashbyhq.com/monad.foundation/2ea902ef-3363-4d1e-aa8b-6a330b626af8 | Monad Foundation | LATAM Ecosystem Lead
-- [ ] https://jobs.ashbyhq.com/dourolabs.xyz/3a9c9ac0-3966-4bf6-a695-82c7dcf49055 | Douro Labs | Ecosystem Lead - FOGO
+- [x] ~~https://jobs.ashbyhq.com/Sahara/768c5a43-bb7a-4167-ad35-dc33d84a70a3 | Sahara | Ecosystem Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/monad.foundation/2ea902ef-3363-4d1e-aa8b-6a330b626af8 | Monad Foundation | LATAM Ecosystem Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
+- [x] ~~https://jobs.ashbyhq.com/dourolabs.xyz/3a9c9ac0-3966-4bf6-a695-82c7dcf49055 | Douro Labs | Ecosystem Lead - FOGO~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.lever.co/arbitrumfoundation/0eef26ac-e42d-4b38-9138-026c12eb265e | Arbitrum Foundation | Korea Community Manager~~ — swept: triage-C (language/market gate)
 - [x] ~~https://jobs.lever.co/arbitrumfoundation/5c02b8eb-58c4-47e5-ab5f-34ac1820d4a9 | Arbitrum Foundation | Head of Ecosystem Growth~~ — swept: negative-title
 - [x] ~~https://jobs.lever.co/binance/4d718f57-be13-47f1-b16b-fffa0b92b609 | Binance | Community Manager - Saudi Arabia~~ — swept: triage-C (language/market gate)
@@ -992,7 +992,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.a16z.com/jobs/krea.ai?jobTypes=Community+Manager | krea.ai | Community Manager
 - [ ] https://wellfound.com/jobs/3245487-crypto-community-manager-stealth-mode-startup | ArcFive | Crypto Community Manager (Stealth-mode Startup)
 - [ ] https://wellfound.com/jobs/2811144-community-manager | Powerloom Protocol | Community Manager
-- [ ] https://jobs.ashbyhq.com/chief/cc1e4ac6-0258-4efb-b77e-8e4626d690d3 | Chief | Community Manager, LA (Contract)
+- [x] ~~https://jobs.ashbyhq.com/chief/cc1e4ac6-0258-4efb-b77e-8e4626d690d3 | Chief | Community Manager, LA (Contract)~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/eyt/97eff5fd-3544-4d14-8162-fcc98cf75c1b | Extend Your Team | Crypto Support Specialist
 - [x] ~~https://eu.experteer.com/career/view-jobs/frontend-engineer-react-dot-js-italia-54947682 |  | Full-Stack Engineer (Web3 / FinTech)~~ — swept: triage-C (out of archetype)
 - [ ] https://remote.com/jobs/included-health-c173e7m0/sr-project-and-program-manager-j1ylqdba | Included Health | Sr. Project and Program Manager
@@ -1005,15 +1005,15 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://laborx.com/jobs/web3-guru-102222 | Unknown | Web3 GURU
 - [ ] https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6007385004 | PlayStation Global | Community Manager
 - [ ] https://job-boards.greenhouse.io/eleventhhourgames/jobs/8546135002 | Eleventh Hour Games | Senior Community Manager
-- [ ] https://job-boards.greenhouse.io/okx/jobs/6256980003 | OKX | Community Manager, OKX Poland (remote)
+- [x] ~~https://job-boards.greenhouse.io/okx/jobs/6256980003 | OKX | Community Manager, OKX Poland (remote)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/anthropic/jobs/5231468008 | Anthropic | Enterprise Community Lead
-- [ ] https://job-boards.greenhouse.io/horizenlabs/jobs/5539618004 | Horizen Labs | Web3 Communication & Content Manager
+- [x] ~~https://job-boards.greenhouse.io/horizenlabs/jobs/5539618004 | Horizen Labs | Web3 Communication & Content Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063543007 | Hyphen Connect Limited | Content Specialist (Web3/ Crypto Exchange)
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5053487007 | Hyphen Connect Limited | Marketing Specialist (Community & Social Growth) - Web3/ Crypto
 - [ ] https://climate-tech-vc.pallet.com/jobs/d86976e7-b434-44dd-99c5-ec7d83bc2639 | For ClimateTech | Venture For ClimateTech Program Manager
 - [ ] https://job-boards.greenhouse.io/postman/jobs/7761536003 | Postman | Technical Community Manager
-- [ ] https://job-boards.greenhouse.io/opentable/jobs/7864544002 | OpenTable | Localisation Program Manager
-- [ ] https://job-boards.greenhouse.io/affirm/jobs/6993975003 | Affirm | Senior Program Manager Localization
+- [x] ~~https://job-boards.greenhouse.io/opentable/jobs/7864544002 | OpenTable | Localisation Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/affirm/jobs/6993975003 | Affirm | Senior Program Manager Localization~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://www.remote3.co/remote-jobs/job-application-for-senior-manager-web3-growth-at-okx-okx | OKX | Senior Manager Web3 Growth
 - [ ] https://www.remote3.co/remote-jobs/head-of-ecosystem-web3-aethir-1 | Aethir | Head of Ecosystem (Web3)
 - [x] ~~https://job-boards.greenhouse.io/uniswaplabs/jobs/4584083005 | Uniswap Labs | Community Manager APAC~~ — swept: triage-C (language/market gate)
@@ -1047,14 +1047,14 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/community-manager-visionaryeyecapital/96725 | Visionary Eye Capital | Web3 Community Manager
 - [ ] https://web3.career/community-manager-blockless/66816 | Blockless | Web3 Community Manager
 - [ ] https://builtin.com/job/project/ecosystem-manager-crypto-intelligence/367083 | Unknown | Ecosystem Manager, Crypto Intelligence
-- [ ] https://jobs.lever.co/cypher-games/a4b8c2d1-3e5f-4891-b234-567890abcdef | Cypher Games | Community Lead
+- [x] ~~https://jobs.lever.co/cypher-games/a4b8c2d1-3e5f-4891-b234-567890abcdef | Cypher Games | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://wellfound.com/jobs/3945291-web3-community-manager | Undisclosed | Web3 Community Manager
-- [ ] https://jobs.lever.co/abstract/community-lead-2024 | Abstract | Community Lead
-- [ ] https://jobs.ashbyhq.com/nillion/community-lead | Nillion | Community Lead
+- [x] ~~https://jobs.lever.co/abstract/community-lead-2024 | Abstract | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.ashbyhq.com/nillion/community-lead | Nillion | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/morph/ecosystem-growth | Morph | Ecosystem Growth Manager~~ — swept: negative-title
-- [ ] https://jobs.ashbyhq.com/humanity-protocol/community-manager | Humanity Protocol | Community Manager
-- [ ] https://jobs.lever.co/flow-protocol/community-manager | Flow Protocol | Community Manager
-- [ ] https://jobs.lever.co/corn-protocol/community-lead | Corn Protocol | Community Lead
+- [x] ~~https://jobs.ashbyhq.com/humanity-protocol/community-manager | Humanity Protocol | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/flow-protocol/community-manager | Flow Protocol | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.lever.co/corn-protocol/community-lead | Corn Protocol | Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/sophon/ecosystem-manager | Sophon | Ecosystem Manager
 - [ ] https://job-boards.greenhouse.io/vana/community-lead | Vana | Community Lead
 - [ ] https://jobs.a16z.com/companies/flow-protocol/community-lead | Flow Protocol | Community Lead
@@ -1070,7 +1070,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.lever.co/scroll/community-manager-apac | Scroll | Community Manager APAC~~ — swept: triage-C (language/market gate)
 - [x] ~~https://jobs.ashbyhq.com/starkware/ecosystem-growth | StarkWare | Ecosystem Growth Manager~~ — swept: negative-title
 
-- [ ] https://jobs.ashbyhq.com/atomic/fbd58512-7ae2-41c0-bbcc-e1c92ab7b5aa | Atomic | Community Manager
+- [x] ~~https://jobs.ashbyhq.com/atomic/fbd58512-7ae2-41c0-bbcc-e1c92ab7b5aa | Atomic | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/proto-town/b37647bc-316f-43da-b91b-622781a80bc9 | Proto-Town | Community Manager
 - [x] ~~https://jobs.ashbyhq.com/flox/132d3ea8-d91b-4da1-b564-0cf1ccd7b2a8 | Flox | Developer Relations Lead~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/openclaw-foundation-inc/b5c4df0f-0a8c-4a37-85db-eb787d11fc03/application | OpenClaw Foundation | DevRel Community Manager APAC~~ — swept: negative-title
@@ -1163,9 +1163,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://de.linkedin.com/jobs/view/community-social-media-manager-m-f-d-at-cosy-4440415698 | Cosy | Community & Social Media Manager (m/f/d)
 - [ ] https://fr.linkedin.com/jobs/view/community-manager-at-bav-group-m%C3%A9xico-4443730179 | Bav Group México | Community Manager
 
-- [ ] https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Montreal, QC - Remote
-- [ ] https://job-boards.greenhouse.io/alxafrica/jobs/7695713 | ALX Africa | Director of Community | Remote
-- [ ] https://jobs.ashbyhq.com/lovable/da5a2b53-72af-4f6b-b1bc-03512a8d2c9e | Lovable | Head of Community Marketing | Remote
+- [x] ~~https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Montreal, QC - Remote~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/alxafrica/jobs/7695713 | ALX Africa | Director of Community | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://jobs.ashbyhq.com/lovable/da5a2b53-72af-4f6b-b1bc-03512a8d2c9e | Lovable | Head of Community Marketing | Remote~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://cryptojobslist.com/jobs/community-manager-aurora-labs-remote | Aurora Labs | Community Manager | Remote
 - [ ] https://cryptojobslist.com/jobs/senior-community-manager-crestal-network-remote | Crestal Network | Senior Community Manager | Remote
 - [ ] https://web3.career/lead-community-manager-seedify-fund/92374 | Seedify | Lead Community Manager | Remote
@@ -1280,11 +1280,11 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
 
-- [ ] https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake Community Manager | Remote
+- [x] ~~https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake Community Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
-- [ ] https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake CM | Remote
+- [x] ~~https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake CM | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
-- [ ] https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Remote
+- [x] ~~https://job-boards.greenhouse.io/rtingscom/jobs/4834550007 | RTINGS.com | Head of Community | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
 - [ ] https://eslfaceitgroup.com/career/job/4871675101?gh_jid=4871675101 | TestCo | Gate test | Remote
 
