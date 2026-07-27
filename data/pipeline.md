@@ -745,7 +745,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://careers.play.vc/companies/mighty-bear-games/jobs/46281107-web3-product-owner | Mighty Bear Games | Web3 Product Owner
 - [ ] https://www.keywordsstudios.com/en/careers/browse-careers/eue-spontaneous-application-community-manager-video-games-worldwide-remote/ | Keywords Studios | Community Manager (Video Games)
 - [x] ~~https://jobs.ashbyhq.com/cognition/b24559d8-c742-4da9-aa6c-581a00e56090 | Cognition | Developer Community Manager~~ — swept: triage-C (out of archetype)
-- [ ] https://jobs.ashbyhq.com/openai/a10e13f7-1863-49e7-b7ab-0a9b430aa639 | OpenAI | Developer Communications & Community Manager
+- [x] ~~https://jobs.ashbyhq.com/openai/a10e13f7-1863-49e7-b7ab-0a9b430aa639 | OpenAI | Developer Communications & Community Manager~~ — swept: negative-title
 - [ ] https://jobs.ashbyhq.com/netboxlabs/8b602a88-9616-4fb6-ad84-ceed46e901f9 | NetBox Labs | Community Engagement Manager
 - [x] ~~https://jobs.ashbyhq.com/apify/fc738d0a-7776-48ff-b9ac-0fc87fba97fa | Apify | Developer Community Manager~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/sentient/aff4a300-f268-4962-806e-0ad2a132511c | Sentient | Developer Relations & Ecosystem Growth Lead~~ — swept: negative-title
@@ -918,7 +918,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://app.welcometothejungle.com/jobs/zPX38umU | Binance | Binance France Community Manager
 - [ ] https://euremotejobs.com/job/affiliate-manager-for-igaming-websites/ | EU Remote Jobs listing | Affiliate Manager for iGaming Websites
 - [ ] https://laborx.com/jobs/crypto-community-manager-87965 | Various | Crypto Community Manager
-- [ ] https://jobs3.io/job/director-of-quantitative-token-engineering-metamask/ | Metamask | Director of Quantitative Token Engineering at Metamask
+- [x] ~~https://jobs3.io/job/director-of-quantitative-token-engineering-metamask/ | Metamask | Director of Quantitative Token Engineering at Metamask~~ — swept: negative-title
 - [ ] https://main.jobs3.io/job/crypto-social-media-manager-hanoi-remote/ | Token Metrics | Crypto Social Media Manager at Token Metrics
 - [ ] https://wellfound.com/jobs/4114890-head-of-web3-ecosystem-alliances-post-quantum-blockchain-commission-1-equity | Post-Quantum Blockchain | Head of Web3 Ecosystem Alliances
 - [x] ~~https://boards.greenhouse.io/embed/job_app?token=7026791&gh_src=web3.career | Status | Status Network DevRel & Community Manager (South Korea)~~ — swept: negative-title
@@ -1123,7 +1123,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://de.linkedin.com/jobs/view/community-manager-psa-eu-frankfurt-at-collectors-4402761416 | Collectors | Community Manager, PSA EU (Frankfurt)
 - [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-cdd-12-mois-at-innocent-drinks-4443139828 | innocent drinks | Community Manager H/F - CDD 12 mois
 - [ ] https://fr.linkedin.com/jobs/view/content-creator-community-manager-at-trainsweateat-4419165144 | TRAINSWEATEAT | Content Creator & Community Manager
-- [ ] https://news.ycombinator.com/item?id=48762510 | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking to hire our first full time engineer besides myself. High impact role, over 100
+- [x] ~~https://news.ycombinator.com/item?id=48762510 | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking | Playit - https://playit.gg Eugene, Oregon. REMOTE okay. Oregon USA only. Looking to hire our first full time engineer besides myself. High impact role, over 100~~ — swept: negative-title
 - [ ] https://web3.career/social-media-and-community-manager-koinly/151770 | web3.career | Social Media And Community Manager Koinly
 - [ ] https://web3.career/content-social-and-community-manager-blockchain/151414 | web3.career | Content Social And Community Manager Blockchain
 - [ ] https://web3.career/community-manager-salsavalley/151335 | web3.career | Community Manager Salsavalley
@@ -1196,13 +1196,13 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/oplabs/885091c2-2f56-4d46-aa01-efe49a065dee | OP Labs (Optimism) | Blockchain Solutions Architect | New York~~ — swept: location (New York)
 - [ ] https://jobs.ashbyhq.com/monad.foundation/c62f41a9-6164-4bf1-be68-646172c1733f | Monad Labs | DeFi Growth Lead | Remote
 - [ ] https://jobs.ashbyhq.com/monad.foundation/1dd61a59-3592-47f7-af0a-2d3197e659ef | Monad Labs | Head of DeFi | Remote
-- [ ] https://jobs.ashbyhq.com/wormholelabs/e5e39675-92e4-48bf-ba9a-df52fad4dd8c | Wormhole Foundation | Solana Protocol Engineer | Remote
-- [ ] https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9 | Wormhole Foundation | Full-Stack Blockchain Engineer | Remote
+- [x] ~~https://jobs.ashbyhq.com/wormholelabs/e5e39675-92e4-48bf-ba9a-df52fad4dd8c | Wormhole Foundation | Solana Protocol Engineer | Remote~~ — swept: negative-title (Remote)
+- [x] ~~https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9 | Wormhole Foundation | Full-Stack Blockchain Engineer | Remote~~ — swept: negative-title (Remote)
 - [ ] https://jobs.ashbyhq.com/Lido.fi/9cb62bc8-01de-4a13-96a3-933b6d959394 | Lido Finance | Associate DeFi Growth Specialist | Worldwide
 - [ ] https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
 - [ ] https://jobs.ashbyhq.com/Lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
 - [x] ~~https://job-boards.greenhouse.io/layerzerolabs/jobs/5554608004 | LayerZero Labs | Protocol Engineer | Vancouver, BC~~ — swept: location (Vancouver, BC)
-- [ ] https://jobs.ashbyhq.com/magiceden/94dc960c-fb7b-40dc-a573-941cb61f80aa | Magic Eden | Senior Counsel, iGaming & Sportsbook | Remote
+- [x] ~~https://jobs.ashbyhq.com/magiceden/94dc960c-fb7b-40dc-a573-941cb61f80aa | Magic Eden | Senior Counsel, iGaming & Sportsbook | Remote~~ — swept: negative-title (Remote)
 - [ ] https://apply.workable.com/chaingpt/jobs/view/7360C6B0AA | ChainGPT | Lead Generation Specialist - Web3 & AI Domain - Europe | Poland (Remote)
 - [x] ~~https://job-boards.greenhouse.io/twitch/jobs/8599721002 | Twitch (Amazon) | Integrations Program Manager | San Francisco, CA~~ — swept: location (San Francisco, CA)
 - [x] ~~https://job-boards.greenhouse.io/twitch/jobs/8648200002 | Twitch (Amazon) | Localization Program Manager | Seattle, WA~~ — swept: location (Seattle, WA)
@@ -1295,7 +1295,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://hk.linkedin.com/jobs/view/web3-ecosystem-manager-full-or-part-time-at-finoverse-4444892587 | Finoverse | Web3 & Ecosystem Manager (Full or Part Time)
 
 - [ ] https://jobs.ashbyhq.com/phrase/03ed92b0-e5ed-4880-acca-14048bfbb738 | Phrase (formerly Memsource) | Program Manager - FDE and Managed Outcomes | Europe
-- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-site-reliability-engineer-token-factory-inference-platform-125814 | Nebius | Senior Site Reliability Engineer — Token Factory (Inference Platform) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
-- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-ml-engineer-token-factory-30647 | Nebius | Senior ML Engineer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
-- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-backend-developer-token-factory-349593 | Nebius | Senior Backend Developer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
+- [x] ~~https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-site-reliability-engineer-token-factory-inference-platform-125814 | Nebius | Senior Site Reliability Engineer — Token Factory (Inference Platform) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe~~ — swept: negative-title (Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe)
+- [x] ~~https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-ml-engineer-token-factory-30647 | Nebius | Senior ML Engineer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe~~ — swept: negative-title (Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe)
+- [x] ~~https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-backend-developer-token-factory-349593 | Nebius | Senior Backend Developer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe~~ — swept: negative-title (Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe)
 - [ ] https://www.arbeitnow.com/jobs/companies/4lu44n1n37w012k/global-int-upstream-senior-packaging-project-manager-all-genders-berlin-54211 | 4lu44n1n37w012k | \[GLOBAL/INT\] \[UPSTREAM\] Senior Packaging Project Manager (all genders) | Berlin

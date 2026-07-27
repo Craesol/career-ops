@@ -21,8 +21,10 @@ import { DEFAULT_FILTERS, cleanChips, type ExploreFilters } from "@/lib/explore"
  */
 type FilterLists = Pick<ExploreFilters, "positive" | "negative" | "allow" | "block" | "alwaysAllow">;
 
+// Config seeding, not user typing: keep the whole list (see cleanChips' note).
+const CONFIG_CAP = 200;
 function listFrom(v: unknown): string[] {
-  return cleanChips(v);
+  return cleanChips(v, CONFIG_CAP);
 }
 
 /** Serialize filters into a minimal, valid portals.yml. Scalars go through

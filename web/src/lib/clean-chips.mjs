@@ -5,8 +5,17 @@
 
 const CHIP_CAP = 16;
 
-/** Trim, drop empties, de-dupe case-insensitively, cap length. */
-export function cleanChips(v) {
+/**
+ * Trim, drop empties, de-dupe case-insensitively, cap length.
+ *
+ * The 16 cap protects the UI from a user pasting a huge comma-separated blob
+ * into a chip input. It must NOT apply when seeding from the user's own
+ * portals.yml: that file legitimately holds 50+ keywords, and silently keeping
+ * the first 16 meant every negative after "COBOL" (Engineer, Developer,
+ * Architect, …) was never applied by the web's scan — the filters looked
+ * configured but weren't. Callers that read config pass a larger `cap`.
+ */
+export function cleanChips(v, cap = CHIP_CAP) {
   if (v == null) return [];
   const arr = Array.isArray(v) ? v : [v];
   const seen = new Set();
@@ -20,7 +29,7 @@ export function cleanChips(v) {
     if (seen.has(key)) continue;
     seen.add(key);
     out.push(k);
-    if (out.length >= CHIP_CAP) break;
+    if (out.length >= cap) break;
   }
   return out;
 }
