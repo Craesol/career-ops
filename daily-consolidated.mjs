@@ -179,8 +179,23 @@ if (INCLUDE_L3) {
     known = new Set(readFileSync(resolve(ROOT, 'data/scan-history.tsv'), 'utf-8')
       .split('\n').map(l => l.split('\t')[0]).filter(Boolean));
   } catch { /* first run */ }
+  // Apply the SAME title filter the scanners use. Without this the L3 sweep was
+  // the one path into the inbox with no role gate at all, so a web search for
+  // "community" happily persisted "Blockchain Solutions Architect".
+  let titleOk = () => true;
+  try {
+    const yaml = (await import('js-yaml')).default;
+    const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8')) || {};
+    const { buildTitleFilter } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+    titleOk = buildTitleFilter(cfg.title_filter);
+  } catch (e) {
+    console.error('  title filter unavailable, keeping all: ' + e.message);
+  }
+
   const seenNow = new Set();
-  const fresh = proposed.filter(o => !known.has(o.url) && !seenNow.has(o.url) && seenNow.add(o.url));
+  const offRole = proposed.filter(o => !titleOk(o.title)).length;
+  const fresh = proposed.filter(o => titleOk(o.title) && !known.has(o.url) && !seenNow.has(o.url) && seenNow.add(o.url));
+  if (offRole) console.log('  ' + offRole + ' dropped by title filter');
 
   if (fresh.length) {
     try {

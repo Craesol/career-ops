@@ -1290,3 +1290,12 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 
 
+
+- [ ] https://www.themuse.com/jobs/celonis/people-culture-automation-ai-project-manager | Celonis | People & Culture Automation & AI Project Manager | Madrid, Spain
+- [ ] https://hk.linkedin.com/jobs/view/web3-ecosystem-manager-full-or-part-time-at-finoverse-4444892587 | Finoverse | Web3 & Ecosystem Manager (Full or Part Time)
+
+- [ ] https://jobs.ashbyhq.com/phrase/03ed92b0-e5ed-4880-acca-14048bfbb738 | Phrase (formerly Memsource) | Program Manager - FDE and Managed Outcomes | Europe
+- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-site-reliability-engineer-token-factory-inference-platform-125814 | Nebius | Senior Site Reliability Engineer — Token Factory (Inference Platform) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
+- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-ml-engineer-token-factory-30647 | Nebius | Senior ML Engineer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
+- [ ] https://www.arbeitnow.com/jobs/companies/nebius/remote-senior-backend-developer-token-factory-349593 | Nebius | Senior Backend Developer (Token Factory) | Amsterdam, Netherlands; Berlin, United Kingdom; Prague, Czech Republic; Remote - Europe
+- [ ] https://www.arbeitnow.com/jobs/companies/4lu44n1n37w012k/global-int-upstream-senior-packaging-project-manager-all-genders-berlin-54211 | 4lu44n1n37w012k | \[GLOBAL/INT\] \[UPSTREAM\] Senior Packaging Project Manager (all genders) | Berlin
