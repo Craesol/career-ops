@@ -29,11 +29,12 @@ function drawElderSign(ctx: CanvasRenderingContext2D, frame: number) {
   const t = frame / FRAMES;
   ctx.clearRect(0, 0, SIZE, SIZE);
 
-  // rounded brand-orange tile, pulsing between two brand shades
+  // rounded violet tile, pulsing between two shades of the accent purple the
+  // CV template already uses (hsl(270 70% 45%) ≈ rgb(110 34 195)).
   const pulse = 0.5 + 0.5 * Math.sin(t * Math.PI * 2);
-  const r = Math.round(198 + 24 * pulse);
-  const g = Math.round(108 + 20 * pulse);
-  const b = Math.round(38 + 14 * pulse);
+  const r = Math.round(110 + 38 * pulse);
+  const g = Math.round(34 + 30 * pulse);
+  const b = Math.round(195 + 40 * pulse);
   ctx.fillStyle = `rgb(${r},${g},${b})`;
   const radius = 7;
   ctx.beginPath();
