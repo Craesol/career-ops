@@ -4,13 +4,57 @@
 // can never drift between the two halves. Server-only logic (spawning the scanner,
 // writing temp files) lives in lib/core/{scan,portals,pipeline}.ts.
 
-export type AtsSource = "greenhouse" | "lever" | "ashby" | "workday";
-export const ATS_SOURCES: AtsSource[] = ["greenhouse", "lever", "ashby", "workday"];
+// ATS platforms (company career pages)
+export type AtsSource =
+  | "greenhouse" | "lever" | "ashby" | "workday"
+  // Job boards with public APIs
+  | "remoteok" | "remotive" | "weworkremotely" | "himalayas"
+  | "hackernews" | "jobicy" | "arbeitnow" | "echojobs"
+  // EU/Regional boards
+  | "nofluffjobs" | "justjoin" | "landingjobs" | "getonbrd"
+  // Other ATS platforms
+  | "bamboohr" | "recruitee" | "workable" | "teamtailor" | "personio";
+
+export const ATS_SOURCES: AtsSource[] = [
+  // Primary ATS (with datasets)
+  "greenhouse", "lever", "ashby", "workday",
+  // Popular remote job boards
+  "remoteok", "remotive", "weworkremotely", "himalayas",
+  // Tech job boards
+  "hackernews", "jobicy", "arbeitnow", "echojobs",
+  // EU/Regional
+  "nofluffjobs", "justjoin", "landingjobs", "getonbrd",
+  // Other ATS
+  "bamboohr", "recruitee", "workable", "teamtailor", "personio",
+];
+
 export const ATS_LABEL: Record<AtsSource, string> = {
+  // Primary ATS
   greenhouse: "Greenhouse",
   lever: "Lever",
   ashby: "Ashby",
   workday: "Workday",
+  // Remote job boards
+  remoteok: "RemoteOK",
+  remotive: "Remotive",
+  weworkremotely: "WeWorkRemotely",
+  himalayas: "Himalayas",
+  // Tech boards
+  hackernews: "HN Who's Hiring",
+  jobicy: "Jobicy",
+  arbeitnow: "Arbeitnow",
+  echojobs: "EchoJobs",
+  // EU/Regional
+  nofluffjobs: "NoFluffJobs",
+  justjoin: "JustJoin.it",
+  landingjobs: "LandingJobs",
+  getonbrd: "GetOnBrd",
+  // Other ATS
+  bamboohr: "BambooHR",
+  recruitee: "Recruitee",
+  workable: "Workable",
+  teamtailor: "Teamtailor",
+  personio: "Personio",
 };
 
 /** The full UI filter state. The keyword/location lists mirror scan.mjs's

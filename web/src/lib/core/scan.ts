@@ -2,10 +2,30 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { careerOpsRoot, rootScript } from "@/lib/career-ops";
 import { writeTempPortals, cleanupTempPortals } from "./portals";
-import { ATS_SOURCES, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
+import { ATS_SOURCES, type AtsSource, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
 
 export type { DiscoveredOffer, ScanEvent, AtsSource } from "@/lib/explore";
 export { ATS_SOURCES } from "@/lib/explore";
+
+// ATS sources that have datasets in scan-ats-full.mjs (primary scanners)
+const DATASET_ATS: AtsSource[] = ["greenhouse", "lever", "ashby", "workday"];
+
+// Check which sources are supported by the local scanner
+function getSupportedAts(): AtsSource[] {
+  try {
+    const src = fs.readFileSync(rootScript("scan-ats-full"), "utf8");
+    const supported: AtsSource[] = [];
+    for (const ats of ATS_SOURCES) {
+      // Check if the scanner has a SOURCES entry for this ATS
+      if (src.includes(`${ats}:`) || DATASET_ATS.includes(ats)) {
+        supported.push(ats);
+      }
+    }
+    return supported.length ? supported : DATASET_ATS;
+  } catch {
+    return DATASET_ATS;
+  }
+}
 
 /**
  * ACL for the discovery engine — orchestrates the REAL core scanner
@@ -83,7 +103,10 @@ type ScanJson = {
 export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) => void): Promise<DiscoveredOffer[]> {
   return new Promise((resolve) => {
     const tempPortals = writeTempPortals(filters);
-    const ats = (filters.ats.length ? filters.ats : [...ATS_SOURCES]).filter((a) => (ATS_SOURCES as readonly string[]).includes(a));
+    const supported = getSupportedAts();
+    // Only include ATS sources that the backend scanner actually supports
+    const ats = (filters.ats.length ? filters.ats : [...ATS_SOURCES])
+      .filter((a) => supported.includes(a as AtsSource));
     const useJson = scannerSupportsJson();
     const args = [
       rootScript("scan-ats-full"),
