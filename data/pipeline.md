@@ -1,5 +1,12 @@
 
 ## Pendientes
+- https://cryptocurrencyjobs.co/marketing/aethir-community-manager/  <!-- Community Manager @ Aethir [general] -->
+- https://apply.workable.com/pavago/j/E0AF9F06ED/  <!-- Community Manager @ Pavago [general] -->
+- https://apply.workable.com/mlabs/j/C8B22B74F1  <!-- Head of Community @ MLabs [general] -->
+- https://startup.jobs/community-manager-crypto-remote-within-ireland-brazil-argentina-or-the-us-wildlife-studios-2896592  <!-- Community Manager Crypto @ Wildlife Studios [general] -->
+- https://beincrypto.com/jobs/p/mandarin-community-manager-monad/  <!-- Mandarin Community Manager @ Monad [general] -->
+- https://job-boards.greenhouse.io/bybit/jobs/4928166101  <!-- Social Media & Community Lead @ Bybit [seriesA] -->
+- https://climate-tech-vc.pallet.com/jobs/c48f123f-92cc-4651-8a5d-1ef4200cc5a1  <!-- Global Community Lead @ Celo (via Pallet) [t3] -->
 - [x] ~~https://job-boards.greenhouse.io/gitlab/jobs/8374358002 | GitLab | Manager, Ecosystem Sales - EMEA South~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/employerdirecthealthcare/jobs/4859889007 | Lantern | Ecosystem Partnerships Operations Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/bloombergorg/jobs/7634406003 | Bloomberg Philanthropies | Program Manager, Data & AI Portfolio~~ — closed: posting gone (ATS API 404 — posting removed)
