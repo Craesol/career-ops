@@ -8,6 +8,7 @@ import { AnimatedFavicon } from "@/components/animated-favicon";
 import { AssistantConsole } from "@/components/assistant-console";
 import { MobileNav } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { PromptBar } from "@/components/prompt-bar";
 import { JobsProvider } from "@/components/jobs/job-store";
 import { PipelineProvider } from "@/components/pipeline/pipeline-provider";
 import { ApplyProvider } from "@/components/apply/apply-provider";
@@ -72,7 +73,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </aside>
-        <main className="flex-1 overflow-x-hidden">{children}</main>
+        <main className="flex-1 overflow-x-hidden">
+          <PromptBar />
+          {children}
+        </main>
         <AssistantConsole />
         <FirstScoreView />
         <BetaBanner />
