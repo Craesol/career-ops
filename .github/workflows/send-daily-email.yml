@@ -13,6 +13,11 @@ on:
     # 09:47 UTC = 11:47 CEST (España). NOTE: scheduled runs only fire from the
     # default branch — merge this workflow to main for the schedule to activate.
     - cron: '47 9 * * *'
+  # Editing this workflow on the feature branch fires a run — the only way to
+  # trigger it from an environment where the Actions API is unreachable.
+  push:
+    branches: [claude/view-page-display-ggrYS]
+    paths: ['.github/workflows/send-daily-email.yml']
   workflow_dispatch:
     inputs:
       scan_date:
