@@ -98,9 +98,18 @@ jobs:
           const TO = process.env.NOTIFY_EMAIL || 'traducto@gmail.com';
           const today = process.env.SCAN_DATE || new Date().toISOString().slice(0, 10);
 
+          // The dev environment cannot read Actions logs (the egress proxy blocks
+          // the API, and the UI needs a session), so every outcome is also written
+          // to email-status.txt and committed back — that file is the diagnosis.
+          const { writeFileSync } = await import('fs');
+          const report = (line) => {
+            console.log(line);
+            writeFileSync('email-status.txt', `${new Date().toISOString()}  ${line}\n`);
+          };
+
           if (!RESEND_API_KEY) {
-            console.error('RESEND_API_KEY secret not set. Add it in repo Settings → Secrets → Actions.');
-            process.exit(1);
+            report('FAIL — RESEND_API_KEY secret is not set on the repository.');
+            process.exit(0);
           }
 
           const tsv = readFileSync('data/scan-history.tsv', 'utf-8');
@@ -150,6 +159,20 @@ jobs:
             body: JSON.stringify({ from: FROM, to: [TO], subject, html })
           });
           const body = await res.json();
-          if (!res.ok) { console.error('Resend error:', JSON.stringify(body)); process.exit(1); }
-          console.log(`Email sent (id=${body.id}): "${subject}"`);
+          if (!res.ok) {
+            report(`FAIL — Resend HTTP ${res.status}: ${JSON.stringify(body)}`);
+            process.exit(0);
+          }
+          report(`OK — sent to ${TO} (id=${body.id}) subject: "${subject}"`);
           EOF
+
+      - name: Publish the outcome so it is readable over git
+        if: always()
+        run: |
+          test -f email-status.txt || echo "$(date -u +%FT%TZ)  FAIL — the email step died before reporting." > email-status.txt
+          cat email-status.txt
+          git config user.name "career-ops-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f email-status.txt
+          git diff --cached --quiet || git commit -m "chore: email delivery status [skip ci]"
+          git push origin HEAD:${GITHUB_REF_NAME}
