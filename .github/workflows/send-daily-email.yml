@@ -65,7 +65,11 @@ jobs:
 
       - name: Install dependencies
         if: ${{ inputs.skip_scan != 'true' && env.SKIP_SCAN != '1' }}
-        run: npm ci
+        # --ignore-scripts skips the postinstall, which downloads Chromium with
+        # --with-deps (slow, needs apt, and fails the whole job before the email
+        # step ever runs). scan.mjs only imports Playwright for --verify, which
+        # this workflow never passes.
+        run: npm ci --ignore-scripts
 
       - name: Run portal scan
         if: ${{ inputs.skip_scan != 'true' && env.SKIP_SCAN != '1' }}
