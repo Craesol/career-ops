@@ -1,4 +1,7 @@
 
+## Rechazados
+- [x] ~~https://talent.wxrk.ai/jobs/job/null/web3-social-media-manager-x-part-time/3187187 | Null | Web3 Social Media Manager (X) - Part-time~~ — declined (2026-07-29)
+
 ## Pendientes
 - https://cryptocurrencyjobs.co/marketing/aethir-community-manager/  <!-- Community Manager @ Aethir [general] -->
 - https://apply.workable.com/pavago/j/E0AF9F06ED/  <!-- Community Manager @ Pavago [general] -->
