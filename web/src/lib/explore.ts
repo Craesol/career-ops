@@ -12,6 +12,8 @@ export type AtsSource =
   | "hackernews" | "jobicy" | "arbeitnow" | "echojobs"
   // EU/Regional boards
   | "nofluffjobs" | "justjoin" | "landingjobs" | "getonbrd"
+  // Web3/Crypto boards
+  | "wxrk" | "web3career"
   // Other ATS platforms
   | "bamboohr" | "recruitee" | "workable" | "teamtailor" | "personio";
 
@@ -24,6 +26,8 @@ export const ATS_SOURCES: AtsSource[] = [
   "hackernews", "jobicy", "arbeitnow", "echojobs",
   // EU/Regional
   "nofluffjobs", "justjoin", "landingjobs", "getonbrd",
+  // Web3/Crypto
+  "wxrk", "web3career",
   // Other ATS
   "bamboohr", "recruitee", "workable", "teamtailor", "personio",
 ];
@@ -49,6 +53,9 @@ export const ATS_LABEL: Record<AtsSource, string> = {
   justjoin: "JustJoin.it",
   landingjobs: "LandingJobs",
   getonbrd: "GetOnBrd",
+  // Web3/Crypto
+  wxrk: "WXRK",
+  web3career: "Web3.career",
   // Other ATS
   bamboohr: "BambooHR",
   recruitee: "Recruitee",

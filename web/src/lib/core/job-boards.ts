@@ -159,6 +159,48 @@ async function fetchArbeitnow(): Promise<JobBoardResult[]> {
   }
 }
 
+// ── WXRK (Web3 Jobs) ────────────────────────────────────────────────────
+async function fetchWxrk(): Promise<JobBoardResult[]> {
+  try {
+    const res = await fetch("https://talent.wxrk.ai/api/jobs", { headers: UA });
+    if (!res.ok) return [];
+    const data = await res.json();
+    if (!Array.isArray(data)) return [];
+    return data
+      .filter((j: any) => j && j.title && j.url)
+      .map((j: any) => ({
+        title: j.title,
+        url: j.url,
+        company: j.company || j.companyName || "WXRK",
+        location: j.location || "Remote",
+        postedAt: j.postedAt ? j.postedAt.split("T")[0] : "",
+      }));
+  } catch {
+    return [];
+  }
+}
+
+// ── Web3.career ────────────────────────────────────────────────────────
+async function fetchWeb3Career(): Promise<JobBoardResult[]> {
+  try {
+    const res = await fetch("https://web3.career/api/v1?limit=100", { headers: UA });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const jobs = Array.isArray(data) ? data : data.jobs || [];
+    return jobs
+      .filter((j: any) => j && (j.title || j.position))
+      .map((j: any) => ({
+        title: j.title || j.position,
+        url: j.url || `https://web3.career/job/${j.id || j.slug}`,
+        company: j.company || j.company_name || "Web3.career",
+        location: j.location || "Remote",
+        postedAt: j.date ? j.date.split("T")[0] : "",
+      }));
+  } catch {
+    return [];
+  }
+}
+
 // ── HackerNews Who's Hiring ────────────────────────────────────────────
 async function fetchHackerNews(): Promise<JobBoardResult[]> {
   try {
@@ -206,6 +248,8 @@ const BOARD_FETCHERS: Record<string, () => Promise<JobBoardResult[]>> = {
   jobicy: fetchJobicy,
   arbeitnow: fetchArbeitnow,
   hackernews: fetchHackerNews,
+  wxrk: fetchWxrk,
+  web3career: fetchWeb3Career,
 };
 
 export const SUPPORTED_BOARDS = Object.keys(BOARD_FETCHERS);
