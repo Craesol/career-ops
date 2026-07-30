@@ -1,1 +1,0 @@
-2026-07-30T08:54:32.772Z  resend=SKIPPED (no RESEND_API_KEY secret) | issue=FAIL HTTP 410 Issues has been disabled in this repository. | commit-comment=OK https://github.com/Craesol/career-ops/commit/a7ad64331566fd26e38018acda55aa16cece62cd#commitcomment-194329448 — subject: "career-ops: 4 new role(s) (0 API + 4 WebSearch) — 2026-07-30"

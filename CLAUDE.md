@@ -406,45 +406,12 @@ open no PR and ask.
 
 Work ships as a direct push to the designated branch of `origin`.
 
-## Daily scan when the network is blocked
+## Remote sessions: do not scan, do not email
 
-A daily routine (11:47 Europe/Madrid) starts a session in this repo to scan for
-roles and report by email. **In the Claude Code remote environment most outbound
-network is denied by the egress proxy:**
-
-- `api.resend.com` → 403, so no mail can be sent
-- ATS APIs (`boards-api.greenhouse.io`, `api.lever.co`, `api.ashbyhq.com`) → 403
-- Job board feeds (`remoteok.com/api`, `remotive.com`, `himalayas.app`, …) → 403
-- SMTP ports → filtered
-- GitHub API `/actions/` paths → 403, so secrets and workflow dispatch are out of reach
-
-Consequently `node scan.mjs`, `scan-and-notify.mjs` and `send-daily-email.mjs`
-**cannot work here.** Do not debug or retry them; nothing is wrong with the code.
-
-Do this instead:
-
-1. Scan with the **WebSearch** tool, which does have egress. Use the
-   `search_queries` in `portals.yml` as the script, covering the profile's
-   archetypes: Community, Social Media, Ecosystem/Partnerships, Marketing
-   Communications, Guild/Ambassador, Esports, Localization — in Web3 and gaming.
-2. Deduplicate every candidate against `data/pipeline.md` and
-   `data/scan-history.tsv` (normalize: lowercase, no trailing slash, no query string).
-3. Apply the `portals.yml` filters: drop anything matching `negative` (DevRel,
-   engineering, internships/alternance, US property-management "Community
-   Manager") and anything plainly mislocated.
-4. Append new finds to `data/pipeline.md` (Pendientes) and
-   `data/scan-history.tsv`, marked `unverified` — liveness cannot be confirmed
-   from here, the URLs come from indexed results.
-5. **Put the whole digest in the final response text** — company, title, URL and
-   tier for each role. The routine's notification email is the actual delivery
-   channel, so anything left out of the response never reaches the user. Never
-   answer with "see the attached file" or a bare "the email could not be sent".
-
-The proper path, once available: `.github/workflows/send-daily-email.yml` runs
-the full API scan and sends through Resend from GitHub's runners, where the
-network is open. It is waiting on two repository secrets only the user can
-create — `RESEND_API_KEY` and `PORTALS_YML`. If those exist, that workflow is
-the preferred route and this manual procedure is unnecessary.
-
-Recipient: `guildmaster.core@gmail.com` — Resend only delivers to the account owner's
-address while the shared `onboarding@resend.dev` sender is in use.
+Everything in this project runs on the user's own machine (daily-consolidated.mjs
+via Task Scheduler). Remote/cloud sessions — routines, claude.ai/code, CI — must
+NOT scan for roles, must NOT write to data/pipeline.md or data/scan-history.tsv,
+and must NOT attempt to send email. The remote environment cannot verify posting
+liveness or reach any mail provider; every past attempt delivered stale or
+undeliverable results. If a scheduled remote session fires, reply only with a
+reminder that the routine should be deleted, and do nothing else.
