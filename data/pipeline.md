@@ -1310,3 +1310,29 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://bankless.pallet.com/jobs/b8c2d0e8-1125-43a9-8b74-107cac87ff40 | Aragon | Community Manager
 - [ ] https://superteam-jobs.pallet.com/jobs/e7b8a04a-af12-44a1-a441-27007fd5dc54 | Arcana Network | Community Manager
 - [ ] https://climate-tech-vc.pallet.com/jobs/ea8e7991-e303-4928-b671-98ad30dd8e57 | Ecosapiens | Community Manager
+
+- [ ] https://job-boards.greenhouse.io/messari/jobs/4492931005 | Messari | Social Media Community Manager
+- [ ] https://jobs.lever.co/Casa/dc035dc4-ee9e-4a71-939a-9e2a50604c50 | Casa | Marketing Community Manager
+- [ ] https://apply.workable.com/aethir/j/2EDAF58C09 | Aethir | Web3 BD and Ecosystem Partnerships Lead
+- [ ] https://jobs.ashbyhq.com/quicknode/fdeb6aff-6347-4673-a163-067ce5366c72 | QuickNode | Ecosystem Partner Marketing Manager
+- [ ] https://jobs.ashbyhq.com/Sahara/bc299ffc-c44c-4708-833d-ef13ee6fd4f4 | Sahara | Blockchain DevRel Engineer
+- [ ] https://job-boards.greenhouse.io/okx/jobs/6649504003 | OKX | Developer Relations Engineer
+- [ ] https://job-boards.greenhouse.io/burnt/jobs/4045637008 | XION | Developer Relations Engineer - APAC
+- [ ] https://jobs.lever.co/arbitrumfoundation/d18b4e24-4a1e-46d9-8593-853203bdf123 | Arbitrum Foundation | Developer Relations Engineer
+- [ ] https://job-boards.greenhouse.io/supraoracles/jobs/5399916004 | Supra Oracles | Developer Relations
+- [ ] https://job-boards.greenhouse.io/fireblocks/jobs/4588705006 | Fireblocks | Senior Developer Relations Engineer
+- [ ] https://beincrypto.com/jobs/p/deFi-ecosystem-specialist-lido | Lido | DeFi Ecosystem Specialist
+- [ ] https://remotegamejobs.com/jobs/stairway-games-community-manager-remote-job | Stairway Games | Community Manager
+- [ ] https://remotegamejobs.com/jobs/turtle-rock-studios-senior-community-manager-remote-job | Turtle Rock Studios | Senior Community Manager
+- [ ] https://remotegamejobs.com/jobs/ci-games-senior-community-manager-remote-job | CI Games | Senior Community Manager
+- [ ] https://jobs.electriccapital.com/companies/magic-eden/jobs/44223509-head-of-community-marketing | Magic Eden | Head of Community Marketing
+- [ ] https://jobs.framework.ventures/companies/chainlink/jobs/58480989-institutional-ecosystem-lead | Chainlink | Institutional Ecosystem Lead
+- [ ] https://careers.1kx.capital/companies/1kx-2-0d50d441-37eb-4a03-bd94-2f8e3396a124/jobs/43127566-community-events-lead | 1kx | Community & Events Lead
+- [ ] https://jobs.polkadot.com/companies/startale-labs-2-b3470c16-953e-48bc-85b3-98c2e8ae5d3e/jobs/41282899-community-manager-for-layer-2-l2-blockchain | Startale Labs | Community Manager for Blockchain Protocol
+- [ ] https://jobs.ton.org/companies/ton-foundation-2/jobs/35166067-meme-coin-ecosystem-lead | TON Foundation | Meme Coin Ecosystem Lead
+- [ ] https://jobs.ton.org/companies/ton-foundation-2/jobs/36520425-community-growth-manager-hong-k | TON Foundation | Community Growth Manager (Hong Kong)
+- [ ] https://jobs.ton.org/companies/ton-society/jobs/41387840-ecosystem-marketing-lead | TON Society | Ecosystem Marketing Lead
+- [ ] https://jobs.ton.org/companies/tac-2-c166696b-6166-4a1e-a3e8-0330bb68149b/jobs/45680769-community-and-socials-lead | TAC | Community and Socials Lead
+- [ ] https://jobs.ton.org/companies/ton-foundation-2/jobs/56088464-ecosystem-support-ops-lead | TON Foundation | Ecosystem Support Ops Lead
+- [ ] https://jobs.ton.org/companies/onton/jobs/38987177-ton-ecosystem-partnerships-manager | Onton | TON Ecosystem Partnerships Manager
+- [ ] https://careers.berachain.com/28600 | Berachain | APAC Growth Lead
