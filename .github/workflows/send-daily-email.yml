@@ -208,21 +208,44 @@ jobs:
           // ── Path 2: GitHub issue — needs no secret, and GitHub emails the
           //    repo owner about new issues. This is what makes the digest
           //    arrive when Resend is not configured. ──
+          const gh = (path, payload) => fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}${path}`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+              'Accept': 'application/vnd.github+json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
           if (total > 0 || !RESEND_API_KEY) {
+            let delivered = false;
+
+            // Preferred: an issue, which is easy to triage and close.
             try {
-              const res = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/issues`, {
-                method: 'POST',
-                headers: {
-                  'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
-                  'Accept': 'application/vnd.github+json',
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ title: subject, body: markdown, labels: ['daily-scan'] })
-              });
+              const res = await gh('/issues', { title: subject, body: markdown, labels: ['daily-scan'] });
               const body = await res.json();
-              outcome.push(res.ok ? `issue=OK #${body.number}` : `issue=FAIL HTTP ${res.status} ${JSON.stringify(body).slice(0, 200)}`);
+              delivered = res.ok;
+              outcome.push(res.ok ? `issue=OK #${body.number}` : `issue=FAIL HTTP ${res.status} ${(body.message || '').slice(0, 80)}`);
             } catch (err) {
               outcome.push(`issue=FAIL ${err.message}`);
+            }
+
+            // Fallback: a commit comment. Forks ship with Issues disabled and the
+            // setting cannot be flipped from the dev environment, so this is the
+            // path that actually delivers. The @mention notifies the owner
+            // regardless of their watch settings.
+            if (!delivered) {
+              try {
+                const owner = (process.env.GITHUB_REPOSITORY || '/').split('/')[0];
+                const res = await gh(`/commits/${process.env.GITHUB_SHA}/comments`, {
+                  body: `@${owner} — **${subject}**\n\n${markdown}`,
+                });
+                const body = await res.json();
+                outcome.push(res.ok ? `commit-comment=OK ${body.html_url}` : `commit-comment=FAIL HTTP ${res.status} ${(body.message || '').slice(0, 80)}`);
+              } catch (err) {
+                outcome.push(`commit-comment=FAIL ${err.message}`);
+              }
             }
           }
 
