@@ -45,7 +45,7 @@ Si lo quieres igualmente: `npx playwright install chromium`.
 node daily-consolidated.mjs
 ```
 
-Tarda unos minutos. Al terminar debe llegarte un correo a `traducto@gmail.com`.
+Tarda unos minutos. Al terminar debe llegarte un correo a `guildmaster.core@gmail.com`.
 Si no llega, mira `logs\daily-consolidated.log`.
 
 Para probar solo el envío, sin escanear:
@@ -106,9 +106,8 @@ Guarda el `.tar.gz` en sitio seguro.
 búsqueda — es visible para cualquiera. Se arregla en Settings → Change
 visibility → Private.
 
-**GitHub Actions queda como respaldo manual.** Sin `schedule` ni trigger de
-`push`, así que no compite con el runner local ni duplica correos. Para usarlo
-haría falta crear los secrets `RESEND_API_KEY` y `PORTALS_YML`.
+**No hay nada en GitHub Actions.** El workflow de email se eliminó: todo el
+escaneo y el correo viven en esta máquina.
 
 **Queda una Routine de Claude a las 11:47** que escanea por búsqueda web y avisa
 por el correo de notificación de Claude. Con el runner local en marcha sobra:
