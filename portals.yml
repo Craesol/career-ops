@@ -363,6 +363,34 @@ search_queries:
 # Every ATS slug below was mined from data/scan-history.tsv, i.e. from scans that
 # actually returned postings. No guessed URLs.
 tracked_companies:
+- name: Perk
+  careers_url: https://jobs.ashbyhq.com/perk
+  provider: ashby
+  enabled: true
+- name: "Job&Talent"
+  careers_url: https://jobs.lever.co/jobandtalent
+  provider: lever
+  enabled: true
+# SAP SuccessFactors RMK portal (career55.sapsf.eu backend) — verified live
+# 2026-07-30 via /tile-search-results/. Branded host carries no SF token, so
+# the provider is pinned explicitly.
+- name: Indra Sistemas
+  careers_url: https://careers.indragroup.com
+  provider: successfactors
+  enabled: true
+# Factorial dogfoods its own ATS at careers.factorialhr.com (SSR page, no
+# public JSON API) — scanned via the local parser below. The parser maps the
+# work-mode column (Onsite/Remote/Hybrid) into `location`, so the global
+# location_filter drops the onsite ones.
+- name: Factorial
+  careers_url: https://careers.factorialhr.com
+  scan_method: local_parser
+  parser:
+    command: node
+    script: scripts/parsers/factorial-jobs.mjs
+    format: jobs-json-v1
+  enabled: true
+
 - name: Scopely
   careers_url: https://job-boards.greenhouse.io/scopely
   api: https://boards-api.greenhouse.io/v1/boards/scopely/jobs
