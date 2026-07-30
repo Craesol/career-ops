@@ -446,5 +446,5 @@ network is open. It is waiting on two repository secrets only the user can
 create — `RESEND_API_KEY` and `PORTALS_YML`. If those exist, that workflow is
 the preferred route and this manual procedure is unnecessary.
 
-Recipient: `traducto@gmail.com` — Resend only delivers to the account owner's
+Recipient: `guildmaster.core@gmail.com` — Resend only delivers to the account owner's
 address while the shared `onboarding@resend.dev` sender is in use.

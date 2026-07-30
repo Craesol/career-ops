@@ -23,10 +23,10 @@ on:
         description: 'Recipient email'
         required: false
         # Must be the Resend account owner's address while the shared sender
-        # onboarding@resend.dev is in use — Resend accepts (HTTP 200) but does
-        # NOT deliver to any other recipient. Verify a domain in Resend to lift
-        # this restriction and send anywhere.
-        default: 'traducto@gmail.com'
+        # onboarding@resend.dev is in use. The account is registered under
+        # guildmaster.core@gmail.com (Resend 403 names it explicitly). Verify a
+        # domain at resend.com/domains to send anywhere else.
+        default: 'guildmaster.core@gmail.com'
       skip_scan:
         description: 'Skip the scan, just email existing data'
         required: false
@@ -103,7 +103,7 @@ jobs:
 
           const RESEND_API_KEY = process.env.RESEND_API_KEY;
           const FROM = 'career-ops <onboarding@resend.dev>';
-          const TO = process.env.NOTIFY_EMAIL || 'traducto@gmail.com';
+          const TO = process.env.NOTIFY_EMAIL || 'guildmaster.core@gmail.com';
           const today = process.env.SCAN_DATE || new Date().toISOString().slice(0, 10);
           // Roles added out of band — or by a run that straddled UTC midnight —
           // would be skipped forever by an exact-date match, and the digest would

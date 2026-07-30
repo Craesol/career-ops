@@ -45,7 +45,7 @@ Si lo quieres igualmente: `npx playwright install chromium`.
 node daily-consolidated.mjs
 ```
 
-Tarda unos minutos. Al terminar debe llegarte un correo a `traducto@gmail.com`.
+Tarda unos minutos. Al terminar debe llegarte un correo a `guildmaster.core@gmail.com`.
 Si no llega, mira `logs\daily-consolidated.log`.
 
 Para probar solo el envío, sin escanear:
