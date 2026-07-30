@@ -197,19 +197,79 @@ if (INCLUDE_L3) {
   const fresh = proposed.filter(o => titleOk(o.title) && !known.has(o.url) && !seenNow.has(o.url) && seenNow.add(o.url));
   if (offRole) console.log('  ' + offRole + ' dropped by title filter');
 
+  // Liveness gate (2026-07-30): L3 finds come from indexed search results, which
+  // routinely resurface postings that died long ago — web3.career keeps expired
+  // ads published, and a 4-year-old Uniswap role reached the user's inbox that
+  // way. Every other path into the email is checked at the source API; this was
+  // the one unchecked one. Expired finds are persisted as 'skipped_expired' so
+  // dedup blocks them forever; uncertain ones are kept but labelled in the note.
+  let liveFresh = fresh;
+  let l3Expired = 0;
   if (fresh.length) {
+    liveFresh = [];
+    const deadFinds = [];
+    try {
+      const { checkLivenessViaApi } = await import(pathToFileURL(resolve(ROOT, 'liveness-api.mjs')).href);
+      const { checkUrlLivenessWithFallback, newLivenessPage } = await import(pathToFileURL(resolve(ROOT, 'liveness-browser.mjs')).href);
+      let browser = null, page = null;
+      try {
+        for (const o of fresh) {
+          let verdict = null;
+          try {
+            const api = await checkLivenessViaApi(o.url);
+            if (api) {
+              verdict = api;
+            } else {
+              if (!browser) {
+                const { chromium } = await import('playwright');
+                browser = await chromium.launch({ headless: true });
+                page = await newLivenessPage(browser);
+              }
+              verdict = await checkUrlLivenessWithFallback(page, o.url, {});
+            }
+          } catch (e) {
+            verdict = { result: 'uncertain', reason: 'liveness check failed: ' + e.message };
+          }
+          if (verdict.result === 'expired') {
+            deadFinds.push(o);
+          } else {
+            if (verdict.result === 'uncertain') o.note = (o.note ? o.note + ' · ' : '') + 'liveness uncertain';
+            liveFresh.push(o);
+          }
+        }
+      } finally {
+        if (browser) await browser.close().catch(() => {});
+      }
+    } catch (e) {
+      // Liveness modules unavailable (old checkout, missing Playwright): fail
+      // open but say so, rather than silently reverting to unchecked finds.
+      console.error('  liveness gate unavailable (' + e.message + ') — L3 finds pass UNCHECKED');
+      liveFresh = fresh;
+    }
+    l3Expired = deadFinds.length;
+    if (deadFinds.length) {
+      try {
+        const { appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+        appendToScanHistory(deadFinds, today, 'skipped_expired');
+      } catch (e) {
+        console.error('  dead-find record FAILED: ' + e.message);
+      }
+    }
+  }
+
+  if (liveFresh.length) {
     try {
       // pathToFileURL: Windows' ESM loader rejects bare absolute paths
       // ("Only URLs with a scheme in: file, data…"), which silently swallowed
       // every L3 find before this fix.
       const { appendToPipeline, appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-      appendToPipeline(fresh);
-      appendToScanHistory(fresh, today, 'added');
+      appendToPipeline(liveFresh);
+      appendToScanHistory(liveFresh, today, 'added');
     } catch (e) {
       console.error('  persist FAILED: ' + e.message);
     }
   }
-  console.log('  ' + queries.length + ' queries · ' + proposed.length + ' proposed · ' + fresh.length + ' new');
+  console.log('  ' + queries.length + ' queries · ' + proposed.length + ' proposed · ' + fresh.length + ' new · ' + l3Expired + ' dropped dead');
   if (l3Result.status !== 0) {
     console.error('  CLI exit ' + l3Result.status + ': ' + (l3Result.stderr || 'unknown').slice(0, 300));
   }
