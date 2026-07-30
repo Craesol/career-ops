@@ -36,6 +36,10 @@ on:
         description: 'Skip the scan, just email existing data'
         required: false
         default: 'false'
+      lookback_days:
+        description: 'How many days of new roles to include (1 = today only)'
+        required: false
+        default: '1'
 
 jobs:
   scan-and-send:
@@ -93,6 +97,9 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SCAN_DATE: ${{ inputs.scan_date }}
           NOTIFY_EMAIL: ${{ inputs.notify_email }}
+          # Scheduled runs pass no inputs, so this falls back to 2: the scan and the
+          # send can land on opposite sides of UTC midnight.
+          LOOKBACK_DAYS: ${{ inputs.lookback_days || '2' }}
         run: |
           node - <<'EOF'
           import { readFileSync } from 'fs';
@@ -101,6 +108,13 @@ jobs:
           const FROM = 'career-ops <onboarding@resend.dev>';
           const TO = process.env.NOTIFY_EMAIL || 'traducto@gmail.com';
           const today = process.env.SCAN_DATE || new Date().toISOString().slice(0, 10);
+          // Roles added out of band — or by a run that straddled UTC midnight —
+          // would be skipped forever by an exact-date match, and the digest would
+          // read "no new roles" while the pipeline had just grown. Look back over a
+          // window instead; 1 means today only, which is the old behaviour.
+          const LOOKBACK = Math.max(1, Number(process.env.LOOKBACK_DAYS || 1));
+          const cutoff = new Date(Date.parse(today + 'T00:00:00Z') - (LOOKBACK - 1) * 86400000)
+            .toISOString().slice(0, 10);
 
           // The dev environment cannot read Actions logs (the egress proxy blocks
           // the API, and the UI needs a session), so every outcome is also written
@@ -123,7 +137,7 @@ jobs:
               const [url, first_seen, portal, title, company, status] = l.split('\t');
               return { url, first_seen, portal, title, company, status };
             })
-            .filter(r => r.first_seen === today && r.status === 'added');
+            .filter(r => r.first_seen && r.first_seen >= cutoff && r.first_seen <= today && r.status === 'added');
 
           const groups = { api: [], t1: [], t2: [], t3: [], seriesA: [], general: [] };
           for (const r of rows) {
