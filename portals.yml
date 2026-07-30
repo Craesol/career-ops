@@ -73,6 +73,19 @@
 #     - "Brazil"
 #     - "Australia"
 
+# Active config: block postings whose LOCATION field marks them as on-site
+# (mirrors the daily-ats-scan.mjs onsite hard-block, 2026-07-30). No `allow`
+# list on purpose — a plain city string still passes, only explicit on-site
+# markers are rejected. Empty locations keep passing (don't penalize missing
+# data).
+location_filter:
+  block:
+    - "on-site"
+    - "onsite"
+    - "on site"
+    - "in-office"
+    - "in office"
+
 # -- Salary filter (optional) --
 # Filter scanned jobs by annual compensation range. Applied AFTER location
 # filter, BEFORE dedup. Only applies when structured salary data exists.
@@ -266,6 +279,14 @@ title_filter:
     - "Stagiaire"
     - "Alternance"
     - "Alternant"
+    # On-site hard-block — mirrors daily-ats-scan.mjs NEGATIVE (2026-07-30).
+    # Only remote/hybrid roles are in scope; titles that announce presence
+    # requirements are out regardless of how good the role looks.
+    - "On-site"
+    - "Onsite"
+    - "On site"
+    - "In-office"
+    - "In office"
   seniority_boost:
     # These prefixes add relevance but are not required
     - "Senior"
