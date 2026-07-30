@@ -3,6 +3,10 @@
 - [x] ~~https://talent.wxrk.ai/jobs/job/null/web3-social-media-manager-x-part-time/3187187 | Null | Web3 Social Media Manager (X) - Part-time~~ — declined (2026-07-29)
 
 ## Pendientes
+- [ ] https://jobs.ashbyhq.com/3commas/5e67ca9f-8ec0-4805-81a3-f4e691f71f82 | 3Commas | Crypto Marketing Lead  <!-- scan 2026-07-29 · unverified (liveness not confirmable from this environment) -->
+- [ ] https://jobs.ashbyhq.com/ethglobal/e2643a67-fd76-484f-9d6b-daacf43043cb | ETHGlobal | Partnerships Manager  <!-- scan 2026-07-29 · unverified (liveness not confirmable from this environment) -->
+- [ ] https://cryptocurrencyjobs.co/marketing/coinpresso-social-media-manager-web3/ | Coinpresso | Social Media Manager (Web3)  <!-- scan 2026-07-29 · unverified (liveness not confirmable from this environment) -->
+- [ ] https://cryptocurrencyjobs.co/marketing/status-social-media-manager-web3/ | Status | Social Media Manager (Web3)  <!-- scan 2026-07-29 · unverified (liveness not confirmable from this environment) -->
 - https://cryptocurrencyjobs.co/marketing/aethir-community-manager/  <!-- Community Manager @ Aethir [general] -->
 - https://apply.workable.com/pavago/j/E0AF9F06ED/  <!-- Community Manager @ Pavago [general] -->
 - https://apply.workable.com/mlabs/j/C8B22B74F1  <!-- Head of Community @ MLabs [general] -->

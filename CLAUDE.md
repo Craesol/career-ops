@@ -389,3 +389,62 @@ Write one TSV file per evaluation to `batch/tracker-additions/{num}-{company-slu
 **RULES:** no markdown bold (`**`), no dates (those go in the date column), no extra text (use the notes column) in the status field.
 @AGENTS.md
 <!-- Add anything Claude Code specific that other agents don't need -->
+
+## Fork rule — never push or propose anything upstream
+
+This repository is a fork of `santifer/career-ops`, and the upstream is off
+limits. Never open or suggest a pull request against it, never push to a remote
+other than `origin` (`Craesol/career-ops`), and never add a remote pointing at
+`santifer`.
+
+In particular, never hand out a `github.com/Craesol/career-ops/pull/new/<branch>`
+link: on a fork GitHub preselects the **upstream** as the base, so following that
+link opens a PR against `santifer`. That already happened once (PR #2263,
+2026-07-28) and must not happen again. If a PR is ever needed it belongs inside
+the fork, with the base pinned explicitly: `?base=Craesol:main`. When in doubt,
+open no PR and ask.
+
+Work ships as a direct push to the designated branch of `origin`.
+
+## Daily scan when the network is blocked
+
+A daily routine (11:47 Europe/Madrid) starts a session in this repo to scan for
+roles and report by email. **In the Claude Code remote environment most outbound
+network is denied by the egress proxy:**
+
+- `api.resend.com` → 403, so no mail can be sent
+- ATS APIs (`boards-api.greenhouse.io`, `api.lever.co`, `api.ashbyhq.com`) → 403
+- Job board feeds (`remoteok.com/api`, `remotive.com`, `himalayas.app`, …) → 403
+- SMTP ports → filtered
+- GitHub API `/actions/` paths → 403, so secrets and workflow dispatch are out of reach
+
+Consequently `node scan.mjs`, `scan-and-notify.mjs` and `send-daily-email.mjs`
+**cannot work here.** Do not debug or retry them; nothing is wrong with the code.
+
+Do this instead:
+
+1. Scan with the **WebSearch** tool, which does have egress. Use the
+   `search_queries` in `portals.yml` as the script, covering the profile's
+   archetypes: Community, Social Media, Ecosystem/Partnerships, Marketing
+   Communications, Guild/Ambassador, Esports, Localization — in Web3 and gaming.
+2. Deduplicate every candidate against `data/pipeline.md` and
+   `data/scan-history.tsv` (normalize: lowercase, no trailing slash, no query string).
+3. Apply the `portals.yml` filters: drop anything matching `negative` (DevRel,
+   engineering, internships/alternance, US property-management "Community
+   Manager") and anything plainly mislocated.
+4. Append new finds to `data/pipeline.md` (Pendientes) and
+   `data/scan-history.tsv`, marked `unverified` — liveness cannot be confirmed
+   from here, the URLs come from indexed results.
+5. **Put the whole digest in the final response text** — company, title, URL and
+   tier for each role. The routine's notification email is the actual delivery
+   channel, so anything left out of the response never reaches the user. Never
+   answer with "see the attached file" or a bare "the email could not be sent".
+
+The proper path, once available: `.github/workflows/send-daily-email.yml` runs
+the full API scan and sends through Resend from GitHub's runners, where the
+network is open. It is waiting on two repository secrets only the user can
+create — `RESEND_API_KEY` and `PORTALS_YML`. If those exist, that workflow is
+the preferred route and this manual procedure is unnecessary.
+
+Recipient: `traducto@gmail.com` — Resend only delivers to the account owner's
+address while the shared `onboarding@resend.dev` sender is in use.
