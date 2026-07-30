@@ -738,7 +738,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.ashbyhq.com/sui%20foundation/79a46cca-cfca-42d6-8191-848cc4c92172 | Sui Foundation | Community Lead
 - [ ] https://jobs.cointelegraph.com/jobs/146177705-social-media-community-manager-gaming | Cointelegraph | Social Media & Community Manager (Gaming)
 - [x] ~~https://boards.greenhouse.io/goodr/jobs/6772285002 | goodr | Social Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations
+- [x] ~~https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China~~ — swept: triage-C (language/market gate)
 
@@ -852,7 +852,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://job-boards.greenhouse.io/gofundme/jobs/7139138 | GoFundMe | Localization Program Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5639442004 | PlayStation | Program Manager II, Localization~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/opentable/jobs/8372223002 | OpenTable | Localization Program Manager - Localisation Technologies Specialist~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://jobs.ashbyhq.com/sierra/4041855f-5a09-47ea-80d3-3141454655f8 | Sierra | Localization Program Manager
+- [x] ~~https://jobs.ashbyhq.com/sierra/4041855f-5a09-47ea-80d3-3141454655f8 | Sierra | Localization Program Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.ashbyhq.com/lilt/98079dd8-ef11-4608-b5ec-aa77d9425566/application | LILT | Localization Project Manager, Production~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/coins/2d82a374-067e-459d-a6a3-1923ec9dde56 | Coins.ph | Community Manager (SG)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/binance/725bb3d8-7c4a-4ddd-8312-5a695e3d7fda | Binance | Community Manager - Levant~~ — swept: triage-C (language/market gate)
@@ -1098,7 +1098,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/4981705008?gh_jid=4981705008 | Scopely | Director of Marketing, North America - Pikmin Bloom
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5281535008?gh_jid=5281535008 | Scopely | Director, Performance Marketing
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5239651008?gh_jid=5239651008 | Scopely | Director, Performance Marketing -  Unannounced ARPG Mobile Game
-- [ ] https://job-boards.greenhouse.io/scopely/jobs/5323853008?gh_jid=5323853008 | Scopely | Director, Product Marketing - Unannounced Project
+- [x] ~~https://job-boards.greenhouse.io/scopely/jobs/5323853008?gh_jid=5323853008 | Scopely | Director, Product Marketing - Unannounced Project~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5215189008?gh_jid=5215189008 | Scopely | Global Live Event Marketing Manager - Pikmin Bloom
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5225517008?gh_jid=5225517008 | Scopely | Manager I, Performance Marketing
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5282076008?gh_jid=5282076008 | Scopely | Performance Marketing Director
@@ -1268,7 +1268,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://unisys.wd5.myworkdayjobs.com/en-US/External/job/Delivery-Manager---Rio-de-Janeiro_REQ574508 | Unisys | Delivery Manager - Rio de Janeiro | Rio de Janeiro, RJ, Brazil~~ — swept: location (Rio de Janeiro, RJ, Brazil)
 - [ ] https://www.suvoda.com/careers/job-openings?gh_jid=8646895002 | Suvoda | Licensing Project Manager | Bucharest, Romania, Iasi, Romania, Remote
 - [x] ~~https://careers.onepeloton.com/en/all-jobs/?gh_jid=8074715 | Peloton | Senior Engineering Program Manager | New York, NY~~ — swept: location (New York, NY)
-- [ ] https://job-boards.greenhouse.io/dept/jobs/7930288 | DEPT | Senior Public Relations and Marketing Program Manager | Amsterdam, Rotterdam
+- [x] ~~https://job-boards.greenhouse.io/dept/jobs/7930288 | DEPT | Senior Public Relations and Marketing Program Manager | Amsterdam, Rotterdam~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://helsing.ai/jobs/4880330101?gh_jid=4880330101 | Helsing | Senior Project Manager | Munich - Berlin - London
 - [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
 - [x] ~~https://wd1.myworkdaysite.com/en-US/recruiting/avnet/External/job/Program-Manager_JR-023513 | Avnet | Program Manager | Tempe, Arizona, United States Of America~~ — swept: location (Tempe, Arizona, United States Of America)
@@ -1317,3 +1317,160 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://bankless.pallet.com/jobs/b8c2d0e8-1125-43a9-8b74-107cac87ff40 | Aragon | Community Manager
 - [ ] https://superteam-jobs.pallet.com/jobs/e7b8a04a-af12-44a1-a441-27007fd5dc54 | Arcana Network | Community Manager
 - [ ] https://climate-tech-vc.pallet.com/jobs/ea8e7991-e303-4928-b671-98ad30dd8e57 | Ecosapiens | Community Manager
+- [ ] https://jobs.lever.co/funxyz/11ab2251-89a4-4479-aad1-f05b58ba8ea1 | Fun (fun.xyz) | Marketing Lead
+- [ ] https://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575 | Hustler Marketing | Sales &amp; Marketing Director
+- [ ] https://remoteOK.com/remote-jobs/remote-influencer-marketing-associate-director-newhouse-1135546 | Newhouse | Influencer Marketing Associate Director
+- [ ] https://remoteOK.com/remote-jobs/remote-social-media-and-video-content-manager-ajaia-ai-consultancy-1135536 | Ajaia | AI Consultancy | Social Media and Video Content Manager
+- [ ] https://hk.linkedin.com/jobs/view/community-manager-at-mexc-4445494752 | MEXC | Community Manager
+- [ ] https://fr.linkedin.com/jobs/view/sports-community-manager-germany-m-f-d-at-winamax-4445451044 | WINAMAX | Sports Community Manager Germany (M/F/D)
+- [ ] https://hk.linkedin.com/jobs/view/strategic-program-lead-%E2%80%93-web3-trade-infrastructure-at-all-star-agency-4445755035 | ALL-STAR AGENCY | Strategic Program Lead – Web3 Trade Infrastructure
+- [ ] https://hr.linkedin.com/jobs/view/ecosystem-content-manager-at-solflare-4444554501 | Solflare | Ecosystem Content Manager
+- [ ] https://fr.linkedin.com/jobs/view/regional-marketing-manager-french-at-bitunix-4445921355 | Bitunix | Regional Marketing Manager - French
+
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7805503003 | OKX | Community Growth Manager | Sydney, New South Wales, Australia
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7753700003 | OKX | Director, Lifecycle Marketing | New York, United States; San Jose, California, United States
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7789700003 | OKX | Growth Manager | Sydney, New South Wales, Australia
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7683315003 | OKX | Growth Manager - Africa | EMEA
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7710480003 | OKX | Manager, Strategic Partnerships (Token Listing) | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7762217003 | OKX | Managing Director, Global Banking Partnerships | Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7777902003 | OKX | Principal Product Manager, Affiliate & KOL - Onshore Markets | Hong Kong, Hong Kong SAR; Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7762034003 | OKX | Senior Business Intelligence Project Manager (User Growth) | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7766782003 | OKX | Senior Growth Manager, SEA | Southeast Asia (Remote)
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7764411003 | OKX | Senior Manager, RWA Partnerships & Operations | Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7764401003 | OKX | Senior Manager, Web3 Growth (Ecosystem) | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7764410003 | OKX | Senior Manager, Web3 Partnerships | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7788028003 | OKX | Senior PMO / Project Manager, Paid Ads | Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7805904003 | OKX | Senior Product Manager, Agent QA & Localization Quality | Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7650512003 | OKX | Senior Strategy PMO / Project Manager | Hong Kong, Hong Kong SAR; Singapore, Singapore
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7650513003 | OKX | Senior Strategy PMO / Project Manager (AI & Org Efficiency) | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7739163003 | OKX | Senior Strategy Project Manager, VIP/Institutions | Hong Kong, Hong Kong SAR
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8537000002 | Twitch | Legal Program Manager | San Francisco, CA
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8536449002 | Twitch | Product Marketing Manager: Trust & Safety, Community | Seattle, WA
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8609245002 | Twitch | Senior Product Manager, Community | Irvine, CA
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5087999007 | Hyphen Connect | Brand Manager (Global Crypto Exchange) | Hong Kong
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/4973241007 | Hyphen Connect | Business Development Manager (KOL) | Hong Kong
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5087905007 | Hyphen Connect | Business Development Manager - Talent / Recruitment (AI ML, Fintech, Blockchain Ecosystems) | Singapore
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5073144007 | Hyphen Connect | COO / Head of Ecosystem (RWA) | Shanghai
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5137492007 | Hyphen Connect | Ecosystem BD (DeFi/ L1) - APAC remote | APAC
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5035881007 | Hyphen Connect | Ecosystem Lead - L1 | Global
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5035985007 | Hyphen Connect | Ecosystem Marketing Manager & Event Lead | Hong Kong
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5035986007 | Hyphen Connect | Ecosystem Marketing Manager & Event Lead 生态系统营销经理和活动负责人 | Shenzhen
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5078160007 | Hyphen Connect | Growth Product Manager (Hardware Wallet Ecosystem) | United States
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/4976597007 | Hyphen Connect | Incubator Labs - Project Manager / Product Manager (Open to all - Web3, Fintech) | Vietnam
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5035992007 | Hyphen Connect | KOL Growth Marketing Manager | Shanghai
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5079957007 | Hyphen Connect | Marketing Associate (Web3 / Social Media) | Australia
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5053491007 | Hyphen Connect | Marketing Specialist (Community & Social Growth) - Web3/ Crypto | Korea
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/4701114007 | Hyphen Connect | Product/Project Manager - AI Powered Rapid Development Lab | Hangzhou
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5075008007 | Hyphen Connect | Project Manager (Tokenomics & DeFi) | China
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5075007007 | Hyphen Connect | Project Manager (Tokenomics & DeFi - Network Relaunch) | Korea
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5149653007 | Hyphen Connect | Social Media Content Creator (Instagram Reels / AI-Driven) | APAC
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5122344007 | Hyphen Connect | Social Media Lead (CEX) | Singapore
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063517007 | Hyphen Connect | Social Media Lead (Global Crypto Exchange) | APAC
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5063515007 | Hyphen Connect | Social Media Lead (PR / Global Crypto Exchange) | Hong Kong
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/4785669007 | Hyphen Connect | Social Media/Marketing Specialist - AI Powered Rapid Development Lab | Vietnam
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5075020007 | Hyphen Connect | Sr. Project Manager - UI/UX - Institutional Trading Dashboards | China
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5078223007 | Hyphen Connect | Sr. Project Manager - UI/UX - Institutional Trading Dashboards (Web3) | Singapore
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5074712007 | Hyphen Connect | Technical Ecosystem Lead (L1) | Australia
+- [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5037220007 | Hyphen Connect | 渗透工程师（iGaming） | APAC
+- [ ] https://job-boards.greenhouse.io/bitgo/jobs/7907250002 | BitGo | Associate - Listings & Ecosystem Development | New York, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8006078002 | Later | Account Manager - Influencer Marketing | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Toronto, Ontario, Canada; Vancouver, British Columbia, Canada
+- [ ] https://job-boards.greenhouse.io/later/jobs/8621385002 | Later | Creative Project Manager | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8206703002 | Later | Director of Partnerships | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8643057002 | Later | Influencer Development Specialist | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8497608002 | Later | Influencer Marketing Account Supervisor | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/7994551002 | Later | Influencer Marketing Coordinator | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8590104002 | Later | Social Media Creative Network (Freelance) | Remote
+- [ ] https://job-boards.greenhouse.io/later/jobs/8621339002 | Later | Social Media Manager | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://job-boards.greenhouse.io/later/jobs/8377478002 | Later | SVP Partnerships | Boston, MA; Chicago, Illinois, United States; Los Angeles, California, United States; New York, New York, United States; Remote; Vancouver, British Columbia, Canada; Vancouver, Washington, United States
+- [ ] https://jobs.ashbyhq.com/sahara/042b2056-ffeb-400e-9303-042f800c83b0 | Sahara AI | Social Media Manager & Content Specialist | US - Remote
+- [ ] https://jobs.ashbyhq.com/sahara/ba33f05b-0858-4b5e-92cf-630852b624f1 | Sahara AI | Community Manager | Seoul
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/bf30f9d1-0ca5-4ebd-82ba-a9be712e9a89 | Solana Foundation | Institutional Growth Lead- Greater China | Hong Kong
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/46720f41-a467-4787-bba4-1838884e8af8 | Solana Foundation | Institutional Growth Lead- Japan | Japan
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/35ec193f-cb4d-4df9-ab8e-ba70d4c54d28 | Solana Foundation | Product Partnerships Manager | Remote-US
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/1dc31c3e-1f5f-47d0-8e01-d95e396e7119 | Solana Foundation | GM, AI Ecosystem | San Francisco
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/09711478-2181-431c-b615-c6616ce67d20 | Solana Foundation | Trading Growth Lead | Asia
+- [ ] https://jobs.ashbyhq.com/solana%20foundation/b40cbc32-a29c-44a8-b20a-4b0a5d3fc127 | Solana Foundation | DeFi Growth Lead | Remote-US
+- [ ] https://vaynermedia.com/careers?gh_jid=8094202 | VaynerMedia | Associate, Influencer Partnership | United States- New York, NY
+- [ ] https://vaynermedia.com/careers?gh_jid=7396560 | VaynerMedia | Copywriter (Contract) | Philippines- Remote
+- [ ] https://vaynermedia.com/careers?gh_jid=8074193 | VaynerMedia | French Social Media Content Views Editor / Video Editor | EU- Remote
+- [ ] https://vaynermedia.com/careers?gh_jid=8066456 | VaynerMedia | India Portfolio / Director Influencer Partnership & Strategy | India- Gurugram
+- [ ] https://vaynermedia.com/careers?gh_jid=8020435 | VaynerMedia | India Portfolio / Influencer Partnership Associate | India- Gurugram
+- [ ] https://vaynermedia.com/careers?gh_jid=8070953 | VaynerMedia | India Portfolio / Project Coordinator | India- Gurugram
+- [ ] https://vaynermedia.com/careers?gh_jid=8078708 | VaynerMedia | India Portfolio / Project Manager | India- Gurugram
+- [ ] https://vaynermedia.com/careers?gh_jid=8090286 | VaynerMedia | Influencer Manager | South Korea- Remote
+- [ ] https://vaynermedia.com/careers?gh_jid=7955969 | VaynerMedia | Post Creative Strategist (Social Media Manager) | Australia- Sydney
+- [ ] https://vaynermedia.com/careers?gh_jid=8078828 | VaynerMedia | Project Coordinator | Singapore
+- [ ] https://vaynermedia.com/careers?gh_jid=7783386 | VaynerMedia | Project Manager | Australia- Sydney
+- [ ] https://vaynermedia.com/careers?gh_jid=8074158 | VaynerMedia | Senior Influencer Manager 12month FTC ( Fluent in French ) | UK- London, England
+- [ ] https://vaynermedia.com/careers?gh_jid=7864762 | VaynerMedia | Views Editor (Gaming) | Philippines- Remote
+- [ ] https://vaynermedia.com/careers?gh_jid=7676233 | VaynerMedia | Views Editor (Social Media) | Philippines- Remote
+- [ ] https://jobs.ashbyhq.com/trust-wallet/2d265735-8142-42d6-8dcb-7fb508b1eaa5 | Trust Wallet | Brand Video Creator & KOL Partner (品牌视频创作者与KOL合作负责人) | Remote - Global
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/8059993e-f02e-48d7-a28a-24d6bf6e5d18 | thatgamecompany | Brand Manager - China | China - Shanghai
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/d899968a-2531-45ee-bcee-a13ecc12715b | thatgamecompany | Sr. Content Strategy & Creator | Remote - South East Asia
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/2ab99c73-084c-4ce2-888b-6b7a9be3f47b | thatgamecompany | Content & Creator Program Manager - Japan / ★ソーシャル・コンテンツストラテジスト | Japan
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/9cb20d89-2e0b-4f48-99c9-c7c65e222f63 | thatgamecompany | Project Manager, Growth | China - Shanghai · Japan · Toyko
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/dc055d90-650c-4fba-99e8-0c4ce1727e3f | thatgamecompany | Project Manager | China - Shanghai
+- [ ] https://jobs.ashbyhq.com/thatgamecompany/7401ca29-6cc7-4248-adee-a2b1ce57ba40 | thatgamecompany | Japan Community Manager | Other
+- [ ] https://jobs.ashbyhq.com/lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
+- [ ] https://jobs.ashbyhq.com/lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
+- [ ] https://job-boards.greenhouse.io/remotecom/jobs/7793958003 | Remote | Content Marketing Lead | Ireland Remote
+- [ ] https://job-boards.greenhouse.io/remotecom/jobs/7615821003 | Remote | Managing Counsel, Commercial - Partnerships | Remote-Iberia
+- [ ] https://jobs.lever.co/nibiru/94530f79-e315-4d9a-8852-34c5ebdb5ffa | Nibiru | Memecoin & NFT Community Leader | Remote - Anywhere
+- [ ] https://jobs.lever.co/nibiru/6645e56c-76e6-464f-9b34-e775c383fff7 | Nibiru | Sai Perps DEX - Regional Trader Ambassador | Remote - Anywhere
+- [ ] https://jobs.lever.co/serotonin/de375aba-e60e-441d-a158-8c3b66e1ad47 | Serotonin | Social Media Manager | New York
+- [ ] https://jobs.lever.co/crypto-banter/eb556325-8a02-4485-a566-90d2f3fdbb44 | Crypto Banter | Crypto Marketing Copywriter | Remote
+- [ ] https://jobs.lever.co/offchainlabs/ba06452d-31d5-4ed0-8330-415a0904f4eb | Offchain Labs | Senior PR & Communications Manager | Remote
+- [ ] https://ripple.com/careers/all-jobs/job/7660019?gh_jid=7660019 | Ripple | Content Marketing Manager | Chicago, Illinois, United States
+- [ ] https://ripple.com/careers/all-jobs/job/7585966?gh_jid=7585966 | Ripple | Director, Ecosystem Growth | San Francisco, CA, United States
+- [ ] https://ripple.com/careers/all-jobs/job/7951682?gh_jid=7951682 | Ripple | Learning Community Specialist | New York, NY, United States
+- [ ] https://ripple.com/careers/all-jobs/job/8054046?gh_jid=8054046 | Ripple | Program Manager | Chicago, Illinois, United States
+- [ ] https://ripple.com/careers/all-jobs/job/8054464?gh_jid=8054464 | Ripple | Program Manager, Employee Giving and Volunteering | Washington, D.C., United States
+- [ ] https://ripple.com/careers/all-jobs/job/8010164?gh_jid=8010164 | Ripple | Senior Content Marketing Specialist | New York, NY, United States
+- [ ] https://ripple.com/careers/all-jobs/job/7742944?gh_jid=7742944 | Ripple | Senior Ecosystem Growth Manager | London, UK
+- [ ] https://ripple.com/careers/all-jobs/job/8011676?gh_jid=8011676 | Ripple | Senior GRC Program Manager | Luxembourg, Luxembourg
+- [ ] https://www.coinbase.com/careers/positions/8070386?gh_jid=8070386 | Coinbase | Associate, Financial Services Partnerships | Remote - USA
+- [ ] https://www.coinbase.com/careers/positions/7746572?gh_jid=7746572 | Coinbase | Communications Manager, Policy & Public Affairs | Remote - USA
+- [ ] https://www.coinbase.com/careers/positions/8070046?gh_jid=8070046 | Coinbase | GFCO Program Manager | Remote - USA
+- [ ] https://epicgames.com/careers/jobs/5998666004?gh_jid=5998666004 | Epic Games | Influencer Marketing Director | BLANK,BLANK,Multiple Locations
+- [ ] https://epicgames.com/careers/jobs/5705135004?gh_jid=5705135004 | Epic Games | Partnerships Director - Talent | BLANK,BLANK,Multiple Locations
+- [ ] https://epicgames.com/careers/jobs/5700006004?gh_jid=5700006004 | Epic Games | Partnerships Director – Talent | Cary,North Carolina,United States
+- [ ] https://epicgames.com/careers/jobs/6003199004?gh_jid=6003199004 | Epic Games | Senior Director, Product Management (Unreal Ecosystem) | Cary,North Carolina,United States
+- [ ] https://epicgames.com/careers/jobs/5700004004?gh_jid=5700004004 | Epic Games | Social Media and Content Ops Director | BLANK,BLANK,Multiple Locations
+- [ ] https://epicgames.com/careers/jobs/5700002004?gh_jid=5700002004 | Epic Games | Social Media and Content Ops Director | Cary,North Carolina,United States
+- [ ] https://jobicy.com/jobs/149832-farsi-to-english-translators-life-sciences-pharmacovigilance | Welo Global | Farsi to English Translators (Life Sciences – Pharmacovigilance) | Anywhere
+- [ ] https://jobicy.com/jobs/149828-lifecycle-project-manager-power-energy | WSP | Lifecycle Project Manager- Power & Energy | USA
+- [ ] https://jobicy.com/jobs/149817-senior-program-manager-customer-success-programs | Samsara | Senior Program Manager - Customer Success Programs | Canada
+- [ ] https://jobicy.com/jobs/144914-onboarding-project-manager-europe | Cloudbeds | Onboarding Project Manager - Europe | Europe
+- [ ] https://jobicy.com/jobs/144998-customer-facing-project-manager-north-carolina | Agilent Technologies | Customer Facing, Project Manager – North Carolina | USA
+- [ ] https://weworkremotely.com/remote-jobs/warnon-service-und-verwaltungsgesellschaft-mbh-online-marketing-content-marketing-mitarbeiter-m-w-d-fur-social-media | WARNON Service- und Verwaltungsgesellschaft mbH | Online Marketing / Content Marketing Mitarbeiter (m/w/d) für Social Media, Website, Print | MECKLENBURG_VORPOMMERN
+- [ ] https://weworkremotely.com/remote-jobs/jetbrains-ai-technical-lead-cpp-ecosystem | JetBrains | AI Technical Lead - C++ Ecosystem | Anywhere in the World
+- [ ] https://weworkremotely.com/remote-jobs/stripe-user-risk-strategist-ecosystem-risk-strategy | Stripe | User Risk Strategist, Ecosystem Risk Strategy | Anywhere in the World
+- [ ] https://weworkremotely.com/remote-jobs/designfiles-content-marketing-coordinator | DesignFiles | Content Marketing Coordinator | Anywhere in the World
+- [ ] https://nodesk.co/remote-jobs/siege-media-affiliate-partnerships-specialist/ | Siege Media | Affiliate Partnerships Specialist
+- [ ] https://jobs.lever.co/anchorage/5275f2de-8e68-401d-83a8-8e8b444b6d14 | Anchorage Digital | Partnerships & Business Development, Stablecoin Solutions | Miami, Florida
+- [ ] https://jobs.lever.co/anchorage/5591472b-93f6-4f1c-9a6f-2b7fd3a31047 | Anchorage Digital | Product Lead, Protocol Ecosystems | United States
+- [ ] https://www.arbeitnow.com/jobs/companies/wppmedia/senior-manager-influencer-marketing-mensch-dusseldorf-56206 | wppmedia | Senior Manager Influencer Marketing (Mensch) | Düsseldorf
+- [ ] https://www.arbeitnow.com/jobs/companies/wppmedia/director-brand-experience-partnerships-mensch-dusseldorf-444430 | wppmedia | Director Brand Experience & Partnerships (Mensch) | Dusseldorf
+- [ ] https://www.arbeitnow.com/jobs/companies/yoshi/senior-influencer-marketing-manager-berlin-356099 | YOSHI | Senior Influencer Marketing Manager (m/f/d) | Berlin
+- [ ] https://www.arbeitnow.com/jobs/companies/atariinc/working-student-pr-partnerships-all-genders-munster-north-rhine-westphalia-173801 | Atariinc | Working Student - PR & Partnerships (all genders) | Münster, North Rhine-Westphalia
+- [ ] https://www.arbeitnow.com/jobs/companies/jetbrains/remote-senior-product-manager-vcs-ecosystem-173221 | Jetbrains | Senior Product Manager (VCS Ecosystem) | Amsterdam, Netherlands; Belgrade, Serbia; Berlin, Cyprus; London, United Kingdom; Madrid, Spain; Munich, Cyprus; Prague, Czech Republic; Remote, Poland; Yerevan, Armenia
+- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/trainee-artist-manager-influencer-manager-mulheim-137946 | Lionflence | Trainee Artist Manager / Influencer Manager (m/w/d) | Mülheim
+- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-berlin-279013 | Lionflence | Artist Manager / Influencer Manager (m/w/d) BERLIN | Berlin
+- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-mulheim-55746 | Lionflence | Artist Manager / Influencer Manager (m/w/d) | Mülheim
+- [ ] https://www.arbeitnow.com/jobs/companies/pcoshealth/social-media-manager-personal-brand-munchen-490193 | pcos.health | Social Media Manager Personal Brand (m/w/d) | München
+- [ ] https://www.arbeitnow.com/jobs/companies/spark-europe-gmbh-co-kg/growth-manager-frankfurt-am-main-163306 | SPARK Europe GmbH & Co. KG | Growth Manager (m/w/d) | Frankfurt am Main
+- [ ] https://jobs.lever.co/binance/99255a0c-61d4-4822-9460-6a45ee1836e9 | Binance | Binance Accelerator Program - Brand Partnerships | Asia
+- [ ] https://jobs.lever.co/binance/55aa11bd-6358-482d-926f-71dffe2a1ec2 | Binance | Binance Accelerator Program - Operations & PMO (Earn Regulatory & Growth) | Asia
+- [ ] https://jobs.lever.co/binance/2376dcd9-a881-48b0-a4ef-5da7dfbffc2d | Binance | Creator Partnerships Manager, Binance Square | UAE, Dubai
+- [ ] https://jobs.lever.co/binance/f607edcb-9e41-4a76-be9a-12989e30d9f2 | Binance | Growth Lead - Argentina | Argentina, Buenos Aires
+- [ ] https://jobs.lever.co/binance/33231ef0-179e-431f-b6ac-821f064e74df | Binance | Growth Manager, West Africa | Africa
+- [ ] https://jobs.lever.co/binance/1ad0e432-cedf-4828-b83a-b31df74049a3 | Binance | Marketing Manager – Events & Community (Australia) | Australia, Sydney
+- [ ] https://jobs.lever.co/binance/b22f7d6f-383d-4fc4-8639-bd5e7dfa5bef | Binance | PR KOL Specialist - APAC | Asia
+- [ ] https://jobs.lever.co/binance/53357ba5-a562-4e82-b533-0f863bd71a52 | Binance | Regional Branding & Partnerships Manager - LATAM | Brazil, Sao Paulo
+- [ ] https://jobs.lever.co/binance/12ee258b-11fd-4217-a442-3bd0d185a2d7 | Binance | Regional Growth Manager - CIS | Ukraine, Kyiv
+- [ ] https://jobs.lever.co/binance/f0c00da5-f556-4789-82b0-569a7bdf2512 | Binance | Senior Brand&Growth Manager-ANZ | Australia, Sydney
+- [ ] https://jobs.lever.co/binance/5591d4cf-38fc-424a-adca-689af3ba80a5 | Binance | Senior Creator Ecosystem Manager – Binance Square | Asia
+- [ ] https://jobs.lever.co/binance/2fd410ad-842c-47e8-9251-22c6dd2237fd | Binance | Senior Growth Manager - CIS | CIS Region
+- [ ] https://jobs.lever.co/binance/8fa4f613-52b7-4be3-b71b-0c77c51d3e64 | Binance | Social & Community Operation Specialist - Taiwan Market | Taiwan, Taipei
+- [ ] https://jobs.lever.co/kraken123/fec59184-5de3-4741-b5b1-5922a6af188d | Kraken | Program Manager - Kraken Distribution | Melbourne
+- [ ] https://jobs.lever.co/daos-hub/3f139b10-6dc7-4179-a6a5-fa5254c44841 | DAOs Hub | Community manager - Operators - | Dubai
