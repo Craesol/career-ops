@@ -61,6 +61,11 @@ type ExploreCtx = {
   adding: Set<string>;
   discover: () => Promise<void>;
   addToPipeline: (offers: DiscoveredOffer[]) => Promise<number>;
+  /** Remove an offer for good: records the append-only dismissal server-side
+   *  (scan-history `skipped` + closes the pending pipeline.md row) AND prunes it
+   *  from the in-memory results + the per-tab snapshot, so a reload or remount
+   *  can't resurrect the card. */
+  dismissOffer: (offer: DiscoveredOffer) => Promise<boolean>;
   applyPatch: (raw: Record<string, unknown>, opts?: { merge?: boolean; run?: boolean }) => void;
   reset: () => void;
   // ── AI search (modes/discover.md) ──
@@ -312,6 +317,33 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
     }
   }, [added, router]);
 
+  // "Remove" — the server records the append-only dismissal (scan-history `skipped`
+  // + closes the pending pipeline.md row); we then prune the offer from the live
+  // result set. The settled-snapshot effect re-persists the pruned list, so the
+  // card cannot come back on reload/remount, and future discovery runs filter it
+  // server-side via dismissedUrlSet().
+  const dismissOffer = useCallback(async (offer: DiscoveredOffer) => {
+    try {
+      const r = await fetch("/api/explore/dismiss", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ offers: [offer] }),
+      });
+      if (!r.ok) return false;
+      setOffers((o) => o.filter((x) => x.url !== offer.url));
+      setMatchCount((n) => Math.max(0, n - 1));
+      // The pipeline inbox row was closed server-side — refresh the server-rendered
+      // Pipeline view and ping live listeners, same as addToPipeline does.
+      router.refresh();
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("co-job-done", { detail: { kind: "explore-dismiss" } }));
+      }
+      return true;
+    } catch {
+      return false;
+    }
+  }, [router]);
+
   const applyPatch = useCallback((raw: Record<string, unknown>, opts?: { merge?: boolean; run?: boolean }) => {
     const next = parseExplorePatch(raw, filtersRef.current, opts?.merge ?? false);
     setFilters(next);
@@ -498,10 +530,10 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
       filters, setFilters, initFilters, phase,
       running: phase === "casting" || phase === "scanning" || phase === "revealing" || phase === "hunting",
       offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding,
-      discover, addToPipeline, applyPatch, reset,
+      discover, addToPipeline, dismissOffer, applyPatch, reset,
       mode, setMode, aiIntent, setAiIntent, discoverAI, aiTrace, aiCost,
     }),
-    [filters, setFilters, initFilters, phase, offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding, discover, addToPipeline, applyPatch, reset, mode, setMode, aiIntent, discoverAI, aiTrace, aiCost],
+    [filters, setFilters, initFilters, phase, offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding, discover, addToPipeline, dismissOffer, applyPatch, reset, mode, setMode, aiIntent, discoverAI, aiTrace, aiCost],
   );
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

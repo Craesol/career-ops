@@ -4,6 +4,8 @@ import { careerOpsRoot, rootScript } from "@/lib/career-ops";
 import { writeTempPortals, cleanupTempPortals } from "./portals";
 import { ATS_SOURCES, type AtsSource, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
 import { scanJobBoards, SUPPORTED_BOARDS } from "./job-boards";
+import { dismissedUrlSet } from "./discover";
+import { canon } from "@/lib/explore-ai";
 
 export type { DiscoveredOffer, ScanEvent, AtsSource } from "@/lib/explore";
 export { ATS_SOURCES } from "@/lib/explore";
@@ -105,6 +107,9 @@ type ScanJson = {
 export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) => void): Promise<DiscoveredOffer[]> {
   const allOffers: DiscoveredOffer[] = [];
   const seen = new Set<string>();
+  // URLs the user removed (scan-history `skipped`/`expired` rows) never resurface
+  // in fresh discovery — same contract as /api/whats-new and the AI search backstop.
+  const dismissed = dismissedUrlSet();
 
   // Separate dataset ATS from job boards
   const requestedAts = filters.ats.length ? filters.ats : [...ATS_SOURCES];
@@ -119,7 +124,7 @@ export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEve
     }
     try {
       const boardResults = await scanJobBoards(jobBoards, filters, (offer) => {
-        if (!seen.has(offer.url)) {
+        if (!seen.has(offer.url) && !dismissed.has(canon(offer.url))) {
           seen.add(offer.url);
           allOffers.push(offer);
           onEvent({ kind: "offer", offer });
@@ -204,7 +209,7 @@ export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEve
       const trimmed = line.trim();
       if (pending && /^https?:\/\//i.test(trimmed)) {
         const url = trimmed.split(/\s+/)[0];
-        if (!seen.has(url)) {
+        if (!seen.has(url) && !dismissed.has(canon(url))) {
           seen.add(url);
           const offer: DiscoveredOffer = { ...pending, url, matchedKeyword: firstMatch(pending.title, filters.positive) };
           allOffers.push(offer);
