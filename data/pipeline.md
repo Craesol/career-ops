@@ -1320,7 +1320,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.lever.co/funxyz/11ab2251-89a4-4479-aad1-f05b58ba8ea1 | Fun (fun.xyz) | Marketing Lead
 - [ ] https://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575 | Hustler Marketing | Sales &amp; Marketing Director
 - [ ] https://remoteOK.com/remote-jobs/remote-influencer-marketing-associate-director-newhouse-1135546 | Newhouse | Influencer Marketing Associate Director
-- [ ] https://remoteOK.com/remote-jobs/remote-social-media-and-video-content-manager-ajaia-ai-consultancy-1135536 | Ajaia | AI Consultancy | Social Media and Video Content Manager
+- [x] ~~https://remoteOK.com/remote-jobs/remote-social-media-and-video-content-manager-ajaia-ai-consultancy-1135536 | Ajaia | AI Consultancy | Social Media and Video Content Manager~~ — removed from fresh matches
 - [ ] https://hk.linkedin.com/jobs/view/community-manager-at-mexc-4445494752 | MEXC | Community Manager
 - [ ] https://fr.linkedin.com/jobs/view/sports-community-manager-germany-m-f-d-at-winamax-4445451044 | WINAMAX | Sports Community Manager Germany (M/F/D)
 - [ ] https://hk.linkedin.com/jobs/view/strategic-program-lead-%E2%80%93-web3-trade-infrastructure-at-all-star-agency-4445755035 | ALL-STAR AGENCY | Strategic Program Lead – Web3 Trade Infrastructure
@@ -1340,7 +1340,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7764401003 | OKX | Senior Manager, Web3 Growth (Ecosystem) | Hong Kong, Hong Kong SAR
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7764410003 | OKX | Senior Manager, Web3 Partnerships | Hong Kong, Hong Kong SAR
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7788028003 | OKX | Senior PMO / Project Manager, Paid Ads | Singapore, Singapore
-- [ ] https://job-boards.greenhouse.io/okx/jobs/7805904003 | OKX | Senior Product Manager, Agent QA & Localization Quality | Singapore, Singapore
+- [x] ~~https://job-boards.greenhouse.io/okx/jobs/7805904003 | OKX | Senior Product Manager, Agent QA & Localization Quality | Singapore, Singapore~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7650512003 | OKX | Senior Strategy PMO / Project Manager | Hong Kong, Hong Kong SAR; Singapore, Singapore
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7650513003 | OKX | Senior Strategy PMO / Project Manager (AI & Org Efficiency) | Hong Kong, Hong Kong SAR
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7739163003 | OKX | Senior Strategy Project Manager, VIP/Institutions | Hong Kong, Hong Kong SAR
@@ -1446,19 +1446,19 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://weworkremotely.com/remote-jobs/jetbrains-ai-technical-lead-cpp-ecosystem | JetBrains | AI Technical Lead - C++ Ecosystem | Anywhere in the World
 - [ ] https://weworkremotely.com/remote-jobs/stripe-user-risk-strategist-ecosystem-risk-strategy | Stripe | User Risk Strategist, Ecosystem Risk Strategy | Anywhere in the World
 - [ ] https://weworkremotely.com/remote-jobs/designfiles-content-marketing-coordinator | DesignFiles | Content Marketing Coordinator | Anywhere in the World
-- [ ] https://nodesk.co/remote-jobs/siege-media-affiliate-partnerships-specialist/ | Siege Media | Affiliate Partnerships Specialist
-- [ ] https://jobs.lever.co/anchorage/5275f2de-8e68-401d-83a8-8e8b444b6d14 | Anchorage Digital | Partnerships & Business Development, Stablecoin Solutions | Miami, Florida
-- [ ] https://jobs.lever.co/anchorage/5591472b-93f6-4f1c-9a6f-2b7fd3a31047 | Anchorage Digital | Product Lead, Protocol Ecosystems | United States
-- [ ] https://www.arbeitnow.com/jobs/companies/wppmedia/senior-manager-influencer-marketing-mensch-dusseldorf-56206 | wppmedia | Senior Manager Influencer Marketing (Mensch) | Düsseldorf
-- [ ] https://www.arbeitnow.com/jobs/companies/wppmedia/director-brand-experience-partnerships-mensch-dusseldorf-444430 | wppmedia | Director Brand Experience & Partnerships (Mensch) | Dusseldorf
-- [ ] https://www.arbeitnow.com/jobs/companies/yoshi/senior-influencer-marketing-manager-berlin-356099 | YOSHI | Senior Influencer Marketing Manager (m/f/d) | Berlin
-- [ ] https://www.arbeitnow.com/jobs/companies/atariinc/working-student-pr-partnerships-all-genders-munster-north-rhine-westphalia-173801 | Atariinc | Working Student - PR & Partnerships (all genders) | Münster, North Rhine-Westphalia
-- [ ] https://www.arbeitnow.com/jobs/companies/jetbrains/remote-senior-product-manager-vcs-ecosystem-173221 | Jetbrains | Senior Product Manager (VCS Ecosystem) | Amsterdam, Netherlands; Belgrade, Serbia; Berlin, Cyprus; London, United Kingdom; Madrid, Spain; Munich, Cyprus; Prague, Czech Republic; Remote, Poland; Yerevan, Armenia
-- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/trainee-artist-manager-influencer-manager-mulheim-137946 | Lionflence | Trainee Artist Manager / Influencer Manager (m/w/d) | Mülheim
-- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-berlin-279013 | Lionflence | Artist Manager / Influencer Manager (m/w/d) BERLIN | Berlin
-- [ ] https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-mulheim-55746 | Lionflence | Artist Manager / Influencer Manager (m/w/d) | Mülheim
-- [ ] https://www.arbeitnow.com/jobs/companies/pcoshealth/social-media-manager-personal-brand-munchen-490193 | pcos.health | Social Media Manager Personal Brand (m/w/d) | München
-- [ ] https://www.arbeitnow.com/jobs/companies/spark-europe-gmbh-co-kg/growth-manager-frankfurt-am-main-163306 | SPARK Europe GmbH & Co. KG | Growth Manager (m/w/d) | Frankfurt am Main
+- [x] ~~https://nodesk.co/remote-jobs/siege-media-affiliate-partnerships-specialist/ | Siege Media | Affiliate Partnerships Specialist~~ — removed from fresh matches
+- [x] ~~https://jobs.lever.co/anchorage/5275f2de-8e68-401d-83a8-8e8b444b6d14 | Anchorage Digital | Partnerships & Business Development, Stablecoin Solutions | Miami, Florida~~ — removed from fresh matches
+- [x] ~~https://jobs.lever.co/anchorage/5591472b-93f6-4f1c-9a6f-2b7fd3a31047 | Anchorage Digital | Product Lead, Protocol Ecosystems | United States~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/wppmedia/senior-manager-influencer-marketing-mensch-dusseldorf-56206 | wppmedia | Senior Manager Influencer Marketing (Mensch) | Düsseldorf~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/wppmedia/director-brand-experience-partnerships-mensch-dusseldorf-444430 | wppmedia | Director Brand Experience & Partnerships (Mensch) | Dusseldorf~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/yoshi/senior-influencer-marketing-manager-berlin-356099 | YOSHI | Senior Influencer Marketing Manager (m/f/d) | Berlin~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/atariinc/working-student-pr-partnerships-all-genders-munster-north-rhine-westphalia-173801 | Atariinc | Working Student - PR & Partnerships (all genders) | Münster, North Rhine-Westphalia~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/jetbrains/remote-senior-product-manager-vcs-ecosystem-173221 | Jetbrains | Senior Product Manager (VCS Ecosystem) | Amsterdam, Netherlands; Belgrade, Serbia; Berlin, Cyprus; London, United Kingdom; Madrid, Spain; Munich, Cyprus; Prague, Czech Republic; Remote, Poland; Yerevan, Armenia~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/lionflence/trainee-artist-manager-influencer-manager-mulheim-137946 | Lionflence | Trainee Artist Manager / Influencer Manager (m/w/d) | Mülheim~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-berlin-279013 | Lionflence | Artist Manager / Influencer Manager (m/w/d) BERLIN | Berlin~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/lionflence/artist-manager-influencer-manager-mulheim-55746 | Lionflence | Artist Manager / Influencer Manager (m/w/d) | Mülheim~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/pcoshealth/social-media-manager-personal-brand-munchen-490193 | pcos.health | Social Media Manager Personal Brand (m/w/d) | München~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/spark-europe-gmbh-co-kg/growth-manager-frankfurt-am-main-163306 | SPARK Europe GmbH & Co. KG | Growth Manager (m/w/d) | Frankfurt am Main~~ — removed from fresh matches
 - [ ] https://jobs.lever.co/binance/99255a0c-61d4-4822-9460-6a45ee1836e9 | Binance | Binance Accelerator Program - Brand Partnerships | Asia
 - [ ] https://jobs.lever.co/binance/55aa11bd-6358-482d-926f-71dffe2a1ec2 | Binance | Binance Accelerator Program - Operations & PMO (Earn Regulatory & Growth) | Asia
 - [ ] https://jobs.lever.co/binance/2376dcd9-a881-48b0-a4ef-5da7dfbffc2d | Binance | Creator Partnerships Manager, Binance Square | UAE, Dubai
@@ -1472,5 +1472,59 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.lever.co/binance/5591d4cf-38fc-424a-adca-689af3ba80a5 | Binance | Senior Creator Ecosystem Manager – Binance Square | Asia
 - [ ] https://jobs.lever.co/binance/2fd410ad-842c-47e8-9251-22c6dd2237fd | Binance | Senior Growth Manager - CIS | CIS Region
 - [ ] https://jobs.lever.co/binance/8fa4f613-52b7-4be3-b71b-0c77c51d3e64 | Binance | Social & Community Operation Specialist - Taiwan Market | Taiwan, Taipei
-- [ ] https://jobs.lever.co/kraken123/fec59184-5de3-4741-b5b1-5922a6af188d | Kraken | Program Manager - Kraken Distribution | Melbourne
-- [ ] https://jobs.lever.co/daos-hub/3f139b10-6dc7-4179-a6a5-fa5254c44841 | DAOs Hub | Community manager - Operators - | Dubai
+- [x] ~~https://jobs.lever.co/kraken123/fec59184-5de3-4741-b5b1-5922a6af188d | Kraken | Program Manager - Kraken Distribution | Melbourne~~ — removed from fresh matches
+- [x] ~~https://jobs.lever.co/daos-hub/3f139b10-6dc7-4179-a6a5-fa5254c44841 | DAOs Hub | Community manager - Operators - | Dubai~~ — removed from fresh matches
+
+- [ ] https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306 | Coalition Technologies | Freelance Copywriter | Worldwide
+- [ ] https://sg.linkedin.com/jobs/view/community-manager-%E4%B8%AD%E6%96%87%E7%A4%BE%E5%8C%BA%EF%BC%89-at-pancakeswap-4446959657 | PancakeSwap | Community Manager(中文社区）
+- [ ] https://fr.linkedin.com/jobs/view/startup-community-manager-france-at-nebius-4437662571 | Nebius | Startup Community Manager - France
+- [ ] https://es.linkedin.com/jobs/view/community-manager-at-monks-4446515741 | Monks | Community Manager
+- [ ] https://es.linkedin.com/jobs/view/community-manager-at-matnature-4446316145 | Matnature | Community Manager
+- [ ] https://mx.linkedin.com/jobs/view/community-manager-at-wild-fi-4446008125 | WILD FI | Community Manager
+- [ ] https://si.linkedin.com/jobs/view/community-manager-at-meetminded-4446788344 | MeetMinded | Community Manager
+- [ ] https://uk.linkedin.com/jobs/view/community-manager-at-legora-4445022652 | Legora | Community Manager
+- [ ] https://uk.linkedin.com/jobs/view/community-manager-mmorpg-at-soulbound-4446778265 | Soulbound | Community Manager (MMORPG)
+- [ ] https://uk.linkedin.com/jobs/view/head-of-community-client-account-leadership-at-standing-on-giants-4444942274 | Standing on Giants | Head of Community - Client & Account Leadership
+
+- [ ] https://vaynermedia.com/careers?gh_jid=8074170 | VaynerMedia | Project Coordinator 12 Months FTC | UK- London, England | posted: 2026-07-21
+- [ ] https://job-boards.greenhouse.io/later/jobs/8656735002 | Later | Influencer Marketing Account Supervisor- Bilingual Spanish | Boston, MA; New York, New York, United States; Remote | posted: 2026-07-30
+- [ ] https://himalayas.app/companies/om/jobs/storytelling-editorial-volunteer | OM | Storytelling & Editorial Volunteer | United States | posted: 2026-07-31
+- [ ] https://jobicy.com/jobs/144161-translation-project-manager | M3 USA | Translation Project Manager | Brazil | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/contracthero-gmbh/werkstudentin-im-content-marketing-bei-contracthero-berlin-143779 | ContractHero GmbH | Werkstudent:in (m/w/d) im Content Marketing bei ContractHero | Berlin, Remote | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/accso-accelerated-solutions-gmbh/werkstudent-content-marketing-darmstadt-357118 | Accso – Accelerated Solutions GmbH | Werkstudent* Content Marketing | Darmstadt | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/wittig-architekten/digital-marketing-content-manager-teilzeit-hof-407002 | Wittig Architekten | Digital Marketing & Content Manager (m/w/d) (Teilzeit) | Hof | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/1komma5grad/praktikantin-partnerships-channel-development-berlin-159247 | 1Komma5Grad | Praktikant:in (m/w/d) Partnerships & Channel Development | Berlin | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/omr/werkstudentin-social-media-hamburg-294427 | OMR | Werkstudent*In (M/W/D) Social Media | Hamburg | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/hellofresh/senior-lifecycle-marketing-manager-all-genders-berlin-252615 | hellofresh | Senior Lifecycle Marketing Manager (all genders) | Berlin | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/agencro/direct-response-copywriter-de-en-ai-first-marketing-agency-landau-50316 | agencro | Direct Response Copywriter DE & EN (AI First, Marketing Agency) | Landau, Remote | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/werraenergie-gmbh/werkstudent-social-media-marketing-bad-salzungen-430049 | WerraEnergie GmbH | Werkstudent Social Media / Marketing (m/w/d) | Bad Salzungen, Thüringen, Deutschland | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/cbs-corporate-business-solutions-gmbh/senior-consultant-sap-pmo-project-management-office-heidelberg-54836 | cbs Corporate Business Solutions GmbH | Senior Consultant SAP PMO (m/w/d) Project Management Office | Heidelberg, Baden-Württemberg, Deutschland | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/ilf-consulting-engineers-germany-gmbh/senior-project-manager-bess-berlin-258261 | ILF Consulting Engineers Germany GmbH | Senior Project Manager BESS (m/w/d) | Berlin, Berlin, Deutschland | posted: 2026-07-30
+- [ ] https://www.arbeitnow.com/jobs/companies/pb3c-gmbh/werkstudentin-social-media-berlin-428372 | PB3C GmbH | Werkstudent:in Social Media (m/w/d) | Berlin | posted: 2026-07-30
+- [ ] https://careers.indragroup.com/job/Project-Manager/1359230355/ | Indra Sistemas | Project Manager
+- [ ] https://careers.indragroup.com/job/Madrid-PMO-Proyectos-Europeos-%28I%2BD-Defensa-&-Simulaci%C3%B3n%29-MD/1354351255/ | Indra Sistemas | PMO - Proyectos Europeos (I+D Defensa & Simulación) | Madrid
+- [ ] https://careers.indragroup.com/job/Madrid-Service-Delivery-Manager-Digital-Workplace/1351084455/ | Indra Sistemas | Service Delivery Manager - Digital Workplace | Madrid
+- [ ] https://careers.indragroup.com/job/Cybersecurity-Service-Delivery-Manager-00/1359016855/ | Indra Sistemas | Cybersecurity Service Delivery Manager
+- [ ] https://careers.indragroup.com/job/Madrid-Senior-Project-Manager-MD/1358967255/ | Indra Sistemas | Senior Project Manager | Madrid
+- [ ] https://careers.indragroup.com/job/Project-Manager-Infraestructuras-IT/978210855/ | Indra Sistemas | Project Manager Infraestructuras IT
+- [ ] https://careers.indragroup.com/job/Philippines-Senior-SAP-Project-Manager/1362162055/ | Indra Sistemas | Senior SAP Project Manager | Philippines
+- [ ] https://careers.indragroup.com/job/Barcelona-Project-Manager-Sistemas-Aeroespaciales-y-Defensa-CT/1350762755/ | Indra Sistemas | Project Manager - Sistemas Aeroespaciales y Defensa | Barcelona
+- [ ] https://careers.indragroup.com/job/Madrid-C-UAS-Project-Manager-MD/1353594155/ | Indra Sistemas | C-UAS Project Manager | Madrid
+- [ ] https://careers.indragroup.com/job/Portugal-Project-Manager-Aerospace-Ground-Segment/1353340655/ | Indra Sistemas | Project Manager Aerospace / Ground Segment | Portugal
+- [ ] https://careers.indragroup.com/job/Public-Sector-&-Strategic-Partnerships-Head-00/1361682055/ | Indra Sistemas | Public Sector & Strategic Partnerships Head
+- [ ] https://careers.indragroup.com/job/Madrid-Project-Manager-Space-Programs-MD/1360641055/ | Indra Sistemas | Project Manager - Space Programs | Madrid
+- [ ] https://careers.indragroup.com/job/Madrid-Soporte-PMO-%28FP%29-Proyectos-de-Ingenier%C3%ADa-MD/1352599755/ | Indra Sistemas | Soporte PMO (FP) - Proyectos de Ingeniería | Madrid
+- [ ] https://careers.indragroup.com/job/Lugo-Project-Manager-sector-defensa-GA/1351976855/ | Indra Sistemas | Project Manager sector defensa | Lugo
+- [ ] https://careers.indragroup.com/job/Madrid-Industrial-Delivery-Manager-%28IDM%29-San-Fernando-de-Henares-Aranjuez-MD/1335326855/ | Indra Sistemas | Industrial Delivery Manager (IDM) - San Fernando de Henares / Aranjuez | Madrid
+- [ ] https://careers.indragroup.com/job/Portugal-SAP-Project-Manager-MMSD-ou-FICO/1351820555/ | Indra Sistemas | SAP Project Manager / MM/SD ou FI/CO | Portugal
+
+- [ ] https://jobs.ashbyhq.com/Sui%20Foundation/e606131b-a4d4-45ad-b773-aff4da7f6ad1 | Sui Foundation | Social Media Marketing Manager (Contract) | Remote
+- [ ] https://web3.career/community-manager-swissborg/84015 | SwissBorg | Community Manager | Remote (Switzerland HQ, Europe-eligible) | note: liveness uncertain
+- [ ] https://web3.career/france-community-manager-events-binance/148173 | Binance | France Community Manager (Events) | Remote — France | note: liveness uncertain
+- [ ] https://apply.workable.com/mediatonic/j/1829BFBE1B/ | Mediatonic / Tonic Games Group | Community & Social Manager (Publishing) | Remote (UK HQ) | note: liveness uncertain
+- [ ] https://remotegamejobs.com/jobs/dreamforge-social-media-content-creator-community-manager-remote-job | DreamForge | Social Media Content Creator & Community Manager | Remote — Anywhere
+- [ ] https://remotegamejobs.com/jobs/void-interactive-community-manager-ready-or-not-remote-job | VOID Interactive | Community Manager, Ready or Not | Remote — contractor (Ireland HQ) | note: liveness uncertain
+- [ ] https://remotegamejobs.com/jobs/alderon-games-community-manager-remote-job | Alderon Games | Community Manager | Remote | note: liveness uncertain
+- [ ] https://emploi.afjv.com/emploi-jeux-video/ESUP2053-29036 | Com2uS Europe GmbH | Community Manager - France (m/f/x) | Berlin, DE — CDI, flexible home office (French-speaking role)
+- [ ] https://emploi.afjv.com/emploi-jeux-video/ESUP1369-28936 | Magic Design Studios | Community Manager (H/F) | Montpellier (34), France — freelance, on-site
+- [ ] https://hitmarker.net/jobs/razer-manager-global-community-1636747 | Razer | Manager, Global Community | Listed on Hitmarker — verify region before applying | note: liveness uncertain
