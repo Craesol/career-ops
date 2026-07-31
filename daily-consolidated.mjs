@@ -347,8 +347,19 @@ function countAddedToday() {
 function todayAddedRows() {
   try {
     const c = readFileSync(resolve(ROOT, 'data/scan-history.tsv'), 'utf-8');
-    return c.split('\n')
+    const lines = c.split('\n');
+    // Email ⊆ web invariant: a URL the user removed (web Remove writes an
+    // append-only `skipped` row) or the prune step killed (`skipped_expired`)
+    // must not resurface in the digest — the web hides it, so the email must
+    // too, regardless of row order.
+    const dismissed = new Set();
+    for (const l of lines) {
+      const cols = l.split('\t');
+      if (cols[0] && /^(skipped|skipped_expired|expired)$/.test((cols[5] || '').trim())) dismissed.add(cols[0]);
+    }
+    return lines
       .filter(isAddedToday)
+      .filter(l => !dismissed.has(l.split('\t')[0]))
       .map(l => {
         const [url, date, portal, title, company] = l.split('\t');
         return { url, date, portal, title, company };
