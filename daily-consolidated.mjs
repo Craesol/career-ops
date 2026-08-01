@@ -282,6 +282,15 @@ if (INCLUDE_L3) {
 // Job ads expire fast: a one-off audit found 80% of the ATS-checkable inbox
 // already gone. Pruning daily (zero tokens, ATS JSON API) keeps the inbox
 // something the user can trust instead of a graveyard.
+// --- STEP 3a2: prune ancient web3.career postings by posting id ----------
+// Dateless sources (L3 websearch) rediscover years-old listings; the id
+// sequence is the only recency signal those URLs carry. See the script header.
+console.log('\n[step 3a2] prune stale web3.career ids');
+const w3cResult = spawnSync('node', [resolve(ROOT, 'prune-stale-web3career.mjs')], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 120000,
+});
+console.log('  ' + ((w3cResult.stdout || '').trim().split('\n').pop() || ('exit ' + w3cResult.status)));
+
 console.log('\n[step 3b] prune dead postings');
 const pruneResult = spawnSync('node', [resolve(ROOT, 'prune-dead.mjs'), '--apply', '--limit', '120'], {
   cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 600000,
