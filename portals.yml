@@ -85,6 +85,10 @@ location_filter:
     - "on site"
     - "in-office"
     - "in office"
+    # Geo-restricted markets the candidate can't work from (2026-08-01):
+    # remote-but-Philippines-only listings kept leaking in via job boards.
+    - "philippines"
+    - "manila"
 
 # -- Salary filter (optional) --
 # Filter scanned jobs by annual compensation range. Applied AFTER location

@@ -1391,7 +1391,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.ashbyhq.com/solana%20foundation/09711478-2181-431c-b615-c6616ce67d20 | Solana Foundation | Trading Growth Lead | Asia
 - [ ] https://jobs.ashbyhq.com/solana%20foundation/b40cbc32-a29c-44a8-b20a-4b0a5d3fc127 | Solana Foundation | DeFi Growth Lead | Remote-US
 - [ ] https://vaynermedia.com/careers?gh_jid=8094202 | VaynerMedia | Associate, Influencer Partnership | United States- New York, NY
-- [ ] https://vaynermedia.com/careers?gh_jid=7396560 | VaynerMedia | Copywriter (Contract) | Philippines- Remote
+- [x] ~~https://vaynermedia.com/careers?gh_jid=7396560 | VaynerMedia | Copywriter (Contract) | Philippines- Remote~~ — swept: location (Philippines- Remote)
 - [ ] https://vaynermedia.com/careers?gh_jid=8074193 | VaynerMedia | French Social Media Content Views Editor / Video Editor | EU- Remote
 - [ ] https://vaynermedia.com/careers?gh_jid=8066456 | VaynerMedia | India Portfolio / Director Influencer Partnership & Strategy | India- Gurugram
 - [ ] https://vaynermedia.com/careers?gh_jid=8020435 | VaynerMedia | India Portfolio / Influencer Partnership Associate | India- Gurugram
@@ -1402,8 +1402,8 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://vaynermedia.com/careers?gh_jid=8078828 | VaynerMedia | Project Coordinator | Singapore
 - [ ] https://vaynermedia.com/careers?gh_jid=7783386 | VaynerMedia | Project Manager | Australia- Sydney
 - [ ] https://vaynermedia.com/careers?gh_jid=8074158 | VaynerMedia | Senior Influencer Manager 12month FTC ( Fluent in French ) | UK- London, England
-- [ ] https://vaynermedia.com/careers?gh_jid=7864762 | VaynerMedia | Views Editor (Gaming) | Philippines- Remote
-- [ ] https://vaynermedia.com/careers?gh_jid=7676233 | VaynerMedia | Views Editor (Social Media) | Philippines- Remote
+- [x] ~~https://vaynermedia.com/careers?gh_jid=7864762 | VaynerMedia | Views Editor (Gaming) | Philippines- Remote~~ — swept: location (Philippines- Remote)
+- [x] ~~https://vaynermedia.com/careers?gh_jid=7676233 | VaynerMedia | Views Editor (Social Media) | Philippines- Remote~~ — swept: location (Philippines- Remote)
 - [ ] https://jobs.ashbyhq.com/trust-wallet/2d265735-8142-42d6-8dcb-7fb508b1eaa5 | Trust Wallet | Brand Video Creator & KOL Partner (品牌视频创作者与KOL合作负责人) | Remote - Global
 - [ ] https://jobs.ashbyhq.com/thatgamecompany/8059993e-f02e-48d7-a28a-24d6bf6e5d18 | thatgamecompany | Brand Manager - China | China - Shanghai
 - [ ] https://jobs.ashbyhq.com/thatgamecompany/d899968a-2531-45ee-bcee-a13ecc12715b | thatgamecompany | Sr. Content Strategy & Creator | Remote - South East Asia
@@ -1507,7 +1507,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://careers.indragroup.com/job/Cybersecurity-Service-Delivery-Manager-00/1359016855/ | Indra Sistemas | Cybersecurity Service Delivery Manager
 - [ ] https://careers.indragroup.com/job/Madrid-Senior-Project-Manager-MD/1358967255/ | Indra Sistemas | Senior Project Manager | Madrid
 - [ ] https://careers.indragroup.com/job/Project-Manager-Infraestructuras-IT/978210855/ | Indra Sistemas | Project Manager Infraestructuras IT
-- [ ] https://careers.indragroup.com/job/Philippines-Senior-SAP-Project-Manager/1362162055/ | Indra Sistemas | Senior SAP Project Manager | Philippines
+- [x] ~~https://careers.indragroup.com/job/Philippines-Senior-SAP-Project-Manager/1362162055/ | Indra Sistemas | Senior SAP Project Manager | Philippines~~ — swept: location (Philippines)
 - [ ] https://careers.indragroup.com/job/Barcelona-Project-Manager-Sistemas-Aeroespaciales-y-Defensa-CT/1350762755/ | Indra Sistemas | Project Manager - Sistemas Aeroespaciales y Defensa | Barcelona
 - [ ] https://careers.indragroup.com/job/Madrid-C-UAS-Project-Manager-MD/1353594155/ | Indra Sistemas | C-UAS Project Manager | Madrid
 - [ ] https://careers.indragroup.com/job/Portugal-Project-Manager-Aerospace-Ground-Segment/1353340655/ | Indra Sistemas | Project Manager Aerospace / Ground Segment | Portugal
@@ -1562,7 +1562,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://epicgames.com/careers/jobs/6132211004?gh_jid=6132211004 | Epic Games | Senior Communications Manager, Corporate | BLANK,BLANK,Multiple Locations | posted: 2026-07-31
 - [ ] https://jobicy.com/jobs/144915-onboarding-project-manager | Cloudbeds | Onboarding Project Manager | Europe | posted: 2026-08-01
 - [ ] https://himalayas.app/companies/jewish-news-syndicate/jobs/copy-editor-israel | Jewish News Syndicate | Copy Editor (Israel) | Israel | posted: 2026-08-01
-- [ ] https://himalayas.app/companies/key-media/jobs/project-coordinator-work-from-home-93841522 | Key Media | Project Coordinator (Work from Home) | Philippines | posted: 2026-08-01
+- [x] ~~https://himalayas.app/companies/key-media/jobs/project-coordinator-work-from-home-93841522 | Key Media | Project Coordinator (Work from Home) | Philippines | posted: 2026-08-01~~ — swept: location (Philippines)
 - [x] ~~https://www.arbeitnow.com/jobs/companies/code-gaia/brand-content-marketing-manager-all-genders-munich-371537 | Code Gaia | Brand & Content Marketing Manager (all genders) | Munich | posted: 2026-07-31~~ — removed from fresh matches
 - [x] ~~https://www.arbeitnow.com/jobs/companies/every-health/influencer-partnerships-manager-gn-berlin-349426 | Every Health | Influencer & Partnerships Manager (gn) | Berlin | posted: 2026-07-31~~ — removed from fresh matches
 - [x] ~~https://www.arbeitnow.com/jobs/companies/autoscout24/senior-content-manager-seo-aeo-496121 | autoscout24 | Senior Content Manager SEO/AEO (m/w/d) | posted: 2026-07-31~~ — removed from fresh matches
