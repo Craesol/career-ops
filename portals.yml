@@ -127,6 +127,20 @@ location_filter:
     - "marseille"
     - "london"
     - "madrid"
+    # Germany hybrids (2026-08-01) — English-working-language only; the German-
+    # language gate lives in title_filter.negative (German-titled roles) and in
+    # the evaluation language policy (modes/_profile.md), not here.
+    - "germany"
+    - "deutschland"
+    - "berlin"
+    - "munich"
+    - "münchen"
+    - "hamburg"
+    - "frankfurt"
+    - "cologne"
+    - "köln"
+    - "düsseldorf"
+    - "stuttgart"
   block:
     - "on-site"
     - "onsite"
@@ -339,6 +353,20 @@ title_filter:
     - "On site"
     - "In-office"
     - "In office"
+    # German-titled roles (2026-08-01): a title written in German means a
+    # German-primary working language, which the candidate doesn't have.
+    # English-titled roles at German companies pass; evaluation still gates
+    # German-language requirements found in the JD body.
+    - "Mitarbeiter"
+    - "Referent"
+    - "Sachbearbeiter"
+    - "Berater"
+    - "Teamleiter"
+    - "Bereichsleiter"
+    - "Kaufmann"
+    - "Kauffrau"
+    - "Redakteur"
+    - "Übersetzer"
   seniority_boost:
     # These prefixes add relevance but are not required
     - "Senior"
