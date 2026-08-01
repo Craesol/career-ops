@@ -73,12 +73,60 @@
 #     - "Brazil"
 #     - "Australia"
 
-# Active config: block postings whose LOCATION field marks them as on-site
-# (mirrors the daily-ats-scan.mjs onsite hard-block, 2026-07-30). No `allow`
-# list on purpose — a plain city string still passes, only explicit on-site
-# markers are rejected. Empty locations keep passing (don't penalize missing
-# data).
+# Active config (2026-08-01) — three-tier location policy:
+#   1. always_allow — the commutable zone around Nice + Monaco: ANY modality
+#      (remote, hybrid, on-site) is fine here, so it wins over the block list.
+#   2. block — explicit on-site markers anywhere else, plus geo-restricted
+#      markets the candidate can't work from.
+#   3. allow — everything else must look remote (remote/EMEA/Europe/…) or name
+#      one of the approved hybrid cities (Paris, Lyon, Marseille, London,
+#      Madrid). On-site postings in those cities still die on the block list;
+#      bare city strings (unknown modality) pass and get settled at evaluation.
+# Empty locations keep passing (don't penalize missing data). Keywords are
+# word-boundary anchored ("vence" does NOT match "Provence").
 location_filter:
+  always_allow:
+    - "nice"
+    - "villeneuve-loubet"
+    - "villeneuve loubet"
+    - "antibes"
+    - "grasse"
+    - "valbonne"
+    - "sophia antipolis"
+    - "sophia-antipolis"
+    - "biot"
+    - "vallauris"
+    - "vence"
+    - "monaco"
+    - "monte-carlo"
+    - "monte carlo"
+  allow:
+    # Remote markers
+    - "remote"
+    - "wfh"
+    - "work from home"
+    - "distributed"
+    - "home office"
+    - "homeoffice"
+    - "télétravail"
+    - "teletravail"
+    - "remoto"
+    # Remote-friendly regions
+    - "worldwide"
+    - "global"
+    - "anywhere"
+    - "emea"
+    - "europe"
+    - "eu"
+    - "france"
+    - "uk"
+    - "united kingdom"
+    # Approved hybrid cities (on-site there still blocked below)
+    - "paris"
+    - "lyon"
+    - "marseille"
+    - "london"
+    - "madrid"
   block:
     - "on-site"
     - "onsite"
