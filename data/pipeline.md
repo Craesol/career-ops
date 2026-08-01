@@ -32,11 +32,11 @@
 - [x] ~~https://boards.greenhouse.io/rocketmiles/jobs/3606839 | Rocket Travel | Partnership Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/ruby-labs/3e5cd6bf-2472-4801-8ff4-ead9efd6d6e2 | Ruby Labs | Community Manager~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.lever.co/perforce/37835fa2-16cd-4222-b930-6007bcc76bd4 | Perforce | Senior Partner Ecosystem Manager~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://cryptocurrencyjobs.co/marketing/kolex-community-manager-nfts/ | Kolex | Community Manager NFTs
+- [x] ~~https://cryptocurrencyjobs.co/marketing/kolex-community-manager-nfts/ | Kolex | Community Manager NFTs~~ — swept: stale (35d old, first seen 2026-06-27)
 - [x] ~~https://weworkremotely.com/remote-jobs/maptiler-developer-relations-customer-success-manager-maps-platform-remote-in-europe | MapTiler | Developer Relations & Customer Success Manager~~ — swept: negative-title
-- [ ] https://candidat.francetravail.fr/offres/recherche/detail/203GHRG | France Travail | Project Management Officer PMO - Valbonne
+- [x] ~~https://candidat.francetravail.fr/offres/recherche/detail/203GHRG | France Travail | Project Management Officer PMO - Valbonne~~ — swept: stale (35d old, first seen 2026-06-27)
 - [x] ~~https://jobs.ashbyhq.com/livekit/dc4723c0-f763-4219-abf3-220c038550b1 | LiveKit | Staff Developer Advocate Community & Events~~ — swept: negative-title
-- [ ] https://nexus-labs.pallet.xyz/jobs/b1dc6246-54ee-4007-a42b-5adf4b7a2c4e | Nexus Labs | Community & Marketing Manager
+- [x] ~~https://nexus-labs.pallet.xyz/jobs/b1dc6246-54ee-4007-a42b-5adf4b7a2c4e | Nexus Labs | Community & Marketing Manager~~ — swept: stale (35d old, first seen 2026-06-27)
 - [x] ~~https://pallet.xyz/job/f71755cc-1dfb-40cf-b3e7-2d60a647e973 | Timeswap Labs | Community Manager / Meme Artist~~ — swept: triage-C (out of archetype)
 
 
@@ -46,22 +46,22 @@
 - [x] ~~https://jobs.ashbyhq.com/chainlink-labs/9c9219c7-dcb1-4a21-b9ad-488ba978fca6/application?action=apply | Chainlink Labs | Web3 Partnerships Manager @ Chainlink Labs~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://cryptojobslist.com/community |  | 31+ Crypto Community Jobs April 2026 | Hiring Now~~ — swept: junk-url
 - [x] ~~https://cryptojobslist.com/community?expired=brand-ambassador-at-guarda-remote |  | Crypto Community Manager Jobs paying $24k-250k+ per year (Updated Daily)~~ — swept: junk-title
-- [ ] https://cryptojobslist.com/remote_community-manager | Remote Web3 Community Manager Jobs | Remote Web3 Community Manager Jobs - $45k-$80k/year
+- [x] ~~https://cryptojobslist.com/remote_community-manager | Remote Web3 Community Manager Jobs | Remote Web3 Community Manager Jobs - $45k-$80k/year~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptojobslist.com/remote?expired=community-manager-swix-dao-remote |  | Remote Crypto & Web3 Jobs paying $250k+ per year (Updated Daily)~~ — swept: junk-title
 - [x] ~~https://cryptocurrencyjobs.co/startups/filecoin-foundation/ | Filecoin Foundation | Jobs at Filecoin Foundation - Cryptocurrency Jobs~~ — swept: junk-title
-- [ ] https://cryptocurrencyjobs.co/community-manager/ | Cryptocurrency Community Manager Jobs | Cryptocurrency Community Manager Jobs - Cryptocurrency Jobs
+- [x] ~~https://cryptocurrencyjobs.co/community-manager/ | Cryptocurrency Community Manager Jobs | Cryptocurrency Community Manager Jobs - Cryptocurrency Jobs~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptocurrencyjobs.co/startups/the-sandbox/ | The Sandbox | Jobs at The Sandbox - Cryptocurrency Jobs~~ — swept: junk-title
 - [x] ~~https://cryptocurrencyjobs.co/startups/binance/ | Binance | Jobs at Binance - Cryptocurrency Jobs~~ — swept: junk-title
 - [x] ~~https://cryptocurrencyjobs.co/startups/sui-foundation/ | Sui Foundation | Jobs at Sui Foundation - Cryptocurrency Jobs~~ — swept: junk-title
-- [ ] https://jobs.lever.co/raya/f2730914-ca7b-4821-8f33-dd6484415104/apply | Raya | Raya - Lead Community Manager, Trust & Safety
+- [x] ~~https://jobs.lever.co/raya/f2730914-ca7b-4821-8f33-dd6484415104/apply | Raya | Raya - Lead Community Manager, Trust & Safety~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptojobslist.com/talent/business-development/singapore |  | Hire a Web3 Business Development Expert in Singapore | 49+ Vetted Profiles (2026)~~ — swept: junk-url
-- [ ] https://cryptojobslist.com/manager-jobs-emea | Web3 Manager Jobs in EMEA | Web3 Manager Jobs in EMEA - $144k-$265k/year
-- [ ] https://cryptojobslist.com/marketing/live-operations-manager-yuga-labs-remote | Yuga Labs | Live Operations Manager at Yuga Labs | Remote | Crypto Jobs List
+- [x] ~~https://cryptojobslist.com/manager-jobs-emea | Web3 Manager Jobs in EMEA | Web3 Manager Jobs in EMEA - $144k-$265k/year~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://cryptojobslist.com/marketing/live-operations-manager-yuga-labs-remote | Yuga Labs | Live Operations Manager at Yuga Labs | Remote | Crypto Jobs List~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptojobslist.com/business-development |  | Business Development Jobs in Crypto & Web3~~ — swept: junk-title
-- [ ] https://cryptojobslist.com/remote-jobs-europe | Remote Web3 Jobs in Europe | Remote Web3 Jobs in Europe - $75k-$138k/year
+- [x] ~~https://cryptojobslist.com/remote-jobs-europe | Remote Web3 Jobs in Europe | Remote Web3 Jobs in Europe - $75k-$138k/year~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptojobslist.com/jobs-new-york |  | Web3 & Crypto Jobs in New York, United States -...~~ — swept: junk-title
-- [ ] https://web3.career/community-manager-jobs | Community Manager Jobs in Web3 | Community Manager Jobs in Web3 - Jun 2026 (1 New)
-- [ ] https://web3.career/community-manager+remote-jobs | Remote Community Manager Jobs in Web3 | Remote Community Manager Jobs in Web3 - May 2026
+- [x] ~~https://web3.career/community-manager-jobs | Community Manager Jobs in Web3 | Community Manager Jobs in Web3 - Jun 2026 (1 New)~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://web3.career/community-manager+remote-jobs | Remote Community Manager Jobs in Web3 | Remote Community Manager Jobs in Web3 - May 2026~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://web3.career/web3-jobs-remote+dao |  | Dao Jobs in Remote, Remote~~ — swept: junk-title
 - [x] ~~https://hitmarker.net/esports-jobs |  | Esports Jobs | Hitmarker~~ — swept: junk-url
 - [x] ~~https://nl.linkedin.com/jobs/blockchain-jobs |  | 135 vacatures voor Blockchain in Nederland (10 nieuw)~~ — swept: junk-title
@@ -96,10 +96,10 @@
 - [x] ~~https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-washington-dc-area-trading-careers-JV_IC1138213_KO0,55_KE56,71.htm?jl=1010040511068 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Washington, DC Area Job in Washington, DC | Glassdoor~~ — swept: junk-title
 - [x] ~~https://www.glassdoor.com/job-listing/crypto-markets-specialist-%E2%80%93-remote-%E2%80%93-minneapolis-mn-trading-careers-JV_IC1142551_KO0,51_KE52,67.htm?jl=1010040511061 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Minneapolis, MN Job in Minneapolis, MN | Glassdoor~~ — swept: junk-title
 - [x] ~~https://www.glassdoor.com/job-listing/crypto-markets-specialist-remote-columbus-oh-trading-careers-JV_IC1145845_KO0,44_KE45,60.htm?jl=1010051636452 |  | Shaping Careers Company Logo Shaping Careers hiring Crypto Markets Specialist – Remote – Columbus, OH Job in Columbus, OH | Glassdoor~~ — swept: junk-title
-- [ ] https://startup.jobs/community-manager-dharma-2227580 | Dharma | Community Manager at Dharma
-- [ ] https://remoteok.com/remote-content+crypto-jobs |  | Remote Content + Crypto Jobs with great benefits and pay
+- [x] ~~https://startup.jobs/community-manager-dharma-2227580 | Dharma | Community Manager at Dharma~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://remoteok.com/remote-content+crypto-jobs |  | Remote Content + Crypto Jobs with great benefits and pay~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://remoteok.com/remote-manager+web3-jobs |  | Remote Manager + Web3 Jobs~~ — swept: triage-C (noise)
-- [ ] https://remoteok.com/remote-jobs/110764-remote-trip-leader-community-manager-wifi-tribe | WiFi Tribe | Remote Trip Leader & Community Manager (💰~$35k, Worldwide) at WiFi Tribe
+- [x] ~~https://remoteok.com/remote-jobs/110764-remote-trip-leader-community-manager-wifi-tribe | WiFi Tribe | Remote Trip Leader & Community Manager (💰~$35k, Worldwide) at WiFi Tribe~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.workingnomads.com/remote-community-manager-jobs |  | Remote Community Manager Jobs | Working Nomads~~ — swept: junk-title
 - [x] ~~https://www.workingnomads.com/remote-community-manager-jobs-usa |  | Remote Community Manager Jobs in the USA | Working Nomads~~ — swept: junk-title
 - [x] ~~https://himalayas.app/jobs/worldwide/community-manager |  | Work from Anywhere Remote Community Manager Jobs | Himalayas~~ — swept: junk-title
@@ -113,9 +113,9 @@
 - [x] ~~https://www.apec.fr/candidat/recherche-emploi.html/emploi?lieux=711&motsCles=Community+Manager | Offres d'emploi Community Manager Ile | Offres d'emploi Community Manager Ile-de-France~~ — swept: junk-title
 - [x] ~~https://www.apec.fr/candidat/recherche-emploi.html/emploi?motsCles=Community+Manager+(Paris) |  | Offres d'emploi Community Manager (Paris)~~ — swept: junk-title
 - [x] ~~https://www.apec.fr/tous-nos-metiers/etudes-recherche-et-developpement/chef-de-projet-amenagement-du-territoire.html |  | Chef de projet aménagement du territoire - Fiche métier | Apec~~ — swept: junk-title
-- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager | Emploi Community Manager | Emploi Community Manager - Offres d'emploi CDI...
-- [ ] https://www.welcometothejungle.com/fr/pages/emploi-alternance-community-manager |  | Alternance community manager : offres d'alternants
-- [ ] https://www.welcometothejungle.com/fr/pages/stage-community-manager | Stage Community Manager | Stage Community Manager - Postes à pourvoir rapidement
+- [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager | Emploi Community Manager | Emploi Community Manager - Offres d'emploi CDI...~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-alternance-community-manager |  | Alternance community manager : offres d'alternants~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://www.welcometothejungle.com/fr/pages/stage-community-manager | Stage Community Manager | Stage Community Manager - Postes à pourvoir rapidement~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-levallois-perret-92300 | Community manager Levallois | Community manager Levallois-Perret (92300) - offres d'emploi~~ — swept: junk-title
 - [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-nice-06000 | Community manager Nice (06000) | Community manager Nice (06000) - offres d'emploi~~ — swept: junk-title
 - [x] ~~https://candidat.francetravail.fr/offres/emploi/community-manager/bouches-du-rhone/s32m8d13 | Offres d'emploi Community manager | Offres d'emploi Community manager - Marketing, publicité - Bouches-du-Rhône | France Travail~~ — swept: junk-title
@@ -134,33 +134,33 @@
 - [x] ~~https://www.adzuna.fr/charente-maritime/community-manager |  | 580 Offres d'emploi community manager - Charente-Maritime | Mai 2026 | Adzuna.fr~~ — swept: junk-title
 - [x] ~~https://www.adzuna.fr/lyon/community-manager |  | 2 085 Offres d'emploi community manager - Lyon | Décembre 2025 | Adzuna.fr~~ — swept: junk-title
 - [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-toulon-83000 |  | Offres d'emploi de Community manager à Toulon (83000)~~ — swept: junk-title
-- [ ] https://www.welcometothejungle.com/fr/pages/metiers-community-manager | Métier Community Manager | Métier Community Manager - missions et rôle
+- [x] ~~https://www.welcometothejungle.com/fr/pages/metiers-community-manager | Métier Community Manager | Métier Community Manager - missions et rôle~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-aix-en-provence-13100 | Community manager Aix | Community manager Aix-en-Provence (13100) - offres d'emploi~~ — swept: junk-title
 - [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-la-ciotat-13600 | Community manager La Ciotat (13600) | Community manager La Ciotat (13600) - offres d'emploi~~ — swept: junk-title
-- [ ] https://www.welcometothejungle.com/fr/pages/emploi-community-manager-rhone |  | Emploi Community Manager Rhône
-- [ ] https://indeed.fr/emplois?l=Alpes-Maritimes&q=Community+Manager | Community Manager, Alpes | Community Manager, Alpes-Maritimes : plus de 25 emplois (3 août 2025) | Indeed
+- [x] ~~https://www.welcometothejungle.com/fr/pages/emploi-community-manager-rhone |  | Emploi Community Manager Rhône~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://indeed.fr/emplois?l=Alpes-Maritimes&q=Community+Manager | Community Manager, Alpes | Community Manager, Alpes-Maritimes : plus de 25 emplois (3 août 2025) | Indeed~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://indeed.fr/emplois?l=Provence-Alpes-C%C3%B4te+d%27Azur&q=Community+Manager | Emplois : Community Manager, Provence | Emplois : Community Manager, Provence-Alpes-Côte d'Azur - 22 mars 2022 | Indeed.com~~ — swept: junk-title
 - [x] ~~https://www.indeed.fr/emplois?l=Hauts-de-Seine&q=Community+Manager | Emplois : Community Manager, Hauts | Emplois : Community Manager, Hauts-de-Seine - août 2020 | Indeed.fr~~ — swept: junk-title
-- [ ] https://indeed.fr/emplois?l=Centre-Val+de+Loire&q=Community+Manager | Community Manager, Centre | Community Manager, Centre-Val de Loire : plus de 25 offres d'emploi (19 septembre 2024) | Indeed.com
+- [x] ~~https://indeed.fr/emplois?l=Centre-Val+de+Loire&q=Community+Manager | Community Manager, Centre | Community Manager, Centre-Val de Loire : plus de 25 offres d'emploi (19 septembre 2024) | Indeed.com~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.indeed.fr/94524-Rungis-Emplois-Community-Manager |  | Emplois : Community Manager, 94524 Rungis - novembre 2020 | Indeed.fr~~ — swept: junk-title
 - [x] ~~https://www.indeed.fr/Lyon-5e-(69)-Emplois-Community-Manager |  | Emplois : Community Manager, Lyon 5e (69) - septembre 2020 | Indeed.fr~~ — swept: junk-title
 - [x] ~~https://www.indeed.fr/Alfortville-(94)-Emplois-Community-Manager |  | Emplois : Community Manager, Alfortville (94) - octobre 2020 | Indeed.fr~~ — swept: junk-title
 - [x] ~~https://indeed.fr/La-D%C3%A9fense-(92)-Emplois-Community-Manager |  | Emplois : Community Manager, La Défense (92) - septembre 2020 | Indeed.fr~~ — swept: junk-title
 - [x] ~~https://indeed.fr/emplois?l=Saint-Maur-des-Foss%C3%A9s+%2894%29&q=Community+Manager | Emplois : Community Manager, Saint | Emplois : Community Manager, Saint-Maur-des-Fossés (94) - octobre 2020 | Indeed.fr~~ — swept: junk-title
-- [ ] https://laborx.com/gigs/i-will-be-your-discord-community-manager-mod-for-huge-success-30289 |  | I will be your Discord Community Manager, Mod for huge Success - Jakob Buchholz - freelance jobs gig | LaborX
+- [x] ~~https://laborx.com/gigs/i-will-be-your-discord-community-manager-mod-for-huge-success-30289 |  | I will be your Discord Community Manager, Mod for huge Success - Jakob Buchholz - freelance jobs gig | LaborX~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://beincrypto.com/jobs/non-tech/ | Non | Non-tech Crypto Jobs - April 2026~~ — swept: triage-C (noise)
 - [x] ~~https://beincrypto.com/jobs/social-media/ | Social | Social-media Crypto Jobs - December 2025~~ — swept: triage-C (noise)
 - [x] ~~https://beincrypto.com/jobs/community | Community Crypto Jobs | Community Crypto Jobs - October 2025~~ — swept: triage-C (noise)
 - [x] ~~https://beincrypto.com/jobs/partnership | Partnership Crypto Jobs | Partnership Crypto Jobs - February 2026~~ — swept: triage-C (noise)
 - [x] ~~https://beincrypto.com/jobs/community-manager/ | Community | Community-manager Crypto Jobs - December 2025~~ — swept: triage-C (noise)
 - [x] ~~https://beincrypto.com/jobs/communication/ | Communication Crypto Jobs | Communication Crypto Jobs - September 2025~~ — swept: triage-C (noise)
-- [ ] https://beincrypto.com/jobs/brand-ambassador/ | Brand | Brand-ambassador Crypto Jobs - January 2026
+- [x] ~~https://beincrypto.com/jobs/brand-ambassador/ | Brand | Brand-ambassador Crypto Jobs - January 2026~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://web3vacancy.com/ |  | Web3 Jobs & Crypto Jobs — #1 Blockchain Job Board 2026 | Web3Vacancy~~ — swept: junk-title
 - [x] ~~https://jobs3.io/dao-strategist-jobs/ |  | DAO Strategist Jobs | Jobs3~~ — swept: junk-title
 - [x] ~~https://www.remote3.co/ | Web3 Jobs | Web3 Jobs - Blockchain, Crypto Jobs (69 new in Sep 2025)~~ — swept: triage-C (noise)
 - [x] ~~https://remote3.co/remote/community-manager |  | Remote Community Manager Jobs in 2024~~ — swept: junk-title
 - [x] ~~https://www.remote3.co/blog-post/how-to-become-a-community-manager |  | How To Become A Community Manager?~~ — swept: junk-title
-- [ ] https://wellfound.com/web3 | Web3 and Crypto Jobs | Web3 and Crypto Jobs - Find Blockchain Startup Jobs Near You | Wellfound
+- [x] ~~https://wellfound.com/web3 | Web3 and Crypto Jobs | Web3 and Crypto Jobs - Find Blockchain Startup Jobs Near You | Wellfound~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://wellfound.com/role/r/blockchain-business-development |  | Remote Blockchain Business Development Jobs in 2026 | Wellfound~~ — swept: junk-title
 - [x] ~~https://wellfound.com/role/blockchain |  | Blockchain Jobs | Wellfound~~ — swept: junk-title
 - [x] ~~https://wellfound.com/role/crypto-developer |  | Crypto Developer Jobs | Wellfound~~ — swept: junk-title
@@ -175,18 +175,18 @@
 - [x] ~~https://x.com/crypto_vazima/status/2011847083393704181 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Multiple Remote Web3/Blockchain Roles (Mandarin &amp; English) — Hconnect 📍 Remote (Global + NA/Europe specific) | 🧑‍💻 Engineering / Product / Growth / Creative | 🕐 Posted 14h ago — Jan 15, 2026 Hconnect is scaling teams for Web3, blockchain, DeFi, and AI x Web3 projects https://t.co/CFp4Q0fulm" / X~~ — swept: junk-title
 - [x] ~~https://x.com/CryptoJobsList/status/1876642982796935454 |  | Crypto Jobs List — Web3 jobs on X: "Community Lead ...~~ — swept: junk-title
 - [x] ~~https://x.com/crypto_vazima/status/2017157752833892578 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Multiple Web3 Roles — Global &amp; Remote 📍 Remote / Various (US/LATAM, NYC/SF, EU/Asia, Global) | 💼 Full &amp; Part-time | 🧑‍💻 DeFi / Frontend / Social / Content / Design | 💰 $40k–$250k + Equity | 🕐 Posted 2h ago — Jan 30, 2026 Exciting batch of Web3/DeFi/creative tech https://t.co/i9o7llp5bG" / X~~ — swept: junk-title
-- [ ] https://x.com/getcryptojobs?lang=en | CryptoJobs | CryptoJobs - From Web2 to Web3 (@GetCryptoJobs) ...
-- [ ] https://cosmos.network/ |  | Cosmos | Secure and Performant Blockchain for Institutions
-- [ ] https://en.wikipedia.org/wiki/Online_community_manager |  | Online community manager
+- [x] ~~https://x.com/getcryptojobs?lang=en | CryptoJobs | CryptoJobs - From Web2 to Web3 (@GetCryptoJobs) ...~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://cosmos.network/ |  | Cosmos | Secure and Performant Blockchain for Institutions~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://en.wikipedia.org/wiki/Online_community_manager |  | Online community manager~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://x.com/crypto_vazima/status/2026332584762851482 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: Partnerships Manager (Crypto / Web3) — Crypto Project 📍 Remote (Global) | 💼 Full-time | 🧑‍💻 CEX listings, DeFi integrations, ecosystem BD | 🕐 Recent posting A crypto project operating at scale is hiring a Partnerships Manager to own and close centralized exchange https://t.co/KKw8i0uyOK" / X~~ — swept: junk-title
 - [x] ~~https://x.com/udao_official/status/1975975578122531142 |  | udao on X: "Starting a Career in Web3 : Skills, Tips & Tricks " / X~~ — swept: junk-title
 - [x] ~~https://www.bankless.com/hire-job-career-crypto |  | 5 Steps to Starting Your Crypto Career on Bankless~~ — swept: junk-title
-- [ ] https://wellfound.com/jobs/1747011-senior-product-designer | Surf DAO • Remote • Remote (Work from Home) | Senior Product Designer at Surf DAO • Remote • Remote (Work from Home) | Wellfound (formerly AngelList Talent)
+- [x] ~~https://wellfound.com/jobs/1747011-senior-product-designer | Surf DAO • Remote • Remote (Work from Home) | Senior Product Designer at Surf DAO • Remote • Remote (Work from Home) | Wellfound (formerly AngelList Talent)~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://wellfound.com/hiring-data/r/social-media-manager-1/i/blockchain-cryptocurrency-2 |  | Social Media Manager salary in Blockchain / Cryptocurrency Startups 2025 | Wellfound~~ — swept: junk-title
 - [x] ~~https://t.me/s/web3hiring?before=10619 | Web3 Jobs | Web3 Jobs – Telegram~~ — swept: triage-C (noise)
 - [x] ~~https://t.me/s/cryptojobslist?after=4771 | Crypto Jobs List | Crypto Jobs List - Web3 Jobs, Blockchain Jobs, Solidity Jobs~~ — swept: triage-C (noise)
-- [ ] https://t.me/s/cryptojobslist?before=2638 |  | CryptoJobsList | Web3 Jobs – Telegram
-- [ ] https://web3.career/community-and-engagement-lead-web3-recruit/76730 |  | Web3 Recruit is hiring a
+- [x] ~~https://t.me/s/cryptojobslist?before=2638 |  | CryptoJobsList | Web3 Jobs – Telegram~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://web3.career/community-and-engagement-lead-web3-recruit/76730 |  | Web3 Recruit is hiring a~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~http://thedefiant.io/crypto-jobs/ |  | The Defiant~~ — swept: triage-C (noise)
 - [x] ~~https://thedefiant.io/about | About | About - The Defiant~~ — swept: triage-C (noise)
 - [x] ~~https://thedefiant.io/go-premium | DeFi Alpha | DeFi Alpha - The Defiant~~ — swept: triage-C (noise)
@@ -198,7 +198,7 @@
 - [x] ~~https://app.dework.xyz/dia-dao/section-2?taskId=88583a84-3f39-4d2d-ad86-c42e6d4f5de5 |  | [Application Form] Join DIA DAO | Dework~~ — swept: junk-title
 - [x] ~~https://app.dework.xyz/tokenomics-dao |  | Tokenomics DAO | Dework~~ — swept: junk-title
 - [x] ~~https://app.dework.xyz/contribution-dao |  | Contribution DAO | Dework~~ — swept: junk-title
-- [ ] https://job-boards.greenhouse.io/gsgcareers/jobs/7990118 | Gsgcareers | Player Experience & Community Manager
+- [x] ~~https://job-boards.greenhouse.io/gsgcareers/jobs/7990118 | Gsgcareers | Player Experience & Community Manager~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://job-boards.greenhouse.io/fairsteadescllc/jobs/5229725008 | Fairsteadescllc | Job Application for Community Manager - Rolling Hills at Fairstead ESC LLC~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/n8n/a8aea5b5-bde5-491e-adc0-affde5b3af3d/application?embed=js | N8n | Head of DevRel (Remote East Coast) @ n8n~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/runlayer/d8346558-459a-46a7-ba9c-1a39af346cc9 | Runlayer | Developer Relations Lead @ Runlayer~~ — swept: negative-title
@@ -206,7 +206,7 @@
 - [x] ~~https://x.com/crypto_vazima/status/1992191085808844849 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: CTO &amp; Board Member — WorkInCrypto (Client Roles) 📍 Remote Europe / Global | 💼 C-suite | 🧑‍💻 Crypto / Institutional | 💰 Not provided WorkInCrypto is recruiting for two top-level roles across leading crypto clients. ✨ CTO — Non-Custodial Wallet (Remote Europe) — https://t.co/GWbwHxvrca" / X~~ — swept: junk-title
 - [x] ~~https://x.com/crypto_vazima/status/2012147465584103828 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: 2x Recruiters (Web3 + AI teams) — WorksHub 📍 Fully Remote (Worldwide — anywhere) | 💼 Full-time | 🧑‍💻 Recruitment / Web3 / AI | 💰 Not provided | 🕐 Posted 1 hour ago — Jan 16, 2026 Recruiters for Web3 and AI teams are being onboarded to help promote WorksHub and https://t.co/g8vhnvOKTj" / X~~ — swept: junk-title
 - [x] ~~https://x.com/crypto_vazima/status/2065012604922196423 |  | Allweb3jobs by Crypto Vazima on X: "🚀 Hiring: VIP BD Roles (All Levels) - Web3 Company 📍 Remote (Global) | 💼 All Levels | 🕐 1 day ago - June 11, 2026 The company is hiring VIP Business Development roles at all levels. Open to candidates from brokerage with HNW or institutional relationship experience — or https://t.co/O5KT82B7AS" / X~~ — swept: junk-title
-- [ ] https://www.ziprecruiter.com/Jobs/Remote-Gaming-Community-Manager |  | Remote Gaming Community Manager Jobs (NOW HIRING) Apr 26
+- [x] ~~https://www.ziprecruiter.com/Jobs/Remote-Gaming-Community-Manager |  | Remote Gaming Community Manager Jobs (NOW HIRING) Apr 26~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.indeed.com/q-community-manager-in-esports-jobs.html |  | Community Manager in Esports Jobs, Employment | Indeed~~ — swept: junk-title
 - [x] ~~https://www.simplyhired.com/search?q=gaming+community+manager&l=remote |  | 20 Best gaming community manager jobs in remote (Hiring Now!) | SimplyHired~~ — swept: junk-url
 - [x] ~~https://www.glassdoor.com/Job/gaming-community-manager-jobs-SRCH_KO0,24.htm |  | 2,028 Gaming community manager jobs in United States | Glassdoor~~ — swept: junk-title
@@ -214,14 +214,14 @@
 - [x] ~~https://www.ziprecruiter.com/Jobs/Gaming-Community-Manager |  | $44k-$154k Gaming Community Manager Jobs (NOW HIRING) Apr 26~~ — swept: junk-title
 - [x] ~~https://web3.career/defi-jobs | DeFi Jobs | DeFi Jobs - Jun 2026 (15 New)~~ — swept: triage-C (noise)
 - [x] ~~https://web3.career/marketing-jobs | Marketing Jobs in Web3 | Marketing Jobs in Web3 - Jun 2026 (11 New)~~ — swept: triage-C (noise)
-- [ ] https://coinmarketcap.com/cmc-ai/perpetual-protocol/what-is/ | Is Perpetual Protocol (PERP) And How Does It Work? | What Is Perpetual Protocol (PERP) And How Does It Work?
+- [x] ~~https://coinmarketcap.com/cmc-ai/perpetual-protocol/what-is/ | Is Perpetual Protocol (PERP) And How Does It Work? | What Is Perpetual Protocol (PERP) And How Does It Work?~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://web3.career/remote-jobs | Remote Web3 Jobs | Remote Web3 Jobs - Jun 2026 (15 New)~~ — swept: junk-url
 - [x] ~~https://web3.career/web3-companies/fun-xyz+business-development | Fun.xyz (Feb 2026) | Business Development Jobs at Fun.xyz (Feb 2026) - Web3 Jobs~~ — swept: triage-C (noise)
-- [ ] https://web3.career/business-development-fintech-fun-xyz/143450 | Fun.xyz | Web3 Business Development, Fintech $155k - $220k in New York at Fun.xyz
-- [ ] https://www.kast.xyz/careers/country-manager-pakistan-crypto-card-product | KAST Careers: Country Manager, Pakistan | KAST Careers: Country Manager, Pakistan - Crypto Card Product
+- [x] ~~https://web3.career/business-development-fintech-fun-xyz/143450 | Fun.xyz | Web3 Business Development, Fintech $155k - $220k in New York at Fun.xyz~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://www.kast.xyz/careers/country-manager-pakistan-crypto-card-product | KAST Careers: Country Manager, Pakistan | KAST Careers: Country Manager, Pakistan - Crypto Card Product~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://web3.career/web3-companies/kast | KAST Jobs (Jun 2026) | KAST Jobs (Jun 2026) - Web3 Jobs~~ — swept: triage-C (noise)
 - [x] ~~https://cryptocurrencyjobs.co/startups/kast/ | KAST | Jobs at KAST - Cryptocurrency Jobs~~ — swept: junk-title
-- [ ] https://web3.career/web3-companies/startale+community-manager | Startale | Community Manager Jobs at Startale
+- [x] ~~https://web3.career/web3-companies/startale+community-manager | Startale | Community Manager Jobs at Startale~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.remote3.co/remote-jobs/business-development-lead-hyperliquid-labs | Web3 Jobs | Web3 Jobs - Blockchain, Crypto Jobs (69 new in Sep 2025)~~ — swept: triage-C (noise)
 - [x] ~~https://www.ziprecruiter.com/Jobs/Web3 |  | $33k-$250k Web3 Jobs (NOW HIRING) Jun 2026~~ — swept: junk-title
 - [x] ~~https://web3.career/ |  | Web3 Jobs: Blockchain, Smart Contract and Crypto Jobs~~ — swept: triage-C (noise)
@@ -230,7 +230,7 @@
 - [x] ~~https://x.com/crypto_vazima/status/2011889674776719683 |  | Allweb3jobs by Crypto Vazima on X: "🔄 25 fresh Web3 jobs found today (Jan 15, 2026): 💬 Crypto Trader / Community Partner — Remote (Global) | Futures &amp; Spot trading, community growth, liquidity &amp; partner engagement | https://t.co/NpdrP8CoVw ✍️ Cryptocurrency &amp; Tech News Writer — Remote (Global) | Writing daily https://t.co/XuLxXW9NGS" / X~~ — swept: junk-title
 - [x] ~~https://web3.career/gaming-jobs | Web3 Gaming Jobs | Web3 Gaming Jobs - Jun 2026 (1 New)~~ — swept: triage-C (noise)
 - [x] ~~https://web3.career/gaming+remote-jobs | Remote Web3 Gaming Jobs | Remote Web3 Gaming Jobs - Jun 2026 (3 New)~~ — swept: triage-C (noise)
-- [ ] https://crypticweb3.com/best-blockchain-gaming-projects-2026/ | Best Blockchain Gaming Projects in 2026 | Best Blockchain Gaming Projects in 2026 - Cryptic Web3
+- [x] ~~https://crypticweb3.com/best-blockchain-gaming-projects-2026/ | Best Blockchain Gaming Projects in 2026 | Best Blockchain Gaming Projects in 2026 - Cryptic Web3~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://findweb3.com/jobs/gaming |  | Gaming Jobs~~ — swept: triage-C (noise)
 - [x] ~~https://dailycoin.com/web3-hiring-trends-in-2026-tech-ai-and-leadership-roles-in-high-demand/ |  | Web3 Hiring Trends in 2026: Tech, AI, and Leadership Roles in High Demand - DailyCoin~~ — swept: junk-title
 - [x] ~~https://99bitcoins.com/guides-and-tutorials/how-to-get-crypto-job/ |  | Crypto Jobs Guide: How to Land Web3 Job in 2026~~ — swept: junk-title
@@ -246,26 +246,26 @@
 - [x] ~~https://cryptocurrencyjobs.co/startups/multicoin-capital/ | Multicoin Capital | Jobs at Multicoin Capital - Cryptocurrency Jobs~~ — swept: junk-title
 - [x] ~~https://cryptocurrencyjobs.co/other/coinbase-ventures-ecosystem-associate/ | Coinbase | Ventures/Ecosystem Associate at Coinbase - Cryptocurrency Jobs~~ — swept: triage-C (noise)
 - [x] ~~https://www.coinbase.com/ventures |  | Coinbase Ventures: Advancing crypto & Web3~~ — swept: junk-title
-- [ ] https://www.coinbase.com/ventures/portfolio | Coinbase Ventures | Coinbase Ventures – Advancing crypto and web3
+- [x] ~~https://www.coinbase.com/ventures/portfolio | Coinbase Ventures | Coinbase Ventures – Advancing crypto and web3~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://cryptopanic.com/ | CryptoPanic | CryptoPanic - News aggregator platform indicating impact on price and market f~~ — swept: triage-C (noise)
-- [ ] https://blog.district0x.io/exploring-farcaster-warpcast-7b79bb668d9e |  | Exploring Farcaster: Warpcast. The rise of web3 Social Networks on… | by Henri.M | district0x Updates
-- [ ] https://phantom.com/learn/crypto-101/farcaster-warpcast |  | Farcaster created crypto’s killer social app: Warpcast
-- [ ] https://www.bankless.community/ |  | BanklessDAO Community
-- [ ] https://web3.career/@jackhanson |  | web3.career
+- [x] ~~https://blog.district0x.io/exploring-farcaster-warpcast-7b79bb668d9e |  | Exploring Farcaster: Warpcast. The rise of web3 Social Networks on… | by Henri.M | district0x Updates~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://phantom.com/learn/crypto-101/farcaster-warpcast |  | Farcaster created crypto’s killer social app: Warpcast~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://www.bankless.community/ |  | BanklessDAO Community~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://web3.career/@jackhanson |  | web3.career~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://web3.career/crypto-jobs?page=1390 |  | Crypto Jobs~~ — swept: triage-C (noise)
 - [x] ~~https://web3.career/defi-jobs?page=359 |  | defi jobs~~ — swept: triage-C (noise)
 - [x] ~~https://mirror.xyz/0x3e41Ee6e1d3Af36B743626B5B2C19961d9d633F8/hbsws8obGecoPXeUw5HmCW42pOsNpoIZGtTJD-1gf2k | DevRel Uni | My first week at DevRel Uni - A journey of learning and growth — Victor Kanu~~ — swept: negative-title
-- [ ] https://mirror.xyz/polygonvillage.eth/IhJRBJ0nwwrg5eXkkwtDgUSmOFc4_y8EvslKcZe_Lg4 |  | Polygon DAO advances web3 job opportunities
+- [x] ~~https://mirror.xyz/polygonvillage.eth/IhJRBJ0nwwrg5eXkkwtDgUSmOFc4_y8EvslKcZe_Lg4 |  | Polygon DAO advances web3 job opportunities~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://mirror.xyz/0x25E9423856d0670981Bf43be83522CF92A93C18f/-KCFLFsUD8wRAg8t6NMWP7NdNc3ZFgMkGOE-fThe0Js |  | Ways to Make Money in Web3, with Less than $10 Investment — GAGU.social~~ — swept: junk-title
 - [x] ~~https://mirror.xyz/taytems.eth/SOo69uWlbBEsFHWkbtdCgaMXpAEwiUo75jO3Z4gmOoc |  | How to Speedrun Getting Hired in Web3 — tate~~ — swept: junk-title
-- [ ] https://mirror.xyz/0xd33cEE6b59297e825aEaAB4fad437e1155289760/luEAUgdsnp3gmW5QnhbuZS77oVFB-KiK9njv6sgiq0w | Ultimate Guide to Getting a Job in Web3 | Ultimate Guide to Getting a Job in Web3 - when you have no ...
+- [x] ~~https://mirror.xyz/0xd33cEE6b59297e825aEaAB4fad437e1155289760/luEAUgdsnp3gmW5QnhbuZS77oVFB-KiK9njv6sgiq0w | Ultimate Guide to Getting a Job in Web3 | Ultimate Guide to Getting a Job in Web3 - when you have no ...~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://mirror.xyz/kimmy3.eth/-O0H5AvzmSFRG1gB1cZK0TwChGMrL9iQLbVcBx6urb4 | DAOs for women & non | DAOs for women & non-binary folx + social innovators — kimmy3~~ — swept: triage-C (noise)
 - [x] ~~https://mirror.xyz/113254.eth/gApbqzKc4yeDBi7c4Yg8FLtRKBTtdlU1Tn0ksQ3dhlc |  | How to pursue a career in Web 3.0, Blockchain and Cryptocurrency…~~ — swept: junk-title
-- [ ] https://mirror.xyz/0xed95C841068a9feF0CE2D7F527829A231626447D/FsTyMircI_1xwg5uSMQnlBfA2Zh40gI-UFNj1-58o4Q | How to build a self | How to build a self-sustaining web3 community - Part 1 |TheInter…
+- [x] ~~https://mirror.xyz/0xed95C841068a9feF0CE2D7F527829A231626447D/FsTyMircI_1xwg5uSMQnlBfA2Zh40gI-UFNj1-58o4Q | How to build a self | How to build a self-sustaining web3 community - Part 1 |TheInter…~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://www.talentprotocol.com/ | Build for impact | Build for impact - Talent App~~ — swept: triage-C (noise)
 - [x] ~~https://talentdao.substack.com/about |  | talentdao.substack.com~~ — swept: junk-title
-- [ ] https://web3.career/@ireeeee |  | web3.career
-- [ ] https://web3.career/@whtifigo |  | web3.career
+- [x] ~~https://web3.career/@ireeeee |  | web3.career~~ — swept: stale (45d old, first seen 2026-06-17)
+- [x] ~~https://web3.career/@whtifigo |  | web3.career~~ — swept: stale (45d old, first seen 2026-06-17)
 - [x] ~~https://alternativeto.net/software/talent-protocol/about/ |  | Talent Protocol icon~~ — swept: junk-title
 - [x] ~~https://cryptocurrencyjobs.co/startups/animoca-brands/ | Animoca Brands | Jobs at Animoca Brands - Cryptocurrency Jobs~~ — swept: junk-title
 - [x] ~~https://wellfound.com/startups/industry/web3-4 |  | Best Web3 Companies and Startups to Work for in 2026 | Wellfound~~ — swept: junk-title
@@ -672,92 +672,92 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://job-boards.greenhouse.io/blockchain | Blockchain.com | Jobs at Blockchain.com~~ — swept: stale (46d old, first seen 2026-06-10)
 - [x] ~~https://devocate.pallet.com/jobs | Pallet | DevRel Job Board (retired)~~ — swept: junk-url
 - [x] ~~https://job-boards.greenhouse.io/bungie/jobs/6852816 | Bungie | Destiny Global Community Lead~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://cryptocurrencyjobs.co/marketing/vestinda-community-manager-builder/ | Vestinda | Community Manager & Builder
-- [ ] https://x.com/crypto_vazima/status/2014032490298568832 | Unnamed Platform | Head of Growth & Community (Blockchain/Real Estate)
-- [ ] https://x.com/wb3jobsx/status/2058895866480787709 | Woo X | Social Media & Community Executive
-- [ ] https://x.com/HitmarkerJobs/status/1820946706185515165 | Jagex | Senior Community Manager Old School RuneScape
+- [x] ~~https://cryptocurrencyjobs.co/marketing/vestinda-community-manager-builder/ | Vestinda | Community Manager & Builder~~ — swept: stale (51d old, first seen 2026-06-11)
+- [x] ~~https://x.com/crypto_vazima/status/2014032490298568832 | Unnamed Platform | Head of Growth & Community (Blockchain/Real Estate)~~ — swept: stale (51d old, first seen 2026-06-11)
+- [x] ~~https://x.com/wb3jobsx/status/2058895866480787709 | Woo X | Social Media & Community Executive~~ — swept: stale (51d old, first seen 2026-06-11)
+- [x] ~~https://x.com/HitmarkerJobs/status/1820946706185515165 | Jagex | Senior Community Manager Old School RuneScape~~ — swept: stale (51d old, first seen 2026-06-11)
 - [x] ~~https://x.com/HitmarkerJobs/status/1966264241943622062 | DECA Games | Community Manager Russian-speaking~~ — swept: triage-C (language/market gate)
 - [x] ~~https://job-boards.greenhouse.io/cosmoslabs/jobs/5000963007 | Cosmos Labs | Community Manager - Cosmos Hub (contract)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.lever.co/MantaNetwork/cc9deb78-0873-448d-92e1-1e5cd4efd87a | Manta Network | Community Manager - Indonesia~~ — swept: triage-C (language/market gate)
-- [ ] https://cryptocurrencyjobs.co/marketing/consensys-ecosystem-engagement-manager/ | Consensys | Ecosystem Engagement Manager
-- [ ] https://web3.career/community-program-manager-decent-dao/58835 | Decent DAO | Community Program Manager
+- [x] ~~https://cryptocurrencyjobs.co/marketing/consensys-ecosystem-engagement-manager/ | Consensys | Ecosystem Engagement Manager~~ — swept: stale (49d old, first seen 2026-06-13)
+- [x] ~~https://web3.career/community-program-manager-decent-dao/58835 | Decent DAO | Community Program Manager~~ — swept: stale (48d old, first seen 2026-06-14)
 - [x] ~~https://job-boards.greenhouse.io/scopely/jobs/5116882008 | Scopely | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/blockchain/jobs/6865066 | Blockchain.com | Community Manager Web3~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://careers.airbnb.com/positions/6743233 | Airbnb | Community Engagement Manager France & BeNeLux
+- [x] ~~https://careers.airbnb.com/positions/6743233 | Airbnb | Community Engagement Manager France & BeNeLux~~ — swept: stale (48d old, first seen 2026-06-14)
 - [x] ~~https://job-boards.greenhouse.io/awin/jobs/7730187003 | Awin | Social Media & Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://builtin.com/job/lead-community-manager-mfd/3577136 | DECA Games | Lead Community Manager
-- [ ] https://www.hellowork.com/fr-fr/emplois/45234024.html | Apside (Sophia Antipolis) | CDI Project Manager
+- [x] ~~https://builtin.com/job/lead-community-manager-mfd/3577136 | DECA Games | Lead Community Manager~~ — swept: stale (47d old, first seen 2026-06-15)
+- [x] ~~https://www.hellowork.com/fr-fr/emplois/45234024.html | Apside (Sophia Antipolis) | CDI Project Manager~~ — swept: stale (47d old, first seen 2026-06-15)
 - [x] ~~https://jobs.lever.co/atlassian/c38f63ff-9cf1-41f0-8e80-3355fc91f986 | Atlassian | Community Engagement Manager~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://www.linkedin.com/jobs/view/user-community-manager-blockchain-at-cryptorecruit-4009694307 | CryptoRecruit | User Community Manager (Blockchain)
-- [ ] https://www.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming
-- [ ] https://www.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager
-- [ ] https://m-eu.experteer.com/amp/jobs/27164646 | Salesforce | Talent Ecosystem Program Manager
-- [ ] https://www.hellowork.com/fr-fr/emploi/metier_community-manager-ville_nice-06000.html | Various | Community Manager - Nice
-- [ ] https://www.hellowork.com/fr-fr/emploi/metier_community-manager-departement_alpes-maritimes-06.html | Various | Community Manager - Alpes-Maritimes
-- [ ] https://fr.indeed.com/q-community-manager-l-sophia-antipolis-(06)-emplois.html | Various | Community Manager - Sophia Antipolis
-- [ ] https://fr.indeed.com/q-community-manager-l-nice-(06)-emplois.html | Various | Community Manager - Nice
-- [ ] https://remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)
-- [ ] https://www.remote3.co/remote-jobs/community-manager-0g-labs-1 | 0G Labs | Community Manager
-- [ ] https://www.remote3.co/remote-jobs/community-lead-plume-network | Plume Network | Community Lead
-- [ ] https://x.com/crypto_vazima/status/2016155940781806049/photo/1 | OORT | Asian Ecosystem Lead
-- [ ] https://web3.career/web3-community-lead-remote-phoenix-growth/67050 | Phoenix Growth | Web3 Community Lead
-- [ ] https://cryptocurrencyjobs.co/marketing/bsc-news-gaming-social-manager-web3/ | BSCN | Gaming Social Manager (Web3)
-- [ ] https://web3.career/marketing-communications-lead-panteracapitalmanagementlp/74967 | Pantera Capital | Marketing Communications Lead
+- [x] ~~https://www.linkedin.com/jobs/view/user-community-manager-blockchain-at-cryptorecruit-4009694307 | CryptoRecruit | User Community Manager (Blockchain)~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.linkedin.com/jobs/view/community-manager-web3-metaverse-gaming-fully-remote-sg-at-cryptorecruit-3478852404 | CryptoRecruit | Community Manager - Web3 Metaverse Gaming~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.linkedin.com/jobs/view/ecosystem-program-manager-at-archway-3731395981 | Archway | Ecosystem Program Manager~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://m-eu.experteer.com/amp/jobs/27164646 | Salesforce | Talent Ecosystem Program Manager~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.hellowork.com/fr-fr/emploi/metier_community-manager-ville_nice-06000.html | Various | Community Manager - Nice~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.hellowork.com/fr-fr/emploi/metier_community-manager-departement_alpes-maritimes-06.html | Various | Community Manager - Alpes-Maritimes~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://fr.indeed.com/q-community-manager-l-sophia-antipolis-(06)-emplois.html | Various | Community Manager - Sophia Antipolis~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://fr.indeed.com/q-community-manager-l-nice-(06)-emplois.html | Various | Community Manager - Nice~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-0g-labs-1 | 0G Labs | Community Manager~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://www.remote3.co/remote-jobs/community-lead-plume-network | Plume Network | Community Lead~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://x.com/crypto_vazima/status/2016155940781806049/photo/1 | OORT | Asian Ecosystem Lead~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://web3.career/web3-community-lead-remote-phoenix-growth/67050 | Phoenix Growth | Web3 Community Lead~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/bsc-news-gaming-social-manager-web3/ | BSCN | Gaming Social Manager (Web3)~~ — swept: stale (46d old, first seen 2026-06-16)
+- [x] ~~https://web3.career/marketing-communications-lead-panteracapitalmanagementlp/74967 | Pantera Capital | Marketing Communications Lead~~ — swept: stale (46d old, first seen 2026-06-16)
 - [x] ~~https://jobs.lever.co/empowerly/014c2fd1-3cda-4e6d-8119-d4fa0ff125b6 | Empowerly | Community Manager (Mandarin Speaking)~~ — swept: triage-C (language/market gate)
 - [x] ~~https://jobs.lever.co/airalo/8fa60fbe-61ef-4579-a503-9a319dbc3a58 | Airalo | Social Media & Community Manager (LATAM)~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://cryptocurrencyjobs.co/marketing/perpetual-protocol-content-and-community-manager/ | Perpetual Protocol | Content and Community Manager
-- [ ] https://pompcryptojobs.com/job/5916/program-manager/ | Polygon | Program Manager
-- [ ] https://pompcryptojobs.com/job/6206/edao-leader/ | Unknown | eDAO Leader
-- [ ] https://pompcryptojobs.com/job/6209/community-lead/ | Polygon | Community Lead
-- [ ] https://hitmarker.net/jobs/thatgamecompany-project-manager-creative-services-1728776 | thatgamecompany | Project Manager, Creative Services
-- [ ] https://startup.jobs/solana-community-manager-rarible-2945934 | Rarible | Solana Community Manager
-- [ ] https://startup.jobs/community-lead-bnb-chain-binance-3268020 | Binance | Community Lead - BNB Chain
-- [ ] https://builtin.com/job/web3-community-manager/2243258 | VIMworld | Web3 Community Manager
-- [ ] https://www.glassdoor.com/job-listing/senior-blockchain-expansion-manager-100-remote-tether-operations-limited-JV_IC2664239_KO0,46_KE47,72.htm?jl=1010028455789 | Tether | Senior Blockchain Expansion Manager
-- [ ] https://remotive.com/remote/jobs/customer-service/community-lead-4136156 | Softr | Community Lead
-- [ ] https://remotive.com/remote/jobs/customer-service/community-manager-3637995 | tinyBuild | Community Manager
-- [ ] https://beincrypto.com/jobs/p/web3-community-manager-token-com/ | token.com | Web3 Community Manager
-- [ ] https://laborx.com/vacancies/community-manager-x-amp-telegram-17888 | Neonflick | Community Manager (X & Telegram)
-- [ ] https://laborx.com/vacancies/marketing-program-manager-80-100-9655 | Acurast Association | Marketing Program Manager
+- [x] ~~https://cryptocurrencyjobs.co/marketing/perpetual-protocol-content-and-community-manager/ | Perpetual Protocol | Content and Community Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://pompcryptojobs.com/job/5916/program-manager/ | Polygon | Program Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://pompcryptojobs.com/job/6206/edao-leader/ | Unknown | eDAO Leader~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://pompcryptojobs.com/job/6209/community-lead/ | Polygon | Community Lead~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://hitmarker.net/jobs/thatgamecompany-project-manager-creative-services-1728776 | thatgamecompany | Project Manager, Creative Services~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://startup.jobs/solana-community-manager-rarible-2945934 | Rarible | Solana Community Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://startup.jobs/community-lead-bnb-chain-binance-3268020 | Binance | Community Lead - BNB Chain~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://builtin.com/job/web3-community-manager/2243258 | VIMworld | Web3 Community Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://www.glassdoor.com/job-listing/senior-blockchain-expansion-manager-100-remote-tether-operations-limited-JV_IC2664239_KO0,46_KE47,72.htm?jl=1010028455789 | Tether | Senior Blockchain Expansion Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://remotive.com/remote/jobs/customer-service/community-lead-4136156 | Softr | Community Lead~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://remotive.com/remote/jobs/customer-service/community-manager-3637995 | tinyBuild | Community Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://beincrypto.com/jobs/p/web3-community-manager-token-com/ | token.com | Web3 Community Manager~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://laborx.com/vacancies/community-manager-x-amp-telegram-17888 | Neonflick | Community Manager (X & Telegram)~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://laborx.com/vacancies/marketing-program-manager-80-100-9655 | Acurast Association | Marketing Program Manager~~ — swept: stale (44d old, first seen 2026-06-18)
 - [x] ~~https://web3vacancy.com/job/developer-relations-lead-at-autheo-3349 | Autheo | Developer Relations Lead~~ — swept: negative-title
-- [ ] https://www.remote3.co/remote-jobs/job-application-for-social-community-lead-at-hyphen-connect-limited-hyphen-connect-limited | Hyphen Connect | Social & Community Lead
-- [ ] https://www.remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)
+- [x] ~~https://www.remote3.co/remote-jobs/job-application-for-social-community-lead-at-hyphen-connect-limited-hyphen-connect-limited | Hyphen Connect | Social & Community Lead~~ — swept: stale (44d old, first seen 2026-06-18)
+- [x] ~~https://www.remote3.co/remote-jobs/community-manager-web3-playco | Playco | Community Manager (Web3)~~ — swept: stale (44d old, first seen 2026-06-18)
 - [x] ~~https://job-boards.greenhouse.io/orderly/jobs/4570542008 | Orderly | Associate, Ecosystem Growth & BD~~ — swept: negative-title
 - [x] ~~https://jobs.paradigm.xyz/companies/uniswap-foundation-2/jobs/41462162-developer-relations-engineer-unichain | Uniswap Foundation | Developer Relations Engineer, Unichain~~ — swept: negative-title
 - [x] ~~https://developerdao.pallet.com/jobs/38abc083-ffd2-4870-aa78-5416de64a4c7 | Spruce | Developer Relations~~ — swept: negative-title
 - [x] ~~https://bankless.pallet.com/jobs/341813f6-0495-4f51-b89f-1f141f60e0b9 | Uniswap Labs | Developer Relations Lead~~ — swept: negative-title
 - [x] ~~https://inplainenglish.pallet.com/jobs/83d5be44-eb80-4a11-913b-09df55910aa3 | Protocol Labs | Developer Relations Engineer~~ — swept: negative-title
 - [x] ~~https://jobs.ashbyhq.com/trilitech/76ef1cc2-bc47-4f45-b16f-489d97eafb34 | Trilitech | Web3 Technical Lead - DeFi~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
-- [ ] https://web3.career/head-of-community-subspacelabs/39250 | Subspace Labs | Head of Community
-- [ ] https://web3.career/community-lead-alchemy/67678 | Alchemy | Community Lead
-- [ ] https://hitmarker.net/jobs/wargaming-esports-manager-world-of-tanks-blitz-1576016 | Wargaming | Esports Manager (World of Tanks Blitz)
-- [ ] https://builtin.com/job/community-manager/2352936 | Avea Life | Community Manager
-- [ ] https://remotive.com/remote/jobs/all-others/community-manager-4635141 | Sisense | Community Manager
-- [ ] https://job-boards.greenhouse.io/havenenglish/jobs/6007387004 | Haven Interactive Studios | Community Manager
-- [ ] https://careers.play.vc/companies/timeleft-2/jobs/59721971-marketing-community-manager-bangkok | Timeleft | Marketing & Community Manager
-- [ ] https://jobs.ashbyhq.com/sui%20foundation/79a46cca-cfca-42d6-8191-848cc4c92172 | Sui Foundation | Community Lead
-- [ ] https://jobs.cointelegraph.com/jobs/146177705-social-media-community-manager-gaming | Cointelegraph | Social Media & Community Manager (Gaming)
+- [x] ~~https://web3.career/head-of-community-subspacelabs/39250 | Subspace Labs | Head of Community~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://web3.career/community-lead-alchemy/67678 | Alchemy | Community Lead~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://hitmarker.net/jobs/wargaming-esports-manager-world-of-tanks-blitz-1576016 | Wargaming | Esports Manager (World of Tanks Blitz)~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://builtin.com/job/community-manager/2352936 | Avea Life | Community Manager~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://remotive.com/remote/jobs/all-others/community-manager-4635141 | Sisense | Community Manager~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://job-boards.greenhouse.io/havenenglish/jobs/6007387004 | Haven Interactive Studios | Community Manager~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://careers.play.vc/companies/timeleft-2/jobs/59721971-marketing-community-manager-bangkok | Timeleft | Marketing & Community Manager~~ — swept: stale (43d old, first seen 2026-06-19)
+- [x] ~~https://jobs.ashbyhq.com/sui%20foundation/79a46cca-cfca-42d6-8191-848cc4c92172 | Sui Foundation | Community Lead~~ — swept: stale (42d old, first seen 2026-06-20)
+- [x] ~~https://jobs.cointelegraph.com/jobs/146177705-social-media-community-manager-gaming | Cointelegraph | Social Media & Community Manager (Gaming)~~ — swept: stale (42d old, first seen 2026-06-20)
 - [x] ~~https://boards.greenhouse.io/goodr/jobs/6772285002 | goodr | Social Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://jobs.ashbyhq.com/brightwheel/25695a33-f81c-491c-b3f4-0a3e20104c6d | brightwheel | Program Manager II, GTM Operations~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.lever.co/CareAccessResearch/45353df9-2ff4-4d1b-80b3-c3be73e67b2a | Care Access | Digital Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://startup.jobs/community-manager-chainlink-china-chainlink-labs-1725160 | Chainlink Labs | Community Manager, Chainlink China~~ — swept: triage-C (language/market gate)
 
-- [ ] https://remotive.com/remote/jobs/marketing/communications-and-community-manager-4075185 | African Institute for Artificial Intelligence | Communications and Community Manager
-- [ ] https://laborx.com/vacancies/marketing-and-community-manager-binance-labs-3679 | Binance | Marketing and Community Manager
-- [ ] https://main.jobs3.io/job/community-manager-bali/ | One Arrow Consulting | Community Manager (Bali)
-- [ ] https://myweb3jobs.com/job/defi-trading-writer-hyperliquid-perps/ | KAST/Hyperliquid | DeFi Trading Writer (Hyperliquid + Perps)
+- [x] ~~https://remotive.com/remote/jobs/marketing/communications-and-community-manager-4075185 | African Institute for Artificial Intelligence | Communications and Community Manager~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://laborx.com/vacancies/marketing-and-community-manager-binance-labs-3679 | Binance | Marketing and Community Manager~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://main.jobs3.io/job/community-manager-bali/ | One Arrow Consulting | Community Manager (Bali)~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://myweb3jobs.com/job/defi-trading-writer-hyperliquid-perps/ | KAST/Hyperliquid | DeFi Trading Writer (Hyperliquid + Perps)~~ — swept: stale (33d old, first seen 2026-06-29)
 - [x] ~~https://jobs.paradigm.xyz/companies/argent/jobs/37621697-developer-relations-associate | Argent | Developer Relations Associate~~ — swept: negative-title
 - [x] ~~https://jobs.paradigm.xyz/companies/babylonchain/jobs/40131489-developer-relations-engineer | BabylonChain | Developer Relations Engineer~~ — swept: negative-title
 - [x] ~~https://jobs.multicoin.capital/companies/sei-network/jobs/35396276-head-of-developer-relations | Sei Labs | Head of Developer Relations~~ — swept: negative-title
 - [x] ~~https://jobs.multicoin.capital/companies/crunchdao/jobs/47038089-developer-relations-lead | CrunchDAO | Developer Relations Lead~~ — swept: negative-title
 - [x] ~~https://jobs.polychain.capital/companies/pl-job-board/jobs/36678432-developer-advocate | Protocol Labs | Developer Advocate~~ — swept: negative-title
 - [x] ~~https://jobs.polychain.capital/companies/talus-network-2/jobs/41974913-developer-relations-lead | Talus Network | Developer Relations Lead~~ — swept: negative-title
-- [ ] https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/42635240-southeast-asia-lead | Monad | Southeast Asia Ecosystem Lead
-- [ ] https://coinbase.getro.com/companies/eco-2/jobs/38545523-head-of-partnerships-business-development | Eco | Head of Partnerships & Business Development
+- [x] ~~https://coinbase.getro.com/companies/monad-2-2aabaff9-3059-4cc9-a008-2acf2551089a/jobs/42635240-southeast-asia-lead | Monad | Southeast Asia Ecosystem Lead~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://coinbase.getro.com/companies/eco-2/jobs/38545523-head-of-partnerships-business-development | Eco | Head of Partnerships & Business Development~~ — swept: stale (33d old, first seen 2026-06-29)
 - [x] ~~https://coinbase.getro.com/companies/polymer-labs/jobs/41219904-lead-developer-relations-advocate | Polymer Labs | Lead Developer Relations Advocate~~ — swept: negative-title
-- [ ] https://coinbase.getro.com/companies/walletconnect-2/jobs/45256376-community-lead | WalletConnect | Community Lead
-- [ ] https://careers.play.vc/companies/mighty-bear-games/jobs/46281107-web3-product-owner | Mighty Bear Games | Web3 Product Owner
-- [ ] https://www.keywordsstudios.com/en/careers/browse-careers/eue-spontaneous-application-community-manager-video-games-worldwide-remote/ | Keywords Studios | Community Manager (Video Games)
+- [x] ~~https://coinbase.getro.com/companies/walletconnect-2/jobs/45256376-community-lead | WalletConnect | Community Lead~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://careers.play.vc/companies/mighty-bear-games/jobs/46281107-web3-product-owner | Mighty Bear Games | Web3 Product Owner~~ — swept: stale (33d old, first seen 2026-06-29)
+- [x] ~~https://www.keywordsstudios.com/en/careers/browse-careers/eue-spontaneous-application-community-manager-video-games-worldwide-remote/ | Keywords Studios | Community Manager (Video Games)~~ — swept: stale (32d old, first seen 2026-06-30)
 - [x] ~~https://jobs.ashbyhq.com/cognition/b24559d8-c742-4da9-aa6c-581a00e56090 | Cognition | Developer Community Manager~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/openai/a10e13f7-1863-49e7-b7ab-0a9b430aa639 | OpenAI | Developer Communications & Community Manager~~ — swept: negative-title
 - [ ] https://jobs.ashbyhq.com/netboxlabs/8b602a88-9616-4fb6-ad84-ceed46e901f9 | NetBox Labs | Community Engagement Manager
@@ -971,7 +971,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://remoteok.com/remote-jobs/107341-remote-community-manager-messari | Messari | Community Manager
 - [ ] https://himalayas.app/companies/messari/jobs/social-media-community-manager | Messari | Social Media Community Manager
 - [ ] https://job-boards.greenhouse.io/akuity/jobs/4181022009 | Akuity | Community Manager - Open Source
-- [ ] https://job-boards.greenhouse.io/fireworksai/jobs/4299816009 | Fireworks AI | Social and Community Manager
+- [x] ~~https://job-boards.greenhouse.io/fireworksai/jobs/4299816009 | Fireworks AI | Social and Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.lever.co/certik/3ad4ba74-fec1-4dbd-9b70-363f6e7d0827 | CertiK | Web3 BD
 - [x] ~~https://jobs.lever.co/binance/5a34d855-b30f-4ff1-995e-bc8cae82d300 | Binance | Web3 Security Specialist~~ — swept: triage-C (out of archetype)
 - [x] ~~https://jobs.ashbyhq.com/coder/ada0105c-0eb9-4a38-bdb1-0a6e1cac071b | Coder | Developer Relations Engineer~~ — swept: negative-title
@@ -982,7 +982,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://job-boards.greenhouse.io/celonis/jobs/7584575003 | Celonis | Lead Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/blockchain/jobs/8066864 | Blockchain.com | Content, Social and Community Manager
 - [x] ~~https://job-boards.greenhouse.io/eucalyptus/jobs/4626203005 | Eucalyptus | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://job-boards.greenhouse.io/airtable/jobs/8604559002 | Airtable | Program Manager, Community (Contract)
+- [x] ~~https://job-boards.greenhouse.io/airtable/jobs/8604559002 | Airtable | Program Manager, Community (Contract)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/rootstocklabsltd/jobs/4585815101 | RootstockLabs | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/noble/jobs/4407029008 | Noble | Community Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/okx/jobs/7503770003 | OKX | Senior Strategic Project Manager, Web3~~ — closed: posting gone (ATS API 404 — posting removed)
@@ -1152,7 +1152,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://web3.career/director-marketing-inmobi/148822 | web3.career | Director Marketing Inmobi
 - [ ] https://web3.career/growth-marketing-lead-cointracker/151684 | web3.career | Growth Marketing Lead Cointracker
 - [x] ~~https://web3.career/data-analyst-marketing-bluecubeservices/140151 | web3.career | Data Analyst Marketing Bluecubeservices~~ — swept: triage-C (out of archetype)
-- [ ] https://web3.career/vice-president-marketing-chainalysis/151676 | web3.career | Vice President Marketing Chainalysis
+- [x] ~~https://web3.career/vice-president-marketing-chainalysis/151676 | web3.career | Vice President Marketing Chainalysis~~ — swept: negative-title
 - [x] ~~https://web3.career/marketing-campaign-analyst-bitpanda/151192 | web3.career | Marketing Campaign Analyst Bitpanda~~ — swept: triage-C (out of archetype)
 - [ ] https://web3.career/lead-marketing-campaigns-bitpanda/151191 | web3.career | Lead Marketing Campaigns Bitpanda
 
@@ -1344,7 +1344,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7650512003 | OKX | Senior Strategy PMO / Project Manager | Hong Kong, Hong Kong SAR; Singapore, Singapore
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7650513003 | OKX | Senior Strategy PMO / Project Manager (AI & Org Efficiency) | Hong Kong, Hong Kong SAR
 - [ ] https://job-boards.greenhouse.io/okx/jobs/7739163003 | OKX | Senior Strategy Project Manager, VIP/Institutions | Hong Kong, Hong Kong SAR
-- [ ] https://job-boards.greenhouse.io/twitch/jobs/8537000002 | Twitch | Legal Program Manager | San Francisco, CA
+- [x] ~~https://job-boards.greenhouse.io/twitch/jobs/8537000002 | Twitch | Legal Program Manager | San Francisco, CA~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://job-boards.greenhouse.io/twitch/jobs/8536449002 | Twitch | Product Marketing Manager: Trust & Safety, Community | Seattle, WA
 - [ ] https://job-boards.greenhouse.io/twitch/jobs/8609245002 | Twitch | Senior Product Manager, Community | Irvine, CA
 - [ ] https://job-boards.greenhouse.io/hyphenconnect/jobs/5087999007 | Hyphen Connect | Brand Manager (Global Crypto Exchange) | Hong Kong
@@ -1526,5 +1526,52 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://remotegamejobs.com/jobs/void-interactive-community-manager-ready-or-not-remote-job | VOID Interactive | Community Manager, Ready or Not | Remote — contractor (Ireland HQ) | note: liveness uncertain
 - [ ] https://remotegamejobs.com/jobs/alderon-games-community-manager-remote-job | Alderon Games | Community Manager | Remote | note: liveness uncertain
 - [ ] https://emploi.afjv.com/emploi-jeux-video/ESUP2053-29036 | Com2uS Europe GmbH | Community Manager - France (m/f/x) | Berlin, DE — CDI, flexible home office (French-speaking role)
-- [ ] https://emploi.afjv.com/emploi-jeux-video/ESUP1369-28936 | Magic Design Studios | Community Manager (H/F) | Montpellier (34), France — freelance, on-site
+- [x] ~~https://emploi.afjv.com/emploi-jeux-video/ESUP1369-28936 | Magic Design Studios | Community Manager (H/F) | Montpellier (34), France — freelance, on-site~~ — swept: location (Montpellier (34), France — freelance, on-site)
 - [ ] https://hitmarker.net/jobs/razer-manager-global-community-1636747 | Razer | Manager, Global Community | Listed on Hitmarker — verify region before applying | note: liveness uncertain
+- [ ] https://hk.linkedin.com/jobs/view/token-and-community-lead-%E2%80%94-finance-district-at-first-digital-4420270532 | First Digital | Token and Community Lead — Finance District
+- [ ] https://sg.linkedin.com/jobs/view/head-of-tokenization-apac-at-broadridge-4445989190 | Broadridge | Head of Tokenization, APAC
+- [ ] https://hk.linkedin.com/jobs/view/strategic-and-project-manager-lead-fintech-stablecoin-at-all-star-agency-4435072812 | ALL-STAR AGENCY | Strategic and Project Manager Lead - Fintech (Stablecoin)
+- [ ] https://jp.linkedin.com/jobs/view/program-manager-ekyc-and-digital-trust-identity-membership-platform-department-mpd-at-rakuten-4444197675 | Rakuten | Program Manager, eKYC and Digital Trust Identity - Membership Platform Department (MPD)
+
+- [ ] https://job-boards.greenhouse.io/okx/jobs/7822600003 | OKX | Senior Manager, Global Partnerships (Listing & Tokenization) | Hong Kong, Hong Kong SAR | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/jedox/remote-senior-project-manager-epm-project-based-engagement-90619 | Jedox | Senior Project Manager EPM (m/f/d) Project-based engagement | Germany remote | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/jedox/remote-senior-project-manager-epm-284397 | Jedox | Senior Project Manager EPM (m/f/d) | Germany remote | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/nelcon-gmbh-co-kg/werkstudent-social-media-schwerpunkt-instagram-stuttgart-131977 | NELCON GmbH & Co. KG | Werkstudent Social Media (m/w/d) - Schwerpunkt Instagram | Stuttgart | posted: 2026-07-31
+- [ ] https://www.arbeitnow.com/jobs/companies/gropyus/projektleiter-in-bau-senior-project-manager-berlin-188540 | Gropyus | Projektleiter/in - Bau / Senior Project Manager (w/m/d) | Berlin | posted: 2026-07-31
+- [ ] https://remoteOK.com/remote-jobs/remote-executive-operations-amp-project-manager-viva-wellness-drip-1135744 | Viva Wellness Drip | Executive Operations &amp; Project Manager
+- [ ] https://remoteOK.com/remote-jobs/remote-1-ideas-impact-csr-ideas-1135732 | CSR Ideas | 1. IDEAS IMPACT
+- [ ] https://remoteOK.com/remote-jobs/remote-associate-events-social-amp-influencer-marketing-society-18-1135695 | Society 18 | Associate Events Social &amp; Influencer Marketing
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-at-messika-4446987763 | Messika | Community Manager (H/F)
+- [ ] https://cl.linkedin.com/jobs/view/community-manager-at-np-digital-4445216049 | NP Digital | Community Manager
+- [ ] https://es.linkedin.com/jobs/view/community-manager-content-host-at-imagina-4445154778 | IMAGINA | Community Manager & Content Host
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-at-groupe-l%C3%A9on-grosse-4447005508 | Groupe Léon Grosse | Community Manager H/F
+- [ ] https://de.linkedin.com/jobs/view/community-director-at-whybrilliant-4447527761 | WhyBrilliant | Community Director
+- [ ] https://no.linkedin.com/jobs/view/metaverse-community-manager-at-neoki-4447405959 | NEOKI | Metaverse Community Manager
+- [ ] https://ae.linkedin.com/jobs/view/growth-and-community-lead-at-skylr-infinite-4447750854 | Skylr Infinite | Growth And Community Lead
+- [ ] https://de.linkedin.com/jobs/view/community-manager-m-w-d-at-cipsoft-gmbh-4433971065 | CipSoft GmbH | Community Manager (m/w/d)
+- [ ] https://fr.linkedin.com/jobs/view/content-manager-f-h-at-asmodee-4445733810 | asmodee | Content Manager F/H
+- [ ] https://fr.linkedin.com/jobs/view/responsable-communication-et-communaut%C3%A9s-at-ankama-4443697276 | Ankama | Responsable Communication et Communautés
+- [ ] https://de.linkedin.com/jobs/view/social-community-manager-all-genders-fully-remote-at-funzy-4445097958 | Funzy | Social & Community Manager (all genders) - fully remote
+- [ ] https://pt.linkedin.com/jobs/view/community-manager-at-canaan-hub-4445954886 | Canaan Hub | Community Manager
+- [ ] https://www.linkedin.com/jobs/view/program-manager-digital-audience-engagement-at-franklin-templeton-4447424681 | Franklin Templeton | Program Manager, Digital Audience Engagement
+- [ ] https://www.linkedin.com/jobs/view/program-manager-centralized-exchange-licensing-at-sei-labs-4408418761 | Sei Labs | Program Manager - Centralized Exchange / Licensing
+
+- [ ] https://job-boards.greenhouse.io/twitch/jobs/8662188002 | Twitch | People Engagement Program Manager | San Francisco, CA | posted: 2026-07-31
+- [ ] https://job-boards.greenhouse.io/smartling/jobs/8099139 | Smartling | Social Media Manager | Remote, US | posted: 2026-07-31
+- [ ] https://jobs.ashbyhq.com/cow-dao/dfbcc129-2d97-4611-94e3-3df5507c42ad | CoW DAO | Partnerships Manager | Remote · France · Canada | posted: 2026-07-01
+- [ ] https://epicgames.com/careers/jobs/6132211004?gh_jid=6132211004 | Epic Games | Senior Communications Manager, Corporate | BLANK,BLANK,Multiple Locations | posted: 2026-07-31
+- [ ] https://jobicy.com/jobs/144915-onboarding-project-manager | Cloudbeds | Onboarding Project Manager | Europe | posted: 2026-08-01
+- [ ] https://himalayas.app/companies/jewish-news-syndicate/jobs/copy-editor-israel | Jewish News Syndicate | Copy Editor (Israel) | Israel | posted: 2026-08-01
+- [ ] https://himalayas.app/companies/key-media/jobs/project-coordinator-work-from-home-93841522 | Key Media | Project Coordinator (Work from Home) | Philippines | posted: 2026-08-01
+- [x] ~~https://www.arbeitnow.com/jobs/companies/code-gaia/brand-content-marketing-manager-all-genders-munich-371537 | Code Gaia | Brand & Content Marketing Manager (all genders) | Munich | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/every-health/influencer-partnerships-manager-gn-berlin-349426 | Every Health | Influencer & Partnerships Manager (gn) | Berlin | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/autoscout24/senior-content-manager-seo-aeo-496121 | autoscout24 | Senior Content Manager SEO/AEO (m/w/d) | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/timberis-gmbh/social-media-content-creator-leipzig-497671 | Timberis GmbH | Social Media & Content Creator (m/w/d) | Leipzig | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/legalhero/werkstudent-social-media-berlin-49634 | Legalhero | Werkstudent Social Media (m/w/d) | Berlin | posted: 2026-07-31~~ — removed from fresh matches
+
+- [ ] https://web3.career/french-speaking-community-manager-tallinn-or-remote-from-europe-ultra/51760 | Ultra | French-Speaking Community Manager | Remote from Europe (or Tallinn office) | note: liveness uncertain
+- [ ] https://web3.career/content-creator-manager-kol-seedify-fund/84613 | Seedify | Web3 Content Creator Manager (KOL) | Remote — Europe | note: liveness uncertain
+- [x] ~~https://remotegamejobs.com/jobs/ci-games-social-media-manager-remote-job | CI Games | Social Media Manager | Remote — Europe-eligible (Poland HQ) | note: liveness uncertain~~ — removed from fresh matches
+- [ ] https://builtin.com/job/creator-program-manager/7730735 | thatgamecompany | Creator Program Manager (Sky: Children of the Light) | Remote — Global (US HQ)
+- [x] ~~https://functional.works-hub.com/jobs/remote-project-manager-web3-blockchain-cef | Nature Land | Remote Project Manager (Web3 Blockchain) | Remote | note: liveness uncertain~~ — removed from fresh matches
+- [x] ~~https://hitmarker.net/jobs/sega-senior-community-manager-2922605 | SEGA | Senior Community Manager | UK / Europe — hybrid-remote, verify | note: liveness uncertain~~ — removed from fresh matches
