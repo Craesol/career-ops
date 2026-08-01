@@ -885,3 +885,16 @@ job_boards:
   provider: 4dayweek
   enabled: false
   notes: Niche — enable if of interest
+- name: Adzuna UK
+  careers_url: https://www.adzuna.co.uk
+  provider: adzuna
+  enabled: true
+  notes: Official API — needs free ADZUNA_APP_ID/ADZUNA_APP_KEY in .env (developer.adzuna.com)
+  adzuna:
+    country: gb
+    what:
+      - community manager
+      - social media manager
+      - content manager
+      - marketing communications manager
+      - localization manager

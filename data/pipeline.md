@@ -1570,7 +1570,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://www.arbeitnow.com/jobs/companies/legalhero/werkstudent-social-media-berlin-49634 | Legalhero | Werkstudent Social Media (m/w/d) | Berlin | posted: 2026-07-31~~ — removed from fresh matches
 
 - [ ] https://web3.career/french-speaking-community-manager-tallinn-or-remote-from-europe-ultra/51760 | Ultra | French-Speaking Community Manager | Remote from Europe (or Tallinn office) | note: liveness uncertain
-- [ ] https://web3.career/content-creator-manager-kol-seedify-fund/84613 | Seedify | Web3 Content Creator Manager (KOL) | Remote — Europe | note: liveness uncertain
+- [x] ~~https://web3.career/content-creator-manager-kol-seedify-fund/84613 | Seedify | Web3 Content Creator Manager (KOL) | Remote — Europe | note: liveness uncertain~~ — swept: stale (old web3.career posting id, user dismissal 2026-08-01)
 - [x] ~~https://remotegamejobs.com/jobs/ci-games-social-media-manager-remote-job | CI Games | Social Media Manager | Remote — Europe-eligible (Poland HQ) | note: liveness uncertain~~ — removed from fresh matches
 - [ ] https://builtin.com/job/creator-program-manager/7730735 | thatgamecompany | Creator Program Manager (Sky: Children of the Light) | Remote — Global (US HQ)
 - [x] ~~https://functional.works-hub.com/jobs/remote-project-manager-web3-blockchain-cef | Nature Land | Remote Project Manager (Web3 Blockchain) | Remote | note: liveness uncertain~~ — removed from fresh matches
