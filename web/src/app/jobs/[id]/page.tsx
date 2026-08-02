@@ -4,7 +4,7 @@ import { use } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { ArrowLeft, Loader2, Wrench, CircleDot, Check, X } from "lucide-react";
+import { ArrowLeft, Loader2, Wrench, CircleDot, Check, X, ExternalLink } from "lucide-react";
 import { useJobs } from "@/components/jobs/job-store";
 import { HeroGlow } from "@/components/hero-glow";
 import { Badge } from "@/components/ui/badge";
@@ -47,6 +47,20 @@ export default function JobPage({ params }: { params: Promise<{ id: string }> })
           </p>
           <h1 className="mt-2 font-display text-2xl tracking-tight text-landing">{job.title}</h1>
           {job.subtitle && <p className="mt-1 text-sm text-muted">{job.subtitle}</p>}
+          {job.input?.startsWith("http") ? (
+            <a
+              href={job.input}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-1 text-sm text-brand hover:underline"
+            >
+              posting <ExternalLink className="size-3.5" />
+            </a>
+          ) : job.page?.startsWith("/pipeline/") ? (
+            <Link href={job.page} className="mt-2 inline-flex items-center gap-1 text-sm text-brand hover:underline">
+              report #{job.input}
+            </Link>
+          ) : null}
           {job.result?.score != null && (
             <div className="mt-3 flex flex-wrap items-center gap-2.5">
               <Badge tone={job.result.tone}>{job.result.score}/5</Badge>
