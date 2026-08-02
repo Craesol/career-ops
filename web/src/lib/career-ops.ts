@@ -192,6 +192,33 @@ export function pipelineSummary(): PipelineSummary {
   };
 }
 
+export type TrendPoint = { date: string; count: number };
+
+/** Roles discovered per day over the last `days` days — scan-history rows with
+ *  status `added`, bucketed by first_seen. Zero-filled so the sparkline shows
+ *  quiet days as quiet, not as gaps. */
+export function discoveryTrend(days = 14): TrendPoint[] {
+  const counts = new Map<string, number>();
+  try {
+    const rows = fs.readFileSync(path.join(careerOpsRoot(), "data", "scan-history.tsv"), "utf8").split("\n");
+    for (let i = 1; i < rows.length; i++) {
+      const c = rows[i].split("\t");
+      if ((c[5] || "").trim() !== "added") continue;
+      const d = (c[1] || "").trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(d)) counts.set(d, (counts.get(d) ?? 0) + 1);
+    }
+  } catch {
+    /* no history yet */
+  }
+  const out: TrendPoint[] = [];
+  const today = new Date();
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date(today.getTime() - i * 86400000).toISOString().slice(0, 10);
+    out.push({ date: d, count: counts.get(d) ?? 0 });
+  }
+  return out;
+}
+
 export type ReportData = { content: string; file: string };
 
 /** Locate the evaluation report for an application number

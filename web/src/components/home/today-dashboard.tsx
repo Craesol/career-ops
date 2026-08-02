@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 import { Bell, CircleHelp, Sparkles, ArrowRight } from "lucide-react";
 import { instrumentSerif } from "@/lib/fonts";
 import { HeroGlow } from "@/components/hero-glow";
-import type { Application, InboxJob } from "@/lib/career-ops";
+import type { Application, InboxJob, TrendPoint } from "@/lib/career-ops";
+import { canonStatus } from "@/lib/format";
 import type { DiscoveredOffer } from "@/lib/explore";
 import { DiscoveryCard } from "@/components/explore/discovery-card";
 import { FollowUpCard, type FollowUp } from "@/components/home/follow-up-card";
@@ -22,10 +23,12 @@ export function TodayDashboard({
   applications,
   inbox,
   inBetween,
+  trend = [],
 }: {
   applications: Application[];
   inbox: InboxJob[];
   inBetween: boolean;
+  trend?: TrendPoint[];
 }) {
   const [followups, setFollowups] = useState<FollowUp[]>([]);
   const [overdue, setOverdue] = useState(0);
@@ -68,6 +71,21 @@ export function TodayDashboard({
 
   const newThisWeek = fresh.length;
   const allClear = newThisWeek === 0 && overdue === 0 && awaiting.length === 0;
+
+  // Analytics over the full tracker (canonical statuses via canonStatus).
+  const { activeCount, awaitingCount, funnelCounts } = useMemo(() => {
+    const by = new Map<string, number>();
+    for (const a of applications) {
+      const s = canonStatus(a.status);
+      by.set(s, (by.get(s) ?? 0) + 1);
+    }
+    const n = (k: string) => by.get(k) ?? 0;
+    return {
+      awaitingCount: n("EVALUATED"),
+      activeCount: n("APPLIED") + n("RESPONDED") + n("INTERVIEW") + n("OFFER"),
+      funnelCounts: FUNNEL_STAGES.map(({ key, label }, i) => ({ key, label, color: FUNNEL_RAMP[i], count: n(key) })),
+    };
+  }, [applications]);
   const inboxUrls = useMemo(() => new Set(inbox.map((j) => j.url)), [inbox]);
 
   return (
@@ -80,28 +98,22 @@ export function TodayDashboard({
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
             <span className="text-faint">//</span> today · <span className="tabular-nums">{dateLabel}</span>
           </p>
-          <h1 className={`${instrumentSerif.className} mt-3 text-4xl leading-[1.05] text-landing md:text-5xl`}>
-            {allClear ? (
-              <>You&apos;re all caught up.</>
-            ) : (
-              <>
-                {newThisWeek > 0 && (
-                  <>
-                    <span className="text-brand tabular-nums">{newThisWeek}</span> new match{newThisWeek === 1 ? "" : "es"} this week
-                  </>
-                )}
-                {newThisWeek > 0 && overdue > 0 && <span className="text-faint"> · </span>}
-                {overdue > 0 && (
-                  <>
-                    <span className="text-brand tabular-nums">{overdue}</span> follow-up{overdue === 1 ? "" : "s"} due
-                  </>
-                )}
-              </>
-            )}
+          <h1 className={`${instrumentSerif.className} mt-3 text-2xl leading-tight text-landing md:text-3xl`}>
+            {allClear ? "You're all caught up." : "Where your search stands"}
           </h1>
-          <p className="mt-4 max-w-xl text-sm text-muted">
-            {allClear ? "I'll keep scanning the market in the background and surface anything that fits." : "Your action queue for today — discovery and follow-ups, in one place."}
-          </p>
+
+          {/* Analytics band — real numbers over the canonical files. */}
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <StatTile label="New this week" value={newThisWeek} accent hint="fresh scan matches" />
+            <StatTile label="Follow-ups due" value={overdue} accent={overdue > 0} hint="demand loop" />
+            <StatTile label="Active applications" value={activeCount} hint="applied → offer" />
+            <StatTile label="Awaiting decision" value={awaitingCount} hint="scored, undecided" />
+          </div>
+
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <FunnelBar counts={funnelCounts} />
+            <Sparkline points={trend} />
+          </div>
           <div className="mt-6 flex flex-wrap gap-2.5">
             <Link href="/explore" className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-medium text-brand-foreground transition hover:bg-brand-200 max-sm:min-h-[44px]">
               Find new roles <ArrowRight className="size-4" />
@@ -174,5 +186,105 @@ function Section({ icon: Icon, title, hint, children }: { icon: React.ComponentT
       </div>
       {children}
     </section>
+  );
+}
+
+// ── Analytics band pieces ──────────────────────────────────────────────────
+// Sequential purple ramp (lightness-monotonic on both surfaces); stages carry
+// direct labels + counts, so identity never rides on color alone.
+const FUNNEL_RAMP = ["#e3d4f9", "#c3a2f1", "#a06bff", "#8a2cdd", "#6f24b4", "#521a86"];
+const FUNNEL_STAGES = [
+  { key: "EVALUATED", label: "Evaluated" },
+  { key: "APPLIED", label: "Applied" },
+  { key: "RESPONDED", label: "Responded" },
+  { key: "INTERVIEW", label: "Interview" },
+  { key: "OFFER", label: "Offer" },
+  { key: "HIRED", label: "Hired" },
+];
+
+function StatTile({ label, value, hint, accent = false }: { label: string; value: number; hint: string; accent?: boolean }) {
+  return (
+    <div className="rounded-xl border border-border bg-surface/60 px-4 py-3">
+      <p className={`text-2xl font-semibold tabular-nums leading-none ${accent && value > 0 ? "text-brand-text" : "text-foreground"}`}>{value}</p>
+      <p className="mt-1.5 text-xs font-medium text-muted">{label}</p>
+      <p className="text-[11px] text-faint">{hint}</p>
+    </div>
+  );
+}
+
+function FunnelBar({ counts }: { counts: { key: string; label: string; color: string; count: number }[] }) {
+  const [hover, setHover] = useState<string | null>(null);
+  const total = counts.reduce((s, c) => s + c.count, 0);
+  const live = counts.filter((c) => c.count > 0);
+  return (
+    <div className="rounded-xl border border-border bg-surface/60 px-4 py-3">
+      <div className="flex items-baseline justify-between">
+        <p className="text-xs font-medium text-muted">Pipeline funnel</p>
+        <p className="text-[11px] tabular-nums text-faint">{total} in play</p>
+      </div>
+      {/* Segmented bar — 2px surface gaps between fills, 24px min hit target. */}
+      <div className="mt-2.5 flex h-6 w-full gap-[2px] overflow-hidden rounded-md" role="img" aria-label={counts.map((c) => `${c.label} ${c.count}`).join(", ")}>
+        {live.map((c) => (
+          <div
+            key={c.key}
+            className="min-w-[24px] cursor-default transition-opacity"
+            style={{ flexGrow: c.count, backgroundColor: c.color, opacity: hover && hover !== c.key ? 0.45 : 1 }}
+            onMouseEnter={() => setHover(c.key)}
+            onMouseLeave={() => setHover(null)}
+            title={`${c.label} — ${c.count}`}
+          />
+        ))}
+      </div>
+      {/* Direct labels: swatch + name + count for every stage, zero included. */}
+      <div className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1">
+        {counts.map((c) => (
+          <span key={c.key} className={`inline-flex items-center gap-1.5 text-[11px] transition-opacity ${hover && hover !== c.key ? "opacity-50" : ""}`}>
+            <span className="inline-block size-2 rounded-[3px]" style={{ backgroundColor: c.color }} />
+            <span className="text-muted">{c.label}</span>
+            <span className="tabular-nums text-foreground">{c.count}</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Sparkline({ points }: { points: { date: string; count: number }[] }) {
+  const [hover, setHover] = useState<number | null>(null);
+  if (points.length === 0) return null;
+  const W = 300;
+  const H = 56;
+  const PAD = 4;
+  const max = Math.max(1, ...points.map((p) => p.count));
+  const x = (i: number) => PAD + (i * (W - PAD * 2)) / (points.length - 1);
+  const y = (v: number) => H - PAD - (v * (H - PAD * 2)) / max;
+  const line = points.map((p, i) => `${i === 0 ? "M" : "L"}${x(i).toFixed(1)},${y(p.count).toFixed(1)}`).join(" ");
+  const area = `${line} L${x(points.length - 1).toFixed(1)},${H - PAD} L${x(0).toFixed(1)},${H - PAD} Z`;
+  const total = points.reduce((s, p) => s + p.count, 0);
+  const h = hover != null ? points[hover] : null;
+  const fmt = (d: string) => new Date(d + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  return (
+    <div className="rounded-xl border border-border bg-surface/60 px-4 py-3">
+      <div className="flex items-baseline justify-between">
+        <p className="text-xs font-medium text-muted">Roles discovered · last {points.length} days</p>
+        <p className="text-[11px] tabular-nums text-faint">
+          {h ? `${fmt(h.date)} · ${h.count}` : `${total} total`}
+        </p>
+      </div>
+      <svg viewBox={`0 0 ${W} ${H}`} className="mt-1.5 block h-14 w-full" onMouseLeave={() => setHover(null)}>
+        <path d={area} fill="var(--color-brand-soft)" />
+        <path d={line} fill="none" stroke="var(--color-brand-secondary)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+        {hover != null && (
+          <>
+            <line x1={x(hover)} x2={x(hover)} y1={PAD} y2={H - PAD} stroke="var(--color-border)" strokeWidth="1" />
+            <circle cx={x(hover)} cy={y(points[hover].count)} r="4" fill="var(--color-brand-secondary)" stroke="var(--surface)" strokeWidth="2" />
+          </>
+        )}
+        {/* Invisible hover strips — hit targets far bigger than the 2px line. */}
+        {points.map((_, i) => (
+          <rect key={i} x={x(i) - (W - PAD * 2) / (points.length - 1) / 2} y="0" width={(W - PAD * 2) / (points.length - 1)} height={H} fill="transparent" onMouseEnter={() => setHover(i)} />
+        ))}
+      </svg>
+    </div>
   );
 }
