@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.4.0](https://github.com/Craesol/career-ops/compare/web-v0.3.0...web-v0.4.0) (2026-08-02)
+
+
+### Features
+
+* **scan+ats:** filter expansion, onsite hard-block, and A+D ATS pipeline ([0aef186](https://github.com/Craesol/career-ops/commit/0aef18634b02d5f2f3a228a303f8f015d0c90c38))
+* show job_boards as free sources + version the local automation scripts ([a08a55f](https://github.com/Craesol/career-ops/commit/a08a55fd79c50f2396545fcf19f252e496681253))
+* **web:** add 21 ATS and job board sources to Explore UI ([f9870d9](https://github.com/Craesol/career-ops/commit/f9870d96291e85c23b68f9bd7d7236943e01d2c1))
+* **web:** add backend support for job board APIs ([31ab90e](https://github.com/Craesol/career-ops/commit/31ab90e97d6b4b8b43836b033c66333433728b86))
+* **web:** animated favicon — rotating, pulsing Elder Sign for tab findability ([6a4a9e1](https://github.com/Craesol/career-ops/commit/6a4a9e15ded09d9e08c125a689b4cc91cb603140))
+* **web:** Antigravity in AI search + hallucination gate; fix silent add failure ([928c021](https://github.com/Craesol/career-ops/commit/928c021fd8c09f6ad8107dcb695fb79bb7ef5370))
+* **web:** Applied button in the tracker — sets canonical status and seeds the first follow-up via followup-seed.mjs ([a2da629](https://github.com/Craesol/career-ops/commit/a2da62981c3320661ca1b6138ad84c347c8cec3a))
+* **web:** fresh-matches UX — Create CV worker, Remove buttons, layout fixes ([aecc346](https://github.com/Craesol/career-ops/commit/aecc3464a8646b376281eff4ff390afc8f7b1236))
+* **web:** make Follow-ups due rows open the offer's page ([9d50040](https://github.com/Craesol/career-ops/commit/9d5004060583b8ff3d584a4d4bf901a96b923bb3))
+* **web:** Peludo Labs rebrand, Elder Sign mark, pipeline UX, honest dates, source chips ([b0b3ff9](https://github.com/Craesol/career-ops/commit/b0b3ff95e8f20ae05f8d5e64e0b902bca2487b7d))
+
+
+### Bug Fixes
+
+* **scan:** filter improvements + stream-json dep fix ([43335c8](https://github.com/Craesol/career-ops/commit/43335c8f63669379700a8eab25506c805c681b85))
+* **web:** Fresh-matches Remove now also closes the pipeline entry ([f03d4cd](https://github.com/Craesol/career-ops/commit/f03d4cddbde87040f28088562309c6a450c311eb))
+* **web:** make inbox Skip persistent — mark the pipeline.md entry done server-side (was a localStorage-only hide), with a real undo ([212927b](https://github.com/Craesol/career-ops/commit/212927b48a1df179440deac06f0d24219537c1c6))
+* **web:** stop truncating config-seeded filters to 16 chips ([b462f62](https://github.com/Craesol/career-ops/commit/b462f62c90ee55416f82881dd81b2f5724273bb2))
+
 ## [0.3.0](https://github.com/santifer/career-ops/compare/web-v0.2.0...web-v0.3.0) (2026-07-07)
 
 
