@@ -1270,7 +1270,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://careers.onepeloton.com/en/all-jobs/?gh_jid=8074715 | Peloton | Senior Engineering Program Manager | New York, NY~~ — swept: location (New York, NY)
 - [x] ~~https://job-boards.greenhouse.io/dept/jobs/7930288 | DEPT | Senior Public Relations and Marketing Program Manager | Amsterdam, Rotterdam~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://helsing.ai/jobs/4880330101?gh_jid=4880330101 | Helsing | Senior Project Manager | Munich - Berlin - London
-- [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
+- [x] ~~https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom~~ — swept: location (United Kingdom)
 - [x] ~~https://wd1.myworkdaysite.com/en-US/recruiting/avnet/External/job/Program-Manager_JR-023513 | Avnet | Program Manager | Tempe, Arizona, United States Of America~~ — swept: location (Tempe, Arizona, United States Of America)
 - [x] ~~https://jobs.smartrecruiters.com/timmonsgroup1/744000139623684 | Timmons Group | Civil Engineering Project Manager, Land Development | Charlottesville, VA~~ — swept: location (Charlottesville, VA)
 - [x] ~~https://jobs.lever.co/purvis/abe0567c-625d-4cc0-af8e-d06d0a9eea09 | PURVIS Systems | Project Manager (202607) | Newport, RI~~ — swept: location (Newport, RI)
@@ -1292,7 +1292,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
 
-- [ ] https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom
+- [x] ~~https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom~~ — swept: location (United Kingdom)
 
 - [x] ~~https://boards.greenhouse.io/akuity/jobs/40123456 | Akuity | Fake Community Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
@@ -1486,33 +1486,33 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://uk.linkedin.com/jobs/view/community-manager-mmorpg-at-soulbound-4446778265 | Soulbound | Community Manager (MMORPG)
 - [ ] https://uk.linkedin.com/jobs/view/head-of-community-client-account-leadership-at-standing-on-giants-4444942274 | Standing on Giants | Head of Community - Client & Account Leadership
 
-- [ ] https://vaynermedia.com/careers?gh_jid=8074170 | VaynerMedia | Project Coordinator 12 Months FTC | UK- London, England | posted: 2026-07-21
-- [ ] https://job-boards.greenhouse.io/later/jobs/8656735002 | Later | Influencer Marketing Account Supervisor- Bilingual Spanish | Boston, MA; New York, New York, United States; Remote | posted: 2026-07-30
+- [x] ~~https://vaynermedia.com/careers?gh_jid=8074170 | VaynerMedia | Project Coordinator 12 Months FTC | UK- London, England | posted: 2026-07-21~~ — removed from fresh matches
+- [x] ~~https://job-boards.greenhouse.io/later/jobs/8656735002 | Later | Influencer Marketing Account Supervisor- Bilingual Spanish | Boston, MA; New York, New York, United States; Remote | posted: 2026-07-30~~ — removed from fresh matches
 - [x] ~~https://himalayas.app/companies/om/jobs/storytelling-editorial-volunteer | OM | Storytelling & Editorial Volunteer | United States | posted: 2026-07-31~~ — swept: location (United States)
 - [x] ~~https://jobicy.com/jobs/144161-translation-project-manager | M3 USA | Translation Project Manager | Brazil | posted: 2026-07-30~~ — swept: location (Brazil)
-- [ ] https://www.arbeitnow.com/jobs/companies/contracthero-gmbh/werkstudentin-im-content-marketing-bei-contracthero-berlin-143779 | ContractHero GmbH | Werkstudent:in (m/w/d) im Content Marketing bei ContractHero | Berlin, Remote | posted: 2026-07-31
+- [x] ~~https://www.arbeitnow.com/jobs/companies/contracthero-gmbh/werkstudentin-im-content-marketing-bei-contracthero-berlin-143779 | ContractHero GmbH | Werkstudent:in (m/w/d) im Content Marketing bei ContractHero | Berlin, Remote | posted: 2026-07-31~~ — removed from fresh matches
 - [x] ~~https://www.arbeitnow.com/jobs/companies/accso-accelerated-solutions-gmbh/werkstudent-content-marketing-darmstadt-357118 | Accso – Accelerated Solutions GmbH | Werkstudent* Content Marketing | Darmstadt | posted: 2026-07-31~~ — swept: location (Darmstadt)
 - [x] ~~https://www.arbeitnow.com/jobs/companies/wittig-architekten/digital-marketing-content-manager-teilzeit-hof-407002 | Wittig Architekten | Digital Marketing & Content Manager (m/w/d) (Teilzeit) | Hof | posted: 2026-07-31~~ — swept: location (Hof)
-- [ ] https://www.arbeitnow.com/jobs/companies/1komma5grad/praktikantin-partnerships-channel-development-berlin-159247 | 1Komma5Grad | Praktikant:in (m/w/d) Partnerships & Channel Development | Berlin | posted: 2026-07-31
-- [ ] https://www.arbeitnow.com/jobs/companies/omr/werkstudentin-social-media-hamburg-294427 | OMR | Werkstudent*In (M/W/D) Social Media | Hamburg | posted: 2026-07-31
-- [ ] https://www.arbeitnow.com/jobs/companies/hellofresh/senior-lifecycle-marketing-manager-all-genders-berlin-252615 | hellofresh | Senior Lifecycle Marketing Manager (all genders) | Berlin | posted: 2026-07-30
-- [ ] https://www.arbeitnow.com/jobs/companies/agencro/direct-response-copywriter-de-en-ai-first-marketing-agency-landau-50316 | agencro | Direct Response Copywriter DE & EN (AI First, Marketing Agency) | Landau, Remote | posted: 2026-07-30
-- [ ] https://www.arbeitnow.com/jobs/companies/werraenergie-gmbh/werkstudent-social-media-marketing-bad-salzungen-430049 | WerraEnergie GmbH | Werkstudent Social Media / Marketing (m/w/d) | Bad Salzungen, Thüringen, Deutschland | posted: 2026-07-30
-- [ ] https://www.arbeitnow.com/jobs/companies/cbs-corporate-business-solutions-gmbh/senior-consultant-sap-pmo-project-management-office-heidelberg-54836 | cbs Corporate Business Solutions GmbH | Senior Consultant SAP PMO (m/w/d) Project Management Office | Heidelberg, Baden-Württemberg, Deutschland | posted: 2026-07-30
-- [ ] https://www.arbeitnow.com/jobs/companies/ilf-consulting-engineers-germany-gmbh/senior-project-manager-bess-berlin-258261 | ILF Consulting Engineers Germany GmbH | Senior Project Manager BESS (m/w/d) | Berlin, Berlin, Deutschland | posted: 2026-07-30
-- [ ] https://www.arbeitnow.com/jobs/companies/pb3c-gmbh/werkstudentin-social-media-berlin-428372 | PB3C GmbH | Werkstudent:in Social Media (m/w/d) | Berlin | posted: 2026-07-30
-- [ ] https://careers.indragroup.com/job/Project-Manager/1359230355/ | Indra Sistemas | Project Manager
-- [ ] https://careers.indragroup.com/job/Madrid-PMO-Proyectos-Europeos-%28I%2BD-Defensa-&-Simulaci%C3%B3n%29-MD/1354351255/ | Indra Sistemas | PMO - Proyectos Europeos (I+D Defensa & Simulación) | Madrid
-- [ ] https://careers.indragroup.com/job/Madrid-Service-Delivery-Manager-Digital-Workplace/1351084455/ | Indra Sistemas | Service Delivery Manager - Digital Workplace | Madrid
-- [ ] https://careers.indragroup.com/job/Cybersecurity-Service-Delivery-Manager-00/1359016855/ | Indra Sistemas | Cybersecurity Service Delivery Manager
-- [ ] https://careers.indragroup.com/job/Madrid-Senior-Project-Manager-MD/1358967255/ | Indra Sistemas | Senior Project Manager | Madrid
+- [x] ~~https://www.arbeitnow.com/jobs/companies/1komma5grad/praktikantin-partnerships-channel-development-berlin-159247 | 1Komma5Grad | Praktikant:in (m/w/d) Partnerships & Channel Development | Berlin | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/omr/werkstudentin-social-media-hamburg-294427 | OMR | Werkstudent*In (M/W/D) Social Media | Hamburg | posted: 2026-07-31~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/hellofresh/senior-lifecycle-marketing-manager-all-genders-berlin-252615 | hellofresh | Senior Lifecycle Marketing Manager (all genders) | Berlin | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/agencro/direct-response-copywriter-de-en-ai-first-marketing-agency-landau-50316 | agencro | Direct Response Copywriter DE & EN (AI First, Marketing Agency) | Landau, Remote | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/werraenergie-gmbh/werkstudent-social-media-marketing-bad-salzungen-430049 | WerraEnergie GmbH | Werkstudent Social Media / Marketing (m/w/d) | Bad Salzungen, Thüringen, Deutschland | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/cbs-corporate-business-solutions-gmbh/senior-consultant-sap-pmo-project-management-office-heidelberg-54836 | cbs Corporate Business Solutions GmbH | Senior Consultant SAP PMO (m/w/d) Project Management Office | Heidelberg, Baden-Württemberg, Deutschland | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/ilf-consulting-engineers-germany-gmbh/senior-project-manager-bess-berlin-258261 | ILF Consulting Engineers Germany GmbH | Senior Project Manager BESS (m/w/d) | Berlin, Berlin, Deutschland | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://www.arbeitnow.com/jobs/companies/pb3c-gmbh/werkstudentin-social-media-berlin-428372 | PB3C GmbH | Werkstudent:in Social Media (m/w/d) | Berlin | posted: 2026-07-30~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Project-Manager/1359230355/ | Indra Sistemas | Project Manager~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Madrid-PMO-Proyectos-Europeos-%28I%2BD-Defensa-&-Simulaci%C3%B3n%29-MD/1354351255/ | Indra Sistemas | PMO - Proyectos Europeos (I+D Defensa & Simulación) | Madrid~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Madrid-Service-Delivery-Manager-Digital-Workplace/1351084455/ | Indra Sistemas | Service Delivery Manager - Digital Workplace | Madrid~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Cybersecurity-Service-Delivery-Manager-00/1359016855/ | Indra Sistemas | Cybersecurity Service Delivery Manager~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Madrid-Senior-Project-Manager-MD/1358967255/ | Indra Sistemas | Senior Project Manager | Madrid~~ — removed from fresh matches
 - [x] ~~https://careers.indragroup.com/job/Project-Manager-Infraestructuras-IT/978210855/ | Indra Sistemas | Project Manager Infraestructuras IT~~ — removed from fresh matches
 - [x] ~~https://careers.indragroup.com/job/Philippines-Senior-SAP-Project-Manager/1362162055/ | Indra Sistemas | Senior SAP Project Manager | Philippines~~ — swept: location (Philippines)
 - [x] ~~https://careers.indragroup.com/job/Barcelona-Project-Manager-Sistemas-Aeroespaciales-y-Defensa-CT/1350762755/ | Indra Sistemas | Project Manager - Sistemas Aeroespaciales y Defensa | Barcelona~~ — swept: location (Barcelona)
 - [x] ~~https://careers.indragroup.com/job/Madrid-C-UAS-Project-Manager-MD/1353594155/ | Indra Sistemas | C-UAS Project Manager | Madrid~~ — removed from fresh matches
 - [x] ~~https://careers.indragroup.com/job/Portugal-Project-Manager-Aerospace-Ground-Segment/1353340655/ | Indra Sistemas | Project Manager Aerospace / Ground Segment | Portugal~~ — swept: location (Portugal)
-- [ ] https://careers.indragroup.com/job/Public-Sector-&-Strategic-Partnerships-Head-00/1361682055/ | Indra Sistemas | Public Sector & Strategic Partnerships Head
-- [ ] https://careers.indragroup.com/job/Madrid-Project-Manager-Space-Programs-MD/1360641055/ | Indra Sistemas | Project Manager - Space Programs | Madrid
+- [x] ~~https://careers.indragroup.com/job/Public-Sector-&-Strategic-Partnerships-Head-00/1361682055/ | Indra Sistemas | Public Sector & Strategic Partnerships Head~~ — removed from fresh matches
+- [x] ~~https://careers.indragroup.com/job/Madrid-Project-Manager-Space-Programs-MD/1360641055/ | Indra Sistemas | Project Manager - Space Programs | Madrid~~ — removed from fresh matches
 - [x] ~~https://careers.indragroup.com/job/Madrid-Soporte-PMO-%28FP%29-Proyectos-de-Ingenier%C3%ADa-MD/1352599755/ | Indra Sistemas | Soporte PMO (FP) - Proyectos de Ingeniería | Madrid~~ — removed from fresh matches
 - [x] ~~https://careers.indragroup.com/job/Lugo-Project-Manager-sector-defensa-GA/1351976855/ | Indra Sistemas | Project Manager sector defensa | Lugo~~ — swept: location (Lugo)
 - [x] ~~https://careers.indragroup.com/job/Madrid-Industrial-Delivery-Manager-%28IDM%29-San-Fernando-de-Henares-Aranjuez-MD/1335326855/ | Indra Sistemas | Industrial Delivery Manager (IDM) - San Fernando de Henares / Aranjuez | Madrid~~ — removed from fresh matches
@@ -1524,7 +1524,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://apply.workable.com/mediatonic/j/1829BFBE1B/ | Mediatonic / Tonic Games Group | Community & Social Manager (Publishing) | Remote (UK HQ) | note: liveness uncertain~~ — removed from fresh matches
 - [ ] https://remotegamejobs.com/jobs/dreamforge-social-media-content-creator-community-manager-remote-job | DreamForge | Social Media Content Creator & Community Manager | Remote — Anywhere
 - [x] ~~https://remotegamejobs.com/jobs/void-interactive-community-manager-ready-or-not-remote-job | VOID Interactive | Community Manager, Ready or Not | Remote — contractor (Ireland HQ) | note: liveness uncertain~~ — removed from fresh matches
-- [ ] https://remotegamejobs.com/jobs/alderon-games-community-manager-remote-job | Alderon Games | Community Manager | Remote | note: liveness uncertain
+- [x] ~~https://remotegamejobs.com/jobs/alderon-games-community-manager-remote-job | Alderon Games | Community Manager | Remote | note: liveness uncertain~~ — skipped from inbox
 - [x] ~~https://emploi.afjv.com/emploi-jeux-video/ESUP2053-29036 | Com2uS Europe GmbH | Community Manager - France (m/f/x) | Berlin, DE — CDI, flexible home office (French-speaking role)~~ — removed from fresh matches
 - [x] ~~https://emploi.afjv.com/emploi-jeux-video/ESUP1369-28936 | Magic Design Studios | Community Manager (H/F) | Montpellier (34), France — freelance, on-site~~ — swept: location (Montpellier (34), France — freelance, on-site)
 - [x] ~~https://hitmarker.net/jobs/razer-manager-global-community-1636747 | Razer | Manager, Global Community | Listed on Hitmarker — verify region before applying | note: liveness uncertain~~ — swept: location (Listed on Hitmarker — verify region before applying)

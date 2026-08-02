@@ -111,27 +111,25 @@ location_filter:
     - "télétravail"
     - "teletravail"
     - "remoto"
-    # Remote-friendly regions
+    # Remote-friendly regions. Country tokens (france/germany/uk) are gone on
+    # purpose (2026-08-02): a bare town outside the commute zone or the hub
+    # cities is presumed on-site and rejected — "Remote - France" still passes
+    # via the remote markers above.
     - "worldwide"
     - "global"
     - "anywhere"
     - "emea"
     - "europe"
     - "eu"
-    - "france"
-    - "uk"
-    - "united kingdom"
     # Approved hybrid cities (on-site there still blocked below)
     - "paris"
     - "lyon"
     - "marseille"
     - "london"
     - "madrid"
-    # Germany hybrids (2026-08-01) — English-working-language only; the German-
-    # language gate lives in title_filter.negative (German-titled roles) and in
-    # the evaluation language policy (modes/_profile.md), not here.
-    - "germany"
-    - "deutschland"
+    # Germany hybrid HUBS (2026-08-01) — English-working-language only; the
+    # German-language gate lives in title_filter.negative (German-titled roles)
+    # and in the evaluation language policy (modes/_profile.md), not here.
     - "berlin"
     - "munich"
     - "münchen"
