@@ -345,6 +345,10 @@ title_filter:
     - "Stagiaire"
     - "Alternance"
     - "Alternant"
+    - "Werkstudent"
+    - "Praktikant"
+    - "Azubi"
+    - "Auszubildende"
     # On-site hard-block — mirrors daily-ats-scan.mjs NEGATIVE (2026-07-30).
     # Only remote/hybrid roles are in scope; titles that announce presence
     # requirements are out regardless of how good the role looks.
