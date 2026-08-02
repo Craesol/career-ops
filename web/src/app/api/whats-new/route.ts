@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { careerOpsRoot, readApplications } from "@/lib/career-ops";
+import { locationAllowed, titleAllowed } from "@/lib/core/location-filter";
 import type { DiscoveredOffer } from "@/lib/explore";
 
 export const runtime = "nodejs";
@@ -31,6 +32,10 @@ export async function GET(req: Request) {
     if (!url || !/^https?:\/\//i.test(url)) return null;
     if (status && /skipped|expired/i.test(status)) return null;
     if (company && evaluated.has(norm(company))) return null;
+    // Honor the CURRENT policy retroactively: rows recorded before a rule
+    // tightened (on-site, geo-restricted, negative title) must not resurface.
+    if (!locationAllowed(location)) return null;
+    if (!titleAllowed(title)) return null;
     return {
       url,
       company: (company || "").trim(),

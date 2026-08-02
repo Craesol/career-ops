@@ -55,7 +55,12 @@ writing-samples/*
 
 # User config and customization (never auto-updated)
 config/profile.yml
-portals.yml
+# Personal fork (2026-07-30): portals.yml is tracked ON PURPOSE so the local
+# machine syncs scan config with plain `git pull` — no more tar bundles. It
+# holds filters and company lists only. Anything with personal data
+# (profile.yml, cv.md) and anything with credentials (.env) stays untracked:
+# this repo is a public fork and GitHub does not let forks go private.
+!portals.yml
 modes/_profile.md
 modes/_custom.md
 .update-dismissed
@@ -107,3 +112,5 @@ package-lock.json
 
 # Planning (local scratchpad)
 plan/
+CLAUDE.local.md
+email-status.txt

@@ -44,3 +44,27 @@ export function assembleDedupContext(): { urls: Set<string>; lines: string[] } {
   lines.push(`(${urls.size} posting URLs are already known and will be auto-filtered, so don't worry about matching exact URLs — just skip the companies above.)`);
   return { urls, lines };
 }
+
+/**
+ * Canonicalized URLs the USER has dismissed (the Remove button's append-only
+ * `skipped` rows, plus `expired` dead-link rows) — NOT the scanner's automatic
+ * `skipped_title` filtering, so a broader Explore search can still resurface
+ * roles the daily title filter dropped. Explore's free discovery path filters
+ * against this set so a removed offer never comes back (#disc-remove).
+ */
+export function dismissedUrlSet(): Set<string> {
+  const dismissed = new Set<string>();
+  try {
+    const tsv = fs.readFileSync(path.join(careerOpsRoot(), "data", "scan-history.tsv"), "utf8");
+    const rows = tsv.split("\n");
+    for (let i = 1; i < rows.length; i++) {
+      const c = rows[i].split("\t");
+      const url = c[0]?.trim();
+      const status = (c[5] || "").trim();
+      if (url && /^https?:\/\//i.test(url) && /^(skipped|expired)$/i.test(status)) dismissed.add(canon(url));
+    }
+  } catch {
+    /* no history yet */
+  }
+  return dismissed;
+}

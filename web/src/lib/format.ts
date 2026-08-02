@@ -31,6 +31,10 @@ const STATUS_ALIAS: Record<string, string> = {
   monitor: "SKIP",
   no_aplicar: "SKIP",
   "no aplicar": "SKIP",
+  contratado: "HIRED",
+  contratada: "HIRED",
+  accepted: "HIRED",
+  accept: "HIRED",
 };
 
 export const CANONICAL_STATES = [
@@ -42,6 +46,7 @@ export const CANONICAL_STATES = [
   "Rejected",
   "Discarded",
   "SKIP",
+  "Hired",
 ] as const;
 
 export function canonStatus(s: string): string {
@@ -50,11 +55,11 @@ export function canonStatus(s: string): string {
   return STATUS_ALIAS[k] ?? s.toUpperCase();
 }
 
-/** Status dot colour, mirroring the Go TUI: green interview/offer, sky applied/
- *  responded, red skip/rejected, gray discarded, neutral evaluated. */
+/** Status dot colour, mirroring the Go TUI: green interview/offer/hired, sky
+ *  applied/responded, red skip/rejected, gray discarded, neutral evaluated. */
 export function statusDot(status: string): string {
   const c = canonStatus(status);
-  if (c.includes("INTERVIEW") || c.includes("OFFER")) return "bg-emerald-400";
+  if (c.includes("INTERVIEW") || c.includes("OFFER") || c.includes("HIRED")) return "bg-emerald-400";
   if (c.includes("APPLIED") || c.includes("RESPONDED")) return "bg-sky-400";
   if (c.includes("REJECTED") || c.includes("SKIP")) return "bg-red-400";
   if (c.includes("DISCARDED")) return "bg-zinc-600";

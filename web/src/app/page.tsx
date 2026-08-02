@@ -1,4 +1,4 @@
-import { pipelineSummary, doctorState } from "@/lib/career-ops";
+import { pipelineSummary, doctorState, discoveryTrend } from "@/lib/career-ops";
 import { OnboardingBanner } from "@/components/onboarding-banner";
 import { FirstRunHome } from "@/components/home/first-run-home";
 import { TodayDashboard } from "@/components/home/today-dashboard";
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {onboardingNeeded && <OnboardingBanner />}
-      <TodayDashboard applications={applications} inbox={inbox} inBetween={phase === "in-between"} />
+      <TodayDashboard applications={applications} inbox={inbox} inBetween={phase === "in-between"} trend={discoveryTrend()} />
     </>
   );
 }

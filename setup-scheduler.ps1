@@ -70,7 +70,7 @@ Write-Host "Node:   $NodePath"
 Write-Host "Script: $ScriptPath"
 Write-Host ""
 
-Register-ScanTask -TaskName "career-ops-scan-11h" -Hour "11"
+Register-ScanTask -TaskName "career-ops-scan-11h" -Hour "11" -Minute "47"
 Register-ScanTask -TaskName "career-ops-scan-20h" -Hour "20"
 
 Write-Host ""

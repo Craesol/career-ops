@@ -2,10 +2,34 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { careerOpsRoot, rootScript } from "@/lib/career-ops";
 import { writeTempPortals, cleanupTempPortals } from "./portals";
-import { ATS_SOURCES, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
+import { ATS_SOURCES, type AtsSource, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
+import { scanJobBoards, SUPPORTED_BOARDS } from "./job-boards";
+import { dismissedUrlSet } from "./discover";
+import { canon } from "@/lib/explore-ai";
 
 export type { DiscoveredOffer, ScanEvent, AtsSource } from "@/lib/explore";
 export { ATS_SOURCES } from "@/lib/explore";
+
+// ATS sources that have datasets in scan-ats-full.mjs (primary scanners)
+const DATASET_ATS: AtsSource[] = ["greenhouse", "lever", "ashby", "workday"];
+
+// Job boards that are scanned directly via API (no dataset needed)
+const JOB_BOARD_ATS: AtsSource[] = SUPPORTED_BOARDS as AtsSource[];
+
+// Check which sources are supported by the local scanner
+function getSupportedAts(): AtsSource[] {
+  // Dataset ATS are always supported if scanner exists
+  const supported: AtsSource[] = [...DATASET_ATS];
+
+  // Job boards are always supported (direct API calls)
+  for (const board of JOB_BOARD_ATS) {
+    if (!supported.includes(board)) {
+      supported.push(board);
+    }
+  }
+
+  return supported;
+}
 
 /**
  * ACL for the discovery engine — orchestrates the REAL core scanner
@@ -80,10 +104,52 @@ type ScanJson = {
   offers?: JsonOffer[];
 };
 
-export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) => void): Promise<DiscoveredOffer[]> {
+export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) => void): Promise<DiscoveredOffer[]> {
+  const allOffers: DiscoveredOffer[] = [];
+  const seen = new Set<string>();
+  // URLs the user removed (scan-history `skipped`/`expired` rows) never resurface
+  // in fresh discovery — same contract as /api/whats-new and the AI search backstop.
+  const dismissed = dismissedUrlSet();
+
+  // Separate dataset ATS from job boards
+  const requestedAts = filters.ats.length ? filters.ats : [...ATS_SOURCES];
+  const datasetAts = requestedAts.filter((a) => DATASET_ATS.includes(a as AtsSource));
+  const jobBoards = requestedAts.filter((a) => JOB_BOARD_ATS.includes(a as AtsSource));
+
+  // Scan job boards first (fast, direct API calls)
+  if (jobBoards.length > 0) {
+    onEvent({ kind: "log", line: `Scanning ${jobBoards.length} job board(s)...` });
+    for (const board of jobBoards) {
+      onEvent({ kind: "atsStart", ats: board, companies: 1 });
+    }
+    try {
+      const boardResults = await scanJobBoards(jobBoards, filters, (offer) => {
+        if (!seen.has(offer.url) && !dismissed.has(canon(offer.url))) {
+          seen.add(offer.url);
+          allOffers.push(offer);
+          onEvent({ kind: "offer", offer });
+        }
+      });
+      for (const result of boardResults) {
+        onEvent({ kind: "atsDone", ats: result.board, unreachable: 0 });
+        onEvent({ kind: "log", line: `${result.board}: ${result.count} matches` });
+      }
+    } catch (err) {
+      onEvent({ kind: "log", line: `Job boards error: ${err instanceof Error ? err.message : "unknown"}` });
+    }
+  }
+
+  // If no dataset ATS requested, return early
+  if (datasetAts.length === 0) {
+    onEvent({ kind: "summary", companiesScanned: jobBoards.length, unreachable: 0, matches: allOffers.length });
+    onEvent({ kind: "done", count: allOffers.length, offers: allOffers, cost: { tokens: 0, usd: 0 } });
+    return allOffers;
+  }
+
+  // Run the dataset ATS scanner
   return new Promise((resolve) => {
     const tempPortals = writeTempPortals(filters);
-    const ats = (filters.ats.length ? filters.ats : [...ATS_SOURCES]).filter((a) => (ATS_SOURCES as readonly string[]).includes(a));
+    const ats = datasetAts;
     const useJson = scannerSupportsJson();
     const args = [
       rootScript("scan-ats-full"),
@@ -102,8 +168,7 @@ export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) =>
       env: { ...process.env, CAREER_OPS_PORTALS: tempPortals },
     });
 
-    const offers: DiscoveredOffer[] = [];
-    const seen = new Set<string>();
+    // Use the outer seen/allOffers to combine with job board results
     let currentAts: string = ats[0] || "";
     let pending: Omit<DiscoveredOffer, "url"> | null = null;
     let companiesScanned = 0;
@@ -144,10 +209,10 @@ export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) =>
       const trimmed = line.trim();
       if (pending && /^https?:\/\//i.test(trimmed)) {
         const url = trimmed.split(/\s+/)[0];
-        if (!seen.has(url)) {
+        if (!seen.has(url) && !dismissed.has(canon(url))) {
           seen.add(url);
           const offer: DiscoveredOffer = { ...pending, url, matchedKeyword: firstMatch(pending.title, filters.positive) };
-          offers.push(offer);
+          allOffers.push(offer);
           onEvent({ kind: "offer", offer });
         }
         pending = null;
@@ -218,7 +283,7 @@ export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) =>
       clearTimeout(killer);
       cleanupTempPortals(tempPortals);
       onEvent({ kind: "error", message: e instanceof Error ? e.message : "scanner failed to start" });
-      resolve(offers);
+      resolve(allOffers);
     });
     child.on("close", () => {
       clearTimeout(killer);
@@ -246,14 +311,14 @@ export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) =>
               url,
               matchedKeyword: firstMatch(o.title, filters.positive),
             };
-            offers.push(offer);
+            allOffers.push(offer);
             onEvent({ kind: "offer", offer });
           }
           onEvent({
             kind: "summary",
             companiesScanned: j.companiesScanned ?? 0,
             unreachable: j.unreachableBoards ?? 0,
-            matches: j.postingsKept ?? offers.length,
+            matches: j.postingsKept ?? allOffers.length,
             companiesAvailable: j.companiesAvailable,
             capHit: j.capHit,
             datasetStatus: j.datasetStatus,
@@ -264,11 +329,11 @@ export function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEvent) =>
           // silently returning 0 (defensive; shouldn't happen once the probe passed).
           onEvent({ kind: "error", message: "The scanner returned no readable output." });
         }
-        resolve(offers);
+        resolve(allOffers);
         return;
       }
       if (outBuf.trim()) handleLine(outBuf);
-      resolve(offers);
+      resolve(allOffers);
     });
   });
 }

@@ -9,6 +9,9 @@ REM L3 WebSearch sweep enabled 2026-07-26 (user request): runs the enabled
 REM portals.yml search_queries (Indeed, Monster, CryptoJobsList, Hitmarker, ...)
 REM via headless claude. Spends tokens daily; remove this line to disable.
 SET INCLUDE_L3=true
+REM portals.yml carries 19 enabled queries (2026-07-30); the default cap of 14
+REM would silently skip the last five (translation, exec comms, lifecycle...).
+SET L3_MAX_QUERIES=20
 
 echo [%date% %time%] daily-consolidated starting >> logs\daily-consolidated.log
 

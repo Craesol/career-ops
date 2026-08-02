@@ -44,7 +44,7 @@ function Logo({ company }: { company: string }) {
 const WORKER_LABEL: Record<string, string> = { evaluate: "Evaluating…", "evaluate-cv": "Evaluating + CV…", pdf: "Preparing CV…", research: "Researching…", apply: "Filling…" };
 
 export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: DiscoveredOffer; inPipeline: boolean; evaluatedN?: string }) {
-  const { added, adding, addToPipeline } = useExplore();
+  const { added, adding, addToPipeline, dismissOffer } = useExplore();
   const { jobs, startJob } = useJobs();
   const [removed, setRemoved] = useState<"" | "removing" | "removed">("");
 
@@ -77,19 +77,12 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
     startJob({ title: `Evaluate + CV · ${offer.company}`, subtitle: offer.title, kind: "evaluate-cv", input: offer.url, page: "/explore" });
   };
 
-  // "Remove": append-only skip record in scan-history via the core's writer —
-  // the offer stops resurfacing in fresh matches and future scans dedup it.
+  // "Remove": full dismissal through the provider — append-only `skipped` record
+  // in scan-history, the pending pipeline.md row closed, and the offer pruned from
+  // the live results + per-tab snapshot so it never resurfaces on any surface.
   const remove = async () => {
     setRemoved("removing");
-    try {
-      await fetch("/api/explore/dismiss", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ offers: [offer] }),
-      });
-    } catch {
-      /* best-effort — the card still hides for this session */
-    }
+    await dismissOffer(offer); // best-effort — the card still hides for this session
     setRemoved("removed");
   };
 
