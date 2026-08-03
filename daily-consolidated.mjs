@@ -257,14 +257,35 @@ if (INCLUDE_L3) {
     }
   }
 
-  if (liveFresh.length) {
+  // Source-side stale gate: L3 rediscovers years-old web3.career postings
+  // (their URLs carry sequential ids; the nightly 3a2 sweep alone is too late,
+  // because whats-new/home shows `added` rows the moment they land). Drop them
+  // here, BEFORE anything is written, and record them as skipped so they never
+  // resurface via any path.
+  let l3Stale = [];
+  try {
+    const { w3cStaleFilter } = await import(pathToFileURL(resolve(ROOT, 'prune-stale-web3career.mjs')).href);
+    const gate = w3cStaleFilter();
+    l3Stale = liveFresh.filter(o => gate.isStale(o.url));
+    if (l3Stale.length) {
+      liveFresh = liveFresh.filter(o => !gate.isStale(o.url));
+      console.log('  ' + l3Stale.length + ' dropped as stale web3.career ids (< ' + gate.threshold + ')');
+    }
+  } catch (e) {
+    console.error('  stale-id gate unavailable (' + e.message + ') — L3 finds pass ungated');
+  }
+
+  if (liveFresh.length || l3Stale.length) {
     try {
       // pathToFileURL: Windows' ESM loader rejects bare absolute paths
       // ("Only URLs with a scheme in: file, data…"), which silently swallowed
       // every L3 find before this fix.
       const { appendToPipeline, appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-      appendToPipeline(liveFresh);
-      appendToScanHistory(liveFresh, today, 'added');
+      if (liveFresh.length) {
+        appendToPipeline(liveFresh);
+        appendToScanHistory(liveFresh, today, 'added');
+      }
+      if (l3Stale.length) appendToScanHistory(l3Stale, today, 'skipped');
     } catch (e) {
       console.error('  persist FAILED: ' + e.message);
     }

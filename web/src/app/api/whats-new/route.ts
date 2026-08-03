@@ -14,6 +14,16 @@ export const dynamic = "force-dynamic";
 // complaint). cols: url, first_seen, portal, title, company, status, location.
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
+// web3.career URLs carry sequential posting ids — the only recency signal for
+// dateless discoveries. Mirror of prune-stale-web3career.mjs: anything more
+// than GAP ids behind the newest seen is months old and never shown as fresh.
+const W3C_ID_RE = /web3\.career\/[^\s|~]*\/(\d{2,9})(?:[/?#]|\s|$)/;
+const W3C_GAP = 20000;
+const w3cId = (url: string): number | null => {
+  const m = url.match(W3C_ID_RE);
+  return m ? parseInt(m[1], 10) : null;
+};
+
 export async function GET(req: Request) {
   const days = Math.min(30, Math.max(1, Number(new URL(req.url).searchParams.get("days")) || 7));
   const cutoff = Date.now() - days * 86_400_000;
@@ -36,6 +46,8 @@ export async function GET(req: Request) {
     // tightened (on-site, geo-restricted, negative title) must not resurface.
     if (!locationAllowed(location)) return null;
     if (!titleAllowed(title)) return null;
+    const wid = w3cId(url);
+    if (wid !== null && maxW3cId > 0 && wid < maxW3cId - W3C_GAP) return null;
     return {
       url,
       company: (company || "").trim(),
@@ -54,9 +66,12 @@ export async function GET(req: Request) {
   // shadow the ORIGINAL row of the same URL further up the file — collect them
   // first so a dismissal wins regardless of row order.
   const dismissed = new Set<string>();
+  let maxW3cId = 0;
   for (let i = 1; i < rows.length; i++) {
     const c = rows[i].split("\t");
     if (c[0] && /skipped|expired/i.test(c[5] || "")) dismissed.add(c[0]);
+    const wid = c[0] ? w3cId(c[0]) : null;
+    if (wid !== null && wid > maxW3cId) maxW3cId = wid;
   }
 
   // Pass 1: recent-by-date (the supply loop).
