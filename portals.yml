@@ -839,6 +839,14 @@ tracked_companies:
   careers_url: https://jobs.ashbyhq.com/blast-io
   provider: ashby
   enabled: true
+# Requested 2026-08-06. No public ATS board (greenhouse/lever/ashby slugs 404),
+# jobs page is Next.js behind a Vercel bot checkpoint (curl gets 429), and its
+# own pageProps carried jobs:[] — zero openings at check time. Disabled until
+# they actually post; their roles also surface via the web3/gaming aggregators
+# already scanned. Re-check: open illuvium.io/jobs in a browser.
+- name: Illuvium
+  careers_url: https://illuvium.io/jobs
+  enabled: false
 
 # -- Job boards --
 # Board-wide aggregator feeds handled by providers/<id>.mjs.
