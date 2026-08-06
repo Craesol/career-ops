@@ -5,6 +5,7 @@ import { writeTempPortals, cleanupTempPortals } from "./portals";
 import { ATS_SOURCES, type AtsSource, type DiscoveredOffer, type ExploreFilters, type ScanEvent } from "@/lib/explore";
 import { scanJobBoards, SUPPORTED_BOARDS } from "./job-boards";
 import { dismissedUrlSet } from "./discover";
+import { locationAllowed } from "./location-filter";
 import { canon } from "@/lib/explore-ai";
 
 export type { DiscoveredOffer, ScanEvent, AtsSource } from "@/lib/explore";
@@ -124,6 +125,9 @@ export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEve
     }
     try {
       const boardResults = await scanJobBoards(jobBoards, filters, (offer) => {
+        // The user's STANDING location policy (portals.yml) is always enforced
+        // server-side — UI filters can narrow further but never widen past it.
+        if (!locationAllowed(offer.location)) return;
         if (!seen.has(offer.url) && !dismissed.has(canon(offer.url))) {
           seen.add(offer.url);
           allOffers.push(offer);
@@ -209,7 +213,7 @@ export async function runDiscovery(filters: ExploreFilters, onEvent: (e: ScanEve
       const trimmed = line.trim();
       if (pending && /^https?:\/\//i.test(trimmed)) {
         const url = trimmed.split(/\s+/)[0];
-        if (!seen.has(url) && !dismissed.has(canon(url))) {
+        if (!seen.has(url) && !dismissed.has(canon(url)) && locationAllowed(pending.location)) {
           seen.add(url);
           const offer: DiscoveredOffer = { ...pending, url, matchedKeyword: firstMatch(pending.title, filters.positive) };
           allOffers.push(offer);

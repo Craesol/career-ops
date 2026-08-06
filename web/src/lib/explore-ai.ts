@@ -14,6 +14,34 @@ export type AiTraceChunk =
   | { kind: "narration"; text: string }
   | { kind: "malformed"; raw: string };
 
+/** Compile the user's standing location policy (from /api/location-policy) into
+ *  a predicate. Mirrors the core semantics: empty location passes; always_allow
+ *  wins over block; block rejects; empty allow passes; else must match allow.
+ *  Keywords are word-boundary anchored ("vence" never matches "Provence"). */
+export function compileLocationPolicy(lists: { alwaysAllow?: string[]; allow?: string[]; block?: string[] }): (location: string | undefined | null) => boolean {
+  const compile = (l?: string[]) =>
+    (l ?? [])
+      .filter((k) => typeof k === "string" && k.trim().length > 0)
+      .map((k) => {
+        const kw = k.trim().toLowerCase();
+        const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const prefix = /[a-z0-9]/.test(kw[0]) ? "(?<![a-z0-9])" : "";
+        const suffix = /[a-z0-9]/.test(kw[kw.length - 1]) ? "(?![a-z0-9])" : "";
+        return new RegExp(`${prefix}${escaped}${suffix}`);
+      });
+  const alwaysAllow = compile(lists.alwaysAllow);
+  const allow = compile(lists.allow);
+  const block = compile(lists.block);
+  return (location) => {
+    const lower = (location ?? "").trim().toLowerCase();
+    if (lower === "") return true;
+    if (alwaysAllow.length > 0 && alwaysAllow.some((re) => re.test(lower))) return true;
+    if (block.length > 0 && block.some((re) => re.test(lower))) return false;
+    if (allow.length === 0) return true;
+    return allow.some((re) => re.test(lower));
+  };
+}
+
 /** Normalize a URL for dedup: host+path, lowercased, no query/fragment/trailing slash. */
 export function canon(u: string): string {
   try {

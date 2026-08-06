@@ -15,7 +15,7 @@ import {
   type ExploreMode,
   type ScanEvent,
 } from "@/lib/explore";
-import { makeAiStreamParser, type AiTraceChunk } from "@/lib/explore-ai";
+import { makeAiStreamParser, compileLocationPolicy, type AiTraceChunk } from "@/lib/explore-ai";
 
 export type Phase =
   | "idle"
@@ -115,6 +115,19 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
   const touched = useRef(false);
   const [phase, setPhase] = useState<Phase>("idle");
   const [offers, setOffers] = useState<DiscoveredOffer[]>([]);
+  // The user's STANDING location policy (portals.yml) — fetched once; gates
+  // AI-stream offers and prunes rehydrated snapshots. Server paths already
+  // enforce it; this closes the client-only surfaces. Pass-all until loaded.
+  const policyRef = useRef<(loc: string | undefined | null) => boolean>(() => true);
+  useEffect(() => {
+    fetch("/api/location-policy")
+      .then((r) => r.json())
+      .then((lists) => {
+        policyRef.current = compileLocationPolicy(lists ?? {});
+        setOffers((o) => o.filter((x) => policyRef.current(x.location)));
+      })
+      .catch(() => {});
+  }, []);
   const [sources, setSources] = useState<Partial<Record<AtsSource, SourceState>>>({});
   const [matchCount, setMatchCount] = useState(0);
   const [companiesScanned, setCompaniesScanned] = useState(0);
@@ -409,6 +422,7 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
     const handle = (chunks: AiTraceChunk[]) => {
       for (const ch of chunks) {
         if (ch.kind === "offer") {
+          if (!policyRef.current(ch.offer.location)) continue; // standing location policy
           acc.push(ch.offer);
           setOffers((o) => [...o, ch.offer]);
           setMatchCount(acc.length);

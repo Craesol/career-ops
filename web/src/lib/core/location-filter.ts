@@ -54,6 +54,20 @@ function load() {
   return cache;
 }
 
+/** Raw policy lists (for clients that must apply the policy themselves —
+ *  e.g. the AI-search stream parser and rehydrated Explore snapshots). */
+export function locationPolicyLists(): { alwaysAllow: string[]; allow: string[]; block: string[] } {
+  const p = path.join(careerOpsRoot(), "portals.yml");
+  try {
+    const doc = yaml.load(fs.readFileSync(p, "utf8")) as { location_filter?: LocationFilterCfg };
+    const cfg = doc?.location_filter ?? {};
+    const clean = (l: unknown) => (Array.isArray(l) ? l.filter((k): k is string => typeof k === "string" && k.trim().length > 0) : []);
+    return { alwaysAllow: clean(cfg.always_allow), allow: clean(cfg.allow), block: clean(cfg.block) };
+  } catch {
+    return { alwaysAllow: [], allow: [], block: [] };
+  }
+}
+
 /** Does this location string pass the user's current location policy? */
 export function locationAllowed(location: string | undefined | null): boolean {
   const lower = (location ?? "").trim().toLowerCase();
