@@ -54,9 +54,11 @@ End with EXACTLY one final line: VERDICT: {5 if now live, else 1}/5 — {what yo
    b. Write the full report to reports/{num}-{company-slug}-${today}.md  (company-slug = company lowercased, non-alphanumerics → hyphens).
 
 3. Generate the tailored CV (modes/pdf.md, follow it EXACTLY):
+   THE USER CLICKED "Create CV" — that IS the explicit user override. Generate the CV REGARDLESS of the evaluation score; report the score and its caveats informationally, never as a reason to skip generation. (Source-of-truth still applies: only claims backed by cv.md — flag gaps, never invent.)
    a. Read modes/pdf.md and modes/_custom.md (if it exists). Tailor the CV: inject the JD's keywords into the summary + first bullets, reorder experience by relevance, build the competency grid, pick the top 3–4 projects. NEVER invent skills — only reword REAL experience using the JD's vocabulary.
    b. Fill templates/cv-template.html's {{...}} placeholders; write the HTML to output/cv-{candidate}-{company-slug}.html (candidate = the profile name in kebab-case).
    c. Render: \`node generate-pdf.mjs output/cv-{candidate}-{company-slug}.html output/cv-{candidate}-{company-slug}-${today}.pdf --format={letter for US/Canada companies, else a4} --report={num}\`.
+   d. PDF-only house rule: after the PDF renders successfully, DELETE the intermediate output/cv-{candidate}-{company-slug}.html — only the .pdf stays in output/.
 
 4. Register in the tracker (AFTER the PDF exists, so the PDF column is truthful):
    a. Append ONE row of 9 TAB-separated columns to batch/tracker-additions/{num}-{company-slug}.tsv, in THIS exact order (real \\t tabs, status BEFORE score):
