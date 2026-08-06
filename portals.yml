@@ -440,6 +440,12 @@ search_queries:
 - name: Translation — EN/ES/FR
   query: (translator OR proofreader OR "localization specialist") (Spanish OR French) remote (gaming OR tech)
   enabled: true
+# gamesjobsindex.com sits behind a bot wall (no RSS, no API, direct fetch 403) —
+# reached via the search-engine index instead. Single-quoted on purpose: the L3
+# inliner in daily-consolidated.mjs only picks up single-quoted queries.
+- name: GamesJobsIndex — Community/Social
+  query: 'site:gamesjobsindex.com ("community manager" OR "social media manager" OR "content manager" OR "marketing communications") remote'
+  enabled: true
 
 # -- Tracked companies --
 # Every ATS slug below was mined from data/scan-history.tsv, i.e. from scans that
