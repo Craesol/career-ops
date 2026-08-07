@@ -101,7 +101,12 @@ location_filter:
     - "monte-carlo"
     - "monte carlo"
   allow:
-    # Remote markers
+    # Modality markers (2026-08-07): a posting passes on EXPLICIT remote or
+    # hybrid modality — a bare city ("London, UK") no longer passes; in
+    # practice those turned out to be on-site roles whose source didn't
+    # capture the modality. Which hybrid cities are commutable stays an
+    # EVALUATION question (modes/_profile.md approved list); the scan only
+    # gates modality. The Nice-zone always_allow above is untouched.
     - "remote"
     - "wfh"
     - "work from home"
@@ -111,6 +116,9 @@ location_filter:
     - "télétravail"
     - "teletravail"
     - "remoto"
+    - "hybrid"
+    - "hybride"
+    - "híbrido"
     # Remote-friendly regions. Country tokens (france/germany/uk) are gone on
     # purpose (2026-08-02): a bare town outside the commute zone or the hub
     # cities is presumed on-site and rejected — "Remote - France" still passes
@@ -121,24 +129,11 @@ location_filter:
     - "emea"
     - "europe"
     - "eu"
-    # Approved hybrid cities (on-site there still blocked below)
-    - "paris"
-    - "lyon"
-    - "marseille"
-    - "london"
-    - "madrid"
-    # Germany hybrid HUBS (2026-08-01) — English-working-language only; the
-    # German-language gate lives in title_filter.negative (German-titled roles)
-    # and in the evaluation language policy (modes/_profile.md), not here.
-    - "berlin"
-    - "munich"
-    - "münchen"
-    - "hamburg"
-    - "frankfurt"
-    - "cologne"
-    - "köln"
-    - "düsseldorf"
-    - "stuttgart"
+    # NOTE (2026-08-07): the bare hybrid-city tokens (paris/london/berlin/…)
+    # were removed — they admitted "London, UK"-style unknown-modality strings
+    # that kept turning out to be on-site. Hybrid postings say "hybrid", and
+    # the marker above covers them; the approved-city arbitration happens at
+    # evaluation (modes/_profile.md).
   block:
     - "on-site"
     - "onsite"
