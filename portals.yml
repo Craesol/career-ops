@@ -1,920 +1,705 @@
-# Portal Scanner Configuration
-# Used by /career-ops scan to discover new offers automatically.
-#
-# Strategy (4 levels):
-#   0. Local parser → per-company `parser:` script for SSR/static career pages (zero-token)
-#   1. Playwright → careers_url of each company (real-time, reliable)
-#   2. HTTP JSON (WebFetch) → per-company `api:` on tracked_companies (see board_api_catalog below)
-#   3. WebSearch with site: filters (broad discovery, may be stale)
-#
-# IMPORTANT: Each company in tracked_companies MUST have careers_url.
-#   Prefer the BRANDED company careers URL whenever available; use ATS-hosted URL only as fallback.
-#   ✅ https://careers.mastercard.com   ⚠️ https://mastercard.wd1.myworkdayjobs.com (fallback only)
-#   ✅ https://openai.com/careers       ⚠️ https://job-boards.greenhouse.io/openai (fallback only)
-#   Exception: ATS-hosted careers_url is acceptable when no branded careers page exists.
-#   Using raw ATS URLs when a branded page exists can cause false 410 errors (job ID mismatch).
-#
-# HOW TO CUSTOMIZE:
-#   1. Copy this file to portals.yml in the project root
-#   2. Edit title_filter.positive with YOUR target role keywords
-#   3. Add/remove companies in tracked_companies
-#   4. Adjust search_queries for your preferred job boards
-#   5. Set enabled: false on companies you don't care about
-
-# -- Scan history recheck policy (optional) --
-# By default, URLs recorded in data/scan-history.tsv are deduped forever.
-# Set recheck_after_days to let previously added URLs become eligible again
-# after N days, useful for roles that reopen or are republished at the same URL.
-# Permanent invalid statuses such as blocked host or malformed URL still remain
-# deduped forever.
-#
-# scan_history:
-#   recheck_after_days: 30
-
-# -- Location filter (optional) --
-# Filter scanned jobs by location. Applied AFTER title filter, BEFORE dedup.
-# If this entire block is absent, all locations pass (current default behavior).
-#
-# Semantics (case-insensitive substring, in this order):
-#   - Empty location string on a job → pass (don't penalize missing data)
-#   - Any `always_allow` keyword present → pass (takes precedence over `block`)
-#   - Any `block` keyword present → reject
-#   - `allow` empty → pass (already cleared block)
-#   - `allow` non-empty → must match at least one keyword
-#
-# `always_allow` is optional. It rescues multi-location postings that name your
-# home region: with always_allow ["New York"] and block ["India"], a job listed
-# "Remote, New York or India" passes (New York wins), while "Remote, India" is
-# still rejected. Omit always_allow entirely and the filter behaves as before.
-#
-# Example below targets US-based remote + a couple of US metros, blocking
-# common foreign hubs. Customize to your geography.
-
-# location_filter:
-#   # always_allow is checked BEFORE block — keep this list to your home region only
-#   always_allow:
-#     - "United States"   # (replace with your home region)
-#     - "New York"
-#   allow:
-#     - "Remote"
-#     - "United States"
-#     - "USA"
-#     - "Atlanta"
-#     - "New York"
-#   block:
-#     - "India"
-#     - "Bengaluru"
-#     - "United Kingdom"
-#     - "London"
-#     - "Germany"
-#     - "France"
-#     - "Singapore"
-#     - "Japan"
-#     - "Brazil"
-#     - "Australia"
-
-# Active config (2026-08-01) — three-tier location policy:
-#   1. always_allow — the commutable zone around Nice + Monaco: ANY modality
-#      (remote, hybrid, on-site) is fine here, so it wins over the block list.
-#   2. block — explicit on-site markers anywhere else, plus geo-restricted
-#      markets the candidate can't work from.
-#   3. allow — everything else must look remote (remote/EMEA/Europe/…) or name
-#      one of the approved hybrid cities (Paris, Lyon, Marseille, London,
-#      Madrid). On-site postings in those cities still die on the block list;
-#      bare city strings (unknown modality) pass and get settled at evaluation.
-# Empty locations keep passing (don't penalize missing data). Keywords are
-# word-boundary anchored ("vence" does NOT match "Provence").
 location_filter:
   always_allow:
-    - "nice"
-    - "villeneuve-loubet"
-    - "villeneuve loubet"
-    - "antibes"
-    - "grasse"
-    - "valbonne"
-    - "sophia antipolis"
-    - "sophia-antipolis"
-    - "biot"
-    - "vallauris"
-    - "vence"
-    - "monaco"
-    - "monte-carlo"
-    - "monte carlo"
+    - nice
+    - villeneuve-loubet
+    - villeneuve loubet
+    - antibes
+    - grasse
+    - valbonne
+    - sophia antipolis
+    - sophia-antipolis
+    - biot
+    - vallauris
+    - vence
+    - monaco
+    - monte-carlo
+    - monte carlo
   allow:
-    # Modality markers (2026-08-07): a posting passes on EXPLICIT remote or
-    # hybrid modality — a bare city ("London, UK") no longer passes; in
-    # practice those turned out to be on-site roles whose source didn't
-    # capture the modality. Which hybrid cities are commutable stays an
-    # EVALUATION question (modes/_profile.md approved list); the scan only
-    # gates modality. The Nice-zone always_allow above is untouched.
-    - "remote"
-    - "wfh"
-    - "work from home"
-    - "distributed"
-    - "home office"
-    - "homeoffice"
-    - "télétravail"
-    - "teletravail"
-    - "remoto"
-    - "hybrid"
-    - "hybride"
-    - "híbrido"
-    # Remote-friendly regions. Country tokens (france/germany/uk) are gone on
-    # purpose (2026-08-02): a bare town outside the commute zone or the hub
-    # cities is presumed on-site and rejected — "Remote - France" still passes
-    # via the remote markers above.
-    - "worldwide"
-    - "global"
-    - "anywhere"
-    - "emea"
-    - "europe"
-    - "eu"
-    # NOTE (2026-08-07): the bare hybrid-city tokens (paris/london/berlin/…)
-    # were removed — they admitted "London, UK"-style unknown-modality strings
-    # that kept turning out to be on-site. Hybrid postings say "hybrid", and
-    # the marker above covers them; the approved-city arbitration happens at
-    # evaluation (modes/_profile.md).
+    - Villeneuve-Loubet, France (CET)
   block:
-    - "on-site"
-    - "onsite"
-    - "on site"
-    - "in-office"
-    - "in office"
-    # Geo-restricted markets the candidate can't work from (2026-08-01):
-    # remote-but-Philippines-only listings kept leaking in via job boards.
-    - "philippines"
-    - "manila"
-
-# -- Salary filter (optional) --
-# Filter scanned jobs by annual compensation range. Applied AFTER location
-# filter, BEFORE dedup. Only applies when structured salary data exists.
-#
-# Semantics:
-#   - min/max are annual compensation filters (use annualized values)
-#   - max: 0 means "no upper limit"
-#   - If no salary data exists on a job, it passes (conservative behavior)
-#   - If both currencies are known and differ, the job is rejected by the salary filter
-#   - Partial ranges (min only or max only) work correctly
-#   - If this entire block is absent, salary is not filtered (default behavior)
-#
-# Example: target roles paying at least $100k, no upper limit
-# salary_filter:
-#   min: 100000
-#   max: 0
-#   currency: "USD"
-
-# -- Trust filter (optional) --
-# Enriches each scanned job with a trust score (0-100) and flags.
-# Jobs are NEVER dropped — only annotated. The trust score helps you
-# prioritize which postings to evaluate first.
-#
-# Heuristics (V1):
-#   1. URL structure validation (malformed or non-http URLs)
-#   2. Missing application URL
-#   3. Suspicious domain detection (link shorteners, form builders)
-#   4. Company ↔ domain mismatch (with ATS allowlist)
-#
-# If this block is absent or enabled: false, all jobs get score 100.
-#
-# trust_filter:
-#   enabled: true
-#   suspicious_domains:
-#     - "bit.ly"
-#     - "tinyurl.com"
-#     - "t.co"
-#     - "forms.gle"
-#     - "goo.gl"
-#     - "shorturl.at"
-#   # Override the built-in ATS allowlist (greenhouse, lever, workday, etc.).
-#   # URLs hosted on these domains skip the company↔domain mismatch check.
-#   # ats_allowlist:
-#   #   - "greenhouse.io"
-#   #   - "ashbyhq.com"
-#   #   - "lever.co"
-#   #   - "custom-ats.example.com"
-
-# -- Content filter (optional) --
-# Filters on the job DESCRIPTION text, not just the title — useful when
-# companies post generic titles ("Software Engineer") with very different
-# stacks. Case-insensitive substring match.
-# Semantics:
-#   - A job with no description always passes (see provider support below)
-#   - Any `negative` keyword present → reject
-#   - `positive` empty → pass (after clearing negatives)
-#   - `positive` non-empty → at least one keyword must be present
-#   - If this entire block is absent, descriptions are not filtered (default)
-#
-# Provider support: the scanner is zero-token and only reads descriptions that
-# a provider already returns in its list payload — it never fetches each job
-# page. Currently Lever (`descriptionPlain`) supplies descriptions; jobs from
-# providers that don't always pass this filter (they're never silently dropped).
-#
-# Example: keep roles that mention Rust/Go, drop legacy PHP/WordPress shops
-# content_filter:
-#   positive:
-#     - "rust"
-#     - "golang"
-#   negative:
-#     - "php"
-#     - "wordpress"
-#
-# by_title_keyword (optional): scope a stricter positive/negative pair to only
-# the jobs matched via a specific title_filter.positive keyword, instead of
-# applying it to every scanned job. Useful when a title keyword is broad
-# enough to need extra confirmation from the description (e.g. "AI Engineer"
-# roles where you want the JD to actually mention a concrete AI tool) without
-# that same requirement leaking onto unrelated categories (Instructional
-# Designer, HR Coordinator, ...). Jobs matched via a keyword with no entry
-# here fall back to the global positive/negative pair above.
-# content_filter:
-#   by_title_keyword:
-#     "AI Engineer":
-#       positive:
-#         - "gpt"
-#         - "llm"
-#         - "claude"
-
-# -- Title filter --
-# The scanner uses these keywords to decide if a title is relevant.
-# At least 1 positive must match AND 0 negatives must match (case-insensitive).
-#
-# skip_tiers: [intern, entry]  # optional: skip listings by seniority tier (note: unrecognized/plain titles fall back to 'mid')
-
+    - on-site
+    - onsite
+    - on site
+    - in-office
+    - in office
+    - hybrid
+    - philippines
+    - manila
+    # Asia-Pacific
+    - apac
+    - asia
+    - singapore
+    - hong kong
+    - china
+    - shanghai
+    - beijing
+    - shenzhen
+    - taiwan
+    - taipei
+    - vietnam
+    - hanoi
+    - ho chi minh
+    - thailand
+    - bangkok
+    - indonesia
+    - jakarta
+    - malaysia
+    - kuala lumpur
+    - india
+    - bangalore
+    - bengaluru
+    - hyderabad
+    - mumbai
+    - delhi
+    - japan
+    - tokyo
+    - korea
+    - seoul
+    - australia
+    - sydney
+    - melbourne
+    - new zealand
+    # Middle East
+    - uae
+    - dubai
+    - abu dhabi
+    - saudi
+    - riyadh
+    - qatar
+    - doha
+    # Americas (outside target region)
+    - united states
+    - usa
+    - u.s.
+    - canada
+    - latam
+    - brazil
+    - mexico
+    - argentina
 title_filter:
   positive:
-    # Community — the core archetype (Guildmaster, Movement Labs / Move Industries)
-    - "Community"
-    - "Guild"
-    - "Player Experience"
-    - "Ambassador"
-    # Social & content — daily-ops posting across X, LinkedIn, Telegram, Discord
-    - "Social Media"
-    - "Content Manager"
-    - "Content Lead"
-    - "Content Strategy"
-    - "Content Marketing"
-    - "Editorial"
-    - "Copywriter"
-    # Marketing communications — the Blizzard EMEA lineage
-    - "Marketing Communications"
-    - "Communications Manager"
-    - "Comms Manager"
-    - "Brand Manager"
-    # Creator / influencer relations & ambassador programs
-    - "Creator Relations"
-    - "Influencer"
-    - "KOL"
-    - "Ambassador Program"
-    # Executive / founder communications & lifecycle marketing
-    - "Executive Communications"
-    - "Founder Communications"
-    - "Lifecycle Marketing"
-    - "Email Marketing"
-    - "CRM Marketing"
-    # Ecosystem, partnerships & growth — Web3-native equivalents of the above
-    - "Ecosystem"
-    - "Partnerships"
-    - "Partner Manager"
-    - "Growth Manager"
-    - "Growth Lead"
-    - "Advocacy"
-    # Gaming & esports
-    - "Esports"
-    - "Gaming"
-    # Project / Program management — Blizzard, Nicecactus, Metex lineage
-    - "Project Manager"
-    - "Program Manager"
-    - "Project Coordinator"
-    - "Delivery Manager"
-    - "PMO"
-    # Localization & translation — 25+ yrs EN/ES/FR, translation degree
-    - "Localization"
-    - "Localisation"
-    - "Translator"
-    - "Translation"
-    - "Proofreader"
-    - "Copy Editor"
-    - "LQA"
+    - Community Manager
+    - Head of Community
+    - Community Lead
+    - Social Media Manager
+    - Content Manager
+    - Marketing Communications Manager
   negative:
-    # Developer Relations is NOT the target — every DevRel hit in the pipeline
-    # was swept as negative-title. Keep it out.
-    - "Developer Relations"
-    - "DevRel"
-    - "Developer Advocate"
-    - "Developer Advocacy"
-    # "Community Manager" in US listings very often means apartment/property
-    # management, which floods the pipeline with irrelevant results.
-    - "Leasing"
-    - "Property Manager"
-    - "Apartment"
-    - "Resident"
-    - "Housing"
-    # Clinical / social-care uses of "community"
-    - "Nurse"
-    - "Health Worker"
-    - "Social Worker"
-    # "Project/Program Manager" is broad — keep the technical and
-    # construction variants out (the CV lineage is marketing/community PM)
-    - "Technical Project"
-    - "Technical Program"
-    - "IT Project"
-    - "Software Project"
-    - "Construction"
-    - "Civil"
-    - "Electrical"
-    - "Mechanical"
-    # Engineering and other out-of-archetype roles
-    - "Engineer"
-    - "Developer"
-    - "Software"
-    - "Data Scientist"
-    - "Designer"
-    # Seniority / contract types below the target
-    - "Junior"
-    - "Intern"
-    - "Internship"
-    - "Apprentice"
-    - "Stage "
-    - "Stagiaire"
-    - "Alternance"
-    - "Alternant"
-    - "Werkstudent"
-    - "Praktikant"
-    - "Azubi"
-    - "Auszubildende"
-    # On-site hard-block — mirrors daily-ats-scan.mjs NEGATIVE (2026-07-30).
-    # Only remote/hybrid roles are in scope; titles that announce presence
-    # requirements are out regardless of how good the role looks.
-    - "On-site"
-    - "Onsite"
-    - "On site"
-    - "In-office"
-    - "In office"
-    # German-titled roles (2026-08-01): a title written in German means a
-    # German-primary working language, which the candidate doesn't have.
-    # English-titled roles at German companies pass; evaluation still gates
-    # German-language requirements found in the JD body.
-    - "Mitarbeiter"
-    - "Referent"
-    - "Sachbearbeiter"
-    - "Berater"
-    - "Teamleiter"
-    - "Bereichsleiter"
-    - "Kaufmann"
-    - "Kauffrau"
-    - "Redakteur"
-    - "Übersetzer"
+    # Language/market requirements outside target region
+    - Vietnamese
+    - Thai
+    - Mandarin
+    - Cantonese
+    - Chinese
+    - Korean
+    - Japanese
+    - Indonesian
+    - Tagalog
+    - Hindi
+    - Turkish
+    - Arabic
+    - APAC
+    - SEA Market
+    - UAE
+    - Dubai
+    # Junk/off-target titles seen in scans
+    - VIP Relationship
+    - Gift Card
+    - Accelerator Program
+    - Crypto Accounting
+    - Developer Relations
+    - DevRel
+    - Developer Advocate
+    - Developer Advocacy
+    - Leasing
+    - Property Manager
+    - Apartment
+    - Resident
+    - Housing
+    - Nurse
+    - Health Worker
+    - Social Worker
+    - Technical Project
+    - Technical Program
+    - IT Project
+    - Software Project
+    - Construction
+    - Civil
+    - Electrical
+    - Mechanical
+    - Engineer
+    - Developer
+    - Software
+    - Data Scientist
+    - Designer
+    - Junior
+    - Intern
+    - Internship
+    - Apprentice
+    - 'Stage '
+    - Stagiaire
+    - Alternance
+    - Alternant
+    - Werkstudent
+    - Praktikant
+    - Azubi
+    - Auszubildende
+    - On-site
+    - Onsite
+    - On site
+    - In-office
+    - In office
+    - Mitarbeiter
+    - Referent
+    - Sachbearbeiter
+    - Berater
+    - Teamleiter
+    - Bereichsleiter
+    - Kaufmann
+    - Kauffrau
+    - Redakteur
+    - Übersetzer
   seniority_boost:
-    # These prefixes add relevance but are not required
-    - "Senior"
-    - "Staff"
-    - "Principal"
-    - "Lead"
-    - "Head"
-    - "Director"
-    - "Global"
-
-# -- Search queries --
-# Each query triggers a WebSearch. Tuned to the Community / Social / Ecosystem
-# archetype in Web3 and gaming — see config/profile.yml target_roles.
+    - Senior
+    - Staff
+    - Principal
+    - Lead
+    - Head
+    - Director
+    - Global
 search_queries:
-- name: Ashby — Community (Web3)
-  query: site:jobs.ashbyhq.com ("Community Manager" OR "Community Lead" OR "Head of Community") (web3 OR crypto OR blockchain)
-  enabled: true
-- name: Lever — Community (Web3)
-  query: site:jobs.lever.co ("Community Manager" OR "Community Lead" OR "Head of Community") (web3 OR crypto OR blockchain)
-  enabled: true
-- name: Greenhouse — Community (Web3)
-  query: site:job-boards.greenhouse.io ("Community Manager" OR "Head of Community") (web3 OR crypto OR gaming)
-  enabled: true
-- name: Greenhouse — Social & Content
-  query: site:job-boards.greenhouse.io ("Social Media Manager" OR "Content Manager" OR "Marketing Communications") remote
-  enabled: true
-- name: Ashby — Ecosystem & Growth
-  query: site:jobs.ashbyhq.com ("Ecosystem Lead" OR "Ecosystem Manager" OR "Growth Lead") (crypto OR web3)
-  enabled: true
-- name: CryptocurrencyJobs — Community
-  query: site:cryptocurrencyjobs.co ("community manager" OR "head of community" OR "social media")
-  enabled: true
-- name: Web3.career — Community
-  query: site:web3.career ("community manager" OR "community lead" OR "social media manager")
-  enabled: true
-- name: CryptoJobsList — Community
-  query: site:cryptojobslist.com ("community manager" OR "head of community")
-  enabled: true
-- name: RemoteOK — Community
-  query: site:remoteok.com ("community manager" OR "social media manager") remote
-  enabled: true
-- name: Gaming — Community EMEA
-  query: ("community manager" OR "player experience") gaming remote (EMEA OR Europe OR France)
-  enabled: true
-- name: Esports — Community
-  query: esports ("community manager" OR "community lead") remote
-  enabled: true
-- name: Guild & Ambassador programs
-  query: ("guild lead" OR "ambassador program manager" OR "guild manager") (web3 OR gaming)
-  enabled: true
-- name: Marketing Comms — Gaming/Web3
-  query: '"marketing communications manager" (gaming OR web3 OR crypto) remote'
-  enabled: true
-- name: Localization — Program/Project
-  query: ("localization manager" OR "localization project manager") remote (EMEA OR Europe)
-  enabled: true
-- name: France — Community Manager
-  query: '"community manager" (France OR Nice OR "Sophia Antipolis" OR remote) web3 OR gaming'
-  enabled: true
-- name: Creator / Influencer Relations
-  query: ("creator relations" OR "influencer relations" OR "KOL manager") (web3 OR gaming OR crypto) remote
-  enabled: true
-- name: Executive / Founder Comms
-  query: ("executive communications" OR "founder communications" OR ghostwriter) (web3 OR crypto OR tech) remote
-  enabled: true
-- name: Email / Lifecycle Marketing
-  query: ("email marketing manager" OR "lifecycle marketing" OR "CRM manager") (gaming OR web3) remote
-  enabled: true
-- name: Translation — EN/ES/FR
-  query: (translator OR proofreader OR "localization specialist") (Spanish OR French) remote (gaming OR tech)
-  enabled: true
-# gamesjobsindex.com sits behind a bot wall (no RSS, no API, direct fetch 403) —
-# reached via the search-engine index instead. Single-quoted on purpose: the L3
-# inliner in daily-consolidated.mjs only picks up single-quoted queries.
-- name: GamesJobsIndex — Community/Social
-  query: 'site:gamesjobsindex.com ("community manager" OR "social media manager" OR "content manager" OR "marketing communications") remote'
-  enabled: true
-
-# -- Tracked companies --
-# Every ATS slug below was mined from data/scan-history.tsv, i.e. from scans that
-# actually returned postings. No guessed URLs.
+  - name: Ashby — Community (Web3)
+    query: >-
+      site:jobs.ashbyhq.com ("Community Manager" OR "Community Lead" OR "Head of Community") (web3
+      OR crypto OR blockchain)
+    enabled: true
+  - name: Lever — Community (Web3)
+    query: >-
+      site:jobs.lever.co ("Community Manager" OR "Community Lead" OR "Head of Community") (web3 OR
+      crypto OR blockchain)
+    enabled: true
+  - name: Greenhouse — Community (Web3)
+    query: >-
+      site:job-boards.greenhouse.io ("Community Manager" OR "Head of Community") (web3 OR crypto OR
+      gaming)
+    enabled: true
+  - name: Greenhouse — Social & Content
+    query: >-
+      site:job-boards.greenhouse.io ("Social Media Manager" OR "Content Manager" OR "Marketing
+      Communications") remote
+    enabled: true
+  - name: Ashby — Ecosystem & Growth
+    query: >-
+      site:jobs.ashbyhq.com ("Ecosystem Lead" OR "Ecosystem Manager" OR "Growth Lead") (crypto OR
+      web3)
+    enabled: true
+  - name: CryptocurrencyJobs — Community
+    query: site:cryptocurrencyjobs.co ("community manager" OR "head of community" OR "social media")
+    enabled: true
+  - name: Web3.career — Community
+    query: site:web3.career ("community manager" OR "community lead" OR "social media manager")
+    enabled: true
+  - name: CryptoJobsList — Community
+    query: site:cryptojobslist.com ("community manager" OR "head of community")
+    enabled: true
+  - name: RemoteOK — Community
+    query: site:remoteok.com ("community manager" OR "social media manager") remote
+    enabled: true
+  - name: Gaming — Community EMEA
+    query: ("community manager" OR "player experience") gaming remote (EMEA OR Europe OR France)
+    enabled: true
+  - name: Esports — Community
+    query: esports ("community manager" OR "community lead") remote
+    enabled: true
+  - name: Guild & Ambassador programs
+    query: ("guild lead" OR "ambassador program manager" OR "guild manager") (web3 OR gaming)
+    enabled: true
+  - name: Marketing Comms — Gaming/Web3
+    query: '"marketing communications manager" (gaming OR web3 OR crypto) remote'
+    enabled: true
+  - name: Localization — Program/Project
+    query: ("localization manager" OR "localization project manager") remote (EMEA OR Europe)
+    enabled: true
+  - name: France — Community Manager
+    query: '"community manager" (France OR Nice OR "Sophia Antipolis" OR remote) web3 OR gaming'
+    enabled: true
+  - name: Creator / Influencer Relations
+    query: >-
+      ("creator relations" OR "influencer relations" OR "KOL manager") (web3 OR gaming OR crypto)
+      remote
+    enabled: true
+  - name: Executive / Founder Comms
+    query: >-
+      ("executive communications" OR "founder communications" OR ghostwriter) (web3 OR crypto OR
+      tech) remote
+    enabled: true
+  - name: Email / Lifecycle Marketing
+    query: ("email marketing manager" OR "lifecycle marketing" OR "CRM manager") (gaming OR web3) remote
+    enabled: true
+  - name: Translation — EN/ES/FR
+    query: >-
+      (translator OR proofreader OR "localization specialist") (Spanish OR French) remote (gaming OR
+      tech)
+    enabled: true
+  - name: GamesJobsIndex — Community/Social
+    query: >-
+      site:gamesjobsindex.com ("community manager" OR "social media manager" OR "content manager" OR
+      "marketing communications") remote
+    enabled: true
 tracked_companies:
-- name: Perk
-  careers_url: https://jobs.ashbyhq.com/perk
-  provider: ashby
-  enabled: true
-- name: "Job&Talent"
-  careers_url: https://jobs.lever.co/jobandtalent
-  provider: lever
-  enabled: true
-# SAP SuccessFactors RMK portal (career55.sapsf.eu backend) — verified live
-# 2026-07-30 via /tile-search-results/. Branded host carries no SF token, so
-# the provider is pinned explicitly.
-- name: Indra Sistemas
-  careers_url: https://careers.indragroup.com
-  provider: successfactors
-  enabled: true
-# Factorial dogfoods its own ATS at careers.factorialhr.com (SSR page, no
-# public JSON API) — scanned via the local parser below. The parser maps the
-# work-mode column (Onsite/Remote/Hybrid) into `location`, so the global
-# location_filter drops the onsite ones.
-- name: Factorial
-  careers_url: https://careers.factorialhr.com
-  scan_method: local_parser
-  parser:
-    command: node
-    script: scripts/parsers/factorial-jobs.mjs
-    format: jobs-json-v1
-  enabled: true
-
-- name: Scopely
-  careers_url: https://job-boards.greenhouse.io/scopely
-  api: https://boards-api.greenhouse.io/v1/boards/scopely/jobs
-  provider: greenhouse
-  enabled: true
-- name: Startale
-  careers_url: https://job-boards.greenhouse.io/startale
-  api: https://boards-api.greenhouse.io/v1/boards/startale/jobs
-  provider: greenhouse
-  enabled: true
-- name: Aptos Labs
-  careers_url: https://job-boards.greenhouse.io/aptoslabs
-  api: https://boards-api.greenhouse.io/v1/boards/aptoslabs/jobs
-  provider: greenhouse
-  enabled: true
-- name: OKX
-  careers_url: https://job-boards.greenhouse.io/okx
-  api: https://boards-api.greenhouse.io/v1/boards/okx/jobs
-  provider: greenhouse
-  enabled: true
-- name: Uniswap Labs
-  careers_url: https://job-boards.greenhouse.io/uniswaplabs
-  api: https://boards-api.greenhouse.io/v1/boards/uniswaplabs/jobs
-  provider: greenhouse
-  enabled: true
-- name: Blockchain.com
-  careers_url: https://job-boards.greenhouse.io/blockchain
-  api: https://boards-api.greenhouse.io/v1/boards/blockchain/jobs
-  provider: greenhouse
-  enabled: true
-- name: Cosmos Labs
-  careers_url: https://job-boards.greenhouse.io/cosmoslabs
-  api: https://boards-api.greenhouse.io/v1/boards/cosmoslabs/jobs
-  provider: greenhouse
-  enabled: true
-- name: BitGo
-  careers_url: https://job-boards.greenhouse.io/bitgo
-  api: https://boards-api.greenhouse.io/v1/boards/bitgo/jobs
-  provider: greenhouse
-  enabled: true
-- name: Eclipse
-  careers_url: https://job-boards.greenhouse.io/eclipse
-  api: https://boards-api.greenhouse.io/v1/boards/eclipse/jobs
-  provider: greenhouse
-  enabled: true
-- name: Bungie
-  careers_url: https://job-boards.greenhouse.io/bungie
-  api: https://boards-api.greenhouse.io/v1/boards/bungie/jobs
-  provider: greenhouse
-  enabled: true
-- name: Twitch
-  careers_url: https://job-boards.greenhouse.io/twitch
-  api: https://boards-api.greenhouse.io/v1/boards/twitch/jobs
-  provider: greenhouse
-  enabled: true
-- name: Hyphen Connect
-  careers_url: https://job-boards.greenhouse.io/hyphenconnect
-  api: https://boards-api.greenhouse.io/v1/boards/hyphenconnect/jobs
-  provider: greenhouse
-  enabled: true
-- name: Remote
-  careers_url: https://job-boards.greenhouse.io/remotecom
-  api: https://boards-api.greenhouse.io/v1/boards/remotecom/jobs
-  provider: greenhouse
-  enabled: true
-- name: VaynerMedia
-  careers_url: https://job-boards.greenhouse.io/vaynermedia
-  api: https://boards-api.greenhouse.io/v1/boards/vaynermedia/jobs
-  provider: greenhouse
-  enabled: true
-- name: Smartling
-  careers_url: https://job-boards.greenhouse.io/smartling
-  api: https://boards-api.greenhouse.io/v1/boards/smartling/jobs
-  provider: greenhouse
-  enabled: true
-- name: Later
-  careers_url: https://job-boards.greenhouse.io/later
-  api: https://boards-api.greenhouse.io/v1/boards/later/jobs
-  provider: greenhouse
-  enabled: true
-- name: CoW DAO
-  careers_url: https://jobs.ashbyhq.com/cow-dao
-  provider: ashby
-  enabled: true
-- name: Solana Foundation
-  careers_url: https://jobs.ashbyhq.com/solana%20foundation
-  provider: ashby
-  enabled: true
-- name: Sky Mavis
-  careers_url: https://jobs.ashbyhq.com/skymavis
-  provider: ashby
-  enabled: true
-- name: Sahara AI
-  careers_url: https://jobs.ashbyhq.com/sahara
-  provider: ashby
-  enabled: true
-- name: Ava Labs
-  careers_url: https://jobs.ashbyhq.com/ava-labs
-  provider: ashby
-  enabled: true
-- name: Trust Wallet
-  careers_url: https://jobs.ashbyhq.com/trust-wallet
-  provider: ashby
-  enabled: true
-- name: Chainlink Labs
-  careers_url: https://jobs.ashbyhq.com/chainlink-labs
-  provider: ashby
-  enabled: true
-- name: OP Labs
-  careers_url: https://jobs.ashbyhq.com/oplabs
-  provider: ashby
-  enabled: true
-- name: Monad Foundation
-  careers_url: https://jobs.ashbyhq.com/monad.foundation
-  provider: ashby
-  enabled: true
-- name: Wormhole Foundation
-  careers_url: https://jobs.ashbyhq.com/wormholelabs
-  provider: ashby
-  enabled: true
-- name: Caldera
-  careers_url: https://jobs.ashbyhq.com/caldera
-  provider: ashby
-  enabled: true
-- name: Hyperliquid Labs
-  careers_url: https://jobs.ashbyhq.com/hyperliquid%20labs
-  provider: ashby
-  enabled: true
-- name: Polygon Labs
-  careers_url: https://jobs.ashbyhq.com/polygon-labs
-  provider: ashby
-  enabled: true
-- name: Lido Finance
-  careers_url: https://jobs.ashbyhq.com/lido.fi
-  provider: ashby
-  enabled: true
-- name: Wincent
-  careers_url: https://jobs.ashbyhq.com/wincent
-  provider: ashby
-  enabled: true
-- name: YO Labs
-  careers_url: https://jobs.ashbyhq.com/yolabs
-  provider: ashby
-  enabled: true
-- name: thatgamecompany
-  careers_url: https://jobs.ashbyhq.com/thatgamecompany
-  provider: ashby
-  enabled: true
-- name: Colonist
-  careers_url: https://jobs.ashbyhq.com/colonist
-  provider: ashby
-  enabled: true
-- name: LILT
-  careers_url: https://jobs.ashbyhq.com/lilt
-  provider: ashby
-  enabled: true
-- name: Larian Studios
-  careers_url: https://jobs.lever.co/larian
-  provider: lever
-  enabled: true
-- name: Binance
-  careers_url: https://jobs.lever.co/binance
-  provider: lever
-  enabled: true
-- name: Animoca Brands
-  careers_url: https://jobs.lever.co/animocabrands
-  provider: lever
-  enabled: true
-- name: fun.xyz
-  careers_url: https://jobs.lever.co/funxyz
-  provider: lever
-  enabled: true
-- name: Token Metrics
-  careers_url: https://jobs.lever.co/tokenmetrics
-  provider: lever
-  enabled: true
-- name: Nibiru
-  careers_url: https://jobs.lever.co/nibiru
-  provider: lever
-  enabled: true
-- name: Manta Network
-  careers_url: https://jobs.lever.co/mantanetwork
-  provider: lever
-  enabled: true
-- name: Offchain Labs
-  careers_url: https://jobs.lever.co/offchainlabs
-  provider: lever
-  enabled: true
-- name: Crypto.com
-  careers_url: https://jobs.lever.co/crypto
-  provider: lever
-  enabled: true
-- name: Arbitrum Foundation
-  careers_url: https://jobs.lever.co/arbitrumfoundation
-  provider: lever
-  enabled: true
-- name: CertiK
-  careers_url: https://jobs.lever.co/certik
-  provider: lever
-  enabled: true
-- name: Immutable
-  careers_url: https://jobs.lever.co/immutable
-  provider: lever
-  enabled: true
-- name: Sei Labs
-  careers_url: https://jobs.lever.co/seilabs
-  provider: lever
-  enabled: true
-- name: Scroll
-  careers_url: https://jobs.lever.co/scroll
-  provider: lever
-  enabled: true
-- name: Ultra
-  careers_url: https://jobs.lever.co/ultra
-  provider: lever
-  enabled: true
-- name: Gate
-  careers_url: https://jobs.lever.co/gate
-  provider: lever
-  enabled: true
-- name: Polygon
-  careers_url: https://jobs.lever.co/polygon
-  provider: lever
-  enabled: true
-- name: Serotonin
-  careers_url: https://jobs.lever.co/serotonin
-  provider: lever
-  enabled: true
-- name: IOVLabs
-  careers_url: https://jobs.lever.co/iovlabs
-  provider: lever
-  enabled: true
-- name: Crypto Banter
-  careers_url: https://jobs.lever.co/crypto-banter
-  provider: lever
-  enabled: true
-- name: DAOs Hub
-  careers_url: https://jobs.lever.co/daos-hub
-  provider: lever
-  enabled: true
-- name: Stronghold
-  careers_url: https://jobs.lever.co/stronghold
-  provider: lever
-  enabled: true
-- name: ChainGPT
-  careers_url: https://apply.workable.com/chaingpt
-  provider: workable
-  enabled: true
-- name: MLabs
-  careers_url: https://apply.workable.com/mlabs
-  provider: workable
-  enabled: true
-- name: Hike
-  careers_url: https://apply.workable.com/hike
-  provider: workable
-  enabled: true
-- name: IO Global
-  careers_url: https://apply.workable.com/io-global
-  provider: workable
-  enabled: true
-- name: MetaEngine
-  careers_url: https://apply.workable.com/metaengine
-  provider: workable
-  enabled: true
-- name: ThriveCoin
-  careers_url: https://apply.workable.com/thrivecoin
-  provider: workable
-  enabled: true
-- name: ClayStack
-  careers_url: https://apply.workable.com/claystack
-  provider: workable
-  enabled: true
-- name: ClubRare
-  careers_url: https://apply.workable.com/clubrare
-  provider: workable
-  enabled: true
-- name: Faraway
-  careers_url: https://apply.workable.com/faraway
-  provider: workable
-  enabled: true
-- name: Bisonic
-  careers_url: https://apply.workable.com/bisonic
-  provider: workable
-  enabled: true
-- name: Ankr
-  careers_url: https://apply.workable.com/ankr
-  provider: workable
-  enabled: true
-- name: Bitcraft
-  careers_url: https://apply.workable.com/bitcraft
-  provider: workable
-  enabled: true
-- name: Keywords Studios
-  careers_url: https://apply.workable.com/keywords-intl1
-  provider: workable
-  enabled: true
-- name: Fast Break Labs
-  careers_url: https://apply.workable.com/fast-break-labs
-  provider: workable
-  enabled: true
-- name: Coinbase
-  careers_url: https://job-boards.greenhouse.io/coinbase
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/coinbase/jobs
-- name: Ripple
-  careers_url: https://job-boards.greenhouse.io/ripple
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/ripple/jobs
-- name: MoonPay
-  careers_url: https://job-boards.greenhouse.io/moonpay
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/moonpay/jobs
-- name: Near Foundation
-  careers_url: https://job-boards.greenhouse.io/nearfoundation
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/nearfoundation/jobs
-- name: Filecoin Foundation
-  careers_url: https://job-boards.greenhouse.io/filecoinfoundation
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/filecoinfoundation/jobs
-- name: Epic Games
-  careers_url: https://job-boards.greenhouse.io/epicgames
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/epicgames/jobs
-- name: Riot Games
-  careers_url: https://job-boards.greenhouse.io/riotgamesinc
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/riotgamesinc/jobs
-- name: Circle.so (community platform)
-  careers_url: https://job-boards.greenhouse.io/circleso
-  provider: greenhouse
-  enabled: true
-  api: https://boards-api.greenhouse.io/v1/boards/circleso/jobs
-- name: Kraken
-  careers_url: https://jobs.lever.co/kraken123
-  provider: lever
-  enabled: true
-- name: Anchorage Digital
-  careers_url: https://jobs.lever.co/anchorage
-  provider: lever
-  enabled: true
-- name: OpenSea
-  careers_url: https://jobs.ashbyhq.com/OpenSea
-  provider: ashby
-  enabled: true
-- name: Mysten Labs (Sui)
-  careers_url: https://jobs.ashbyhq.com/mystenlabs
-  provider: ashby
-  enabled: true
-- name: Blast
-  careers_url: https://jobs.ashbyhq.com/blast-io
-  provider: ashby
-  enabled: true
-# Requested 2026-08-06. No public ATS board (greenhouse/lever/ashby slugs 404),
-# jobs page is Next.js behind a Vercel bot checkpoint (curl gets 429), and its
-# own pageProps carried jobs:[] — zero openings at check time. Disabled until
-# they actually post; their roles also surface via the web3/gaming aggregators
-# already scanned. Re-check: open illuvium.io/jobs in a browser.
-- name: Illuvium
-  careers_url: https://illuvium.io/jobs
-  enabled: false
-
-# -- Job boards --
-# Board-wide aggregator feeds handled by providers/<id>.mjs.
+  - name: Perk
+    careers_url: https://jobs.ashbyhq.com/perk
+    provider: ashby
+    enabled: true
+  - name: Job&Talent
+    careers_url: https://jobs.lever.co/jobandtalent
+    provider: lever
+    enabled: true
+  - name: Indra Sistemas
+    careers_url: https://careers.indragroup.com
+    provider: successfactors
+    enabled: true
+  - name: Factorial
+    careers_url: https://careers.factorialhr.com
+    scan_method: local_parser
+    parser:
+      command: node
+      script: scripts/parsers/factorial-jobs.mjs
+      format: jobs-json-v1
+    enabled: true
+  - name: Scopely
+    careers_url: https://job-boards.greenhouse.io/scopely
+    api: https://boards-api.greenhouse.io/v1/boards/scopely/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Startale
+    careers_url: https://job-boards.greenhouse.io/startale
+    api: https://boards-api.greenhouse.io/v1/boards/startale/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Aptos Labs
+    careers_url: https://job-boards.greenhouse.io/aptoslabs
+    api: https://boards-api.greenhouse.io/v1/boards/aptoslabs/jobs
+    provider: greenhouse
+    enabled: true
+  - name: OKX
+    careers_url: https://job-boards.greenhouse.io/okx
+    api: https://boards-api.greenhouse.io/v1/boards/okx/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Uniswap Labs
+    careers_url: https://job-boards.greenhouse.io/uniswaplabs
+    api: https://boards-api.greenhouse.io/v1/boards/uniswaplabs/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Blockchain.com
+    careers_url: https://job-boards.greenhouse.io/blockchain
+    api: https://boards-api.greenhouse.io/v1/boards/blockchain/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Cosmos Labs
+    careers_url: https://job-boards.greenhouse.io/cosmoslabs
+    api: https://boards-api.greenhouse.io/v1/boards/cosmoslabs/jobs
+    provider: greenhouse
+    enabled: true
+  - name: BitGo
+    careers_url: https://job-boards.greenhouse.io/bitgo
+    api: https://boards-api.greenhouse.io/v1/boards/bitgo/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Eclipse
+    careers_url: https://job-boards.greenhouse.io/eclipse
+    api: https://boards-api.greenhouse.io/v1/boards/eclipse/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Bungie
+    careers_url: https://job-boards.greenhouse.io/bungie
+    api: https://boards-api.greenhouse.io/v1/boards/bungie/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Twitch
+    careers_url: https://job-boards.greenhouse.io/twitch
+    api: https://boards-api.greenhouse.io/v1/boards/twitch/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Hyphen Connect
+    careers_url: https://job-boards.greenhouse.io/hyphenconnect
+    api: https://boards-api.greenhouse.io/v1/boards/hyphenconnect/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Remote
+    careers_url: https://job-boards.greenhouse.io/remotecom
+    api: https://boards-api.greenhouse.io/v1/boards/remotecom/jobs
+    provider: greenhouse
+    enabled: true
+  - name: VaynerMedia
+    careers_url: https://job-boards.greenhouse.io/vaynermedia
+    api: https://boards-api.greenhouse.io/v1/boards/vaynermedia/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Smartling
+    careers_url: https://job-boards.greenhouse.io/smartling
+    api: https://boards-api.greenhouse.io/v1/boards/smartling/jobs
+    provider: greenhouse
+    enabled: true
+  - name: Later
+    careers_url: https://job-boards.greenhouse.io/later
+    api: https://boards-api.greenhouse.io/v1/boards/later/jobs
+    provider: greenhouse
+    enabled: true
+  - name: CoW DAO
+    careers_url: https://jobs.ashbyhq.com/cow-dao
+    provider: ashby
+    enabled: true
+  - name: Solana Foundation
+    careers_url: https://jobs.ashbyhq.com/solana%20foundation
+    provider: ashby
+    enabled: true
+  - name: Sky Mavis
+    careers_url: https://jobs.ashbyhq.com/skymavis
+    provider: ashby
+    enabled: true
+  - name: Sahara AI
+    careers_url: https://jobs.ashbyhq.com/sahara
+    provider: ashby
+    enabled: true
+  - name: Ava Labs
+    careers_url: https://jobs.ashbyhq.com/ava-labs
+    provider: ashby
+    enabled: true
+  - name: Trust Wallet
+    careers_url: https://jobs.ashbyhq.com/trust-wallet
+    provider: ashby
+    enabled: true
+  - name: Chainlink Labs
+    careers_url: https://jobs.ashbyhq.com/chainlink-labs
+    provider: ashby
+    enabled: true
+  - name: OP Labs
+    careers_url: https://jobs.ashbyhq.com/oplabs
+    provider: ashby
+    enabled: true
+  - name: Monad Foundation
+    careers_url: https://jobs.ashbyhq.com/monad.foundation
+    provider: ashby
+    enabled: true
+  - name: Wormhole Foundation
+    careers_url: https://jobs.ashbyhq.com/wormholelabs
+    provider: ashby
+    enabled: true
+  - name: Caldera
+    careers_url: https://jobs.ashbyhq.com/caldera
+    provider: ashby
+    enabled: true
+  - name: Hyperliquid Labs
+    careers_url: https://jobs.ashbyhq.com/hyperliquid%20labs
+    provider: ashby
+    enabled: true
+  - name: Polygon Labs
+    careers_url: https://jobs.ashbyhq.com/polygon-labs
+    provider: ashby
+    enabled: true
+  - name: Lido Finance
+    careers_url: https://jobs.ashbyhq.com/lido.fi
+    provider: ashby
+    enabled: true
+  - name: Wincent
+    careers_url: https://jobs.ashbyhq.com/wincent
+    provider: ashby
+    enabled: true
+  - name: YO Labs
+    careers_url: https://jobs.ashbyhq.com/yolabs
+    provider: ashby
+    enabled: true
+  - name: thatgamecompany
+    careers_url: https://jobs.ashbyhq.com/thatgamecompany
+    provider: ashby
+    enabled: true
+  - name: Colonist
+    careers_url: https://jobs.ashbyhq.com/colonist
+    provider: ashby
+    enabled: true
+  - name: LILT
+    careers_url: https://jobs.ashbyhq.com/lilt
+    provider: ashby
+    enabled: true
+  - name: Larian Studios
+    careers_url: https://jobs.lever.co/larian
+    provider: lever
+    enabled: true
+  - name: Binance
+    careers_url: https://jobs.lever.co/binance
+    provider: lever
+    enabled: true
+  - name: Animoca Brands
+    careers_url: https://jobs.lever.co/animocabrands
+    provider: lever
+    enabled: true
+  - name: fun.xyz
+    careers_url: https://jobs.lever.co/funxyz
+    provider: lever
+    enabled: true
+  - name: Token Metrics
+    careers_url: https://jobs.lever.co/tokenmetrics
+    provider: lever
+    enabled: true
+  - name: Nibiru
+    careers_url: https://jobs.lever.co/nibiru
+    provider: lever
+    enabled: true
+  - name: Manta Network
+    careers_url: https://jobs.lever.co/mantanetwork
+    provider: lever
+    enabled: true
+  - name: Offchain Labs
+    careers_url: https://jobs.lever.co/offchainlabs
+    provider: lever
+    enabled: true
+  - name: Crypto.com
+    careers_url: https://jobs.lever.co/crypto
+    provider: lever
+    enabled: true
+  - name: Arbitrum Foundation
+    careers_url: https://jobs.lever.co/arbitrumfoundation
+    provider: lever
+    enabled: true
+  - name: CertiK
+    careers_url: https://jobs.lever.co/certik
+    provider: lever
+    enabled: true
+  - name: Immutable
+    careers_url: https://jobs.lever.co/immutable
+    provider: lever
+    enabled: true
+  - name: Sei Labs
+    careers_url: https://jobs.lever.co/seilabs
+    provider: lever
+    enabled: true
+  - name: Scroll
+    careers_url: https://jobs.lever.co/scroll
+    provider: lever
+    enabled: true
+  - name: Ultra
+    careers_url: https://jobs.lever.co/ultra
+    provider: lever
+    enabled: true
+  - name: Gate
+    careers_url: https://jobs.lever.co/gate
+    provider: lever
+    enabled: true
+  - name: Polygon
+    careers_url: https://jobs.lever.co/polygon
+    provider: lever
+    enabled: true
+  - name: Serotonin
+    careers_url: https://jobs.lever.co/serotonin
+    provider: lever
+    enabled: true
+  - name: IOVLabs
+    careers_url: https://jobs.lever.co/iovlabs
+    provider: lever
+    enabled: true
+  - name: Crypto Banter
+    careers_url: https://jobs.lever.co/crypto-banter
+    provider: lever
+    enabled: true
+  - name: DAOs Hub
+    careers_url: https://jobs.lever.co/daos-hub
+    provider: lever
+    enabled: true
+  - name: Stronghold
+    careers_url: https://jobs.lever.co/stronghold
+    provider: lever
+    enabled: true
+  - name: ChainGPT
+    careers_url: https://apply.workable.com/chaingpt
+    provider: workable
+    enabled: true
+  - name: MLabs
+    careers_url: https://apply.workable.com/mlabs
+    provider: workable
+    enabled: true
+  - name: Hike
+    careers_url: https://apply.workable.com/hike
+    provider: workable
+    enabled: true
+  - name: IO Global
+    careers_url: https://apply.workable.com/io-global
+    provider: workable
+    enabled: true
+  - name: MetaEngine
+    careers_url: https://apply.workable.com/metaengine
+    provider: workable
+    enabled: true
+  - name: ThriveCoin
+    careers_url: https://apply.workable.com/thrivecoin
+    provider: workable
+    enabled: true
+  - name: ClayStack
+    careers_url: https://apply.workable.com/claystack
+    provider: workable
+    enabled: true
+  - name: ClubRare
+    careers_url: https://apply.workable.com/clubrare
+    provider: workable
+    enabled: true
+  - name: Faraway
+    careers_url: https://apply.workable.com/faraway
+    provider: workable
+    enabled: true
+  - name: Bisonic
+    careers_url: https://apply.workable.com/bisonic
+    provider: workable
+    enabled: true
+  - name: Ankr
+    careers_url: https://apply.workable.com/ankr
+    provider: workable
+    enabled: true
+  - name: Bitcraft
+    careers_url: https://apply.workable.com/bitcraft
+    provider: workable
+    enabled: true
+  - name: Keywords Studios
+    careers_url: https://apply.workable.com/keywords-intl1
+    provider: workable
+    enabled: true
+  - name: Fast Break Labs
+    careers_url: https://apply.workable.com/fast-break-labs
+    provider: workable
+    enabled: true
+  - name: Coinbase
+    careers_url: https://job-boards.greenhouse.io/coinbase
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/coinbase/jobs
+  - name: Ripple
+    careers_url: https://job-boards.greenhouse.io/ripple
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/ripple/jobs
+  - name: MoonPay
+    careers_url: https://job-boards.greenhouse.io/moonpay
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/moonpay/jobs
+  - name: Near Foundation
+    careers_url: https://job-boards.greenhouse.io/nearfoundation
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/nearfoundation/jobs
+  - name: Filecoin Foundation
+    careers_url: https://job-boards.greenhouse.io/filecoinfoundation
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/filecoinfoundation/jobs
+  - name: Epic Games
+    careers_url: https://job-boards.greenhouse.io/epicgames
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/epicgames/jobs
+  - name: Riot Games
+    careers_url: https://job-boards.greenhouse.io/riotgamesinc
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/riotgamesinc/jobs
+  - name: Circle.so (community platform)
+    careers_url: https://job-boards.greenhouse.io/circleso
+    provider: greenhouse
+    enabled: true
+    api: https://boards-api.greenhouse.io/v1/boards/circleso/jobs
+  - name: Kraken
+    careers_url: https://jobs.lever.co/kraken123
+    provider: lever
+    enabled: true
+  - name: Anchorage Digital
+    careers_url: https://jobs.lever.co/anchorage
+    provider: lever
+    enabled: true
+  - name: OpenSea
+    careers_url: https://jobs.ashbyhq.com/OpenSea
+    provider: ashby
+    enabled: true
+  - name: Mysten Labs (Sui)
+    careers_url: https://jobs.ashbyhq.com/mystenlabs
+    provider: ashby
+    enabled: true
+  - name: Blast
+    careers_url: https://jobs.ashbyhq.com/blast-io
+    provider: ashby
+    enabled: true
+  - name: Illuvium
+    careers_url: https://illuvium.io/jobs
+    enabled: false
 job_boards:
-- name: RemoteOK
-  careers_url: https://remoteok.com/api
-  provider: remoteok
-  enabled: true
-  notes: Global remote aggregator
-- name: Remotive
-  careers_url: https://remotive.com/api/remote-jobs
-  provider: remotive
-  enabled: true
-  notes: Global remote board
-- name: Himalayas
-  careers_url: https://himalayas.app/jobs/api?limit=50
-  provider: himalayas
-  enabled: true
-  notes: Global remote board
-- name: WeWorkRemotely
-  careers_url: https://weworkremotely.com/remote-jobs.rss
-  provider: weworkremotely
-  enabled: true
-  notes: Global remote board
-- name: Working Nomads
-  careers_url: https://www.workingnomads.com/api/exposed_jobs/
-  provider: workingnomads
-  enabled: true
-  notes: Global remote board
-- name: Jobicy
-  careers_url: https://jobicy.com/api/v2/remote-jobs?count=50
-  provider: jobicy
-  enabled: true
-  notes: Global remote board
-- name: Arbeitnow
-  careers_url: https://www.arbeitnow.com/api/job-board-api
-  provider: arbeitnow
-  enabled: true
-  notes: EU-focused board
-- name: NoDesk
-  careers_url: https://nodesk.co/remote-jobs/index.xml
-  provider: nodesk
-  enabled: true
-  notes: Global remote board
-- name: Jobspresso
-  careers_url: https://jobspresso.co/?feed=job_feed
-  provider: jobspresso
-  enabled: true
-  notes: Global remote board
-- name: 4 Day Week
-  careers_url: https://4dayweek.io/api/jobs
-  provider: 4dayweek
-  enabled: false
-  notes: Niche — enable if of interest
-- name: BuiltIn
-  careers_url: https://builtin.com/jobs/remote
-  scan_method: local_parser
-  parser:
-    command: node
-    script: scripts/parsers/builtin-jobs.mjs
-    format: jobs-json-v1
-  enabled: true
-  notes: SSR remote-jobs search, parsed locally — real posted dates from the freshness spans
-- name: Adzuna UK
-  careers_url: https://www.adzuna.co.uk
-  provider: adzuna
-  enabled: true
-  notes: Official API — needs free ADZUNA_APP_ID/ADZUNA_APP_KEY in .env (developer.adzuna.com)
-  adzuna:
-    country: gb
-    what:
-      - community manager
-      - social media manager
-      - content manager
-      - marketing communications manager
-      - localization manager
+  - name: RemoteOK
+    careers_url: https://remoteok.com/api
+    provider: remoteok
+    enabled: true
+    notes: Global remote aggregator
+  - name: Remotive
+    careers_url: https://remotive.com/api/remote-jobs
+    provider: remotive
+    enabled: true
+    notes: Global remote board
+  - name: Himalayas
+    careers_url: https://himalayas.app/jobs/api?limit=50
+    provider: himalayas
+    enabled: true
+    notes: Global remote board
+  - name: WeWorkRemotely
+    careers_url: https://weworkremotely.com/remote-jobs.rss
+    provider: weworkremotely
+    enabled: true
+    notes: Global remote board
+  - name: Working Nomads
+    careers_url: https://www.workingnomads.com/api/exposed_jobs/
+    provider: workingnomads
+    enabled: true
+    notes: Global remote board
+  - name: Jobicy
+    careers_url: https://jobicy.com/api/v2/remote-jobs?count=50
+    provider: jobicy
+    enabled: true
+    notes: Global remote board
+  - name: Arbeitnow
+    careers_url: https://www.arbeitnow.com/api/job-board-api
+    provider: arbeitnow
+    enabled: true
+    notes: EU-focused board
+  - name: NoDesk
+    careers_url: https://nodesk.co/remote-jobs/index.xml
+    provider: nodesk
+    enabled: true
+    notes: Global remote board
+  - name: Jobspresso
+    careers_url: https://jobspresso.co/?feed=job_feed
+    provider: jobspresso
+    enabled: true
+    notes: Global remote board
+  - name: 4 Day Week
+    careers_url: https://4dayweek.io/api/jobs
+    provider: 4dayweek
+    enabled: false
+    notes: Niche — enable if of interest
+  - name: BuiltIn
+    careers_url: https://builtin.com/jobs/remote
+    scan_method: local_parser
+    parser:
+      command: node
+      script: scripts/parsers/builtin-jobs.mjs
+      format: jobs-json-v1
+    enabled: true
+    notes: SSR remote-jobs search, parsed locally — real posted dates from the freshness spans
+  - name: Adzuna UK
+    careers_url: https://www.adzuna.co.uk
+    provider: adzuna
+    enabled: true
+    notes: Official API — needs free ADZUNA_APP_ID/ADZUNA_APP_KEY in .env (developer.adzuna.com)
+    adzuna:
+      country: gb
+      what:
+        - community manager
+        - social media manager
+        - content manager
+        - marketing communications manager
+        - localization manager
