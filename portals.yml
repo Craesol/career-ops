@@ -16,6 +16,12 @@ location_filter:
     - monte carlo
   allow:
     - Villeneuve-Loubet, France (CET)
+    - remote
+    - anywhere
+    - worldwide
+    - europe
+    - emea
+    - european union
   block:
     - on-site
     - onsite

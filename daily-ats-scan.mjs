@@ -195,10 +195,18 @@ async function fetchLinkedIn() {
               continue;
             }
           }
+          // Location: the card's own location span, else derive the country from
+          // the LinkedIn country subdomain (in./hk./sg./be./...) so the
+          // location filter never judges an empty string for these results.
+          const cardLoc = (card.match(/job-search-card__location[^>]*>\s*([^<]+?)\s*</) || [])[1];
+          const cc = (cleanUrl.match(/^https:\/\/([a-z]{2})\.linkedin\.com\//) || [])[1];
+          const CC_NAMES = { in:'India', hk:'Hong Kong', sg:'Singapore', tw:'Taiwan', ph:'Philippines', th:'Thailand', vn:'Vietnam', id:'Indonesia', my:'Malaysia', cn:'China', jp:'Japan', kr:'South Korea', au:'Australia', nz:'New Zealand', ae:'UAE', sa:'Saudi Arabia', qa:'Qatar', us:'United States', ca:'Canada', mx:'Mexico', br:'Brazil', ar:'Argentina', fr:'France', be:'Belgium', ch:'Switzerland', lu:'Luxembourg', mc:'Monaco', es:'Spain', uk:'United Kingdom', de:'Germany', nl:'Netherlands', it:'Italy', pt:'Portugal' };
+          const location = [cardLoc && cardLoc.replace(/&amp;/g, '&'), cc && CC_NAMES[cc]].filter(Boolean).join(', ');
           all.push({
             url: cleanUrl,
             title: title.replace(/&amp;/g, '&').replace(/&#x27;/g, "'"),
-            company: (company || 'LinkedIn').replace(/&amp;/g, '&').replace(/&#x27;/g, "'").trim()
+            company: (company || 'LinkedIn').replace(/&amp;/g, '&').replace(/&#x27;/g, "'").trim(),
+            location
           });
         }
       }
