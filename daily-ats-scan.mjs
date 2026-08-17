@@ -1,5 +1,16 @@
 import 'dotenv/config';
 import { readFileSync, appendFileSync, existsSync, writeFileSync } from 'fs';
+import yaml from 'js-yaml';
+import { buildLocationFilter } from './scan.mjs';
+
+// Location filter comes from portals.yml (same semantics as scan.mjs):
+// always_allow (home region) wins over block; block rejects onsite/hybrid and
+// out-of-region markets; missing location data always passes.
+let locationOk = () => true;
+try {
+  const portals = yaml.load(readFileSync('./portals.yml', 'utf-8')) || {};
+  locationOk = buildLocationFilter(portals.location_filter);
+} catch (e) { console.error('[portals.yml location_filter]', e.message); }
 
 const POSITIVE = ['community manager','community lead','community director','head of community','vp of community','community builder','community operations','community growth','community narrative','platform community','community program','ambassador program manager','guild','engagement manager','audience engagement','audience development','creator ecosystem','creator economy','creator relations','influencer relations','game community','player experience','content manager','content strategist','brand storyteller','communications manager','communications strategist','marketing communications','social media manager','brand manager','brand voice','thought leadership','responsable communaute','chargé de communication','charge de communication','responsable communication'];
 const NEGATIVE = ['program manager','program lead','head of programs','project manager','pmo','delivery manager','operations manager','partnership manager','partnerships lead','head of partnerships','strategic partnerships','vip relationship','gift card','accelerator program','vietnamese','mandarin','cantonese','korean','japanese','thai','indonesian','tagalog','arabic','turkish','apac','on-site','onsite','on site','in-office','in office','intern','internship','junior','entry level','assistant','specialist','coordinator','apprenticeship','werkstudent','praktikant','auszubildende','azubi','caretaker','spontaneous application','kol affiliate','accountant','finance manager','legal','lawyer','data scientist','machine learning','software engineer','backend engineer','frontend engineer','full-stack engineer','full stack engineer','fullstack engineer','blockchain engineer','protocol engineer','smart contract engineer','rust engineer','solidity engineer','rust blockchain engineer','infrastructure engineer','platform engineer','data engineer','ml engineer','ai engineer','site reliability engineer','sre','qa engineer','test engineer','security engineer','embedded engineer','firmware engineer','devops engineer','staff engineer','principal engineer','senior engineer','lead engineer','engineering manager','vp engineering','head of engineering','director of engineering','cto','ios','android','devops','cobol','mainframe','oracle ebs','technical program manager','technical project manager','infrastructure technology','it project manager','it program manager','technology project manager','product manager','director of product','head of product','vp of product','business operations','marketing operations','player support','revenue operations','sales operations','d2c','live ops manager','liveops manager','live service manager','recruiter','talent acquisition','people operations','human resources','designer','design lead','quality assurance','solutions architect','sales executive','account executive','customer success','stage','stagiaire','stagier','alternance','alternant','apprenti','apprentice','apprentissage','bts','bachelor','dut','licence pro','contrat pro','professionnalisation','volontariat','vie ','pfe','tfe','bénévolat','bénévole','benevolat','benevole','volunteer','developer relations','devrel','developer advocate','developer evangelist','developer experience','dx engineer','developer marketing','ecosystem growth','head of ecosystem growth','vp ecosystem growth','director of ecosystem growth'];
@@ -68,19 +79,19 @@ async function fetchAts(t){
       const r=await fetch('https://boards-api.greenhouse.io/v1/boards/'+t.slug+'/jobs');
       if(!r.ok)return [];
       const j=await r.json();
-      return (j.jobs||[]).map(x=>({url:x.absolute_url,title:x.title,company:t.company}));
+      return (j.jobs||[]).map(x=>({url:x.absolute_url,title:x.title,company:t.company,location:(x.location&&x.location.name)||''}));
     }
     if(t.ats==='ashby'){
       const r=await fetch('https://api.ashbyhq.com/posting-api/job-board/'+encodeURIComponent(t.slug));
       if(!r.ok)return [];
       const j=await r.json();
-      return (j.jobs||[]).map(x=>({url:x.jobUrl||x.applyUrl,title:x.title,company:t.company}));
+      return (j.jobs||[]).map(x=>({url:x.jobUrl||x.applyUrl,title:x.title,company:t.company,location:[x.location,...(x.secondaryLocations||[]).map(s=>s&&s.location)].filter(Boolean).join('; ')}));
     }
     if(t.ats==='lever'){
       const r=await fetch('https://api.lever.co/v0/postings/'+t.slug+'?mode=json');
       if(!r.ok)return [];
       const arr=await r.json();
-      return (Array.isArray(arr)?arr:[]).map(x=>({url:x.hostedUrl,title:x.text,company:t.company}));
+      return (Array.isArray(arr)?arr:[]).map(x=>({url:x.hostedUrl,title:x.text,company:t.company,location:(x.categories&&x.categories.location)||''}));
     }
   } catch(e) { console.error('['+t.company+']',e.message); }
   return [];
@@ -112,7 +123,7 @@ async function fetchRemotive() {
       if (!r.ok) continue;
       const j = await r.json();
       for (const x of (j.jobs || [])) {
-        all.push({ url: x.url, title: x.title, company: x.company_name || 'Remotive' });
+        all.push({ url: x.url, title: x.title, company: x.company_name || 'Remotive', location: x.candidate_required_location || '' });
       }
     } catch(e) { console.error('[Remotive ' + cat + ']', e.message); }
   }
@@ -420,6 +431,8 @@ for (const t of TARGETS) {
     let status;
     if (!match(j.title, t.company)) {
       status = 'skipped_title';
+    } else if (!locationOk(j.location, j.url, j.title)) {
+      status = 'skipped_location';
     } else {
       const k = ctKey(t.company, j.title);
       if (seenCompanyTitle.has(k)) {
@@ -449,6 +462,8 @@ for (const f of FEEDS) {
     let status;
     if (!match(j.title, company)) {
       status = 'skipped_title';
+    } else if (!locationOk(j.location, j.url, j.title)) {
+      status = 'skipped_location';
     } else {
       const k = ctKey(company, j.title);
       if (seenCompanyTitle.has(k)) {
