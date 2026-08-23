@@ -16,6 +16,16 @@ open no PR and ask.
 
 Work ships as a direct push to the designated branch of `origin`.
 
+## Scheduling ownership (decided 2026-08-23)
+
+The nightly `career-ops-daily-consolidated` Task Scheduler job runs ONLY on the
+desktop PC (the machine whose Downloads live at `E:\Downloads`). Any other
+machine (the laptop included) must keep that task disabled or deleted — two
+machines running it produce duplicate scans and duplicate daily emails. If you
+are Claude on a machine that is not the owner and you find this task enabled,
+tell the user and offer to disable it:
+`schtasks /change /tn "career-ops-daily-consolidated" /disable`
+
 ## Remote sessions: do not scan, do not email
 
 Everything in this project runs on the user's own machine (daily-consolidated.mjs
