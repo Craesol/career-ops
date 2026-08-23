@@ -806,9 +806,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://myweb3jobs.com/job/community-manager-22/ | Toposware | Community Manager
 - [ ] https://main.jobs3.io/job/community-manager-thailand/ | p0x labs | Community Manager Thailand
 - [ ] https://job-boards.greenhouse.io/financialtimes33/jobs/4911094101 | Financial Times | Investor Content and Community Manager
-- [ ] https://jobs.ashbyhq.com/openai/eb58b9cb-4a87-4d58-863b-5516ed1fbcae | OpenAI | Technical Community Lead, Campus Leaders
+- [x] ~~https://jobs.ashbyhq.com/openai/eb58b9cb-4a87-4d58-863b-5516ed1fbcae | OpenAI | Technical Community Lead, Campus Leaders~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.ashbyhq.com/trust-wallet/c713bb89-868b-4606-970e-e0d6e0ff6c13 | Trust Wallet | Community Manager / Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
-- [ ] https://jobs.ashbyhq.com/Lightfield/aeaa3331-7888-4887-9092-dbd1d3cb96bc | Lightfield | Community Lead
+- [x] ~~https://jobs.ashbyhq.com/Lightfield/aeaa3331-7888-4887-9092-dbd1d3cb96bc | Lightfield | Community Lead~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [x] ~~https://jobs.lever.co/crypto/487a2e95-e741-430d-937a-38a05251f0b1 | Crypto.com | IRL Community Manager - EMEA~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://hitmarker.net/jobs/keywords-studios-community-manager-community-moderation-video-games-1574320 | Keywords Studios | Community Manager (Community Moderation) - Video Games
 - [ ] https://hitmarker.net/jobs/gameloft-senior-community-manager-2992583 | Gameloft | Senior Community Manager
@@ -950,7 +950,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://boards.greenhouse.io/okx/jobs/5972703003 | OKX | Community Manager, Netherlands~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/horizenlabs/jobs/5707310004 | Horizen Labs | Community Manager (ZKVerify)~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/uniswaplabs/jobs/4565258005 | Uniswap Labs | Community Manager - APAC~~ — swept: triage-C (language/market gate)
-- [ ] https://job-boards.greenhouse.io/a16zcryptoteam/jobs/4297880006 | a16z crypto | Contractor, Program Manager, Crypto
+- [x] ~~https://job-boards.greenhouse.io/a16zcryptoteam/jobs/4297880006 | a16z crypto | Contractor, Program Manager, Crypto~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.paradigm.xyz/companies/symbiotic-2-4ace1b94-73f0-431a-8cb8-175636ab72fa/jobs/55872767-community-manager | Symbiotic | Community Manager
 - [ ] https://jobs.multicoin.capital/companies/tibles/jobs/45133294-community-manager | Tibles | Community Manager
 - [x] ~~https://jobs.multicoin.capital/companies/aptos-labs/jobs/42449450-community-manager-korea | Aptos Labs | Community Manager, Korea~~ — swept: triage-C (language/market gate)
@@ -1115,7 +1115,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5216080008?gh_jid=5216080008 | Scopely | Performance Marketing Manager
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5123217008?gh_jid=5123217008 | Scopely | Senior Director, Marketing – New Game Launch
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5215191008?gh_jid=5215191008 | Scopely | Senior Product Marketing Manager - Pikmin Bloom
-- [ ] https://job-boards.greenhouse.io/scopely/jobs/5277366008?gh_jid=5277366008 | Scopely | Senior Project Manager
+- [x] ~~https://job-boards.greenhouse.io/scopely/jobs/5277366008?gh_jid=5277366008 | Scopely | Senior Project Manager~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/startale/jobs/5339444008 | Startale Labs | Marketing Lead, Product & Japan~~ — swept: triage-C (language/market gate)
 - [x] ~~https://job-boards.greenhouse.io/startale/jobs/5367265008 | Startale Labs | Marketing Lead, Product & Japan（マーケティングリード）｜プロダクトマーケティング全域と、日本市場の立ち上げをリード~~ — swept: triage-C (language/market gate)
 - [ ] https://jobs.ashbyhq.com/polygon-labs/bd8cd97a-4eed-468e-b87f-4cac59e5c6c2 | Polygon Labs | Boys Club - Content Project Manager
@@ -1224,7 +1224,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/wormholelabs/e5e39675-92e4-48bf-ba9a-df52fad4dd8c | Wormhole Foundation | Solana Protocol Engineer | Remote~~ — swept: negative-title (Remote)
 - [x] ~~https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9 | Wormhole Foundation | Full-Stack Blockchain Engineer | Remote~~ — swept: negative-title (Remote)
 - [ ] https://jobs.ashbyhq.com/Lido.fi/9cb62bc8-01de-4a13-96a3-933b6d959394 | Lido Finance | Associate DeFi Growth Specialist | Worldwide
-- [ ] https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
+- [x] ~~https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/Lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
 - [x] ~~https://job-boards.greenhouse.io/layerzerolabs/jobs/5554608004 | LayerZero Labs | Protocol Engineer | Vancouver, BC~~ — swept: location (Vancouver, BC)
 - [x] ~~https://jobs.ashbyhq.com/magiceden/94dc960c-fb7b-40dc-a573-941cb61f80aa | Magic Eden | Senior Counsel, iGaming & Sportsbook | Remote~~ — swept: negative-title (Remote)
@@ -1301,7 +1301,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://job-boards.greenhouse.io/counterparthealth/jobs/8067306 | Counterpart Health | Senior Market Operations Program Manager | Remote
 
-- [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
+- [x] ~~https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
 - [x] ~~https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom~~ — swept: location (United Kingdom)
 
@@ -1422,7 +1422,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/thatgamecompany/9cb20d89-2e0b-4f48-99c9-c7c65e222f63 | thatgamecompany | Project Manager, Growth | China - Shanghai · Japan · Toyko~~ — swept: location (China - Shanghai · Japan · Toyko)
 - [x] ~~https://jobs.ashbyhq.com/thatgamecompany/dc055d90-650c-4fba-99e8-0c4ce1727e3f | thatgamecompany | Project Manager | China - Shanghai~~ — swept: location (China - Shanghai)
 - [x] ~~https://jobs.ashbyhq.com/thatgamecompany/7401ca29-6cc7-4248-adee-a2b1ce57ba40 | thatgamecompany | Japan Community Manager | Other~~ — swept: location (Other)
-- [ ] https://jobs.ashbyhq.com/lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
+- [x] ~~https://jobs.ashbyhq.com/lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
 - [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/7793958003 | Remote | Content Marketing Lead | Ireland Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 - [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/7615821003 | Remote | Managing Counsel, Commercial - Partnerships | Remote-Iberia~~ — removed from fresh matches
@@ -1568,7 +1568,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://www.linkedin.com/jobs/view/program-manager-centralized-exchange-licensing-at-sei-labs-4408418761 | Sei Labs | Program Manager - Centralized Exchange / Licensing~~ — removed from fresh matches
 
 - [x] ~~https://job-boards.greenhouse.io/twitch/jobs/8662188002 | Twitch | People Engagement Program Manager | San Francisco, CA | posted: 2026-07-31~~ — swept: location (San Francisco, CA)
-- [ ] https://job-boards.greenhouse.io/smartling/jobs/8099139 | Smartling | Social Media Manager | Remote, US | posted: 2026-07-31
+- [x] ~~https://job-boards.greenhouse.io/smartling/jobs/8099139 | Smartling | Social Media Manager | Remote, US | posted: 2026-07-31~~ — closed: posting gone (ATS API 404 — posting removed)
 - [ ] https://jobs.ashbyhq.com/cow-dao/dfbcc129-2d97-4611-94e3-3df5507c42ad | CoW DAO | Partnerships Manager | Remote · France · Canada | posted: 2026-07-01
 - [x] ~~https://epicgames.com/careers/jobs/6132211004?gh_jid=6132211004 | Epic Games | Senior Communications Manager, Corporate | BLANK,BLANK,Multiple Locations | posted: 2026-07-31~~ — swept: location (BLANK,BLANK,Multiple Locations)
 - [x] ~~https://jobicy.com/jobs/144915-onboarding-project-manager | Cloudbeds | Onboarding Project Manager | Europe | posted: 2026-08-01~~ — removed from fresh matches
@@ -1674,7 +1674,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://jobs.ashbyhq.com/wormholelabs/e5e39675-92e4-48bf-ba9a-df52fad4dd8c | Wormhole Foundation | Solana Protocol Engineer | Remote~~ — swept: negative-title (Remote)
 - [x] ~~https://jobs.ashbyhq.com/wormholelabs/1f13ccfb-be18-46e7-9b9f-52f7f343c4d9 | Wormhole Foundation | Full-Stack Blockchain Engineer | Remote~~ — swept: negative-title (Remote)
 - [ ] https://jobs.ashbyhq.com/Lido.fi/9cb62bc8-01de-4a13-96a3-933b6d959394 | Lido Finance | Associate DeFi Growth Specialist | Worldwide
-- [ ] https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide
+- [x] ~~https://jobs.ashbyhq.com/Lido.fi/d0bddacb-1b93-47ec-bc6f-bac0d34749e8 | Lido Finance | Strategic Project Manager - Operations | Worldwide~~ — closed: posting gone (Ashby posting not listed on the board — removed/unlisted)
 - [ ] https://jobs.ashbyhq.com/Lido.fi/822d9845-f883-4706-bc41-40d24d505f17 | Lido Finance | Content & Social Media Manager - usewisp.io | Worldwide
 - [x] ~~https://job-boards.greenhouse.io/layerzerolabs/jobs/5554608004 | LayerZero Labs | Protocol Engineer | Vancouver, BC~~ — swept: location (Vancouver, BC)
 - [x] ~~https://jobs.ashbyhq.com/magiceden/94dc960c-fb7b-40dc-a573-941cb61f80aa | Magic Eden | Senior Counsel, iGaming & Sportsbook | Remote~~ — swept: negative-title (Remote)
@@ -1751,7 +1751,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://job-boards.greenhouse.io/counterparthealth/jobs/8067306 | Counterpart Health | Senior Market Operations Program Manager | Remote
 
-- [ ] https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote
+- [x] ~~https://job-boards.greenhouse.io/cision/jobs/4917646101 | Cision | Partnership Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
 
 - [x] ~~https://www.playlist.com/careers/opportunities/4674710006?gh_jid=4674710006 | Mindbody | Project Manager - UK | United Kingdom~~ — swept: location (United Kingdom)
 
@@ -2010,7 +2010,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://de.linkedin.com/jobs/view/community-social-media-manager-m-f-d-at-voize-4424759726 | voize | Community & Social Media Manager (m/f/d)~~ — removed from fresh matches
 - [x] ~~https://web3.career/product-marketing-manager-solanalabs/152514 | web3.career | Product Marketing Manager Solanalabs~~ — removed from fresh matches
 
-- [ ] https://vaynermedia.com/careers?gh_jid=8121155 | VaynerMedia | Social Media Content Views Editor / Video Editor | EU- Remote | posted: 2026-08-11
+- [x] ~~https://vaynermedia.com/careers?gh_jid=8121155 | VaynerMedia | Social Media Content Views Editor / Video Editor | EU- Remote | posted: 2026-08-11~~ — removed from fresh matches
 - [x] ~~https://jobicy.com/jobs/149052-project-manager-i-ipcm | BCD Travel | Project Manager I, IPCM | Europe | posted: 2026-08-10~~ — removed from fresh matches
 - [ ] https://job-boards.greenhouse.io/scopely/jobs/5380598008?gh_jid=5380598008 | Scopely | Product Marketing Manager - Star Trek
 - [x] ~~https://startale.com/career/5339444008?gh_jid=5339444008 | Startale Labs | Growth Marketing Manager (Japan/Asia)~~ — removed from fresh matches
@@ -2043,3 +2043,63 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://web3.career/sr-product-marketing-manager-helius/152693 | web3.career | Sr Product Marketing Manager Helius~~ — removed from fresh matches
 - [x] ~~https://web3.career/product-marketing-manager-gtm-execution-support-binance/152691 | web3.career | Product Marketing Manager Gtm Execution Support Binance~~ — removed from fresh matches
 - [x] ~~https://web3.career/head-of-marketing-director-keyrock/152658 | web3.career | Head Of Marketing Director Keyrock~~ — removed from fresh matches
+- [x] ~~https://es.linkedin.com/jobs/view/creator-community-manager-at-moo-content-4454875771 | MOO Content | Creator Community Manager~~ — removed from fresh matches
+- [x] ~~https://ca.linkedin.com/jobs/view/community-manager-at-haven-studios-inc-4419993422 | Haven Studios Inc | Community Manager~~ — removed from fresh matches
+- [x] ~~https://uk.linkedin.com/jobs/view/community-lead-m-f-d-at-moonfare-4453593008 | Moonfare | Community Lead (m/f/d)~~ — removed from fresh matches
+- [x] ~~https://uk.linkedin.com/jobs/view/head-of-community-growth-at-hexxee-4454394481 | HEXXEE | Head of Community & Growth~~ — removed from fresh matches
+- [x] ~~https://hk.linkedin.com/jobs/view/senior-manager-manager-digital-asset-blockchain-strategy-fs-advisory-hong-kong-at-pwc-4429032228 | PwC | Senior Manager / Manager - Digital Asset & Blockchain Strategy - FS Advisory - Hong Kong~~ — removed from fresh matches
+- [x] ~~https://ph.linkedin.com/jobs/view/engineering-program-manager-at-lattice-semiconductor-4429132210 | Lattice Semiconductor | Engineering Program Manager~~ — swept: out-of-region/off-target (2026-08-17)
+- [x] ~~https://sg.linkedin.com/jobs/view/senior-program-manager-architecture-review-board-at-nvidia-4424322428 | NVIDIA | Senior Program Manager, Architecture Review Board~~ — removed from fresh matches
+- [ ] https://remoteok.com/remote-jobs/remote-social-media-manager-neoreach-1133551 | NeoReach | Social Media Manager  <!-- scan 2026-08-15 L3 -->
+- [x] ~~https://fr.linkedin.com/jobs/view/community-manager-h-f-at-kp2i-4455269075 | KP2i | Community Manager (H/F)~~ — removed from fresh matches
+- [x] ~~https://ca.linkedin.com/jobs/view/manager-operations-treasury-crypto-web3-nyse-listed-fintech-brand-at-salient-group-4453748208 | Salient Group | Manager, Operations & Treasury (Crypto, Web3, NYSE Listed Fintech Brand)~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/blockchain-lead-local-at-tech-observer-4450806238 | Tech Observer | Blockchain Lead (Local)~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/protocol-director-at-galaxy-4427079874 | Galaxy | Protocol Director~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/digital-assets-crypto-manager-at-pwc-4454010755 | PwC | Digital Assets_ Crypto_ Manager~~ — removed from fresh matches
+- [x] ~~https://tw.linkedin.com/jobs/view/foundry-program-manager-sr-staff-at-synopsys-inc-4445310963 | Synopsys Inc | Foundry Program Manager, Sr Staff~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/senior-staff-program-manager-at-marvell-technology-4440420075 | Marvell Technology | Senior Staff Program Manager~~ — removed from fresh matches
+- [x] ~~https://news.ycombinator.com/item?id=49326458 | CreativeLens.ai | CreativeLens.ai | Founding Growth & Partnerships Lead | REMOTE (Worldwide)~~ — removed from fresh matches
+- [x] ~~https://web3.career/product-marketing-manager-money-movement-rain/152786 | web3.career | Product Marketing Manager Money Movement Rain~~ — removed from fresh matches
+- [ ] https://www.emploi-monaco.com/en/offers/197-Charge-Web-Marketing-et-communication-bilingue-anglais-H-F | EXPECTRA  Monaco - Groupe Randstad | Chargé Web Marketing et communication bilingue anglais (H/F)
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-at-bitget-4451801127 | Bitget | Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://sg.linkedin.com/jobs/view/digital-marketing-social-media-manager-at-metacomp-4453520550 | MetaComp | Digital Marketing & Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://in.linkedin.com/jobs/view/social-media-manager-at-karostartup-4450485580 | KaroStartup | Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://in.linkedin.com/jobs/view/social-media-manager-at-very-much-indian-4450475549 | Very Much Indian | Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://in.linkedin.com/jobs/view/social-media-manager-at-arteforge-creative-4453580121 | Arteforge Creative | Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://hk.linkedin.com/jobs/view/social-media-manager-at-gate-4436472113 | Gate | Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://be.linkedin.com/jobs/view/senior-community-manager-at-vs-talents-4452239516 | VS Talents | Senior Community Manager~~ — removed from fresh matches
+
+- [ ] https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote
+
+- [ ] https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote
+
+- [ ] https://remoteok.com/remote-jobs/remote-social-media-manager-neoreach-1133551 | NeoReach | Social Media Manager | Remote (Anywhere)
+
+- [ ] https://job-boards.greenhouse.io/aceable/jobs/8700203002 | aceable | LX Editorial Content Manager | Remote · Remote
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/deutscher-hilfsbund-ev/social-media-community-manager-100-ehrenamt-100-remote-berlin-176849 | Deutscher Hilfsbund e.V. | Social Media & Community Manager / 100 % Ehrenamt / 100 % Remote | Berlin, Remote | posted: 2026-08-19~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4453400727/ | Agence TE | Chef de Projet événementiel Senior sur Nice in Nice, Provence-Alpes-Côte d&#39;Azur, France~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4452236134/ | ONECORP | Chef de Projet SOC Externalisé – Cybersécurité | CDI in Mandelieu-la-Napoule, Provence-Alpes-Côte d&#39;Azur, France~~ — removed from fresh matches
+- [ ] https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager  <!-- deep-scan 2026-08-21 - remote, mobile gaming 150M+ downloads, verified live -->
+- [ ] https://job-boards.greenhouse.io/immunefi/jobs/5833616004 | Immunefi | Marketing Lead  <!-- deep-scan 2026-08-21 - remote FR-compatible, senior brand/social/community seat, API-verified, updated 2026-08-06 -->
+- [x] ~~https://jobs.lever.co/swissborg/51459e7f-01ff-46d4-86ec-f8188db8c7bb | SwissBorg (Propr.xyz) | Affiliate Manager  <!-- deep-scan 2026-08-21 - remote Europe, off-archetype fallback: creator-affiliate program muscle, API-verified -->~~ — removed from fresh matches
+
+- [ ] https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager | Remote
+
+- [ ] https://www.arbeitnow.com/jobs/companies/autoscout24/senior-content-manager-seo-aeo-befristet-auf-1-jahr-56854 | autoscout24 | Senior Content Manager SEO/AEO (m/w/d) befristet auf 1 Jahr | posted: 2026-08-21
+- [ ] https://www.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4457558781 | Jobs Ai | Social Media Community Manager (Remote)
+- [ ] https://es.linkedin.com/jobs/view/community-engagement-lead-spain-and-portugal-at-airbnb-4455291646 | Airbnb | Community Engagement Lead, Spain & Portugal  <!-- deep-scan 2026-08-22 - Barcelona (remote flag - confirm policy) - TOP fit: 10+y community, native ES, EUR80-100k; 200+ applicants, act fast -->
+- [ ] https://www.linkedin.com/jobs/view/regional-community-growth-manager-at-vast-4453093344 | VAST (Tripo) | Regional Community & Growth Manager  <!-- deep-scan 2026-08-22 - European Union (Frankfurt hub) - 3D/AI creator-ecosystem community: Discord/Reddit, creator ops, events -->
+- [ ] https://www.linkedin.com/jobs/view/business-development-manager-kol-affiliate-bd-at-kucoin-eu-4449554021 | KuCoin EU | BD Manager - KOL/Affiliate  <!-- deep-scan 2026-08-22 - EEA (Frankfurt HQ noted) - Partner-program angle; FR/ES preferred languages -->
+- [ ] https://www.linkedin.com/jobs/view/4452320295 | CoinPoker | Head of Social  <!-- deep-scan 2026-08-22 - Remote (distributed) - Director-level social X/IG/TG/Discord; caveat: poker knowledge wanted -->
+- [ ] https://www.linkedin.com/jobs/view/4452321648 | CoinPoker | Affiliate Manager - Poker  <!-- deep-scan 2026-08-22 - Remote (distributed) - CPA/revshare partner program build; pairs with Packsify work sample -->
+- [ ] https://jobs.ashbyhq.com/kraken.com/69cc0fbb-a7f5-4170-abf0-4fcee84fd487 | Kraken | Global Head of KOL - Kraken Pro  <!-- deep-scan 2026-08-22 - Remote - UK listing (EU eligibility to confirm) - Senior creator/KOL program leadership; Ashby-verified live -->
+- [ ] https://nl.linkedin.com/jobs/view/senior-affiliate-business-development-manager-western-europe-at-okx-4372882087 | OKX | Senior Affiliate BD Manager, Western Europe  <!-- deep-scan 2026-08-22 - Western EU (NL/DE listed; remote unconfirmed) - Affiliate/KOL/trading communities Western EU; reposted 4d ago -->
+- [ ] https://candidat.francetravail.fr/offres/recherche/detail/5760120 | Mathez Conseil Formation | Charge de Communication & Marketing Digital Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms, content-heavy -->
+- [ ] https://candidat.francetravail.fr/offres/recherche/detail/5646795 | Mathez Transports Internationaux | Charge de Communication Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms; EN/FR/ES useful in intl logistics -->
+- [ ] https://fr.linkedin.com/jobs/view/social-media-manager-at-yomoni-4454984771 | Yomoni | Social Media Manager  <!-- deep-scan 2026-08-22 - Paris, teletravail available (verify depth) - French fintech SaaS, FR socials; 200+ applicants -->
+- [ ] https://fr.linkedin.com/jobs/view/strategic-communications-manager-at-probabl-4454426203 | Probabl | Strategic Communications Manager  <!-- deep-scan 2026-08-22 - Paris (remote-flagged, verify) - French AI/open-source (scikit-learn); senior comms -->
+- [ ] https://es.linkedin.com/jobs/view/social-media-manager-at-lucanet-4457398242 | Lucanet | Social Media Manager  <!-- deep-scan 2026-08-22 - Madrid, flexible model (verify remote) - B2B SaaS, EN-only, organic social; posted 21h -->
+- [x] ~~https://jobs.lever.co/upguard/c305b39b-989e-4cff-af62-bb92c979874d | UpGuard | Social Media & Community Manager  <!-- deep-scan 2026-08-22 - Remote (verify timezone anchor) - B2B SaaS exact-title match; tz unverified -->~~ — closed: posting gone (ATS API 404 — posting removed)
+- [ ] https://ingamejob.com/en/jobs/community-management-and-customer-support | HyperVR Games | Community Manager  <!-- deep-scan 2026-08-22 - Remote (worldwide) - unverified board - VR gaming studio; apply via hypervr.games; medium confidence -->
+- [ ] https://cryptojobslist.com/jobs/community-manager-support-amer-emea-dex-screener-remote | DEX Screener | Community Manager & Support (AMER/EMEA)  <!-- deep-scan 2026-08-22 - Remote, EMEA ok - unverified (403) - 5M+ user crypto analytics, lean team -->
