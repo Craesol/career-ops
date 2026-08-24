@@ -12,6 +12,9 @@ SET INCLUDE_L3=true
 REM portals.yml carries 19 enabled queries (2026-07-30); the default cap of 14
 REM would silently skip the last five (translation, exec comms, lifecycle...).
 SET L3_MAX_QUERIES=20
+REM Freshness window tightened 14 -> 7 days (user request 2026-08-23): search
+REM results older than a week are noise; the nightly sweep enforces the same.
+SET MAX_AGE_DAYS=7
 
 echo [%date% %time%] daily-consolidated starting >> logs\daily-consolidated.log
 

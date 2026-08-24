@@ -306,6 +306,16 @@ if (INCLUDE_L3) {
 // --- STEP 3a2: prune ancient web3.career postings by posting id ----------
 // Dateless sources (L3 websearch) rediscover years-old listings; the id
 // sequence is the only recency signal those URLs carry. See the script header.
+// --- STEP 3a1: age-sweep the pending inbox ------------------------------
+// Search results older than the freshness window are noise (user policy
+// 2026-08-23: one week). sweep-inbox also re-applies the location filter
+// retroactively, so policy tightening propagates nightly without manual runs.
+console.log('\n[step 3a1] sweep inbox (max age ' + MAX_AGE_DAYS + 'd)');
+const sweepResult = spawnSync('node', [resolve(ROOT, 'sweep-inbox.mjs'), '--max-age-days', String(MAX_AGE_DAYS), '--apply'], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 300000,
+});
+console.log('  ' + (((sweepResult.stdout || '').trim().split('\n').pop()) || ('exit ' + sweepResult.status)));
+
 console.log('\n[step 3a2] prune stale web3.career ids');
 const w3cResult = spawnSync('node', [resolve(ROOT, 'prune-stale-web3career.mjs')], {
   cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 120000,
