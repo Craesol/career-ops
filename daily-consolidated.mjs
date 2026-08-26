@@ -119,15 +119,17 @@ if (INCLUDE_L3) {
   const useExe = exe && existsSync(exe);
 
   // Inline the enabled queries — no file access needed on the CLI side.
+  // Parsed with js-yaml (2026-08-26): the old single-quote regex silently
+  // dropped every query the YAML serializer re-styled (folded >-, plain
+  // scalars) — after one re-save only 2 of 20 queries reached L3.
   let queries = [];
   try {
-    const y = readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8');
-    const blocks = y.split(/\n\s*-\s+name:\s*/).slice(1);
-    for (const b of blocks) {
-      const name = b.split('\n')[0].trim();
-      const qm = b.match(/\n\s*query:\s*'([^']+)'/);
-      const enabled = !/\n\s*enabled:\s*false/.test(b);
-      if (qm && enabled && name) queries.push({ name, query: qm[1] });
+    const { default: yaml } = await import('js-yaml');
+    const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8'));
+    for (const q of Array.isArray(cfg?.search_queries) ? cfg.search_queries : []) {
+      if (q && typeof q.name === 'string' && typeof q.query === 'string' && q.enabled !== false) {
+        queries.push({ name: q.name.trim(), query: q.query.replace(/\s+/g, ' ').trim() });
+      }
     }
   } catch (e) {
     console.error('  portals.yml unreadable: ' + e.message);
@@ -326,9 +328,14 @@ console.log('\n[step 3b] prune dead postings');
 const pruneResult = spawnSync('node', [resolve(ROOT, 'prune-dead.mjs'), '--apply', '--limit', '120'], {
   cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 600000,
 });
-if (pruneResult.status === 0) {
+// Success = the summary line exists, even when the exit code is a crash:
+// Playwright+Node on Windows sometimes aborts in libuv teardown (async.c
+// UV_HANDLE_CLOSING) AFTER all work completed — results are on stdout, only
+// the process death rattle differs (#2026-08-26).
+if (pruneResult.status === 0 || /checked \d+/.test(pruneResult.stdout || '')) {
   const last = (pruneResult.stdout || '').trim().split('\n').filter(l => /checked|closed/.test(l)).slice(-2).join(' · ');
-  console.log('  ' + (last || 'ok'));
+  const rattled = pruneResult.status !== 0 ? ' (teardown crash after completion — ignored)' : '';
+  console.log('  ' + (last || 'ok') + rattled);
 } else {
   console.error('  FAIL (exit ' + pruneResult.status + '): ' + (pruneResult.stderr || 'unknown').slice(0, 200));
 }
