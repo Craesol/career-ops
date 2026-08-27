@@ -31,7 +31,6 @@ location_filter:
     - hybrid
     - philippines
     - manila
-    # Asia-Pacific
     - apac
     - asia
     - singapore
@@ -65,7 +64,6 @@ location_filter:
     - sydney
     - melbourne
     - new zealand
-    # Middle East
     - uae
     - dubai
     - abu dhabi
@@ -73,7 +71,6 @@ location_filter:
     - riyadh
     - qatar
     - doha
-    # Americas (outside target region)
     - united states
     - usa
     - u.s.
@@ -91,7 +88,6 @@ title_filter:
     - Content Manager
     - Marketing Communications Manager
   negative:
-    # Language/market requirements outside target region
     - Vietnamese
     - Thai
     - Mandarin
@@ -108,7 +104,6 @@ title_filter:
     - SEA Market
     - UAE
     - Dubai
-    # Junk/off-target titles seen in scans
     - VIP Relationship
     - Gift Card
     - Accelerator Program
@@ -380,7 +375,8 @@ tracked_companies:
   - name: Chainlink Labs
     careers_url: https://jobs.ashbyhq.com/chainlink-labs
     provider: ashby
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: OP Labs
     careers_url: https://jobs.ashbyhq.com/oplabs
     provider: ashby
@@ -396,7 +392,8 @@ tracked_companies:
   - name: Caldera
     careers_url: https://jobs.ashbyhq.com/caldera
     provider: ashby
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Hyperliquid Labs
     careers_url: https://jobs.ashbyhq.com/hyperliquid%20labs
     provider: ashby
@@ -428,7 +425,8 @@ tracked_companies:
   - name: LILT
     careers_url: https://jobs.ashbyhq.com/lilt
     provider: ashby
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Larian Studios
     careers_url: https://jobs.lever.co/larian
     provider: lever
@@ -448,7 +446,8 @@ tracked_companies:
   - name: Token Metrics
     careers_url: https://jobs.lever.co/tokenmetrics
     provider: lever
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Nibiru
     careers_url: https://jobs.lever.co/nibiru
     provider: lever
@@ -456,7 +455,8 @@ tracked_companies:
   - name: Manta Network
     careers_url: https://jobs.lever.co/mantanetwork
     provider: lever
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Offchain Labs
     careers_url: https://jobs.lever.co/offchainlabs
     provider: lever
@@ -484,7 +484,8 @@ tracked_companies:
   - name: Scroll
     careers_url: https://jobs.lever.co/scroll
     provider: lever
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Ultra
     careers_url: https://jobs.lever.co/ultra
     provider: lever
@@ -496,7 +497,8 @@ tracked_companies:
   - name: Polygon
     careers_url: https://jobs.lever.co/polygon
     provider: lever
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Serotonin
     careers_url: https://jobs.lever.co/serotonin
     provider: lever
@@ -504,7 +506,8 @@ tracked_companies:
   - name: IOVLabs
     careers_url: https://jobs.lever.co/iovlabs
     provider: lever
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Crypto Banter
     careers_url: https://jobs.lever.co/crypto-banter
     provider: lever
@@ -540,7 +543,8 @@ tracked_companies:
   - name: ThriveCoin
     careers_url: https://apply.workable.com/thrivecoin
     provider: workable
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: ClayStack
     careers_url: https://apply.workable.com/claystack
     provider: workable
@@ -560,7 +564,8 @@ tracked_companies:
   - name: Ankr
     careers_url: https://apply.workable.com/ankr
     provider: workable
-    enabled: true
+    enabled: false
+    notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
   - name: Bitcraft
     careers_url: https://apply.workable.com/bitcraft
     provider: workable
