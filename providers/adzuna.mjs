@@ -38,9 +38,12 @@ export default {
    */
   async fetch(entry, ctx) {
     const appId = process.env.ADZUNA_APP_ID;
-    const appKey = process.env.ADZUNA_APP_KEY;
+    // Accept both spellings: Adzuna's dashboard calls it "Application Key(s)",
+    // and the user's .env arrived as ADZUNA_API_KEY (audit 2026-08-27 — the
+    // provider sat silently dead on the name mismatch).
+    const appKey = process.env.ADZUNA_APP_KEY || process.env.ADZUNA_API_KEY;
     if (!appId || !appKey) {
-      throw new Error('adzuna: missing ADZUNA_APP_ID / ADZUNA_APP_KEY in .env — register a free app at developer.adzuna.com');
+      throw new Error('adzuna: missing ADZUNA_APP_ID / ADZUNA_APP_KEY (or ADZUNA_API_KEY) in .env — register a free app at developer.adzuna.com');
     }
 
     const cfg = entry.adzuna || {};
