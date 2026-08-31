@@ -642,6 +642,11 @@ tracked_companies:
     careers_url: https://illuvium.io/jobs
     enabled: false
 job_boards:
+  - name: EU Remote Jobs
+    careers_url: https://euremotejobs.com/?feed=job_feed
+    provider: euremotejobs
+    enabled: true
+    notes: WP Job Manager RSS — Europe-focused remote board; real pubDates; company/location often empty in feed
   - name: RemoteOK
     careers_url: https://remoteok.com/api
     provider: remoteok
