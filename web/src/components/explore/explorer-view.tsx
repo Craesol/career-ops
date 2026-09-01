@@ -37,7 +37,7 @@ export function ExplorerView({
   appsSnapshot: Application[];
   rootExists: boolean;
 }) {
-  const { filters, setFilters, initFilters, phase, running, offers, discover, status, error, mode, setMode, aiIntent, setAiIntent, discoverAI, companiesScanned, companiesAvailable, capHit, droppedNoDate, partial } = useExplore();
+  const { filters, setFilters, initFilters, phase, running, offers, discover, status, error, mode, setMode, aiIntent, setAiIntent, discoverAI, deepScan, companiesScanned, companiesAvailable, capHit, droppedNoDate, partial } = useExplore();
   const scanNote =
     companiesScanned > 0
       ? `Scanned ${companiesScanned.toLocaleString()}${companiesAvailable > companiesScanned ? ` of ${companiesAvailable.toLocaleString()}` : ""} compan${companiesScanned === 1 ? "y" : "ies"}${partial ? " · some sources were unreachable" : ""}.`
@@ -48,12 +48,35 @@ export function ExplorerView({
   const [firstRun, setFirstRun] = useState(false);
 
   useEffect(() => {
+    let stored: string | null = null;
+    let cfg: Record<string, unknown> = {};
     try {
-      const id = JSON.parse(localStorage.getItem("career-ops:config") || "{}").cliId || null;
-      setCli({ id, name: id ? CLI_NAMES[id] || id : undefined });
+      cfg = JSON.parse(localStorage.getItem("career-ops:config") || "{}");
+      stored = (typeof cfg.cliId === "string" && cfg.cliId) || null;
     } catch {
-      setCli({ id: null });
+      /* fresh browser */
     }
+    if (stored) {
+      setCli({ id: stored, name: CLI_NAMES[stored] || stored });
+      return;
+    }
+    // Config is per-browser (localStorage) but CLI installs are per-machine —
+    // a fresh browser showed "needs a CLI" on a machine that HAS one. Ask the
+    // server, adopt the first installed CLI, persist the choice.
+    fetch("/api/clis")
+      .then((r) => r.json())
+      .then((d) => {
+        const inst = (Array.isArray(d.clis) ? d.clis : []).find((c: { installed?: boolean }) => c.installed);
+        if (inst?.id) {
+          try {
+            localStorage.setItem("career-ops:config", JSON.stringify({ ...cfg, cliId: inst.id }));
+          } catch {
+            /* storage unavailable */
+          }
+          setCli({ id: inst.id, name: CLI_NAMES[inst.id] || inst.name || inst.id });
+        }
+      })
+      .catch(() => {});
   }, []);
 
   // Initialize once from the URL (shareable search) or the server seed — without
@@ -141,6 +164,18 @@ export function ExplorerView({
               cliName={cli.name}
               onRunScan={() => setMode("scan")}
             />
+            {/* Deep scan: the desktop nightly's L3, on demand — portals.yml
+                playbook, canonical filters, real persistence. */}
+            {!!cli.id && !running && (
+              <button
+                type="button"
+                onClick={() => void deepScan()}
+                className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted transition hover:border-brand/40 hover:text-brand max-sm:min-h-[44px]"
+                title="Run every enabled portals.yml search via your CLI, filter with your standing policy, and persist the finds to your pipeline — same system as the nightly job"
+              >
+                Deep scan — run my playbook ({cli.name || "CLI"} · uses tokens)
+              </button>
+            )}
             {phase === "results" && <ResultsList offers={enriched} />}
             {phase === "empty-loose" && (
               <EmptyState

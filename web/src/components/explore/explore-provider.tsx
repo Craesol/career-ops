@@ -66,6 +66,9 @@ type ExploreCtx = {
    *  from the in-memory results + the per-tab snapshot, so a reload or remount
    *  can't resurrect the card. */
   dismissOffer: (offer: DiscoveredOffer) => Promise<boolean>;
+  /** Web twin of the desktop nightly L3: portals.yml playbook via the user's
+   *  CLI, canonical filters, real persistence to pipeline + scan-history. */
+  deepScan: () => Promise<void>;
   applyPatch: (raw: Record<string, unknown>, opts?: { merge?: boolean; run?: boolean }) => void;
   reset: () => void;
   // ── AI search (modes/discover.md) ──
@@ -357,6 +360,114 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
     }
   }, [router]);
 
+  // The configured CLI, with server-side auto-detection as fallback: the config
+  // lives in localStorage per-browser, so a fresh browser showed "needs a CLI"
+  // even when the machine has one installed (found in the 2026-08-30 web-scan
+  // audit). If none is stored, ask /api/clis, adopt the first installed one,
+  // and persist it so the choice sticks.
+  const resolveCliId = useCallback(async (): Promise<string | null> => {
+    let cfg: Record<string, unknown> = {};
+    try {
+      cfg = JSON.parse(localStorage.getItem("career-ops:config") || "{}");
+    } catch {
+      cfg = {};
+    }
+    if (typeof cfg.cliId === "string" && cfg.cliId) return cfg.cliId;
+    try {
+      const d = await fetch("/api/clis").then((r) => r.json());
+      const installed = (Array.isArray(d.clis) ? d.clis : []).find((c: { installed?: boolean }) => c.installed);
+      if (installed?.id) {
+        localStorage.setItem("career-ops:config", JSON.stringify({ ...cfg, cliId: installed.id }));
+        return installed.id as string;
+      }
+    } catch {
+      /* detection failed — genuinely no CLI */
+    }
+    return null;
+  }, []);
+
+  // Deep scan — the web twin of the desktop nightly's L3: the portals.yml
+  // playbook end to end (CLI proposer → canonical filters → REAL persistence
+  // server-side). Added offers land in pipeline.md + scan-history exactly like
+  // the 11:31 job's finds, and surface here as already-in-pipeline cards.
+  const deepScan = useCallback(async () => {
+    if (runningRef.current) return;
+    const cliId = await resolveCliId();
+    if (!cliId) {
+      setPhase("blocked");
+      return;
+    }
+    runningRef.current = true;
+    setModeState("ai");
+    setPhase("casting");
+    setOffers([]);
+    setMatchCount(0);
+    setAiTrace([]);
+    setError("");
+    setStatus("Deep scan: running your portals.yml playbook…");
+    try {
+      const r = await fetch("/api/explore/l3", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cliId }),
+      });
+      if (!r.ok || !r.body) {
+        setError((await r.json().catch(() => ({})))?.error || "deep scan failed to start");
+        setPhase("failed");
+        runningRef.current = false;
+        return;
+      }
+      const reader = r.body.getReader();
+      const dec = new TextDecoder();
+      let buf = "";
+      let done = false;
+      while (!done) {
+        const { value, done: rd } = await reader.read();
+        done = rd;
+        buf += value ? dec.decode(value, { stream: true }) : "";
+        let nl: number;
+        while ((nl = buf.indexOf("\n")) !== -1) {
+          const line = buf.slice(0, nl).trim();
+          buf = buf.slice(nl + 1);
+          if (!line) continue;
+          let ev: Record<string, unknown>;
+          try {
+            ev = JSON.parse(line);
+          } catch {
+            continue;
+          }
+          if (ev.kind === "start") setStatus(`Deep scan: ${ev.queries} playbook searches via your CLI…`);
+          if (ev.kind === "progress") setPhase("hunting");
+          if (ev.kind === "proposed") setStatus(`${ev.count} proposals found — filtering + persisting…`);
+          if (ev.kind === "error") setError(String(ev.message || "deep scan error"));
+          if (ev.kind === "done") {
+            const added = Number(ev.added) || 0;
+            const offersIn = (Array.isArray(ev.offers) ? ev.offers : []) as DiscoveredOffer[];
+            const shaped = offersIn.map((o) => ({ ...o, ats: "l3", source: o.source || "websearch:l3", postedAt: "" }));
+            setOffers(shaped.filter((o) => policyRef.current(o.location)));
+            setMatchCount(added);
+            const rej = (ev.rejected ?? {}) as Record<string, number>;
+            setStatus(
+              `Deep scan done: ${ev.proposed} proposed · ${added} added to your pipeline` +
+                (Object.values(rej).some(Boolean) ? ` (filtered: ${rej.dup ?? 0} dup, ${rej.title ?? 0} title, ${rej.location ?? 0} location, ${rej.stale ?? 0} stale)` : ""),
+            );
+            setAdded((s) => new Set([...s, ...shaped.map((o) => o.url)]));
+            setPhase(added > 0 ? "results" : "empty-loose");
+            router.refresh();
+            if (typeof window !== "undefined") {
+              window.dispatchEvent(new CustomEvent("co-job-done", { detail: { kind: "deep-scan" } }));
+            }
+          }
+        }
+      }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "deep scan stream failed");
+      setPhase("failed");
+    } finally {
+      runningRef.current = false;
+    }
+  }, [resolveCliId, router]);
+
   const applyPatch = useCallback((raw: Record<string, unknown>, opts?: { merge?: boolean; run?: boolean }) => {
     const next = parseExplorePatch(raw, filtersRef.current, opts?.merge ?? false);
     setFilters(next);
@@ -388,12 +499,7 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
     if (runningRef.current) return;
     const intent = aiIntentRef.current.trim();
     if (!intent) return;
-    let cliId: string | null = null;
-    try {
-      cliId = JSON.parse(localStorage.getItem("career-ops:config") || "{}").cliId || null;
-    } catch {
-      cliId = null;
-    }
+    const cliId = await resolveCliId();
     if (!cliId) {
       setPhase("blocked");
       return;
@@ -544,10 +650,10 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
       filters, setFilters, initFilters, phase,
       running: phase === "casting" || phase === "scanning" || phase === "revealing" || phase === "hunting",
       offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding,
-      discover, addToPipeline, dismissOffer, applyPatch, reset,
+      discover, addToPipeline, dismissOffer, deepScan, applyPatch, reset,
       mode, setMode, aiIntent, setAiIntent, discoverAI, aiTrace, aiCost,
     }),
-    [filters, setFilters, initFilters, phase, offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding, discover, addToPipeline, dismissOffer, applyPatch, reset, mode, setMode, aiIntent, discoverAI, aiTrace, aiCost],
+    [filters, setFilters, initFilters, phase, offers, sources, matchCount, companiesScanned, companiesAvailable, capHit, droppedNoDate, status, partial, error, added, adding, discover, addToPipeline, dismissOffer, deepScan, applyPatch, reset, mode, setMode, aiIntent, discoverAI, aiTrace, aiCost],
   );
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
