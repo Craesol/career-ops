@@ -1075,8 +1075,12 @@ for (const f of skillEntrypoints) {
 }
 
 // Check user files are NOT tracked (gitignored)
+// portals.yml is exempt on this fork: its query/company config is deliberately
+// versioned here (the fork's portal-maintenance commits live in it), unlike
+// upstream where it is a gitignored personal file. It stays in USER_PATHS so
+// update-system never touches it.
 const userFiles = [
-  'config/profile.yml', 'modes/_profile.md', 'portals.yml',
+  'config/profile.yml', 'modes/_profile.md',
 ];
 for (const f of userFiles) {
   const tracked = run('git', ['ls-files', f]);
@@ -6198,7 +6202,11 @@ try {
       copyFileSync(join(ROOT, 'followup-cadence.mjs'), join(e2eTmp, 'followup-cadence.mjs'));
       copyFileSync(join(ROOT, 'tracker-parse.mjs'), join(e2eTmp, 'tracker-parse.mjs'));
       copyFileSync(join(ROOT, 'tracker-aliases.json'), join(e2eTmp, 'tracker-aliases.json'));
-      symlinkSync(join(ROOT, 'node_modules'), join(e2eTmp, 'node_modules'), 'dir');
+      // 'junction' on Windows: directory junctions need no symlink privilege,
+      // while a plain 'dir' symlink EPERMs without Developer Mode/admin and
+      // killed this whole e2e on stock Windows.
+      symlinkSync(join(ROOT, 'node_modules'), join(e2eTmp, 'node_modules'),
+        process.platform === 'win32' ? 'junction' : 'dir');
       mkdirSync(join(e2eTmp, 'data'), { recursive: true });
       writeFileSync(join(e2eTmp, 'data', 'applications.md'), [
         '# Applications Tracker',
