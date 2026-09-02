@@ -114,3 +114,13 @@ package-lock.json
 plan/
 CLAUDE.local.md
 email-status.txt
+
+# Machine-local scratch and runtime state (this fork) — root-anchored
+/.career-ops-web/
+/tmp/
+/logs/
+/job.tmp.json
+/job.raw*.json
+/batch/batch-results-*.md
+# Personal triage brief — public fork, same PII class as modes/_profile.md
+/modes/_brief.md
