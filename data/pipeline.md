@@ -2060,7 +2060,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://www.linkedin.com/jobs/view/senior-staff-program-manager-at-marvell-technology-4440420075 | Marvell Technology | Senior Staff Program Manager~~ — removed from fresh matches
 - [x] ~~https://news.ycombinator.com/item?id=49326458 | CreativeLens.ai | CreativeLens.ai | Founding Growth & Partnerships Lead | REMOTE (Worldwide)~~ — removed from fresh matches
 - [x] ~~https://web3.career/product-marketing-manager-money-movement-rain/152786 | web3.career | Product Marketing Manager Money Movement Rain~~ — removed from fresh matches
-- [ ] https://www.emploi-monaco.com/en/offers/197-Charge-Web-Marketing-et-communication-bilingue-anglais-H-F | EXPECTRA  Monaco - Groupe Randstad | Chargé Web Marketing et communication bilingue anglais (H/F)
+- [x] ~~https://www.emploi-monaco.com/en/offers/197-Charge-Web-Marketing-et-communication-bilingue-anglais-H-F | EXPECTRA  Monaco - Groupe Randstad | Chargé Web Marketing et communication bilingue anglais (H/F)~~ — swept: stale (8d old, first seen 2026-08-17)
 - [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-at-bitget-4451801127 | Bitget | Social Media Manager~~ — removed from fresh matches
 - [x] ~~https://sg.linkedin.com/jobs/view/digital-marketing-social-media-manager-at-metacomp-4453520550 | MetaComp | Digital Marketing & Social Media Manager~~ — removed from fresh matches
 - [x] ~~https://in.linkedin.com/jobs/view/social-media-manager-at-karostartup-4450485580 | KaroStartup | Social Media Manager~~ — removed from fresh matches
@@ -2069,37 +2069,103 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://hk.linkedin.com/jobs/view/social-media-manager-at-gate-4436472113 | Gate | Social Media Manager~~ — removed from fresh matches
 - [x] ~~https://be.linkedin.com/jobs/view/senior-community-manager-at-vs-talents-4452239516 | VS Talents | Senior Community Manager~~ — removed from fresh matches
 
-- [ ] https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote
+- [x] ~~https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote~~ — swept: stale (8d old, first seen 2026-08-17)
 
-- [ ] https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote
+- [x] ~~https://builtin.com/job/social-media-manager/10635904 | Skylum | Social Media Manager | Remote~~ — swept: stale (8d old, first seen 2026-08-17)
 
 - [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-neoreach-1133551 | NeoReach | Social Media Manager | Remote (Anywhere)~~ — swept: stale (9d old, first seen 2026-08-15)
 
-- [ ] https://job-boards.greenhouse.io/aceable/jobs/8700203002 | aceable | LX Editorial Content Manager | Remote · Remote
+- [x] ~~https://job-boards.greenhouse.io/aceable/jobs/8700203002 | aceable | LX Editorial Content Manager | Remote · Remote~~ — swept: stale (8d old, first seen 2026-08-17)
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/deutscher-hilfsbund-ev/social-media-community-manager-100-ehrenamt-100-remote-berlin-176849 | Deutscher Hilfsbund e.V. | Social Media & Community Manager / 100 % Ehrenamt / 100 % Remote | Berlin, Remote | posted: 2026-08-19~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/4453400727/ | Agence TE | Chef de Projet événementiel Senior sur Nice in Nice, Provence-Alpes-Côte d&#39;Azur, France~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/4452236134/ | ONECORP | Chef de Projet SOC Externalisé – Cybersécurité | CDI in Mandelieu-la-Napoule, Provence-Alpes-Côte d&#39;Azur, France~~ — removed from fresh matches
-- [ ] https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager  <!-- deep-scan 2026-08-21 - remote, mobile gaming 150M+ downloads, verified live -->
-- [ ] https://job-boards.greenhouse.io/immunefi/jobs/5833616004 | Immunefi | Marketing Lead  <!-- deep-scan 2026-08-21 - remote FR-compatible, senior brand/social/community seat, API-verified, updated 2026-08-06 -->
+- [x] ~~https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager  <!-- deep-scan 2026-08-21 - remote, mobile gaming 150M+ downloads, verified live -->~~ — swept: stale (9d old, first seen 2026-08-21)
+- [x] ~~https://job-boards.greenhouse.io/immunefi/jobs/5833616004 | Immunefi | Marketing Lead  <!-- deep-scan 2026-08-21 - remote FR-compatible, senior brand/social/community seat, API-verified, updated 2026-08-06 -->~~ — swept: stale (9d old, first seen 2026-08-21)
 - [x] ~~https://jobs.lever.co/swissborg/51459e7f-01ff-46d4-86ec-f8188db8c7bb | SwissBorg (Propr.xyz) | Affiliate Manager  <!-- deep-scan 2026-08-21 - remote Europe, off-archetype fallback: creator-affiliate program muscle, API-verified -->~~ — removed from fresh matches
 
-- [ ] https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager | Remote
+- [x] ~~https://hitapps.peopleforce.io/careers/230841 | Hitapps | Community Manager | Remote~~ — swept: stale (9d old, first seen 2026-08-21)
 
-- [ ] https://www.arbeitnow.com/jobs/companies/autoscout24/senior-content-manager-seo-aeo-befristet-auf-1-jahr-56854 | autoscout24 | Senior Content Manager SEO/AEO (m/w/d) befristet auf 1 Jahr | posted: 2026-08-21
-- [ ] https://www.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4457558781 | Jobs Ai | Social Media Community Manager (Remote)
-- [ ] https://es.linkedin.com/jobs/view/community-engagement-lead-spain-and-portugal-at-airbnb-4455291646 | Airbnb | Community Engagement Lead, Spain & Portugal  <!-- deep-scan 2026-08-22 - Barcelona (remote flag - confirm policy) - TOP fit: 10+y community, native ES, EUR80-100k; 200+ applicants, act fast -->
+- [x] ~~https://www.arbeitnow.com/jobs/companies/autoscout24/senior-content-manager-seo-aeo-befristet-auf-1-jahr-56854 | autoscout24 | Senior Content Manager SEO/AEO (m/w/d) befristet auf 1 Jahr | posted: 2026-08-21~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4457558781 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+- [x] ~~https://es.linkedin.com/jobs/view/community-engagement-lead-spain-and-portugal-at-airbnb-4455291646 | Airbnb | Community Engagement Lead, Spain & Portugal  <!-- deep-scan 2026-08-22 - Barcelona (remote flag - confirm policy) - TOP fit: 10+y community, native ES, EUR80-100k; 200+ applicants, act fast -->~~ — swept: stale (8d old, first seen 2026-08-18)
 - [x] ~~https://www.linkedin.com/jobs/view/regional-community-growth-manager-at-vast-4453093344 | VAST (Tripo) | Regional Community & Growth Manager  <!-- deep-scan 2026-08-22 - European Union (Frankfurt hub) - 3D/AI creator-ecosystem community: Discord/Reddit, creator ops, events -->~~ — swept: stale (11d old, first seen 2026-08-13)
 - [x] ~~https://www.linkedin.com/jobs/view/business-development-manager-kol-affiliate-bd-at-kucoin-eu-4449554021 | KuCoin EU | BD Manager - KOL/Affiliate  <!-- deep-scan 2026-08-22 - EEA (Frankfurt HQ noted) - Partner-program angle; FR/ES preferred languages -->~~ — swept: location (EEA (Frankfurt HQ noted))
-- [ ] https://www.linkedin.com/jobs/view/4452320295 | CoinPoker | Head of Social  <!-- deep-scan 2026-08-22 - Remote (distributed) - Director-level social X/IG/TG/Discord; caveat: poker knowledge wanted -->
-- [ ] https://www.linkedin.com/jobs/view/4452321648 | CoinPoker | Affiliate Manager - Poker  <!-- deep-scan 2026-08-22 - Remote (distributed) - CPA/revshare partner program build; pairs with Packsify work sample -->
-- [ ] https://jobs.ashbyhq.com/kraken.com/69cc0fbb-a7f5-4170-abf0-4fcee84fd487 | Kraken | Global Head of KOL - Kraken Pro  <!-- deep-scan 2026-08-22 - Remote - UK listing (EU eligibility to confirm) - Senior creator/KOL program leadership; Ashby-verified live -->
-- [ ] https://nl.linkedin.com/jobs/view/senior-affiliate-business-development-manager-western-europe-at-okx-4372882087 | OKX | Senior Affiliate BD Manager, Western Europe  <!-- deep-scan 2026-08-22 - Western EU (NL/DE listed; remote unconfirmed) - Affiliate/KOL/trading communities Western EU; reposted 4d ago -->
-- [ ] https://candidat.francetravail.fr/offres/recherche/detail/5760120 | Mathez Conseil Formation | Charge de Communication & Marketing Digital Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms, content-heavy -->
-- [ ] https://candidat.francetravail.fr/offres/recherche/detail/5646795 | Mathez Transports Internationaux | Charge de Communication Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms; EN/FR/ES useful in intl logistics -->
+- [x] ~~https://www.linkedin.com/jobs/view/4452320295 | CoinPoker | Head of Social  <!-- deep-scan 2026-08-22 - Remote (distributed) - Director-level social X/IG/TG/Discord; caveat: poker knowledge wanted -->~~ — swept: stale (8d old, first seen 2026-08-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4452321648 | CoinPoker | Affiliate Manager - Poker  <!-- deep-scan 2026-08-22 - Remote (distributed) - CPA/revshare partner program build; pairs with Packsify work sample -->~~ — swept: stale (8d old, first seen 2026-08-22)
+- [x] ~~https://jobs.ashbyhq.com/kraken.com/69cc0fbb-a7f5-4170-abf0-4fcee84fd487 | Kraken | Global Head of KOL - Kraken Pro  <!-- deep-scan 2026-08-22 - Remote - UK listing (EU eligibility to confirm) - Senior creator/KOL program leadership; Ashby-verified live -->~~ — removed from fresh matches
+- [x] ~~https://nl.linkedin.com/jobs/view/senior-affiliate-business-development-manager-western-europe-at-okx-4372882087 | OKX | Senior Affiliate BD Manager, Western Europe  <!-- deep-scan 2026-08-22 - Western EU (NL/DE listed; remote unconfirmed) - Affiliate/KOL/trading communities Western EU; reposted 4d ago -->~~ — removed from fresh matches
+- [x] ~~https://candidat.francetravail.fr/offres/recherche/detail/5760120 | Mathez Conseil Formation | Charge de Communication & Marketing Digital Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms, content-heavy -->~~ — removed from fresh matches
+- [x] ~~https://candidat.francetravail.fr/offres/recherche/detail/5646795 | Mathez Transports Internationaux | Charge de Communication Confirme  <!-- deep-scan 2026-08-22 - Nice, CDI - LOCAL senior comms; EN/FR/ES useful in intl logistics -->~~ — removed from fresh matches
 - [x] ~~https://fr.linkedin.com/jobs/view/social-media-manager-at-yomoni-4454984771 | Yomoni | Social Media Manager  <!-- deep-scan 2026-08-22 - Paris, teletravail available (verify depth) - French fintech SaaS, FR socials; 200+ applicants -->~~ — swept: location (Paris, teletravail available (verify depth))
-- [ ] https://fr.linkedin.com/jobs/view/strategic-communications-manager-at-probabl-4454426203 | Probabl | Strategic Communications Manager  <!-- deep-scan 2026-08-22 - Paris (remote-flagged, verify) - French AI/open-source (scikit-learn); senior comms -->
-- [ ] https://es.linkedin.com/jobs/view/social-media-manager-at-lucanet-4457398242 | Lucanet | Social Media Manager  <!-- deep-scan 2026-08-22 - Madrid, flexible model (verify remote) - B2B SaaS, EN-only, organic social; posted 21h -->
+- [x] ~~https://fr.linkedin.com/jobs/view/strategic-communications-manager-at-probabl-4454426203 | Probabl | Strategic Communications Manager  <!-- deep-scan 2026-08-22 - Paris (remote-flagged, verify) - French AI/open-source (scikit-learn); senior comms -->~~ — removed from fresh matches
+- [x] ~~https://es.linkedin.com/jobs/view/social-media-manager-at-lucanet-4457398242 | Lucanet | Social Media Manager  <!-- deep-scan 2026-08-22 - Madrid, flexible model (verify remote) - B2B SaaS, EN-only, organic social; posted 21h -->~~ — swept: stale (8d old, first seen 2026-08-22)
 - [x] ~~https://jobs.lever.co/upguard/c305b39b-989e-4cff-af62-bb92c979874d | UpGuard | Social Media & Community Manager  <!-- deep-scan 2026-08-22 - Remote (verify timezone anchor) - B2B SaaS exact-title match; tz unverified -->~~ — closed: posting gone (ATS API 404 — posting removed)
-- [ ] https://ingamejob.com/en/jobs/community-management-and-customer-support | HyperVR Games | Community Manager  <!-- deep-scan 2026-08-22 - Remote (worldwide) - unverified board - VR gaming studio; apply via hypervr.games; medium confidence -->
-- [ ] https://cryptojobslist.com/jobs/community-manager-support-amer-emea-dex-screener-remote | DEX Screener | Community Manager & Support (AMER/EMEA)  <!-- deep-scan 2026-08-22 - Remote, EMEA ok - unverified (403) - 5M+ user crypto analytics, lean team -->
+- [x] ~~https://ingamejob.com/en/jobs/community-management-and-customer-support | HyperVR Games | Community Manager  <!-- deep-scan 2026-08-22 - Remote (worldwide) - unverified board - VR gaming studio; apply via hypervr.games; medium confidence -->~~ — swept: stale (8d old, first seen 2026-08-22)
+- [x] ~~https://cryptojobslist.com/jobs/community-manager-support-amer-emea-dex-screener-remote | DEX Screener | Community Manager & Support (AMER/EMEA)  <!-- deep-scan 2026-08-22 - Remote, EMEA ok - unverified (403) - 5M+ user crypto analytics, lean team -->~~ — removed from fresh matches
+- [x] ~~https://web3.career/marketing-brand-manager-nationaldigitaltrustcompany-inorganization/153048 | web3.career | Marketing Brand Manager Nationaldigitaltrustcompany Inorganization~~ — swept: stale (8d old, first seen 2026-08-24)
+- [ ] https://www.linkedin.com/jobs/view/4456814709/ | Salve.Lab | Chef de Projet PLM / PDM - Transformation &amp; Data Produits in Grasse, Provence-Alpes-Côte d&#39;Azur, France
+- [ ] https://www.linkedin.com/jobs/view/4455878311/ | ADIGIT FRANCE | Chef de Projet Microsoft / M365 / Copilot / Power Automate– Adigit (PACA) in Antibes, Provence-Alpes-Côte d&#39;Azur, France
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4458588031 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/organic-social-media-manager-at-alan-4458745054 | Alan | Organic Social Media Manager~~ — removed from fresh matches
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4459110217 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+- [x] ~~https://uk.linkedin.com/jobs/view/community-growth-manager-remote-at-ai-acquisition-4446656337 | AI Acquisition | Community Growth Manager - (Remote)~~ — removed from fresh matches
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4459650552 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+- [x] ~~https://web3.career/social-technical-content-manager-alchemy/153314 | web3.career | Social Technical Content Manager Alchemy~~ — removed from fresh matches
+
+- [ ] https://jobs.ashbyhq.com/trust-wallet/743819a5-4aa3-45b7-8805-ff433f2d61cd | Trust Wallet | PR & Content Manager | Remote - Global | posted: 2026-08-27
+- [x] ~~https://www.arbeitnow.com/jobs/companies/experts4health-gmbh/social-media-manager-content-creation-markenaufbau-saarbrucken-65458 | eXperts4Health GmbH | Social Media Manager (m/w/d) Content Creation & Markenaufbau | Saarbrücken, Remote | posted: 2026-08-26~~ — removed from fresh matches
+- [ ] https://builtin.com/job/community-manager-paris/9071358 | Air Apps | Community Manager, Paris | Remote — Paris, &#xCE;le-de-France, FRA
+- [ ] https://builtin.com/job/content-and-social-media-manager/10851610 | Oddin.gg | Content and Social Media Manager | Remote
+- [x] ~~https://builtin.com/job/localisation-content-manager-france/10532353 | Plaud.ai | Localisation Content Manager - France | Remote — 2 Locations~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/superduper/5d8f821d-2d3c-41bc-8f13-bab3dbebd250 | Superduper | Head of Community~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/6530882003 | Remote | Social Media Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/remotecom/jobs/6570942003 | Remote | Senior Social Media Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/olipop/jobs/6672939003 | OLIPOP | Social Media Manager | Remote~~ — closed: posting gone (ATS API 404 — posting removed)
+
+- [x] ~~https://cryptojobslist.com/jobs/head-of-comunity-cryptology-100-remote | Cryptology | Head of Community | 100% Remote | note: liveness uncertain~~ — removed from fresh matches
+- [x] ~~https://builtin.com/job/senior-community-manager-video-games-remote/6453502 | Games industry (remote-first studio) | Senior Community Manager (Video Games) | Remote~~ — removed from fresh matches
+- [x] ~~https://builtin.com/job/community-manager-fr/3023789 | Gaming/tech employer | Community Manager (FR) | French-language role, remote-friendly (France)~~ — removed from fresh matches
+- [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-oliver-agency-1129923 | OLIVER Agency | Social Media Manager | Remote | note: liveness uncertain~~ — removed from fresh matches
+- [x] ~~https://remoteok.com/remote-jobs/remote-social-media-digital-community-manager-prospera-271413 | Próspera | Social Media & Digital Community Manager | Remote | note: liveness uncertain~~ — removed from fresh matches
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4460184207 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+- [x] ~~https://web3.career/change-management-communications-manager-kraken/153341 | web3.career | Change Management Communications Manager Kraken~~ — removed from fresh matches
+
+- [ ] https://builtin.com/job/telegram-community-manager/10886810 | CoinPoker | Telegram Community Manager | Remote
+- [ ] https://builtin.com/job/community-manager-madrid/9071234 | Air Apps | Community Manager, Madrid | Remote — Madrid, Comunidad de Madrid, ESP
+- [x] ~~https://builtin.com/job/freelance-social-media-manager-remote-spain/10894322 | 1000heads | Freelance Social Media Manager (Remote - Spain) | Remote — 3 Locations~~ — removed from fresh matches
+- [x] ~~https://builtin.com/job/drupal-content-migration-content-manager-full-remote/10108710 | All European Careers | Drupal Content Migration - Content Manager - Full Remote | Remote — Madrid, Comunidad de Madrid, ESP~~ — removed from fresh matches
+- [x] ~~https://builtin.com/job/drupal-content-migration-content-manager-full-remote-contractor-usd/10108684 | All European Careers | Drupal Content Migration - Content Manager - Full Remote - Contractor in USD | Remote — ESP~~ — removed from fresh matches
+- [x] ~~https://builtin.com/job/content-manager/10044933 | Storyful | Content Manager | Remote~~ — removed from fresh matches
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4460871259 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
+
+- [x] ~~https://weworkremotely.com/remote-jobs/reddit-community-manager-french-speaking-contract | Reddit | Community Manager, French Speaking (Contract) | Anywhere in the World | posted: 2026-08-29~~ — removed from fresh matches
+- [ ] https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany
+
+- [ ] https://jobs.ashbyhq.com/partyhat/02a9d741-4810-476b-94c7-2d3d0edef826 | Partyhat | Community Manager | Remote
+- [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-caiz-1093342 | Caiz | Social Media Manager | Remote~~ — posting closed (RemoteOK: "This job post has been closed by the poster"; validThrough 2025-09-08)
+- [x] ~~https://euremotejobs.com/job/community-manager-m-f-d/ | EU Remote Jobs listing | Community Manager (m/f/d) | Remote — Europe | note: liveness uncertain~~ — removed from fresh matches
+
+- [x] ~~https://cryptocurrencyjobs.co/marketing/chamber-of-digital-commerce-social-media-community-manager/ | Chamber of Digital Commerce | Social Media & Community Manager | Remote (US-HQ) | note: liveness uncertain~~ — closed: posting expired (page shows "no longer available", no apply link; JSON-LD datePosted 2021-09-17, validThrough 2021-10-18)
+- [x] ~~https://cryptocurrencyjobs.co/marketing/hume-social-media-community-manager/ | Hume | Social Media & Community Manager | Remote | note: liveness uncertain~~ — closed: posting expired (page shows "no longer available"; JSON-LD datePosted 2021-09-08, validThrough 2021-10-09)
+
+- [x] ~~https://cryptocurrencyjobs.co/operations/hype-partners-community-manager-gaming-guild-russian-market/ | Hype Partners | Community Manager (Gaming Guild) — Russian Market | Remote | note: liveness uncertain~~ — removed from fresh matches
+
+- [x] ~~https://cryptocurrencyjobs.co/marketing/hume-social-media-community-manager/ | Hume | Social Media & Community Manager | Remote~~ — closed: posting expired (page shows "no longer available"; JSON-LD datePosted 2021-09-08, validThrough 2021-10-09)
+
+- [x] ~~https://cryptocurrencyjobs.co/marketing/chamber-of-digital-commerce-social-media-community-manager/ | Chamber of Digital Commerce | Social Media & Community Manager | Remote (US-HQ)~~ — closed: posting expired (page shows "no longer available", no apply link; JSON-LD datePosted 2021-09-17, validThrough 2021-10-18)
+
+- [ ] https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide | note: posted 6 days ago
+
+- [ ] https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide
+
+- [ ] https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany
+
+- [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-caiz-1093342 | Caiz | Social Media Manager | Remote~~ — posting closed (duplicate entry; see above)
+
+- [x] ~~https://builtin.com/job/senior-community-manager-video-games-remote/6453502 | Games industry (remote-first studio) | Senior Community Manager (Video Games) | Remote~~ — removed from fresh matches
+
+- [ ] https://builtin.com/job/content-and-social-media-manager/10851610 | Oddin.gg | Content and Social Media Manager | Remote
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/creatal-gmbh/social-media-manager-content-creator-montabaur-270829 | Creatal GmbH | Social Media Manager & Content Creator (m/w/d) | Montabaur, Remote | posted: 2026-08-31~~ — removed from fresh matches
