@@ -3,9 +3,10 @@
  * dedup-tracker.mjs — Remove duplicate entries from applications.md
  *
  * Groups by normalized company, then merges only rows whose full role title
- * matches exactly (case- and whitespace-normalized). Keeps entry with highest
- * score. If discarded entry had more advanced status, preserves that status.
- * Merges notes.
+ * matches exactly (case- and whitespace-normalized). Rows whose Notes carry
+ * different recognizable req/posting IDs never merge (#1524/#2009). Keeps
+ * entry with highest score. If discarded entry had more advanced status,
+ * preserves that status. Merges notes.
  *
  * Run: node career-ops/dedup-tracker.mjs [--dry-run]
  */
@@ -16,7 +17,7 @@ import { fileURLToPath } from 'url';
 import {
   openTrackerTransaction, rebuildRow, resolveTrackerPath,
 } from './tracker-utils.mjs';
-import { resolveColumns, parseTrackerRow } from './tracker-parse.mjs';
+import { resolveColumns, parseTrackerRow, extractReqNumber } from './tracker-parse.mjs';
 
 const CAREER_OPS = dirname(fileURLToPath(import.meta.url));
 // Support both layouts: data/applications.md (boilerplate) and applications.md
@@ -200,6 +201,11 @@ function normalizeRole(role) {
  * company (e.g. "Software Engineer, Data Infrastructure" vs "Senior Software
  * Engineer, Agent Infrastructure"), causing real data loss.
  *
+ * An exact-title match is still overridden when req/job/posting IDs in the
+ * Notes column prove the rows are two different requisitions (#1524/#2009),
+ * mirroring merge-tracker.mjs's guard. Only a confirmed mismatch counts — when
+ * either side carries no extractable ID, behavior is unchanged.
+ *
  * When titles match exactly but either row is already Applied or later, dedup
  * still keeps both and warns: deleting an in-flight application would lose its
  * status, report link, and notes unless the rows are the exact same report
@@ -212,6 +218,17 @@ function normalizeRole(role) {
 function roleMatch(a, b) {
   if (sameReportIdentity(a, b)) return true;
   if (normalizeRole(a.role) !== normalizeRole(b.role)) return false;
+
+  // Req/job-number guard (#1524/#2009), shared with merge-tracker.mjs via
+  // tracker-parse.mjs: an identical title can still be two genuinely distinct
+  // postings when req/job IDs in Notes prove it. `?`-company rows make this
+  // collision likely — every blind listing in one Via channel shares the same
+  // group key, and agencies title them generically, so the job id in Notes is
+  // often the ONLY distinguishing signal (e.g. `job id E0AF9F06ED` vs
+  // `job id 4449631821`).
+  const reqA = extractReqNumber(a.notes);
+  const reqB = extractReqNumber(b.notes);
+  if (reqA && reqB && reqA !== reqB) return false;
 
   // Exact-title duplicates that have entered the real application pipeline are
   // kept separate. A user may already have applied to one row; deleting it

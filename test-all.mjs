@@ -8590,6 +8590,80 @@ try {
   fail(`merge-tracker req/job-number dedup guard test crashed: ${e.message}`);
 }
 
+// ── DEDUP-TRACKER REQ/JOB-NUMBER GUARD (#1524/#2009) ─────────────────────
+// dedup-tracker.mjs clustered rows on exact company+title alone, with no
+// req/job-number awareness — so two `?` (confidential) rows with identical
+// generic titles in the same Via channel merged even when the job ids in
+// Notes proved two different requisitions (real incident: tracker rows #265
+// and #278, `job id E0AF9F06ED` vs `job id 4449631821`). The guard is shared
+// with merge-tracker.mjs via tracker-parse.mjs. Covers: (a) two ?-company
+// rows with distinct job ids → both kept, (b) same job id → still deduped,
+// (c) id on only one side → falls back to existing behavior (still deduped),
+// (d) a named company with distinct req IDs on identical titles → both kept.
+console.log('\n🧪 Testing dedup-tracker req/job-number guard (#1524/#2009)...');
+try {
+  const dedupReqTmp = mkdtempSync(join(tmpdir(), 'career-ops-dedup-req-'));
+  try {
+    mkdirSync(join(dedupReqTmp, 'data'));
+    const dedupReqTracker = join(dedupReqTmp, 'data', 'applications.md');
+    writeFileSync(dedupReqTracker,
+      '# Applications Tracker\n\n' +
+      '| # | Date | Company | Role | Score | Status | PDF | Report | Notes |\n' +
+      '|---|------|---------|------|-------|--------|-----|--------|-------|\n' +
+      // (a) Blind rows, identical generic title, DIFFERENT job ids → two openings.
+      '| 265 | 2026-08-20 | ? | Senior Data Engineer | 4.1/5 | Evaluated | ❌ | [265](../reports/265-unknown-2026-08-20.md) | agency listing, job id E0AF9F06ED |\n' +
+      '| 278 | 2026-08-28 | ? | Senior Data Engineer | 3.9/5 | Evaluated | ❌ | [278](../reports/278-unknown-2026-08-28.md) | agency listing, job id 4449631821 |\n' +
+      // (b) Blind rows, identical title, SAME job id → one listing re-blasted, still a duplicate.
+      '| 280 | 2026-08-20 | ? | Machine Learning Engineer | 4.0/5 | Evaluated | ❌ | [280](../reports/280-unknown-2026-08-20.md) | job id 555001 |\n' +
+      '| 281 | 2026-08-27 | ? | Machine Learning Engineer | 3.5/5 | Evaluated | ❌ | [281](../reports/281-unknown-2026-08-27.md) | seen again, job id 555001 |\n' +
+      // (c) Blind rows, identical title, job id on ONE side only → can't prove a mismatch, still a duplicate.
+      '| 283 | 2026-08-21 | ? | Platform Engineer | 3.7/5 | Evaluated | ❌ | [283](../reports/283-unknown-2026-08-21.md) | job id 999777 |\n' +
+      '| 284 | 2026-08-29 | ? | Platform Engineer | 4.2/5 | Evaluated | ❌ | [284](../reports/284-unknown-2026-08-29.md) | no marker this time |\n' +
+      // (d) Named company, identical titles, different req IDs → two openings (#1524's own TD case).
+      '| 290 | 2026-08-20 | TD Bank | Learning Experience Designer | 3.8/5 | Evaluated | ❌ | [290](../reports/290-td-2026-08-20.md) | Req R_1494379 |\n' +
+      '| 291 | 2026-08-22 | TD Bank | Learning Experience Designer | 4.0/5 | Evaluated | ❌ | [291](../reports/291-td-2026-08-22.md) | Req R_1488728 |\n');
+
+    const dedupReqResult = run(NODE, ['dedup-tracker.mjs'], { env: { ...process.env, CAREER_OPS_TRACKER: dedupReqTracker } });
+    if (dedupReqResult === null) {
+      fail('dedup-tracker.mjs crashed during req/job-number guard test (#1524/#2009)');
+    } else {
+      const out = readFileSync(dedupReqTracker, 'utf-8');
+
+      const sdeRows = out.split('\n').filter(l => l.includes('| Senior Data Engineer |'));
+      if (sdeRows.length === 2 && out.includes('E0AF9F06ED') && out.includes('4449631821')) {
+        pass('(a) two ?-company rows with distinct job ids → NOT deduped, both kept');
+      } else {
+        fail(`(a) ?-company rows with distinct job ids were merged: ${sdeRows.length} Senior Data Engineer rows`);
+      }
+
+      const mleRows = out.split('\n').filter(l => l.includes('| Machine Learning Engineer |'));
+      if (mleRows.length === 1 && mleRows[0].includes('4.0/5')) {
+        pass('(b) same job id on both ?-company rows → still deduped (keeps highest score)');
+      } else {
+        fail(`(b) same-job-id dedup broken: ${mleRows.length} Machine Learning Engineer rows`);
+      }
+
+      const platRows = out.split('\n').filter(l => l.includes('| Platform Engineer |'));
+      if (platRows.length === 1 && platRows[0].includes('4.2/5')) {
+        pass('(c) job id on only one side → falls back to exact-title dedup, still merged');
+      } else {
+        fail(`(c) one-sided job id fallback broken: ${platRows.length} Platform Engineer rows`);
+      }
+
+      const tdRows = out.split('\n').filter(l => l.includes('| Learning Experience Designer |'));
+      if (tdRows.length === 2 && out.includes('R_1494379') && out.includes('R_1488728')) {
+        pass('(d) named company, identical titles, different req IDs → both kept');
+      } else {
+        fail(`(d) named-company distinct-req rows were merged: ${tdRows.length} Learning Experience Designer rows`);
+      }
+    }
+  } finally {
+    rmSync(dedupReqTmp, { recursive: true, force: true });
+  }
+} catch (e) {
+  fail(`dedup-tracker req/job-number guard test crashed: ${e.message}`);
+}
+
 // ── MERGE-TRACKER CONCURRENT WRITES (#781 follow-up) ─────────────────────
 // Report-number reservation is atomic now (#803), but tracker merges are a
 // separate read/modify/write step. If two merge-tracker processes read the same
