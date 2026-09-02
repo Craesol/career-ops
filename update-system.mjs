@@ -384,6 +384,34 @@ const USER_PATHS = [
   'opencode.json',
   '.claude/settings.json',
   '.claude/hooks/',
+  // ── Fork-local (Craesol/career-ops) ────────────────────────────────────
+  // Machine automation, schedulers, and helper scripts this fork added on
+  // top of upstream. Upstream knows nothing about them: updates must never
+  // ship, overwrite, or delete them, so they are user-owned by definition.
+  // (Keep these comments free of quote characters — extractArrayFromSource
+  // treats every quoted string between the brackets as a path entry.)
+  '.claude/launch.json',
+  '.gemini/commands/',
+  '.mcp.json',
+  'LOCAL-SETUP.md',
+  'ats-score.mjs',
+  'backfill-scan-runs.mjs',
+  'daily-ats-scan.bat',
+  'daily-ats-scan.mjs',
+  'daily-consolidated.bat',
+  'daily-consolidated.mjs',
+  'extract-jd-keywords.mjs',
+  'linkedin-alerts-parser.bat',
+  'linkedin-alerts-parser.mjs',
+  'prune-dead.mjs',
+  'prune-stale-web3career.mjs',
+  'scan-and-notify.mjs',
+  'scripts/',
+  'send-agent-results.mjs',
+  'send-daily-email.mjs',
+  'setup-scheduler.ps1',
+  'start-web.bat',
+  'sweep-inbox.mjs',
 ];
 
 function parseVersionFile(raw) {
