@@ -135,7 +135,7 @@ export async function POST(req: Request) {
         }
         send({ kind: "proposed", count: proposed.length, cliExit: code ?? -1 });
         if (!proposed.length) {
-          send({ kind: "done", added: 0, proposed: 0, rejected: { dup: 0, title: 0, location: 0, stale: 0 } });
+          send({ kind: "done", cliExit: code ?? -1, added: 0, proposed: 0, rejected: { dup: 0, title: 0, location: 0, stale: 0 }, known: [], filtered: [] });
           finish();
           return;
         }
@@ -159,21 +159,31 @@ process.stdin.on('end', () => {
     const tf = buildTitleFilter(cfg.title_filter);
     const lf = buildLocationFilter(cfg.location_filter);
     const stale = w3cStaleFilter();
-    const known = new Set(readFileSync('data/scan-history.tsv', 'utf8').split('\\n').map(l => l.split('\\t')[0]).filter(Boolean));
+    // url → {date, status} from scan-history (cols: url, date, query, title, portal, status).
+    // Known finds are RETURNED, not swallowed — the UI shows them with their real
+    // status instead of an empty pane ("it found 25 things you already have" ≠ "it found nothing").
+    const hist = new Map();
+    for (const l of readFileSync('data/scan-history.tsv', 'utf8').split('\\n')) {
+      const c = l.split('\\t');
+      if (c[0]) hist.set(c[0], { date: c[1] || '', status: (c[5] || '').trim() });
+    }
     const fresh = [];
+    const knownOut = [];
+    const filteredOut = [];
     const rejected = { dup: 0, title: 0, location: 0, stale: 0 };
     for (const o of offers) {
-      if (known.has(o.url)) { rejected.dup++; continue; }
-      if (stale.isStale(o.url)) { rejected.stale++; continue; }
-      if (!tf(o.title)) { rejected.title++; continue; }
-      if (!lf(o.location, o.url, o.title)) { rejected.location++; continue; }
+      const k = hist.get(o.url);
+      if (k) { rejected.dup++; knownOut.push({ ...o, knownSince: k.date, knownStatus: k.status }); continue; }
+      if (stale.isStale(o.url)) { rejected.stale++; filteredOut.push({ ...o, filteredBy: 'stale' }); continue; }
+      if (!tf(o.title)) { rejected.title++; filteredOut.push({ ...o, filteredBy: 'title' }); continue; }
+      if (!lf(o.location, o.url, o.title)) { rejected.location++; filteredOut.push({ ...o, filteredBy: 'location' }); continue; }
       fresh.push(o);
     }
     if (fresh.length) {
       appendToPipeline(fresh);
       appendToScanHistory(fresh, ${JSON.stringify(today)}, 'added');
     }
-    process.stdout.write(JSON.stringify({ added: fresh.length, rejected, offers: fresh }));
+    process.stdout.write(JSON.stringify({ added: fresh.length, rejected, offers: fresh, known: knownOut.slice(0, 40), filtered: filteredOut.slice(0, 40) }));
   } catch (e) {
     process.stdout.write(JSON.stringify({ added: 0, error: String((e && e.message) || e) }));
   }
@@ -183,7 +193,7 @@ process.stdin.on('end', () => {
         let wout = "";
         writer.stdout.on("data", (d: Buffer) => (wout += d.toString()));
         writer.on("close", () => {
-          let result: { added: number; rejected?: Record<string, number>; offers?: unknown[]; error?: string } = { added: 0 };
+          let result: { added: number; rejected?: Record<string, number>; offers?: unknown[]; known?: unknown[]; filtered?: unknown[]; error?: string } = { added: 0 };
           // dotenv banners can precede the JSON — take the last parseable line.
           for (const line of wout.split(/\r?\n/).reverse()) {
             const t = line.trim();
@@ -195,7 +205,7 @@ process.stdin.on('end', () => {
               /* keep scanning */
             }
           }
-          send({ kind: "done", proposed: proposed.length, added: result.added ?? 0, rejected: result.rejected ?? {}, offers: result.offers ?? [], error: result.error });
+          send({ kind: "done", cliExit: code ?? -1, proposed: proposed.length, added: result.added ?? 0, rejected: result.rejected ?? {}, offers: result.offers ?? [], known: result.known ?? [], filtered: result.filtered ?? [], error: result.error });
           finish();
         });
         writer.on("error", (e) => {

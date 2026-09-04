@@ -421,6 +421,7 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
       const dec = new TextDecoder();
       let buf = "";
       let done = false;
+      let lastLog = ""; // last stderr line the route surfaced (auth/launch errors)
       while (!done) {
         const { value, done: rd } = await reader.read();
         done = rd;
@@ -439,20 +440,57 @@ export function ExploreProvider({ children }: { children: React.ReactNode }) {
           if (ev.kind === "start") setStatus(`Deep scan: ${ev.queries} playbook searches via your CLI…`);
           if (ev.kind === "progress") setPhase("hunting");
           if (ev.kind === "proposed") setStatus(`${ev.count} proposals found — filtering + persisting…`);
+          if (ev.kind === "log") lastLog = String(ev.line || "");
           if (ev.kind === "error") setError(String(ev.message || "deep scan error"));
           if (ev.kind === "done") {
             const added = Number(ev.added) || 0;
-            const offersIn = (Array.isArray(ev.offers) ? ev.offers : []) as DiscoveredOffer[];
-            const shaped = offersIn.map((o) => ({ ...o, ats: "l3", source: o.source || "websearch:l3", postedAt: "" }));
-            setOffers(shaped.filter((o) => policyRef.current(o.location)));
+            const proposedN = Number(ev.proposed) || 0;
+            const cliExit = Number(ev.cliExit ?? 0);
+            // Every find gets a card — NEW ones, already-known ones (with their
+            // real status), and policy-filtered ones. "25 found, 23 you already
+            // have" must never render as an empty pane.
+            type L3Find = DiscoveredOffer & { knownSince?: string; knownStatus?: string; filteredBy?: string };
+            const shape = (arr: unknown, why: (o: L3Find) => string, hint?: (o: L3Find) => string): DiscoveredOffer[] =>
+              ((Array.isArray(arr) ? arr : []) as L3Find[]).map((o) => ({
+                ...o,
+                ats: "l3",
+                source: o.source || "websearch:l3",
+                postedAt: "",
+                verification: "unconfirmed" as const,
+                why: why(o),
+                postedHint: hint ? hint(o) : "",
+              }));
+            const KNOWN_LABEL: Record<string, string> = {
+              added: "your scanner already picked this up",
+              skipped: "you removed it earlier",
+              skipped_dup: "duplicate of another posting you have",
+              skipped_title: "filtered by title when first seen",
+              skipped_location: "filtered by location when first seen",
+              skipped_expired: "expired posting",
+              expired: "expired posting",
+            };
+            const freshOnes = shape(ev.offers, () => "NEW — just added to your pipeline").filter((o) => policyRef.current(o.location));
+            const knownOnes = shape(
+              ev.known,
+              (o) => `already known — ${KNOWN_LABEL[o.knownStatus || ""] || o.knownStatus || "seen before"}`,
+              (o) => (o.knownSince ? `known since ${o.knownSince}` : ""),
+            );
+            const filteredOnes = shape(ev.filtered, (o) => `filtered by your standing policy: ${o.filteredBy || "rule"}`);
+            const shaped = [...freshOnes, ...knownOnes, ...filteredOnes];
+            setOffers(shaped);
             setMatchCount(added);
             const rej = (ev.rejected ?? {}) as Record<string, number>;
             setStatus(
-              `Deep scan done: ${ev.proposed} proposed · ${added} added to your pipeline` +
-                (Object.values(rej).some(Boolean) ? ` (filtered: ${rej.dup ?? 0} dup, ${rej.title ?? 0} title, ${rej.location ?? 0} location, ${rej.stale ?? 0} stale)` : ""),
+              `Deep scan done: ${proposedN} proposed · ${added} NEW added to your pipeline` +
+                (Object.values(rej).some(Boolean) ? ` · already known: ${rej.dup ?? 0} · filtered: ${(rej.title ?? 0) + (rej.location ?? 0) + (rej.stale ?? 0)}` : ""),
             );
-            setAdded((s) => new Set([...s, ...shaped.map((o) => o.url)]));
-            setPhase(added > 0 ? "results" : "empty-loose");
+            setAdded((s) => new Set([...s, ...freshOnes.map((o) => o.url)]));
+            if (proposedN === 0 && cliExit !== 0) {
+              setError(`Your CLI exited with code ${cliExit}${lastLog ? ` — ${lastLog}` : ""}. If this looks like an auth problem, run 'claude /login' in a terminal and rerun the deep scan.`);
+              setPhase("failed");
+            } else {
+              setPhase(shaped.length > 0 ? "results" : "empty-loose");
+            }
             router.refresh();
             if (typeof window !== "undefined") {
               window.dispatchEvent(new CustomEvent("co-job-done", { detail: { kind: "deep-scan" } }));
