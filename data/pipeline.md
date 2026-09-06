@@ -2132,8 +2132,8 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4460184207 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
 - [x] ~~https://web3.career/change-management-communications-manager-kraken/153341 | web3.career | Change Management Communications Manager Kraken~~ — removed from fresh matches
 
-- [ ] https://builtin.com/job/telegram-community-manager/10886810 | CoinPoker | Telegram Community Manager | Remote
-- [ ] https://builtin.com/job/community-manager-madrid/9071234 | Air Apps | Community Manager, Madrid | Remote — Madrid, Comunidad de Madrid, ESP
+- [x] ~~https://builtin.com/job/telegram-community-manager/10886810 | CoinPoker | Telegram Community Manager | Remote~~ — swept: stale (9d old, first seen 2026-08-28)
+- [x] ~~https://builtin.com/job/community-manager-madrid/9071234 | Air Apps | Community Manager, Madrid | Remote — Madrid, Comunidad de Madrid, ESP~~ — swept: stale (9d old, first seen 2026-08-28)
 - [x] ~~https://builtin.com/job/freelance-social-media-manager-remote-spain/10894322 | 1000heads | Freelance Social Media Manager (Remote - Spain) | Remote — 3 Locations~~ — removed from fresh matches
 - [x] ~~https://builtin.com/job/drupal-content-migration-content-manager-full-remote/10108710 | All European Careers | Drupal Content Migration - Content Manager - Full Remote | Remote — Madrid, Comunidad de Madrid, ESP~~ — removed from fresh matches
 - [x] ~~https://builtin.com/job/drupal-content-migration-content-manager-full-remote-contractor-usd/10108684 | All European Careers | Drupal Content Migration - Content Manager - Full Remote - Contractor in USD | Remote — ESP~~ — removed from fresh matches
@@ -2156,9 +2156,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://cryptocurrencyjobs.co/marketing/chamber-of-digital-commerce-social-media-community-manager/ | Chamber of Digital Commerce | Social Media & Community Manager | Remote (US-HQ)~~ — closed: posting expired (page shows "no longer available", no apply link; JSON-LD datePosted 2021-09-17, validThrough 2021-10-18)
 
-- [ ] https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide | note: posted 6 days ago
+- [x] ~~https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide | note: posted 6 days ago~~ — swept: stale (8d old, first seen 2026-08-29)
 
-- [ ] https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide
+- [x] ~~https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide~~ — swept: stale (8d old, first seen 2026-08-29)
 
 - [ ] https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany
 
@@ -2184,3 +2184,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [ ] https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible
 
 - [ ] https://web3.career/community-manager-m3tamedia/153440 | web3.career | Community Manager M3tamedia
+- [ ] https://es.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4464022566 | Hire Feed | Social Media Community Manager (Remote)
+
+- [x] ~~https://apply.workable.com/j/188A082034 | Keywords Studios | Spontaneous application Community Manager (Video Games) - Worldwide - Remote | United Kingdom | posted: 2025-01-13~~ — swept: location (United Kingdom)
+- [ ] https://builtin.com/job/community-manager-korea/6563121 | p0x labs | Community Manager (Korea) | Remote — Any, Aisne, Hauts-de-France, FRA
