@@ -28,15 +28,22 @@ open no PR and ask.
 
 Work ships as a direct push to the designated branch of `origin`.
 
-## Scheduling ownership (decided 2026-08-23)
+## Scheduling ownership (owner moved 2026-09-06)
 
-The nightly `career-ops-daily-consolidated` Task Scheduler job runs ONLY on the
-desktop PC (the machine whose Downloads live at `E:\Downloads`). Any other
-machine (the laptop included) must keep that task disabled or deleted — two
-machines running it produce duplicate scans and duplicate daily emails. If you
-are an agent on a machine that is not the owner and you find this task enabled,
-tell the user and offer to disable it:
-`schtasks /change /tn "career-ops-daily-consolidated" /disable`
+The nightly `career-ops-daily-consolidated` Task Scheduler job runs ONLY on
+**DESKTOP-P4PVO1V** (the always-on server, user CAJITA, 192.168.1.176 on the
+home LAN) — the machine that also serves the career-ops web UI 24/7 at
+`http://192.168.1.176:3000` and is the ONLY machine that writes user-layer
+state (tracker, reports, pipeline) and pushes data-sync commits. Every other
+machine (the old desktop with `E:\Downloads`, the laptop) must keep that task
+disabled or deleted, and works as a CLIENT: browse the web UI, or pull before
+reading data. Two machines running the nightly produce duplicate scans and
+duplicate daily emails; two machines writing user-layer files diverge (the
+lost reports #280-289). If you are an agent on a machine that is not
+DESKTOP-P4PVO1V and you find this task enabled, tell the user and offer to
+disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
+(owner history: desktop with E:\Downloads 2026-08-23 → DESKTOP-P4PVO1V
+2026-09-06).
 
 ## Remote sessions: do not scan, do not email
 
