@@ -2,7 +2,7 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import yaml from "js-yaml";
+import * as yaml from "js-yaml";
 import { resolveCli } from "@/lib/clis";
 import { careerOpsRoot } from "@/lib/career-ops";
 
@@ -148,7 +148,7 @@ export async function POST(req: Request) {
 import { readFileSync } from 'node:fs';
 import { appendToPipeline, appendToScanHistory, buildTitleFilter, buildLocationFilter } from ${JSON.stringify(scanUrl)};
 import { w3cStaleFilter } from ${JSON.stringify(pruneUrl)};
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 let input = '';
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', d => { input += d; });

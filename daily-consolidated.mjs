@@ -26,6 +26,7 @@ import { readFileSync, appendFileSync, existsSync } from 'fs';
 import { spawnSync } from 'child_process';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { localToday } from './lib/local-today.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
@@ -41,7 +42,7 @@ if (!RESEND_API_KEY || !NOTIFY_EMAIL) {
   process.exit(1);
 }
 
-const today = new Date().toISOString().slice(0, 10);
+const today = localToday();
 const NOW_TS = Date.now();
 
 console.log('=== career-ops daily consolidated · ' + today + ' ===\n');
@@ -186,7 +187,7 @@ if (INCLUDE_L3) {
   // "community" happily persisted "Blockchain Solutions Architect".
   let titleOk = () => true;
   try {
-    const yaml = (await import('js-yaml')).default;
+    const yaml = await import('js-yaml');
     const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8')) || {};
     const { buildTitleFilter } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
     titleOk = buildTitleFilter(cfg.title_filter);

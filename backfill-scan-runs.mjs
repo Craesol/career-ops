@@ -9,10 +9,12 @@
 import { readFileSync, writeFileSync, copyFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { getCareerOpsRoot } from './path-resolver.mjs';
+const USER_ROOT = getCareerOpsRoot();
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const LOG = resolve(ROOT, 'logs/scan.log');
-const TSV = resolve(ROOT, 'data/scan-runs.tsv');
+const TSV = resolve(USER_ROOT, 'data/scan-runs.tsv');
 
 // [Thu 05/07/2026  0:35:11.85] — US month/day, local time (Europe/Paris, +02 in summer)
 function parseStamp(s) {

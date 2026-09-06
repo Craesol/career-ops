@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { readFileSync, appendFileSync, existsSync, writeFileSync } from 'fs';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { buildLocationFilter } from './scan.mjs';
 
 // Location filter comes from portals.yml (same semantics as scan.mjs):

@@ -23,6 +23,8 @@
 import { readFileSync, writeFileSync, copyFileSync, appendFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { getCareerOpsRoot } from './path-resolver.mjs';
+const USER_ROOT = getCareerOpsRoot();
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const APPLY = process.argv.includes('--apply');
@@ -30,8 +32,8 @@ const li = process.argv.indexOf('--limit');
 const LIMIT = li !== -1 ? parseInt(process.argv[li + 1], 10) : Infinity;
 const CONCURRENCY = 8;
 
-const PIPELINE = resolve(ROOT, 'data/pipeline.md');
-const HISTORY = resolve(ROOT, 'data/scan-history.tsv');
+const PIPELINE = resolve(USER_ROOT, 'data/pipeline.md');
+const HISTORY = resolve(USER_ROOT, 'data/scan-history.tsv');
 const { checkLivenessViaApi, isAtsPosting } = await import(pathToFileURL(resolve(ROOT, 'liveness-api.mjs')).href);
 
 const lines = readFileSync(PIPELINE, 'utf8').split('\n');

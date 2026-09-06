@@ -435,7 +435,8 @@ async function main() {
 
 // Run only when executed directly (daily-consolidated spawns this file);
 // importing the module (tests) must not open an IMAP connection.
-if (import.meta.url === (await import('url')).pathToFileURL(process.argv[1] || '').href) {
+const { isMainModule } = await import('./lib/is-main-module.mjs');
+if (isMainModule(import.meta.url)) {
   main().catch(e => {
     console.error('FATAL:', e.message);
     console.error(e.stack);

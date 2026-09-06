@@ -1,7 +1,7 @@
 {
   "name": "career-ops",
   "version": "1.23.0",
-  "description": "AI-powered job search pipeline — works with any AI coding CLI (Claude Code, Codex, OpenCode, Antigravity, Grok, Qwen, Kimi, Copilot)",
+  "description": "Open-source AI job search that runs locally in your AI coding CLI: scan job portals, evaluate listings into a structured A-H report with a 1-5 score, tailor your CV, track applications",
   "private": true,
   "engines": {
     "node": ">=18"
@@ -58,7 +58,8 @@
     "build:dashboard": "node build-dashboard.mjs",
     "serve:dashboard": "cd dashboard && go run . --path ..",
     "postinstall": "npx playwright install chromium --with-deps || npx playwright install chromium --with-deps",
-    "manifesto": "node manifesto.mjs"
+    "manifesto": "node manifesto.mjs",
+    "jd-archive": "node check-jd-archive.mjs"
   },
   "keywords": [
     "ai",
@@ -78,17 +79,17 @@
     "ai-agent-skill"
   ],
   "author": "Santiago Fernández de Valderrama <hi@santifer.io> (https://santifer.io)",
-  "homepage": "https://santifer.io",
+  "homepage": "https://career-ops.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/santifer/career-ops"
+    "url": "https://github.com/career-ops-hq/career-ops"
   },
   "license": "MIT",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "dotenv": "^17.0.0",
     "imapflow": "^1.6.5",
-    "js-yaml": "^4.1.1",
-    "playwright": "1.62.0"
+    "js-yaml": "^4.3.1",
+    "playwright": "1.62.1"
   }
 }

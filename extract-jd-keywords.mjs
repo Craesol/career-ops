@@ -19,6 +19,8 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { getCareerOpsRoot } from './path-resolver.mjs';
+const USER_ROOT = getCareerOpsRoot();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -26,7 +28,7 @@ const args = process.argv.slice(2);
 let jdPath = null;
 let outPath = null;
 let profileFiles = ['cv.md'];
-if (existsSync(resolve(__dirname, 'article-digest.md'))) profileFiles.push('article-digest.md');
+if (existsSync(resolve(USER_ROOT, 'article-digest.md'))) profileFiles.push('article-digest.md');
 
 for (const arg of args) {
   if (arg.startsWith('--out=')) outPath = arg.split('=')[1];

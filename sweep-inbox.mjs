@@ -39,7 +39,9 @@
 import { readFileSync, writeFileSync, copyFileSync, appendFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
+import { getCareerOpsRoot } from './path-resolver.mjs';
+const USER_ROOT = getCareerOpsRoot();
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const APPLY = process.argv.includes('--apply');
@@ -49,11 +51,11 @@ if (ageArgIdx !== -1 && (!Number.isFinite(MAX_AGE_DAYS) || MAX_AGE_DAYS < 1)) {
   console.error('--max-age-days needs a positive number of days');
   process.exit(1);
 }
-const PIPELINE = resolve(ROOT, 'data/pipeline.md');
-const HISTORY = resolve(ROOT, 'data/scan-history.tsv');
+const PIPELINE = resolve(USER_ROOT, 'data/pipeline.md');
+const HISTORY = resolve(USER_ROOT, 'data/scan-history.tsv');
 
 const { buildLocationFilter } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-const config = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8')) || {};
+const config = yaml.load(readFileSync(resolve(USER_ROOT, 'portals.yml'), 'utf8')) || {};
 const locationOk = buildLocationFilter(config.location_filter);
 const negatives = (config.title_filter?.negative || [])
   .filter(s => typeof s === 'string').map(s => s.toLowerCase().trim()).filter(Boolean);

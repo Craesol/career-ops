@@ -6,7 +6,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cleanChips } from "./src/lib/clean-chips.mjs";
+import { cleanChips } from "../../src/lib/clean-chips.mjs";
 
 /** Split a raw input string the same way filter-builder's commit() does —
  *  on unambiguous item separators only (never bare spaces). */

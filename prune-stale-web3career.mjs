@@ -24,6 +24,9 @@
 import { readFileSync, writeFileSync, copyFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { getCareerOpsRoot } from './path-resolver.mjs';
+import { localToday } from './lib/local-today.mjs';
+const USER_ROOT = getCareerOpsRoot();
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DRY = process.argv.includes('--dry-run');
@@ -39,7 +42,7 @@ const ID_RE = /web3\.career\/[^\s|~]*\/(\d{2,9})(?:[/?#]|\s|$)/;
 export function w3cStaleFilter() {
   let maxId = 0;
   try {
-    for (const line of readFileSync(resolve(ROOT, 'data/scan-history.tsv'), 'utf-8').split('\n')) {
+    for (const line of readFileSync(resolve(USER_ROOT, 'data/scan-history.tsv'), 'utf-8').split('\n')) {
       const m = line.split('\t')[0]?.match(ID_RE);
       if (m) maxId = Math.max(maxId, parseInt(m[1], 10));
     }
@@ -58,11 +61,12 @@ export function w3cStaleFilter() {
 }
 
 // CLI entry — guarded so importing w3cStaleFilter() never runs the sweep.
-if (import.meta.url === pathToFileURL(process.argv[1] || '').href) await main();
+const { isMainModule } = await import('./lib/is-main-module.mjs');
+if (isMainModule(import.meta.url)) await main();
 
 async function main() {
-const today = new Date().toISOString().slice(0, 10);
-const pipePath = resolve(ROOT, 'data/pipeline.md');
+const today = localToday();
+const pipePath = resolve(USER_ROOT, 'data/pipeline.md');
 
 // 1. Max id ever seen across scan-history (the recency anchor).
 const { threshold } = w3cStaleFilter();
