@@ -22,17 +22,20 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
-// Before paint: set the theme class AND tint the browser chrome (theme-color) to
-// match — so Safari's status bar / URL bar unify with the header instead of a
-// jarring light seam. Matches --bg (light #f7f6f3 / dark #0a0a0a).
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('career-ops:theme');var d=t!=='light';if(d)document.documentElement.classList.add('dark');var m=document.querySelector('meta[name="theme-color"]');if(!m){m=document.createElement('meta');m.setAttribute('name','theme-color');document.head.appendChild(m);}m.setAttribute('content',d?'#0a0a0a':'#f7f6f3');}catch(e){document.documentElement.classList.add('dark');}})();`;
+// DARK IS SERVER-RENDERED: the <html> tag ships class="dark" from the JSX, so
+// the default theme cannot be lost to caching, script timing, or hydration
+// patching (an inline pre-paint classList.add was observed being wiped on this
+// setup, 2026-09-07). This script only handles the OPPOSITE case — a stored
+// explicit 'light' choice — before paint; ThemeToggle re-enforces the stored
+// preference after hydration as the final authority.
+const THEME_SCRIPT = `(function(){try{if(localStorage.getItem('career-ops:theme')==='light'){document.documentElement.classList.remove('dark');var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#f7f6f3');}}catch(e){}})();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${instrumentSerif.variable} ${instrumentSerifItalic.variable}`}
+      className={`dark ${inter.variable} ${instrumentSerif.variable} ${instrumentSerifItalic.variable}`}
     >
       <head>
         {/* The app ships its own light/dark theme (ThemeToggle + THEME_SCRIPT).

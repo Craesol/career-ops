@@ -10,7 +10,19 @@ export function ThemeToggle({ className }: { className?: string }) {
   const [dark, setDark] = useState(true);
 
   useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"));
+    // Post-hydration authority: enforce the STORED preference (dark is the
+    // default; only an explicit 'light' turns the lights on). This survives
+    // any hydration-time class rewriting on <html>.
+    let stored: string | null = null;
+    try {
+      stored = localStorage.getItem(KEY);
+    } catch {
+      /* ignore */
+    }
+    const wantDark = stored !== "light";
+    document.documentElement.classList.toggle("dark", wantDark);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", wantDark ? "#0a0a0a" : "#f7f6f3");
+    setDark(wantDark);
   }, []);
 
   function toggle() {
