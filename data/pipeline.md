@@ -2141,9 +2141,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-jobs-ai-4460871259 | Jobs Ai | Social Media Community Manager (Remote)~~ — removed from fresh matches
 
 - [x] ~~https://weworkremotely.com/remote-jobs/reddit-community-manager-french-speaking-contract | Reddit | Community Manager, French Speaking (Contract) | Anywhere in the World | posted: 2026-08-29~~ — removed from fresh matches
-- [ ] https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany
+- [x] ~~https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany~~ — swept: stale (8d old, first seen 2026-08-30)
 
-- [ ] https://jobs.ashbyhq.com/partyhat/02a9d741-4810-476b-94c7-2d3d0edef826 | Partyhat | Community Manager | Remote
+- [x] ~~https://jobs.ashbyhq.com/partyhat/02a9d741-4810-476b-94c7-2d3d0edef826 | Partyhat | Community Manager | Remote~~ — swept: stale (8d old, first seen 2026-08-30)
 - [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-caiz-1093342 | Caiz | Social Media Manager | Remote~~ — posting closed (RemoteOK: "This job post has been closed by the poster"; validThrough 2025-09-08)
 - [x] ~~https://euremotejobs.com/job/community-manager-m-f-d/ | EU Remote Jobs listing | Community Manager (m/f/d) | Remote — Europe | note: liveness uncertain~~ — removed from fresh matches
 
@@ -2160,7 +2160,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://euremotejobs.com/job/social-media-manager-8/ | Decentralized Masters | Social Media Manager | Worldwide~~ — swept: stale (8d old, first seen 2026-08-29)
 
-- [ ] https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany
+- [x] ~~https://builtin.com/job/social-media-manager-europe/10907298 | VALD | Social Media Manager Europe | Remote — Germany~~ — swept: stale (8d old, first seen 2026-08-30)
 
 - [x] ~~https://remoteok.com/remote-jobs/remote-social-media-manager-caiz-1093342 | Caiz | Social Media Manager | Remote~~ — posting closed (duplicate entry; see above)
 
@@ -2170,9 +2170,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/creatal-gmbh/social-media-manager-content-creator-montabaur-270829 | Creatal GmbH | Social Media Manager & Content Creator (m/w/d) | Montabaur, Remote | posted: 2026-08-31~~ — removed from fresh matches
 - [x] ~~https://web3.career/social-media-and-community-manager-cream-llc/153575 | web3.career | Social Media And Community Manager Cream Llc~~ — removed from fresh matches
-- [ ] https://web3.career/community-manager-m3tamedia/153440 | web3.career | Community Manager M3tamedia
+- [x] ~~https://web3.career/community-manager-m3tamedia/153440 | web3.career | Community Manager M3tamedia~~ — removed from fresh matches
 
-- [ ] https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible
+- [x] ~~https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible~~ — removed from fresh matches
 - [x] ~~https://job-boards.greenhouse.io/defenseunicorns/jobs/5221602007 | Defense Unicorns | Marketing Content Manager (SMM210) | Remote — US only (US-anchored)~~ — removed from fresh matches
 - [x] ~~https://it.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4463302070 | Hire Feed | Social Media Community Manager (Remote)~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-crypto-at-bettingjobs-4460702950 | BettingJobs | Social Media Manager - Crypto~~ — removed from fresh matches
@@ -2181,10 +2181,15 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://jobs.ashbyhq.com/world-foundation/ec18b1fd-3b2d-48e7-92eb-19114c082122 | World Foundation | Head of Community and Ecosystem | Remote (global foundation, US HQ)
 
-- [ ] https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible
+- [x] ~~https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible~~ — removed from fresh matches
 
-- [ ] https://web3.career/community-manager-m3tamedia/153440 | web3.career | Community Manager M3tamedia
-- [ ] https://es.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4464022566 | Hire Feed | Social Media Community Manager (Remote)
+- [x] ~~https://web3.career/community-manager-m3tamedia/153440 | web3.career | Community Manager M3tamedia~~ — removed from fresh matches
+- [x] ~~https://es.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4464022566 | Hire Feed | Social Media Community Manager (Remote)~~ — removed from fresh matches
 
 - [x] ~~https://apply.workable.com/j/188A082034 | Keywords Studios | Spontaneous application Community Manager (Video Games) - Worldwide - Remote | United Kingdom | posted: 2025-01-13~~ — swept: location (United Kingdom)
-- [ ] https://builtin.com/job/community-manager-korea/6563121 | p0x labs | Community Manager (Korea) | Remote — Any, Aisne, Hauts-de-France, FRA
+- [x] ~~https://builtin.com/job/community-manager-korea/6563121 | p0x labs | Community Manager (Korea) | Remote — Any, Aisne, Hauts-de-France, FRA~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/yunicorn/social-media-manager-hamburg-464509 | Yunicorn | Social Media Manager | Hamburg, Remote | posted: 2026-09-07~~ — removed from fresh matches
+
+- [ ] https://jobs.ashbyhq.com/Sahara/042b2056-ffeb-400e-9303-042f800c83b0 | Sahara AI | Social Media Manager & Content Specialist | Remote (Web3)
+- [ ] https://jobs.ashbyhq.com/hirehangar/eb444092-3d75-403c-bb48-bbc1a21d22a8 | Hire Hangar | Brand Content & Social Media Manager | Remote
