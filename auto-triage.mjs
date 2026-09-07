@@ -71,7 +71,10 @@ export function parseEval(output) {
 function runGeminiEval(jdText, index) {
   const tmp = join(tmpdir(), `co-triage-${process.pid}-${index}.txt`);
   writeFileSync(tmp, jdText);
-  const r = spawnSync(process.execPath, [join(CODE_ROOT, 'gemini-eval.mjs'), '--file', tmp], {
+  // --no-save: prescore ONLY. Without it gemini-eval persists a full report +
+  // tracker-addition TSV, silently auto-evaluating every find into the tracker
+  // (discovered 2026-09-08 — rows #308-310 were born that way).
+  const r = spawnSync(process.execPath, [join(CODE_ROOT, 'gemini-eval.mjs'), '--file', tmp, '--no-save'], {
     cwd: CODE_ROOT, encoding: 'utf8', timeout: 180_000,
   });
   const out = (r.stdout || '') + '\n' + (r.stderr || '');
