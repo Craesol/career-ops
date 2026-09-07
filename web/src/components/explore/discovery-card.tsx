@@ -118,6 +118,16 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
           <span className={cn("rounded px-1.5 py-0.5 font-semibold tabular-nums", jobScore >= 4 ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400" : jobScore >= 3 ? "bg-amber-500/10 text-amber-600 dark:text-amber-400" : "bg-surface-hover text-muted")}>
             {jobScore}/5
           </span>
+        ) : offer.prescore != null && !evaluatedN ? (
+          <span
+            className={cn(
+              "rounded px-1.5 py-0.5 font-semibold tabular-nums",
+              offer.prescore >= 4 ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400" : offer.prescore >= 3 ? "bg-amber-500/10 text-amber-600 dark:text-amber-400" : "bg-surface-hover text-muted",
+            )}
+            title={`Free-tier first-pass score (Gemini${offer.prescoreBasis === "title-only" ? ", from the title only — low confidence" : ", from the full posting"}). Run Evaluate for the real A–F analysis.`}
+          >
+            ~{offer.prescore}/5
+          </span>
         ) : (
           !evaluatedN && <span className="rounded bg-surface-hover px-1.5 py-0.5 text-faint">not scored</span>
         )}

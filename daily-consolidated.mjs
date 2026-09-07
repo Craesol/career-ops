@@ -341,6 +341,20 @@ if (pruneResult.status === 0 || /checked \d+/.test(pruneResult.stdout || '')) {
   console.error('  FAIL (exit ' + pruneResult.status + '): ' + (pruneResult.stderr || 'unknown').slice(0, 200));
 }
 
+// --- STEP 3c: Free-tier auto-triage (Gemini prescores) -------------------
+// Pre-scores today's fresh finds on the free GEMINI_API_KEY tier so the web
+// shows a first-pass fit score on every card. Skips itself when no key is
+// configured; never blocks the email on failure.
+console.log('\n[step 3c] auto-triage (free-tier prescores)');
+const triageResult = spawnSync('node', [resolve(ROOT, 'auto-triage.mjs')], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 2400000,
+});
+if (triageResult.status === 0) {
+  console.log('  ok · ' + ((triageResult.stdout || '').trim().split('\n').pop() || ''));
+} else {
+  console.error('  FAIL (exit ' + triageResult.status + '): ' + ((triageResult.stderr || triageResult.stdout || 'unknown')).slice(0, 200));
+}
+
 // --- STEP 4: Build consolidated email -----------------------------------
 console.log('\n[step 4] Building consolidated email');
 const todayAdded = todayAddedRows();

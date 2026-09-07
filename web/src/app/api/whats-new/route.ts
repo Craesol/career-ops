@@ -37,6 +37,20 @@ export async function GET(req: Request) {
   // Companies already evaluated → don't resurface as "new".
   const evaluated = new Set(readApplications().map((a) => norm(a.company)).filter(Boolean));
 
+  // Free-tier prescores (auto-triage.mjs): url → {score, basis}. Best-effort —
+  // a missing/short file just means no badges.
+  const prescores = new Map<string, { score: number; basis: string }>();
+  try {
+    const ps = fs.readFileSync(path.join(careerOpsRoot(), "data", "prescores.tsv"), "utf8").split("\n");
+    for (let i = 1; i < ps.length; i++) {
+      const c = ps[i].split("\t");
+      const score = Number(c[2]);
+      if (c[0] && Number.isFinite(score)) prescores.set(c[0], { score, basis: (c[4] || "").trim() });
+    }
+  } catch {
+    /* no prescores yet */
+  }
+
   const toOffer = (c: string[]): DiscoveredOffer | null => {
     const [url, firstSeen, portal, title, company, status, location] = c;
     if (!url || !/^https?:\/\//i.test(url)) return null;
@@ -48,6 +62,7 @@ export async function GET(req: Request) {
     if (!titleAllowed(title)) return null;
     const wid = w3cId(url);
     if (wid !== null && maxW3cId > 0 && wid < maxW3cId - W3C_GAP) return null;
+    const pre = prescores.get(url);
     return {
       url,
       company: (company || "").trim(),
@@ -56,6 +71,7 @@ export async function GET(req: Request) {
       postedAt: /^\d{4}-\d{2}-\d{2}$/.test(firstSeen || "") ? firstSeen : "",
       ats: (portal || "").replace(/-full$/, "").trim() || "other",
       source: "whats-new",
+      ...(pre ? { prescore: pre.score, prescoreBasis: pre.basis } : {}),
     };
   };
 

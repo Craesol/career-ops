@@ -114,6 +114,11 @@ export type DiscoveredOffer = {
   /** human freshness ("~5d ago", "unknown") shown when postedAt is "" */
   postedHint?: string;
   confidence?: "low" | "medium" | "high";
+  /** free-tier first-pass score (auto-triage.mjs → data/prescores.tsv). Shown
+   *  as a "~X/5" hint until a REAL paid evaluation replaces it. */
+  prescore?: number;
+  /** 'jd' = scored from the full posting text; 'title-only' = low-confidence */
+  prescoreBasis?: string;
 };
 
 /** The two discovery surfaces: free deterministic Scan vs token-spending AI search. */
