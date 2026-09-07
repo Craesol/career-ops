@@ -1,7 +1,7 @@
 @echo off
 REM career-ops daily consolidated runner
 REM Runs LinkedIn alerts parser + ATS scan (--no-email) + one consolidated email
-REM Triggered by Windows Task Scheduler at 11:31 daily
+REM Triggered by Windows Task Scheduler at 07:31 daily
 
 cd /d "C:\Claude\career-ops"
 

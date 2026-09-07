@@ -30,7 +30,7 @@ Work ships as a direct push to the designated branch of `origin`.
 
 ## Scheduling ownership (owner moved 2026-09-06)
 
-The nightly `career-ops-daily-consolidated` Task Scheduler job runs ONLY on
+The nightly `career-ops-daily-consolidated` Task Scheduler job (07:31) runs ONLY on
 **DESKTOP-P4PVO1V** (the always-on server, user CAJITA, 192.168.1.176 on the
 home LAN) — the machine that also serves the career-ops web UI 24/7 at
 `http://192.168.1.176:3000` and is the ONLY machine that writes user-layer
@@ -48,7 +48,7 @@ disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
 DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07): every
 hour 06:00-23:59 it runs `hourly-scan.bat` — scan.mjs ONLY, zero LLM tokens, no
 email — so intraday finds land in the web as they appear. L3, sweeps and the
-single daily digest email remain exclusive to the 11:31 nightly. The same
+single daily digest email remain exclusive to the 07:31 nightly. The same
 single-owner rule applies: no other machine runs this task.
 
 ## Remote sessions: do not scan, do not email
