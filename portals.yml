@@ -22,13 +22,19 @@ location_filter:
     - europe
     - emea
     - european union
+    - eu
+    - european
+  # "hybrid" left OUT of block on purpose (user, 2026-09-08): a European
+  # hybrid posting (~2 days/week office) is worth considering, so it must
+  # reach evaluation. The cascade still rejects hybrids with NO European or
+  # remote signal ("Hybrid - Madrid, Spain" dies at the default-reject), and
+  # evaluation downgrades heavy or unstated office requirements.
   block:
     - on-site
     - onsite
     - on site
     - in-office
     - in office
-    - hybrid
     - philippines
     - manila
     - apac
