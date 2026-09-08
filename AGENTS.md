@@ -46,7 +46,7 @@ disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
 2026-09-06).
 
 DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07): every
-hour 06:00-23:59 it runs `hourly-scan.bat` — scan.mjs ONLY, zero LLM tokens, no
+hour 08:31-23:31 it runs `hourly-scan.bat` — scan.mjs ONLY, zero LLM tokens, no
 email — so intraday finds land in the web as they appear. L3, sweeps and the
 single daily digest email remain exclusive to the 07:31 nightly. The same
 single-owner rule applies: no other machine runs this task.
