@@ -160,7 +160,7 @@ export async function POST(req: Request) {
         const pruneUrl = pathToFileURL(path.join(careerOpsRoot(), "prune-stale-web3career.mjs")).href;
         const liStaleUrl = pathToFileURL(path.join(careerOpsRoot(), "lib", "linkedin-stale.mjs")).href;
         const livenessApiUrl = pathToFileURL(path.join(careerOpsRoot(), "liveness-api.mjs")).href;
-        const livenessBrowserUrl = pathToFileURL(path.join(careerOpsRoot(), "liveness-browser.mjs")).href;
+        const freshnessUrl = pathToFileURL(path.join(careerOpsRoot(), "lib", "posting-freshness.mjs")).href;
         const code2 = `
 import { readFileSync } from 'node:fs';
 import { appendToPipeline, appendToScanHistory, buildTitleFilter, buildLocationFilter } from ${JSON.stringify(scanUrl)};
@@ -202,11 +202,16 @@ process.stdin.on('end', async () => {
       if (!lf(o.location, o.url, o.title)) { rejected.location++; filteredOut.push({ ...o, filteredBy: 'location' }); continue; }
       fresh.push(o);
     }
-    // Liveness gate — same rungs as the nightly's L3 (2026-07-30): free API check
-    // first, Playwright for the rest. Search indexes resurface postings that died
-    // years ago; expired finds are persisted as 'skipped_expired' so they never
-    // come back, uncertain ones pass with a note. Fail open (with a flag) if the
-    // gate itself is unavailable, never silently.
+    // Proof-of-freshness policy (2026-09-09, after two zombie incidents in two
+    // days): an L3 find ENTERS only when something DATES it — the ATS API says
+    // active, or the page itself proves recency (LinkedIn sequential id,
+    // JSON-LD datePosted within 45d and no past validThrough/deadline).
+    // 'unknown' is dropped as unproven — recall traded for precision on
+    // purpose: real fresh postings also arrive via the API scanners, feeds
+    // and ats-full, which all carry dates. Heuristic browser liveness is gone
+    // from this path: it read a page with a 2023 deadline as alive. Unproven
+    // finds are NOT persisted, so they stay visible in the UI's filtered list
+    // (reason 'unverified') where a human can rescue one that matters.
     let liveFresh = fresh;
     const deadFinds = [];
     let gateError = null;
@@ -214,41 +219,39 @@ process.stdin.on('end', async () => {
       liveFresh = [];
       try {
         const { checkLivenessViaApi } = await import(${JSON.stringify(livenessApiUrl)});
-        const { checkUrlLivenessWithFallback, newLivenessPage } = await import(${JSON.stringify(livenessBrowserUrl)});
-        let browser = null, page = null;
-        try {
-          for (const o of fresh) {
-            let verdict = null;
-            try {
-              const api = await checkLivenessViaApi(o.url);
-              if (api) {
-                verdict = api;
-              } else {
-                if (!browser) {
-                  const { chromium } = await import('playwright');
-                  browser = await chromium.launch({ headless: true });
-                  page = await newLivenessPage(browser);
-                }
-                verdict = await checkUrlLivenessWithFallback(page, o.url, {});
-              }
-            } catch (e) {
-              verdict = { result: 'uncertain', reason: 'liveness check failed: ' + e.message };
+        const { assessPostingFreshness } = await import(${JSON.stringify(freshnessUrl)});
+        for (const o of fresh) {
+          let outcome = 'unproven';
+          let why = '';
+          try {
+            const api = await checkLivenessViaApi(o.url);
+            if (api && api.result === 'expired') { outcome = 'dead'; why = 'ats api: expired'; }
+            else if (api && api.result === 'active') { outcome = 'pass'; why = 'ats api: active'; }
+            else {
+              const f = await assessPostingFreshness(o.url);
+              if (f.verdict === 'fresh') { outcome = 'pass'; why = f.reason; }
+              else if (f.verdict === 'expired' || f.verdict === 'stale') { outcome = 'dead'; why = f.reason; }
+              else { outcome = 'unproven'; why = f.reason; }
             }
-            if (verdict.result === 'expired') {
-              rejected.expired++;
-              deadFinds.push(o);
-              filteredOut.push({ ...o, filteredBy: 'expired' });
-            } else {
-              if (verdict.result === 'uncertain') o.note = (o.note ? o.note + ' · ' : '') + 'liveness uncertain';
-              liveFresh.push(o);
-            }
+          } catch (e) {
+            outcome = 'unproven';
+            why = 'freshness check failed: ' + String((e && e.message) || e);
           }
-        } finally {
-          if (browser) await browser.close().catch(() => {});
+          if (outcome === 'pass') {
+            o.note = (o.note ? o.note + ' · ' : '') + why;
+            liveFresh.push(o);
+          } else if (outcome === 'dead') {
+            rejected.expired++;
+            deadFinds.push(o);
+            filteredOut.push({ ...o, filteredBy: 'expired', note: why });
+          } else {
+            rejected.unverified = (rejected.unverified || 0) + 1;
+            filteredOut.push({ ...o, filteredBy: 'unverified', note: why });
+          }
         }
       } catch (e) {
         gateError = String((e && e.message) || e);
-        liveFresh = fresh;
+        liveFresh = [];
       }
     }
     if (idStale.length) appendToScanHistory(idStale, ${JSON.stringify(today)}, 'skipped');

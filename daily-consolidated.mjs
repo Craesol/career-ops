@@ -226,49 +226,54 @@ if (INCLUDE_L3) {
   // way. Every other path into the email is checked at the source API; this was
   // the one unchecked one. Expired finds are persisted as 'skipped_expired' so
   // dedup blocks them forever; uncertain ones are kept but labelled in the note.
+  // Proof-of-freshness policy (2026-09-09, after two zombie incidents in two
+  // days): an L3 find enters only when something DATES it — ATS API active,
+  // LinkedIn sequential id above the cutoff, or JSON-LD datePosted within 45d
+  // with no past deadline. 'unknown' is dropped as unproven (recall traded for
+  // precision: fresh real postings also arrive via scanners/feeds/ats-full,
+  // which all carry dates). The heuristic browser rung is gone — it read a
+  // page with a 2023 deadline as alive ('uncertain' → passed).
   let liveFresh = fresh;
   let l3Expired = 0;
+  let l3Unproven = 0;
   if (fresh.length) {
     liveFresh = [];
     const deadFinds = [];
     try {
       const { checkLivenessViaApi } = await import(pathToFileURL(resolve(ROOT, 'liveness-api.mjs')).href);
-      const { checkUrlLivenessWithFallback, newLivenessPage } = await import(pathToFileURL(resolve(ROOT, 'liveness-browser.mjs')).href);
-      let browser = null, page = null;
-      try {
-        for (const o of fresh) {
-          let verdict = null;
-          try {
-            const api = await checkLivenessViaApi(o.url);
-            if (api) {
-              verdict = api;
-            } else {
-              if (!browser) {
-                const { chromium } = await import('playwright');
-                browser = await chromium.launch({ headless: true });
-                page = await newLivenessPage(browser);
-              }
-              verdict = await checkUrlLivenessWithFallback(page, o.url, {});
-            }
-          } catch (e) {
-            verdict = { result: 'uncertain', reason: 'liveness check failed: ' + e.message };
+      const { assessPostingFreshness } = await import(pathToFileURL(resolve(ROOT, 'lib', 'posting-freshness.mjs')).href);
+      for (const o of fresh) {
+        let outcome = 'unproven';
+        let why = '';
+        try {
+          const api = await checkLivenessViaApi(o.url);
+          if (api && api.result === 'expired') { outcome = 'dead'; why = 'ats api: expired'; }
+          else if (api && api.result === 'active') { outcome = 'pass'; why = 'ats api: active'; }
+          else {
+            const f = await assessPostingFreshness(o.url);
+            if (f.verdict === 'fresh') { outcome = 'pass'; why = f.reason; }
+            else if (f.verdict === 'expired' || f.verdict === 'stale') { outcome = 'dead'; why = f.reason; }
+            else { why = f.reason; }
           }
-          if (verdict.result === 'expired') {
-            deadFinds.push(o);
-          } else {
-            if (verdict.result === 'uncertain') o.note = (o.note ? o.note + ' · ' : '') + 'liveness uncertain';
-            liveFresh.push(o);
-          }
+        } catch (e) {
+          why = 'freshness check failed: ' + e.message;
         }
-      } finally {
-        if (browser) await browser.close().catch(() => {});
+        if (outcome === 'pass') {
+          o.note = (o.note ? o.note + ' · ' : '') + why;
+          liveFresh.push(o);
+        } else if (outcome === 'dead') {
+          deadFinds.push(o);
+        } else {
+          l3Unproven++;
+        }
       }
     } catch (e) {
-      // Liveness modules unavailable (old checkout, missing Playwright): fail
-      // open but say so, rather than silently reverting to unchecked finds.
-      console.error('  liveness gate unavailable (' + e.message + ') — L3 finds pass UNCHECKED');
-      liveFresh = fresh;
+      // Gate modules unavailable: fail CLOSED and say so — after two zombie
+      // incidents, unchecked L3 finds must never reach the user again.
+      console.error('  freshness gate unavailable (' + e.message + ') — dropping ' + fresh.length + ' unverified L3 finds');
+      liveFresh = [];
     }
+    if (l3Unproven) console.log('  ' + l3Unproven + ' dropped as unproven freshness');
     l3Expired = deadFinds.length;
     if (deadFinds.length) {
       try {
