@@ -87,6 +87,14 @@ title_filter:
     - Social Media Manager
     - Content Manager
     - Marketing Communications Manager
+    - Community Growth
+    - Community Development
+    - Community Engagement
+    - Community Specialist
+    - Community Operations
+    - Community Marketing
+    - Social Media Lead
+    - Social Media Specialist
   negative:
     - Vietnamese
     - Thai
@@ -246,6 +254,17 @@ search_queries:
     query: >-
       site:gamesjobsindex.com ("community manager" OR "social media manager" OR "content manager" OR
       "marketing communications") remote
+    enabled: true
+  - name: LinkedIn — Community (Remote EU)
+    query: >-
+      site:linkedin.com/jobs ("community manager" OR "head of community" OR "social media manager")
+      (remote OR Europe OR EMEA)
+    enabled: true
+  - name: HelloWork — Community/Social (FR)
+    query: site:hellowork.com ("community manager" OR "social media manager")
+    enabled: true
+  - name: WelcomeToTheJungle — Community
+    query: site:welcometothejungle.com ("community manager" OR "social media manager") (remote OR télétravail)
     enabled: true
 tracked_companies:
   - name: Perk

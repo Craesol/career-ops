@@ -17,7 +17,7 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 900;
 
 export async function POST(req: Request) {
-  let body: { cliId?: string; maxQueries?: number };
+  let body: { cliId?: string; maxQueries?: number; model?: string };
   try {
     body = await req.json();
   } catch {
@@ -64,6 +64,11 @@ export async function POST(req: Request) {
   const args = isClaude
     ? ["-p", prompt, "--allowedTools", "WebSearch,WebFetch", "--disallowedTools", "Task,Bash,Write,Edit,NotebookEdit"]
     : spec.args(prompt);
+  // Optional model override (claude only) — the hourly deep scan runs on a
+  // cheaper model than an interactive deep scan; strict charset, never shell-built.
+  if (isClaude && typeof body.model === "string" && /^[\w.-]{1,64}$/.test(body.model)) {
+    args.push("--model", body.model);
+  }
 
   const encoder = new TextEncoder();
   let closed = false;

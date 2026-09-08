@@ -45,11 +45,21 @@ disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
 (owner history: desktop with E:\Downloads 2026-08-23 → DESKTOP-P4PVO1V
 2026-09-06).
 
-DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07): every
-hour 08:31-23:31 it runs `hourly-scan.bat` — scan.mjs ONLY, zero LLM tokens, no
-email — so intraday finds land in the web as they appear. L3, sweeps and the
-single daily digest email remain exclusive to the 07:31 nightly. The same
-single-owner rule applies: no other machine runs this task.
+DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07, upgraded
+to DEEP 2026-09-08 at the user's request): every hour 08:31-23:31 it runs
+`hourly-scan.bat` — three sequential steps: (1) scan.mjs (zero tokens), (2) an
+L3 deep scan through the local web's `/api/explore/l3` running ALL enabled
+`portals.yml` search_queries on claude headless with `--model sonnet` (this
+SPENDS Claude-plan usage ~16×/day — deliberate; switch `cliId`/`model` in the
+bat to change), (3) auto-triage.mjs free Gemini prescores. Sweeps, prunes and
+the single daily digest email remain exclusive to the 07:31 nightly.
+
+DESKTOP-P4PVO1V also owns `career-ops-ats-full` (added 2026-09-08): daily 03:33
+as SYSTEM it runs `ats-full.bat` → `scan-ats-full.mjs --since 2` — the reverse
+sweep over the PUBLIC Greenhouse/Lever/Ashby/Workday/iCIMS directories
+(thousands of companies), zero LLM tokens, log `logs\ats-full.log` — so the
+07:31 nightly emails whatever the sweep found overnight. The same single-owner
+rule applies to both: no other machine runs these tasks.
 
 ## Remote sessions: do not scan, do not email
 
