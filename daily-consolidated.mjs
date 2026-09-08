@@ -145,6 +145,7 @@ if (INCLUDE_L3) {
     'Rules: valid JSON per line; "portal" is the source label from the query name (e.g. indeed, monster, hitmarker); include the DIRECT posting URL, not a search page; skip aggregator/search-result URLs; no commentary between envelopes is required.',
     'Be broad: community, program, ecosystem, social-media and creator-program roles. Do not judge fit or score anything.',
     'PRIORITIZE REMOTE: the candidate is based on the French Riviera and works remote-first. Emit remote / worldwide / EMEA / Europe-eligible postings first, and skip roles that are onsite-only outside Europe (US, LATAM, APAC, India, Middle East). A remote role anchored to a non-European HQ is fine — say so in "location".',
+    'FRESHNESS IS MANDATORY: search indexes keep dead job pages for years. Skip any result whose snippet or page shows a posting date older than ~45 days. NEVER emit a linkedin.com/jobs/view/ URL whose numeric job id is below 4300000000 — those are years-old dead pages that search engines still index.',
     '',
     'SEARCHES:',
     ...queries.map((q, i) => (i + 1) + '. [' + q.name + '] ' + q.query),
@@ -197,8 +198,27 @@ if (INCLUDE_L3) {
 
   const seenNow = new Set();
   const offRole = proposed.filter(o => !titleOk(o.title)).length;
-  const fresh = proposed.filter(o => titleOk(o.title) && !known.has(o.url) && !seenNow.has(o.url) && seenNow.add(o.url));
+  let fresh = proposed.filter(o => titleOk(o.title) && !known.has(o.url) && !seenNow.has(o.url) && seenNow.add(o.url));
   if (offRole) console.log('  ' + offRole + ' dropped by title filter');
+
+  // Sequential-ID floor for LinkedIn (2026-09-09): LinkedIn's guest wall makes
+  // the liveness gate below return 'uncertain' for years-old postings, which
+  // then pass — a 2021 posting reached fresh-matches on 2026-09-08 that way.
+  // The job id dates the posting deterministically (same trick as the
+  // web3.career stale-id gate); dropped finds persist as 'skipped' so dedup
+  // blocks every future re-proposal.
+  try {
+    const { isStaleLinkedInJobUrl } = await import(pathToFileURL(resolve(ROOT, 'lib', 'linkedin-stale.mjs')).href);
+    const liStale = fresh.filter(o => isStaleLinkedInJobUrl(o.url));
+    if (liStale.length) {
+      fresh = fresh.filter(o => !isStaleLinkedInJobUrl(o.url));
+      const { appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+      appendToScanHistory(liStale, today, 'skipped');
+      console.log('  ' + liStale.length + ' dropped as stale linkedin ids');
+    }
+  } catch (e) {
+    console.error('  linkedin stale-id gate unavailable (' + e.message + ') — L3 finds pass ungated');
+  }
 
   // Liveness gate (2026-07-30): L3 finds come from indexed search results, which
   // routinely resurface postings that died long ago — web3.career keeps expired

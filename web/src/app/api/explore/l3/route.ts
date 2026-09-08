@@ -57,6 +57,7 @@ export async function POST(req: Request) {
     'Rules: valid JSON per line; "portal" is the source label from the query name; include the DIRECT posting URL, not a search page; skip aggregator/search-result URLs; no commentary between envelopes is required.',
     "Be broad: community, program, ecosystem, social-media and creator-program roles. Do not judge fit or score anything.",
     "PRIORITIZE REMOTE: the candidate is based on the French Riviera and works remote-first. Emit remote / worldwide / EMEA / Europe-eligible postings first, and skip roles that are onsite-only outside Europe. A remote role anchored to a non-European HQ is fine — say so in \"location\".",
+    "FRESHNESS IS MANDATORY: search indexes keep dead job pages for years. Skip any result whose snippet or page shows a posting date older than ~45 days. NEVER emit a linkedin.com/jobs/view/ URL whose numeric job id is below 4300000000 — those are years-old dead pages that search engines still index.",
     "",
     "SEARCHES:",
     ...queries.map((q, i) => `${i + 1}. [${q.name}] ${q.query}`),
@@ -157,15 +158,19 @@ export async function POST(req: Request) {
         // pattern as core/pipeline.ts — the web never owns a parallel copy).
         const scanUrl = pathToFileURL(path.join(careerOpsRoot(), "scan.mjs")).href;
         const pruneUrl = pathToFileURL(path.join(careerOpsRoot(), "prune-stale-web3career.mjs")).href;
+        const liStaleUrl = pathToFileURL(path.join(careerOpsRoot(), "lib", "linkedin-stale.mjs")).href;
+        const livenessApiUrl = pathToFileURL(path.join(careerOpsRoot(), "liveness-api.mjs")).href;
+        const livenessBrowserUrl = pathToFileURL(path.join(careerOpsRoot(), "liveness-browser.mjs")).href;
         const code2 = `
 import { readFileSync } from 'node:fs';
 import { appendToPipeline, appendToScanHistory, buildTitleFilter, buildLocationFilter } from ${JSON.stringify(scanUrl)};
 import { w3cStaleFilter } from ${JSON.stringify(pruneUrl)};
+import { isStaleLinkedInJobUrl } from ${JSON.stringify(liStaleUrl)};
 import * as yaml from 'js-yaml';
 let input = '';
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', d => { input += d; });
-process.stdin.on('end', () => {
+process.stdin.on('end', async () => {
   try {
     const offers = JSON.parse(input);
     const cfg = yaml.load(readFileSync('portals.yml', 'utf8'));
@@ -183,20 +188,76 @@ process.stdin.on('end', () => {
     const fresh = [];
     const knownOut = [];
     const filteredOut = [];
-    const rejected = { dup: 0, title: 0, location: 0, stale: 0 };
+    const idStale = [];
+    const rejected = { dup: 0, title: 0, location: 0, stale: 0, expired: 0 };
     for (const o of offers) {
       const k = hist.get(o.url);
       if (k) { rejected.dup++; knownOut.push({ ...o, knownSince: k.date, knownStatus: k.status }); continue; }
       if (stale.isStale(o.url)) { rejected.stale++; filteredOut.push({ ...o, filteredBy: 'stale' }); continue; }
+      // Sequential-ID floor: a LinkedIn job id below the cutoff is months-to-years
+      // old (a 2021 posting reached fresh-matches on 2026-09-08 this way). Persisted
+      // as 'skipped' so dedup blocks every future re-proposal of the same URL.
+      if (isStaleLinkedInJobUrl(o.url)) { rejected.stale++; idStale.push(o); filteredOut.push({ ...o, filteredBy: 'stale' }); continue; }
       if (!tf(o.title)) { rejected.title++; filteredOut.push({ ...o, filteredBy: 'title' }); continue; }
       if (!lf(o.location, o.url, o.title)) { rejected.location++; filteredOut.push({ ...o, filteredBy: 'location' }); continue; }
       fresh.push(o);
     }
+    // Liveness gate — same rungs as the nightly's L3 (2026-07-30): free API check
+    // first, Playwright for the rest. Search indexes resurface postings that died
+    // years ago; expired finds are persisted as 'skipped_expired' so they never
+    // come back, uncertain ones pass with a note. Fail open (with a flag) if the
+    // gate itself is unavailable, never silently.
+    let liveFresh = fresh;
+    const deadFinds = [];
+    let gateError = null;
     if (fresh.length) {
-      appendToPipeline(fresh);
-      appendToScanHistory(fresh, ${JSON.stringify(today)}, 'added');
+      liveFresh = [];
+      try {
+        const { checkLivenessViaApi } = await import(${JSON.stringify(livenessApiUrl)});
+        const { checkUrlLivenessWithFallback, newLivenessPage } = await import(${JSON.stringify(livenessBrowserUrl)});
+        let browser = null, page = null;
+        try {
+          for (const o of fresh) {
+            let verdict = null;
+            try {
+              const api = await checkLivenessViaApi(o.url);
+              if (api) {
+                verdict = api;
+              } else {
+                if (!browser) {
+                  const { chromium } = await import('playwright');
+                  browser = await chromium.launch({ headless: true });
+                  page = await newLivenessPage(browser);
+                }
+                verdict = await checkUrlLivenessWithFallback(page, o.url, {});
+              }
+            } catch (e) {
+              verdict = { result: 'uncertain', reason: 'liveness check failed: ' + e.message };
+            }
+            if (verdict.result === 'expired') {
+              rejected.expired++;
+              deadFinds.push(o);
+              filteredOut.push({ ...o, filteredBy: 'expired' });
+            } else {
+              if (verdict.result === 'uncertain') o.note = (o.note ? o.note + ' · ' : '') + 'liveness uncertain';
+              liveFresh.push(o);
+            }
+          }
+        } finally {
+          if (browser) await browser.close().catch(() => {});
+        }
+      } catch (e) {
+        gateError = String((e && e.message) || e);
+        liveFresh = fresh;
+      }
     }
-    process.stdout.write(JSON.stringify({ added: fresh.length, rejected, offers: fresh, known: knownOut.slice(0, 40), filtered: filteredOut.slice(0, 40) }));
+    if (idStale.length) appendToScanHistory(idStale, ${JSON.stringify(today)}, 'skipped');
+    if (deadFinds.length) appendToScanHistory(deadFinds, ${JSON.stringify(today)}, 'skipped_expired');
+    if (liveFresh.length) {
+      appendToPipeline(liveFresh);
+      appendToScanHistory(liveFresh, ${JSON.stringify(today)}, 'added');
+    }
+    process.stdout.write(JSON.stringify({ added: liveFresh.length, rejected, offers: liveFresh, known: knownOut.slice(0, 40), filtered: filteredOut.slice(0, 40), ...(gateError ? { livenessGateUnavailable: gateError } : {}) }));
   } catch (e) {
     process.stdout.write(JSON.stringify({ added: 0, error: String((e && e.message) || e) }));
   }
