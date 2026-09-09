@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import path from "node:path";
 import { careerOpsRoot, readApplications } from "@/lib/career-ops";
+import { matchOfferToApplication } from "@/lib/explore";
 
 // Mark a tracker row Applied / Discarded from an offer card. The web resolves
 // WHICH row (explicit `row` from the explore join, else the same fuzzy
@@ -14,23 +15,14 @@ export const dynamic = "force-dynamic";
 
 const ALLOWED_STATES = new Set(["Applied", "Discarded"]);
 
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-
 function resolveRow(body: { row?: unknown; company?: unknown; title?: unknown }): string | null {
   if (typeof body.row === "string" && /^\d{1,5}$/.test(body.row)) return body.row;
-  const c = norm(String(body.company ?? ""));
-  const t = norm(String(body.title ?? ""));
-  if (!c) return null;
-  const hit = readApplications().find((a) => {
-    if (norm(a.company) !== c) return false;
-    const ar = norm(a.role);
-    return ar.length > 3 && (t.includes(ar) || ar.includes(t.split(" ").slice(0, 3).join(" ")));
-  });
+  const hit = matchOfferToApplication(readApplications(), String(body.company ?? ""), String(body.title ?? ""));
   return hit && /^\d{1,5}$/.test(hit.n) ? hit.n : null;
 }
 
 export async function POST(req: Request) {
-  let body: { row?: unknown; company?: unknown; title?: unknown; state?: unknown; note?: unknown };
+  let body: { row?: unknown; company?: unknown; title?: unknown; state?: unknown; note?: unknown; dryRun?: unknown };
   try {
     body = await req.json();
   } catch {
@@ -51,6 +43,9 @@ export async function POST(req: Request) {
 
   const args = [path.join(careerOpsRoot(), "set-status.mjs"), "--row", row, state, "--json"];
   if (note) args.push("--note", note);
+  // dryRun: full resolution + validation through set-status, zero writes —
+  // exists so the wiring can be exercised without touching the tracker.
+  if (body.dryRun === true) args.push("--dry-run");
 
   const result = await new Promise<{ code: number | null; out: string; err: string }>((resolvePromise) => {
     const child = spawn(process.execPath, args, { cwd: careerOpsRoot(), env: process.env });
@@ -93,5 +88,5 @@ export async function POST(req: Request) {
     const status = result.code === 4 ? 503 : 500;
     return Response.json({ ok: false, row, state, error: detail }, { status });
   }
-  return Response.json({ ok: true, row, state, result: parsed });
+  return Response.json({ ok: true, row, state, ...(body.dryRun === true ? { dryRun: true } : {}), result: parsed });
 }

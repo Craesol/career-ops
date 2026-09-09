@@ -122,6 +122,32 @@ export type DiscoveredOffer = {
 };
 
 /** The two discovery surfaces: free deterministic Scan vs token-spending AI search. */
+// One shared answer to "which tracker row is this offer?" — used by the explore
+// join, the home fresh-matches join, and /api/tracker/status resolution, so the
+// three can never drift. Exact normalized company match first; agency-posted
+// rows (#1596 convention: company is the locale-invariant "?", the agency name
+// survives in the report slug and notes — e.g. row #311, BettingJobs) match on
+// that evidence instead. The role must overlap either way.
+export function matchOfferToApplication<A extends { n: string; company: string; role: string; report: string; notes: string }>(
+  apps: A[],
+  company: string,
+  title: string,
+): A | undefined {
+  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const c = norm(company);
+  const t = norm(title);
+  if (!c) return undefined;
+  const roleOk = (a: A) => {
+    const ar = norm(a.role);
+    return ar.length > 3 && (t.includes(ar) || ar.includes(t.split(" ").slice(0, 3).join(" ")));
+  };
+  const exact = apps.find((a) => norm(a.company) === c && roleOk(a));
+  if (exact) return exact;
+  const compact = c.replace(/\s+/g, "");
+  if (!compact) return undefined;
+  return apps.find((a) => a.company.trim() === "?" && norm(a.report + " " + a.notes).replace(/\s+/g, "").includes(compact) && roleOk(a));
+}
+
 export type ExploreMode = "scan" | "ai";
 
 /** Stream event grammar (NDJSON). `kind` discriminates. Discovery is FREE — the

@@ -8,7 +8,7 @@ import { instrumentSerif } from "@/lib/fonts";
 import { HeroGlow } from "@/components/hero-glow";
 import type { Application, InboxJob, TrendPoint } from "@/lib/career-ops";
 import { canonStatus } from "@/lib/format";
-import type { DiscoveredOffer } from "@/lib/explore";
+import { matchOfferToApplication, type DiscoveredOffer } from "@/lib/explore";
 import { DiscoveryCard } from "@/components/explore/discovery-card";
 import { FollowUpCard, type FollowUp } from "@/components/home/follow-up-card";
 import { DecisionCard } from "@/components/home/decision-card";
@@ -130,9 +130,14 @@ export function TodayDashboard({
       {fresh.length > 0 && (
         <Section icon={Sparkles} title="Fresh matches this week" hint="Found by your free scans · 0 tokens">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {fresh.slice(0, 6).map((o) => (
-              <DiscoveryCard key={o.url} offer={o} inPipeline={inboxUrls.has(o.url)} />
-            ))}
+            {fresh.slice(0, 6).map((o) => {
+              // Same join as explore: lights up the evaluated state (and the
+              // Applied/Ignore buttons) on home cards too. `applications` is a
+              // server snapshot refreshed via router.refresh() when a worker
+              // finishes, so the buttons appear without a manual reload.
+              const ev = matchOfferToApplication(applications, o.company, o.title);
+              return <DiscoveryCard key={o.url} offer={o} inPipeline={inboxUrls.has(o.url)} evaluatedN={ev?.n} evaluatedStatus={ev?.status} />;
+            })}
           </div>
           {fresh.length > 6 && (
             <Link href="/explore" className="mt-3 inline-flex items-center text-sm text-muted transition hover:text-brand max-sm:min-h-[44px]">

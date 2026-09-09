@@ -6,7 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { instrumentSerif } from "@/lib/fonts";
 import type { Application, InboxJob } from "@/lib/career-ops";
-import { paramsToFilters, paramsToAi, type ExploreFilters } from "@/lib/explore";
+import { paramsToFilters, paramsToAi, matchOfferToApplication, type ExploreFilters } from "@/lib/explore";
 import { FilterBuilder } from "./filter-builder";
 import { DiscoveringState } from "./discovering-state";
 import { AiHuntView } from "./ai-hunt-view";
@@ -15,7 +15,6 @@ import { AiSearchBox } from "./ai-search-box";
 import { ResultsList, type EnrichedOffer } from "./results-list";
 import { useExplore } from "./explore-provider";
 
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const CLI_NAMES: Record<string, string> = {
   claude: "Claude Code",
   codex: "Codex",
@@ -105,13 +104,7 @@ export function ExplorerView({
     () =>
       offers.map((o) => {
         const inPipeline = inboxUrls.has(o.url);
-        const c = norm(o.company);
-        const t = norm(o.title);
-        const ev = appsSnapshot.find((a) => {
-          if (norm(a.company) !== c) return false;
-          const ar = norm(a.role);
-          return ar.length > 3 && (t.includes(ar) || ar.includes(t.split(" ").slice(0, 3).join(" ")));
-        });
+        const ev = matchOfferToApplication(appsSnapshot, o.company, o.title);
         return { ...o, inPipeline, evaluatedN: ev?.n, evaluatedStatus: ev?.status };
       }),
     [offers, inboxUrls, appsSnapshot],
