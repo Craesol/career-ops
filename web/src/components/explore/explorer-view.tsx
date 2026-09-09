@@ -112,7 +112,7 @@ export function ExplorerView({
           const ar = norm(a.role);
           return ar.length > 3 && (t.includes(ar) || ar.includes(t.split(" ").slice(0, 3).join(" ")));
         });
-        return { ...o, inPipeline, evaluatedN: ev?.n };
+        return { ...o, inPipeline, evaluatedN: ev?.n, evaluatedStatus: ev?.status };
       }),
     [offers, inboxUrls, appsSnapshot],
   );

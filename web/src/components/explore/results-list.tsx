@@ -8,7 +8,7 @@ import { CostBadge } from "@/components/cost/cost-badge";
 import { DiscoveryCard } from "./discovery-card";
 import { useExplore } from "./explore-provider";
 
-export type EnrichedOffer = DiscoveredOffer & { inPipeline: boolean; evaluatedN?: string };
+export type EnrichedOffer = DiscoveredOffer & { inPipeline: boolean; evaluatedN?: string; evaluatedStatus?: string };
 
 export function ResultsList({ offers }: { offers: EnrichedOffer[] }) {
   const { companiesScanned, partial, addToPipeline, added, mode } = useExplore();
@@ -79,7 +79,7 @@ export function ResultsList({ offers }: { offers: EnrichedOffer[] }) {
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {view.map((o) => (
-          <DiscoveryCard key={o.url} offer={o} inPipeline={o.inPipeline} evaluatedN={o.evaluatedN} />
+          <DiscoveryCard key={o.url} offer={o} inPipeline={o.inPipeline} evaluatedN={o.evaluatedN} evaluatedStatus={o.evaluatedStatus} />
         ))}
       </div>
 

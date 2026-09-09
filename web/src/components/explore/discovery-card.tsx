@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ExternalLink, Plus, Check, Loader2, ShieldQuestion, Sparkles, Coins, FileDown, Trash2 } from "lucide-react";
+import { ExternalLink, Plus, Check, Loader2, ShieldQuestion, Sparkles, Coins, FileDown, Trash2, Send, EyeOff } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { instrumentSerif } from "@/lib/fonts";
 import { ATS_LABEL, type AtsSource, type DiscoveredOffer } from "@/lib/explore";
@@ -43,10 +43,49 @@ function Logo({ company }: { company: string }) {
 // What a running worker is doing on this exact posting → the live CTA label.
 const WORKER_LABEL: Record<string, string> = { evaluate: "Evaluating…", "evaluate-cv": "Evaluating + CV…", pdf: "Preparing CV…", research: "Researching…", apply: "Filling…" };
 
-export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: DiscoveredOffer; inPipeline: boolean; evaluatedN?: string }) {
+export function DiscoveryCard({
+  offer,
+  inPipeline,
+  evaluatedN,
+  evaluatedStatus,
+}: {
+  offer: DiscoveredOffer;
+  inPipeline: boolean;
+  evaluatedN?: string;
+  evaluatedStatus?: string;
+}) {
   const { added, adding, addToPipeline, dismissOffer } = useExplore();
   const { jobs, startJob } = useJobs();
   const [removed, setRemoved] = useState<"" | "removing" | "removed">("");
+  // Applied / Ignore after an evaluation+CV: the write goes through the core's
+  // canonical set-status.mjs via /api/tracker/status (never a hand-edit).
+  const [mark, setMark] = useState<"" | "applying" | "ignoring" | "applied">(evaluatedStatus === "Applied" ? "applied" : "");
+  const [markErr, setMarkErr] = useState("");
+
+  const setTrackerStatus = async (state: "Applied" | "Discarded") => {
+    setMark(state === "Applied" ? "applying" : "ignoring");
+    setMarkErr("");
+    try {
+      const res = await fetch("/api/tracker/status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          row: evaluatedN,
+          company: offer.company,
+          title: offer.title,
+          state,
+          note: state === "Applied" ? "Applied — marked from the web card" : "Ignored from the web card",
+        }),
+      });
+      const j = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !j.ok) throw new Error(j.error || `HTTP ${res.status}`);
+      if (state === "Applied") setMark("applied");
+      else setRemoved("removed");
+    } catch (e) {
+      setMark("");
+      setMarkErr(e instanceof Error ? e.message : String(e));
+    }
+  };
 
   // GLOBAL worker awareness: any worker acting on this URL drives the CTA, here
   // and on every other surface that renders this offer (the jobs store is global).
@@ -155,12 +194,41 @@ export function DiscoveryCard({ offer, inPipeline, evaluatedN }: { offer: Discov
 
       <div className="mt-0.5">
         {evaluatedN || doneEval ? (
-          <a
-            href={evaluatedN ? `/pipeline/${evaluatedN}` : job ? `/jobs/${job.id}` : "/pipeline"}
-            className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand-soft px-2.5 py-2 text-xs font-medium text-brand max-sm:min-h-[44px]"
-          >
-            <Check className="size-3.5" /> {doneCv ? "Evaluated · CV ready" : "Evaluated · view report"}
-          </a>
+          <div className="flex flex-col gap-2">
+            <a
+              href={evaluatedN ? `/pipeline/${evaluatedN}` : job ? `/jobs/${job.id}` : "/pipeline"}
+              className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-brand-soft px-2.5 py-2 text-xs font-medium text-brand max-sm:min-h-[44px]"
+            >
+              <Check className="size-3.5" /> {doneCv ? "Evaluated · CV ready" : "Evaluated · view report"}
+            </a>
+            {mark === "applied" ? (
+              <div className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-emerald-500/10 px-2.5 py-2 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                <Check className="size-3.5" /> Applied · in your funnel
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  disabled={mark !== ""}
+                  onClick={() => void setTrackerStatus("Applied")}
+                  title="You sent the application — moves this role to the Applied stage of your pipeline and seeds the follow-up reminder"
+                  className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-emerald-500/40 px-2.5 py-2 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10 disabled:opacity-60 dark:text-emerald-400 max-sm:min-h-[44px]"
+                >
+                  {mark === "applying" ? <Loader2 className="size-3.5 animate-spin" /> : <Send className="size-3.5" />} Applied
+                </button>
+                <button
+                  type="button"
+                  disabled={mark !== ""}
+                  onClick={() => void setTrackerStatus("Discarded")}
+                  title="Not applying — marks the tracker row Discarded and hides this card"
+                  className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-border px-2.5 py-2 text-xs font-medium text-faint transition-colors hover:border-red-500/40 hover:text-red-500 disabled:opacity-60 max-sm:min-h-[44px]"
+                >
+                  {mark === "ignoring" ? <Loader2 className="size-3.5 animate-spin" /> : <EyeOff className="size-3.5" />} Ignore
+                </button>
+              </div>
+            )}
+            {markErr && <p className="text-[11px] leading-snug text-red-500">{markErr}</p>}
+          </div>
         ) : working ? (
           <div className="inline-flex w-full items-center justify-center gap-1.5 rounded-md border border-brand/30 bg-brand-soft/60 px-2.5 py-2 text-xs font-medium text-brand">
             <Loader2 className="size-3.5 animate-spin" />
