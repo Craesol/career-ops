@@ -12,7 +12,10 @@ set MAX_AGE_DAYS=7
 echo [%date% %time%] hourly scan >> logs\hourly-scan.log
 node scan.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] L3 deep scan (all queries, sonnet) >> logs\hourly-scan.log
-curl -s --max-time 900 -X POST http://localhost:3000/api/explore/l3 -H "Content-Type: application/json" -d "{\"cliId\":\"claude\",\"model\":\"sonnet\"}" | findstr cliExit >> logs\hourly-scan.log 2>&1
+REM findstr /V progress: keep start/proposed/done AND the route's log/error
+REM lines (CLI stderr) - the 18:31-21:31 2026-09-09 cliExit:1 streak was
+REM undiagnosable because only the done line was kept.
+curl -s --max-time 900 -X POST http://localhost:3000/api/explore/l3 -H "Content-Type: application/json" -d "{\"cliId\":\"claude\",\"model\":\"sonnet\"}" | findstr /V progress >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] auto-triage >> logs\hourly-scan.log
 node auto-triage.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] done (exit %ERRORLEVEL%) >> logs\hourly-scan.log
