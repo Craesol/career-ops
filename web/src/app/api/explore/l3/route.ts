@@ -2,7 +2,6 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
 import * as yaml from "js-yaml";
 import { resolveCli } from "@/lib/clis";
 import { careerOpsRoot } from "@/lib/career-ops";
@@ -154,119 +153,12 @@ export async function POST(req: Request) {
           return;
         }
 
-        // Persist through the CORE's own filters + writers (subprocess, same
-        // pattern as core/pipeline.ts — the web never owns a parallel copy).
-        const scanUrl = pathToFileURL(path.join(careerOpsRoot(), "scan.mjs")).href;
-        const pruneUrl = pathToFileURL(path.join(careerOpsRoot(), "prune-stale-web3career.mjs")).href;
-        const liStaleUrl = pathToFileURL(path.join(careerOpsRoot(), "lib", "linkedin-stale.mjs")).href;
-        const livenessApiUrl = pathToFileURL(path.join(careerOpsRoot(), "liveness-api.mjs")).href;
-        const freshnessUrl = pathToFileURL(path.join(careerOpsRoot(), "lib", "posting-freshness.mjs")).href;
-        const code2 = `
-import { readFileSync } from 'node:fs';
-import { appendToPipeline, appendToScanHistory, buildTitleFilter, buildLocationFilter } from ${JSON.stringify(scanUrl)};
-import { w3cStaleFilter } from ${JSON.stringify(pruneUrl)};
-import { isStaleLinkedInJobUrl } from ${JSON.stringify(liStaleUrl)};
-import * as yaml from 'js-yaml';
-let input = '';
-process.stdin.setEncoding('utf8');
-process.stdin.on('data', d => { input += d; });
-process.stdin.on('end', async () => {
-  try {
-    const offers = JSON.parse(input);
-    const cfg = yaml.load(readFileSync('portals.yml', 'utf8'));
-    const tf = buildTitleFilter(cfg.title_filter);
-    const lf = buildLocationFilter(cfg.location_filter);
-    const stale = w3cStaleFilter();
-    // url → {date, status} from scan-history (cols: url, date, query, title, portal, status).
-    // Known finds are RETURNED, not swallowed — the UI shows them with their real
-    // status instead of an empty pane ("it found 25 things you already have" ≠ "it found nothing").
-    const hist = new Map();
-    for (const l of readFileSync('data/scan-history.tsv', 'utf8').split('\\n')) {
-      const c = l.split('\\t');
-      if (c[0]) hist.set(c[0], { date: c[1] || '', status: (c[5] || '').trim() });
-    }
-    const fresh = [];
-    const knownOut = [];
-    const filteredOut = [];
-    const idStale = [];
-    const rejected = { dup: 0, title: 0, location: 0, stale: 0, expired: 0 };
-    for (const o of offers) {
-      const k = hist.get(o.url);
-      if (k) { rejected.dup++; knownOut.push({ ...o, knownSince: k.date, knownStatus: k.status }); continue; }
-      if (stale.isStale(o.url)) { rejected.stale++; filteredOut.push({ ...o, filteredBy: 'stale' }); continue; }
-      // Sequential-ID floor: a LinkedIn job id below the cutoff is months-to-years
-      // old (a 2021 posting reached fresh-matches on 2026-09-08 this way). Persisted
-      // as 'skipped' so dedup blocks every future re-proposal of the same URL.
-      if (isStaleLinkedInJobUrl(o.url)) { rejected.stale++; idStale.push(o); filteredOut.push({ ...o, filteredBy: 'stale' }); continue; }
-      if (!tf(o.title)) { rejected.title++; filteredOut.push({ ...o, filteredBy: 'title' }); continue; }
-      if (!lf(o.location, o.url, o.title)) { rejected.location++; filteredOut.push({ ...o, filteredBy: 'location' }); continue; }
-      fresh.push(o);
-    }
-    // Proof-of-freshness policy (2026-09-09, after two zombie incidents in two
-    // days): an L3 find ENTERS only when something DATES it — the ATS API says
-    // active, or the page itself proves recency (LinkedIn sequential id,
-    // JSON-LD datePosted within 45d and no past validThrough/deadline).
-    // 'unknown' is dropped as unproven — recall traded for precision on
-    // purpose: real fresh postings also arrive via the API scanners, feeds
-    // and ats-full, which all carry dates. Heuristic browser liveness is gone
-    // from this path: it read a page with a 2023 deadline as alive. Unproven
-    // finds are NOT persisted, so they stay visible in the UI's filtered list
-    // (reason 'unverified') where a human can rescue one that matters.
-    let liveFresh = fresh;
-    const deadFinds = [];
-    let gateError = null;
-    if (fresh.length) {
-      liveFresh = [];
-      try {
-        const { checkLivenessViaApi } = await import(${JSON.stringify(livenessApiUrl)});
-        const { assessPostingFreshness } = await import(${JSON.stringify(freshnessUrl)});
-        for (const o of fresh) {
-          let outcome = 'unproven';
-          let why = '';
-          try {
-            const api = await checkLivenessViaApi(o.url);
-            if (api && api.result === 'expired') { outcome = 'dead'; why = 'ats api: expired'; }
-            else if (api && api.result === 'active') { outcome = 'pass'; why = 'ats api: active'; }
-            else {
-              const f = await assessPostingFreshness(o.url);
-              if (f.verdict === 'fresh') { outcome = 'pass'; why = f.reason; }
-              else if (f.verdict === 'expired' || f.verdict === 'stale') { outcome = 'dead'; why = f.reason; }
-              else { outcome = 'unproven'; why = f.reason; }
-            }
-          } catch (e) {
-            outcome = 'unproven';
-            why = 'freshness check failed: ' + String((e && e.message) || e);
-          }
-          if (outcome === 'pass') {
-            o.note = (o.note ? o.note + ' · ' : '') + why;
-            liveFresh.push(o);
-          } else if (outcome === 'dead') {
-            rejected.expired++;
-            deadFinds.push(o);
-            filteredOut.push({ ...o, filteredBy: 'expired', note: why });
-          } else {
-            rejected.unverified = (rejected.unverified || 0) + 1;
-            filteredOut.push({ ...o, filteredBy: 'unverified', note: why });
-          }
-        }
-      } catch (e) {
-        gateError = String((e && e.message) || e);
-        liveFresh = [];
-      }
-    }
-    if (idStale.length) appendToScanHistory(idStale, ${JSON.stringify(today)}, 'skipped');
-    if (deadFinds.length) appendToScanHistory(deadFinds, ${JSON.stringify(today)}, 'skipped_expired');
-    if (liveFresh.length) {
-      appendToPipeline(liveFresh);
-      appendToScanHistory(liveFresh, ${JSON.stringify(today)}, 'added');
-    }
-    process.stdout.write(JSON.stringify({ added: liveFresh.length, rejected, offers: liveFresh, known: knownOut.slice(0, 40), filtered: filteredOut.slice(0, 40), ...(gateError ? { livenessGateUnavailable: gateError } : {}) }));
-  } catch (e) {
-    process.stdout.write(JSON.stringify({ added: 0, error: String((e && e.message) || e) }));
-  }
-});
-`;
-        const writer = spawn(process.execPath, ["--input-type=module", "-e", code2], { cwd: careerOpsRoot(), env: process.env });
+        // Persist through the CORE's canonical L3 writer (l3-writer.mjs) — the
+        // repo-root file that owns the whole gate pipeline (dedup → stale-id →
+        // LinkedIn floor → title/location → proof-of-freshness). Extracted
+        // 2026-09-10 so this route and gemini-l3.mjs share ONE implementation;
+        // the web never owns a parallel copy.
+        const writer = spawn(process.execPath, [path.join(careerOpsRoot(), "l3-writer.mjs")], { cwd: careerOpsRoot(), env: process.env });
         let wout = "";
         writer.stdout.on("data", (d: Buffer) => (wout += d.toString()));
         writer.on("close", () => {
