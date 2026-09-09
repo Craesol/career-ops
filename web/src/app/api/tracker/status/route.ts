@@ -70,16 +70,16 @@ export async function POST(req: Request) {
     });
   });
 
-  // set-status --json prints one JSON object; dotenv banners can precede it.
+  // set-status --json pretty-prints one multi-line JSON object; banners can
+  // precede it, so parse from the first "{" to the last "}".
   let parsed: Record<string, unknown> | null = null;
-  for (const line of result.out.split(/\r?\n/).reverse()) {
-    const t = line.trim();
-    if (!t.startsWith("{")) continue;
+  const start = result.out.indexOf("{");
+  const end = result.out.lastIndexOf("}");
+  if (start >= 0 && end > start) {
     try {
-      parsed = JSON.parse(t);
-      break;
+      parsed = JSON.parse(result.out.slice(start, end + 1));
     } catch {
-      /* keep scanning */
+      /* non-JSON output — exit code still decides success below */
     }
   }
   if (result.code !== 0) {
