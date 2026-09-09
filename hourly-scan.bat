@@ -12,10 +12,11 @@ set MAX_AGE_DAYS=7
 echo [%date% %time%] hourly scan >> logs\hourly-scan.log
 node scan.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] L3 deep scan (all queries, sonnet) >> logs\hourly-scan.log
-REM findstr /V progress: keep start/proposed/done AND the route's log/error
-REM lines (CLI stderr) - the 18:31-21:31 2026-09-09 cliExit:1 streak was
-REM undiagnosable because only the done line was kept.
-curl -s --max-time 900 -X POST http://localhost:3000/api/explore/l3 -H "Content-Type: application/json" -d "{\"cliId\":\"claude\",\"model\":\"sonnet\"}" | findstr /V progress >> logs\hourly-scan.log 2>&1
+REM l3-log-filter.mjs (NOT findstr): findstr silently drops lines over ~8KB,
+REM which ate every successful done line and faked a failure streak on
+REM 2026-09-09. The filter keeps start/proposed/done/log/error, drops
+REM progress, truncates long lines to 400 chars.
+curl -s --max-time 900 -X POST http://localhost:3000/api/explore/l3 -H "Content-Type: application/json" -d "{\"cliId\":\"claude\",\"model\":\"sonnet\"}" | node l3-log-filter.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] auto-triage >> logs\hourly-scan.log
 node auto-triage.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] done (exit %ERRORLEVEL%) >> logs\hourly-scan.log
