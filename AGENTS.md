@@ -46,8 +46,10 @@ disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
 2026-09-06).
 
 DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07, upgraded
-to DEEP 2026-09-08, dual-engine 2026-09-10 — both at the user's request):
-every hour 08:31-23:31 it runs `hourly-scan.bat` — three sequential steps:
+to DEEP 2026-09-08, dual-engine 2026-09-10, 24h 2026-09-10 — all at the
+user's request): every hour AROUND THE CLOCK (daily trigger 08:31 repeating
+1h for 23h = 08:31→06:31, deliberately skipping 07:31 — the nightly's slot)
+it runs `hourly-scan.bat` — three sequential steps:
 (1) scan.mjs (zero tokens), (2) `l3-hourly.mjs` — the L3 deep scan with a
 dual-engine orchestrator sharing ONE canonical writer (`l3-writer.mjs`, the
 whole gate pipeline). TODAY claude (sonnet via the local web's

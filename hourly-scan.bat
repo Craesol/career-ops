@@ -1,6 +1,9 @@
 @echo off
 REM career-ops hourly DEEP scanner - DESKTOP-P4PVO1V (CAJITA)
-REM Task Scheduler: every hour 08:31-23:31. Three sequential steps:
+REM Task Scheduler: every hour AROUND THE CLOCK (user request 2026-09-10):
+REM daily trigger 08:31 repeating 1h for 23h = 08:31 -> 06:31 next morning,
+REM deliberately skipping 07:31 - that slot belongs to the nightly.
+REM Three sequential steps:
 REM   1) scan.mjs        - ATS APIs + boards + feeds (zero tokens)
 REM   2) l3-hourly.mjs   - deep scan, dual-engine orchestrator, one writer.
 REM                        TODAY: claude primary every hour (sonnet via the
