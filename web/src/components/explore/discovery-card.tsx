@@ -58,8 +58,10 @@ export function DiscoveryCard({
   const { jobs, startJob } = useJobs();
   const [removed, setRemoved] = useState<"" | "removing" | "removed">("");
   // Applied / Ignore after an evaluation+CV: the write goes through the core's
-  // canonical set-status.mjs via /api/tracker/status (never a hand-edit).
-  const [mark, setMark] = useState<"" | "applying" | "ignoring" | "applied">(evaluatedStatus === "Applied" ? "applied" : "");
+  // canonical set-status.mjs via /api/tracker/status (never a hand-edit). On
+  // success the card DISAPPEARS either way (user rule 2026-09-09) — fresh
+  // matches only show roles still awaiting a decision.
+  const [mark, setMark] = useState<"" | "applying" | "ignoring">("");
   const [markErr, setMarkErr] = useState("");
 
   const setTrackerStatus = async (state: "Applied" | "Discarded") => {
@@ -79,8 +81,7 @@ export function DiscoveryCard({
       });
       const j = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (!res.ok || !j.ok) throw new Error(j.error || `HTTP ${res.status}`);
-      if (state === "Applied") setMark("applied");
-      else setRemoved("removed");
+      setRemoved("removed");
     } catch (e) {
       setMark("");
       setMarkErr(e instanceof Error ? e.message : String(e));
@@ -125,7 +126,12 @@ export function DiscoveryCard({
     setRemoved("removed");
   };
 
+  // A row that already left the "awaiting decision" stage (Applied, Discarded,
+  // SKIP, Rejected, deeper funnel…) never renders as a fresh match again —
+  // clicking Applied/Ignore hides the card now, and this keeps it hidden on
+  // the next visit. Only an evaluated-and-undecided row (or no row yet) shows.
   if (removed === "removed") return null;
+  if (evaluatedStatus && evaluatedStatus !== "Evaluated") return null;
 
   return (
     <div className="co-rise group flex min-w-0 flex-col gap-2.5 rounded-xl border border-border bg-surface/40 p-3.5 text-left transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-sm">
@@ -201,32 +207,26 @@ export function DiscoveryCard({
             >
               <Check className="size-3.5" /> {doneCv ? "Evaluated · CV ready" : "Evaluated · view report"}
             </a>
-            {mark === "applied" ? (
-              <div className="inline-flex w-full items-center justify-center gap-1.5 rounded-md bg-emerald-500/10 px-2.5 py-2 text-xs font-medium text-emerald-600 dark:text-emerald-400">
-                <Check className="size-3.5" /> Applied · in your funnel
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  disabled={mark !== ""}
-                  onClick={() => void setTrackerStatus("Applied")}
-                  title="You sent the application — moves this role to the Applied stage of your pipeline and seeds the follow-up reminder"
-                  className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-emerald-500/40 px-2.5 py-2 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10 disabled:opacity-60 dark:text-emerald-400 max-sm:min-h-[44px]"
-                >
-                  {mark === "applying" ? <Loader2 className="size-3.5 animate-spin" /> : <Send className="size-3.5" />} Applied
-                </button>
-                <button
-                  type="button"
-                  disabled={mark !== ""}
-                  onClick={() => void setTrackerStatus("Discarded")}
-                  title="Not applying — marks the tracker row Discarded and hides this card"
-                  className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-border px-2.5 py-2 text-xs font-medium text-faint transition-colors hover:border-red-500/40 hover:text-red-500 disabled:opacity-60 max-sm:min-h-[44px]"
-                >
-                  {mark === "ignoring" ? <Loader2 className="size-3.5 animate-spin" /> : <EyeOff className="size-3.5" />} Ignore
-                </button>
-              </div>
-            )}
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                disabled={mark !== ""}
+                onClick={() => void setTrackerStatus("Applied")}
+                title="You sent the application — moves this role to the Applied stage of your pipeline, seeds the follow-up reminder, and clears this card"
+                className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-emerald-500/40 px-2.5 py-2 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10 disabled:opacity-60 dark:text-emerald-400 max-sm:min-h-[44px]"
+              >
+                {mark === "applying" ? <Loader2 className="size-3.5 animate-spin" /> : <Send className="size-3.5" />} Applied
+              </button>
+              <button
+                type="button"
+                disabled={mark !== ""}
+                onClick={() => void setTrackerStatus("Discarded")}
+                title="Not applying — marks the tracker row Discarded and clears this card"
+                className="inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-border px-2.5 py-2 text-xs font-medium text-faint transition-colors hover:border-red-500/40 hover:text-red-500 disabled:opacity-60 max-sm:min-h-[44px]"
+              >
+                {mark === "ignoring" ? <Loader2 className="size-3.5 animate-spin" /> : <EyeOff className="size-3.5" />} Ignore
+              </button>
+            </div>
             {markErr && <p className="text-[11px] leading-snug text-red-500">{markErr}</p>}
           </div>
         ) : working ? (
