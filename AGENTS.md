@@ -48,14 +48,19 @@ disable it: `schtasks /change /tn "career-ops-daily-consolidated" /disable`
 DESKTOP-P4PVO1V also owns `career-ops-hourly-scan` (added 2026-09-07, upgraded
 to DEEP 2026-09-08, dual-engine 2026-09-10 — both at the user's request):
 every hour 08:31-23:31 it runs `hourly-scan.bat` — three sequential steps:
-(1) scan.mjs (zero tokens), (2) `l3-hourly.mjs` — the L3 deep scan with TWO
-alternating engines sharing ONE canonical writer (`l3-writer.mjs`, the whole
-gate pipeline): EVEN hours run `gemini-l3.mjs` (Gemini API + Google Search
-grounding, FREE tier, key in .env), ODD hours run claude headless on sonnet
-via the local web's `/api/explore/l3` (spends Claude-plan usage ~8×/day);
-either engine failing fails over to the other, so no hour goes uncovered,
-(3) auto-triage.mjs free Gemini prescores. Sweeps, prunes and the single
-daily digest email remain exclusive to the 07:31 nightly.
+(1) scan.mjs (zero tokens), (2) `l3-hourly.mjs` — the L3 deep scan with a
+dual-engine orchestrator sharing ONE canonical writer (`l3-writer.mjs`, the
+whole gate pipeline). TODAY claude (sonnet via the local web's
+`/api/explore/l3`, ~16×/day plan usage) is primary every hour and
+`gemini-l3.mjs` (Gemini API + Google Search grounding) is failover only: the
+key's FREE tier 429s on any grounded call (probed 2026-09-10) — plain calls
+work, which is why auto-triage prescores are unaffected. If the user enables
+billing on the Google project (its daily grounding allowance covers our
+volume at $0), set `L3_ALTERNATE=1` in hourly-scan.bat: even hours then run
+gemini free and odd hours claude, halving plan burn. Either engine failing
+fails over to the other. (3) auto-triage.mjs free Gemini prescores. Sweeps,
+prunes and the single daily digest email remain exclusive to the 07:31
+nightly.
 
 DESKTOP-P4PVO1V also owns `career-ops-ats-full` (added 2026-09-08): daily 03:33
 as SYSTEM it runs `ats-full.bat` → `scan-ats-full.mjs --since 2` — the reverse

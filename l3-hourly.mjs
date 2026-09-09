@@ -6,10 +6,13 @@
 //            spends Claude-plan usage)
 //   gemini — gemini-l3.mjs (Gemini API + Google Search grounding, free tier)
 //
-// Schedule: EVEN hours run gemini (free), ODD hours run claude — halves the
-// plan burn and searches two different indexes across the day. If the chosen
-// engine fails (CLI error, quota, web down), the OTHER one runs as failover,
-// so a limit window on either side never leaves an hour uncovered.
+// Schedule: with L3_ALTERNATE=1, EVEN hours run gemini and ODD hours claude —
+// halves the plan burn and searches two different indexes. DEFAULT is claude
+// primary every hour with gemini as failover only: probed 2026-09-10, this
+// key's FREE tier returns 429 on any google_search-grounded call (plain calls
+// are fine), so alternation stays dormant until the user enables billing on
+// the Google project (the paid tier's daily grounding allowance covers our
+// ~184 queries/day at $0). Flip L3_ALTERNATE=1 in hourly-scan.bat then.
 //
 // Env: L3_ENGINE=claude|gemini forces the primary (testing); the failover
 // still applies. Output is log-friendly: progress dropped, lines truncated.
@@ -73,7 +76,9 @@ async function runClaudeL3() {
 async function main() {
   const hour = new Date().getHours();
   const forced = (process.env.L3_ENGINE || '').toLowerCase();
-  const primary = forced === 'claude' || forced === 'gemini' ? forced : hour % 2 === 0 ? 'gemini' : 'claude';
+  const alternate = process.env.L3_ALTERNATE === '1';
+  const primary =
+    forced === 'claude' || forced === 'gemini' ? forced : alternate && hour % 2 === 0 ? 'gemini' : 'claude';
   const secondary = primary === 'gemini' ? 'claude' : 'gemini';
   const run = (name) => (name === 'gemini' ? runGeminiL3() : runClaudeL3());
 

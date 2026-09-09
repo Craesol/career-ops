@@ -169,8 +169,10 @@ export async function runGeminiL3() {
   const proposed = [];
   const seen = new Set();
   let failed = 0;
+  let attempted = 0;
   for (let i = 0; i < queries.length; i++) {
     const q = queries[i];
+    attempted++;
     try {
       const text = await groundedCall(apiKey, model, buildPrompt(q, today));
       const found = parseEnvelopes(text, q.name);
@@ -180,7 +182,7 @@ export async function runGeminiL3() {
       console.log('  [' + (i + 1) + '/' + queries.length + '] ' + q.name + ' → ' + found.length);
     } catch (e) {
       failed++;
-      console.error('  [' + (i + 1) + '/' + queries.length + '] ' + q.name + ' FAILED: ' + e.message);
+      console.error('  [' + (i + 1) + '/' + queries.length + '] ' + q.name + ' FAILED: ' + String(e.message).slice(0, 160));
       // A quota error mid-run means the rest will fail too — stop burning calls.
       if (e.status === 429 && failed >= 2) {
         console.error('  quota exhausted — stopping early');
@@ -190,9 +192,12 @@ export async function runGeminiL3() {
     if (i < queries.length - 1) await sleep(gap);
   }
 
-  if (proposed.length === 0 && failed >= queries.length) {
-    console.error('gemini-l3: every query failed — engine unusable this run');
-    return { engine: 'gemini', ok: false, reason: 'all queries failed', failed };
+  // Engine-unusable = nothing proposed and every ATTEMPTED query failed —
+  // covers the early-stop path too (the 2026-09-10 test: 2 quota failures out
+  // of 4 planned read as "ok" and skipped the Claude failover).
+  if (proposed.length === 0 && failed > 0 && failed === attempted) {
+    console.error('gemini-l3: every attempted query failed — engine unusable this run');
+    return { engine: 'gemini', ok: false, reason: 'all ' + attempted + ' attempted queries failed', failed };
   }
 
   const summary = proposed.length ? await runWriter(proposed) : { added: 0, rejected: {}, offers: [], known: [], filtered: [] };
