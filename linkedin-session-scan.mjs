@@ -126,6 +126,12 @@ async function main() {
     } else {
       await page.reload({ waitUntil: 'domcontentloaded', timeout: 60_000 });
     }
+    // The search-results SPA hydrates slowly on this box — wait for actual
+    // card links (2026-09-15: extracting after a fixed 8.5s saw 0-1 links;
+    // the settled page holds ~29).
+    await page
+      .waitForSelector('a[href*="currentJobId="], a[href*="/jobs/view/"]', { timeout: 45_000 })
+      .catch(() => {});
     await page.waitForTimeout(6000);
     // One gentle scroll of the results pane so lazy cards render; nothing else.
     await page.evaluate(() => {
