@@ -113,7 +113,8 @@ async function main() {
       }
       if (page) break;
     }
-    if (!page) {
+    const isNew = !page;
+    if (isNew) {
       const url = env.LINKEDIN_SEARCH_URL;
       if (!url) {
         console.log('linkedin-session: sin pestaña de LinkedIn abierta y sin LINKEDIN_SEARCH_URL — saltado');
@@ -122,83 +123,105 @@ async function main() {
       const ctx = browser.contexts()[0];
       if (!ctx) { console.log('linkedin-session: sin contexto de navegador — saltado'); return; }
       page = await ctx.newPage();
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+    }
+
+    // LinkedIn's 2026 search UI is an RSC app: the result cards carry NO ids
+    // in the live DOM (hydration consumes and removes the state scripts), but
+    // the ~5MB DOCUMENT delivered on reload contains every jobPosting id.
+    // Capture the raw document body during the refresh and regex the ids out —
+    // format-agnostic, survives their class obfuscation.
+    let rawDoc = '';
+    page.on('response', (res) => {
+      try {
+        if (res.request().resourceType() !== 'document') return;
+        if (!/linkedin\.com\/jobs/i.test(res.url())) return;
+        res.text().then((t) => { if (t.length > rawDoc.length) rawDoc = t; }).catch(() => {});
+      } catch { /* ignore */ }
+    });
+
+    if (isNew) {
+      await page.goto(env.LINKEDIN_SEARCH_URL, { waitUntil: 'domcontentloaded', timeout: 60_000 });
     } else {
       await page.reload({ waitUntil: 'domcontentloaded', timeout: 60_000 });
     }
-    // The search-results SPA hydrates slowly on this box — wait for actual
-    // card links (2026-09-15: extracting after a fixed 8.5s saw 0-1 links;
-    // the settled page holds ~29).
-    await page
-      .waitForSelector('a[href*="currentJobId="], a[href*="/jobs/view/"]', { timeout: 45_000 })
-      .catch(() => {});
-    await page.waitForTimeout(6000);
-    // One gentle scroll of the results pane so lazy cards render; nothing else.
-    await page.evaluate(() => {
-      const el =
-        document.querySelector('[class*="jobs-search-results-list"]') ||
-        document.querySelector('[class*="scaffold-layout__list"]') ||
-        document.scrollingElement;
-      if (el && typeof el.scrollBy === 'function') el.scrollBy(0, 1400);
-      else if (el) el.scrollTop += 1400;
-    }).catch(() => {});
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(8000);
 
-    const authwall = /authwall|login|checkpoint/i.test(page.url());
-    if (authwall) {
+    if (/authwall|\/login|checkpoint/i.test(page.url())) {
       console.log('linkedin-session: la sesión pide login (authwall) — reinicia sesión en Brave; saltado');
       return;
     }
 
-    // LinkedIn renders TWO search UIs: the classic one links cards to
-    // /jobs/view/{id}, the newer search-results SPA links them as
-    // ?currentJobId={id} and tags list items with data-occludable-job-id.
-    // Read all three shapes (first live run 2026-09-15 hit the SPA and saw
-    // only the detail pane's single /jobs/view/ link).
-    const cards = await page.evaluate((metaSrc) => {
-      const META = new RegExp(metaSrc, 'i');
+    // Ids: raw document first, DOM anchors as a secondary net (classic UI).
+    const ids = new Set();
+    for (const m of rawDoc.matchAll(/jobPosting(?:Card)?[^0-9a-zA-Z]{0,10}(\d{10})/g)) ids.add(m[1]);
+    for (const m of rawDoc.matchAll(/fsd_jobPosting(?:Card)?%3A(\d{10})/g)) ids.add(m[1]);
+    const domIds = await page.evaluate(() => {
       const out = [];
-      const seen = new Set();
-      const push = (id, root) => {
-        if (!id || seen.has(id) || out.length >= 40) return;
-        seen.add(id);
-        const lines = ((root && root.innerText) || '')
-          .split('\n').map((s) => s.trim())
-          .filter((s) => s && !META.test(s));
-        // LinkedIn duplicates the title line for accessibility — collapse runs.
-        const uniq = lines.filter((l, i) => l !== lines[i - 1]);
-        if (!uniq.length) return;
-        out.push({ id, title: uniq[0] || '', company: uniq[1] || '', location: uniq[2] || '' });
-      };
-      for (const el of document.querySelectorAll('li[data-occludable-job-id]')) {
-        push((el.getAttribute('data-occludable-job-id') || '').match(/\d{8,}/)?.[0], el);
-      }
-      for (const el of document.querySelectorAll('[data-job-id]')) {
-        push((el.getAttribute('data-job-id') || '').match(/\d{8,}/)?.[0], el.closest('li') || el);
-      }
-      for (const a of document.querySelectorAll('a[href*="/jobs/view/"], a[href*="currentJobId="]')) {
-        const m = (a.href || '').match(/(?:\/jobs\/view\/|currentJobId=)(\d{8,})/);
-        if (m) push(m[1], a.closest('li') || a.parentElement);
+      for (const a of document.querySelectorAll('a[href*="/jobs/view/"]')) {
+        const m = (a.href || '').match(/\/jobs\/view\/(\d{8,})/);
+        if (m) out.push(m[1]);
       }
       return out;
-    }, META_RE.source);
-
-    const proposed = cards.slice(0, MAX_CARDS).filter((c) => c.title).map((c) => ({
-      url: 'https://www.linkedin.com/jobs/view/' + c.id + '/',
-      company: c.company || '?',
-      title: c.title,
-      location: c.location || '',
-      source: 'linkedin-session',
-      note: '',
-    }));
-
-    console.log('linkedin-session: ' + proposed.length + ' tarjetas leídas de la pestaña');
-    if (proposed.length === 0) {
-      console.log('linkedin-session: 0 tarjetas — ¿cambió el DOM de LinkedIn o la búsqueda está vacía?');
+    }).catch(() => []);
+    for (const id of domIds) ids.add(id);
+    console.log('linkedin-session: ' + ids.size + ' ids en la página (doc ' + Math.round(rawDoc.length / 1024) + 'KB)');
+    if (ids.size === 0) {
+      console.log('linkedin-session: 0 ids — ¿cambió el formato del documento?');
       return;
     }
+
+    // Only NEW ids get the guest-page metadata fetch — known URLs would be
+    // dedup'd by the writer anyway, so don't spend requests on them.
+    const known = new Set();
+    try {
+      for (const l of readFileSync(resolve(ROOT, 'data', 'scan-history.tsv'), 'utf8').split('\n')) {
+        const u = l.split('\t')[0];
+        const m = u && u.match(/linkedin\.com\/jobs\/view\/(\d{8,})/);
+        if (m) known.add(m[1]);
+      }
+    } catch { /* first run */ }
+    const fresh = [...ids].filter((id) => !known.has(id)).slice(0, 15);
+    console.log('linkedin-session: ' + fresh.length + ' ids nuevos a enriquecer');
+    if (fresh.length === 0) return;
+
+    // Guest /jobs/view/{id} gives a stable <title>: "{Company} hiring {Title}
+    // in {Location} | LinkedIn" or "{Title} at {Company} — {Location} |
+    // LinkedIn Jobs". Plain unauthenticated fetches, capped and spaced.
+    const unescape = (s) => s.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    const proposed = [];
+    for (const id of fresh) {
+      const url = 'https://www.linkedin.com/jobs/view/' + id + '/';
+      try {
+        const ctl = new AbortController();
+        const timer = setTimeout(() => ctl.abort(), 15_000);
+        const res = await fetch(url, {
+          redirect: 'follow',
+          signal: ctl.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',
+            'Accept-Language': 'en',
+          },
+        });
+        clearTimeout(timer);
+        const html = res.ok ? await res.text() : '';
+        const raw = unescape((/<title>([^<]+)<\/title>/i.exec(html)?.[1] || '').replace(/\s*\|\s*LinkedIn( Jobs)?\s*$/i, '').trim());
+        let title = '', company = '?', location = '';
+        let m = /^(.*?) hiring (.*?) in (.+)$/.exec(raw);
+        if (m) { company = m[1]; title = m[2]; location = m[3]; }
+        else if ((m = /^(.*?) at (.*?) [—–-] (.+)$/.exec(raw))) { title = m[1]; company = m[2]; location = m[3]; }
+        else if ((m = /^(.*?) at (.+)$/.exec(raw))) { title = m[1]; company = m[2]; }
+        else if (raw) { title = raw; }
+        if (title) {
+          proposed.push({ url, company: company.trim() || '?', title: title.trim(), location: location.trim(), source: 'linkedin-session', note: '' });
+        }
+      } catch { /* guest fetch failed — drop this id */ }
+      await sleep(1200 + Math.floor(Math.random() * 800));
+    }
+
+    console.log('linkedin-session: ' + proposed.length + ' ofertas enriquecidas');
+    if (proposed.length === 0) return;
     const summary = await runWriter(proposed);
-    const line = JSON.stringify({ kind: 'done', engine: 'linkedin-session', cards: proposed.length, ...summary });
+    const line = JSON.stringify({ kind: 'done', engine: 'linkedin-session', ids: ids.size, nuevos: fresh.length, ...summary });
     console.log(line.length > 400 ? line.slice(0, 400) + ' ...[' + line.length + ' chars total]' : line);
   } finally {
     // connectOverCDP: close() drops OUR connection; Brave keeps running.
