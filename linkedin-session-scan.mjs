@@ -46,7 +46,7 @@ function loadEnvFile() {
 }
 
 // Lines that are card METADATA, not company/location (EN + ES UIs).
-const META_RE = /^(promoted|promocionado|easy apply|solicitud sencilla|actively (recruiting|hiring)|contratación activa|viewed|visto|applied|solicitado|hace \d|posted|\d+\s*(applicants|solicitudes)|new|nuevo)/i;
+const META_RE = /^(promoted|promocionado|easy apply|solicitud sencilla|actively (recruiting|hiring)|contratación activa|viewed|visto|applied|solicitado|hace \d|posted|\d+\s*(applicants|solicitudes)|new|nuevo|con verificación|with verification|verificad)/i;
 
 function runWriter(proposed) {
   return new Promise((resolvePromise) => {
@@ -144,21 +144,35 @@ async function main() {
       return;
     }
 
+    // LinkedIn renders TWO search UIs: the classic one links cards to
+    // /jobs/view/{id}, the newer search-results SPA links them as
+    // ?currentJobId={id} and tags list items with data-occludable-job-id.
+    // Read all three shapes (first live run 2026-09-15 hit the SPA and saw
+    // only the detail pane's single /jobs/view/ link).
     const cards = await page.evaluate((metaSrc) => {
       const META = new RegExp(metaSrc, 'i');
       const out = [];
       const seen = new Set();
-      for (const a of document.querySelectorAll('a[href*="/jobs/view/"]')) {
-        const m = (a.href || '').match(/\/jobs\/view\/(\d{8,})/);
-        if (!m || seen.has(m[1])) continue;
-        seen.add(m[1]);
-        const li = a.closest('li') || a.closest('div[data-job-id]') || a.parentElement;
-        const title = (a.textContent || '').split('\n').map((s) => s.trim()).filter(Boolean)[0] || '';
-        const lines = (li && li.innerText ? li.innerText : '')
+      const push = (id, root) => {
+        if (!id || seen.has(id) || out.length >= 40) return;
+        seen.add(id);
+        const lines = ((root && root.innerText) || '')
           .split('\n').map((s) => s.trim())
-          .filter((s) => s && s !== title && !META.test(s));
-        out.push({ id: m[1], title, company: lines[0] || '', location: lines[1] || '' });
-        if (out.length >= 40) break;
+          .filter((s) => s && !META.test(s));
+        // LinkedIn duplicates the title line for accessibility — collapse runs.
+        const uniq = lines.filter((l, i) => l !== lines[i - 1]);
+        if (!uniq.length) return;
+        out.push({ id, title: uniq[0] || '', company: uniq[1] || '', location: uniq[2] || '' });
+      };
+      for (const el of document.querySelectorAll('li[data-occludable-job-id]')) {
+        push((el.getAttribute('data-occludable-job-id') || '').match(/\d{8,}/)?.[0], el);
+      }
+      for (const el of document.querySelectorAll('[data-job-id]')) {
+        push((el.getAttribute('data-job-id') || '').match(/\d{8,}/)?.[0], el.closest('li') || el);
+      }
+      for (const a of document.querySelectorAll('a[href*="/jobs/view/"], a[href*="currentJobId="]')) {
+        const m = (a.href || '').match(/(?:\/jobs\/view\/|currentJobId=)(\d{8,})/);
+        if (m) push(m[1], a.closest('li') || a.parentElement);
       }
       return out;
     }, META_RE.source);
