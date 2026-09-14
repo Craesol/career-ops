@@ -403,16 +403,39 @@ const html = buildEmailHtml({
   linkedinAdded, l2Added, l3Added, MAX_AGE_DAYS, trackerRecent, INCLUDE_L3
 });
 
-const res = await fetch('https://api.resend.com/emails', {
-  method: 'POST',
-  headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY, 'Content-Type': 'application/json' },
-  body: JSON.stringify({ from: RESEND_FROM, to: [NOTIFY_EMAIL], subject, html })
-});
-const respBody = await res.json().catch(() => ({}));
-if (!res.ok) { console.error('Resend HTTP ' + res.status + ':', JSON.stringify(respBody)); process.exit(1); }
-console.log('\n✓ Email sent to ' + NOTIFY_EMAIL);
-console.log('  ID: ' + (respBody.id || '(no id)'));
-console.log('  Subject: ' + subject);
+// Transport (2026-09-14): Gmail SMTP FIRST — the digest goes to the user's
+// REAL inbox (GMAIL_USER, overridable via NOTIFY_EMAIL_TO), authenticated
+// with the same App Password the IMAP alert reader already uses daily.
+// Reason: a week of digests went to Resend, whose sandbox delivers ONLY to
+// the Resend account owner's address — the user never saw one. Resend stays
+// as fallback so a Gmail hiccup still produces an email somewhere.
+const GMAIL_SMTP_USER = process.env.GMAIL_USER;
+const GMAIL_SMTP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
+const GMAIL_SMTP_TO = process.env.NOTIFY_EMAIL_TO || GMAIL_SMTP_USER;
+let emailSent = false;
+if (GMAIL_SMTP_USER && GMAIL_SMTP_PASSWORD) {
+  try {
+    const { sendViaGmail } = await import(pathToFileURL(resolve(ROOT, 'lib', 'gmail-smtp.mjs')).href);
+    await sendViaGmail({ user: GMAIL_SMTP_USER, appPassword: GMAIL_SMTP_PASSWORD, to: GMAIL_SMTP_TO, subject, html });
+    console.log('\n✓ Email sent via Gmail SMTP to ' + GMAIL_SMTP_TO);
+    console.log('  Subject: ' + subject);
+    emailSent = true;
+  } catch (e) {
+    console.error('  Gmail SMTP failed (' + e.message + ') — falling back to Resend');
+  }
+}
+if (!emailSent) {
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: RESEND_FROM, to: [NOTIFY_EMAIL], subject, html })
+  });
+  const respBody = await res.json().catch(() => ({}));
+  if (!res.ok) { console.error('Resend HTTP ' + res.status + ':', JSON.stringify(respBody)); process.exit(1); }
+  console.log('\n✓ Email sent to ' + NOTIFY_EMAIL + ' (Resend fallback)');
+  console.log('  ID: ' + (respBody.id || '(no id)'));
+  console.log('  Subject: ' + subject);
+}
 
 
 // ==================== helpers =========================================
