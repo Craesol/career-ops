@@ -18,6 +18,8 @@ cd /d "C:\Claude\career-ops"
 set MAX_AGE_DAYS=7
 echo [%date% %time%] hourly scan >> logs\hourly-scan.log
 node scan.mjs >> logs\hourly-scan.log 2>&1
+echo [%date% %time%] linkedin session (cada 2h, horas pares) >> logs\hourly-scan.log
+node linkedin-session-scan.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] L3 deep scan (alternating engines) >> logs\hourly-scan.log
 node l3-hourly.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] auto-triage >> logs\hourly-scan.log
