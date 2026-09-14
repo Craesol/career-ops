@@ -151,12 +151,20 @@ async function main() {
       return;
     }
 
-    // Ids: raw document first, DOM anchors as a secondary net (classic UI).
+    // Ids — the 2026 RSC UI stamps every card with
+    // componentkey="job-card-component-ref-{id}" (found 2026-09-15: 74
+    // distinct ids in one page). Read that from the raw document AND the live
+    // DOM, plus the older shapes as a secondary net.
     const ids = new Set();
+    for (const m of rawDoc.matchAll(/job-card-component-ref-(\d{8,})/g)) ids.add(m[1]);
     for (const m of rawDoc.matchAll(/jobPosting(?:Card)?[^0-9a-zA-Z]{0,10}(\d{10})/g)) ids.add(m[1]);
     for (const m of rawDoc.matchAll(/fsd_jobPosting(?:Card)?%3A(\d{10})/g)) ids.add(m[1]);
     const domIds = await page.evaluate(() => {
       const out = [];
+      for (const el of document.querySelectorAll('[componentkey*="job-card-component-ref-"]')) {
+        const m = (el.getAttribute('componentkey') || '').match(/job-card-component-ref-(\d{8,})/);
+        if (m) out.push(m[1]);
+      }
       for (const a of document.querySelectorAll('a[href*="/jobs/view/"]')) {
         const m = (a.href || '').match(/\/jobs\/view\/(\d{8,})/);
         if (m) out.push(m[1]);
