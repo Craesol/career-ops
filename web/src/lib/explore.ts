@@ -145,6 +145,17 @@ export function matchOfferToApplication<A extends { n: string; company: string; 
   if (exact) return exact;
   const compact = c.replace(/\s+/g, "");
   if (!compact) return undefined;
+  // ATS-slug pass (2026-09-18): scanners record the board slug ("horizon3ai",
+  // "hirehangar") while the evaluation writes the display name ("Horizon3",
+  // "Hire Hangar") — compare compact forms, either containing the other, with
+  // a length floor so tiny tokens ("ai", "app") cannot bridge unrelated rows.
+  if (compact.length >= 5) {
+    const slug = apps.find((a) => {
+      const ac = norm(a.company).replace(/\s+/g, "");
+      return ac.length >= 5 && (ac === compact || ac.includes(compact) || compact.includes(ac)) && roleOk(a);
+    });
+    if (slug) return slug;
+  }
   return apps.find((a) => a.company.trim() === "?" && norm(a.report + " " + a.notes).replace(/\s+/g, "").includes(compact) && roleOk(a));
 }
 

@@ -73,6 +73,7 @@ export function DiscoveryCard({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           row: evaluatedN,
+          url: offer.url,
           company: offer.company,
           title: offer.title,
           state,

@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import fs from "node:fs";
 import path from "node:path";
 import { careerOpsRoot, readApplications } from "@/lib/career-ops";
 import { matchOfferToApplication } from "@/lib/explore";
@@ -15,14 +16,71 @@ export const dynamic = "force-dynamic";
 
 const ALLOWED_STATES = new Set(["Applied", "Discarded"]);
 
-function resolveRow(body: { row?: unknown; company?: unknown; title?: unknown }): string | null {
+// Same normalization merge-tracker uses for its URL dedup key: tracking params,
+// fragment and trailing slash dropped, host lowercased.
+function normUrl(u: string): string {
+  try {
+    const x = new URL(u.trim());
+    x.hash = "";
+    for (const k of [...x.searchParams.keys()]) {
+      if (/^(utm_|ref|refid|trackingid|gh_src|source|src)$/i.test(k) || /^utm_/i.test(k)) x.searchParams.delete(k);
+    }
+    return (x.origin.toLowerCase() + x.pathname.replace(/\/+$/, "") + (x.searchParams.toString() ? "?" + x.searchParams.toString() : "")).toLowerCase();
+  } catch {
+    return u.trim().toLowerCase().replace(/\/+$/, "");
+  }
+}
+
+// Deterministic resolution (2026-09-18): every report carries the posting in
+// its `**URL:**` header, and the tracker row links the report by number. So
+// the offer URL → report file → row #, with no name matching at all — this is
+// what closed the "horizon3ai" (scanner slug) vs "Horizon3" (tracker name)
+// miss. Only the first 3KB of each report is read (the header is at the top).
+function rowByPostingUrl(url: string): string | null {
+  const want = normUrl(url);
+  if (!want) return null;
+  const dir = path.join(careerOpsRoot(), "reports");
+  let files: string[];
+  try {
+    files = fs.readdirSync(dir).filter((f) => /^\d{1,5}-.*\.md$/.test(f));
+  } catch {
+    return null;
+  }
+  const hits: number[] = [];
+  for (const f of files) {
+    let head = "";
+    try {
+      const fd = fs.openSync(path.join(dir, f), "r");
+      const buf = Buffer.alloc(3072);
+      const n = fs.readSync(fd, buf, 0, 3072, 0);
+      fs.closeSync(fd);
+      head = buf.toString("utf8", 0, n);
+    } catch {
+      continue;
+    }
+    const m = /\*\*URL:\*\*\s*(\S+)/.exec(head);
+    if (m && normUrl(m[1]) === want) hits.push(parseInt(f, 10));
+  }
+  if (!hits.length) return null;
+  // Newest report wins (a re-evaluation supersedes an older one).
+  const num = Math.max(...hits);
+  const apps = readApplications();
+  const row = apps.find((a) => new RegExp(`[\\[(/]0*${num}(?:[\\])]|-)`).test(a.report)) ?? apps.find((a) => a.n === String(num));
+  return row && /^\d{1,5}$/.test(row.n) ? row.n : null;
+}
+
+function resolveRow(body: { row?: unknown; company?: unknown; title?: unknown; url?: unknown }): string | null {
   if (typeof body.row === "string" && /^\d{1,5}$/.test(body.row)) return body.row;
+  if (typeof body.url === "string" && /^https?:\/\//i.test(body.url)) {
+    const byUrl = rowByPostingUrl(body.url);
+    if (byUrl) return byUrl;
+  }
   const hit = matchOfferToApplication(readApplications(), String(body.company ?? ""), String(body.title ?? ""));
   return hit && /^\d{1,5}$/.test(hit.n) ? hit.n : null;
 }
 
 export async function POST(req: Request) {
-  let body: { row?: unknown; company?: unknown; title?: unknown; state?: unknown; note?: unknown; dryRun?: unknown };
+  let body: { row?: unknown; company?: unknown; title?: unknown; url?: unknown; state?: unknown; note?: unknown; dryRun?: unknown };
   try {
     body = await req.json();
   } catch {
