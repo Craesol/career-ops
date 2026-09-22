@@ -86,10 +86,21 @@ async function main() {
         for (const o of fresh) {
           let outcome = 'unproven';
           let why = '';
+          // Attested date (2026-09-22): a proposal may carry `attestedDate`
+          // (YYYY-MM-DD) when a verifier AGENT actually opened the posting
+          // and read its date — that is dated evidence in the sense of the
+          // proof-of-freshness policy, same as JSON-LD datePosted. Only the
+          // deep-scan path sets it; the CLI proposers never do. An ATS
+          // "expired" verdict still overrides it below.
+          const attested = typeof o.attestedDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(o.attestedDate)
+            ? (Date.now() - Date.parse(o.attestedDate + 'T00:00:00Z')) / 86400000
+            : null;
           try {
             const api = await checkLivenessViaApi(o.url);
             if (api && api.result === 'expired') { outcome = 'dead'; why = 'ats api: expired'; }
             else if (api && api.result === 'active') { outcome = 'pass'; why = 'ats api: active'; }
+            else if (attested !== null && attested >= 0 && attested <= 45) { outcome = 'pass'; why = 'verifier attested datePosted ' + o.attestedDate; }
+            else if (attested !== null && attested > 45) { outcome = 'dead'; why = 'verifier attested datePosted ' + o.attestedDate + ' (' + Math.round(attested) + 'd old)'; }
             else {
               const f = await assessPostingFreshness(o.url);
               if (f.verdict === 'fresh') { outcome = 'pass'; why = f.reason; }
