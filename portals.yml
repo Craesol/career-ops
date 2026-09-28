@@ -90,17 +90,19 @@ title_filter:
     - Community Manager
     - Head of Community
     - Community Lead
-    - Social Media Manager
-    - Content Manager
-    - Marketing Communications Manager
+    - Community Builder
+    - Community Building
     - Community Growth
+    - Community-Led Growth
     - Community Development
     - Community Engagement
-    - Community Specialist
     - Community Operations
     - Community Marketing
+    - Community Specialist
+    - Content Manager
+    - Marketing Communications Manager
+    - Social Media Manager
     - Social Media Lead
-    - Social Media Specialist
   negative:
     - Vietnamese
     - Thai
@@ -226,6 +228,16 @@ search_queries:
     query: >-
       site:job-boards.greenhouse.io ("Social Media Manager" OR "Content Manager" OR "Marketing
       Communications") remote
+    enabled: false
+  - name: Community Growth & Building (cross-ATS)
+    query: >-
+      ("community growth" OR "community builder" OR "head of community growth" OR "community-led
+      growth") remote (site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co)
+    enabled: true
+  - name: Community Building — Web3/Gaming
+    query: >-
+      ("community building" OR "community builder" OR "grow the community") (web3 OR gaming OR
+      crypto) remote Europe
     enabled: true
   - name: Ashby — Ecosystem & Growth
     query: >-
