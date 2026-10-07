@@ -99,6 +99,11 @@ title_filter:
     - Community Operations
     - Community Marketing
     - Community Specialist
+    - Director of Community
+    - Community Director
+    - Community Programs
+    - Ambassador Program
+    - Guild Manager
     - Content Manager
     - Marketing Communications Manager
     - Social Media Manager
@@ -283,10 +288,10 @@ search_queries:
     query: >-
       ("executive communications" OR "founder communications" OR ghostwriter) (web3 OR crypto OR
       tech) remote
-    enabled: true
+    enabled: false
   - name: Email / Lifecycle Marketing
     query: ("email marketing manager" OR "lifecycle marketing" OR "CRM manager") (gaming OR web3) remote
-    enabled: true
+    enabled: false
   - name: Translation — EN/ES/FR
     query: >-
       (translator OR proofreader OR "localization specialist") (Spanish OR French) remote (gaming OR
@@ -307,6 +312,11 @@ search_queries:
     enabled: true
   - name: WelcomeToTheJungle — Community
     query: site:welcometothejungle.com ("community manager" OR "social media manager") (remote OR télétravail)
+    enabled: true
+  - name: Community Lead & Director — senior
+    query: >-
+      ("Community Lead" OR "Director of Community" OR "Head of Community") (remote OR Europe OR
+      EMEA) -intern -junior
     enabled: true
 tracked_companies:
   - name: Perk
