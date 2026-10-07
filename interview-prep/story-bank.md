@@ -168,3 +168,21 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **R (Result):** Daily ops sustained across two consecutive roles, worldwide, without a supervising layer.
 **Reflection:** Async does not mean slower, it means the decision has to be written down. The teams that struggle with it are usually the ones still deciding in meetings and calling the meeting notes async.
 **Best for questions about:** remote work, async-first culture, self-direction, "how do you stay accountable without a manager", time zones, working independently, distributed teams
+
+### [Gaming provenance] Thirteen years inside a player community
+**Source:** Report #326 — B2Spin Limited — Social Media Community Specialist
+**S (Situation):** Blizzard EMEA, 2006-2019: eight years across the digital storefront and Spanish-language web editorial, then webmarketing and lifecycle for a top-tier consumer gaming portfolio, then Marketing Communications for a top-tier franchise.
+**T (Task):** Speak to players across EMEA markets around launches, live-service moments and community events.
+**A (Action):** Owned copy, tone and cadence across product marketing, editorial and player-facing channels, for an audience that reacts in real time and in several languages at once.
+**R (Result):** Two years of consistent franchise voice across EMEA channels, inside a company whose players notice register instantly.
+**Reflection:** Players can tell within one sentence whether the person writing plays. That is not something you can research your way into, and it is why a gaming line on a CV is worth more than a channel list.
+**Best for questions about:** gaming/entertainment sector fit, "do you actually play", brand voice for player audiences, launches and live service, working across EMEA markets
+
+### [Measurement] Measuring what the audience did, not what it saw
+**Source:** Report #326 — B2Spin Limited — Social Media Community Specialist
+**S (Situation):** Blizzard EMEA media and data-marketing projects, 2017-2019, following eight years of storefront and conversion work.
+**T (Task):** Move people from attention to action, and know which content did it.
+**A (Action):** Planned campaign moments, measured engagement and tuned cadence on what the audience actually did; later iterated Guild incentive mechanics against engagement data and community feedback from prior program cycles.
+**R (Result):** A conversion-first habit that carried into content work - posts get judged on whether they moved someone, not on whether they were seen.
+**Reflection:** Attention and action are two different metrics and most content work optimises only the first. The number tells you a mechanic stopped working; the timeline tells you why.
+**Best for questions about:** community metrics, reporting, "how do you measure content", turning data into recommendations, iterating on engagement data

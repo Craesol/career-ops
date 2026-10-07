@@ -2177,9 +2177,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://it.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4463302070 | Hire Feed | Social Media Community Manager (Remote)~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-crypto-at-bettingjobs-4460702950 | BettingJobs | Social Media Manager - Crypto~~ — removed from fresh matches
 
-- [ ] https://jobs.ashbyhq.com/world-foundation/ec18b1fd-3b2d-48e7-92eb-19114c082122 | World Foundation | Head of Community and Ecosystem | Remote (global foundation, US HQ)
+- [x] ~~https://jobs.ashbyhq.com/world-foundation/ec18b1fd-3b2d-48e7-92eb-19114c082122 | World Foundation | Head of Community and Ecosystem | Remote (global foundation, US HQ)~~ — swept: stale (8d old, first seen 2026-09-04)
 
-- [ ] https://jobs.ashbyhq.com/world-foundation/ec18b1fd-3b2d-48e7-92eb-19114c082122 | World Foundation | Head of Community and Ecosystem | Remote (global foundation, US HQ)
+- [x] ~~https://jobs.ashbyhq.com/world-foundation/ec18b1fd-3b2d-48e7-92eb-19114c082122 | World Foundation | Head of Community and Ecosystem | Remote (global foundation, US HQ)~~ — swept: stale (8d old, first seen 2026-09-04)
 
 - [x] ~~https://jobs.lever.co/jobgether/f54cb6cc-ed42-424b-86ab-cf16bd8843f9 | Jobgether (client role) | Community Lead | Remote — United Kingdom / Europe-eligible~~ — removed from fresh matches
 
@@ -2191,5 +2191,283 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/yunicorn/social-media-manager-hamburg-464509 | Yunicorn | Social Media Manager | Hamburg, Remote | posted: 2026-09-07~~ — removed from fresh matches
 
-- [ ] https://jobs.ashbyhq.com/Sahara/042b2056-ffeb-400e-9303-042f800c83b0 | Sahara AI | Social Media Manager & Content Specialist | Remote (Web3)
-- [ ] https://jobs.ashbyhq.com/hirehangar/eb444092-3d75-403c-bb48-bbc1a21d22a8 | Hire Hangar | Brand Content & Social Media Manager | Remote
+- [x] ~~https://jobs.ashbyhq.com/Sahara/042b2056-ffeb-400e-9303-042f800c83b0 | Sahara AI | Social Media Manager & Content Specialist | Remote (Web3)~~ — swept: stale (8d old, first seen 2026-09-07)
+- [x] ~~https://jobs.ashbyhq.com/hirehangar/eb444092-3d75-403c-bb48-bbc1a21d22a8 | Hire Hangar | Brand Content & Social Media Manager | Remote~~ — swept: stale (8d old, first seen 2026-09-07)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/sivara-gmbh/social-media-content-manager-vollzeit-oder-teilzeit-ab-20h-100-remote-kevelaer-196893 | Sivara GmbH | Social Media & Content Manager (m/w/d), Vollzeit oder Teilzeit ab 20h, 100% Remote | Kevelaer, Remote | posted: 2026-09-08~~ — removed from fresh matches
+
+- [x] ~~https://hr.linkedin.com/jobs/view/senior-social-media-manager-remote-eu-native-french-speaking-at-paradox-institute-3597757060 | Paradox Institute | Senior Social Media Manager (Remote EU - Native French-speaking) | Remote EU (French-speaking)~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-at-coin360-2885703015 | COIN360 | Social Media Manager | Remote, European Union~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/community-manager-at-cryptonewsz-3788914842 | CryptoNewsZ | Community Manager | Remote, EMEA~~ — removed from fresh matches
+- [x] ~~https://jobs.theblockchainassociation.org/companies/ava-labs/jobs/32028109-web3-community-manager-ambassador-lead | Ava Labs | Web3 Community Manager, Ambassador Lead | Remote (HQ: US)~~ — removed from fresh matches
+- [x] ~~https://remoteok.com/remote-jobs/remote-social-media-community-manager-certik-154370 | CertiK | Social Media & Community Manager | Remote (US/Remote)~~ — removed from fresh matches
+- [x] ~~https://www.welcometothejungle.com/fr/companies/groupe-bagi/jobs/a4aa0596-4632-412b-af39-d4ad4c073d1a | Groupe Bagi | Community manager télétravail H/F | France (Full Remote / Télétravail total)~~ — removed from fresh matches
+- [x] ~~https://www.welcometothejungle.com/fr/companies/livementor/jobs/devenez-mentor-accompagnez-des-futurs-community-managers-vers-une-activite-freelance-viable_paris | LiveMentor | Devenez Mentor - Community Managers | France (Full Remote, Freelance)~~ — removed from fresh matches
+- [x] ~~https://www.welcometothejungle.com/fr/companies/mv-group/jobs/social-media-manager-community-manager-f-h_rennes | MV Group | Social Media Manager / Community Manager F/H | Rennes, France (Partial Remote)~~ — removed from fresh matches
+
+- [x] ~~https://builtin.com/job/community-growth-manager-remote/7771938 | Reedsy | Community Growth Manager - Remote | Remote~~ — swept: stale (8d old, first seen 2026-09-08)
+
+- [x] ~~https://1000dreamsfund.org/apply-community-manager-emea/ | 1000 Dreams Fund | Community Manager EMEA | EMEA (Europe/Middle East/Africa)~~ — removed from fresh matches
+- [x] ~~https://cryptocurrencyjobs.co/marketing/boid-com-lead-community-manager/ | Boid.com | Lead Community Manager | Fully Remote (no geo restriction) | note: liveness uncertain~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4462291435/ | BettingJobs | Social Media Manager in European Union~~ — swept: stale (8d old, first seen 2026-09-09)
+- [x] ~~https://www.linkedin.com/jobs/view/4464497692/ | Hire Feed | Social Media Community Manager (Remote) in Spain~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://www.linkedin.com/jobs/view/4464435673/ | LinkedIn (unknown company) | Social Media Community Manager (Remote) at Hire Feed — Germany | LinkedIn Jobs~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://www.linkedin.com/jobs/view/4464452834/ | LinkedIn (unknown company) | Digital Marketing Specialist — FinTech, Social Media, Community &amp; Thought Leadership at ATQLeads — Spain | LinkedIn Jobs~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://www.linkedin.com/jobs/view/4464643244/ | Digital Content &amp; Engagement Lead, UNICEF Office of Innovation, Stockholm, Sweden, Remote with travel, 6 months, # 595600 at UNICEF — Stockholm, Stockholm County, Sweden | LinkedIn Jobs | Communications Consultant~~ — removed from fresh matches
+
+- [x] ~~https://web3.career/paid-social-media-manager-zinnia/153550 | Zinnia | Paid Social Media Manager | Remote | note: datePosted 2026-09-01~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4462291435/ | BettingJobs | Social Media Manager in European Union~~ — swept: stale (8d old, first seen 2026-09-09)
+
+- [x] ~~https://jobs.ashbyhq.com/alchemy/bf5d849a-d0da-41a9-be66-eac9d0a416af | Alchemy | Social & Technical Content Manager | Remote (unspecified) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://greystar.wd1.myworkdayjobs.com/confidentialexternal/job/Remote-Kentucky-Remote-Kentucky-KY/Community-Manager_R0200592 | greystar | Community Manager | Remote Kentucky, Remote Kentucky, KY | posted: 2026-09-10~~ — removed from fresh matches
+- [x] ~~https://greystar.wd1.myworkdayjobs.com/confidentialexternal/job/Remote-South-Carolina-Remote-South-Carolina-SC/Community-Manager_R0200547 | greystar | Community Manager | Remote South Carolina, Remote South Carolina, SC | posted: 2026-09-10~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/clubhouse/9fa369a8-b7dd-4ef7-a9f0-3f1b5988322f | clubhouse | 📣 Product Marketing Manager, Community Growth | Remote (US) | posted: 2026-09-08~~ — swept: stale (8d old, first seen 2026-09-10)
+- [x] ~~https://careers-plannedparenthood.icims.com/jobs/4782/sr.-vp-of-development-%26-community-engagement/job | plannedparenthood | Sr. VP of Development & Community Engagement | posted: 2026-09-08~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/atlasxhm/jobs/8649196002 | Atlas HXM | Global Social Media and Community Manager | Remote — Ireland / United Kingdom / Canada / USA | note: ats api: active~~ — swept: location (Remote — Ireland / United Kingdom / Canada / USA)
+
+- [x] ~~https://jobs.ashbyhq.com/clubhouse/9fa369a8-b7dd-4ef7-a9f0-3f1b5988322f | clubhouse | 📣 Product Marketing Manager, Community Growth | Remote (US)~~ — swept: stale (8d old, first seen 2026-09-10)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/trafficdesign-gmbh/senior-social-media-managerin-koln-hmaburg-remote-cologne-164044 | trafficdesign GmbH | (Senior) Social Media Manager:in (m/w/d) - Köln/Hmaburg/Remote | Cologne | posted: 2026-09-10~~ — swept: location (Cologne)
+
+- [x] ~~https://job-boards.greenhouse.io/thinkmarkets/jobs/7825797003 | ThinkMarkets | Community Manager - FX/CFDs | Remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-10)
+
+- [x] ~~https://job-boards.greenhouse.io/thinkmarkets/jobs/7825797003 | ThinkMarkets | Community Manager - FX/CFDs | Remote~~ — swept: stale (8d old, first seen 2026-09-10)
+
+- [x] ~~https://gamejobs.co/Market-Community-Lead-League-of-Legends-DACH-at-Riot-Games | Riot Games | Market Community Lead - League of Legends (DACH) | DACH region, Europe | note: datePosted 2026-09-09~~ — removed from fresh matches
+
+- [x] ~~https://gehc.wd5.myworkdayjobs.com/gehc_externalsite/job/Remote/Marketing-Communications-Manager_R4045981-1 | gehc | Marketing Communications Manager | Remote | posted: 2026-09-12~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/welltech/08c33dc7-0af8-47cb-aeeb-963e2831a401 | welltech | Social Media Manager | Lithuania · Romania · Estonia · Latvia · Hungary · Bulgaria · Remote | posted: 2026-09-11~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/welltech/908fd368-cab4-451c-9acf-37698d57bf27 | welltech | Social Media Manager | Ukraine · Cyprus · Limassol · Remote | posted: 2026-09-11~~ — swept: stale (8d old, first seen 2026-09-12)
+
+- [x] ~~https://jobs.ashbyhq.com/welltech/908fd368-cab4-451c-9acf-37698d57bf27 | welltech | Social Media Manager | Ukraine · Cyprus · Limassol · Remote~~ — swept: stale (8d old, first seen 2026-09-12)
+
+- [x] ~~https://job-boards.greenhouse.io/flexport/jobs/8054645 | Flexport | Social Media & Content Manager | Remote (unspecified) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/community-manager-associ%C3%A9-e-video-paca-at-everywhere-jobs-4466773690 | Everywhere Jobs | Community Manager Associé(e) - VIDEO - PACA~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/global-social-media-manager-at-stealth-startup-4467043779 | Stealth Startup | Global Social Media Manager~~ — swept: stale (8d old, first seen 2026-09-14)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/paj-ug-haftungsbeschrankt/senior-social-media-manager-windeck-399091 | PAJ UG (haftungsbeschränkt) | Senior Social Media Manager | Windeck, Remote | posted: 2026-09-14~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/global-social-media-manager-at-stealth-startup-4467043779 | Stealth Startup | Global Social Media Manager~~ — swept: stale (8d old, first seen 2026-09-14)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/rfm-mediamix-ag/social-media-manager-erfurt-180395 | RFM MediaMix AG | Social Media Manager (m/w/d) | Erfurt, Remote | posted: 2026-09-14~~ — removed from fresh matches
+
+- [x] ~~https://jobs.lever.co/Huckleberrylabs/e4164067-9550-4fe1-975e-60a1ba5d078d | Huckleberry Labs | Social Media Manager (Remote) | Remote (company HQ Los Angeles, non-European) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://jobs.lever.co/Huckleberrylabs/859e708d-ba44-4c40-b3a3-64b7dc5777e2 | Huckleberry Labs | Social Media Manager (Remote, Contract, Part-Time) | Remote (company HQ Los Angeles, non-European) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4467095978/ | Hire Feed | Social Media Community Manager (Remote) | Germany | note: linkedin id 4467095978 >= 4300000000~~ — swept: location (Germany)
+- [x] ~~https://www.linkedin.com/jobs/view/4467043779/ | Stealth Startup | Global Social Media Manager | European Union | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-15)
+
+- [x] ~~https://job-boards.greenhouse.io/eplusinc/jobs/4399855009 | eplusinc | Social Media Specialist (req #1413) | Remote, US | posted: 2026-09-14~~ — removed from fresh matches
+- [x] ~~https://careers-devereux.icims.com/jobs/52947/community-specialist-%28dayhab%29/job | devereux | Community Specialist (DayHab) | posted: 2026-09-14~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4466320654 | Hire Feed | Social Media Community Manager (Remote)~~ — swept: stale (8d old, first seen 2026-09-15)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/picmondoo-gmbh/social-media-manager-im-kreativbereich-langweid-am-lech-323732 | Picmondoo GmbH | Social Media Manager im Kreativbereich (m/w/d) | Langweid am Lech, Remote | posted: 2026-09-15~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4466320654 | Hire Feed | Social Media Community Manager (Remote)~~ — swept: stale (8d old, first seen 2026-09-15)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/neolymp/social-media-content-manager-berlin-447133 | Neolymp | Social Media & Content Manager (m/w/d) | Berlin, Remote | posted: 2026-09-15~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4460702950/ | BettingJobs | Social Media Manager - Crypto | European Union | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-15)
+
+- [x] ~~https://usfoods.wd1.myworkdayjobs.com/usfoodscareersexternal/job/Rosemont-IL/Social-Media-Specialist--100--Remote-_R282338-1 | usfoods | Social Media Specialist (100% Remote) | Rosemont IL | posted: 2026-09-16~~ — swept: location (Rosemont IL)
+- [x] ~~https://jobs.ashbyhq.com/nory-co/73f564e1-855f-4c31-b50b-3cc4c3cc4895 | nory-co | Social Media Manager - Instagram (Education Startup, Part-Time) | New York · Remote | posted: 2026-09-15~~ — removed from fresh matches
+- [x] ~~https://tr.linkedin.com/jobs/view/community-manager-remote-at-dtec-ai-network-4465521633 | Dtec AI Network | Community Manager (Remote)~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+
+- [x] ~~https://tr.linkedin.com/jobs/view/community-manager-remote-at-dtec-ai-network-4465521633 | Dtec AI Network | Community Manager (Remote)~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/pizzora/social-media-manager-content-creator-pizzora-passau-290540 | Pizzora | Social Media Manager / Content Creator - Pizzora | Passau, Remote | posted: 2026-09-16~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/solana%20foundation/7f5050ef-6e46-42c8-93ab-668d8fd55837 | Solana Foundation | New Media Manager, Social and Community Growth | Remote-US · Remote-Europe · Züg · Switzerland | posted: 2026-09-16~~ — swept: stale (8d old, first seen 2026-09-16)
+
+- [x] ~~https://jobs.ashbyhq.com/solana%20foundation/7f5050ef-6e46-42c8-93ab-668d8fd55837 | Solana Foundation | New Media Manager, Social and Community Growth | Remote-US · Remote-Europe · Züg · Switzerland~~ — swept: stale (8d old, first seen 2026-09-16)
+
+- [x] ~~https://builtin.com/job/new-media-manager-social-and-community-growth/11212682 | Solace | New Media Manager, Social and Community Growth | Remote~~ — removed from fresh matches
+
+- [x] ~~https://weworkremotely.com/remote-jobs/true-publicity-undergrad-student-remote-part-time-flexible-hours-assistant-and-content-manager-1 | True Publicity | Undergrad Student - Remote, Part time, flexible hours - Assistant and Content Manager | Anywhere in the World | posted: 2026-09-16~~ — removed from fresh matches
+
+- [x] ~~https://veralto.wd1.myworkdayjobs.com/hachjobs/job/GBR---Remote/XMLNAME--Marketing-Communications-Manager--EMEA_R10267423 | veralto | Marketing Communications Manager, EMEA | 9 Locations | posted: 2026-09-17~~ — swept: location (9 Locations)
+- [x] ~~https://jobs.ashbyhq.com/horizon3ai/baf05606-cda9-4745-8aba-18cb6746501e | horizon3ai | Senior Social Media Manager | US, Remote | posted: 2026-09-16~~ — swept: stale (8d old, first seen 2026-09-17)
+- [x] ~~https://jobs.ashbyhq.com/beside/3d272deb-7bc7-4218-b686-cf12d058aaa6 | beside | Social Media Manager | New York Office · Remote | posted: 2026-09-16~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/agent/16f25e72-9467-4c4c-a17e-0e59706944e4 | agent | Social Media Manager | Latin America · Remote | posted: 2026-09-16~~ — swept: stale (8d old, first seen 2026-09-17)
+- [x] ~~https://jobs.ashbyhq.com/Solana%20Foundation/7f5050ef-6e46-42c8-93ab-668d8fd55837 | Solana Foundation | New Media Manager, Social and Community Growth~~ — swept: stale (8d old, first seen 2026-09-17)
+
+- [x] ~~https://job-boards.greenhouse.io/descript/jobs/7803294003 | Descript | Social Media Manager | San Francisco, CA or Remote, US | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/agent/16f25e72-9467-4c4c-a17e-0e59706944e4 | agent | Social Media Manager | Latin America · Remote~~ — swept: stale (8d old, first seen 2026-09-17)
+
+- [x] ~~https://jobs.ashbyhq.com/horizon3ai/baf05606-cda9-4745-8aba-18cb6746501e | horizon3ai | Senior Social Media Manager | US, Remote~~ — swept: stale (8d old, first seen 2026-09-17)
+
+- [x] ~~https://www.linkedin.com/jobs/view/4466320654/ | Hire Feed | Social Media Community Manager (Remote) | European Union | note: linkedin id 4466320654 >= 4300000000~~ — swept: stale (8d old, first seen 2026-09-17)
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/next-lotto-gmbh/senior-social-media-manager-konstanz-119409 | Next Lotto GmbH | (Senior) Social Media Manager (m/w/d) | Konstanz, Remote | posted: 2026-09-17~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/nex/jobs/5427888008 | nex | Community Manager | San Jose, California or Remote | posted: 2026-09-17~~ — swept: stale (8d old, first seen 2026-09-18)
+- [x] ~~https://job-boards.greenhouse.io/connectwise/jobs/4716725005 | connectwise | Social Media Manager | US-Remote | posted: 2026-09-17~~ — removed from fresh matches
+- [x] ~~https://web3.career/new-media-manager-social-and-community-growth-solanafoundation/154281 | web3.career | New Media Manager Social And Community Growth Solanafoundation~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/neteasegames/jobs/4927747007 | NetEase Games | Community Manager (overseas Discord communities) | Guildford, UK – onsite (live; posting date unverified) | note: ats api: active~~ — swept: location (Guildford, UK – onsite (live; posting date unverified))
+
+- [x] ~~https://himalayas.app/companies/keywords-studios-plc/jobs/spontaneous-application-community-manager-video-games-worldwide-remote | Keywords Studios Plc | Spontaneous application Community Manager (Video Games) - Worldwide - Remote | United Kingdom | posted: 2026-09-18~~ — swept: location (United Kingdom)
+- [x] ~~https://de.linkedin.com/jobs/view/social-media-community-manager-remote-at-hire-feed-4467095978 | Hire Feed | Social Media Community Manager (Remote)~~ — swept: stale (8d old, first seen 2026-09-19)
+
+- [x] ~~https://www.linkedin.com/jobs/view/4466316055/ | Hire Feed | Social Media Community Manager (Remote) | Spain | note: linkedin id 4466316055 >= 4300000000~~ — swept: location (Spain)
+
+- [x] ~~https://job-boards.greenhouse.io/nex/jobs/5427888008 | nex | Community Manager | San Jose, California or Remote~~ — swept: stale (8d old, first seen 2026-09-18)
+
+- [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Italy/Staff-Content-Manager_REQ-5464 | clio | Staff Content Manager | 3 Locations | posted: 2026-09-22~~ — swept: location (3 Locations)
+- [x] ~~https://jobs.ashbyhq.com/acorns/992a5186-3db5-4017-97db-d4c9e0741fa2 | acorns | Social Media Manager | Remote | posted: 2026-09-21~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://himalayas.app/companies/stackblitz/jobs/community-manager-3124681702 | StackBlitz | Community Manager | posted: 2026-09-22~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://jobs.ashbyhq.com/dittoai/6e8312ad-c02d-4727-8b19-f9112fb10abf | Ditto AI | Head of Community Operations | Remote (workplace type 'Hybrid'); campus program spans 733 US colleges | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://jobs.ashbyhq.com/kraken.com/e9216c05-7dfd-4d3d-b12e-801e52330bc8 | Kraken | Social Media Lead, Kraken Pro | Remote ??? UK listing with secondary locations incl. Spain, Portugal, Switzerland, Ireland, Poland etc. (France NOT in the list) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://es.linkedin.com/jobs/view/community-manager-madrid-teletrabajo-at-gestazi%C3%B3n-agencia-digital-4468523703 | GESTAZION Agencia Digital | Community & Content Manager (Madrid // Teletrabajo) | Remote (teletrabajo) with occasional days at the Madrid agency or client offices | note: ats api: active~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://es.linkedin.com/jobs/view/social-media-manager-%E2%80%94-instagram-community-premium-ecommerce-at-lucky-fours-4463426330 | Lucky Fours | Social Media Manager ??? Instagram & Community (Premium Ecommerce) | Spain / must be based in Europe; workplace type unspecified (LinkedIn remote tag) | note: ats api: active~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://remotive.com/remote/jobs/marketing/social-media-community-manager-5937108 | AutoBidMaster | Social Media Community Manager | Remote, CET (UTC+1) timezone; working hours 13:00???22:00 CET | note: datePosted 2026-09-18~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://hitmarker.net/jobs/z-house-studios-marketing-community-lead---ex-world-online-mmorpg-4691230 | Z House Studios | Marketing & Community Lead - Ex World Online (MMORPG) | Remote (Anywhere) | note: datePosted 2026-09-03~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://job-boards.eu.greenhouse.io/bybit/jobs/4928166101 | Bybit | Social Media & Community Lead | Europe - Remote; Middle East - Remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://job-boards.greenhouse.io/attn/jobs/8175336 | attn: | Community Manager | Remote (US agency; eligibility not stated) | note: ats api: active~~ — closed: posting gone (ATS API 404 — posting removed)
+- [x] ~~https://job-boards.greenhouse.io/mightynetworks/jobs/8687490002?gh_jid=8687490002 | Mighty Networks | Community Manager | Remote (remote-first; US company, eligibility not stated) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4465686664/ | Miniclip | Community Manager (Motorsport Manager) | Surrey, UK (JD: remote working environment) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4459240897/ | EVL Keys | Community Manager | Stockholm, Sweden ??? Full-time Remote | note: ats api: active~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+- [x] ~~https://www.linkedin.com/jobs/view/4457818274/ | Keywords Studios | Spontaneous application Community Manager (Video Games) - Worldwide - Remote | Worldwide remote (Europe/UK/Ireland/Americas listed) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4467034996/ | NSE (National Student Esports) | Marketing & Community Manager | Remote (UK based) / Sunderland HQ hybrid | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4468709730/ | Kraken | Social Media Lead, Kraken Pro | Multi-country EU posting (Lithuania/Cyprus/Bulgaria/Hungary) ??? remote implied | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://coinpoker.teamtailor.com/jobs/8247934-community-manager | CoinPoker | Community Manager (geo-specific Telegram poker communities) | Fully remote, multiple locations incl. France/EEA ??? FLAGS: part-time/flexible (comp likely below ???50K floor); requires native/fluent language of the target market (examples given: Korean, Japanese, French, Italian ??? Spanish market not listed) | note: datePosted 2026-08-20~~ — swept: negative-title (Fully remote, multiple locations incl. France/EEA ??? FLAGS: part-time/flexible (comp likely below ???50K floor); requires native/fluent language of the target market (examples given: Korean, Japanese, French, Italian ??? Spanish market not listed))
+- [x] ~~https://careers.up-world.co/jobs/8397913-head-of-community-up-world | Up World (Up Collective) | Head of Community | London / Remote (UK) | note: datePosted 2026-09-17~~ — removed from fresh matches
+- [x] ~~https://mayflower.recruitee.com/o/user-community-manager | Mayflower (Stripchat) | User Community Manager | Fully remote (Limassol, Cyprus HQ) | note: datePosted 2026-09-04~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://es.linkedin.com/jobs/view/social-media-lead-kraken-pro-at-kraken-4468704843 | Kraken (Payward) | Social Media Lead, Kraken Pro | Spain ??? remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4446656337 | AI Acquisition | Community Growth Manager (Remote) | United Kingdom ??? fully remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4466316055 | Hire Feed (recruiting for a client) | Social Media Community Manager (Remote) | Remote ??? 'work from anywhere' | note: linkedin id 4466316055 >= 4300000000~~ — removed from fresh matches
+- [x] ~~https://jobs.theblockchainassociation.org/companies/kraken/jobs/93857369-social-media-lead-kraken-pro | Kraken | Social Media Lead, Kraken Pro (international req) | Remote ??? Ireland, Spain, Portugal, UK, Switzerland, Sweden, Poland, Romania, Czechia, Hungary, Lithuania, Bulgaria, Cyprus + non-EU; FRANCE NOT LISTED | note: datePosted 2026-09-21~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://hitmarker.net/jobs/netease-games-community-manager-4456241 | NetEase Games | Community Manager | Remote (UK) | note: datePosted 2026-08-12~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://jobs.ashbyhq.com/vClusterLabs/a2d36886-8fa6-4d68-a2e1-62f660a067ce | vCluster Labs | Social Media Manager | Remote ??? Worldwide | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4466320654 | Hire Feed | Social Media Community Manager (Remote) | European Union (remote) | note: linkedin id 4466320654 >= 4300000000~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://www.linkedin.com/jobs/view/4467912838 | Rippling | Content and Community Manager - EMEA (Contractor) | Dublin, County Dublin, Ireland (EMEA scope) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4451847056 | B2Spin Limited | Social Media Community Specialist | Poland (remote) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://jobs.ashbyhq.com/circle/923d908d-0afe-44ad-b835-9c009bfa1e1d | Circle (circle.so ??? community platform) | Social Media Lead | Anywhere ??? fully remote company, ~270 people across 30+ countries | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://jobs.ashbyhq.com/b2spin/61660cf5-8343-4779-9f83-82afd64091ba | B2Spin | Social Media Community Specialist | Remote ??? Georgia / Romania / Poland / Bulgaria / Serbia | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://jobs.lever.co/oddin/d5a92b74-e2a8-40f7-8cb7-8a3265173510 | Oddin.gg | Content and Social Media Manager | Europe (remote) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://www.linkedin.com/jobs/view/4468710992/ | Oddin.gg | Content and Social Media Manager | European Union | note: ats api: active~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
+
+- [x] ~~https://neogen.wd5.myworkdayjobs.com/neogencareers/job/Remote/Marketing-Communications-Manager_REQ-11094 | neogen | Marketing Communications Manager | 2 Locations | posted: 2026-09-23~~ — swept: location (2 Locations)
+- [x] ~~https://jobs.ashbyhq.com/hellobrightline/0e256e21-3a99-4cb7-8f86-9aa04632554e | hellobrightline | Bilingual Community Engagement Lead (Spanish Preferred) – LA County (Remote / Field) | Los Angeles, CA · Remote | posted: 2026-09-22~~ — removed from fresh matches
+- [x] ~~https://sproutsocial.com/careers/open-positions/8223177?gh_jid=8223177 | ssreferrals | Senior Manager, Customer Advocacy & Community Marketing | Remote US | posted: 2026-09-22~~ — removed from fresh matches
+- [x] ~~https://sproutsocial.com/careers/open-positions/8223157/?gh_jid=8223157 | sproutsocial | Senior Manager, Customer Advocacy & Community Marketing | Remote US | posted: 2026-09-22~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.eu.greenhouse.io/bondora/jobs/4983569101 | bondora | Senior Social & Content Manager | Denmark; Finland; Latvia; Lithuania; Netherlands; Remote; Spain; Tallinn, Harju, Estonia; Tartu, Tartu, Estonia | posted: 2026-09-23~~ — swept: stale (8d old, first seen 2026-09-24)
+
+- [x] ~~https://job-boards.eu.greenhouse.io/bondora/jobs/4983569101 | bondora | Senior Social & Content Manager | Denmark; Finland; Latvia; Lithuania; Netherlands; Remote; Spain; Tallinn, Harju, Estonia; Tartu, Tartu, Estonia~~ — swept: stale (8d old, first seen 2026-09-24)
+
+- [x] ~~https://jobs.theblockchainassociation.org/companies/kraken/jobs/93857369-social-media-lead-kraken-pro | Kraken | Social Media Lead, Kraken Pro (international req) | Remote ??? Ireland, Spain, Portugal, UK, Switzerland, Sweden, Poland, Romania, Czechia, Hungary, Lithuania, Bulgaria, Cyprus + non-EU; FRANCE NOT LISTED~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://hitmarker.net/jobs/netease-games-community-manager-4456241 | NetEase Games | Community Manager | Remote (UK)~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://jobs.ashbyhq.com/circle/923d908d-0afe-44ad-b835-9c009bfa1e1d | Circle (circle.so ??? community platform) | Social Media Lead | Anywhere ??? fully remote company, ~270 people across 30+ countries~~ — swept: stale (8d old, first seen 2026-09-22)
+- [x] ~~https://web3.career/community-lead-kraken-pro-kraken/154604 | web3.career | Community Lead Kraken Pro Kraken~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4470167837/ | Growth Leads | Senior Social Media Manager | European Union | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4471879676/ | TRAINSWEATEAT | Content Creator & Community Manager | Nice, Provence-Alpes-Côte d'Azur, France | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://jobs.lever.co/launchsquad/89bf0e20-7990-40cf-a255-8e782033a2c2 | launchsquad | Social Media Specialist | Remote, or Hybrid SF, NYC, BOS or CHI | posted: 2026-09-25~~ — removed from fresh matches
+- [x] ~~https://job-boards.greenhouse.io/tia/jobs/8005735003 | tia | Organic Social Media & Community Specialist | Remote · Remote | posted: 2026-09-25~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/nory-co/e5734dfe-a1e9-427c-9ce7-be600211003d | nory-co | Social Media Manager - Instagram (Education Startup, Part-Time) | New York · Remote | posted: 2026-09-25~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/content-creator-community-manager-at-trainsweateat-4471879676 | TRAINSWEATEAT | Content Creator & Community Manager~~ — removed from fresh matches
+- [x] ~~https://mc.linkedin.com/jobs/view/social-media-manager-content-creator-at-unicosmetics-official-4470323476 | Unicosmetics Official | Social Media Manager & Content Creator~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/kraken.com/f6100b36-d906-4c8d-93b8-a03399452966 | Kraken | Community Lead - Kraken Pro | Remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-26)
+
+- [x] ~~https://gamesjobsindex.com/jobs/sonyinteractiveentertainmentglobal-community-manager-contract-56891b07.html | Sony Interactive Entertainment | Community Manager (Contract) | Remote (US-anchored) | note: datePosted 2026-09-25~~ — swept: stale (8d old, first seen 2026-09-26)
+
+- [x] ~~https://gamesjobsindex.com/jobs/sonyinteractiveentertainmentglobal-community-manager-contract-56891b07.html | Sony Interactive Entertainment | Community Manager (Contract) | Remote (US-anchored)~~ — swept: stale (8d old, first seen 2026-09-26)
+
+- [x] ~~https://careers.up-world.co/jobs/8397913-head-of-community-up-world | Up World (Up Collective) | Head of Community | London / Remote (UK)~~ — removed from fresh matches
+
+- [x] ~~https://www.welcometothejungle.com/fr/companies/point-d-orgue/jobs/community-manager-social-media-manager_levallois-perret | Point d'Orgue | Community Manager / Social Media Manager | Levallois-Perret, France — Remote authorized | note: datePosted 2026-09-24~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/intermate-media-gmbh/senior-social-media-managerin-gn-berlin-437625 | Intermate Media GmbH | Senior Social Media Manager:in (gn) | Berlin, Remote | posted: 2026-09-28~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/mightynetworks/jobs/8687490002?gh_jid=8687490002 | Mighty Networks | Community Manager | Remote (remote-first; US company, eligibility not stated)~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://remotive.com/remote/jobs/marketing/social-media-community-manager-5937108 | AutoBidMaster | Social Media Community Manager | Remote, CET (UTC+1) timezone; working hours 13:00???22:00 CET~~ — swept: stale (8d old, first seen 2026-09-22)
+
+- [x] ~~https://hginsights.com/hg-insights-careers/current-opportunities/?gh_jid=7984215003 | hginsights | Review Generation Team Lead & Community Manager | Remote (US) | posted: 2026-09-28~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/7-marketplace-gmbh/social-media-managerin-content-creatorin-koln-249536 | 7 Marketplace GmbH | Social Media Managerin / Content Creatorin (m/w/d) | Köln, Remote | posted: 2026-09-29~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/neurawork-gmbh-co-kg/marketing-content-manager-b2b-ampfing-216001 | Neurawork GmbH & Co. KG | Marketing & Content Manager B2B (m/w/d) | Ampfing, Remote | posted: 2026-09-29~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/kraken.com/5c4d1c46-02ec-4a87-a548-44a794aec51d | Kraken | Community Lead - Kraken Pro | Remote (global) | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-29)
+
+- [x] ~~https://www.linkedin.com/jobs/view/paid-social-media-manager-remote-columbus-at-blacksmith-agency-4466546795 | Blacksmith Agency | Paid Social Media Manager | Remote (Columbus, OH, US anchor) | note: linkedin id 4466546795 >= 4300000000~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/suno/2d13c0b6-69f6-4264-978e-ff08115bcb3b | Suno | Social Media Community Manager | Remote (unspecified, posted Aug 21 2026) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/ema/24e8492c-be2e-4ad9-9105-40f04ae4c71e | Ema | Social Media & Community Manager | Remote (US-based, unspecified) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://revvity.wd103.myworkdayjobs.com/external/job/US-Remote---SC/Technical-Content-Manager--Drug-Discovery-Reagents_JR-045601-1 | revvity | Technical Content Manager, Drug Discovery Reagents | US Remote - SC | posted: 2026-09-30~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/netshake/va-virtuelle-assistenz-social-media-content-manager-freelance-100-remote-stuttgart-379278 | NETSHAKE | VA (Virtuelle Assistenz) Social Media & Content Manager (w/m/d) - Freelance, 100% Remote | Stuttgart, Remote | posted: 2026-09-30~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/picmondoo-gmbh/social-media-manager-fur-malen-nach-zahlen-langweid-am-lech-425658 | Picmondoo GmbH | Social Media Manager für Malen nach Zahlen (m/w/d) | Langweid am Lech, Remote | posted: 2026-09-30~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/kaan-ai-gmbh/social-media-manager-mit-fokus-ugc-creator-nuremberg-323820 | Kaan AI GmbH | Social Media Manager (m/w/d) mit Fokus UGC & Creator | Nuremberg, Remote | posted: 2026-09-30~~ — removed from fresh matches
+
+- [ ] https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote | note: ats api: active
+
+- [x] ~~https://job-boards.greenhouse.io/revero/jobs/4636886008 | Revero | Content Creator and Social Media Manager (Contract) | Remote | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://jobs.lever.co/crypto/ff3dc7ba-662e-4e49-82c2-e6143bb93712 | Crypto.com | Social Media Manager / Content Creator | Remote (region unconfirmed — verify on posting) | note: ats api: active
+
+- [x] ~~https://jobs.ashbyhq.com/tradeify/1ea36ab4-9c1e-4b7a-98ce-4d64a6676549 | tradeify | Social Media Manager | Remote – UK | posted: 2026-09-30~~ — removed from fresh matches
+
+- [x] ~~https://gamesjobsindex.com/jobs/arb-interactive-social-media-content-manager-609c7c47.html | ARB Interactive | Social Media & Content Manager | Remote (US HQ) | note: datePosted 2026-09-17~~ — removed from fresh matches
+
+- [x] ~~https://www.arbeitnow.com/jobs/companies/1komma50/senior-content-manager-berlin-128439 | 1KOMMA5˚ | (Senior) Content Manager (m/w/d) | Berlin, Remote | posted: 2026-10-01~~ — removed from fresh matches
+
+- [x] ~~https://nodesk.co/remote-jobs/techstars-social-media-content-manager/ | Techstars | Social Media &amp; Content Manager | posted: 2026-10-01~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/flexport/jobs/8044163 | Flexport | Social Media & Content Manager | Remote (US anchored) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://jobs.lever.co/kabam/de608e5d-c2b3-47c2-b77b-f85527822add | Kabam | Senior Community Manager | Unspecified / possibly remote | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote
+
+- [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Germany/Staff-Content-Manager_REQ-5445 | clio | Staff Content Manager | Remote - Germany | posted: 2026-10-02~~ — removed from fresh matches
+- [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Ireland/Staff-Content-Manager_REQ-5444 | clio | Staff Content Manager | Remote - Ireland | posted: 2026-10-02~~ — removed from fresh matches
+- [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Italy/Staff-Content-Manager_REQ-5449 | clio | Staff Content Manager | Remote - Italy | posted: 2026-10-02~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/hellobrightline/3e0bb936-0f71-438e-8169-411795033278 | hellobrightline | Community Engagement Lead (BrightLife Kids) | San Francisco · Remote | posted: 2026-10-02~~ — removed from fresh matches
+- [ ] https://www.linkedin.com/jobs/view/social-media-manager-crypto-at-bettingjobs-4473126295 | BettingJobs | Social Media Manager - Crypto
+- [x] ~~https://news.ycombinator.com/item?id=49930568 | Enclave | Enclave | Technical Content & Community Lead | REMOTE (UK)~~ — removed from fresh matches
+
+- [ ] https://web3.career/social-media-lead-enterprise-inmobi/154803 | InMobi | Social Media Lead – Enterprise | Remote (non-European HQ) | note: datePosted 2026-10-01
+
+- [x] ~~https://weworkremotely.com/remote-jobs/anthropic-community-engagement-manager-data-centers-texas | Anthropic | Community Engagement Manager, Data Centers (Texas) | Anywhere in the World | posted: 2026-10-03~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/techstars57/jobs/8780078002 | Techstars | Social Media & Content Manager | Remote (US only) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/zam/jobs/4560762004?gh_src=ae1f7ddd4us | ZAM | Associate Community Manager (Germany) | Germany (Europe) | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://job-boards.greenhouse.io/ahrefsjobs/jobs/5797384004 | Ahrefs | Social Media Manager | Remote (worldwide) | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://job-boards.greenhouse.io/zam/jobs/4560762004 | ZAM | Associate Community Manager | Germany (Europe) | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://jobs.ashbyhq.com/recraft/9afa7a25-48c7-4cf4-a7bc-550d74332a72 | recraft | Community Manager (X/Twitter & Discord) | Remote | posted: 2026-10-04
+
+- [x] ~~https://jobs.ashbyhq.com/fireworks/da8f0b05-ac82-40a4-8cb8-64767c956018 | Fireworks AI | Social and Community Manager | Remote (HQ: Redwood City, US) | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
+
+- [ ] https://jobs.ashbyhq.com/recraft/9afa7a25-48c7-4cf4-a7bc-550d74332a72 | recraft | Community Manager (X/Twitter & Discord) | Remote
+
+- [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
+
+- [ ] https://jobs.ashbyhq.com/halobraid/8022770e-4af3-4161-9167-d83c4283668e | halobraid | Freelance Social Media Manager | New York, NY · Remote | posted: 2026-10-06
+- [ ] https://jobs.ashbyhq.com/hellobrightline/238ddc98-5e3d-4814-82fe-ffb8dd515543 | hellobrightline | Community Engagement Lead (BrightLife Kids - SF Bay Area) | San Francisco · Remote | posted: 2026-10-05
+- [x] ~~https://www.linkedin.com/jobs/view/global-chinese-community-manager-at-bettingjobs-4474046411 | BettingJobs | Global Chinese Community Manager~~ — swept: negative-title
+
+- [ ] https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/senior-social-media-brand-content-manager-hamburg-383417 | Start To Finish Consulting GmbH | Senior Social Media & Brand Content Manager (m/w/d) | Hamburg, Remote | posted: 2026-10-07
