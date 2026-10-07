@@ -360,9 +360,8 @@ tracked_companies:
     provider: greenhouse
     enabled: true
   - name: Uniswap Labs
-    careers_url: https://job-boards.greenhouse.io/uniswaplabs
-    api: https://boards-api.greenhouse.io/v1/boards/uniswaplabs/jobs
-    provider: greenhouse
+    careers_url: https://jobs.ashbyhq.com/uniswap
+    provider: ashby
     enabled: true
   - name: Blockchain.com
     careers_url: https://job-boards.greenhouse.io/blockchain
@@ -394,11 +393,12 @@ tracked_companies:
     api: https://boards-api.greenhouse.io/v1/boards/twitch/jobs
     provider: greenhouse
     enabled: true
+  # Hyphen Connect: greenhouse 404 (2026-10-08), no working slug on any provider
   - name: Hyphen Connect
     careers_url: https://job-boards.greenhouse.io/hyphenconnect
     api: https://boards-api.greenhouse.io/v1/boards/hyphenconnect/jobs
     provider: greenhouse
-    enabled: true
+    enabled: false
   - name: Remote
     careers_url: https://job-boards.greenhouse.io/remotecom
     api: https://boards-api.greenhouse.io/v1/boards/remotecom/jobs
@@ -481,10 +481,11 @@ tracked_companies:
     careers_url: https://jobs.ashbyhq.com/wincent
     provider: ashby
     enabled: true
+  # YO Labs: ashby board 404 (2026-10-08); recruitee:yo carries only a sample posting
   - name: YO Labs
     careers_url: https://jobs.ashbyhq.com/yolabs
     provider: ashby
-    enabled: true
+    enabled: false
   - name: thatgamecompany
     careers_url: https://jobs.ashbyhq.com/thatgamecompany
     provider: ashby
@@ -548,19 +549,21 @@ tracked_companies:
     careers_url: https://jobs.lever.co/immutable
     provider: lever
     enabled: true
+  # Sei Labs: lever board 404 (2026-10-08); workable:sei is a different entity (WEAP/Davis CA)
   - name: Sei Labs
     careers_url: https://jobs.lever.co/seilabs
     provider: lever
-    enabled: true
+    enabled: false
   - name: Scroll
     careers_url: https://jobs.lever.co/scroll
     provider: lever
     enabled: false
     notes: slug dead on all probeable ATS 2026-08-27 (audit) — re-resolve manually
+  # Ultra: lever board 404 (2026-10-08); ashby:ultra is a different Ultra (retail/Kentucky), not ultra.io
   - name: Ultra
     careers_url: https://jobs.lever.co/ultra
     provider: lever
-    enabled: true
+    enabled: false
   - name: Gate
     careers_url: https://jobs.lever.co/gate
     provider: lever
@@ -588,8 +591,8 @@ tracked_companies:
     provider: lever
     enabled: true
   - name: Stronghold
-    careers_url: https://jobs.lever.co/stronghold
-    provider: lever
+    careers_url: https://jobs.ashbyhq.com/stronghold
+    provider: ashby
     enabled: true
   - name: ChainGPT
     careers_url: https://apply.workable.com/chaingpt
@@ -660,10 +663,9 @@ tracked_companies:
     enabled: true
     api: https://boards-api.greenhouse.io/v1/boards/ripple/jobs
   - name: MoonPay
-    careers_url: https://job-boards.greenhouse.io/moonpay
-    provider: greenhouse
+    careers_url: https://jobs.lever.co/moonpay
+    provider: lever
     enabled: true
-    api: https://boards-api.greenhouse.io/v1/boards/moonpay/jobs
   - name: Near Foundation
     careers_url: https://job-boards.greenhouse.io/nearfoundation
     provider: greenhouse
@@ -680,18 +682,17 @@ tracked_companies:
     enabled: true
     api: https://boards-api.greenhouse.io/v1/boards/epicgames/jobs
   - name: Riot Games
-    careers_url: https://job-boards.greenhouse.io/riotgamesinc
+    careers_url: https://job-boards.greenhouse.io/riotgames
     provider: greenhouse
     enabled: true
-    api: https://boards-api.greenhouse.io/v1/boards/riotgamesinc/jobs
+    api: https://boards-api.greenhouse.io/v1/boards/riotgames/jobs
   - name: Circle.so (community platform)
-    careers_url: https://job-boards.greenhouse.io/circleso
-    provider: greenhouse
+    careers_url: https://jobs.ashbyhq.com/circle
+    provider: ashby
     enabled: true
-    api: https://boards-api.greenhouse.io/v1/boards/circleso/jobs
   - name: Kraken
-    careers_url: https://jobs.lever.co/kraken123
-    provider: lever
+    careers_url: https://jobs.ashbyhq.com/kraken.com
+    provider: ashby
     enabled: true
   - name: Anchorage Digital
     careers_url: https://jobs.lever.co/anchorage
@@ -708,6 +709,12 @@ tracked_companies:
   - name: Blast
     careers_url: https://jobs.ashbyhq.com/blast-io
     provider: ashby
+    enabled: true
+  # BLAST esports (Copenhagen tournament org) — a DIFFERENT entity from Blast L2 above.
+  # Added 2026-10-08: esports community/content roles are squarely on target.
+  - name: BLAST (esports)
+    careers_url: https://apply.workable.com/blast
+    provider: workable
     enabled: true
   - name: Illuvium
     careers_url: https://illuvium.io/jobs
