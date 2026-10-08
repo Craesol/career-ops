@@ -32,12 +32,28 @@ export async function POST(req: Request) {
   // The user's playbook — parsed with js-yaml (NEVER regex; see the 2026-08-26
   // inliner bug where a YAML re-dump silently starved L3 down to 2 queries).
   let queries: { name: string; query: string }[] = [];
+  // Sources scan.mjs already sweeps directly, every hour, at ZERO token cost.
+  // Telling the proposer to skip them is the compact fix for the duplicate
+  // waste measured over 2026-10-02..08: 2,599 of 4,037 proposals (64%) were
+  // rejected as duplicates by l3-writer, and the hosts they came from were
+  // exactly these — greenhouse 30, lever 20, ashby 19, web3.career 20,
+  // remoteok 20. A URL blacklist is not an option: scan-history holds ~2,280
+  // distinct URLs for the last 45 days alone, far too large for a prompt that
+  // runs 24x/day. 90 company names plus 13 feed names cost about 1.2 KB.
+  let coveredCompanies: string[] = [];
+  let coveredBoards: string[] = [];
   try {
     const doc = (yaml.load(fs.readFileSync(path.join(careerOpsRoot(), "portals.yml"), "utf8")) as Record<string, unknown>) || {};
     for (const q of (Array.isArray(doc.search_queries) ? doc.search_queries : []) as Array<Record<string, unknown>>) {
       if (q && typeof q.name === "string" && typeof q.query === "string" && q.enabled !== false) {
         queries.push({ name: q.name.trim(), query: String(q.query).replace(/\s+/g, " ").trim() });
       }
+    }
+    for (const c of (Array.isArray(doc.tracked_companies) ? doc.tracked_companies : []) as Array<Record<string, unknown>>) {
+      if (c && typeof c.name === "string" && c.enabled !== false) coveredCompanies.push(c.name.trim());
+    }
+    for (const b of (Array.isArray(doc.job_boards) ? doc.job_boards : []) as Array<Record<string, unknown>>) {
+      if (b && typeof b.name === "string" && b.enabled !== false) coveredBoards.push(b.name.trim());
     }
   } catch {
     return Response.json({ error: "portals.yml unreadable — the deep scan needs the search playbook" }, { status: 400 });
@@ -57,6 +73,15 @@ export async function POST(req: Request) {
     "Be broad: community, program, ecosystem, social-media and creator-program roles. Do not judge fit or score anything.",
     "PRIORITIZE REMOTE: the candidate is based on the French Riviera and works remote-first. Emit remote / worldwide / EMEA / Europe-eligible postings first, and skip roles that are onsite-only outside Europe. A remote role anchored to a non-European HQ is fine — say so in \"location\".",
     "FRESHNESS IS MANDATORY: search indexes keep dead job pages for years. Skip any result whose snippet or page shows a posting date older than ~45 days. NEVER emit a linkedin.com/jobs/view/ URL whose numeric job id is below 4300000000 — those are years-old dead pages that search engines still index.",
+    ...(coveredCompanies.length || coveredBoards.length
+      ? [
+          "",
+          "ALREADY COVERED — DO NOT EMIT THESE. A zero-cost scanner sweeps them directly every hour, so anything you find there is discarded as a duplicate and the search was wasted:",
+          ...(coveredCompanies.length ? ["  - the careers/ATS board of any of these companies: " + coveredCompanies.join(", ")] : []),
+          ...(coveredBoards.length ? ["  - these job feeds and aggregators: " + coveredBoards.join(", ")] : []),
+          "Your value is precisely what those sweeps CANNOT see: employers with no public ATS API, niche or regional boards, company sites and newsrooms, and postings that only surface through search. Spend the searches there.",
+        ]
+      : []),
     "",
     "SEARCHES:",
     ...queries.map((q, i) => `${i + 1}. [${q.name}] ${q.query}`),
