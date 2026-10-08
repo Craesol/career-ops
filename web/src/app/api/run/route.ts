@@ -28,8 +28,15 @@ Target: ${input}`;
     return `You are generating the user's ATS-optimized, TAILORED CV PDF for application #${input}, headless, on their machine. Run the REAL career-ops "pdf" mode — follow modes/pdf.md EXACTLY (do not improvise a format).
 1. Read modes/pdf.md, cv.md, config/profile.yml, and the evaluation report at reports/${input}-*.md (for the JD keywords + analysis).
 2. Tailor the CV per modes/pdf.md: inject the JD's keywords into the summary + first bullets, reorder experience by relevance, build the competency grid, pick the top 3–4 projects. NEVER invent skills — only reword REAL experience using the JD's vocabulary.
-3. Fill templates/cv-template.html's {{...}} placeholders with the tailored content; write the HTML to /tmp/cv-{candidate}-{company}.html (candidate = the profile name in kebab-case).
-4. Render the PDF: \`node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/cv-{candidate}-{company}-${today}.pdf --format={letter for US/Canada companies, else a4}\`.
+3. Resolve the template (never hardcode cv-template.html): \`node cv-templates.mjs resolve cv\`.
+4. Build the PAYLOAD, gate it, then render — this is modes/pdf.md steps 17–21 and none of it is optional. Let BASE = .career-ops-web/cv-html/cv-{candidate}-{company} (candidate = the profile name in kebab-case):
+   a. Write the compact JSON of modes/pdf.md's "JSON Input Schema" to {BASE}.json. Never emit full HTML markup and never escape &/</>/quotes yourself.
+   b. \`node cv-title-check.mjs {BASE}.json --summary\` — the only guard against a job TITLE drifting to a more senior-sounding one for the same job; the fact gate cannot see it. "Entries compared: 0" means the gate is checking nothing: STOP and say so instead of reporting its green tick.
+   c. \`node verify-cv-structure.mjs {BASE}.json\` — entry order and dropped descriptors. UNVERIFIED is not a pass.
+   d. \`node build-cv-html.mjs {BASE}.json {BASE}.html {resolved-template}\`
+   e. \`node ats-score.mjs {BASE}.html\` — if the verdict is not "pass", reframe from its gap list (reformulation only, never a new claim) and rebuild from (a); at most two iterations, then proceed and report the score.
+   f. \`node generate-pdf.mjs {BASE}.html output/cv-{candidate}-{company}-${today}.pdf --format={letter for US/Canada companies, else a4} --report=${input}\`
+   g. KEEP the HTML. modes/_custom.md's PDF-only rule says the intermediate must not live in output/ — .career-ops-web/cv-html/ is gitignored and machine-local, satisfies that, and is what data/pdf-index.tsv points at so the dashboard's D hotkey can regenerate and the CV stays auditable afterwards.
 5. Update the tracker: in data/applications.md, change the PDF column for row #${input} from ❌ to ✅.
 Do not submit anything anywhere.
 
@@ -56,9 +63,15 @@ End with EXACTLY one final line: VERDICT: {5 if now live, else 1}/5 — {what yo
 3. Generate the tailored CV (modes/pdf.md, follow it EXACTLY):
    THE USER CLICKED "Create CV" — that IS the explicit user override. Generate the CV REGARDLESS of the evaluation score; report the score and its caveats informationally, never as a reason to skip generation. (Source-of-truth still applies: only claims backed by cv.md — flag gaps, never invent.)
    a. Read modes/pdf.md and modes/_custom.md (if it exists). Tailor the CV: inject the JD's keywords into the summary + first bullets, reorder experience by relevance, build the competency grid, pick the top 3–4 projects. NEVER invent skills — only reword REAL experience using the JD's vocabulary.
-   b. Fill templates/cv-template.html's {{...}} placeholders; write the HTML to output/cv-{candidate}-{company-slug}.html (candidate = the profile name in kebab-case).
-   c. Render: \`node generate-pdf.mjs output/cv-{candidate}-{company-slug}.html output/cv-{candidate}-{company-slug}-${today}.pdf --format={letter for US/Canada companies, else a4} --report={num}\`.
-   d. PDF-only house rule: after the PDF renders successfully, DELETE the intermediate output/cv-{candidate}-{company-slug}.html — only the .pdf stays in output/.
+   b. Resolve the template — do NOT hardcode cv-template.html: \`node cv-templates.mjs resolve cv\` (add the name as a second argument only if the user named one). A non-zero exit means the configured template is missing: surface that instead of falling back silently.
+   c. Build the render PAYLOAD, not markup. Write the compact JSON of modes/pdf.md's "JSON Input Schema" to .career-ops-web/cv-html/cv-{candidate}-{company-slug}.json. You never emit full HTML and never escape &/</>/quotes yourself — build-cv-html.mjs owns every tag, class and escape.
+   d. Run the two zero-LLM gates on that payload, in this order, and report what they say:
+      - \`node cv-title-check.mjs .career-ops-web/cv-html/cv-{candidate}-{company-slug}.json --summary\` — pairs each payload entry against cv.md's own {company, dates} and flags any job TITLE that drifted to a more senior-sounding one for the same job. The fact gate cannot see this (a title is not a metric), so this is the only guard against it. If "Entries compared" is 0, STOP: the pairing broke and the gate is not actually checking anything — say so rather than proceeding on a green tick.
+      - \`node verify-cv-structure.mjs .career-ops-web/cv-html/cv-{candidate}-{company-slug}.json\` — out-of-order experience entries and dropped company descriptors. UNVERIFIED means cv.md's headers are not in the supported shape; report it, do not treat it as a pass.
+   e. Build the HTML: \`node build-cv-html.mjs .career-ops-web/cv-html/cv-{candidate}-{company-slug}.json .career-ops-web/cv-html/cv-{candidate}-{company-slug}.html {resolved-template}\`.
+   f. Score it before rendering: \`node ats-score.mjs .career-ops-web/cv-html/cv-{candidate}-{company-slug}.html\`. If the verdict is not "pass", reframe using its gap list (reformulation only — never a new claim) and rebuild from step c. At most two iterations, then proceed and report the final score.
+   g. Render: \`node generate-pdf.mjs .career-ops-web/cv-html/cv-{candidate}-{company-slug}.html output/cv-{candidate}-{company-slug}-${today}.pdf --format={letter for US/Canada companies, else a4} --report={num}\`.
+   h. PDF-only house rule, implemented the way modes/_custom.md actually states it: the HTML is a build intermediate that must not live in output/ — it lives in .career-ops-web/cv-html/ (gitignored, machine-local) and is KEPT. Do not delete it. data/pdf-index.tsv records the PDF↔HTML pair so the dashboard's D hotkey can regenerate, and keeping it is also the only way a finished CV can be re-audited afterwards. Only the .pdf lands in output/ and gets delivered.
 
 4. Register in the tracker (AFTER the PDF exists, so the PDF column is truthful):
    a. Append ONE row of 9 TAB-separated columns to batch/tracker-additions/{num}-{company-slug}.tsv, in THIS exact order (real \\t tabs, status BEFORE score):
