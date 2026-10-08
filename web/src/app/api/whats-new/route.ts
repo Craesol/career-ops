@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { careerOpsRoot, readApplications } from "@/lib/career-ops";
 import { locationAllowed, titleAllowed } from "@/lib/core/location-filter";
-import type { DiscoveredOffer } from "@/lib/explore";
+import { matchOfferToApplication, type DiscoveredOffer } from "@/lib/explore";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -12,7 +12,6 @@ export const dynamic = "force-dynamic";
 // evaluated yet. No scan runs here — it reads the history a past scan already
 // wrote, so the home stays instant + free (directly answers the #1 token-cost
 // complaint). cols: url, first_seen, portal, title, company, status, location.
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 // web3.career URLs carry sequential posting ids — the only recency signal for
 // dateless discoveries. Mirror of prune-stale-web3career.mjs: anything more
@@ -34,8 +33,16 @@ export async function GET(req: Request) {
     return Response.json({ offers: [], count: 0 });
   }
 
-  // Companies already evaluated → don't resurface as "new".
-  const evaluated = new Set(readApplications().map((a) => norm(a.company)).filter(Boolean));
+  // Openings already evaluated → don't resurface as "new".
+  //
+  // This matched on COMPANY NAME alone until 2026-10-09, which silently cost
+  // opportunities: evaluating Recraft once in September meant Recraft could
+  // never surface again, for any role, ever. On a community search where one
+  // company posts several relevant openings over months, that is the expensive
+  // direction to be wrong in. matchOfferToApplication keys on company AND
+  // title — the same offer-level identity the Applied/Ignore buttons use — so a
+  // NEW role at an already-evaluated company now comes through.
+  const apps = readApplications();
 
   // Free-tier prescores (auto-triage.mjs): url → {score, basis}. Best-effort —
   // a missing/short file just means no badges.
@@ -55,7 +62,7 @@ export async function GET(req: Request) {
     const [url, firstSeen, portal, title, company, status, location] = c;
     if (!url || !/^https?:\/\//i.test(url)) return null;
     if (status && /skipped|expired/i.test(status)) return null;
-    if (company && evaluated.has(norm(company))) return null;
+    if (matchOfferToApplication(apps, company || "", title || "")) return null;
     // Honor the CURRENT policy retroactively: rows recorded before a rule
     // tightened (on-site, geo-restricted, negative title) must not resurface.
     if (!locationAllowed(location)) return null;
