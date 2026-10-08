@@ -71,6 +71,31 @@ sweep over the PUBLIC Greenhouse/Lever/Ashby/Workday/iCIMS directories
 07:31 nightly emails whatever the sweep found overnight. The same single-owner
 rule applies to both: no other machine runs these tasks.
 
+## Agent inbox syncs over the LAN, never through git (2026-10-09)
+
+`data/agent-inbox.md` is personal data: `agent-inbox.mjs` keeps it gitignored on
+purpose, and **this fork is a PUBLIC repo**, so it must never be `git add -f`-ed
+the way `portals.yml` and `data/scan-history.tsv` deliberately are. It used to
+exist only on whichever machine queued the item — a reminder queued on the
+desktop was invisible to a session opened on CAJITA, which had no copy of the
+file at all.
+
+It now syncs desktop↔CAJITA over SSH, riding the existing 30-minute
+`career-ops-output-sync` task on the **desktop** (`sync-output-from-cajita.ps1`
+calls `sync-agent-inbox.ps1` at the end). The merge is a union keyed on
+`<stamp> — <request>`, where a resolved item always beats the other side's stale
+pending copy; rules and edge cases live in `sync-agent-inbox.mjs` and are
+covered by `tests/sync-agent-inbox.test.mjs`. The wrapper is deliberately
+fail-closed: it pushes nothing when CAJITA is unreachable, when a pull of an
+existing remote file fails, or when the merge would come out smaller than either
+input. Queue from either machine; both converge within 30 minutes, or
+immediately by running `sync-agent-inbox.ps1` by hand.
+
+Note that **auto-memory is still per-machine** (`C:\Users\tradu\.claude\...` is
+this desktop's user, not `Cajita`) and is not synced. Durable context that must
+survive a machine switch belongs in the inbox or in a user-layer file, not only
+in memory.
+
 ## Remote sessions: do not scan, do not email
 
 Everything in this project runs on the user's own machine (daily-consolidated.mjs

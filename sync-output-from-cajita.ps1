@@ -27,3 +27,8 @@ foreach ($f in $new) {
 }
 Add-Content $log ("[" + (Get-Date -Format s) + "] remotos " + $remoteList.Count + " | nuevos " + $new.Count + " | copiados " + $ok)
 if ($new.Count -gt 0) { $new | ForEach-Object { Add-Content $log ("   + " + $_) } }
+
+# --- agent inbox (2026-10-09) -------------------------------------------
+# Rides this same task rather than adding a second one. The inbox is personal
+# data kept out of a PUBLIC fork, so it syncs over the LAN like output\ does.
+& powershell -NoProfile -ExecutionPolicy Bypass -File 'C:\Claude\career-ops\sync-agent-inbox.ps1'
