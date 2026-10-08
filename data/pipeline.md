@@ -2472,3 +2472,6 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/senior-social-media-brand-content-manager-hamburg-383417 | Start To Finish Consulting GmbH | Senior Social Media & Brand Content Manager (m/w/d) | Hamburg, Remote | posted: 2026-10-07~~ — removed from fresh matches
 - [ ] https://fr.linkedin.com/jobs/view/community-social-media-manager-%E2%80%94-ai-robotics-data-company-remote-paris-s%C3%A3o-paulo-at-techtree-4474459142 | TechTree | Community & Social Media Manager — AI/Robotics Data Company (Remote / Paris / São Paulo)
+
+- [ ] https://www.linkedin.com/jobs/view/4477199748/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Madrid, Community of Madrid, Spain | note: ats api: active
+- [ ] https://www.linkedin.com/jobs/view/4477415044/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Seville, Andalusia, Spain | note: ats api: active
