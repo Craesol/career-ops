@@ -22,6 +22,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { getCareerOpsRoot } from './path-resolver.mjs';
 import { canSpend, record, status } from './lib/openrouter-budget.mjs';
+import { SYSTEM, parseVerdicts, DEFAULT_GATE_MODEL } from './lib/hard-gates.mjs';
 
 const ROOT = getCareerOpsRoot();
 const API = 'https://openrouter.ai/api/v1/chat/completions';
@@ -54,28 +55,6 @@ const CASES = [
   { id: 8, expect: 'pass', gate: 'none',       jd: 'Senior Community Manager (Remote, EMEA). Build and run our Discord and Telegram programmes. English required; other languages a plus. Competitive salary.' },
 ];
 
-const SYSTEM = [
-  'You classify job postings against a fixed set of HARD DISQUALIFIERS for one specific candidate.',
-  'The candidate: Spanish native, English C2, French only B1-B2 (cannot work in French above that, cannot do French-facing community work), NO German and no other languages. 20+ years experience. Hard salary floor 50,000 EUR per year. Based in France, targets remote-EU or Europe-hybrid roles.',
-  '',
-  'Return ONLY a JSON OBJECT with a "results" array, no prose, no markdown fence. One entry per posting, all of them:',
-  '{"results": [{"id": <number>, "verdict": "pass" | "fail", "gate": "german" | "french" | "internship" | "volunteer" | "market" | "comp" | "none", "why": "<12 words max>"}]}',
-  'A top-level array is NOT accepted: the response must be an object whose only key is "results".',
-  '',
-  'The gates, and nothing else counts as a fail:',
-  '  german     - the posting requires German (or Dutch, Mandarin, Japanese, Korean, Arabic, Turkish, Hindi, Thai, Vietnamese, Indonesian, Tagalog) at any working level.',
-  '  french     - it requires French above B1-B2: native, bilingual, C1+, "courant", or the audience/community is French-only.',
-  '  internship - internship, stage, stagiaire, alternance, apprenticeship, trainee, Werkstudent, Praktikum, beca, practicas, working student, or a new-grad scheme.',
-  '  volunteer  - unpaid, volunteer, benevolat, voluntariado.',
-  '  market     - the role is anchored to a non-European LOCAL audience (APAC, Middle East, LATAM, India, Brazil, Japan, China), even if listed as remote.',
-  '               EMEA, Europe, EU, UK, DACH-as-a-region, "global", "worldwide" and "international" are NOT market anchors - EMEA and global roles INCLUDE Europe and must pass this gate.',
-  '               A false "market" verdict is the costliest mistake you can make here: it silently discards a role the candidate wants. When the audience is not clearly non-European, answer "none".',
-  '  comp       - a STATED salary or range whose top is below 50,000 EUR per year. Unstated compensation is NOT a fail.',
-  '  none       - no gate applies; verdict is "pass".',
-  '',
-  'If a posting trips more than one gate, report the first one in the list above. Judge only what the text says; never infer a gate from a company name or a guess.',
-].join('\n');
-
 function arg(name) {
   const i = process.argv.indexOf('--' + name);
   return i > -1 && process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[i + 1] : null;
@@ -96,26 +75,6 @@ function userMessage() {
     + CASES.map((c) => '--- id ' + c.id + ' ---\n' + c.jd).join('\n\n');
 }
 
-/** Pull the JSON array out of a reply that may be fenced or padded with prose. */
-export function parseVerdicts(text) {
-  if (!text) return null;
-  let t = String(text).trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
-  // Accept either a bare array or the wrapped {"results":[...]} form that
-  // response_format:json_object requires. The first bake-off run proved a model
-  // will honour the object constraint over an instruction asking for an array.
-  try {
-    const obj = JSON.parse(t);
-    if (obj && Array.isArray(obj.results)) return obj.results;
-    if (Array.isArray(obj)) return obj;
-  } catch { /* fall through to bracket extraction */ }
-  const start = t.indexOf('[');
-  const end = t.lastIndexOf(']');
-  if (start < 0 || end <= start) return null;
-  try {
-    const arr = JSON.parse(t.slice(start, end + 1));
-    return Array.isArray(arr) ? arr : null;
-  } catch { return null; }
-}
 
 export function scoreVerdicts(verdicts) {
   const byId = new Map();

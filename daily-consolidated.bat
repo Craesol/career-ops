@@ -30,6 +30,17 @@ echo [%date% %time%] daily-consolidated starting >> logs\daily-consolidated.log
 echo [%date% %time%] L3 deep scan (ruta probada: l3-hourly) >> logs\daily-consolidated.log
 node l3-hourly.mjs >> logs\daily-consolidated.log 2>&1
 
+REM Hard-gate triage (2026-10-09): one FREE OpenRouter request classifies the
+REM day's finds against the hard disqualifiers (German/Dutch, French above
+REM B1-B2, internship, volunteer, non-European market anchor, stated comp under
+REM the 50k floor) BEFORE any paid evaluation is spent on them. The title filter
+REM cannot see the JD body and auto-triage only scores, so a gated role used to
+REM cost a full evaluation to discover. Verdicts are RECORDED in
+REM data\gate-verdicts.tsv and nothing is removed from the pipeline: a free
+REM model gates nothing on its own (see modes\_custom.md).
+echo [%date% %time%] gate-triage (free tier) >> logs\daily-consolidated.log
+node gate-triage.mjs --summary >> logs\daily-consolidated.log 2>&1
+
 node daily-consolidated.mjs >> logs\daily-consolidated.log 2>&1
 
 echo [%date% %time%] daily-consolidated finished (exit code %ERRORLEVEL%) >> logs\daily-consolidated.log
