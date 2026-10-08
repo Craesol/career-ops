@@ -468,7 +468,7 @@ try {
   // Drain before leaving (2026-10-09). process.exit() straight out of this
   // catch tears the event loop down while the sockets of the fetch that just
   // failed are still in UV_HANDLE_CLOSING, and libuv aborts the process:
-  //   Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), srcwinasync.c:94
+  //   Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), src\win\async.c:94
   // Callers then see 0xC0000409 (3221226505) instead of exit 1, which is how
   // 377 transient Gemini 503s reached auto-triage.mjs as an undiagnosable
   // crash. One macrotask is enough for the handles to finish closing.

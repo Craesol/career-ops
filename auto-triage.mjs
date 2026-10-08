@@ -86,44 +86,54 @@ function runGeminiEvalOnce(jdText, index) {
 //
 // gemini-eval.mjs calls process.exit(1) from inside the catch around
 // model.generateContent(). On Windows that tears the event loop down while
-// the failed fetch sockets are still in UV_HANDLE_CLOSING, so libuv aborts:
-//   Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), srcwinasync.c:94
+// the sockets of the fetch that just failed are still in UV_HANDLE_CLOSING,
+// so libuv aborts the process:
+//   Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), src\win\async.c:94
 // The child then dies with 0xC0000409 instead of exit 1, and this script used
-// to log the bare number. There were 377 such lines in hourly-scan.log, and
-// every reproduced one was a transient Gemini 503 (model experiencing high
-// demand) or a free-tier rate limit. The real reason is always present in the
-// child output, so read it from there and retry instead of reporting an exit
-// code nobody can act on.
+// to log that bare number. There were 377 such lines in hourly-scan.log, and
+// every one reproduced turned out to be a transient Gemini 503 (model
+// experiencing high demand) or a free-tier rate limit. The real reason is
+// always present in the child output, so read it from there and retry rather
+// than reporting an exit code nobody can act on.
 //
 // gemini-eval.mjs is upstream-owned (NOT in config/local-paths.txt), so a fix
 // made there is reverted by the next update-system.mjs apply. Everything below
-// therefore assumes the child may still abort, and stays correct either way.
+// therefore assumes the child may still abort, and stays correct either way:
+// the transient markers reach the output before the abort.
 // ---------------------------------------------------------------------------
 
 /** 0xC0000409, as both the unsigned and the signed value Node may report. */
 const ABORT_EXITS = new Set([3221226505, -1073740791]);
 
 const TRANSIENT_RE =
-  /(503|429|overload|unavailable|high demand|rate limit|quota|try again later|ECONNRESET|ETIMEDOUT|EAI_AGAIN|socket hang up|fetch failed)/i;
+  /(\b503\b|\b429\b|overload|unavailable|high demand|rate limit|quota|try again later|ECONNRESET|ETIMEDOUT|EAI_AGAIN|socket hang up|fetch failed)/i;
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 /** The actionable line out of a failed gemini-eval run, for the log. */
 export function failureReason(out, exit) {
-  const api = out.match(/Gemini API error:s*(.+)/);
-  if (api) return api[1].trim().replace(/s+/g, " ").slice(0, 180);
-  const val = out.match(/Gemini output failed validation:s*(.+)/);
-  if (val) return "output failed validation: " + val[1].trim().slice(0, 140);
-  if (ABORT_EXITS.has(exit)) return "child aborted (0xC0000409) with no diagnostic";
-  return "exit " + exit;
+  const api = out.match(/Gemini API error:\s*(.+)/);
+  if (api) {
+    const msg = api[1].trim().replace(/\s+/g, ' ');
+    // Lead with the bracketed status when the SDK supplies one: its message
+    // opens with the full endpoint URL, which pushes the status itself past
+    // the truncation point and leaves the log line saying nothing.
+    const status = msg.match(/\[(\d{3}[^\]]*)\]\s*(.*)/);
+    if (status) return (status[1] + ' - ' + status[2]).trim().slice(0, 180);
+    return msg.slice(0, 180);
+  }
+  const val = out.match(/Gemini output failed validation:\s*(.+)/);
+  if (val) return 'output failed validation: ' + val[1].trim().slice(0, 140);
+  if (ABORT_EXITS.has(exit)) return 'child aborted (0xC0000409) with no diagnostic';
+  return 'exit ' + exit;
 }
 
 /** A failure worth retrying: the service was busy, not the input was bad. */
 export function isTransient(out, exit) {
   if (TRANSIENT_RE.test(out)) return true;
-  // An abort with no diagnostic is almost certainly the same error path dying
-  // before it could flush, so treat it as transient. A validation failure is
-  // deterministic and is never retried.
+  // An abort carrying no diagnostic is almost certainly that same error path
+  // dying before it could flush, so treat it as transient. A validation
+  // failure is deterministic and is never retried.
   return ABORT_EXITS.has(exit) && !/Gemini output failed validation/.test(out);
 }
 
@@ -141,8 +151,8 @@ async function runGeminiEval(jdText, index, deadline, retries = 2) {
     if (!isTransient(r.out, r.exit)) break;
     const wait = 15_000 * (attempt + 1);
     if (Date.now() + wait > deadline) break;
-    console.log("      transient - retry " + (attempt + 1) + "/" + retries +
-                " in " + wait / 1000 + "s: " + failureReason(r.out, r.exit));
+    console.log('      transient - retry ' + (attempt + 1) + '/' + retries +
+                ' in ' + wait / 1000 + 's: ' + failureReason(r.out, r.exit));
     await sleep(wait);
   }
   return { ...r, attempts: retries + 1 };
@@ -173,7 +183,7 @@ export async function main() {
   let aborted = null;
   // Every candidate shares one free-tier quota, so once the service is clearly
   // down there is nothing to gain from walking the rest of the queue - they all
-  // fail the same way. Stop, say so, and let the next hourly run retry.
+  // fail the same way. Stop, say so, and let the next hourly run retry them.
   let transientStreak = 0;
   const budgetMs = Math.max(60_000, Number(process.env.TRIAGE_BUDGET_MS) || 480_000);
   const deadline = Date.now() + budgetMs;
@@ -186,8 +196,8 @@ export async function main() {
       ?? `Job posting (no full description retrievable — judge fit from these fields only, conservatively):\n` +
          `Title: ${c.title}\nCompany: ${c.company}\nLocation: ${c.location}\nSource: ${c.portal}\nURL: ${c.url}`;
     if (Date.now() > deadline) {
-      aborted = "time budget exhausted (" + budgetMs / 1000 + "s)";
-      console.log("  · stopping: " + aborted);
+      aborted = 'time budget exhausted (' + budgetMs / 1000 + 's)';
+      console.log('  · stopping: ' + aborted);
       break;
     }
     const r = await runGeminiEval(input, i, deadline);
@@ -202,8 +212,8 @@ export async function main() {
       }
       console.log(`  · ${c.title} — eval failed after ${r.attempts} attempt(s): ${why}`);
       if (transientStreak >= 3) {
-        aborted = "gemini unavailable (3 consecutive transient failures)";
-        console.log("  · stopping: " + aborted);
+        aborted = 'gemini unavailable (3 consecutive transient failures)';
+        console.log('  · stopping: ' + aborted);
         break;
       }
       continue;
