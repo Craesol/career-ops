@@ -18,6 +18,11 @@
 // left to the scanner's own location_filter; `description` is passed through
 // so the content filter can act on it.
 
+// safeEncodeURIComponent (adopted 2026-10-09, upstream v1.35.0 contract): a
+// lone surrogate in a config value makes bare encodeURIComponent throw
+// URIError, which would abort the whole scan instead of skipping one phrase.
+import { safeEncodeURIComponent } from './_safe-url.mjs';
+
 const API_BASE = 'https://api.adzuna.com/v1/api/jobs';
 const RESULTS_PER_PAGE = 50;
 const DEFAULT_COUNTRY = 'gb';
@@ -55,8 +60,14 @@ export default {
     const seen = new Set();
     const jobs = [];
     for (const what of whats) {
-      const url = `${API_BASE}/${country}/search/1?app_id=${encodeURIComponent(appId)}&app_key=${encodeURIComponent(appKey)}` +
-        `&results_per_page=${RESULTS_PER_PAGE}&what=${encodeURIComponent(what.trim())}&content-type=application/json`;
+      const encId = safeEncodeURIComponent(appId);
+      const encKey = safeEncodeURIComponent(appKey);
+      const encWhat = safeEncodeURIComponent(what.trim());
+      // null means the value could not be URI-encoded. Skip that phrase rather
+      // than building a malformed URL or letting URIError kill the scan.
+      if (encId === null || encKey === null || encWhat === null) continue;
+      const url = `${API_BASE}/${country}/search/1?app_id=${encId}&app_key=${encKey}` +
+        `&results_per_page=${RESULTS_PER_PAGE}&what=${encWhat}&content-type=application/json`;
       let json;
       try {
         json = await ctx.fetchJson(url, { redirect: 'error' });
