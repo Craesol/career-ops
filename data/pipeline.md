@@ -2417,7 +2417,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/kaan-ai-gmbh/social-media-manager-mit-fokus-ugc-creator-nuremberg-323820 | Kaan AI GmbH | Social Media Manager (m/w/d) mit Fokus UGC & Creator | Nuremberg, Remote | posted: 2026-09-30~~ — removed from fresh matches
 
-- [ ] https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote | note: ats api: active
+- [x] ~~https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote | note: ats api: active~~ — swept: stale (8d old, first seen 2026-09-30)
 
 - [x] ~~https://job-boards.greenhouse.io/revero/jobs/4636886008 | Revero | Content Creator and Social Media Manager (Contract) | Remote | note: ats api: active~~ — removed from fresh matches
 
@@ -2435,7 +2435,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://jobs.lever.co/kabam/de608e5d-c2b3-47c2-b77b-f85527822add | Kabam | Senior Community Manager | Unspecified / possibly remote | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote
+- [x] ~~https://job-boards.greenhouse.io/turing/jobs/5991747004 | Turing | Community Manager | Remote~~ — swept: stale (8d old, first seen 2026-09-30)
 
 - [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Germany/Staff-Content-Manager_REQ-5445 | clio | Staff Content Manager | Remote - Germany | posted: 2026-10-02~~ — removed from fresh matches
 - [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Ireland/Staff-Content-Manager_REQ-5444 | clio | Staff Content Manager | Remote - Ireland | posted: 2026-10-02~~ — removed from fresh matches
@@ -2466,8 +2466,9 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
 
-- [ ] https://jobs.ashbyhq.com/halobraid/8022770e-4af3-4161-9167-d83c4283668e | halobraid | Freelance Social Media Manager | New York, NY · Remote | posted: 2026-10-06
-- [ ] https://jobs.ashbyhq.com/hellobrightline/238ddc98-5e3d-4814-82fe-ffb8dd515543 | hellobrightline | Community Engagement Lead (BrightLife Kids - SF Bay Area) | San Francisco · Remote | posted: 2026-10-05
+- [x] ~~https://jobs.ashbyhq.com/halobraid/8022770e-4af3-4161-9167-d83c4283668e | halobraid | Freelance Social Media Manager | New York, NY · Remote | posted: 2026-10-06~~ — removed from fresh matches
+- [x] ~~https://jobs.ashbyhq.com/hellobrightline/238ddc98-5e3d-4814-82fe-ffb8dd515543 | hellobrightline | Community Engagement Lead (BrightLife Kids - SF Bay Area) | San Francisco · Remote | posted: 2026-10-05~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/global-chinese-community-manager-at-bettingjobs-4474046411 | BettingJobs | Global Chinese Community Manager~~ — swept: negative-title
 
-- [ ] https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/senior-social-media-brand-content-manager-hamburg-383417 | Start To Finish Consulting GmbH | Senior Social Media & Brand Content Manager (m/w/d) | Hamburg, Remote | posted: 2026-10-07
+- [x] ~~https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/senior-social-media-brand-content-manager-hamburg-383417 | Start To Finish Consulting GmbH | Senior Social Media & Brand Content Manager (m/w/d) | Hamburg, Remote | posted: 2026-10-07~~ — removed from fresh matches
+- [ ] https://fr.linkedin.com/jobs/view/community-social-media-manager-%E2%80%94-ai-robotics-data-company-remote-paris-s%C3%A3o-paulo-at-techtree-4474459142 | TechTree | Community & Social Media Manager — AI/Robotics Data Company (Remote / Paris / São Paulo)
