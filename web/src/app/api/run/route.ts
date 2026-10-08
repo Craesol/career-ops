@@ -105,6 +105,43 @@ VERDICT: {score}/5 — {reason in 12 words or fewer}
 Posting URL: ${input}`;
 }
 
+/**
+ * Append one row per model run to data/model-runs.tsv (append-only, next to the
+ * other data ledgers). A ledger write must never take a run down with it, hence
+ * the swallowed catch: a missing data/ dir or a locked file is not worth losing
+ * a finished evaluation over.
+ */
+function appendRunLedger(row: {
+  kind: string;
+  cli: string;
+  outcome: string;
+  tokens: number;
+  costUsd: number | null;
+  input: string;
+}): void {
+  try {
+    const file = path.join(careerOpsRoot(), "data", "model-runs.tsv");
+    if (!fs.existsSync(file)) {
+      fs.writeFileSync(file, "ts\tkind\tcli\toutcome\ttokens\tcost_usd\ttarget\n");
+    }
+    // The target can be a whole JD pasted inline, so keep the first line only and
+    // strip tabs — one row must stay one row.
+    const target = String(row.input || "").split("\n")[0].replace(/\t/g, " ").slice(0, 200);
+    const cells = [
+      new Date().toISOString(),
+      row.kind,
+      row.cli,
+      row.outcome,
+      String(row.tokens ?? 0),
+      (row.costUsd ?? 0).toFixed(4),
+      target,
+    ];
+    fs.appendFileSync(file, cells.join("\t") + "\n");
+  } catch {
+    /* never fail a run over its own bookkeeping */
+  }
+}
+
 export async function POST(req: Request) {
   let body: { kind?: string; input?: string; cliId?: string };
   try {
@@ -270,21 +307,32 @@ export async function POST(req: Request) {
         // Honesty gate (#9): a green "done" with a parsed score requires a CLEAN exit,
         // real output, AND (for evaluations) a report actually written. Anything else
         // is surfaced — an errored run must never be banked as a confident score.
+        let outcome = "ok";
         if (!emittedText && !sawError && !cleanExit) {
+          outcome = "cli-error";
           send({ type: "error", msg: "The CLI exited with an error — is it installed and authenticated?" });
         } else if (!emittedText && !sawError) {
+          outcome = "no-output";
           send({ type: "error", msg: "The CLI produced no output — is it installed and authenticated? (career-ops is best on Claude Code.)" });
         } else if (persists && !wroteReport) {
           // The worker ran but never wrote the report/tracker row (e.g. a CLI
           // without file-write authorization) — surface it instead of a fake score.
+          outcome = "no-report";
           send({ type: "error", msg: "This evaluation didn't save a report, so it's not in your tracker. Full evaluation is verified on Claude Code." });
         } else if (!cleanExit || sawError) {
           // Produced output (maybe even a report) but did NOT finish cleanly — flag it
           // instead of recording a confident score off a half-finished run.
+          outcome = "unclean-exit";
           send({ type: "error", msg: "This run hit an error before finishing, so it isn't recorded as a confident result — re-run it to verify." });
         } else {
           send({ type: "done", tokens: lastTokens, costUsd: lastCostUsd });
         }
+        // Usage ledger (2026-10-09): tokens and costUsd were streamed to the client
+        // and then lost, so a week of model spend could not be reconstructed after
+        // the fact — only observed live while a run happened to be watched. Failed
+        // runs are recorded too: what a failure cost is exactly the figure that was
+        // missing. Appended AFTER the branches so every exit path lands one row.
+        appendRunLedger({ kind, cli: cliId, outcome, tokens: lastTokens, costUsd: lastCostUsd, input });
         close();
       });
     },
