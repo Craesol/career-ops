@@ -155,8 +155,8 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **Source:** Report #275 — Paperlike — Social Media Manager
 **S (Situation):** Marketing communications for a top-tier gaming franchise across EMEA at Blizzard — an audience that reacts in real time, across markets, channels and languages that could not all run through me.
 **T (Task):** Keep tone and cadence consistent when the brand is bigger than any one campaign or any one person.
-**A (Action):** Owned copy, tone and cadence across launches, live-service moments and community events, coordinating between product marketing, editorial and player-facing channels so the same voice survived contact with different teams and different markets.
-**R (Result):** Two years of consistent franchise voice across EMEA channels.
+**A (Action):** Contributed to copy, tone and cadence across launches, live-service moments and community events, coordinating between product marketing, editorial and player-facing channels so the same voice survived contact with different teams and different markets.
+**R (Result):** A year of consistent franchise voice across EMEA channels (Mar 2016 - Mar 2017).
 **Reflection:** On-brand is a set of decisions you can hand to someone else and get the same answer back. If it only lives in your head, it is taste, not a brand voice — and it does not survive you being on holiday.
 **Best for questions about:** brand voice, "what does on-brand mean to you", scaling editorial standards, style guides, consistency across channels, supporting junior writers or community assistants
 
@@ -173,8 +173,8 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **Source:** Report #326 — B2Spin Limited — Social Media Community Specialist
 **S (Situation):** Blizzard EMEA, 2006-2019: eight years across the digital storefront and Spanish-language web editorial, then webmarketing and lifecycle for a top-tier consumer gaming portfolio, then Marketing Communications for a top-tier franchise.
 **T (Task):** Speak to players across EMEA markets around launches, live-service moments and community events.
-**A (Action):** Owned copy, tone and cadence across product marketing, editorial and player-facing channels, for an audience that reacts in real time and in several languages at once.
-**R (Result):** Two years of consistent franchise voice across EMEA channels, inside a company whose players notice register instantly.
+**A (Action):** Contributed to copy, tone and cadence across product marketing, editorial and player-facing channels, for an audience that reacts in real time and in several languages at once.
+**R (Result):** A year of consistent franchise voice across EMEA channels (Mar 2016 - Mar 2017), inside a company whose players notice register instantly.
 **Reflection:** Players can tell within one sentence whether the person writing plays. That is not something you can research your way into, and it is why a gaming line on a CV is worth more than a channel list.
 **Best for questions about:** gaming/entertainment sector fit, "do you actually play", brand voice for player audiences, launches and live service, working across EMEA markets
 
