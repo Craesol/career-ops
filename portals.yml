@@ -91,6 +91,60 @@ location_filter:
     - brazil
     - mexico
     - argentina
+    - us
+    - u.s
+    - us only
+    - us-based
+    - us based
+    - nyc
+    - new york
+    - brooklyn
+    - austin
+    - denver
+    - chicago
+    - seattle
+    - boston
+    - atlanta
+    - miami
+    - los angeles
+    - san francisco
+    - bay area
+    - americas
+    - north america
+    - latin america
+    - south america
+    - presencial
+    - presential
+    - in-person
+    - in person
+    - hybrid - us
+  # block_hard: la unica capa que always_allow NO puede sobrescribir.
+  # Un string multi-sede como "USA - New York - Malta" colaba por Malta.
+  block_hard:
+    - united states
+    - usa
+    - u.s.
+    - canada
+    - india
+    - brazil
+    - mexico
+    - argentina
+    - apac
+    - latam
+    - australia
+    - new zealand
+    - japan
+    - china
+    - singapore
+    - philippines
+    - uae
+    - dubai
+    - saudi
+    - qatar
+  # strict: sin ubicacion y sin pista en la URL -> RECHAZO, no pase libre.
+  # Estaba apagado, y por eso una oferta sin campo de ubicacion entraba
+  # entera. El escaner solo admite modalidad remota EXPLICITA.
+  strict: true
 title_filter:
   positive:
     - Community Manager
