@@ -797,6 +797,49 @@ job_boards:
       format: jobs-json-v1
     enabled: true
     notes: SSR remote-jobs search, parsed locally — real posted dates from the freshness spans
+  # ---- Fuentes anadidas 2026-10-09 ----------------------------------------
+  # El repo trae ~100 providers implementados y solo 13 estaban configurados.
+  # Estas cinco cubren su mercado real (Francia/EU), su dominio (cripto) y el
+  # hueco donde suelen caer los puestos de comunidad (boards generalistas).
+
+  # Welcome to the Jungle: su mercado. El board es global y enorme, asi que el
+  # filtro va SERVER-SIDE (Algolia). Una query de palabras clave no estrecha un
+  # board global: solo re-ordena por relevancia, y lo que pase del max_hits es
+  # invisible por bien que encaje con el title_filter, que corre despues sobre
+  # lo que ya llego. Filtrar en servidor encoge el conjunto en vez de
+  # re-ordenarlo, que es lo que hace el barrido exhaustivo y no un muestreo.
+  # Dos entradas porque son dos conjuntos distintos: Francia, y remoto global.
+  - name: Welcome to the Jungle (France)
+    provider: wttj
+    wttj:
+      filters: offices.country_code:FR
+      max_hits: 200
+    enabled: true
+  - name: Welcome to the Jungle (remote)
+    provider: wttj
+    wttj:
+      filters: remote:fulltime
+      max_hits: 200
+    enabled: true
+
+  # Cripto: su dominio desde 2021. RSS con URL hardcodeada en el provider, sin
+  # config; todas las ofertas del feed son 100% remotas.
+  - name: CryptocurrencyJobs
+    provider: cryptocurrencyjobs
+    enabled: true
+
+  # Startups nordicas y europeas, publicadas en ingles.
+  - name: The Hub
+    provider: thehub
+    max_pages: 5
+    enabled: true
+
+  # Roles generalistas / de operador: una pagina server-rendered de ~140
+  # tarjetas. Es donde caen muchos puestos de comunidad que no se titulan asi.
+  - name: Generalist World
+    provider: generalist-world
+    enabled: true
+
   - name: Adzuna UK
     careers_url: https://www.adzuna.co.uk
     provider: adzuna
