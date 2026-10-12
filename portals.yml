@@ -907,3 +907,212 @@ job_boards:
         - content manager
         - marketing communications manager
         - localization manager
+  # ---- startup.jobs (añadido 2026-10-13) --------------------------------
+  # Feed RSS publico, sin auth, board-wide. Devuelve solo los ~50 anuncios
+  # mas recientes POR CONSULTA y no pagina, asi que una entrada ancha cubre
+  # unas horas. Por eso va troceado: una entrada por slug de rol en vez de
+  # una global. Los slugs estan verificados en vivo contra el feed; uno
+  # inventado devuelve 404 y el provider falla fuerte (community-operations-
+  # manager se probo y no existe, por eso no esta).
+  - name: startup.jobs — community-associate
+    provider: startup-jobs
+    startup_jobs:
+      role: community-associate
+    enabled: true
+  - name: startup.jobs — community-coordinator
+    provider: startup-jobs
+    startup_jobs:
+      role: community-coordinator
+    enabled: true
+  - name: startup.jobs — community-engagement-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: community-engagement-manager
+    enabled: true
+  - name: startup.jobs — community-lead
+    provider: startup-jobs
+    startup_jobs:
+      role: community-lead
+    enabled: true
+  - name: startup.jobs — community-lead (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: community-lead
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — community-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: community-manager
+    enabled: true
+  - name: startup.jobs — community-manager (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: community-manager
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — community-marketing-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: community-marketing-manager
+    enabled: true
+  - name: startup.jobs — content-director
+    provider: startup-jobs
+    startup_jobs:
+      role: content-director
+    enabled: true
+  - name: startup.jobs — content-lead
+    provider: startup-jobs
+    startup_jobs:
+      role: content-lead
+    enabled: true
+  - name: startup.jobs — content-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: content-manager
+    enabled: true
+  - name: startup.jobs — content-manager (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: content-manager
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — content-marketing-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: content-marketing-manager
+    enabled: true
+  - name: startup.jobs — content-marketing-manager (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: content-marketing-manager
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — content-operations-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: content-operations-manager
+    enabled: true
+  - name: startup.jobs — content-strategist
+    provider: startup-jobs
+    startup_jobs:
+      role: content-strategist
+    enabled: true
+  - name: startup.jobs — digital-content-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: digital-content-manager
+    enabled: true
+  - name: startup.jobs — director-of-community
+    provider: startup-jobs
+    startup_jobs:
+      role: director-of-community
+    enabled: true
+  - name: startup.jobs — director-of-social-media
+    provider: startup-jobs
+    startup_jobs:
+      role: director-of-social-media
+    enabled: true
+  - name: startup.jobs — head-of-community
+    provider: startup-jobs
+    startup_jobs:
+      role: head-of-community
+    enabled: true
+  - name: startup.jobs — head-of-content
+    provider: startup-jobs
+    startup_jobs:
+      role: head-of-content
+    enabled: true
+  - name: startup.jobs — head-of-social-media
+    provider: startup-jobs
+    startup_jobs:
+      role: head-of-social-media
+    enabled: true
+  - name: startup.jobs — marketing-communication-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: marketing-communication-manager
+    enabled: true
+  - name: startup.jobs — marketing-communications-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: marketing-communications-manager
+    enabled: true
+  - name: startup.jobs — marketing-social-media-community-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: marketing-social-media-community-manager
+    enabled: true
+  - name: startup.jobs — senior-community-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: senior-community-manager
+    enabled: true
+  - name: startup.jobs — senior-content-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: senior-content-manager
+    enabled: true
+  - name: startup.jobs — senior-marketing-communications-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: senior-marketing-communications-manager
+    enabled: true
+  - name: startup.jobs — social-media-and-community-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-and-community-manager
+    enabled: true
+  - name: startup.jobs — social-media-community-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-community-manager
+    enabled: true
+  - name: startup.jobs — social-media-content-creator
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-content-creator
+    enabled: true
+  - name: startup.jobs — social-media-director
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-director
+    enabled: true
+  - name: startup.jobs — social-media-editor
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-editor
+    enabled: true
+  - name: startup.jobs — social-media-lead
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-lead
+    enabled: true
+  - name: startup.jobs — social-media-manager
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-manager
+    enabled: true
+  - name: startup.jobs — social-media-manager (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-manager
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — social-media-specialist
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-specialist
+    enabled: true
+  - name: startup.jobs — social-media-specialist (remote)
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-specialist
+      workplace: remote
+    enabled: true
+  - name: startup.jobs — social-media-strategist
+    provider: startup-jobs
+    startup_jobs:
+      role: social-media-strategist
+    enabled: true
+
