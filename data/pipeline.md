@@ -2421,7 +2421,7 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://job-boards.greenhouse.io/revero/jobs/4636886008 | Revero | Content Creator and Social Media Manager (Contract) | Remote | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://jobs.lever.co/crypto/ff3dc7ba-662e-4e49-82c2-e6143bb93712 | Crypto.com | Social Media Manager / Content Creator | Remote (region unconfirmed — verify on posting) | note: ats api: active
+- [x] ~~https://jobs.lever.co/crypto/ff3dc7ba-662e-4e49-82c2-e6143bb93712 | Crypto.com | Social Media Manager / Content Creator | Remote (region unconfirmed — verify on posting) | note: ats api: active~~ — swept: location (United States)
 
 - [x] ~~https://jobs.ashbyhq.com/tradeify/1ea36ab4-9c1e-4b7a-98ce-4d64a6676549 | tradeify | Social Media Manager | Remote – UK | posted: 2026-09-30~~ — removed from fresh matches
 
@@ -2442,10 +2442,10 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 - [x] ~~https://clio.wd3.myworkdayjobs.com/cliocareersite/job/Remote---Italy/Staff-Content-Manager_REQ-5449 | clio | Staff Content Manager | Remote - Italy | posted: 2026-10-02~~ — removed from fresh matches
 
 - [x] ~~https://jobs.ashbyhq.com/hellobrightline/3e0bb936-0f71-438e-8169-411795033278 | hellobrightline | Community Engagement Lead (BrightLife Kids) | San Francisco · Remote | posted: 2026-10-02~~ — removed from fresh matches
-- [ ] https://www.linkedin.com/jobs/view/social-media-manager-crypto-at-bettingjobs-4473126295 | BettingJobs | Social Media Manager - Crypto
+- [x] ~~https://www.linkedin.com/jobs/view/social-media-manager-crypto-at-bettingjobs-4473126295 | BettingJobs | Social Media Manager - Crypto~~ — swept: stale (8d old, first seen 2026-10-03)
 - [x] ~~https://news.ycombinator.com/item?id=49930568 | Enclave | Enclave | Technical Content & Community Lead | REMOTE (UK)~~ — removed from fresh matches
 
-- [ ] https://web3.career/social-media-lead-enterprise-inmobi/154803 | InMobi | Social Media Lead – Enterprise | Remote (non-European HQ) | note: datePosted 2026-10-01
+- [x] ~~https://web3.career/social-media-lead-enterprise-inmobi/154803 | InMobi | Social Media Lead – Enterprise | Remote (non-European HQ) | note: datePosted 2026-10-01~~ — removed from fresh matches
 
 - [x] ~~https://weworkremotely.com/remote-jobs/anthropic-community-engagement-manager-data-centers-texas | Anthropic | Community Engagement Manager, Data Centers (Texas) | Anywhere in the World | posted: 2026-10-03~~ — removed from fresh matches
 
@@ -2462,16 +2462,52 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
 
-- [ ] https://jobs.ashbyhq.com/recraft/9afa7a25-48c7-4cf4-a7bc-550d74332a72 | recraft | Community Manager (X/Twitter & Discord) | Remote
 
-- [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
 
 - [x] ~~https://jobs.ashbyhq.com/halobraid/8022770e-4af3-4161-9167-d83c4283668e | halobraid | Freelance Social Media Manager | New York, NY · Remote | posted: 2026-10-06~~ — removed from fresh matches
 - [x] ~~https://jobs.ashbyhq.com/hellobrightline/238ddc98-5e3d-4814-82fe-ffb8dd515543 | hellobrightline | Community Engagement Lead (BrightLife Kids - SF Bay Area) | San Francisco · Remote | posted: 2026-10-05~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/global-chinese-community-manager-at-bettingjobs-4474046411 | BettingJobs | Global Chinese Community Manager~~ — swept: negative-title
 
 - [x] ~~https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/senior-social-media-brand-content-manager-hamburg-383417 | Start To Finish Consulting GmbH | Senior Social Media & Brand Content Manager (m/w/d) | Hamburg, Remote | posted: 2026-10-07~~ — removed from fresh matches
-- [ ] https://fr.linkedin.com/jobs/view/community-social-media-manager-%E2%80%94-ai-robotics-data-company-remote-paris-s%C3%A3o-paulo-at-techtree-4474459142 | TechTree | Community & Social Media Manager — AI/Robotics Data Company (Remote / Paris / São Paulo)
+- [x] ~~https://fr.linkedin.com/jobs/view/community-social-media-manager-%E2%80%94-ai-robotics-data-company-remote-paris-s%C3%A3o-paulo-at-techtree-4474459142 | TechTree | Community & Social Media Manager — AI/Robotics Data Company (Remote / Paris / São Paulo)~~ — removed from fresh matches
 
-- [ ] https://www.linkedin.com/jobs/view/4477199748/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Madrid, Community of Madrid, Spain | note: ats api: active
-- [ ] https://www.linkedin.com/jobs/view/4477415044/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Seville, Andalusia, Spain | note: ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4477199748/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Madrid, Community of Madrid, Spain | note: ats api: active~~ — swept: location (Madrid, Community of Madrid, Spain)
+- [x] ~~https://www.linkedin.com/jobs/view/4477415044/ | Metricool | Content Creator & Social Media Manager – German & French Markets (Remote) | Seville, Andalusia, Spain | note: ats api: active~~ — swept: location (Seville, Andalusia, Spain)
+
+- [x] ~~https://vantagedc.wd1.myworkdayjobs.com/vantage/job/Ashburn-Virginia/Senior-Community-Engagement-Specialist--NA_R25027 | vantagedc | Senior Community Engagement Specialist, NA | Ashburn, Virginia · New Albany, Ohio · Remote - D.C. · Atlanta, Georgia | posted: 2026-10-08~~ — removed from fresh matches
+- [x] ~~https://rs.linkedin.com/jobs/view/social-media-content-manager-%F0%9F%8C%8Dremote-europe-ft-at-streamflow-4475955013 | Streamflow | Social Media & Content Manager (🌍Remote - Europe, FT)~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4476240180/ | Edflex | Global Communications & Community Engagement | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4448843460/ | RCM | Audience & Community Manager H/F | Le Poiré-sur-Vie, Pays de la Loire, France | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4477199391/ | Luxurious Properties Marrakech | COMMUNITY MANAGER — MARRAKECH | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4477663424/ | Aesthetec | Community manager dans l'esthétique | Lyon, Auvergne-Rhône-Alpes, France | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://henryschein.wd1.myworkdayjobs.com/external_careers/job/Paris---France/COMMUNITY-MANAGER_R133962 | henryschein | Community Manager | Paris - France | posted: 2026-10-09
+
+- [ ] https://www.linkedin.com/jobs/view/4476293373/ | Henry Schein | Community Manager | Paris, Île-de-France, France | note: ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4475226221/ | Cornilleau | Community Manager & Content Creator (h/f) | Bonneuil-les-Eaux, Hauts-de-France, France | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://cryptocurrencyjobs.co/marketing/sahara-social-media-manager-content-specialist/ | Sahara | Social Media Manager & Content Specialist | Remote | posted: 2026-10-06
+
+- [ ] https://www.linkedin.com/jobs/view/4476299751/ | Blast Club | Lead Community Manager | France | note: linkedin id 4476299751 >= 4300000000
+- [ ] https://www.linkedin.com/jobs/view/4476817273/ | Blast Club | Community Manager | France | note: linkedin id 4476817273 >= 4300000000
+
+- [ ] https://www.linkedin.com/jobs/view/4476820806/ | Jonak | Global Social Media Manager H/F | Paris, Île-de-France, France | note: ats api: active
+- [ ] https://www.linkedin.com/jobs/view/4469467401/ | Kraken | Community Lead - Kraken Pro in Spain
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-at-blast-club-4476817273 | Blast Club | Community Manager
+- [ ] https://fr.linkedin.com/jobs/view/global-social-media-manager-h-f-at-jonak-4476820806 | Jonak | Global Social Media Manager H/F
+- [ ] https://fr.linkedin.com/jobs/view/lead-community-manager-at-blast-club-4476299751 | Blast Club | Lead Community Manager
+
+- [ ] https://www.linkedin.com/jobs/view/4477216983/ | Spiko | Field Marketing & Community Lead | Paris, Île-de-France, France | note: ats api: active
+- [ ] https://fr.linkedin.com/jobs/view/field-marketing-community-lead-at-spiko-4477216983 | Spiko | Field Marketing & Community Lead
+
+- [ ] https://www.linkedin.com/jobs/view/4477249894/ | Bending Spoons | Content manager | France | note: ats api: active
+
+- [ ] https://www.welcometothejungle.com/en/companies/teclib/jobs/6af83bb4-184c-4560-a79e-0e08eb23b44b | Teclib' | Community Manager – CDI | Paris, France | 34000 EUR | posted: 2026-10-12
+
+- [ ] https://www.linkedin.com/jobs/view/4461063685/ | WINAMAX | Community Manager de Poker - Portugal (H/M) - Based in Paris | Paris, Île-de-France, France | note: ats api: active
+
+- [ ] https://jobicy.com/jobs/155156-content-manager | Playson | Content Manager | Europe | posted: 2026-10-12
+
+- [ ] https://www.arbeitnow.com/jobs/companies/yunicorn/youtube-skriptautor-social-media-manager-krypto-trading-storytelling-remote-hamburg-150758 | Yunicorn | YouTube-Skriptautor & Social Media Manager – Krypto, Trading & Storytelling (Remote) | Hamburg, Remote | posted: 2026-10-12
