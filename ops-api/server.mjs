@@ -26,11 +26,11 @@
  * Usage: node ops-api/server.mjs   (OPS_PORT, default 8443)
  */
 import https from 'node:https';
-import { readFileSync, existsSync, appendFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import { execFile, spawn } from 'node:child_process';
-import { createHash, timingSafeEqual, randomUUID } from 'node:crypto';
+import { createHash, timingSafeEqual, randomUUID, randomBytes } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -48,7 +48,16 @@ Options:
   --help, -h   Show this help`;
 
 // ── auth ────────────────────────────────────────────────────────────────────
-const TOKEN_HASH = () => createHash('sha256').update(readFileSync(join(OPS_DIR, 'token.txt'), 'utf8').trim()).digest();
+// Deleting token.txt and restarting is the "lost phone" procedure: a missing
+// token is replaced by a fresh random one, which locks every old copy out.
+function TOKEN_HASH() {
+  const file = join(OPS_DIR, 'token.txt');
+  if (!existsSync(file)) {
+    writeFileSync(file, randomBytes(32).toString('hex'));
+    log('generated a new token (old one revoked)');
+  }
+  return createHash('sha256').update(readFileSync(file, 'utf8').trim()).digest();
+}
 const FAIL_WINDOW_MS = 15 * 60_000;
 const FAIL_LIMIT = 10;
 const failures = new Map(); // ip → [timestamps]
