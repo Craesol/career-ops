@@ -1,0 +1,10 @@
+# Machine-local SDK path
+local.properties
+# Build output
+.gradle/
+build/
+app/build/
+# The pinned server certificate is copied in at build time from
+# %USERPROFILE%\.career-ops-ops\cert.pem — it carries the home's public IP,
+# and this fork is public, so it never enters git.
+app/src/main/res/raw/ops_cert.pem
