@@ -17,9 +17,17 @@
  * The verdict lands in data/gate-verdicts.tsv for the digest, the web and a
  * human to read.
  *
+ * COVERAGE (2026-10-19). It used to look at today's finds only, and ran once,
+ * at 07:31 — before the nightly added its LinkedIn alerts and long before the
+ * hourly scans added the rest of the day's roles. Anything first seen after
+ * 07:31 was never gated: two verdicts in four days while roles kept arriving.
+ * It now reads a trailing window (today + yesterday by default) and also runs
+ * after every hourly scan; alreadyGated() keeps a role from being sent twice.
+ *
  * Usage:
- *   node gate-triage.mjs                 # today's un-gated finds, one batch
- *   node gate-triage.mjs --date 2026-10-08
+ *   node gate-triage.mjs                 # un-gated finds from today + yesterday, one batch
+ *   node gate-triage.mjs --days 3        # widen the window
+ *   node gate-triage.mjs --date 2026-10-08   # that single day only
  *   node gate-triage.mjs --max 25        # cap the batch (default 25)
  *   node gate-triage.mjs --dry           # show what would be sent, spend nothing
  *   node gate-triage.mjs --summary       # human output instead of JSON
@@ -41,14 +49,21 @@ const HISTORY = resolve(ROOT, 'data', 'scan-history.tsv');
 const VERDICTS = resolve(ROOT, 'data', 'gate-verdicts.tsv');
 const HEADER = 'url\tdate\tverdict\tgate\twhy\tmodel\tconfidence';
 
+/** `day` and the n-1 days before it, as YYYY-MM-DD (noon anchor: no DST edge). */
+export function windowDays(day, n) {
+  const base = new Date(day + 'T12:00:00Z').getTime();
+  return Array.from({ length: Math.max(1, n) }, (_, i) => new Date(base - i * 86_400_000).toISOString().slice(0, 10));
+}
+
 /** scan-history cols: url, first_seen, portal, title, company, status, location */
-export function findsFor(day) {
+export function findsFor(days) {
   if (!existsSync(HISTORY)) return [];
+  const wanted = new Set([].concat(days));
   const out = [];
   for (const line of readFileSync(HISTORY, 'utf8').split('\n')) {
     const c = line.split('\t');
     if (!c[0] || !/^https?:\/\//i.test(c[0])) continue;
-    if ((c[1] || '').trim() !== day) continue;
+    if (!wanted.has((c[1] || '').trim())) continue;
     if ((c[5] || '').trim() !== 'added') continue;
     out.push({ url: c[0], portal: c[2] || '', title: c[3] || '', company: c[4] || '', location: c[6] || '' });
   }
@@ -77,17 +92,20 @@ function arg(name, fallback = null) {
 }
 
 export async function main() {
-  const day = arg('date', localToday());
+  const single = arg('date');
+  const day = single || localToday();
+  const days = single ? [single] : windowDays(day, Number(arg('days')) || 2);
+  const span = days.length === 1 ? day : days[days.length - 1] + '..' + day;
   const max = Math.max(1, Number(arg('max')) || 25);
   const dry = process.argv.includes('--dry');
   const summary = process.argv.includes('--summary');
 
   const gated = alreadyGated();
-  const candidates = findsFor(day).filter((f) => !gated.has(f.url)).slice(0, max);
+  const candidates = findsFor(days).filter((f) => !gated.has(f.url)).slice(0, max);
 
   if (!candidates.length) {
-    const r = { day, candidates: 0, skipped: 'nothing new to gate', budget: budgetStatus() };
-    console.log(summary ? '  gate-triage: nothing new to gate for ' + day : JSON.stringify(r));
+    const r = { day: span, candidates: 0, skipped: 'nothing new to gate', budget: budgetStatus() };
+    console.log(summary ? '  gate-triage: nothing new to gate for ' + span : JSON.stringify(r));
     return;
   }
 
@@ -130,7 +148,7 @@ export async function main() {
 
   const failed = res.verdicts.filter((v) => v.verdict === 'fail');
   const result = {
-    day,
+    day: span,
     candidates: items.length,
     classified: res.verdicts.length,
     failed: failed.length,
@@ -141,7 +159,7 @@ export async function main() {
   };
 
   if (!summary) { console.log(JSON.stringify(result)); return; }
-  console.log('  gate-triage ' + day + ': ' + result.classified + ' classified in ' + result.spent
+  console.log('  gate-triage ' + span + ': ' + result.classified + ' classified in ' + result.spent
     + ' request - ' + result.failed + ' hit a gate, ' + result.passed + ' passed');
   for (const v of failed) {
     console.log('    GATE[' + v.gate + '] ' + v.item.title + ' - ' + v.item.company + ' (' + v.why + ')');
@@ -155,11 +173,12 @@ export async function main() {
 // and the script ran (tests/help-flag-handled.test.mjs).
 const USAGE = `Usage: node gate-triage.mjs [options]
 
-Applies the hard disqualifiers to today's finds in one free request and records
-the verdicts in data/gate-verdicts.tsv. Never edits the pipeline.
+Applies the hard disqualifiers to recent un-gated finds in one free request and
+records the verdicts in data/gate-verdicts.tsv. Never edits the pipeline.
 
 Options:
-  --date YYYY-MM-DD  day to gate (default: today)
+  --days N           trailing window ending today (default 2: today + yesterday)
+  --date YYYY-MM-DD  that single day only (overrides --days)
   --max N            cap the batch (default 25)
   --dry              show what would be sent, spend nothing
   --summary          human output instead of JSON

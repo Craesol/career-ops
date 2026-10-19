@@ -3,7 +3,7 @@ REM career-ops hourly DEEP scanner - DESKTOP-P4PVO1V (CAJITA)
 REM Task Scheduler: every hour AROUND THE CLOCK (user request 2026-09-10):
 REM daily trigger 08:31 repeating 1h for 23h = 08:31 -> 06:31 next morning,
 REM deliberately skipping 07:31 - that slot belongs to the nightly.
-REM Three sequential steps:
+REM Four sequential steps:
 REM   1) scan.mjs        - ATS APIs + boards + feeds (zero tokens)
 REM   2) l3-hourly.mjs   - deep scan, dual-engine orchestrator, one writer.
 REM                        TODAY: claude primary every hour (sonnet via the
@@ -13,6 +13,10 @@ REM                        2026-09-10). When the user enables billing on the
 REM                        Google project, add "set L3_ALTERNATE=1" below to
 REM                        alternate engines (even=gemini free, odd=claude).
 REM   3) auto-triage.mjs - free Gemini prescores for today's new finds
+REM   4) gate-triage.mjs - hard-gate verdicts for un-gated finds (one free
+REM                        OpenRouter request, only when there are any;
+REM                        2026-10-19: the 07:31-only run missed every role
+REM                        the hourly scans added later in the day)
 REM Sweeps, prunes and the single daily digest email stay in the 07:31 nightly.
 cd /d "C:\Claude\career-ops"
 set MAX_AGE_DAYS=7
@@ -24,4 +28,6 @@ echo [%date% %time%] L3 deep scan (alternating engines) >> logs\hourly-scan.log
 node l3-hourly.mjs >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] auto-triage >> logs\hourly-scan.log
 node auto-triage.mjs >> logs\hourly-scan.log 2>&1
+echo [%date% %time%] gate-triage >> logs\hourly-scan.log
+node gate-triage.mjs --summary >> logs\hourly-scan.log 2>&1
 echo [%date% %time%] done (exit %ERRORLEVEL%) >> logs\hourly-scan.log
