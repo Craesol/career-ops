@@ -100,41 +100,52 @@ liveness or reach any mail provider; every past attempt delivered stale or
 undeliverable results. If a scheduled remote session fires, reply only with a
 reminder that the routine should be deleted, and do nothing else.
 
-## Fork test-suite deviations (accepted; baseline refreshed for v1.36.0 on 2026-10-13)
+## Fork test-suite deviations (accepted; baseline refreshed for v1.37.0 on 2026-10-19)
 
-`node test-all.mjs` on this fork ends at **12,470 passed / ~28 red / ~20 warnings
+`node test-all.mjs` on this fork ends at **14,787 passed / ~22 red / ~26 warnings
 by design** — do not "fix" these, and treat any OTHER failure as a real
 regression. The red count breathes with two environmental categories: category 3
-contributes 0 when the Gemini free tier has capacity (it did on the v1.36.0 run,
-which is why that run showed 30 rather than the ~44 of v1.35.0) and up to 18 when
-it is rate-limited, and category 5 adds 0-3 depending on machine load.
+contributes 0 when the Gemini free tier has capacity (it did on both the v1.36.0
+and v1.37.0 runs) and up to 18 when it is rate-limited, and category 5 adds 0-3
+depending on machine load.
 
-Two failures on the v1.36.0 run were NOT in these categories and were real, so
-they were fixed rather than documented: `probe-sources.mjs` used a js-yaml
-default import (breaks on js-yaml 5, now `import * as yaml`), and
-`scaffolder/LICENSE` had drifted from the root `LICENSE` by line endings alone.
-The lesson is the useful half of this section — a failure outside the five
-categories below is a finding, not noise.
+Failures outside these categories have been real every time, so they were fixed
+rather than documented. On v1.36.0: `probe-sources.mjs` used a js-yaml default
+import (breaks on js-yaml 5, now `import * as yaml`), and `scaffolder/LICENSE`
+had drifted from the root `LICENSE` by line endings alone. On v1.37.0: the new
+`help-flag-handled` ratchet caught nine fork-local CLIs that discarded `--help`
+and RAN instead (an L3 scan, an IMAP pass, a pipeline prune) — all nine now
+print usage and exit; the new canonical `Assessment` state was missing from
+every status list in the fork's web app — added; and a stale `.cursor` skill
+entrypoint upstream had deleted tripped the SYSTEM_PATHS coverage check —
+removed. The lesson is the useful half of this section — a failure outside the
+five categories below is a finding, not noise.
 
 1. **Tracked user-layer data (6 tests):** `portals.yml`, `data/pipeline.md`,
    `data/scan-history.tsv`, `data/portal-health.tsv`,
    `interview-prep/story-bank.md` are deliberately git-tracked so state syncs
    between this fork's machines via origin pushes. Upstream wants them
    gitignored; the fork does not.
-2. **Fork web app vs upstream web contracts (11 tests):** `web/` here is the
+2. **Fork web app vs upstream web contracts (~15 tests):** `web/` here is the
    fork's own app. Upstream's parity checks (#2185 write-scope modules, #2666
-   normalize-text-key mirror, profile-keywords, title-fit, followups/cadence
-   route, tracker-columns web parity) reference upstream web files this app does
-   not have. Two more join them by the same root cause and are easy to mistake
+   normalize-text-key mirror, profile-keywords, title-fit, report-sections,
+   tracker-columns web parity and the web tracker reader's URL cells) reference
+   upstream web files this app does not have. v1.37.0 added three suites of the
+   same kind — analytics-state-contract, persist-evaluation-report and
+   web-core-argv-contract — which import upstream web modules and die at module
+   resolution. Two more join them by the same root cause and are easy to mistake
    for core failures, because neither test's name mentions the web app:
    `tests/liveness-record-expired.test.mjs` imports a whats-new module from the
    upstream web tree and dies at module resolution before a single assertion
    runs, and `tests/agent-docs-script-refs.test.mjs` fails on `DATA_CONTRACT.md`
-   naming an upstream scheduled-jobs runner under `web/scripts/`. That second
-   one's `AGENTS.md` assertion passes, so read which document the message names
-   before assuming the fork block broke something — and note that this very
-   paragraph must describe those files WITHOUT writing their paths, since that
-   test scans this file for script paths and would count them as missing.
+   naming an upstream scheduled-jobs runner under `web/scripts/`. Since v1.37.0
+   that test's `AGENTS.md` assertion fails too, for the same reason: upstream's
+   own "URL cell rendering (#3516)" paragraph names a posting-URL helper in the
+   upstream web tree. Leave upstream's text alone (editing it makes every merge
+   harder); just read which file the message names before assuming the fork
+   block broke something — and note that this very paragraph must describe
+   those files WITHOUT writing their paths, since that test scans this file for
+   script paths and would count them as missing.
    Porting the #2666 shared-key mirror is tracked as follow-up work.
 3. **Gemini free-tier unavailability (18 tests):** every test that actually
    calls `gemini-eval.mjs` fails with `503 Service Unavailable — this model is
@@ -142,13 +153,18 @@ categories below is a finding, not noise.
    not the code; `auto-triage.mjs` classifies and retries it deliberately (see
    its "Transient-failure handling" block). These go green whenever the tier
    has capacity, so they are environmental, never a regression signal.
-4. **Materialized skill entrypoints (10 tests):** upstream ships
-   `.{claude,cursor,qwen,grok,kimi,opencode,antigravitycli}/skills/career-ops/SKILL.md`
-   as symlinks. Windows has no usable symlinks here, so `update-system.mjs`
-   materializes them as regular files on purpose ("Materialized N skill
-   entrypoint(s) for filesystems without symlink support") and the symlink
-   assertions then fail. Do NOT replace them with upstream's symlinks — that
-   breaks skill resolution on this machine.
+4. **Materialized skill entrypoints (1 test):** upstream ships
+   `.{claude,qwen,grok,kimi,opencode,antigravitycli}/skills/career-ops/SKILL.md`
+   as symlinks (v1.37.0 dropped the `.cursor` one). Windows has no usable
+   symlinks here, so `update-system.mjs` materializes them as regular files on
+   purpose ("Materialized N skill entrypoint(s) for filesystems without symlink
+   support") and the code-owner check, which looks for symlinks, then fails. Do
+   NOT replace them with upstream's symlinks — that breaks skill resolution on
+   this machine. The updater does NOT refresh copies it sees as locally
+   modified, so after an update they keep the old content and add one failure
+   each ("Entrypoint committed as a REGULAR file … not the canonical skill")
+   until they are copied from `.agents/skills/career-ops/SKILL.md` and
+   committed.
 5. **Flaky follow-ups lock (3 tests):** `Timed out waiting for follow-ups lock
    at …\co-seed-XXXXXX\…`. The temp directory is random, so these look like new
    failures on every run. They come and go with machine load.
@@ -160,7 +176,9 @@ effect of a 340-file update; `package.json` keeps the installed set, the
 Dockerfile was aligned down to 1.62.1 to stay self-consistent, and `undici`
 (genuinely new, imported dynamically by `providers/_http.mjs`, additive) was
 added. Upgrading the other three is a separate, deliberate step that must
-re-verify PDF generation on CAJITA before it ships.
+re-verify PDF generation on CAJITA before it ships. v1.37.0 moves upstream to
+`playwright` 1.64.0; the fork took only that release's `version` and
+`postinstall` changes and still holds 1.62.1.
 
 **Post-update chore — re-sync frozen system files.** `update-system.mjs`
 preserves any system file it sees as locally modified, which silently freezes
