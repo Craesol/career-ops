@@ -530,6 +530,14 @@ function readRecentTracker(days) {
       .filter(r => r.date >= cutoff);
   } catch { return []; }
 }
+/** "Create CV" link: the web's /create-cv page on CAJITA, which shows the offer
+ *  and waits for a click before running the evaluate-cv worker (CV PDF lands in
+ *  output/ there). LAN-only, like the web itself; CAREER_OPS_WEB_URL overrides. */
+function createCvLink(r) {
+  const base = (process.env.CAREER_OPS_WEB_URL || 'http://192.168.1.176:3000').replace(/\/+$/, '');
+  const q = new URLSearchParams({ url: r.url || '', title: r.title || '', company: r.company || '' });
+  return base + '/create-cv?' + q.toString();
+}
 /** data/gate-verdicts.tsv (written by gate-triage.mjs) → url → {verdict, gate, why}. */
 function readGateVerdicts() {
   const out = new Map();
@@ -570,7 +578,8 @@ function row(r) {
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;font-size:10.5px;">' + locLabel(r.location || '') + '</td>' +
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;color:#999;font-size:10.5px;">' + esc(r.portal) + '</td>' +
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;font-size:10.5px;">' + gateCell(r.gate) + '</td>' +
-    '<td style="padding:6px 10px;border-bottom:1px solid #eee;"><a href="' + r.url + '" style="color:#2563eb;text-decoration:none;">View</a></td>' +
+    '<td style="padding:6px 10px;border-bottom:1px solid #eee;white-space:nowrap;"><a href="' + r.url + '" style="color:#2563eb;text-decoration:none;">View</a>' +
+      ' · <a href="' + esc(createCvLink(r)) + '" style="color:#15803d;text-decoration:none;font-weight:600;">Create CV</a></td>' +
   '</tr>';
 }
 function tbl(rows) {
