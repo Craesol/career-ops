@@ -380,6 +380,17 @@ if (triageResult.status === 0) {
   console.error('  FAIL (exit ' + triageResult.status + '): ' + ((triageResult.stderr || triageResult.stdout || 'unknown')).slice(0, 200));
 }
 
+// --- STEP 3d: Hard-gate triage (free OpenRouter request) ------------------
+// Runs HERE, after every scan step, so the night's own LinkedIn alerts are
+// gated before the email is built. (It used to run from daily-consolidated.bat
+// before this script, which left exactly those rows unchecked.) Verdicts are
+// shown as flags in the email; a free model removes nothing on its own.
+console.log('\n[step 3d] gate-triage (free-tier hard gates)');
+const gateResult = spawnSync('node', [resolve(ROOT, 'gate-triage.mjs'), '--summary'], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 300000,
+});
+console.log(((gateResult.stdout || '').trim() || ('exit ' + gateResult.status)).split('\n').map(l => '  ' + l.trim()).join('\n'));
+
 // --- STEP 4: Build consolidated email -----------------------------------
 // Every scan-history `portal` tag maps to exactly one digest source group.
 // The subject and the body both count through groupBySource(), and the last
@@ -414,6 +425,10 @@ function digestSubject(day, total, groups) {
 console.log('\n[step 4] Building consolidated email');
 const todayAdded = todayAddedRows();
 console.log('  Total added today: ' + todayAdded.length + ' (LinkedIn=' + linkedinAdded + ', L2=' + l2Added + ', L3=' + l3Added + ')');
+
+// Hard-gate verdicts for the rows the email lists (latest verdict per URL wins).
+const gateVerdicts = readGateVerdicts();
+for (const r of todayAdded) r.gate = gateVerdicts.get(r.url) || null;
 
 // Group by source for tabular display
 const sourceGroups = groupBySource(todayAdded);
@@ -495,8 +510,10 @@ function todayAddedRows() {
       .filter(isAddedToday)
       .filter(l => !dismissed.has(l.split('\t')[0]))
       .map(l => {
-        const [url, date, portal, title, company] = l.split('\t');
-        return { url, date, portal, title, company };
+        // Location is the 7th column (writers append it past the 6-column
+        // header); it was never read, so every Location cell said "(blank)".
+        const [url, date, portal, title, company, , location] = l.split('\t');
+        return { url, date, portal, title, company, location: (location || '').trim() };
       });
   } catch { return []; }
 }
@@ -512,6 +529,27 @@ function readRecentTracker(days) {
       })
       .filter(r => r.date >= cutoff);
   } catch { return []; }
+}
+/** data/gate-verdicts.tsv (written by gate-triage.mjs) → url → {verdict, gate, why}. */
+function readGateVerdicts() {
+  const out = new Map();
+  try {
+    const lines = readFileSync(resolve(ROOT, 'data/gate-verdicts.tsv'), 'utf-8').split('\n').slice(1);
+    for (const l of lines) {
+      const [url, , verdict, gate, why] = l.split('\t');
+      if (url && verdict) out.set(url, { verdict: verdict.trim(), gate: (gate || '').trim(), why: (why || '').trim() });
+    }
+  } catch { /* no verdicts yet */ }
+  return out;
+}
+/** Gate cell: a flag to read, never a verdict acted on — the row stays listed. */
+function gateCell(g) {
+  if (!g) return '<span style="color:#bbb;" title="not checked yet">—</span>';
+  if (g.verdict === 'fail') {
+    return '<span style="color:#b91c1c;font-weight:600;">⛔ ' + esc(g.gate || 'gate') + '</span>' +
+      (g.why ? '<br><span style="color:#999;font-size:10px;">' + esc(g.why) + '</span>' : '');
+  }
+  return '<span style="color:#15803d;">pass</span>';
 }
 function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function locLabel(loc) {
@@ -531,6 +569,7 @@ function row(r) {
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;">' + esc(r.title) + '</td>' +
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;font-size:10.5px;">' + locLabel(r.location || '') + '</td>' +
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;color:#999;font-size:10.5px;">' + esc(r.portal) + '</td>' +
+    '<td style="padding:6px 10px;border-bottom:1px solid #eee;font-size:10.5px;">' + gateCell(r.gate) + '</td>' +
     '<td style="padding:6px 10px;border-bottom:1px solid #eee;"><a href="' + r.url + '" style="color:#2563eb;text-decoration:none;">View</a></td>' +
   '</tr>';
 }
@@ -541,6 +580,7 @@ function tbl(rows) {
     '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Role</th>' +
     '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Location</th>' +
     '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Source</th>' +
+    '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Gate</th>' +
     '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Link</th>' +
     '</tr></thead><tbody>' + rows.map(row).join('') + '</tbody></table>';
 }
@@ -566,6 +606,16 @@ function trackerTbl(rows) {
     '<th style="padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;color:#666;">Score</th>' +
     '</tr></thead><tbody>' + rows.map(trackerRow).join('') + '</tbody></table>';
 }
+function gateSummary(rows) {
+  if (!rows.length) return '';
+  const hit = rows.filter((r) => r.gate && r.gate.verdict === 'fail').length;
+  const passed = rows.filter((r) => r.gate && r.gate.verdict !== 'fail').length;
+  const unchecked = rows.length - hit - passed;
+  return '<span style="display:inline-block;margin-top:6px;">Hard-gate check (free model, a flag to verify — nothing is removed): ' +
+    '<strong style="color:#b91c1c;">' + hit + ' hit a gate</strong> · ' + passed + ' passed' +
+    (unchecked ? ' · ' + unchecked + ' not checked' : '') + '</span><br>';
+}
+
 function buildEmailHtml(ctx) {
   const { today, todayAdded, sourceGroups, MAX_AGE_DAYS, trackerRecent } = ctx;
   let body = '<h2 style="margin-bottom:6px;">career-ops · daily consolidated · ' + today + '</h2>' +
@@ -573,6 +623,7 @@ function buildEmailHtml(ctx) {
     '<div style="background:#f9fafb;border-left:3px solid hsl(187,74%,32%);padding:12px 16px;margin:16px 0;">' +
     '<strong>Today added: ' + todayAdded.length + ' new roles</strong><br>' +
     sourceGroups.map((g) => '&#8226; ' + g.heading + ': ' + g.rows.length + '<br>').join('') +
+    gateSummary(todayAdded) +
     '</div>' +
     '<p style="color:#666;font-size:11.5px;"><strong>Legend</strong> — <span style="color:#15803d;">Remote/EMEA/EU-city</span> · <span style="color:#2563eb;">EU country/city</span> · <span style="color:#b91c1c;">Non-EU city (US/Asia/etc.)</span> · <span style="color:#999;">(blank/unknown)</span></p>';
 

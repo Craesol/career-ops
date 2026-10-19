@@ -38,8 +38,10 @@ REM cannot see the JD body and auto-triage only scores, so a gated role used to
 REM cost a full evaluation to discover. Verdicts are RECORDED in
 REM data\gate-verdicts.tsv and nothing is removed from the pipeline: a free
 REM model gates nothing on its own (see modes\_custom.md).
-echo [%date% %time%] gate-triage (free tier) >> logs\daily-consolidated.log
-node gate-triage.mjs --summary >> logs\daily-consolidated.log 2>&1
+REM 2026-10-19: the step moved INTO daily-consolidated.mjs (step 3d), after the
+REM scans, so the night's own LinkedIn alerts are gated before the email shows
+REM the verdicts; run here, it ran before those rows existed. The hourly scan
+REM runs it too.
 
 node daily-consolidated.mjs >> logs\daily-consolidated.log 2>&1
 
