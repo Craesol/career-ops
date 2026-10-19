@@ -97,4 +97,22 @@ function getCareerOopsRootSafe() {
   try { return getCareerOpsRoot(); } catch { return CODE_ROOT; }
 }
 
-if (isMainModule(import.meta.url)) await main();
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node probe-sources.mjs [options]
+
+Asks each enabled job_boards entry for its postings and prints what came back.
+Read-only: writes nothing.
+
+Options:
+  --name <text>  one entry (substring match)
+  --filtered     also show how many survive the title/location filters
+  --help, -h     Show this help`;
+
+if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
+  await main();
+}

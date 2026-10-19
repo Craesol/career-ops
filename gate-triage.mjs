@@ -151,4 +151,24 @@ export async function main() {
   console.log('    verdicts in data/gate-verdicts.tsv - nothing was removed from the pipeline');
 }
 
-if (isMainModule(import.meta.url)) await main();
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node gate-triage.mjs [options]
+
+Applies the hard disqualifiers to today's finds in one free request and records
+the verdicts in data/gate-verdicts.tsv. Never edits the pipeline.
+
+Options:
+  --date YYYY-MM-DD  day to gate (default: today)
+  --max N            cap the batch (default 25)
+  --dry              show what would be sent, spend nothing
+  --summary          human output instead of JSON
+  --help, -h         Show this help`;
+
+if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
+  await main();
+}

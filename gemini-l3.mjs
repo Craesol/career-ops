@@ -208,7 +208,28 @@ export async function runGeminiL3() {
   return { engine: 'gemini', ok: true, proposed: proposed.length, added: summary.added ?? 0, failed };
 }
 
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node gemini-l3.mjs
+
+Runs the portals.yml search_queries through the Gemini API with Google Search
+grounding and persists the finds through l3-writer.mjs. Exits 2 when every
+query fails, so l3-hourly.mjs can fail over to the Claude engine.
+
+Options:
+  --help, -h   Show this help
+
+Env:
+  GEMINI_API_KEY         required (.env or environment)
+  GEMINI_L3_MODEL        default gemini-3.6-flash
+  GEMINI_L3_MAX_QUERIES  default 0 = all enabled queries
+  GEMINI_L3_GAP_MS       default 3500 between calls`;
+
 if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
   const r = await runGeminiL3();
   process.exit(r.ok ? 0 : 2);
 }

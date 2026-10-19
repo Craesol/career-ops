@@ -95,6 +95,24 @@ async function main() {
   console.log('[l3-hourly] ' + result.engine + ' ok · proposed ' + (result.proposed ?? 0) + ' · added ' + (result.added ?? 0));
 }
 
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node l3-hourly.mjs
+
+Runs one hourly L3 deep scan: the primary engine (claude via the local web's
+/api/explore/l3, or gemini-l3.mjs), failing over to the other.
+
+Options:
+  --help, -h   Show this help
+
+Env:
+  L3_ENGINE     claude|gemini forces the primary (the failover still applies)
+  L3_ALTERNATE  1 = even hours gemini, odd hours claude`;
+
 if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
   await main();
 }

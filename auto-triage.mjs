@@ -235,4 +235,26 @@ export async function main() {
   }));
 }
 
-if (isMainModule(import.meta.url)) await main();
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node auto-triage.mjs
+
+Pre-scores today's new scan-history finds on the free Gemini tier and appends
+the results to data/prescores.tsv. Writes nothing else.
+
+Options:
+  --help, -h   Show this help
+
+Env:
+  TRIAGE_MAX        max gemini calls per run (default 25)
+  TRIAGE_DATE       day to triage (default: today)
+  TRIAGE_BUDGET_MS  wall-clock budget for the run (default 480000)
+  GEMINI_MODEL      passed through to gemini-eval.mjs`;
+
+if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
+  await main();
+}

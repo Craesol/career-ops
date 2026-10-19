@@ -237,6 +237,21 @@ async function main() {
   }
 }
 
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node linkedin-session-scan.mjs
+
+Read-only: refreshes the LinkedIn search tab left open in the running Brave
+session (over CDP), reads the result cards and passes them to l3-writer.mjs.
+Runs on even hours 08-23 only; every failure exits 0 with a note.
+
+Options:
+  --help, -h   Show this help`;
+
 if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
   await main();
 }

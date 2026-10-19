@@ -62,7 +62,27 @@ export function w3cStaleFilter() {
 
 // CLI entry — guarded so importing w3cStaleFilter() never runs the sweep.
 const { isMainModule } = await import('./lib/is-main-module.mjs');
-if (isMainModule(import.meta.url)) await main();
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node prune-stale-web3career.mjs [options]
+
+Closes web3.career entries in the pending inbox whose posting id is more than
+W3C_STALE_ID_GAP behind the newest id seen, and records them as skipped.
+
+Options:
+  --dry-run    report only, change nothing
+  --help, -h   Show this help
+
+Env:
+  W3C_STALE_ID_GAP  default 20000`;
+
+if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
+  await main();
+}
 
 async function main() {
 const today = localToday();

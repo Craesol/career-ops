@@ -192,4 +192,24 @@ export async function main() {
   }));
 }
 
-if (isMainModule(import.meta.url)) await main();
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node sync-agent-inbox.mjs --remote <pulled.md> [options]
+
+Union-merges a pulled copy of the agent inbox into the local one. Never
+touches the network (sync-agent-inbox.ps1 does the copying).
+
+Options:
+  --local <path>   local inbox (default: CAREER_OPS_INBOX or data/agent-inbox.md)
+  --remote <path>  the other machine's copy
+  --out <path>     where to write the merge (default: --local)
+  --stdout         print the merge instead of writing it
+  --help, -h       Show this help`;
+
+if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
+  await main();
+}

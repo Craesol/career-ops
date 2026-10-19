@@ -436,7 +436,26 @@ async function main() {
 // Run only when executed directly (daily-consolidated spawns this file);
 // importing the module (tests) must not open an IMAP connection.
 const { isMainModule } = await import('./lib/is-main-module.mjs');
+// --help / -h is answered before any work: unhandled, the flag fell through
+// and the script ran (tests/help-flag-handled.test.mjs).
+const USAGE = `Usage: node linkedin-alerts-parser.mjs
+
+Reads LinkedIn and Indeed job-alert emails over IMAP, appends new matching
+roles to data/pipeline.md, and moves processed emails to the
+career-ops/processed label.
+
+Options:
+  --help, -h   Show this help
+
+Env:
+  GMAIL_USER          Gmail address
+  GMAIL_APP_PASSWORD  Gmail App Password (not the account password)`;
+
 if (isMainModule(import.meta.url)) {
+  if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+    console.log(USAGE);
+    process.exit(0);
+  }
   main().catch(e => {
     console.error('FATAL:', e.message);
     console.error(e.stack);
