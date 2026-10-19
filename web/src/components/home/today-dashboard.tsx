@@ -82,7 +82,7 @@ export function TodayDashboard({
     const n = (k: string) => by.get(k) ?? 0;
     return {
       awaitingCount: n("EVALUATED"),
-      activeCount: n("APPLIED") + n("RESPONDED") + n("INTERVIEW") + n("OFFER"),
+      activeCount: n("APPLIED") + n("RESPONDED") + n("ASSESSMENT") + n("INTERVIEW") + n("OFFER"),
       funnelCounts: FUNNEL_STAGES.map(({ key, label }, i) => ({ key, label, color: FUNNEL_RAMP[i], count: n(key) })),
     };
   }, [applications]);
@@ -197,11 +197,12 @@ function Section({ icon: Icon, title, hint, children }: { icon: React.ComponentT
 // ── Analytics band pieces ──────────────────────────────────────────────────
 // Sequential purple ramp (lightness-monotonic on both surfaces); stages carry
 // direct labels + counts, so identity never rides on color alone.
-const FUNNEL_RAMP = ["#e3d4f9", "#c3a2f1", "#a06bff", "#8a2cdd", "#6f24b4", "#521a86"];
+const FUNNEL_RAMP = ["#e3d4f9", "#cdb2f4", "#b48cf6", "#a06bff", "#8a2cdd", "#6f24b4", "#521a86"];
 const FUNNEL_STAGES = [
   { key: "EVALUATED", label: "Evaluated" },
   { key: "APPLIED", label: "Applied" },
   { key: "RESPONDED", label: "Responded" },
+  { key: "ASSESSMENT", label: "Assessment" },
   { key: "INTERVIEW", label: "Interview" },
   { key: "OFFER", label: "Offer" },
   { key: "HIRED", label: "Hired" },

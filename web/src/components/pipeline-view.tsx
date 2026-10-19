@@ -18,6 +18,7 @@ const TABS = [
   "EVALUATED",
   "APPLIED",
   "RESPONDED",
+  "ASSESSMENT",
   "INTERVIEW",
   "OFFER",
   "REJECTED",

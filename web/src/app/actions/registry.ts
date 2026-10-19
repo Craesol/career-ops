@@ -15,10 +15,10 @@ export const AUTO_FIRE_MAX = 3; // fire ≤3 evaluations silently; confirm above
 export const BATCH_CAP = 12; // hard ceiling on a single fan-out
 
 // Canonical states (templates/states.yml) — the web validates against the same set.
-const CANON_STATUS = ["Evaluated", "Applied", "Responded", "Interview", "Offer", "Rejected", "Discarded", "SKIP", "Hired"];
+const CANON_STATUS = ["Evaluated", "Applied", "Responded", "Assessment", "Interview", "Offer", "Rejected", "Discarded", "SKIP", "Hired"];
 
 const TAB_VALUES = [
-  "INBOX", "ALL", "EVALUATED", "APPLIED", "RESPONDED", "INTERVIEW", "OFFER", "REJECTED", "DISCARDED", "SKIP", "HIRED",
+  "INBOX", "ALL", "EVALUATED", "APPLIED", "RESPONDED", "ASSESSMENT", "INTERVIEW", "OFFER", "REJECTED", "DISCARDED", "SKIP", "HIRED",
 ] as const;
 const SORT_VALUES = ["company", "role", "score", "status", "date"] as const;
 
