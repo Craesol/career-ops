@@ -381,26 +381,50 @@ if (triageResult.status === 0) {
 }
 
 // --- STEP 4: Build consolidated email -----------------------------------
+// Every scan-history `portal` tag maps to exactly one digest source group.
+// The subject and the body both count through groupBySource(), and the last
+// group catches everything, so the per-source counts always add up to the
+// total. (2026-10-19: the subject used to bucket by prefixes no writer emits —
+// `[linkedin-alert:` never existed — so LinkedIn always read 0 and most
+// sources fell into an "other" the subject did not show.)
+const ATS_PROVIDER_RE = /^(greenhouse|ashby|lever|workday|successfactors|smartrecruiters|teamtailor|recruitee|personio|workable|icims|bamboohr|jobvite|breezy|pinpoint|dayforce)-/;
+const SOURCE_GROUPS = [
+  { key: 'linkedin', short: 'LinkedIn', heading: 'LinkedIn (alert emails + session)',
+    test: (p) => /^\[(ALERT|linkedin-alert):/i.test(p) || p === 'linkedin-session' },
+  { key: 'ats', short: 'ATS', heading: 'Direct ATS (APIs + full sweep)',
+    test: (p) => p.startsWith('[API:') || ATS_PROVIDER_RE.test(p) || /-full$/.test(p) },
+  { key: 'boards', short: 'boards', heading: 'Job boards + public feeds',
+    test: (p) => p.startsWith('[FEED:') || /-api$/.test(p) || /^(remoteok|remotive|manual:)/i.test(p) },
+  { key: 'l3', short: 'L3', heading: 'L3 deep scan (web search)',
+    test: (p) => /^\[?(websearch:|WebSearch:|deep-scan|L3-)/.test(p) || p === 'ai-search' },
+  { key: 'other', short: 'other', heading: 'Other sources', test: () => true },
+];
+
+function groupBySource(rows) {
+  const groups = SOURCE_GROUPS.map((g) => ({ ...g, rows: [] }));
+  for (const r of rows) groups.find((g) => g.test(r.portal || '')).rows.push(r);
+  return groups;
+}
+
+function digestSubject(day, total, groups) {
+  const parts = groups.filter((g) => g.rows.length > 0).map((g) => g.short + ' ' + g.rows.length);
+  return 'career-ops · ' + day + ' · ' + total + (total === 1 ? ' new role' : ' new roles') + (parts.length ? ' (' + parts.join(' + ') + ')' : '');
+}
+
 console.log('\n[step 4] Building consolidated email');
 const todayAdded = todayAddedRows();
 console.log('  Total added today: ' + todayAdded.length + ' (LinkedIn=' + linkedinAdded + ', L2=' + l2Added + ', L3=' + l3Added + ')');
 
-// Enrich with age + location via canonical API where possible (best-effort)
 // Group by source for tabular display
-const linkedinRows = todayAdded.filter(r => (r.portal || '').startsWith('[linkedin-alert:'));
-const apiRows = todayAdded.filter(r => (r.portal || '').startsWith('[API:'));
-const feedRows = todayAdded.filter(r => (r.portal || '').startsWith('[FEED:'));
-const l3Rows = todayAdded.filter(r => (r.portal || '').replace(/^\[/, '').startsWith('websearch:') || (r.portal || '').startsWith('[L3-'));
-const otherRows = todayAdded.filter(r => !linkedinRows.includes(r) && !apiRows.includes(r) && !feedRows.includes(r) && !l3Rows.includes(r));
+const sourceGroups = groupBySource(todayAdded);
 
 // Recent tracker activity (48h)
 const trackerRecent = readRecentTracker(2);
 
-const subject = 'career-ops · ' + today + ' · ' + todayAdded.length + ' new roles (LinkedIn ' + linkedinRows.length + ' + ATS ' + apiRows.length + ' + feeds ' + feedRows.length + (l3Rows.length ? ' + L3 ' + l3Rows.length : '') + ')';
+const subject = digestSubject(today, todayAdded.length, sourceGroups);
 
 const html = buildEmailHtml({
-  today, todayAdded, linkedinRows, apiRows, feedRows, l3Rows, otherRows,
-  linkedinAdded, l2Added, l3Added, MAX_AGE_DAYS, trackerRecent, INCLUDE_L3
+  today, todayAdded, sourceGroups, MAX_AGE_DAYS, trackerRecent,
 });
 
 // Transport (2026-09-14): Gmail SMTP FIRST — the digest goes to the user's
@@ -543,23 +567,18 @@ function trackerTbl(rows) {
     '</tr></thead><tbody>' + rows.map(trackerRow).join('') + '</tbody></table>';
 }
 function buildEmailHtml(ctx) {
-  const { today, todayAdded, linkedinRows, apiRows, feedRows, l3Rows, otherRows, linkedinAdded, l2Added, l3Added, MAX_AGE_DAYS, trackerRecent, INCLUDE_L3 } = ctx;
+  const { today, todayAdded, sourceGroups, MAX_AGE_DAYS, trackerRecent } = ctx;
   let body = '<h2 style="margin-bottom:6px;">career-ops · daily consolidated · ' + today + '</h2>' +
     '<p style="color:#666;margin-top:0;">One consolidated brief. Age filter: ≤ ' + MAX_AGE_DAYS + ' days (postings older than that skipped by scanner where publish date is available).</p>' +
     '<div style="background:#f9fafb;border-left:3px solid hsl(187,74%,32%);padding:12px 16px;margin:16px 0;">' +
     '<strong>Today added: ' + todayAdded.length + ' new roles</strong><br>' +
-    '&#8226; LinkedIn Alerts (IMAP): ' + linkedinRows.length + '<br>' +
-    '&#8226; Direct ATS APIs: ' + apiRows.length + '<br>' +
-    '&#8226; Public feeds (RemoteOK/Remotive/LinkedIn feed/HN/web3.career/JobMonaco/Emploi-Monaco): ' + feedRows.length + '<br>' +
-    '&#8226; L3 WebSearch: ' + (INCLUDE_L3 ? l3Rows.length : 'skipped (INCLUDE_L3=false)') + '<br>' +
+    sourceGroups.map((g) => '&#8226; ' + g.heading + ': ' + g.rows.length + '<br>').join('') +
     '</div>' +
     '<p style="color:#666;font-size:11.5px;"><strong>Legend</strong> — <span style="color:#15803d;">Remote/EMEA/EU-city</span> · <span style="color:#2563eb;">EU country/city</span> · <span style="color:#b91c1c;">Non-EU city (US/Asia/etc.)</span> · <span style="color:#999;">(blank/unknown)</span></p>';
 
-  if (linkedinRows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">LinkedIn Alerts (' + linkedinRows.length + ')</h3>' + tbl(linkedinRows);
-  if (apiRows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">Direct ATS APIs (' + apiRows.length + ')</h3>' + tbl(apiRows);
-  if (feedRows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">Public feeds (' + feedRows.length + ')</h3>' + tbl(feedRows);
-  if (l3Rows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">L3 WebSearch (' + l3Rows.length + ')</h3>' + tbl(l3Rows);
-  if (otherRows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">Other sources (' + otherRows.length + ')</h3>' + tbl(otherRows);
+  for (const g of sourceGroups) {
+    if (g.rows.length > 0) body += '<h3 style="margin-top:24px;color:#111;font-size:15px;">' + g.heading + ' (' + g.rows.length + ')</h3>' + tbl(g.rows);
+  }
 
   if (todayAdded.length === 0) {
     body += '<p style="color:#666;">No new roles today. Filters converged, or public feeds are quiet. Try tightening MAX_AGE_DAYS or check portals.yml for new search queries.</p>';
