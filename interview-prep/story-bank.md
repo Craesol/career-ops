@@ -186,3 +186,21 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **R (Result):** A conversion-first habit that carried into content work - posts get judged on whether they moved someone, not on whether they were seen.
 **Reflection:** Attention and action are two different metrics and most content work optimises only the first. The number tells you a mechanic stopped working; the timeline tells you why.
 **Best for questions about:** community metrics, reporting, "how do you measure content", turning data into recommendations, iterating on engagement data
+
+### [Localization] Keeping one text true across languages
+**Source:** Report #347 — Playson — Content Manager
+**S (Situation):** A professional translation career across English, Spanish and French, run alongside Spanish-language web editorial at Blizzard Entertainment.
+**T (Task):** Deliver translated and localized content that says exactly what the source says, in each target language.
+**A (Action):** Worked through CAT tools and localization workflows, translating and reviewing EN/ES/FR content for publication.
+**R (Result):** 25+ years of professional translation across three languages.
+**Reflection:** Localization is a consistency problem before it is a language problem: terminology, length and layout have to hold across every version, not just read well in one.
+**Best for questions about:** localization management, translation oversight, consistency, attention to detail, working across markets
+
+### [Multi-community] Running many sub-communities with different identities at once
+**Source:** Report #349 — Team17 Digital — Community Manager (UK and Europe) - FTC 6 Months
+**S (Situation):** The Guild Program at Movement Labs and Move Industries grew into 7 guilds and 9 regional hubs, each with its own leaders and local character.
+**T (Task):** Keep every guild and hub distinct enough to feel like home to its members while staying aligned with one ecosystem direction.
+**A (Action):** Headed both initiatives through one shared governance framework, contributor progression tiers and seasonal incentive mechanics, with guild and hub leads reporting in informally and without line authority, and ran daily community operations across Discord, Telegram, X and LinkedIn.
+**R (Result):** The structure held on direction and incentive design rather than an org chart, through June 2026.
+**Reflection:** Common rules and local voice are not in tension: the framework has to be strict about incentives and loose about tone.
+**Best for questions about:** managing multiple communities, community structure, regional communities, consistency across groups, influence without authority

@@ -2456,11 +2456,11 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://job-boards.greenhouse.io/zam/jobs/4560762004 | ZAM | Associate Community Manager | Germany (Europe) | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://jobs.ashbyhq.com/recraft/9afa7a25-48c7-4cf4-a7bc-550d74332a72 | recraft | Community Manager (X/Twitter & Discord) | Remote | posted: 2026-10-04
+- [x] ~~https://jobs.ashbyhq.com/recraft/9afa7a25-48c7-4cf4-a7bc-550d74332a72 | recraft | Community Manager (X/Twitter & Discord) | Remote | posted: 2026-10-04~~ — swept: stale (8d old, first seen 2026-10-05)
 
 - [x] ~~https://jobs.ashbyhq.com/fireworks/da8f0b05-ac82-40a4-8cb8-64767c956018 | Fireworks AI | Social and Community Manager | Remote (HQ: Redwood City, US) | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote
+- [x] ~~https://builtin.com/job/social-media-manager/9959227 | Viktor | Social Media Manager | Remote~~ — swept: stale (8d old, first seen 2026-10-05)
 
 
 
@@ -2483,31 +2483,91 @@ Line 44: block type=tool_result, keys=['tool_use_id', 'type', 'content']
 
 - [x] ~~https://www.linkedin.com/jobs/view/4477663424/ | Aesthetec | Community manager dans l'esthétique | Lyon, Auvergne-Rhône-Alpes, France | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://henryschein.wd1.myworkdayjobs.com/external_careers/job/Paris---France/COMMUNITY-MANAGER_R133962 | henryschein | Community Manager | Paris - France | posted: 2026-10-09
+- [x] ~~https://henryschein.wd1.myworkdayjobs.com/external_careers/job/Paris---France/COMMUNITY-MANAGER_R133962 | henryschein | Community Manager | Paris - France | posted: 2026-10-09~~ — removed from fresh matches
 
-- [ ] https://www.linkedin.com/jobs/view/4476293373/ | Henry Schein | Community Manager | Paris, Île-de-France, France | note: ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4476293373/ | Henry Schein | Community Manager | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
 - [x] ~~https://www.linkedin.com/jobs/view/4475226221/ | Cornilleau | Community Manager & Content Creator (h/f) | Bonneuil-les-Eaux, Hauts-de-France, France | note: ats api: active~~ — removed from fresh matches
 
-- [ ] https://cryptocurrencyjobs.co/marketing/sahara-social-media-manager-content-specialist/ | Sahara | Social Media Manager & Content Specialist | Remote | posted: 2026-10-06
+- [x] ~~https://cryptocurrencyjobs.co/marketing/sahara-social-media-manager-content-specialist/ | Sahara | Social Media Manager & Content Specialist | Remote | posted: 2026-10-06~~ — swept: stale (8d old, first seen 2026-10-09)
 
-- [ ] https://www.linkedin.com/jobs/view/4476299751/ | Blast Club | Lead Community Manager | France | note: linkedin id 4476299751 >= 4300000000
-- [ ] https://www.linkedin.com/jobs/view/4476817273/ | Blast Club | Community Manager | France | note: linkedin id 4476817273 >= 4300000000
+- [x] ~~https://www.linkedin.com/jobs/view/4476299751/ | Blast Club | Lead Community Manager | France | note: linkedin id 4476299751 >= 4300000000~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4476817273/ | Blast Club | Community Manager | France | note: linkedin id 4476817273 >= 4300000000~~ — removed from fresh matches
 
-- [ ] https://www.linkedin.com/jobs/view/4476820806/ | Jonak | Global Social Media Manager H/F | Paris, Île-de-France, France | note: ats api: active
-- [ ] https://www.linkedin.com/jobs/view/4469467401/ | Kraken | Community Lead - Kraken Pro in Spain
-- [ ] https://fr.linkedin.com/jobs/view/community-manager-at-blast-club-4476817273 | Blast Club | Community Manager
-- [ ] https://fr.linkedin.com/jobs/view/global-social-media-manager-h-f-at-jonak-4476820806 | Jonak | Global Social Media Manager H/F
-- [ ] https://fr.linkedin.com/jobs/view/lead-community-manager-at-blast-club-4476299751 | Blast Club | Lead Community Manager
+- [x] ~~https://www.linkedin.com/jobs/view/4476820806/ | Jonak | Global Social Media Manager H/F | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4469467401/ | Kraken | Community Lead - Kraken Pro in Spain~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/community-manager-at-blast-club-4476817273 | Blast Club | Community Manager~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/global-social-media-manager-h-f-at-jonak-4476820806 | Jonak | Global Social Media Manager H/F~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/lead-community-manager-at-blast-club-4476299751 | Blast Club | Lead Community Manager~~ — removed from fresh matches
 
-- [ ] https://www.linkedin.com/jobs/view/4477216983/ | Spiko | Field Marketing & Community Lead | Paris, Île-de-France, France | note: ats api: active
-- [ ] https://fr.linkedin.com/jobs/view/field-marketing-community-lead-at-spiko-4477216983 | Spiko | Field Marketing & Community Lead
+- [x] ~~https://www.linkedin.com/jobs/view/4477216983/ | Spiko | Field Marketing & Community Lead | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://fr.linkedin.com/jobs/view/field-marketing-community-lead-at-spiko-4477216983 | Spiko | Field Marketing & Community Lead~~ — removed from fresh matches
 
-- [ ] https://www.linkedin.com/jobs/view/4477249894/ | Bending Spoons | Content manager | France | note: ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4477249894/ | Bending Spoons | Content manager | France | note: ats api: active~~ — swept: stale (8d old, first seen 2026-10-11)
 
-- [ ] https://www.welcometothejungle.com/en/companies/teclib/jobs/6af83bb4-184c-4560-a79e-0e08eb23b44b | Teclib' | Community Manager – CDI | Paris, France | 34000 EUR | posted: 2026-10-12
+- [x] ~~https://www.welcometothejungle.com/en/companies/teclib/jobs/6af83bb4-184c-4560-a79e-0e08eb23b44b | Teclib' | Community Manager – CDI | Paris, France | 34000 EUR | posted: 2026-10-12~~ — removed from fresh matches
 
 - [ ] https://www.linkedin.com/jobs/view/4461063685/ | WINAMAX | Community Manager de Poker - Portugal (H/M) - Based in Paris | Paris, Île-de-France, France | note: ats api: active
 
 - [ ] https://jobicy.com/jobs/155156-content-manager | Playson | Content Manager | Europe | posted: 2026-10-12
 
 - [ ] https://www.arbeitnow.com/jobs/companies/yunicorn/youtube-skriptautor-social-media-manager-krypto-trading-storytelling-remote-hamburg-150758 | Yunicorn | YouTube-Skriptautor & Social Media Manager – Krypto, Trading & Storytelling (Remote) | Hamburg, Remote | posted: 2026-10-12
+
+- [ ] https://jobicy.com/jobs/155156-content-manager | Playson | Content Manager | Europe
+
+- [ ] https://startup.jobs/community-manager-uk-and-europe-ftc-6-months-team-17-digital-10357532 | Team 17 Digital | Community Manager (UK and Europe) - FTC 6 Months | Remote, United Kingdom | posted: 2026-10-08
+- [x] ~~https://startup.jobs/community-manager-f-h-ankama-10298830 | Ankama | Community Manager (F/H) | France | posted: 2026-10-05~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/community-manager-cdd-6-mois-h-f-septeo-10258902 | Septeo | Community Manager CDD 6 mois H/F | France | posted: 2026-10-01~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/social-media-content-manager-reszmunkaidos-xeropan-10289454 | Xeropan | Social Media & Content Manager – részmunkaidős | Remote, Hungary | posted: 2026-10-04~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/senior-content-manager-airslate-10233493 | airSlate | Senior Content Manager | Remote, Poland | posted: 2026-09-29~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/content-manager-madrid-based-feverup-10301248 | FeverUp | Content Manager - Madrid based | Paris, France | posted: 2026-10-05~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/content-manager-f-h-x-cdd-veepee-10253916 | Veepee | Content Manager (F/H/X) - CDD | France | posted: 2026-10-01~~ — removed from fresh matches
+- [x] ~~https://startup.jobs/social-media-manager-mendio-10237993 | Mend.io | Social Media Manager | Remote, Poland | posted: 2026-09-30~~ — removed from fresh matches
+
+- [x] ~~https://jobs.ashbyhq.com/pmmalliance/f5bd4625-6270-436b-a32d-6453fa750ddf | pmmalliance | Community Engagement Coordinator | Hybrid or Fully Remote · Dalston · United Kingdom | posted: 2026-10-12~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4477993965/ | GONG | Community Manager | Saint-Nazaire, Occitanie, France | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4461074580/ | WINAMAX | Sports Community Manager Germany (M/F/D) | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+
+- [x] ~~https://jobs.lever.co/colibrigroup/6e332246-af27-4a79-81fe-134a8f0da55b | colibrigroup | Social Media Manager | 1 Remote | posted: 2026-10-13~~ — removed from fresh matches
+- [x] ~~https://jobs.lever.co/crossfit/2e40b138-b62e-48b0-9457-e75f89514544 | crossfit | Director, Community Marketing | Remote | posted: 2026-10-13~~ — removed from fresh matches
+- [x] ~~https://job-boards.greenhouse.io/reddit/jobs/8275952 | reddit | Community Manager, Dutch Speaking (Contract) | Remote - The Netherlands | posted: 2026-10-13~~ — removed from fresh matches
+
+- [x] ~~https://startup.jobs/social-media-manager-colibri-group-10448971 | Colibri Group | Social Media Manager | Remote, 1 | posted: 2026-10-13~~ — removed from fresh matches
+
+- [x] ~~https://www.linkedin.com/jobs/view/4479578111/ | Brique House Brewery | Community Manager H/F - CDI TEMPS PLEIN | Paris, Île-de-France, France | note: ats api: active~~ — removed from fresh matches
+- [x] ~~https://www.linkedin.com/jobs/view/4478483019/ | OVHcloud | Tech Community Manager Public Cloud H/F/N | Nantes, Pays de la Loire, France | note: ats api: active~~ — removed from fresh matches
+
+- [ ] https://startup.jobs/community-manager-uk-and-europe-ftc-6-months-team-17-digital-10357532 | Team 17 Digital | Community Manager (UK and Europe) - FTC 6 Months | Remote, United Kingdom
+
+- [ ] https://www.linkedin.com/jobs/view/4479704243/ | Société des grands projets | Community manager F/H | St.-Denis, Île-de-France, France | note: ats api: active
+
+- [ ] https://job-boards.greenhouse.io/mightynetworks/jobs/8890018002?gh_jid=8890018002 | mightynetworks | Community Manager | Remote · No Office | posted: 2026-10-14
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-at-gong-4477993965 | GONG | Community Manager
+
+- [ ] https://www.linkedin.com/jobs/view/4479144909/ | Groupama Assurances Mutuelles | Community Manager H/F | Paris, Île-de-France, France | note: ats api: active
+
+- [ ] https://www.linkedin.com/jobs/view/4440462663/ | WeWork | Community Lead | Paris, Île-de-France, France | note: linkedin id 4440462663 >= 4300000000
+- [ ] https://fr.linkedin.com/jobs/view/community-manager-h-f-at-groupama-assurances-mutuelles-4479144909 | Groupama Assurances Mutuelles | Community Manager H/F
+
+- [ ] https://jobs.ashbyhq.com/hcompany/43dbeefc-4b1c-42eb-bb99-392d2b7b1b28 | hcompany | Content Manager | Hybrid Paris · Paris · France · Hybrid London · United Kingdom | posted: 2026-10-16
+
+- [ ] https://www.linkedin.com/jobs/view/4479390322/ | Secrets d'Entraineurs | Community Manager | Haute-Loire, Auvergne-Rhône-Alpes, France | note: ats api: active
+
+- [ ] https://startup.jobs/content-manager-h-company-10504476 | H Company | Content Manager | Paris, France | posted: 2026-10-16
+
+- [ ] https://www.linkedin.com/jobs/view/4468195097/ | Air Apps | Community Manager, Paris | Paris, Île-de-France, France | note: ats api: active
+
+- [ ] https://www.linkedin.com/jobs/view/4480854257/ | Coopérative U | Devenez notre futur(e) Chargé(e) de Communication & Community Manager ! | Beaulieu-sur-Mer, Provence-Alpes-Côte d'Azur, France | note: ats api: active
+- [ ] https://fr.linkedin.com/jobs/view/devenez-notre-futur-e-charg%C3%A9-e-de-communication-community-manager-%21-at-coop%C3%A9rative-u-4480854257 | Coopérative U | Devenez notre futur(e) Chargé(e) de Communication & Community Manager !
+
+- [ ] https://www.linkedin.com/jobs/view/4479693903/ | STATION F | SENIOR BRAND & CONTENT MANAGER | Paris, Île-de-France, France | note: ats api: active
+
+- [ ] https://www.linkedin.com/jobs/view/4480913232/ | Maroua Marion Bouzid | Community Manager - Freelance - Cannes | Cannes, Provence-Alpes-Côte d'Azur, France | note: linkedin id 4480913232 >= 4300000000
+- [ ] https://www.linkedin.com/jobs/view/4441358386/ | LinkedIn (unknown company) | Social Media Marketing Manager (Contract) at Sui Foundation — Portugal | LinkedIn Jobs
+- [ ] https://www.linkedin.com/jobs/view/4480559768/ | tribe47 | Content Manager (Marketing Automation) in Warsaw, Mazowieckie, Poland
+
+- [ ] https://www.linkedin.com/jobs/view/4480933985/ | Antik Batik | Community Manager | Paris, Île-de-France, France | note: linkedin id 4480933985 >= 4300000000
+- [ ] https://www.linkedin.com/jobs/view/4478256457/ | Ryanair | Deputy Social Media Lead | Europe's Favourite Airline — Swords, County Dublin, Ireland | note: ats api: active
+
+- [x] ~~https://www.linkedin.com/jobs/view/4479971737/ | Ryanair | Deputy Social Media Lead | Europe's Favourite Airline — Swords, County Dublin, Ireland | note: ats api: active~~ — removed from fresh matches
