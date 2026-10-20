@@ -36,6 +36,8 @@ const DEFAULT_CANDIDATES = [
   'google/gemma-4-31b-it:free',
   'nvidia/nemotron-3-super-120b-a12b:free',
   'nvidia/nemotron-3.5-lightning:free',
+  'nvidia/nemotron-3-ultra-550b-a55b:free',
+  'minimax/minimax-m3.1-flash:free',
 ];
 
 /**
