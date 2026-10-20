@@ -23,7 +23,14 @@
  *   POST /v1/actions/dismiss             {url,title,company} → web dismiss
  *   POST /v1/actions/restart-web         stop the :3000 server, relaunch its task
  *
- * Usage: node ops-api/server.mjs   (OPS_PORT, default 8443)
+ * One route needs no token, because a phone browser cannot send one:
+ *   GET  /dl/<code>                      the Cajita Ops APK, for installing the app.
+ *   The code comes from `--apk-link`, lives in OPS_DIR/apk-link.json, expires
+ *   after 24 h and allows 5 downloads. A wrong code counts as a failed login.
+ *   The APK holds no secret (only the server's public certificate).
+ *
+ * Usage: node ops-api/server.mjs              (OPS_PORT, default 8443)
+ *        node ops-api/server.mjs --apk-link   print a fresh 24 h download link
  */
 import https from 'node:https';
 import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
@@ -45,7 +52,25 @@ Serves the fixed CAJITA ops API over HTTPS on OPS_PORT (default 8443), reading
 token.txt, cert.pem and key.pem from OPS_DIR (default ~/.career-ops-ops).
 
 Options:
+  --apk-link   Write a new 24 h download code for the APK and print its URL
   --help, -h   Show this help`;
+
+const APK = join(ROOT, 'output', 'CajitaOps-1.0.apk');
+const APK_LINK = join(OPS_DIR, 'apk-link.json');
+const APK_DOWNLOADS = 5;
+
+// Returns true when <code> is the current, unexpired download code, and spends one download.
+function takeApkDownload(code) {
+  let link;
+  try { link = JSON.parse(readFileSync(APK_LINK, 'utf8')); } catch { return false; }
+  if (!link.code || Date.now() > link.expires || link.left < 1) return false;
+  const a = createHash('sha256').update(code).digest();
+  const b = createHash('sha256').update(link.code).digest();
+  if (!timingSafeEqual(a, b)) return false;
+  link.left -= 1;
+  writeFileSync(APK_LINK, JSON.stringify(link));
+  return true;
+}
 
 // ── auth ────────────────────────────────────────────────────────────────────
 // Deleting token.txt and restarting is the "lost phone" procedure: a missing
@@ -306,6 +331,20 @@ function main() {
       log(ip + ' ' + req.method + ' ' + url.pathname + ' ' + code);
     };
     if (blocked(ip)) return send(429, { error: 'too many failed attempts, try later' });
+    if (req.method === 'GET' && url.pathname.startsWith('/dl/')) {
+      if (!takeApkDownload(url.pathname.slice(4)) || !existsSync(APK)) {
+        failures.get(ip).push(Date.now());
+        return send(404, { error: 'link expired or invalid' });
+      }
+      res.writeHead(200, {
+        'content-type': 'application/vnd.android.package-archive',
+        'content-disposition': 'attachment; filename="CajitaOps-1.0.apk"',
+        'content-length': statSync(APK).size, 'cache-control': 'no-store',
+      });
+      res.end(readFileSync(APK));
+      log(ip + ' GET /dl/<code> 200 (apk)');
+      return;
+    }
     if (!authorized(req, tokenHash)) {
       failures.get(ip).push(Date.now());
       return send(401, { error: 'unauthorized' });
@@ -324,6 +363,12 @@ function main() {
 
 if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
   console.log(USAGE);
+  process.exit(0);
+}
+if (process.argv.includes('--apk-link')) {
+  const code = randomBytes(18).toString('base64url');
+  writeFileSync(APK_LINK, JSON.stringify({ code, expires: Date.now() + 86_400_000, left: APK_DOWNLOADS }));
+  console.log('https://192.168.1.176:' + PORT + '/dl/' + code);
   process.exit(0);
 }
 main();
