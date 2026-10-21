@@ -184,7 +184,8 @@ async function main() {
     try {
       for (const l of readFileSync(resolve(ROOT, 'data', 'scan-history.tsv'), 'utf8').split('\n')) {
         const u = l.split('\t')[0];
-        const m = u && u.match(/linkedin\.com\/jobs\/view\/(\d{8,})/);
+        // Bare /jobs/view/{id} and the feeds' /jobs/view/{title-slug}-{id}.
+        const m = u && u.match(/linkedin\.com\/jobs\/view\/(?:[^/?#\t]*-)?(\d{8,})/);
         if (m) known.add(m[1]);
       }
     } catch { /* first run */ }

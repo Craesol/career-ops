@@ -366,6 +366,16 @@ if (pruneResult.status === 0 || /checked \d+/.test(pruneResult.stdout || '')) {
   console.error('  FAIL (exit ' + pruneResult.status + '): ' + (pruneResult.stderr || 'unknown').slice(0, 200));
 }
 
+// --- STEP 3b2: Repost check -----------------------------------------------
+// Hides finds that repeat a posting already seen under another URL, or a role
+// already applied to (an aggregator re-listing it under its own name), before
+// the triage steps spend requests on them and before the email lists them.
+console.log('\n[step 3b2] mark-reposts');
+const repostResult = spawnSync('node', [resolve(ROOT, 'mark-reposts.mjs')], {
+  cwd: ROOT, encoding: 'utf-8', shell: false, timeout: 60000,
+});
+console.log(((repostResult.stdout || '').trim() || ('exit ' + repostResult.status)).split('\n').map(l => '  ' + l.trim()).join('\n'));
+
 // --- STEP 3c: Free-tier auto-triage (Gemini prescores) -------------------
 // Pre-scores today's fresh finds on the free GEMINI_API_KEY tier so the web
 // shows a first-pass fit score on every card. Skips itself when no key is
