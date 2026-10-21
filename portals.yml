@@ -168,6 +168,22 @@ title_filter:
     - Marketing Communications Manager
     - Social Media Manager
     - Social Media Lead
+    # 2026-10-21: games studios and NGOs name the same jobs differently. Ubisoft
+    # and Massive call community managers "Community Developer" (10+ such roles
+    # died at the title filter since July); French studios post them in French;
+    # NGOs hire community and comms under "engagement" and "communications".
+    - Community Developer
+    - Gestionnaire de communauté
+    - Responsable communauté
+    - Player Community
+    - Player Engagement
+    - Fan Engagement
+    - Head of Social
+    - Digital Engagement
+    - Supporter Engagement
+    - Communications Manager
+    - Communications Lead
+    - Digital Communications
   negative:
     - Vietnamese
     - Thai
@@ -786,6 +802,1193 @@ tracked_companies:
   - name: Illuvium
     careers_url: https://illuvium.io/jobs
     enabled: false
+  # 2026-10-21 deep-scan expansion: 237 boards in games (70), web3 (95) and NGOs (72),
+  # each verified live against its ATS API and checked to belong to the named company.
+  - name: Discord
+    careers_url: https://job-boards.greenhouse.io/discord
+    provider: greenhouse
+    enabled: true
+    notes: 'games: chat/community platform for gamers, US; 45 open jobs at verification 2026-10-21'
+  - name: Roblox
+    careers_url: https://job-boards.greenhouse.io/roblox
+    provider: greenhouse
+    enabled: true
+    notes: 'games: UGC game platform, US; 262 open jobs at verification 2026-10-21'
+  - name: Supercell
+    careers_url: https://jobs.ashbyhq.com/supercell
+    provider: ashby
+    enabled: true
+    notes: 'games: mobile games studio, Finland; 39 open jobs at verification 2026-10-21'
+  - name: CD PROJEKT RED
+    careers_url: https://jobs.smartrecruiters.com/cdprojektred
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: AAA RPG studio (Witcher, Cyberpunk), Poland; 44 open jobs at verification 2026-10-21'
+  - name: Voodoo
+    careers_url: https://jobs.ashbyhq.com/voodoo
+    provider: ashby
+    enabled: true
+    notes: 'games: mobile games publisher, France; 115 open jobs at verification 2026-10-21'
+  - name: Gameloft
+    careers_url: https://jobs.smartrecruiters.com/gameloft
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: mobile/console games studio, France; 55 open jobs at verification 2026-10-21'
+  - name: Ankama
+    careers_url: https://ankama.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (Dofus, Wakfu), France; 5 open jobs at verification 2026-10-21'
+  - name: DONTNOD
+    careers_url: https://jobs.smartrecruiters.com/dontnod
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: narrative games studio, France; 3 open jobs at verification 2026-10-21'
+  - name: Focus Entertainment (Pullup)
+    careers_url: https://focusentertainment.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: games publisher, France; 10 open jobs at verification 2026-10-21'
+  - name: Embark Studios
+    careers_url: https://embarkstudios.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: AAA studio (Arc Raiders, The Finals), Sweden; 18 open jobs at verification 2026-10-21'
+  - name: Avalanche Studios
+    careers_url: https://jobs.lever.co/avalanchestudios
+    provider: lever
+    enabled: true
+    notes: 'games: AAA open-world studio, Sweden; 6 open jobs at verification 2026-10-21'
+  - name: Starbreeze
+    careers_url: https://starbreeze.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (Payday), Sweden; 1 open jobs at verification 2026-10-21'
+  - name: Fatshark
+    careers_url: https://fatshark.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (Vermintide, Darktide), Sweden; 2 open jobs at verification 2026-10-21'
+  - name: Sharkmob
+    careers_url: https://sharkmob.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: multiplayer games studio, Sweden; 5 open jobs at verification 2026-10-21'
+  - name: IO Interactive
+    careers_url: https://ioi.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: AAA studio (Hitman), Denmark; 7 open jobs at verification 2026-10-21'
+  - name: Housemarque
+    careers_url: https://job-boards.greenhouse.io/housemarque
+    provider: greenhouse
+    enabled: true
+    notes: 'games: PlayStation studio (Returnal), Finland; 5 open jobs at verification 2026-10-21'
+  - name: 11 bit studios
+    careers_url: https://11bitstudios.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: games studio/publisher (Frostpunk), Poland; 6 open jobs at verification 2026-10-21'
+  - name: People Can Fly
+    careers_url: https://jobs.smartrecruiters.com/peoplecanfly
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: AAA studio, Poland; 12 open jobs at verification 2026-10-21'
+  - name: Ten Square Games
+    careers_url: https://tensquaregames.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: mobile games, Poland; 11 open jobs at verification 2026-10-21'
+  - name: Huuuge Games
+    careers_url: https://huuuge.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: mobile social casino games, Poland; 7 open jobs at verification 2026-10-21'
+  - name: Crytek
+    careers_url: https://jobs.lever.co/crytek
+    provider: lever
+    enabled: true
+    notes: 'games: AAA studio (Hunt: Showdown), Germany; 5 open jobs at verification 2026-10-21'
+  - name: Wooga
+    careers_url: https://job-boards.greenhouse.io/wooga
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games, Germany; 3 open jobs at verification 2026-10-21'
+  - name: Kolibri Games
+    careers_url: https://jobs.lever.co/kolibrigames
+    provider: lever
+    enabled: true
+    notes: 'games: mobile idle games (Ubisoft), Germany; 5 open jobs at verification 2026-10-21'
+  - name: Travian Games
+    careers_url: https://traviangames.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'games: browser/mobile strategy games, Germany; 2 open jobs at verification 2026-10-21'
+  - name: Moon Active
+    careers_url: https://jobs.ashbyhq.com/moonactive
+    provider: ashby
+    enabled: true
+    notes: 'games: mobile games (Coin Master), Israel; 33 open jobs at verification 2026-10-21'
+  - name: Tripledot Studios
+    careers_url: https://job-boards.greenhouse.io/tripledotstudios
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games, UK; 88 open jobs at verification 2026-10-21'
+  - name: Jam City
+    careers_url: https://jobs.lever.co/jamcity
+    provider: lever
+    enabled: true
+    notes: 'games: mobile games, US; 17 open jobs at verification 2026-10-21'
+  - name: Kabam
+    careers_url: https://jobs.lever.co/kabam
+    provider: lever
+    enabled: true
+    notes: 'games: mobile games, Canada; 23 open jobs at verification 2026-10-21'
+  - name: Fnatic
+    careers_url: https://jobs.ashbyhq.com/fnatic
+    provider: ashby
+    enabled: true
+    notes: 'games: esports organisation, UK; 1 open jobs at verification 2026-10-21'
+  - name: Team Liquid
+    careers_url: https://teamliquid.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: esports organisation, Netherlands/US; 16 open jobs at verification 2026-10-21'
+  - name: Raw Fury
+    careers_url: https://rawfury.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: indie games publisher, Sweden; 3 open jobs at verification 2026-10-21'
+  - name: Krafton
+    careers_url: https://job-boards.greenhouse.io/krafton
+    provider: greenhouse
+    enabled: true
+    notes: 'games: games publisher (PUBG), South Korea; 55 open jobs at verification 2026-10-21'
+  - name: Sony Interactive Entertainment
+    careers_url: https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal
+    provider: greenhouse
+    enabled: true
+    notes: 'games: PlayStation platform/publisher, US/Japan; 195 open jobs at verification 2026-10-21'
+  - name: 2K
+    careers_url: https://job-boards.greenhouse.io/2k
+    provider: greenhouse
+    enabled: true
+    notes: 'games: games publisher (Take-Two), US; 109 open jobs at verification 2026-10-21'
+  - name: Rockstar Games
+    careers_url: https://job-boards.greenhouse.io/rockstargames
+    provider: greenhouse
+    enabled: true
+    notes: 'games: AAA studio (GTA), US/UK; 25 open jobs at verification 2026-10-21'
+  - name: Gearbox
+    careers_url: https://job-boards.greenhouse.io/gearbox
+    provider: greenhouse
+    enabled: true
+    notes: 'games: AAA studio (Borderlands), US; 1 open jobs at verification 2026-10-21'
+  - name: Kepler Interactive
+    careers_url: https://keplerinteractive.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games publisher, UK; 13 open jobs at verification 2026-10-21'
+  - name: Ubisoft
+    careers_url: https://jobs.smartrecruiters.com/Ubisoft2
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: AAA publisher, France; 332 open jobs at verification 2026-10-21'
+  - name: Dream Games
+    careers_url: https://jobs.lever.co/dreamgames
+    provider: lever
+    enabled: true
+    notes: 'games: mobile games (Royal Match), Turkey; 20 open jobs at verification 2026-10-21'
+  - name: Peak Games
+    careers_url: https://jobs.lever.co/peakgames
+    provider: lever
+    enabled: true
+    notes: 'games: mobile games (Zynga), Turkey; 18 open jobs at verification 2026-10-21'
+  - name: HoYoverse
+    careers_url: https://jobs.ashbyhq.com/hoyoverse
+    provider: ashby
+    enabled: true
+    notes: 'games: games publisher (Genshin Impact), Singapore/China; 21 open jobs at verification 2026-10-21'
+  - name: HoYoverse (Americas)
+    careers_url: https://jobs.smartrecruiters.com/hoyoverse
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: games publisher (Genshin Impact) Americas offices, US; 11 open jobs at verification 2026-10-21'
+  - name: Goodgame Studios
+    careers_url: https://goodgamestudios.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: browser/mobile games, Germany; 1 open jobs at verification 2026-10-21'
+  - name: Second Dinner
+    careers_url: https://jobs.ashbyhq.com/seconddinner
+    provider: ashby
+    enabled: true
+    notes: 'games: games studio (Marvel Snap), US; 1 open jobs at verification 2026-10-21'
+  - name: Theorycraft Games
+    careers_url: https://jobs.lever.co/theorycraftgames
+    provider: lever
+    enabled: true
+    notes: 'games: games studio, US; 1 open jobs at verification 2026-10-21'
+  - name: Wildlife Studios
+    careers_url: https://job-boards.greenhouse.io/wildlifestudios
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games, Brazil; 16 open jobs at verification 2026-10-21'
+  - name: GRID Esports
+    careers_url: https://grid.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: esports data platform, Germany; 10 open jobs at verification 2026-10-21'
+  - name: SYBO
+    careers_url: https://sybo.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: mobile games (Subway Surfers), Denmark; 4 open jobs at verification 2026-10-21'
+  - name: Unknown Worlds
+    careers_url: https://job-boards.greenhouse.io/unknownworlds
+    provider: greenhouse
+    enabled: true
+    notes: 'games: games studio (Subnautica), US; 2 open jobs at verification 2026-10-21'
+  - name: Nitrado (marbis GmbH)
+    careers_url: https://nitrado.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'games: game server hosting, Germany; 4 open jobs at verification 2026-10-21'
+  - name: Eneba
+    careers_url: https://jobs.ashbyhq.com/eneba
+    provider: ashby
+    enabled: true
+    notes: 'games: game key marketplace, Lithuania; 39 open jobs at verification 2026-10-21'
+  - name: Xsolla
+    careers_url: https://jobs.lever.co/xsolla
+    provider: lever
+    enabled: true
+    notes: 'games: game commerce platform, US; 193 open jobs at verification 2026-10-21'
+  - name: NetEase Games
+    careers_url: https://job-boards.greenhouse.io/neteasegames
+    provider: greenhouse
+    enabled: true
+    notes: 'games: games publisher (Western studios), China; 27 open jobs at verification 2026-10-21'
+  - name: Zynga
+    careers_url: https://job-boards.greenhouse.io/zyngacareers
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games, US; 42 open jobs at verification 2026-10-21'
+  - name: Com2uS Europe
+    careers_url: https://gvc2u.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'games: mobile games publisher Europe office, Germany; 5 open jobs at verification 2026-10-21'
+  - name: Neon Giant
+    careers_url: https://neongiant.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (The Ascent), Sweden; 1 open jobs at verification 2026-10-21'
+  - name: CI Games
+    careers_url: https://cigames.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (Lords of the Fallen), Poland; 1 open jobs at verification 2026-10-21'
+  - name: Nordeus
+    careers_url: https://job-boards.greenhouse.io/nordeus
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games (Take-Two), Serbia; 11 open jobs at verification 2026-10-21'
+  - name: Tactile Games
+    careers_url: https://job-boards.greenhouse.io/tactilegames
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile puzzle games, Denmark; 2 open jobs at verification 2026-10-21'
+  - name: Ninjas in Pyjamas
+    careers_url: https://ninjasinpyjamas.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: esports organisation, Sweden/UAE; 5 open jobs at verification 2026-10-21'
+  - name: Poki
+    careers_url: https://jobs.ashbyhq.com/poki
+    provider: ashby
+    enabled: true
+    notes: 'games: web games platform, Netherlands; 4 open jobs at verification 2026-10-21'
+  - name: CrazyGames
+    careers_url: https://crazygames.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'games: web games platform, Belgium; 2 open jobs at verification 2026-10-21'
+  - name: Azerion
+    careers_url: https://jobs.smartrecruiters.com/azerion
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: games and digital ads, Netherlands; 9 open jobs at verification 2026-10-21'
+  - name: Daybreak Games
+    careers_url: https://job-boards.greenhouse.io/daybreakgames
+    provider: greenhouse
+    enabled: true
+    notes: 'games: online games studio, US; 3 open jobs at verification 2026-10-21'
+  - name: Digital Extremes
+    careers_url: https://job-boards.greenhouse.io/digitalextremes
+    provider: greenhouse
+    enabled: true
+    notes: 'games: games studio (Warframe), Canada; 10 open jobs at verification 2026-10-21'
+  - name: Paradox Interactive
+    careers_url: https://paradox-interactive.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: strategy games publisher, Sweden; 18 open jobs at verification 2026-10-21'
+  - name: Wargaming
+    careers_url: https://job-boards.greenhouse.io/wargamingen
+    provider: greenhouse
+    enabled: true
+    notes: 'games: online games (World of Tanks), Cyprus; 44 open jobs at verification 2026-10-21'
+  - name: Coffee Stain
+    careers_url: https://coffeestainstudios.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'games: games studio (Satisfactory), Sweden; 1 open jobs at verification 2026-10-21'
+  - name: Playtika
+    careers_url: https://job-boards.greenhouse.io/playtikaltd
+    provider: greenhouse
+    enabled: true
+    notes: 'games: mobile games, Israel; 14 open jobs at verification 2026-10-21'
+  - name: Techland
+    careers_url: https://jobs.smartrecruiters.com/techlandsa
+    provider: smartrecruiters
+    enabled: true
+    notes: 'games: AAA studio (Dying Light), Poland; 28 open jobs at verification 2026-10-21'
+  - name: Consensys
+    careers_url: https://job-boards.greenhouse.io/consensys
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: Ethereum software (MetaMask, Linea), USA; 9 open jobs at verification 2026-10-21'
+  - name: Ledger
+    careers_url: https://jobs.ashbyhq.com/ledger
+    provider: ashby
+    enabled: true
+    notes: 'web3: hardware wallets, France; 13 open jobs at verification 2026-10-21'
+  - name: Parity Technologies
+    careers_url: https://jobs.ashbyhq.com/parity
+    provider: ashby
+    enabled: true
+    notes: 'web3: Polkadot core developer, UK; 2 open jobs at verification 2026-10-21'
+  - name: Web3 Foundation
+    careers_url: https://apply.workable.com/web3-foundation
+    provider: workable
+    enabled: true
+    notes: 'web3: Polkadot foundation, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: Ethereum Foundation
+    careers_url: https://jobs.ashbyhq.com/ethereum-foundation
+    provider: ashby
+    enabled: true
+    notes: 'web3: Ethereum L1 foundation, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: Starknet Foundation
+    careers_url: https://jobs.ashbyhq.com/starknetfoundation
+    provider: ashby
+    enabled: true
+    notes: 'web3: Starknet L2 foundation, Switzerland; 3 open jobs at verification 2026-10-21'
+  - name: Matter Labs
+    careers_url: https://jobs.ashbyhq.com/matter-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: ZKsync L2 developer, Germany; 4 open jobs at verification 2026-10-21'
+  - name: Eigen Labs
+    careers_url: https://jobs.ashbyhq.com/eigen-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: EigenLayer restaking protocol, USA; 1 open jobs at verification 2026-10-21'
+  - name: Alchemy
+    careers_url: https://jobs.ashbyhq.com/alchemy
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain dev infrastructure, USA; 20 open jobs at verification 2026-10-21'
+  - name: QuickNode
+    careers_url: https://jobs.ashbyhq.com/quicknode
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain node infrastructure, USA; 2 open jobs at verification 2026-10-21'
+  - name: Fireblocks
+    careers_url: https://job-boards.greenhouse.io/fireblocks
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: digital asset custody infrastructure, USA/Israel; 26 open jobs at verification 2026-10-21'
+  - name: Phantom
+    careers_url: https://jobs.ashbyhq.com/phantom
+    provider: ashby
+    enabled: true
+    notes: 'web3: multichain wallet, USA; 14 open jobs at verification 2026-10-21'
+  - name: Zerion
+    careers_url: https://jobs.lever.co/zerion
+    provider: lever
+    enabled: true
+    notes: 'web3: DeFi wallet, Portugal; 1 open jobs at verification 2026-10-21'
+  - name: Gemini
+    careers_url: https://job-boards.greenhouse.io/gemini
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto exchange, USA; 30 open jobs at verification 2026-10-21'
+  - name: Bitpanda
+    careers_url: https://job-boards.greenhouse.io/bitpanda
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto investment platform, Austria; 30 open jobs at verification 2026-10-21'
+  - name: Bitvavo
+    careers_url: https://jobs.ashbyhq.com/bitvavo
+    provider: ashby
+    enabled: true
+    notes: 'web3: crypto exchange, Netherlands; 13 open jobs at verification 2026-10-21'
+  - name: Bybit
+    careers_url: https://job-boards.greenhouse.io/bybit
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto exchange, UAE; 165 open jobs at verification 2026-10-21'
+  - name: SatoshiLabs (Trezor)
+    careers_url: https://jobs.ashbyhq.com/satoshilabs
+    provider: ashby
+    enabled: true
+    notes: 'web3: hardware wallets, Czechia; 8 open jobs at verification 2026-10-21'
+  - name: Nansen
+    careers_url: https://job-boards.greenhouse.io/nansen
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: onchain analytics, Singapore; 1 open jobs at verification 2026-10-21'
+  - name: Dune
+    careers_url: https://jobs.ashbyhq.com/dune
+    provider: ashby
+    enabled: true
+    notes: 'web3: onchain data platform, Norway; 4 open jobs at verification 2026-10-21'
+  - name: Messari
+    careers_url: https://job-boards.greenhouse.io/messari
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto research and data, USA; 0 open jobs at verification 2026-10-21'
+  - name: Paxos
+    careers_url: https://jobs.ashbyhq.com/paxos
+    provider: ashby
+    enabled: true
+    notes: 'web3: stablecoin issuer, USA; 22 open jobs at verification 2026-10-21'
+  - name: 1inch
+    careers_url: https://jobs.lever.co/1inch
+    provider: lever
+    enabled: true
+    notes: 'web3: DEX aggregator, UAE; 6 open jobs at verification 2026-10-21'
+  - name: Ether.fi
+    careers_url: https://jobs.ashbyhq.com/ether.fi
+    provider: ashby
+    enabled: true
+    notes: 'web3: liquid restaking protocol, Cayman Islands; 13 open jobs at verification 2026-10-21'
+  - name: Morpho
+    careers_url: https://jobs.ashbyhq.com/morpho
+    provider: ashby
+    enabled: true
+    notes: 'web3: DeFi lending protocol, France; 11 open jobs at verification 2026-10-21'
+  - name: Risk Labs (Across/UMA)
+    careers_url: https://jobs.ashbyhq.com/risklabs
+    provider: ashby
+    enabled: true
+    notes: 'web3: Across bridge and UMA oracle, Cayman Islands; 1 open jobs at verification 2026-10-21'
+  - name: LayerZero Labs
+    careers_url: https://job-boards.greenhouse.io/layerzerolabs
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: interoperability protocol, Canada; 7 open jobs at verification 2026-10-21'
+  - name: Trilitech
+    careers_url: https://jobs.ashbyhq.com/trilitech
+    provider: ashby
+    enabled: true
+    notes: 'web3: Tezos ecosystem R&D, UK; 3 open jobs at verification 2026-10-21'
+  - name: Stellar Development Foundation
+    careers_url: https://jobs.ashbyhq.com/stellar
+    provider: ashby
+    enabled: true
+    notes: 'web3: Stellar L1 foundation, USA; 24 open jobs at verification 2026-10-21'
+  - name: Hashgraph
+    careers_url: https://jobs.ashbyhq.com/hashgraph
+    provider: ashby
+    enabled: true
+    notes: 'web3: Hedera ecosystem developer, USA; 4 open jobs at verification 2026-10-21'
+  - name: Fuel Labs
+    careers_url: https://jobs.lever.co/fuellabs
+    provider: lever
+    enabled: true
+    notes: 'web3: Fuel L2 developer, Portugal; 1 open jobs at verification 2026-10-21'
+  - name: Aztec Labs
+    careers_url: https://jobs.ashbyhq.com/aztec-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: privacy L2 developer, UK; 1 open jobs at verification 2026-10-21'
+  - name: Succinct
+    careers_url: https://jobs.ashbyhq.com/succinct
+    provider: ashby
+    enabled: true
+    notes: 'web3: ZK prover network, USA; 1 open jobs at verification 2026-10-21'
+  - name: Magic Eden
+    careers_url: https://jobs.ashbyhq.com/magiceden
+    provider: ashby
+    enabled: true
+    notes: 'web3: NFT and token marketplace, USA; 1 open jobs at verification 2026-10-21'
+  - name: Sorare
+    careers_url: https://jobs.ashbyhq.com/sorare
+    provider: ashby
+    enabled: true
+    notes: 'web3: web3 fantasy sports game, France; 2 open jobs at verification 2026-10-21'
+  - name: Flowdesk
+    careers_url: https://job-boards.greenhouse.io/flowdesk
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto market maker, France; 9 open jobs at verification 2026-10-21'
+  - name: SwissBorg
+    careers_url: https://jobs.lever.co/swissborg
+    provider: lever
+    enabled: true
+    notes: 'web3: crypto wealth app, Switzerland; 5 open jobs at verification 2026-10-21'
+  - name: Nethermind
+    careers_url: https://jobs.ashbyhq.com/nethermind
+    provider: ashby
+    enabled: true
+    notes: 'web3: Ethereum client and research, UK; 2 open jobs at verification 2026-10-21'
+  - name: Blockstream
+    careers_url: https://jobs.ashbyhq.com/blockstream
+    provider: ashby
+    enabled: true
+    notes: 'web3: Bitcoin infrastructure, Canada; 46 open jobs at verification 2026-10-21'
+  - name: Blockdaemon
+    careers_url: https://jobs.ashbyhq.com/blockdaemon
+    provider: ashby
+    enabled: true
+    notes: 'web3: node and staking infrastructure, USA; 2 open jobs at verification 2026-10-21'
+  - name: 21Shares
+    careers_url: https://job-boards.greenhouse.io/21shares
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto ETP issuer, Switzerland; 1 open jobs at verification 2026-10-21'
+  - name: Wintermute
+    careers_url: https://jobs.lever.co/wintermute-trading
+    provider: lever
+    enabled: true
+    notes: 'web3: crypto market maker, UK; 19 open jobs at verification 2026-10-21'
+  - name: Keyrock
+    careers_url: https://jobs.ashbyhq.com/keyrock
+    provider: ashby
+    enabled: true
+    notes: 'web3: crypto market maker, Belgium; 8 open jobs at verification 2026-10-21'
+  - name: GSR
+    careers_url: https://job-boards.greenhouse.io/gsrmarkets
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto market maker, UK; 6 open jobs at verification 2026-10-21'
+  - name: Zodia Custody
+    careers_url: https://apply.workable.com/zodia-custody
+    provider: workable
+    enabled: true
+    notes: 'web3: institutional crypto custody, UK; 1 open jobs at verification 2026-10-21'
+  - name: Douro Labs (Pyth)
+    careers_url: https://jobs.ashbyhq.com/pythnetwork
+    provider: ashby
+    enabled: true
+    notes: 'web3: Pyth oracle network, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: Jito Labs
+    careers_url: https://jobs.ashbyhq.com/jito-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: Solana MEV and liquid staking, USA; 4 open jobs at verification 2026-10-21'
+  - name: Helius
+    careers_url: https://jobs.ashbyhq.com/helius
+    provider: ashby
+    enabled: true
+    notes: 'web3: Solana RPC infrastructure, USA; 8 open jobs at verification 2026-10-21'
+  - name: Solana Labs
+    careers_url: https://jobs.ashbyhq.com/solanalabs
+    provider: ashby
+    enabled: true
+    notes: 'web3: Solana core developer, USA; 0 open jobs at verification 2026-10-21'
+  - name: Squads
+    careers_url: https://jobs.ashbyhq.com/squads
+    provider: ashby
+    enabled: true
+    notes: 'web3: Solana smart-account wallet, USA; 6 open jobs at verification 2026-10-21'
+  - name: Mina Foundation
+    careers_url: https://apply.workable.com/mina-foundation
+    provider: workable
+    enabled: true
+    notes: 'web3: Mina L1 foundation, USA; 0 open jobs at verification 2026-10-21'
+  - name: DFINITY
+    careers_url: https://job-boards.greenhouse.io/dfinity
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: Internet Computer foundation, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: Moonsong Labs
+    careers_url: https://jobs.lever.co/moonsong-labs
+    provider: lever
+    enabled: true
+    notes: 'web3: Moonbeam and Polkadot dev studio, USA; 0 open jobs at verification 2026-10-21'
+  - name: Injective
+    careers_url: https://jobs.ashbyhq.com/injective
+    provider: ashby
+    enabled: true
+    notes: 'web3: DeFi L1, USA; 11 open jobs at verification 2026-10-21'
+  - name: Ethena Labs
+    careers_url: https://jobs.lever.co/ethena
+    provider: lever
+    enabled: true
+    notes: 'web3: synthetic dollar protocol, Portugal; 4 open jobs at verification 2026-10-21'
+  - name: Centrifuge
+    careers_url: https://jobs.lever.co/centrifuge
+    provider: lever
+    enabled: true
+    notes: 'web3: RWA tokenization protocol, Germany; 1 open jobs at verification 2026-10-21'
+  - name: Ondo Finance
+    careers_url: https://job-boards.greenhouse.io/ondofinance
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: tokenized RWA protocol, USA; 20 open jobs at verification 2026-10-21'
+  - name: Securitize
+    careers_url: https://job-boards.greenhouse.io/securitize
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: tokenized securities platform, USA; 4 open jobs at verification 2026-10-21'
+  - name: Superstate
+    careers_url: https://jobs.lever.co/superstate
+    provider: lever
+    enabled: true
+    notes: 'web3: tokenized funds, USA; 3 open jobs at verification 2026-10-21'
+  - name: Turnkey
+    careers_url: https://jobs.ashbyhq.com/turnkey
+    provider: ashby
+    enabled: true
+    notes: 'web3: wallet infrastructure, USA; 13 open jobs at verification 2026-10-21'
+  - name: Zircuit
+    careers_url: https://jobs.ashbyhq.com/zircuit
+    provider: ashby
+    enabled: true
+    notes: 'web3: Ethereum L2, Singapore; 0 open jobs at verification 2026-10-21'
+  - name: Strike
+    careers_url: https://job-boards.greenhouse.io/strike
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: Bitcoin payments app, USA; 6 open jobs at verification 2026-10-21'
+  - name: River
+    careers_url: https://jobs.ashbyhq.com/river
+    provider: ashby
+    enabled: true
+    notes: 'web3: Bitcoin brokerage, USA; 6 open jobs at verification 2026-10-21'
+  - name: Chronicle Labs
+    careers_url: https://jobs.ashbyhq.com/chronicle-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: oracle protocol, Cayman Islands; 1 open jobs at verification 2026-10-21'
+  - name: OpenZeppelin
+    careers_url: https://job-boards.greenhouse.io/openzeppelin
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: smart-contract security, USA; 6 open jobs at verification 2026-10-21'
+  - name: Immunefi
+    careers_url: https://job-boards.greenhouse.io/immunefi
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: web3 bug bounty platform, Singapore; 1 open jobs at verification 2026-10-21'
+  - name: Quantstamp
+    careers_url: https://jobs.ashbyhq.com/quantstamp
+    provider: ashby
+    enabled: true
+    notes: 'web3: smart-contract auditing, USA; 0 open jobs at verification 2026-10-21'
+  - name: Tenderly
+    careers_url: https://jobs.ashbyhq.com/tenderly
+    provider: ashby
+    enabled: true
+    notes: 'web3: EVM developer platform, Serbia; 2 open jobs at verification 2026-10-21'
+  - name: Goldsky
+    careers_url: https://jobs.ashbyhq.com/goldsky
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain data indexing, USA; 0 open jobs at verification 2026-10-21'
+  - name: Luno
+    careers_url: https://job-boards.greenhouse.io/luno
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto exchange, UK; 2 open jobs at verification 2026-10-21'
+  - name: Polymarket
+    careers_url: https://jobs.ashbyhq.com/polymarket
+    provider: ashby
+    enabled: true
+    notes: 'web3: onchain prediction market, USA; 50 open jobs at verification 2026-10-21'
+  - name: Logos (IFT / Status)
+    careers_url: https://job-boards.greenhouse.io/logos
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: Institute of Free Technology ecosystem, Switzerland; 4 open jobs at verification 2026-10-21'
+  - name: Gensyn
+    careers_url: https://job-boards.greenhouse.io/gensyn
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: decentralized ML compute protocol, UK; 2 open jobs at verification 2026-10-21'
+  - name: Ritual
+    careers_url: https://job-boards.greenhouse.io/ritual
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: AI x crypto L1, USA; 15 open jobs at verification 2026-10-21'
+  - name: PIP Labs (Story)
+    careers_url: https://jobs.lever.co/piplabs
+    provider: lever
+    enabled: true
+    notes: 'web3: Story Protocol IP L1, USA; 1 open jobs at verification 2026-10-21'
+  - name: Blockworks
+    careers_url: https://jobs.ashbyhq.com/blockworks
+    provider: ashby
+    enabled: true
+    notes: 'web3: crypto media and data, USA; 5 open jobs at verification 2026-10-21'
+  - name: The Block
+    careers_url: https://jobs.lever.co/theblockcrypto
+    provider: lever
+    enabled: true
+    notes: 'web3: crypto media, USA; 0 open jobs at verification 2026-10-21'
+  - name: CoinGecko
+    careers_url: https://jobs.lever.co/coingecko
+    provider: lever
+    enabled: true
+    notes: 'web3: crypto data aggregator, Malaysia; 1 open jobs at verification 2026-10-21'
+  - name: CoinMarketCap
+    careers_url: https://jobs.lever.co/coinmarketcap
+    provider: lever
+    enabled: true
+    notes: 'web3: crypto data aggregator, USA; 7 open jobs at verification 2026-10-21'
+  - name: Paradigm
+    careers_url: https://jobs.ashbyhq.com/paradigm
+    provider: ashby
+    enabled: true
+    notes: 'web3: crypto and frontier-tech investment firm, USA; 8 open jobs at verification 2026-10-21'
+  - name: Elliptic
+    careers_url: https://jobs.ashbyhq.com/elliptic
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain analytics and compliance, UK; 29 open jobs at verification 2026-10-21'
+  - name: TRM Labs
+    careers_url: https://jobs.ashbyhq.com/trm-labs
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain intelligence, USA; 110 open jobs at verification 2026-10-21'
+  - name: Gnosis
+    careers_url: https://gnosis.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'web3: Gnosis Chain, Safe and Gnosis Pay ecosystem, Gibraltar; 2 open jobs at verification 2026-10-21'
+  - name: Safe Labs
+    careers_url: https://safe-labs.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'web3: Safe smart-account wallet, Germany; 0 open jobs at verification 2026-10-21'
+  - name: Tether
+    careers_url: https://tether.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'web3: USDT stablecoin issuer, El Salvador; 239 open jobs at verification 2026-10-21'
+  - name: Transak
+    careers_url: https://transak-inc.breezy.hr
+    provider: breezy
+    enabled: true
+    notes: 'web3: crypto on-ramp, UK; 7 open jobs at verification 2026-10-21'
+  - name: Chainalysis
+    careers_url: https://jobs.ashbyhq.com/chainalysis-careers
+    provider: ashby
+    enabled: true
+    notes: 'web3: blockchain analytics, USA; 49 open jobs at verification 2026-10-21'
+  - name: Kiln
+    careers_url: https://jobs.ashbyhq.com/kiln.fi
+    provider: ashby
+    enabled: true
+    notes: 'web3: staking infrastructure, France; 0 open jobs at verification 2026-10-21'
+  - name: Tools for Humanity (World)
+    careers_url: https://jobs.ashbyhq.com/tools%20for%20humanity
+    provider: ashby
+    enabled: true
+    notes: 'web3: World network developer, USA/Germany; 11 open jobs at verification 2026-10-21'
+  - name: Galaxy Digital
+    careers_url: https://job-boards.greenhouse.io/galaxydigitalservices
+    provider: greenhouse
+    enabled: true
+    notes: 'web3: crypto financial services, USA; 42 open jobs at verification 2026-10-21'
+  - name: Flashbots
+    careers_url: https://jobs.ashbyhq.com/flashbots.net
+    provider: ashby
+    enabled: true
+    notes: 'web3: MEV research and infrastructure, USA; 0 open jobs at verification 2026-10-21'
+  - name: Cardano Foundation
+    careers_url: https://cardano-foundation.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'web3: Cardano L1 foundation, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: CoinShares
+    careers_url: https://coinshares.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'web3: digital asset manager, France/Jersey; 2 open jobs at verification 2026-10-21'
+  - name: IOTA Foundation
+    careers_url: https://iota-foundation.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'web3: IOTA L1 foundation, Germany; 0 open jobs at verification 2026-10-21'
+  - name: Sui Foundation
+    careers_url: https://jobs.ashbyhq.com/sui%20foundation
+    provider: ashby
+    enabled: true
+    notes: 'web3: Sui L1 foundation, USA; 1 open jobs at verification 2026-10-21'
+  - name: Wikimedia Foundation
+    careers_url: https://job-boards.greenhouse.io/wikimedia
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: Wikipedia nonprofit, remote-first, US; 14 open jobs at verification 2026-10-21'
+  - name: Mozilla
+    careers_url: https://job-boards.greenhouse.io/mozilla
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: Mozilla Foundation''s Firefox corp, remote EU hiring, US; 103 open jobs at verification 2026-10-21'
+  - name: Khan Academy
+    careers_url: https://job-boards.greenhouse.io/khanacademy
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: free online education nonprofit, US; 6 open jobs at verification 2026-10-21'
+  - name: Code for America
+    careers_url: https://job-boards.greenhouse.io/codeforamerica
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: civic tech nonprofit, US; 8 open jobs at verification 2026-10-21'
+  - name: GiveDirectly
+    careers_url: https://job-boards.greenhouse.io/givedirectly
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: cash-transfer charity, US/Kenya; 32 open jobs at verification 2026-10-21'
+  - name: Human Rights Watch
+    careers_url: https://job-boards.greenhouse.io/humanrightswatch
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: human rights advocacy, US (EU offices); 7 open jobs at verification 2026-10-21'
+  - name: Teach For All
+    careers_url: https://job-boards.greenhouse.io/teachforall
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: global education network, remote global, US/UK; 13 open jobs at verification 2026-10-21'
+  - name: GiveWell
+    careers_url: https://job-boards.greenhouse.io/givewell
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: charity evaluator, US remote; 16 open jobs at verification 2026-10-21'
+  - name: Code.org
+    careers_url: https://job-boards.greenhouse.io/codeorg
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: CS education nonprofit (board name CodeAI), US; 4 open jobs at verification 2026-10-21'
+  - name: ONE Campaign
+    careers_url: https://job-boards.greenhouse.io/onecampaign
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: anti-poverty advocacy, US/EU offices; 1 open jobs at verification 2026-10-21'
+  - name: Ekō
+    careers_url: https://job-boards.greenhouse.io/sumofus
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: corporate-accountability campaigning (ex-SumOfUs), remote global; 1 open jobs at verification 2026-10-21'
+  - name: Mercy For Animals
+    careers_url: https://job-boards.greenhouse.io/mercyforanimals
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: animal advocacy, US remote; 2 open jobs at verification 2026-10-21'
+  - name: Thorn
+    careers_url: https://job-boards.greenhouse.io/thorn
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: child-safety tech nonprofit, US; 3 open jobs at verification 2026-10-21'
+  - name: DonorsChoose
+    careers_url: https://job-boards.greenhouse.io/donorschoose
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: education crowdfunding nonprofit, US; 5 open jobs at verification 2026-10-21'
+  - name: One Acre Fund
+    careers_url: https://job-boards.greenhouse.io/oneacrefund
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: smallholder-farmer NGO, Kenya/US; 60 open jobs at verification 2026-10-21'
+  - name: Educate!
+    careers_url: https://job-boards.greenhouse.io/educate
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: youth education NGO, Uganda/US; 8 open jobs at verification 2026-10-21'
+  - name: Omidyar Network
+    careers_url: https://job-boards.greenhouse.io/omidyarnetwork
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: philanthropic investment firm, US; 2 open jobs at verification 2026-10-21'
+  - name: B Lab
+    careers_url: https://job-boards.greenhouse.io/blab
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: B Corp movement nonprofit, Amsterdam/London; 10 open jobs at verification 2026-10-21'
+  - name: Global Fishing Watch
+    careers_url: https://job-boards.greenhouse.io/globalfishingwatch
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: ocean transparency nonprofit, US (Spain/UK staff); 2 open jobs at verification 2026-10-21'
+  - name: GOAL
+    careers_url: https://job-boards.greenhouse.io/goal
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: humanitarian NGO, Ireland; 7 open jobs at verification 2026-10-21'
+  - name: Mercy Ships
+    careers_url: https://job-boards.greenhouse.io/mercyships
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: hospital-ship charity, US; 182 open jobs at verification 2026-10-21'
+  - name: ACLU
+    careers_url: https://job-boards.greenhouse.io/aclu
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: civil liberties advocacy, US; 15 open jobs at verification 2026-10-21'
+  - name: ProPublica
+    careers_url: https://job-boards.greenhouse.io/propublica
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: nonprofit investigative newsroom, US; 4 open jobs at verification 2026-10-21'
+  - name: Greenpeace USA
+    careers_url: https://job-boards.greenhouse.io/greenpeace
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: environmental campaigning, US; 0 open jobs at verification 2026-10-21'
+  - name: World Resources Institute
+    careers_url: https://job-boards.greenhouse.io/wri
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: environment research institute, US (Europe offices); 0 open jobs at verification 2026-10-21'
+  - name: Instiglio
+    careers_url: https://job-boards.greenhouse.io/instiglio
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: results-based-financing nonprofit, Colombia/US; 1 open jobs at verification 2026-10-21'
+  - name: Energy Innovation
+    careers_url: https://job-boards.greenhouse.io/energyinnovation
+    provider: greenhouse
+    enabled: true
+    notes: 'ngo: climate policy think tank, US; 3 open jobs at verification 2026-10-21'
+  - name: 'charity: water'
+    careers_url: https://jobs.lever.co/charitywater
+    provider: lever
+    enabled: true
+    notes: 'ngo: clean-water charity, US; 4 open jobs at verification 2026-10-21'
+  - name: Ashoka
+    careers_url: https://jobs.lever.co/ashoka
+    provider: lever
+    enabled: true
+    notes: 'ngo: social-entrepreneur network, US (EU chapters); 9 open jobs at verification 2026-10-21'
+  - name: Girls Who Code
+    careers_url: https://jobs.lever.co/girlswhocode
+    provider: lever
+    enabled: true
+    notes: 'ngo: tech gender-equity nonprofit, US; 2 open jobs at verification 2026-10-21'
+  - name: Sierra Club
+    careers_url: https://jobs.lever.co/sierraclub
+    provider: lever
+    enabled: true
+    notes: 'ngo: environmental advocacy, US; 6 open jobs at verification 2026-10-21'
+  - name: METR
+    careers_url: https://jobs.lever.co/metr
+    provider: lever
+    enabled: true
+    notes: 'ngo: AI evaluation research nonprofit, US; 9 open jobs at verification 2026-10-21'
+  - name: Coefficient Giving (ex-Open Philanthropy)
+    careers_url: https://jobs.ashbyhq.com/coefficientgiving
+    provider: ashby
+    enabled: true
+    notes: 'ngo: philanthropic funder, US remote global; 1 open jobs at verification 2026-10-21'
+  - name: Centre for Effective Altruism
+    careers_url: https://jobs.ashbyhq.com/centreforeffectivealtruism
+    provider: ashby
+    enabled: true
+    notes: 'ngo: effective altruism nonprofit, UK remote global; 9 open jobs at verification 2026-10-21'
+  - name: Tides
+    careers_url: https://jobs.ashbyhq.com/tides
+    provider: ashby
+    enabled: true
+    notes: 'ngo: philanthropic partner/fiscal sponsor, US; 3 open jobs at verification 2026-10-21'
+  - name: IDinsight
+    careers_url: https://jobs.ashbyhq.com/idinsight
+    provider: ashby
+    enabled: true
+    notes: 'ngo: development research nonprofit, global; 18 open jobs at verification 2026-10-21'
+  - name: BlueDot Impact
+    careers_url: https://jobs.ashbyhq.com/bluedot
+    provider: ashby
+    enabled: true
+    notes: 'ngo: AI safety education nonprofit, UK; 2 open jobs at verification 2026-10-21'
+  - name: MSF International
+    careers_url: https://msf.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'ngo: medical humanitarian, Switzerland; 4 open jobs at verification 2026-10-21'
+  - name: Transport & Environment
+    careers_url: https://transportenvironment.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'ngo: clean transport advocacy, Belgium; 6 open jobs at verification 2026-10-21'
+  - name: International Crisis Group
+    careers_url: https://crisisgroup.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'ngo: conflict prevention think tank, Belgium; 3 open jobs at verification 2026-10-21'
+  - name: Greenpeace International
+    careers_url: https://greenpeaceinternational.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'ngo: environmental campaigning, Netherlands; 0 open jobs at verification 2026-10-21'
+  - name: RIPE NCC
+    careers_url: https://ripencc.recruitee.com
+    provider: recruitee
+    enabled: true
+    notes: 'ngo: nonprofit internet registry, Netherlands; 1 open jobs at verification 2026-10-21'
+  - name: MSF Denmark
+    careers_url: https://msf.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: medical humanitarian (Læger uden Grænser), Denmark; 4 open jobs at verification 2026-10-21'
+  - name: MSF Canada
+    careers_url: https://doctorswithoutborders.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: medical humanitarian, Canada; 46 open jobs at verification 2026-10-21'
+  - name: Founders Pledge
+    careers_url: https://founderspledge.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: effective philanthropy nonprofit, UK; 2 open jobs at verification 2026-10-21'
+  - name: CDP
+    careers_url: https://cdpworldwide.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: environmental disclosure charity, UK; 11 open jobs at verification 2026-10-21'
+  - name: Greenpeace Nordic
+    careers_url: https://greenpeacenordic.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: environmental campaigning, Nordics; 4 open jobs at verification 2026-10-21'
+  - name: WWF Sweden
+    careers_url: https://wwf.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: conservation NGO, Sweden; 1 open jobs at verification 2026-10-21'
+  - name: Fundación Vicente Ferrer
+    careers_url: https://fundacionvicenteferrer.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: development NGO, Spain; 2 open jobs at verification 2026-10-21'
+  - name: WaterAid Sweden
+    careers_url: https://wateraid.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: water & sanitation NGO, Sweden; 3 open jobs at verification 2026-10-21'
+  - name: Terre des hommes
+    careers_url: https://terredeshommes.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: child-relief NGO, Switzerland; 4 open jobs at verification 2026-10-21'
+  - name: Greenpeace France
+    careers_url: https://greenpeacefrance.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: environmental campaigning, France; 0 open jobs at verification 2026-10-21'
+  - name: Full Fact
+    careers_url: https://fullfact.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: fact-checking charity, UK; 0 open jobs at verification 2026-10-21'
+  - name: Gold Standard
+    careers_url: https://goldstandard.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: climate certification foundation, Switzerland; 0 open jobs at verification 2026-10-21'
+  - name: Rädda Barnen
+    careers_url: https://raddabarnen.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: Save the Children Sweden, Sweden; 3 open jobs at verification 2026-10-21'
+  - name: UNICEF Sverige
+    careers_url: https://unicefsverige.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: children''s rights (UNICEF national committee), Sweden; 3 open jobs at verification 2026-10-21'
+  - name: Naturskyddsföreningen
+    careers_url: https://naturskyddsforeningen.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: nature conservation society, Sweden; 9 open jobs at verification 2026-10-21'
+  - name: Amnesty Sverige
+    careers_url: https://amnestysverige.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: human rights advocacy, Sweden; 0 open jobs at verification 2026-10-21'
+  - name: Cancerfonden
+    careers_url: https://cancerfonden.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: cancer research charity, Sweden; 1 open jobs at verification 2026-10-21'
+  - name: Green Alliance
+    careers_url: https://greenalliance.teamtailor.com/jobs
+    provider: teamtailor
+    enabled: true
+    notes: 'ngo: environmental think tank, UK; 0 open jobs at verification 2026-10-21'
+  - name: The Ocean Cleanup
+    careers_url: https://the-ocean-cleanup.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: ocean plastic nonprofit, Netherlands; 9 open jobs at verification 2026-10-21'
+  - name: Plan International España
+    careers_url: https://plan-international.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: children''s rights NGO, Spain; 1 open jobs at verification 2026-10-21'
+  - name: ECFR
+    careers_url: https://ecfr.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: European foreign-policy think tank, Germany/pan-EU; 1 open jobs at verification 2026-10-21'
+  - name: IPPF
+    careers_url: https://ippf.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: sexual & reproductive health federation, UK; 2 open jobs at verification 2026-10-21'
+  - name: WWF Deutschland
+    careers_url: https://wwf-deutschland.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: conservation NGO, Germany; 3 open jobs at verification 2026-10-21'
+  - name: Finanzwende
+    careers_url: https://finanzwende.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: finance-reform advocacy, Germany; 3 open jobs at verification 2026-10-21'
+  - name: Kindernothilfe
+    careers_url: https://kindernothilfe.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: child-aid NGO, Germany; 2 open jobs at verification 2026-10-21'
+  - name: Kiron Education
+    careers_url: https://kiron.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: refugee digital education nonprofit, Germany; 0 open jobs at verification 2026-10-21'
+  - name: BUND
+    careers_url: https://bund.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: Friends of the Earth Germany, Germany; 3 open jobs at verification 2026-10-21'
+  - name: JOBLINGE
+    careers_url: https://joblinge.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: youth employment nonprofit, Germany; 21 open jobs at verification 2026-10-21'
+  - name: HateAid
+    careers_url: https://hateaid.jobs.personio.de
+    provider: personio
+    enabled: true
+    notes: 'ngo: online-hate victim support & digital rights, Germany; 3 open jobs at verification 2026-10-21'
+  - name: Relief International
+    careers_url: https://jobs.smartrecruiters.com/ReliefInternational
+    provider: smartrecruiters
+    enabled: true
+    notes: 'ngo: humanitarian NGO, US; 6 open jobs at verification 2026-10-21'
 job_boards:
   - name: EU Remote Jobs
     careers_url: https://euremotejobs.com/?feed=job_feed
