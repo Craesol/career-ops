@@ -5,7 +5,8 @@
  *   2. daily-ats-scan.mjs (--no-email flag; writes to scan-history.tsv + pipeline.md)
  *   3. Optional L3 WebSearch (requires Claude CLI headless — skipped in cron by default)
  *
- * At the end, reads today's `added` entries from scan-history.tsv, re-hits each ATS
+ * At the end, reads the `added` entries since the last digest (data/digest-state.json)
+ * from scan-history.tsv, re-hits each ATS
  * for publish-date + location metadata, and sends ONE email with:
  *   - Executive summary (LinkedIn alerts count, L2 hits count, L3 hits count if run)
  *   - Full table with Age + Company + Role + Location + Source + Link
@@ -22,7 +23,7 @@
  * Windows Task Scheduler cron: 11:31 AM daily
  */
 import 'dotenv/config';
-import { readFileSync, appendFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, appendFileSync, existsSync } from 'fs';
 import { spawnSync } from 'child_process';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
@@ -44,6 +45,7 @@ if (!RESEND_API_KEY || !NOTIFY_EMAIL) {
 
 const today = localToday();
 const NOW_TS = Date.now();
+const DIGEST_STATE_PATH = resolve(ROOT, 'data/digest-state.json');
 
 console.log('=== career-ops daily consolidated · ' + today + ' ===\n');
 
@@ -433,8 +435,16 @@ function digestSubject(day, total, groups) {
 }
 
 console.log('\n[step 4] Building consolidated email');
-const todayAdded = todayAddedRows();
-console.log('  Total added today: ' + todayAdded.length + ' (LinkedIn=' + linkedinAdded + ', L2=' + l2Added + ', L3=' + l3Added + ')');
+// Since-last-send window (2026-11-01): the digest used to list only rows dated
+// `today`, but it runs at 06:31 and the hourly scans add most finds later in
+// the day — those carried that day's date, so the next morning's digest
+// skipped them and they never reached any email. Now the digest lists every
+// `added` row dated on or after the previous send's day that it has not sent
+// yet; data/digest-state.json remembers the day and the URLs already mailed.
+const digestState = readDigestState();
+const todayAdded = pendingDigestRows(digestState);
+console.log('  Total added today: ' + todayAdded.length + ' (LinkedIn=' + linkedinAdded + ', L2=' + l2Added + ', L3=' + l3Added + ')' +
+  ' · digest window since ' + digestState.lastSent);
 
 // Hard-gate verdicts for the rows the email lists (latest verdict per URL wins).
 const gateVerdicts = readGateVerdicts();
@@ -485,6 +495,9 @@ if (!emailSent) {
   console.log('  ID: ' + (respBody.id || '(no id)'));
   console.log('  Subject: ' + subject);
 }
+// Only reached after a successful send (a failed Resend fallback exits above),
+// so a lost email leaves the window open and the next run re-sends it.
+writeDigestState(todayAdded);
 
 
 // ==================== helpers =========================================
@@ -503,7 +516,34 @@ function countAddedToday() {
     return c.split('\n').filter(isAddedToday).length;
   } catch { return 0; }
 }
-function todayAddedRows() {
+function readDigestState() {
+  // No state yet (first run): fall back to yesterday, the widest window the
+  // old today-only digest could have missed in one night.
+  const fallback = { lastSent: localToday(new Date(NOW_TS - 86400000)), sent: [] };
+  try {
+    const s = JSON.parse(readFileSync(DIGEST_STATE_PATH, 'utf-8'));
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s.lastSent || '')) return fallback;
+    return { lastSent: s.lastSent, sent: Array.isArray(s.sent) ? s.sent : [] };
+  } catch { return fallback; }
+}
+function writeDigestState(sentRows) {
+  // The next window starts at `today`, so only URLs dated today can come up
+  // again; older ones are dropped to keep the file small.
+  const prev = readDigestState();
+  const keep = new Set(prev.lastSent === today ? prev.sent : []);
+  for (const r of sentRows) if (r.date === today) keep.add(r.url);
+  writeFileSync(DIGEST_STATE_PATH, JSON.stringify({ lastSent: today, sent: [...keep] }, null, 2) + '\n');
+}
+function pendingDigestRows({ lastSent, sent }) {
+  const already = new Set(sent);
+  const seen = new Set();
+  return todayAddedRows(lastSent).filter((r) => {
+    if (already.has(r.url) || seen.has(r.url)) return false;
+    seen.add(r.url);
+    return true;
+  });
+}
+function todayAddedRows(since = today) {
   try {
     const c = readFileSync(resolve(ROOT, 'data/scan-history.tsv'), 'utf-8');
     const lines = c.split('\n');
@@ -517,7 +557,11 @@ function todayAddedRows() {
       if (cols[0] && /^(skipped|skipped_expired|expired)$/.test((cols[5] || '').trim())) dismissed.add(cols[0]);
     }
     return lines
-      .filter(isAddedToday)
+      .filter(l => {
+        const cols = l.split('\t');
+        return /^\d{4}-\d{2}-\d{2}$/.test(cols[1] || '') && cols[1] >= since && cols[1] <= today &&
+          (cols[5] || '').trim() === 'added';
+      })
       .filter(l => !dismissed.has(l.split('\t')[0]))
       .map(l => {
         // Location is the 7th column (writers append it past the 6-column
@@ -640,7 +684,7 @@ function buildEmailHtml(ctx) {
   let body = '<h2 style="margin-bottom:6px;">career-ops · daily consolidated · ' + today + '</h2>' +
     '<p style="color:#666;margin-top:0;">One consolidated brief. Age filter: ≤ ' + MAX_AGE_DAYS + ' days (postings older than that skipped by scanner where publish date is available).</p>' +
     '<div style="background:#f9fafb;border-left:3px solid hsl(187,74%,32%);padding:12px 16px;margin:16px 0;">' +
-    '<strong>Today added: ' + todayAdded.length + ' new roles</strong><br>' +
+    '<strong>New since last digest: ' + todayAdded.length + ' new roles</strong><br>' +
     sourceGroups.map((g) => '&#8226; ' + g.heading + ': ' + g.rows.length + '<br>').join('') +
     gateSummary(todayAdded) +
     '</div>' +
@@ -651,7 +695,7 @@ function buildEmailHtml(ctx) {
   }
 
   if (todayAdded.length === 0) {
-    body += '<p style="color:#666;">No new roles today. Filters converged, or public feeds are quiet. Try tightening MAX_AGE_DAYS or check portals.yml for new search queries.</p>';
+    body += '<p style="color:#666;">No new roles since the last digest.Filters converged, or public feeds are quiet. Try tightening MAX_AGE_DAYS or check portals.yml for new search queries.</p>';
   }
 
   if (trackerRecent.length > 0) {
