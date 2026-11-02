@@ -1482,8 +1482,8 @@ tracked_companies:
   - name: Immunefi
     careers_url: https://job-boards.greenhouse.io/immunefi
     provider: greenhouse
-    enabled: true
-    notes: 'web3: web3 bug bounty platform, Singapore; 1 open jobs at verification 2026-10-21'
+    enabled: false
+    notes: 'web3: web3 bug bounty platform, Singapore; 1 open jobs at verification 2026-10-21. Disabled 2026-11-02: immunefi.com/careers still redirects here but the board answers 500 and boards-api 404 (board closed at source) — re-check, re-enable when it answers'
   - name: Quantstamp
     careers_url: https://jobs.ashbyhq.com/quantstamp
     provider: ashby
@@ -1993,8 +1993,8 @@ job_boards:
   - name: EU Remote Jobs
     careers_url: https://euremotejobs.com/?feed=job_feed
     provider: euremotejobs
-    enabled: true
-    notes: WP Job Manager RSS — Europe-focused remote board; real pubDates; company/location often empty in feed
+    enabled: false
+    notes: WP Job Manager RSS — Europe-focused remote board; real pubDates; company/location often empty in feed. Disabled 2026-11-02 — the site now answers 401 to the feed (access closed by the site, not a scanner bug); re-enable only if it opens again
   - name: RemoteOK
     careers_url: https://remoteok.com/api
     provider: remoteok
