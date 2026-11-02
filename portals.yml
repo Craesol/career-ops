@@ -233,7 +233,15 @@ title_filter:
     - Electrical
     - Mechanical
     - Engineer
-    - Developer
+    # 2026-11-02: a bare "Developer" here vetoed the "Community Developer"
+    # positive (doctor warning), so every Ubisoft/Massive community role still
+    # died at the filter. Negatives only matter when a positive also matched,
+    # and on 5,753 scanned titles the only such "developer" titles were the
+    # dev-community/DevRel family, so these four keep exactly those out.
+    - Developer Community
+    - Developer Ecosystem
+    - Developer Communications
+    - Developers
     - Software
     - Data Scientist
     - Designer
