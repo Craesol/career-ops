@@ -428,6 +428,13 @@ function ctKey(company, title) {
   return ((company || '') + '|' + (title || '')).toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+// Location goes in the 7th scan-history column, where the canonical writer
+// (scan.mjs formatScanHistoryRow) and every reader expect it. These rows used
+// to stop at the status column (2026-11-02): the filter judged the location,
+// but the history never kept it, so the digest's Location cell was blank for
+// every LinkedIn find and a skipped_location row could not say why.
+const histLoc = (loc) => String(loc || '').replace(/[\t\r\n]+/g, ' ').trim();
+
 // Phase 1: ATS APIs (16 known companies)
 for (const t of TARGETS) {
   const jobs = await fetchAts(t);
@@ -450,7 +457,7 @@ for (const t of TARGETS) {
         status = 'added';
       }
     }
-    appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,t.company,status].join('\t')+'\n');
+    appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,t.company,status,histLoc(j.location)].join('\t')+'\n');
     if(status==='added'){
       newRoles.push({url:j.url,title:j.title,company:t.company,portal});
       appendFileSync('./data/pipeline.md','- [ ] '+j.url+' | '+t.company+' | '+j.title+'\n');
@@ -481,7 +488,7 @@ for (const f of FEEDS) {
         status = 'added';
       }
     }
-    appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,company,status].join('\t')+'\n');
+    appendFileSync('./data/scan-history.tsv',[j.url,today,portal,j.title,company,status,histLoc(j.location)].join('\t')+'\n');
     if(status==='added'){
       newRoles.push({url:j.url,title:j.title,company,portal});
       appendFileSync('./data/pipeline.md','- [ ] '+j.url+' | '+company+' | '+j.title+'\n');
