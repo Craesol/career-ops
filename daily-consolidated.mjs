@@ -413,7 +413,7 @@ console.log(((gateResult.stdout || '').trim() || ('exit ' + gateResult.status)).
 const ATS_PROVIDER_RE = /^(greenhouse|ashby|lever|workday|successfactors|smartrecruiters|teamtailor|recruitee|personio|workable|icims|bamboohr|jobvite|breezy|pinpoint|dayforce)-/;
 const SOURCE_GROUPS = [
   { key: 'linkedin', short: 'LinkedIn', heading: 'LinkedIn (alert emails + session)',
-    test: (p) => /^\[(ALERT|linkedin-alert):/i.test(p) || p === 'linkedin-session' },
+    test: (p) => /^\[(ALERT|linkedin-alert):/i.test(p) || p === 'linkedin-session' || p === 'linkedin-claude' },
   { key: 'ats', short: 'ATS', heading: 'Direct ATS (APIs + full sweep)',
     test: (p) => p.startsWith('[API:') || ATS_PROVIDER_RE.test(p) || /-full$/.test(p) },
   { key: 'boards', short: 'boards', heading: 'Job boards + public feeds',
