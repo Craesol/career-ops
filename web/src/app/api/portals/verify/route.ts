@@ -5,7 +5,10 @@ import { careerOpsRoot, rootScript } from "@/lib/career-ops";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 120;
+// 2026-11-02: 120/110 s was too tight — with 366 enabled portals
+// verify-portals.mjs takes ~104 s, and one run hit the 110 s kill and came back
+// as a partial list. 300/280 s leaves room for the list to keep growing.
+export const maxDuration = 300;
 
 // Orchestrates the core's verify-portals.mjs (#1016) — the SAME ATS-slug
 // validator the CLI uses. Catches the silent 404s that quietly drop a company
@@ -32,7 +35,7 @@ export async function GET() {
     execFile(
       "node",
       [verifyPortals],
-      { cwd: root, timeout: 110_000, maxBuffer: 4 * 1024 * 1024 },
+      { cwd: root, timeout: 280_000, maxBuffer: 4 * 1024 * 1024 },
       (_e, out, err) => resolve((out || "") + (err || "")),
     );
   });
