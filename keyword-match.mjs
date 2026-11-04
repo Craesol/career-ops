@@ -54,7 +54,28 @@ export function normalizeText(s) {
 }
 
 /**
- * Count boundary-delimited occurrences of `term` in `text`, case-insensitively.
+ * Inside a multi-word term, a space and a dash are the same separator: a JD
+ * writes `rapid response` or `thought leadership` where the CV writes
+ * `rapid-response` and `thought-leadership`, and vice versa for the compounds
+ * both sides hyphenate (`cross-functional`, `short-form`, `fast-paced`,
+ * `remote-first`, `data-driven`, `self-directed` — the six most frequent
+ * hyphenated keywords in reports/). Matching the literal term reported every
+ * such pair as missing, which is the opposite of what an ATS does: its
+ * tokenizer splits on both. The class folds the ASCII hyphen together with the
+ * Unicode dashes U+2010-U+2015 and the minus sign U+2212, since a posting
+ * pasted from a styled page carries en and em dashes and `cv.md` holds an em
+ * dash of its own.
+ *
+ * Folding is deliberately confined to separators ALREADY in the term, so it
+ * only ever relaxes how its own gaps are spelled: `thought leadership` reaches
+ * `thought-leadership` and nothing else, never `thought` alone.
+ */
+const SEPARATORS_CLASS = '[\\s\\u2010-\\u2015\\u2212-]+';
+const SEPARATORS_RE = new RegExp(SEPARATORS_CLASS, 'g');
+
+/**
+ * Count boundary-delimited occurrences of `term` in `text`, case-insensitively,
+ * treating spaces and dashes inside the term as interchangeable separators.
  * A boundary means the term is not flanked by an alphanumeric character, so
  * "java" does not match inside "javascript" yet "c++", "ci/cd" and "node.js"
  * still match around their symbols.
@@ -66,9 +87,13 @@ export function normalizeText(s) {
 export function countOccurrences(term, text) {
   const t = normalizeText(term);
   if (!t) return 0;
+  // A term carrying no letter or digit cannot identify a skill, and folding its
+  // separators below would turn it into a class that matches bare whitespace.
+  if (!/[a-z0-9]/.test(t)) return 0;
   const hay = normalizeText(text);
   const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const re = new RegExp(`(?<![a-z0-9])${escaped}(?![a-z0-9])`, 'g');
+  const flexible = escaped.replace(SEPARATORS_RE, SEPARATORS_CLASS);
+  const re = new RegExp(`(?<![a-z0-9])${flexible}(?![a-z0-9])`, 'g');
   const matches = hay.match(re);
   return matches ? matches.length : 0;
 }
@@ -239,10 +264,30 @@ function isKeywordsHeading(line) {
 }
 
 /**
+ * Separators an evaluation mode writes between keywords on one line. Only the
+ * two that reports on disk actually use: the comma this reader always split on,
+ * and the middot `·` that most modes in fact write. 49 of 79 keyword blocks in
+ * reports/ are middot-delimited, and splitting those on commas alone returned
+ * each whole line as ONE keyword, so coverage read as ~0% across three quarters
+ * of the corpus and the tool was silently useless on it.
+ *
+ * Deliberately NOT included: `/`, which occurs 25 times but always INSIDE a
+ * keyword (`X/Twitter`, `EN/ES/FR`, `stakeholder management / stakeholder
+ * engagement`), and `;`, `|` and `•`, which no report uses. A separator no mode
+ * writes cannot find a keyword to split — it can only cut a legitimate one in
+ * half, so this list stays evidence-driven rather than liberal.
+ */
+const KEYWORD_SEPARATORS = /[,·]/;
+
+/**
  * Pull keywords out of a report's keyword section, opened by any heading in
- * KEYWORDS_HEADINGS. Liberal: accepts bulleted, comma-separated, or
- * one-per-line entries; stops at the next level-2 heading; skips an
- * empty/placeholder parenthetical line. Returns [] if the block is absent.
+ * KEYWORDS_HEADINGS. Liberal: accepts bulleted, numbered, comma- or
+ * middot-separated, or one-per-line entries, and strips the inline-code ticks
+ * one report wraps each term in; stops at the next level-2 heading; skips an
+ * empty/placeholder parenthetical line and a thematic break (`---`), which 35
+ * reports write to close the block ahead of the next heading and which was
+ * previously collected as a keyword in its own right. Returns [] if the block
+ * is absent.
  *
  * @param {string} reportText - Full report markdown.
  * @returns {string[]} Extracted keywords in order.
@@ -257,10 +302,18 @@ export function extractKeywords(reportText) {
     if (!inBlock) continue;
     if (/^##\s+/.test(line)) break;
     if (!line) continue;
+    if (/^(?:-{3,}|\*{3,}|_{3,})$/.test(line)) continue;
     if (/^\(.*\)$/.test(line)) continue;
-    const body = line.replace(/^[-*]\s+/, '');
-    for (const part of body.split(',')) {
-      const kw = part.trim().replace(/\.+$/, '').trim();
+    const body = line
+      .replace(/^[-*+]\s+/, '')
+      .replace(/^\d+[.)]\s+/, '');
+    for (const part of body.split(KEYWORD_SEPARATORS)) {
+      const kw = part
+        .trim()
+        .replace(/^`+|`+$/g, '')
+        .trim()
+        .replace(/\.+$/, '')
+        .trim();
       if (kw) out.push(kw);
     }
   }
