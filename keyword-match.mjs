@@ -69,6 +69,14 @@ export function normalizeText(s) {
   return String(s).toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
+// Fork (9c9d6402): a hyphen and a space are the same separator to an ATS
+// tokenizer, so `cross-functional` must reach `cross functional` and back. The
+// class folds the ASCII hyphen with the Unicode dashes U+2010-U+2015 and the
+// minus sign U+2212 (pasted postings carry en/em dashes). Folding applies only
+// to separators ALREADY in the term, so it never widens a single-word match.
+const SEPARATORS_CLASS = '[\\s\\u2010-\\u2015\\u2212-]+';
+const SEPARATORS_RE = new RegExp(SEPARATORS_CLASS, 'g');
+
 /**
  * Count boundary-delimited occurrences of `term` in `text`, case-insensitively.
  * A boundary means the term is not flanked by an alphanumeric character, so
@@ -88,7 +96,8 @@ export function countOccurrences(term, text) {
   if (!/[\p{L}\p{N}]/u.test(t)) return 0;
   const hay = normalizeText(text);
   const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const re = new RegExp(`(?<![a-z0-9])${escaped}(?![a-z0-9])`, 'g');
+  const flexible = escaped.replace(SEPARATORS_RE, SEPARATORS_CLASS);
+  const re = new RegExp(`(?<![a-z0-9])${flexible}(?![a-z0-9])`, 'g');
   const matches = hay.match(re);
   return matches ? matches.length : 0;
 }

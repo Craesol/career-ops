@@ -244,6 +244,13 @@ Third, when it prunes a retired fixture state it leaves the empty folder
 behind, and `upgrade-fixture-state` / `seed-fixture.mjs --self-test` then
 count it as a fixture. Delete the folder.
 
+`keyword-match.mjs` now carries a fork delta on top of upstream (each part is
+marked `Fork (9c9d6402)` in the code): dash/space folding in
+`countOccurrences` and the no-letter-or-digit term guard. v1.40.0's rewrite
+already covered the fork's keyword-block delimiter fix but not these two, and
+`tests/keyword-match-dash-folding.test.mjs` holds them. The next update will
+freeze the file, so re-apply the delta onto upstream's version.
+
 Fork-local automation files are registered in `config/local-paths.txt`
 (gitignored — travels between machines in the personal zip); never register
 them by editing `USER_PATHS` in `update-system.mjs`, which every
