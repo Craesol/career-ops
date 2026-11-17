@@ -39,8 +39,8 @@
 import { readFileSync, writeFileSync, copyFileSync, appendFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import * as yaml from 'js-yaml';
 import { getCareerOpsRoot } from './path-resolver.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
 const USER_ROOT = getCareerOpsRoot();
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -55,7 +55,7 @@ const PIPELINE = resolve(USER_ROOT, 'data/pipeline.md');
 const HISTORY = resolve(USER_ROOT, 'data/scan-history.tsv');
 
 const { buildLocationFilter } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-const config = yaml.load(readFileSync(resolve(USER_ROOT, 'portals.yml'), 'utf8')) || {};
+const config = loadYaml(readFileSync(resolve(USER_ROOT, 'portals.yml'), 'utf8')) || {};
 const locationOk = buildLocationFilter(config.location_filter);
 const negatives = (config.title_filter?.negative || [])
   .filter(s => typeof s === 'string').map(s => s.toLowerCase().trim()).filter(Boolean);

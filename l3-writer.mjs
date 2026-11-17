@@ -19,12 +19,12 @@
 
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import * as yaml from 'js-yaml';
-import { appendToPipeline, appendToScanHistory, buildTitleFilter, buildLocationFilter } from './scan.mjs';
+import { appendToPipeline, appendToScanHistory, appendUnrecordedToScanHistory, buildTitleFilter, buildLocationFilter } from './scan.mjs';
 import { w3cStaleFilter } from './prune-stale-web3career.mjs';
 import { isStaleLinkedInJobUrl } from './lib/linkedin-stale.mjs';
 import { getCareerOpsRoot } from './path-resolver.mjs';
 import { localToday } from './lib/local-today.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
 
 const ROOT = getCareerOpsRoot();
 
@@ -45,7 +45,7 @@ async function main() {
   }
 
   try {
-    const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8'));
+    const cfg = loadYaml(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8'));
     const tf = buildTitleFilter(cfg.title_filter);
     const lf = buildLocationFilter(cfg.location_filter);
     const stale = w3cStaleFilter();
@@ -128,11 +128,11 @@ async function main() {
       }
     }
 
-    if (idStale.length) appendToScanHistory(idStale, today, 'skipped');
-    if (deadFinds.length) appendToScanHistory(deadFinds, today, 'skipped_expired');
+    if (idStale.length) await appendUnrecordedToScanHistory(idStale, today, 'skipped');
+    if (deadFinds.length) await appendUnrecordedToScanHistory(deadFinds, today, 'skipped_expired');
     if (liveFresh.length) {
-      appendToPipeline(liveFresh);
-      appendToScanHistory(liveFresh, today, 'added');
+      await appendToPipeline(liveFresh);
+      await appendToScanHistory(liveFresh, today, 'added');
     }
     process.stdout.write(JSON.stringify({
       added: liveFresh.length,

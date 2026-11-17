@@ -28,6 +28,21 @@ import { spawnSync } from 'child_process';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { localToday } from './lib/local-today.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
+
+// --help must stop here: without this guard the flag was ignored and the whole
+// nightly ran (IMAP pass, scans, pipeline writes, the daily email).
+if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+  console.log(`Usage: node daily-consolidated.mjs
+
+The nightly job (Task Scheduler "career-ops-daily-consolidated", owner machine
+only): LinkedIn alerts parser, daily-ats-scan.mjs --no-email, optional L3, the
+sweeps and prunes, then ONE digest email of the roles added since the last one.
+
+Env: RESEND_API_KEY / NOTIFY_EMAIL (required), MAX_AGE_DAYS (default 14),
+     INCLUDE_L3=true to also run the L3 web search.`);
+  process.exit(0);
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
@@ -127,8 +142,7 @@ if (INCLUDE_L3) {
   // scalars) — after one re-save only 2 of 20 queries reached L3.
   let queries = [];
   try {
-    const { default: yaml } = await import('js-yaml');
-    const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8'));
+    const cfg = loadYaml(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8'));
     for (const q of Array.isArray(cfg?.search_queries) ? cfg.search_queries : []) {
       if (q && typeof q.name === 'string' && typeof q.query === 'string' && q.enabled !== false) {
         queries.push({ name: q.name.trim(), query: q.query.replace(/\s+/g, ' ').trim() });
@@ -190,8 +204,7 @@ if (INCLUDE_L3) {
   // "community" happily persisted "Blockchain Solutions Architect".
   let titleOk = () => true;
   try {
-    const yaml = await import('js-yaml');
-    const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8')) || {};
+    const cfg = loadYaml(readFileSync(resolve(ROOT, 'portals.yml'), 'utf-8')) || {};
     const { buildTitleFilter } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
     titleOk = buildTitleFilter(cfg.title_filter);
   } catch (e) {
@@ -214,8 +227,8 @@ if (INCLUDE_L3) {
     const liStale = fresh.filter(o => isStaleLinkedInJobUrl(o.url));
     if (liStale.length) {
       fresh = fresh.filter(o => !isStaleLinkedInJobUrl(o.url));
-      const { appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-      appendToScanHistory(liStale, today, 'skipped');
+      const { appendUnrecordedToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+      await appendUnrecordedToScanHistory(liStale, today, 'skipped');
       console.log('  ' + liStale.length + ' dropped as stale linkedin ids');
     }
   } catch (e) {
@@ -279,8 +292,8 @@ if (INCLUDE_L3) {
     l3Expired = deadFinds.length;
     if (deadFinds.length) {
       try {
-        const { appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
-        appendToScanHistory(deadFinds, today, 'skipped_expired');
+        const { appendUnrecordedToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+        await appendUnrecordedToScanHistory(deadFinds, today, 'skipped_expired');
       } catch (e) {
         console.error('  dead-find record FAILED: ' + e.message);
       }
@@ -310,12 +323,12 @@ if (INCLUDE_L3) {
       // pathToFileURL: Windows' ESM loader rejects bare absolute paths
       // ("Only URLs with a scheme in: file, data…"), which silently swallowed
       // every L3 find before this fix.
-      const { appendToPipeline, appendToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
+      const { appendToPipeline, appendToScanHistory, appendUnrecordedToScanHistory } = await import(pathToFileURL(resolve(ROOT, 'scan.mjs')).href);
       if (liveFresh.length) {
-        appendToPipeline(liveFresh);
-        appendToScanHistory(liveFresh, today, 'added');
+        await appendToPipeline(liveFresh);
+        await appendToScanHistory(liveFresh, today, 'added');
       }
-      if (l3Stale.length) appendToScanHistory(l3Stale, today, 'skipped');
+      if (l3Stale.length) await appendUnrecordedToScanHistory(l3Stale, today, 'skipped');
     } catch (e) {
       console.error('  persist FAILED: ' + e.message);
     }

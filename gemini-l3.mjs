@@ -26,10 +26,10 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { spawn } from 'node:child_process';
-import * as yaml from 'js-yaml';
 import { getCareerOpsRoot } from './path-resolver.mjs';
 import { localToday } from './lib/local-today.mjs';
 import { isMainModule } from './lib/is-main-module.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
 
 const ROOT = getCareerOpsRoot();
 
@@ -46,7 +46,7 @@ function loadApiKey() {
 }
 
 function loadQueries() {
-  const cfg = yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8'));
+  const cfg = loadYaml(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8'));
   const out = [];
   for (const q of Array.isArray(cfg?.search_queries) ? cfg.search_queries : []) {
     if (q && typeof q.name === 'string' && typeof q.query === 'string' && q.enabled !== false) {

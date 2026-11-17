@@ -21,12 +21,12 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import * as yaml from 'js-yaml';
 import { loadProviders, resolveProvider } from './providers/_registry.mjs';
 import { makeHttpCtx } from './providers/_http.mjs';
 import { buildTitleFilter, buildLocationFilter } from './scan.mjs';
 import { getCareerOpsRoot } from './path-resolver.mjs';
 import { isMainModule } from './lib/is-main-module.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
 
 const CODE_ROOT = fileURLToPath(new URL('.', import.meta.url));
 
@@ -36,7 +36,7 @@ function arg(name) {
 }
 
 export async function main() {
-  const cfg = yaml.load(readFileSync(resolve(getCareerOopsRootSafe(), 'portals.yml'), 'utf8'));
+  const cfg = loadYaml(readFileSync(resolve(getCareerOopsRootSafe(), 'portals.yml'), 'utf8'));
   const only = arg('name');
   const showFiltered = process.argv.includes('--filtered');
 

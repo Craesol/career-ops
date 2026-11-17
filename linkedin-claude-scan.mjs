@@ -39,6 +39,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { getCareerOpsRoot } from './path-resolver.mjs';
 import { isMainModule } from './lib/is-main-module.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
 
 const ROOT = getCareerOpsRoot();
 const SOURCE = 'linkedin-claude';
@@ -267,8 +268,7 @@ async function main() {
   console.log('linkedin-claude: ' + offers.length + ' ofertas leidas');
   if (offers.length === 0) return;
   const { buildLocationFilter } = await import('./scan.mjs');
-  const yaml = (await import('js-yaml')).default;
-  const locationOk = buildLocationFilter(yaml.load(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8')).location_filter);
+  const locationOk = buildLocationFilter(loadYaml(readFileSync(resolve(ROOT, 'portals.yml'), 'utf8')).location_filter);
   let history = '';
   try { history = readFileSync(resolve(ROOT, 'data/scan-history.tsv'), 'utf8'); } catch { /* fresh install */ }
   const { kept, repeats } = collapseRepeats(offers, history, locationOk);

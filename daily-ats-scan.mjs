@@ -1,14 +1,25 @@
 import 'dotenv/config';
 import { readFileSync, appendFileSync, existsSync, writeFileSync } from 'fs';
-import * as yaml from 'js-yaml';
 import { buildLocationFilter } from './scan.mjs';
+import { loadYaml } from './lib/yaml-document.mjs';
+
+// --help must stop here: this script scans and writes from its top level, so
+// an unhandled flag ran a full scan into scan-history.tsv and pipeline.md.
+if (process.argv.slice(2).some((a) => a === '--help' || a === '-h')) {
+  console.log(`Usage: node daily-ats-scan.mjs [--no-email]
+
+Scans the portals.yml ATS boards for fresh roles (MAX_AGE_DAYS, default 14),
+appends matches to data/pipeline.md and data/scan-history.tsv, and emails them
+unless --no-email (daily-consolidated.mjs passes it and sends one digest).`);
+  process.exit(0);
+}
 
 // Location filter comes from portals.yml (same semantics as scan.mjs):
 // always_allow (home region) wins over block; block rejects onsite/hybrid and
 // out-of-region markets; missing location data always passes.
 let locationOk = () => true;
 try {
-  const portals = yaml.load(readFileSync('./portals.yml', 'utf-8')) || {};
+  const portals = loadYaml(readFileSync('./portals.yml', 'utf-8')) || {};
   locationOk = buildLocationFilter(portals.location_filter);
 } catch (e) { console.error('[portals.yml location_filter]', e.message); }
 
