@@ -204,3 +204,30 @@ This file accumulates your best interview stories over time. Each evaluation (Bl
 **R (Result):** The structure held on direction and incentive design rather than an org chart, through June 2026.
 **Reflection:** Common rules and local voice are not in tension: the framework has to be strict about incentives and loose about tone.
 **Best for questions about:** managing multiple communities, community structure, regional communities, consistency across groups, influence without authority
+
+### [Feedback loop] Turning community signal into the next season's design
+**Source:** Report #352 — Nexus Mods — Community Manager
+**S (Situation):** The Guild Program at Movement Labs and Move Industries ran in seasonal cycles, with incentive mechanics (bounties, progression tiers, flywheels) driving participation across 7 guilds and 9 regional hubs.
+**T (Task):** Make each season work better than the last instead of repeating the same mechanics.
+**A (Action):** Read each cycle's engagement data alongside feedback from community members and Guild Leaders, and fed both back into the incentive design for the next season.
+**R (Result):** Each cycle's engagement performance informed the next season's design, through June 2026.
+**Reflection:** Community feedback is most useful when it is gathered before the next cycle is designed, not after it launches.
+**Best for questions about:** community feedback, user research, working with product, data-informed decisions, iteration
+
+### [Governance] Writing the rules a community scales on
+**Source:** Report #353 — AvePoint — Customer Community Manager
+**S (Situation):** The Guild Program at Movement Labs started from zero, with guilds and regional hubs that each needed room for their own identity.
+**T (Task):** Give the programme a structure that would hold as it grew, connecting Guild Leaders, members and the Guildmaster function.
+**A (Action):** Designed the governance framework, the contributor progression tiers and the leadership tiers, and owned the strategic framework that tied Guild Leaders, members and the Guildmaster function together.
+**R (Result):** The programme grew to 7 guilds and 9 regional hubs with hundreds of participants, and the structure held on direction and incentive design rather than an org chart, through June 2026.
+**Reflection:** Governance is what lets a community grow past the person who started it; write the rules before the community needs them.
+**Best for questions about:** community operating model, governance, programme design, scaling a community, advisory councils
+
+### [Leadership without authority] Sixteen leads reporting in, informally
+**Source:** Report #354 — Eneba — Growth Communications Manager
+**S (Situation):** The Guild Program and its regional hubs at Movement Labs grew to 7 guilds and 9 regional hubs, each with its own lead.
+**T (Task):** Keep 16 community leaders pulling in one direction without any line authority over them.
+**A (Action):** Headed both initiatives; set the direction, the leadership tiers and the incentive design, and ran reporting with each group informally, ad hoc or verbally, at a cadence that varied from group to group.
+**R (Result):** The structure held on direction and incentive design rather than an org chart, across two years through June 2026.
+**Reflection:** Influence scales only when direction and incentives are explicit; without line authority, clarity has to do the work a reporting line would.
+**Best for questions about:** leading without authority, team leadership, stakeholder alignment, managing leads, influence
