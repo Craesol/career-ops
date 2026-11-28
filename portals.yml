@@ -1997,6 +1997,11 @@ tracked_companies:
     provider: smartrecruiters
     enabled: true
     notes: 'ngo: humanitarian NGO, US; 6 open jobs at verification 2026-10-21'
+  - name: SEGA Europe
+    careers_url: https://careers.sega.co.uk/vacancies
+    provider: sega
+    enabled: true
+    notes: 'games: one board for every SEGA Europe studio (SEGA Europe, The Creative Assembly, Sports Interactive, and others when hiring); 11 open jobs at verification 2026-11-28. Found via report 379 (coverage gap: a Junior Paid Influencer Manager role had never been seen). No JSON API, no JSON-LD: the provider scrapes the SSR Drupal list. Location is the country only, so with the current location_filter every UK posting is dropped as skipped_location.'
 job_boards:
   - name: EU Remote Jobs
     careers_url: https://euremotejobs.com/?feed=job_feed
