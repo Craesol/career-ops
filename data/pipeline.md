@@ -2922,8 +2922,8 @@
 - [x] #-- | https://www.linkedin.com/jobs/view/4492092807/ | skipped (pre-screen mismatch: bénévole, unpaid (volunteer))
 - [x] #-- | https://www.linkedin.com/jobs/view/4492011254/ | skipped (pre-screen mismatch: parfaite maîtrise du français required (French editorial))
 
-- [ ] https://www.linkedin.com/jobs/view/4492429014/ | Pragmatike | Brand Creator (Social Media Manager) | Lisbon, Portugal (Remote) | sueldo no indicado · autónomo vía agencia, cliente sin revelar · piden seguidores propios | note: query: community · EU remote / ats api: active
-- [ ] https://www.linkedin.com/jobs/view/4492428114/ | Pragmatike | Influencer (Social Media Manager) | Lisbon, Portugal (Remote) | sueldo no indicado · autónomo vía agencia, cliente sin revelar · piden seguidores propios | note: query: community · EU remote / ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4492429014/ | Pragmatike | Brand Creator (Social Media Manager) | Lisbon, Portugal (Remote) | sueldo no indicado · autónomo vía agencia, cliente sin revelar · piden seguidores propios | note: query: community · EU remote / ats api: active~~ — swept: stale (8d old, first seen 2026-11-19)
+- [x] ~~https://www.linkedin.com/jobs/view/4492428114/ | Pragmatike | Influencer (Social Media Manager) | Lisbon, Portugal (Remote) | sueldo no indicado · autónomo vía agencia, cliente sin revelar · piden seguidores propios | note: query: community · EU remote / ats api: active~~ — swept: stale (8d old, first seen 2026-11-19)
 
 - [x] ~~https://www.dreamworkhq.com/job/f0a5fb31-c85c-4984-b487-d38c6cc5c1cc | OpenAI | Head of Community, EMEA | London, UK (EMEA role, non-European HQ) | note: datePosted 2026-11-09~~ — already evaluated: report #360 (OpenAI Head of Community, EMEA)
 
@@ -2993,7 +2993,7 @@
 - [ ] https://www.linkedin.com/jobs/view/4493082692/ | adaption | Community Programs Specialist | Dublin, Ireland (Remote) | note: query: tu búsqueda abierta · también en: Berlin, Germany (Remote) / ats api: active
 - [ ] https://www.linkedin.com/jobs/view/4494786805/ | implid | Community Manager H/F | Lyon, France (Hybrid) | note: query: tu búsqueda abierta / ats api: active
 - [ ] https://www.linkedin.com/jobs/view/4494919365/ | Jobgether | Senior Community & Communications Manager | Spain (Remote) | note: query: tu búsqueda abierta · también en: Netherlands (Remote) / ats api: active
-- [ ] https://www.linkedin.com/jobs/view/4493035795/ | PLAYERSBEST | Senior Social Media Manager | European Union (Remote) | note: query: social/content · EU remote / ats api: active
+- [x] ~~https://www.linkedin.com/jobs/view/4493035795/ | PLAYERSBEST | Senior Social Media Manager | European Union (Remote) | note: query: social/content · EU remote / ats api: active~~ — closed: posting gone (LinkedIn shows "No longer accepting applications" and no apply control)
 - [ ] https://www.linkedin.com/jobs/view/4494914546/ | Jobgether | Community Lead & Talent Acquisition Advisor - DACH | Germany (Remote) | note: query: community · EU remote · también en: Austria (Remote) / ats api: active
 - [ ] https://www.linkedin.com/jobs/view/4494758833/ | WAFTAI | Communications Manager/Responsable communications | Brey-et-Maison-du-Bois, France | note: query: community · EU remote / ats api: active
 - [ ] https://www.linkedin.com/jobs/view/4492939428/ | Zebra BI | Marketing Content Manager | European Union (Remote) | note: query: social/content · EU remote / ats api: active
@@ -3053,3 +3053,58 @@
 - [ ] https://jobs.lever.co/jobgether/de67e182-c131-4d03-8543-3420ba34a422 | jobgether | Community Lead & Talent Acquisition Advisor - DACH | Austria; Remote | posted: 2026-11-25
 - [ ] https://jobs.lever.co/jobgether/3d846e38-0866-4b9f-94f3-e35aac5874e6 | jobgether | Head of Social Media & Strategist | South Africa; Remote | posted: 2026-11-25
 - [ ] https://mc.linkedin.com/jobs/view/brand-marketing-communications-manager-at-giraudi-group-4494127576 | Giraudi Group | Brand Marketing & Communications Manager
+
+- [ ] https://himalayas.app/companies/ecomseo/jobs/ai-social-media-manager-remote-latam?utm_source=api | EcomSEO | AI Social Media Manager (Remote, LATAM) | Remote (worldwide) | posted: 2026-11-26
+
+- [ ] https://startup.jobs/social-media-manager-blueprint-technologies-10890200 | Blueprint Technologies | Social Media Manager | Remote | posted: 2026-11-25
+
+- [ ] https://jobs.ashbyhq.com/partyhat/8c1bed00-7cde-4c97-840a-0c2a0aaad9d8 | Partyhat | Social Media Manager | Remote | note: ats api: active
+
+- [ ] https://freehire.me/jobs/remote-social-media-manager-emea-for-ai-brand-growth-pragmatike-rl4ktehw | Pragmatike | Social Media Manager (EMEA) for AI Brand Growth | Remote (CET) | note: datePosted 2026-11-05
+
+- [ ] https://thehive.games/job/topdeck-productions-experienced-community-manager | Topdeck Productions | Experienced Community Manager | Fully remote; London, UK | note: datePosted 2026-11-16
+- [ ] https://thehive.games/job/panic-stations-professional-sh1tposter-social-and-community-manager | Panic Stations | Professional Sh1tposter (Social and Community Manager), 3-month contract | Remote (UK only) | note: datePosted 2026-11-16
+
+- [ ] https://job-boards.greenhouse.io/monzo/jobs/8414122 | monzo | Social Content Manager | Cardiff, London or Remote (UK) | posted: 2026-11-26
+- [ ] https://join.com/companies/culinary-agencyfr/16988681 | culinary-agencyfr | Social Media Manager – Gastronomie & Hospitality (H/F) | Lyon, France (hybrid) | posted: 2026-11-26
+- [ ] https://jobs.ashbyhq.com/cosuno/cef58f9d-3b4c-49b4-a343-83c17adee058 | cosuno | Organic Growth & Content Manager | Berlin/Remote · Berlin · Germany | 60000-75000 EUR | posted: 2026-11-26
+
+- [ ] https://jobs.ashbyhq.com/firstwork/ee77bd9c-a4e8-495f-a9f8-c5a0ba8a2c6b | FirstWork | Content & Community Manager, Europe | UK / Europe | note: ats api: active
+- [ ] https://www.linkedin.com/jobs/view/4494908195/ | OKX | Community Manager (Remote Poland) | Remote Poland | note: ats api: active
+
+- [x] ~~https://www.linkedin.com/jobs/view/4493888182/ | Noxtua | Social Media Manager (m/f/d) / Legal AI Tech Scale-Up /Full Remote | Germany | note: ats api: active~~ — swept: location (Germany)
+- [ ] https://www.linkedin.com/jobs/view/4495803421/ | JAB | Brand Experience & Community Lead | Sales Performance. — Paris, Île-de-France, France | note: linkedin id 4495803421 >= 4300000000
+
+- [ ] https://freehire.me/jobs/senior-community-manager-hyperhug-ccwopqx6 | HYPERHUG | Senior Community Manager | Remote - Worldwide (Cyprus HQ) | note: datePosted 2026-11-23
+
+- [ ] https://www.linkedin.com/jobs/view/4493880629/ | Manpower France | Community Manager & Content Creator Luxury Lifestyle H/F | Moûtiers, Auvergne-Rhône-Alpes, France | note: ats api: active
+
+- [ ] https://www.linkedin.com/jobs/view/4494979131/ | Ahead | Brand & Community Marketing Manager - France | France market (Berlin / Hamburg) | note: ats api: active
+
+- [ ] https://gamejobs.co/Professional-Sh1tposter-Social-and-Community-Manager-at-Panic-Stations | Panic Stations | Professional Sh1tposter (Social and Community Manager) | Remote (UK), 3-month contract | note: datePosted 2026-11-16
+
+- [ ] https://www.dreamworkhq.com/job/fe043b5e-68e8-4565-b088-2c71624261ad | Ashby | Community Lead & Talent Acquisition Advisor - DACH | Remote, Europe (German may be required) | note: datePosted 2026-11-23
+- [ ] https://standout.work/jobs/community-lead-talent-acquisition-advisor-emea-at-ashby | Ashby | Community Lead & Talent Acquisition Advisor - EMEA | Remote, EMEA | note: datePosted 2026-11-24
+
+- [ ] https://workingames.com/jobs/community-manager-just-won-t-die-4926566 | Just Won't Die | Senior Community Manager | Cambridge, United Kingdom (remote not stated) | note: datePosted 2026-10-28
+
+- [x] ~~https://www.linkedin.com/jobs/view/4494200062/ | NL BEAUTY | Head of Social (Remote) | Sofia, Sofia City, Bulgaria | note: ats api: active~~ — swept: location (Sofia, Sofia City, Bulgaria)
+
+- [ ] https://startup.jobs/community-manager-spotware-systems-10885616 | Spotware Systems | Community Manager | Remote | posted: 2026-11-25
+
+- [ ] https://workingames.com/jobs/community-manager-the-creative-assembly-4692925 | Creative Assembly | Associate Community Manager | UK (remote not stated) | note: datePosted 2026-11-05
+
+- [ ] https://job-boards.greenhouse.io/alpaca/jobs/6272486004 | alpaca | Senior Communications Manager | Remote - America | posted: 2026-11-27
+- [ ] https://apply.workable.com/j/C876FEB641 | Acacia | Founding Membership & Community Lead | Nairobi, Kenya · Remote | posted: 2026-11-27
+- [ ] https://fr.linkedin.com/jobs/view/brand-experience-community-lead-at-jab-sales-performance-4495803421 | JAB - Sales Performance. | Brand Experience & Community Lead
+
+- [ ] https://www.linkedin.com/jobs/view/4495814704/ | Passtech Games | Community Manager (H/F/NB) | Villeurbanne, Auvergne-Rhône-Alpes, France | note: ats api: active
+- [ ] https://www.linkedin.com/jobs/view/4496004823/ | Harmattan AI | Digital Engagement Specialist | Paris, Île-de-France, France | note: linkedin id 4496004823 >= 4300000000
+
+- [ ] https://workingames.com/jobs/community-manager-brickworks-games-5445112 | Brickworks Games | Community Manager | Limassol, Cyprus (remote status unconfirmed) | note: datePosted 2026-11-27
+
+- [ ] https://www.linkedin.com/jobs/view/4485174613/ | Air Apps | Social Media Manager | Paris, Île-de-France, France | note: linkedin id 4485174613 >= 4300000000
+
+- [ ] https://gamejobs.co/Senior-Community-Manager-at-Hyperhug | HyperHug | Senior Community Manager / Coordinator | Remote (also listed in Cyprus) | note: datePosted 2026-11-11
+- [ ] https://gamejobs.co/Community-Manager-at-Gatoinary-Games | Gatoinary Games | Community Manager | Remote | note: datePosted 2026-10-15
+- [ ] https://gamejobs.co/Social-Media-Manager-at-AlterStaff | AlterStaff | Social Media Manager | Remote | note: datePosted 2026-10-15
